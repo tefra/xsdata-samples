@@ -28,7 +28,7 @@ class Url:
     class Meta:
         name = "URL"
 
-    value: str = field(default="")
+    value: str = field()
     s: None | str = field(
         default=None,
         metadata={

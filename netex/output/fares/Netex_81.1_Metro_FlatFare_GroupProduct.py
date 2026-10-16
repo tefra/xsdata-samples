@@ -152,6 +152,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='myfares'
                     ),
                     default_currency='EUR'
@@ -164,6 +165,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Common_Resources'
                                     ),
@@ -178,10 +180,12 @@ obj = PublicationDelivery(
                                             value='Flat  tariff'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:flat'
                                         ),
@@ -195,6 +199,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
@@ -207,6 +212,7 @@ obj = PublicationDelivery(
                                                             ],
                                                             choice=[
                                                                 OperatorRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mybus:DTA'
                                                                 ),
@@ -225,6 +231,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:eligible'
                                                         ),
@@ -273,6 +280,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
@@ -319,6 +327,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
@@ -363,6 +372,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
@@ -398,6 +408,7 @@ obj = PublicationDelivery(
                                         price_groups=PriceGroupsRelStructure(
                                             price_group_ref_or_price_group=[
                                                 PriceGroupRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Flat'
                                                 ),
@@ -415,10 +426,12 @@ obj = PublicationDelivery(
                                             value='Adult  Standard Flat  fare  - One way '
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -433,14 +446,17 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@conditions_of_travel@single'
                                                             ),
@@ -461,6 +477,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=True,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip@travel'
                                                     )
@@ -475,10 +492,12 @@ obj = PublicationDelivery(
                                             value='Adult  Standard Flat  fare  - One way '
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -493,14 +512,17 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@conditions_of_travel@outbound'
                                                             ),
@@ -516,14 +538,17 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Flat@conditions_of_travel@inbound'
                                                             ),
@@ -544,6 +569,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=True,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Return_trip@travel@outbound'
                                                     )
@@ -558,6 +584,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=True,
                                                     order=2,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Return_trip@travel@inbound'
                                                     )
@@ -582,6 +609,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -589,10 +617,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:child'
                                                             ),
@@ -607,10 +637,12 @@ obj = PublicationDelivery(
                                                     id='myfares:Single_trip-SOP@p-ticket@individual',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:paper_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip'
                                                     ),
@@ -632,6 +664,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -639,10 +672,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:child'
                                                             ),
@@ -657,10 +692,12 @@ obj = PublicationDelivery(
                                                     id='myfares:Return_trip-SOP@p-ticket@individual',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:paper_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Return_trip'
                                                     ),
@@ -682,6 +719,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -689,6 +727,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             GroupTicketRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:group'
                                                             ),
@@ -703,10 +742,12 @@ obj = PublicationDelivery(
                                                     id='myfares:Single_trip-SOP@p-tickett@group',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:paper_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip'
                                                     ),
@@ -728,6 +769,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -735,6 +777,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             GroupTicketRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:group'
                                                             ),
@@ -749,10 +792,12 @@ obj = PublicationDelivery(
                                                     id='myfares:Return_trip-SOP@p-ticket@group',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:paper_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=FareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Return_trip'
                                                     ),
@@ -770,6 +815,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='myfares:DTA@Flat@products'
                                     ),
@@ -807,6 +853,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('1.00'),
                                                     currency='EUR',
                                                     sales_offer_package_ref_or_sales_offer_package_element_ref=SalesOfferPackageRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip-SOP@p-ticket@individual'
                                                     )
@@ -820,6 +867,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('1.75'),
                                                     currency='EUR',
                                                     sales_offer_package_ref_or_sales_offer_package_element_ref=SalesOfferPackageRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Return_trip-SOP@p-ticket@individual'
                                                     )
@@ -831,14 +879,17 @@ obj = PublicationDelivery(
                                                         value='Group discount - all fares'
                                                     ),
                                                     fare_price_ref=SalesOfferPackagePriceRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip-SOP@p-ticket@individual'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:group_discount'
                                                     ),
                                                     sales_offer_package_ref_or_sales_offer_package_element_ref=SalesOfferPackageRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip-SOP@p-ticket@group'
                                                     )
@@ -850,14 +901,17 @@ obj = PublicationDelivery(
                                                         value='Group discount - all fares'
                                                     ),
                                                     fare_price_ref=SalesOfferPackagePriceRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Return_trip-SOP@p-ticket@individual'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:group_discount'
                                                     ),
                                                     sales_offer_package_ref_or_sales_offer_package_element_ref=SalesOfferPackageRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Return_trip-SOP@p-ticket@group'
                                                     )

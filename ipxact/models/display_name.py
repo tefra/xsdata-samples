@@ -18,4 +18,4 @@ class DisplayName:
         name = "displayName"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: str = field(default="")
+    value: str = field()

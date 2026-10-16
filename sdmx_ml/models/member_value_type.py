@@ -22,10 +22,9 @@ class MemberValueType:
     """
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[A-Za-z0-9_@$-%]+",
-        },
+        }
     )
     cascade_values: None | bool | ExcludeRootType = field(
         default=None,

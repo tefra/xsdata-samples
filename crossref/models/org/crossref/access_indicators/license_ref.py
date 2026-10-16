@@ -18,11 +18,10 @@ class LicenseRef:
         namespace = "http://www.crossref.org/AccessIndicators.xsd"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 10,
             "pattern": r"([hH][tT][tT][pP]|[hH][tT][tT][pP][sS]|[fF][tT][pP])://.*",
-        },
+        }
     )
     start_date: None | XmlDate = field(
         default=None,

@@ -35,7 +35,7 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class CharacteristicAttributeDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -43,12 +43,12 @@ class CharacteristicAttributeId:
     class Meta:
         name = "CharacteristicAttributeID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CharacteristicAttributeNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -56,77 +56,77 @@ class CharacteristicCombinationId:
     class Meta:
         name = "CharacteristicCombinationID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationPurposeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationPurposeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CharacteristicName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactFunctionCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactFunctionCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactNumberTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactNumberTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactNumberValue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DimensionCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DimensionCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -134,12 +134,12 @@ class Gpssystem:
     class Meta:
         name = "GPSSystem"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class KeyFigureDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -147,22 +147,22 @@ class KeyFigureId:
     class Meta:
         name = "KeyFigureID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class KeyFigureName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Latitude:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LocationAttributeDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -170,32 +170,32 @@ class LocationAttributeId:
     class Meta:
         name = "LocationAttributeID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LocationDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LocationNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LocationQualifierCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LocationQualifierCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Longitude:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -203,7 +203,7 @@ class Mdfbusiness:
     class Meta:
         name = "MDFBusiness"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 class MaximumValueConditionsCoded(Enum):
@@ -607,7 +607,7 @@ class Name11:
     class Meta:
         name = "Name1"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -615,7 +615,7 @@ class Name21:
     class Meta:
         name = "Name2"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -623,7 +623,7 @@ class Name31:
     class Meta:
         name = "Name3"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 class NameAddressAddressTypeCoded(Enum):
@@ -848,17 +848,17 @@ class NameAddressAddressTypeCoded(Enum):
 
 @dataclass(kw_only=True)
 class PartyRoleCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PartyRoleCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ProductAttributeDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -866,12 +866,12 @@ class ProductAttributeId:
     class Meta:
         name = "ProductAttributeID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ProductNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -879,7 +879,7 @@ class SourceId:
     class Meta:
         name = "SourceID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -887,92 +887,92 @@ class TargetId:
     class Meta:
         name = "TargetID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesDataNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesDetailResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesDetailResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesHeaderResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesHeaderResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigurePurposeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigurePurposeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigureResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigureResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesPurposeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesPurposeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TimeSeriesValue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalCharacteristicCombinations:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalKeyFigures:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalTimeSeriesData:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -980,7 +980,7 @@ class Uomcoded:
     class Meta:
         name = "UOMCoded"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -988,7 +988,7 @@ class UomcodedOther:
     class Meta:
         name = "UOMCodedOther"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -1170,7 +1170,7 @@ class MaximumValue:
             "type": "Attribute",
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -1203,7 +1203,7 @@ class MeasurementValue:
             "type": "Attribute",
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -1236,7 +1236,7 @@ class MinimumValue:
             "type": "Attribute",
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

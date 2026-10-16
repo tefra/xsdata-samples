@@ -165,6 +165,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='myfares'
                     ),
                     default_currency='EUR'
@@ -180,6 +181,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Common_Resources'
                                     ),
@@ -189,20 +191,24 @@ obj = PublicationDelivery(
                                 id='mybus:DTA',
                                 version='any',
                                 transport_organisation_ref=OperatorRef(
+                                    value='',
                                     version='any',
                                     ref='mybus:DTA'
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
                                         TariffZoneRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:A'
                                         ),
                                         TariffZoneRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:B'
                                         ),
                                         TariffZoneRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:C'
                                         ),
@@ -221,6 +227,7 @@ obj = PublicationDelivery(
                                             value='A'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:B'
                                         )
@@ -235,12 +242,14 @@ obj = PublicationDelivery(
                                             value='B'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:C'
                                         ),
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
                                                 TariffZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mybus:A'
                                                 ),
@@ -259,6 +268,7 @@ obj = PublicationDelivery(
                                         contains=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
                                                 TariffZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mybus:B'
                                                 ),
@@ -274,6 +284,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Nested_Zone@network'
                                     ),
@@ -299,14 +310,17 @@ obj = PublicationDelivery(
                                             value='Zonal fares - Nested zones'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:zonal'
                                         ),
                                         geographical_unit_ref=GeographicalUnitRef(
+                                            value='',
                                             version='any',
                                             ref='myfares:gu'
                                         ),
@@ -323,6 +337,7 @@ obj = PublicationDelivery(
                                                     prices=GeographicalIntervalPricesRelStructure(
                                                         geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref=[
                                                             GeographicalIntervalPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@gi_1'
                                                             ),
@@ -340,6 +355,7 @@ obj = PublicationDelivery(
                                                     prices=GeographicalIntervalPricesRelStructure(
                                                         geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref=[
                                                             GeographicalIntervalPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@gi_2'
                                                             ),
@@ -357,6 +373,7 @@ obj = PublicationDelivery(
                                                     prices=GeographicalIntervalPricesRelStructure(
                                                         geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref=[
                                                             GeographicalIntervalPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@gi_3'
                                                             ),
@@ -371,10 +388,12 @@ obj = PublicationDelivery(
                                                     id='myfares:1zone',
                                                     version='1.0',
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:gi_1zone'
                                                     ),
                                                     geographical_unit_ref=GeographicalUnitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:gu'
                                                     )
@@ -383,10 +402,12 @@ obj = PublicationDelivery(
                                                     id='myfares:2zone',
                                                     version='1.0',
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:gi_2zone'
                                                     ),
                                                     geographical_unit_ref=GeographicalUnitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:gu'
                                                     )
@@ -395,10 +416,12 @@ obj = PublicationDelivery(
                                                     id='myfares:3zone',
                                                     version='1.0',
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:gi_3zone'
                                                     ),
                                                     geographical_unit_ref=GeographicalUnitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:gu'
                                                     )
@@ -413,26 +436,32 @@ obj = PublicationDelivery(
                                                     choice_1=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:A+A'
                                                             ),
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:A+B'
                                                             ),
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:A+C'
                                                             ),
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:B+B'
                                                             ),
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:B+C'
                                                             ),
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:C+C'
                                                             ),
@@ -443,6 +472,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
@@ -450,6 +480,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             group_of_lines_ref=[
                                                                 NetworkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mybus:DTA'
                                                                 ),
@@ -471,6 +502,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
@@ -524,16 +556,19 @@ obj = PublicationDelivery(
                                                         value='Alpha to Alpha'
                                                     ),
                                                     choice=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:A'
                                                     ),
                                                     choice_1=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:A'
                                                     ),
                                                     structure_factors=GeographicalStructureFactorsRelStructure(
                                                         geographical_structure_factor_ref_or_geographical_structure_factor=[
                                                             GeographicalStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:1zone'
                                                             ),
@@ -547,16 +582,19 @@ obj = PublicationDelivery(
                                                         value='Alpha to Bravo'
                                                     ),
                                                     choice=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:A'
                                                     ),
                                                     choice_1=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:B'
                                                     ),
                                                     structure_factors=GeographicalStructureFactorsRelStructure(
                                                         geographical_structure_factor_ref_or_geographical_structure_factor=[
                                                             GeographicalStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:2zone'
                                                             ),
@@ -570,16 +608,19 @@ obj = PublicationDelivery(
                                                         value='Alpha to Charley'
                                                     ),
                                                     choice=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:A'
                                                     ),
                                                     choice_1=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:C'
                                                     ),
                                                     structure_factors=GeographicalStructureFactorsRelStructure(
                                                         geographical_structure_factor_ref_or_geographical_structure_factor=[
                                                             GeographicalStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:3zone'
                                                             ),
@@ -593,16 +634,19 @@ obj = PublicationDelivery(
                                                         value='Bravo to Charley'
                                                     ),
                                                     choice=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:B'
                                                     ),
                                                     choice_1=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:B'
                                                     ),
                                                     structure_factors=GeographicalStructureFactorsRelStructure(
                                                         geographical_structure_factor_ref_or_geographical_structure_factor=[
                                                             GeographicalStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:1zone'
                                                             ),
@@ -616,16 +660,19 @@ obj = PublicationDelivery(
                                                         value='Bravo to Charley'
                                                     ),
                                                     choice=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:B'
                                                     ),
                                                     choice_1=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:C'
                                                     ),
                                                     structure_factors=GeographicalStructureFactorsRelStructure(
                                                         geographical_structure_factor_ref_or_geographical_structure_factor=[
                                                             GeographicalStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:2zone'
                                                             ),
@@ -639,16 +686,19 @@ obj = PublicationDelivery(
                                                         value='Charley to Charley'
                                                     ),
                                                     choice=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:C'
                                                     ),
                                                     choice_1=TariffZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:C'
                                                     ),
                                                     structure_factors=GeographicalStructureFactorsRelStructure(
                                                         geographical_structure_factor_ref_or_geographical_structure_factor=[
                                                             GeographicalStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:1zone'
                                                             ),
@@ -660,6 +710,7 @@ obj = PublicationDelivery(
                                         price_groups=PriceGroupsRelStructure(
                                             price_group_ref_or_price_group=[
                                                 PriceGroupRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:DTA@Nested_Zone'
                                                 ),
@@ -677,10 +728,12 @@ obj = PublicationDelivery(
                                             value='Zone passes'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -695,10 +748,12 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Nested_Zone@conditions_of_travel'
                                                             ),
@@ -717,6 +772,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip@travel'
                                                     )
@@ -736,6 +792,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='myfares:DTA@Nested_Zone@products'
                                     ),
@@ -745,6 +802,7 @@ obj = PublicationDelivery(
                                 id='myfares:DTA@Nested_Zone@pp',
                                 version='any',
                                 price_unit_ref=PriceUnitRef(
+                                    value='',
                                     version='any',
                                     ref='myfares:1Zone'
                                 ),
@@ -776,6 +834,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('1.00'),
                                                     units=Decimal('1'),
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:gi_1zone'
                                                     )
@@ -786,6 +845,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('1.50'),
                                                     units=Decimal('2'),
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:gi_2zone'
                                                     )
@@ -796,6 +856,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('3.00'),
                                                     units=Decimal('3'),
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:gi_3zone'
                                                     )

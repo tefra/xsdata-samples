@@ -424,13 +424,16 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='atc:atoc_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='atc:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='atc:products:NRE'
                     ),
@@ -447,6 +450,7 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='atc:atoc_data'
                                 )
                             ),
@@ -510,6 +514,7 @@ obj = PublicationDelivery(
                                     ]
                                 ),
                                 rounding_ref=RoundingRef(
+                                    value='',
                                     version='any',
                                     ref='atc:split'
                                 ),
@@ -541,16 +546,19 @@ obj = PublicationDelivery(
                                             ref='uic:1170'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@ODs@p2p_OD'
                                                 ),
@@ -565,6 +573,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -601,6 +610,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=2,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -608,10 +618,12 @@ obj = PublicationDelivery(
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         type_of_product_category_ref=[
                                                                             TypeOfProductCategoryRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:local'
                                                                             ),
                                                                             TypeOfProductCategoryRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:ice'
                                                                             ),
@@ -633,6 +645,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -640,9 +653,11 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     ref='eura:first'
                                                                 ),
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     ref='eura:second'
                                                                 ),
                                                             ]
@@ -660,6 +675,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
@@ -676,6 +692,7 @@ obj = PublicationDelivery(
                                                                         value='Adult  - if not eligible for CONCESSION'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:adult'
                                                                     ),
@@ -689,6 +706,7 @@ obj = PublicationDelivery(
                                                                                     value='Up to 2 Infants  under 5 are free for each adult'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='atc:infant'
                                                                                 ),
@@ -702,6 +720,7 @@ obj = PublicationDelivery(
                                                                                     value='Small animals are free'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='atc:small_animal'
                                                                                 ),
@@ -722,6 +741,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='http://www.nationalrail.co.uk/times_fares/46494.aspx',
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:infant'
                                                                     ),
@@ -737,6 +757,7 @@ obj = PublicationDelivery(
                                                                                     value='Infants must have paying adult with them. No seat'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='atc:adult'
                                                                                 ),
@@ -758,6 +779,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='http://www.nationalrail.co.uk/times_fares/46494.aspx',
                                                                     discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='atc:child@rate'
                                                                     ),
@@ -777,6 +799,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:child'
                                                                     ),
@@ -792,10 +815,12 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='http://www.nationalrail.co.uk/times_fares/prd359000a04000200b5da61f1e92b72.aspx',
                                                                     discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='atc:ATOC@Common@rate@youth'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:youth'
                                                                     ),
@@ -826,6 +851,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:senior'
                                                                     ),
@@ -839,6 +865,7 @@ obj = PublicationDelivery(
                                                                         value='Small Animal'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:animal'
                                                                     ),
@@ -872,6 +899,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
@@ -879,14 +907,17 @@ obj = PublicationDelivery(
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:youth'
                                                                 ),
                                                                 UserProfileRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled'
                                                                 ),
                                                                 CompanionProfileRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:disabledCompanion'
                                                                 ),
@@ -901,12 +932,14 @@ obj = PublicationDelivery(
                                                                     order=1,
                                                                     is_allowed=True,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         class_of_use_ref=[
                                                                             ClassOfUseRef(
+                                                                                value='',
                                                                                 ref='eura:second'
                                                                             ),
                                                                         ]
@@ -918,12 +951,14 @@ obj = PublicationDelivery(
                                                                     order=1,
                                                                     is_allowed=False,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:cannot_access'
                                                                     ),
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         class_of_use_ref=[
                                                                             ClassOfUseRef(
+                                                                                value='',
                                                                                 ref='eura:first'
                                                                             ),
                                                                         ]
@@ -944,6 +979,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -951,10 +987,12 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             type_of_product_category_ref=[
                                                                 TypeOfProductCategoryRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:no_high_speed'
                                                                 ),
                                                                 TypeOfProductCategoryRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:plus_high_speed'
                                                                 ),
@@ -973,6 +1011,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -980,11 +1019,13 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     ref='eura:first'
                                                                 ),
                                                             ],
                                                             facility_set_ref=[
                                                                 SiteFacilitySetRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:first_class_lounge'
                                                                 ),
@@ -998,6 +1039,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -1011,6 +1053,7 @@ obj = PublicationDelivery(
                                                                         ],
                                                                         fare_zone_ref=[
                                                                             FareZoneRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:FareZone:ATOC@Stations_with_first_class_lounges@GR'
                                                                             ),
@@ -1022,6 +1065,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=2,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -1035,6 +1079,7 @@ obj = PublicationDelivery(
                                                                         ],
                                                                         fare_zone_ref=[
                                                                             FareZoneRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:FareZone:ATOC@Stations_with_first_class_lounges@EM'
                                                                             ),
@@ -1046,6 +1091,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=2,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -1059,6 +1105,7 @@ obj = PublicationDelivery(
                                                                         ],
                                                                         fare_zone_ref=[
                                                                             FareZoneRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:FareZone:ATOC@Stations_with_first_class_lounges@GW'
                                                                             ),
@@ -1080,6 +1127,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -1127,6 +1175,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
@@ -1175,6 +1224,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
@@ -1228,6 +1278,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -1275,6 +1326,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
@@ -1320,6 +1372,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
@@ -1331,6 +1384,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -1354,6 +1408,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -1376,6 +1431,7 @@ obj = PublicationDelivery(
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         group_of_operators_ref=[
                                                                             GroupOfOperatorsRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:operatorGroup:buy_onboard'
                                                                             ),
@@ -1399,6 +1455,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
@@ -1406,9 +1463,11 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             ref='eura:printed_ticket'
                                                                         ),
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='eura:magstripe_printed_ticket'
                                                                         ),
@@ -1421,6 +1480,7 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
@@ -1428,22 +1488,27 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:self_service_ticket_machine'
                                                                                     ),
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:at_counter'
                                                                                     ),
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:onboard'
                                                                                     ),
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:call_centre'
                                                                                     ),
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:travel_agent'
                                                                                     ),
@@ -1458,6 +1523,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
@@ -1465,9 +1531,11 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             ref='eura:self_print_ticket'
                                                                         ),
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='eura:electronic_document'
                                                                         ),
@@ -1480,6 +1548,7 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
@@ -1487,6 +1556,7 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:online'
                                                                                     ),
@@ -1501,6 +1571,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
@@ -1508,6 +1579,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             ref='eura:mobile_app_ticket'
                                                                         ),
                                                                     ]
@@ -1519,6 +1591,7 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
@@ -1526,6 +1599,7 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:online'
                                                                                     ),
@@ -1543,6 +1617,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:distribution_channel_restriction'
                                                                 ),
@@ -1550,6 +1625,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             ref='eura:smart_card'
                                                                         ),
                                                                     ]
@@ -1561,6 +1637,7 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:distribution_channel_restriction'
                                                                             ),
@@ -1568,18 +1645,22 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:online'
                                                                                     ),
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:pay_as_you_go_device'
                                                                                     ),
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:self_service_ticket_machine'
                                                                                     ),
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:at_counter'
                                                                                     ),
@@ -1607,10 +1688,12 @@ obj = PublicationDelivery(
                                             ref='uic:1170'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:banded'
                                         ),
@@ -1631,10 +1714,12 @@ obj = PublicationDelivery(
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:weekend'
                                                                             ),
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:public_holiday_UK'
                                                                             ),
@@ -1656,6 +1741,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:not_working_day'
                                                                 ),
@@ -1688,6 +1774,7 @@ obj = PublicationDelivery(
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:working_day'
                                                                             ),
@@ -1719,6 +1806,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:working_day'
                                                                 ),
@@ -1755,6 +1843,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:working_day'
                                                                 ),
@@ -1853,14 +1942,17 @@ obj = PublicationDelivery(
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:weekend'
                                                                             ),
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:public_holiday_UK'
                                                                             ),
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='abga:suffolk_school_holiday'
                                                                             ),
@@ -1899,6 +1991,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:working_day'
                                                                 ),
@@ -1932,6 +2025,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:working_day'
                                                                 ),
@@ -2012,12 +2106,14 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access_when'
                                                         ),
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                             day_type_ref=[
                                                                 DayTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:everyday'
                                                                 ),
@@ -2038,10 +2134,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@off_peak_regular'
                                                                 )
@@ -2051,10 +2149,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@off_peak_day'
                                                                 )
@@ -2064,10 +2164,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=3,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@super_off_peak'
                                                                 )
@@ -2091,6 +2193,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
@@ -2114,6 +2217,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
@@ -2123,6 +2227,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@all_stations@non_working_day'
                                                                             )
@@ -2135,6 +2240,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=2,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
@@ -2144,6 +2250,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into'
                                                                             )
@@ -2156,16 +2263,19 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=3,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                                     ),
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@return@outbound'
                                                                                     ),
@@ -2177,6 +2287,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@leaving_from'
                                                                             )
@@ -2196,6 +2307,7 @@ obj = PublicationDelivery(
                                                                 order=1,
                                                                 is_allowed=True,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
@@ -2205,6 +2317,7 @@ obj = PublicationDelivery(
                                                                     ],
                                                                     group_of_services_ref=[
                                                                         GroupOfServicesRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='abga:demand@off_peak@London_LST@arriving_into@inclusions'
                                                                         ),
@@ -2223,16 +2336,19 @@ obj = PublicationDelivery(
                                                                 order=2,
                                                                 is_allowed=True,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                         ),
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@return@outbound'
                                                                         ),
@@ -2244,6 +2360,7 @@ obj = PublicationDelivery(
                                                                     ],
                                                                     group_of_services_ref=[
                                                                         GroupOfServicesRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='abga:demand@off_peak@London_LST@leaving_from@inclusions'
                                                                         ),
@@ -2262,6 +2379,7 @@ obj = PublicationDelivery(
                                                                 order=3,
                                                                 is_allowed=True,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
@@ -2271,6 +2389,7 @@ obj = PublicationDelivery(
                                                                     ],
                                                                     group_of_services_ref=[
                                                                         GroupOfServicesRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions'
                                                                         ),
@@ -2296,6 +2415,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
@@ -2318,6 +2438,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
@@ -2327,6 +2448,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into'
                                                                             )
@@ -2342,6 +2464,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
@@ -2351,6 +2474,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 quality_structure_factor_ref=FareDemandFactorRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@factor@off_peak_day@all_stations@working_day@leaving_from'
                                                                 )
@@ -2367,12 +2491,14 @@ obj = PublicationDelivery(
                                                                 order=3,
                                                                 is_allowed=True,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@return@outbound'
                                                                         ),
@@ -2384,6 +2510,7 @@ obj = PublicationDelivery(
                                                                     ],
                                                                     group_of_services_ref=[
                                                                         GroupOfServicesRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='abga:demand@off_peak@London_LST@leaving_from@day_return@inclusions'
                                                                         ),
@@ -2433,6 +2560,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@non_working_day'
                                                                             )
@@ -2450,6 +2578,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@arriving_into'
                                                                             )
@@ -2467,6 +2596,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@super_off_peak@London_LST@working_day@leaving_from'
                                                                             )
@@ -2491,6 +2621,7 @@ obj = PublicationDelivery(
                                                                     ],
                                                                     group_of_services_ref=[
                                                                         GroupOfServicesRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='abga:demand@off_peak@London_LST@leaving_from@inclusions'
                                                                         ),
@@ -2540,6 +2671,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@arriving_into'
                                                                             )
@@ -2557,6 +2689,7 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@factor@off_peak_regular@London_LST@working_day@leaving_from'
                                                                             )
@@ -2583,6 +2716,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@first_class_lounge'
                                                 ),
@@ -2595,6 +2729,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@distribution@travel_documents'
                                                 ),
@@ -2630,6 +2765,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Tariff@General@self_service_ticket_machine'
                                         ),
@@ -2638,6 +2774,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CASH_AND_CARD,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:collect_from_machine'
                                         )
@@ -2653,6 +2790,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=2,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:at_counter'
                                         ),
@@ -2663,6 +2801,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.WARRANT,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:collect_at_counter'
                                         )
@@ -2678,6 +2817,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:onboard'
                                         ),
@@ -2686,6 +2826,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CASH_AND_CARD,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:collect_at_counter'
                                         )
@@ -2701,6 +2842,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=4,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:online'
                                         ),
@@ -2709,6 +2851,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CARDS_ONLY,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:self_print'
                                         )
@@ -2724,6 +2867,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=5,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:online'
                                         ),
@@ -2732,6 +2876,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CARDS_ONLY,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:post'
                                         )
@@ -2744,6 +2889,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=6,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:online'
                                         ),
@@ -2752,6 +2898,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CARDS_ONLY,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:mobile_app'
                                         )
@@ -2767,6 +2914,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=7,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:call_centre'
                                         ),
@@ -2775,6 +2923,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CARDS_ONLY,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:post'
                                         )
@@ -2787,6 +2936,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=8,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:call_centre'
                                         ),
@@ -2795,6 +2945,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CARDS_ONLY,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:collect_from_machine'
                                         )
@@ -2810,6 +2961,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=9,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:travel_agent'
                                         ),
@@ -2818,6 +2970,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CASH_AND_CARD,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:collect_from_agent'
                                         )
@@ -2833,6 +2986,7 @@ obj = PublicationDelivery(
                                         ),
                                         order=10,
                                         all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                            value='',
                                             version='01',
                                             ref='eura:call_centre'
                                         ),
@@ -2841,6 +2995,7 @@ obj = PublicationDelivery(
                                             PaymentMethodEnumeration.CARDS_ONLY,
                                         ],
                                         fulfilment_method_ref=FulfilmentMethodRef(
+                                            value='',
                                             version='01',
                                             ref='eura:courier'
                                         )
@@ -2857,6 +3012,7 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='atc:atoc_data'
                                 )
                             ),
@@ -2877,80 +3033,99 @@ obj = PublicationDelivery(
                                             ref='uic:1170'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@ODs@p2p_OD'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@off_peak_regular'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@off_peak_day'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@super_off_peak'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility@second_class_only'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@categories'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@purchase_windows'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@reservations'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@transferring'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@luggage'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@penalties'
                                                 ),
@@ -2965,6 +3140,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -3058,6 +3234,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
@@ -3065,6 +3242,7 @@ obj = PublicationDelivery(
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTripRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                 ),
@@ -3088,10 +3266,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
@@ -3099,6 +3279,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                         ),
@@ -3115,10 +3296,12 @@ obj = PublicationDelivery(
                                                                             standard_duration=XmlDuration("P2D")
                                                                         ),
                                                                         InterchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@interchanging@can_break_trip'
                                                                         ),
                                                                         FrequencyOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                                         ),
@@ -3133,10 +3316,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
@@ -3144,6 +3329,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                         ),
@@ -3159,10 +3345,12 @@ obj = PublicationDelivery(
                                                                             usage_end=UsageEndEnumeration.END_OF_FARE_DAY
                                                                         ),
                                                                         InterchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@interchanging@can_break_trip'
                                                                         ),
                                                                         FrequencyOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                                         ),
@@ -3177,10 +3365,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                                 ),
@@ -3188,6 +3378,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                         ),
@@ -3217,6 +3408,7 @@ obj = PublicationDelivery(
                                                                             can_break_journey=False
                                                                         ),
                                                                         FrequencyOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                                         ),
@@ -3242,10 +3434,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
@@ -3253,14 +3447,17 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@return'
                                                                         ),
                                                                         InterchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@interchanging@can_break_trip'
                                                                         ),
                                                                         FrequencyOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                                         ),
@@ -3273,12 +3470,14 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:condition_of_use'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@period_return@outbound'
                                                                                     ),
@@ -3305,16 +3504,19 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:condition_of_use'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@day_return@outbound'
                                                                                     ),
                                                                                     UsageValidityPeriodRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@single@validity@off_peak'
                                                                                     ),
@@ -3332,10 +3534,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
@@ -3343,6 +3547,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@return@outbound'
                                                                         ),
@@ -3358,10 +3563,12 @@ obj = PublicationDelivery(
                                                                             usage_end=UsageEndEnumeration.END_OF_FARE_DAY
                                                                         ),
                                                                         InterchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@interchanging@can_break_trip'
                                                                         ),
                                                                         FrequencyOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                                         ),
@@ -3377,16 +3584,19 @@ obj = PublicationDelivery(
                                                                 order=1,
                                                                 is_allowed=False,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                                 ),
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@return'
                                                                         ),
@@ -3412,10 +3622,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
@@ -3423,14 +3635,17 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@return'
                                                                         ),
                                                                         InterchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@interchanging@can_break_trip'
                                                                         ),
                                                                         FrequencyOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                                         ),
@@ -3443,12 +3658,14 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:condition_of_use'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@period_return@inbound'
                                                                                     ),
@@ -3475,16 +3692,19 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:condition_of_use'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@day_return@inbound'
                                                                                     ),
                                                                                     UsageValidityPeriodRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@single@validity@off_peak'
                                                                                     ),
@@ -3502,10 +3722,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
@@ -3513,6 +3735,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                         ),
@@ -3529,10 +3752,12 @@ obj = PublicationDelivery(
                                                                             standard_duration=XmlDuration("P1M")
                                                                         ),
                                                                         InterchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@interchanging@can_break_trip'
                                                                         ),
                                                                         FrequencyOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                                         ),
@@ -3548,10 +3773,12 @@ obj = PublicationDelivery(
                                                                 order=1,
                                                                 is_allowed=False,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                                 )
@@ -3575,23 +3802,28 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:reservation_condition'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
                                                                 distance_matrix_element_ref=DistanceMatrixElementRef(
+                                                                    value='',
                                                                     ref='netex:ORIGIN',
                                                                     version_ref='OPTIONAL'
                                                                 ),
                                                                 distance_matrix_element_view=DistanceMatrixElementView(
                                                                     start_stop_point_ref_or_start_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                                        value='',
                                                                         ref='netex:ORIGIN',
                                                                         version_ref='OPTIONAL'
                                                                     ),
                                                                     end_stop_point_ref_or_end_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                                        value='',
                                                                         ref='netex:DESTINATION',
                                                                         version_ref='OPTIONAL'
                                                                     )
@@ -3599,6 +3831,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ReservingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@reservation@optional'
                                                                         ),
@@ -3608,6 +3841,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     service_journey_ref=[
                                                                         ServiceJourneyRef(
+                                                                            value='',
                                                                             ref='netex:JOURNEY',
                                                                             version_ref='netex:OPTIONAL'
                                                                         ),
@@ -3622,23 +3856,28 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:reservation_condition'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
                                                                 distance_matrix_element_ref=DistanceMatrixElementRef(
+                                                                    value='',
                                                                     ref='netex:ORIGIN',
                                                                     version_ref='OPTIONAL'
                                                                 ),
                                                                 distance_matrix_element_view=DistanceMatrixElementView(
                                                                     start_stop_point_ref_or_start_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                                        value='',
                                                                         ref='netex:ORIGIN',
                                                                         version_ref='netex:SAME_AS_TRIP'
                                                                     ),
                                                                     end_stop_point_ref_or_end_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                                        value='',
                                                                         ref='netex:DESTINATION',
                                                                         version_ref='netex:SAME_AS_TRIP'
                                                                     )
@@ -3646,6 +3885,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ReservingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@reservation@optional'
                                                                         ),
@@ -3655,6 +3895,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     service_journey_ref=[
                                                                         ServiceJourneyRef(
+                                                                            value='',
                                                                             ref='netex:OPTIONAL',
                                                                             version_ref='RESOLVE'
                                                                         ),
@@ -3669,23 +3910,28 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:reservation_condition'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                                 ),
                                                                 distance_matrix_element_ref=DistanceMatrixElementRef(
+                                                                    value='',
                                                                     ref='netex:ORIGIN',
                                                                     version_ref='OPTIONAL'
                                                                 ),
                                                                 distance_matrix_element_view=DistanceMatrixElementView(
                                                                     start_stop_point_ref_or_start_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                                        value='',
                                                                         ref='netex:ORIGIN',
                                                                         version_ref='REQURED'
                                                                     ),
                                                                     end_stop_point_ref_or_end_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                                        value='',
                                                                         ref='netex:DESTINATION',
                                                                         version_ref='REQURED'
                                                                     )
@@ -3693,6 +3939,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ReservingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@reservation@required'
                                                                         ),
@@ -3702,6 +3949,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     service_journey_ref=[
                                                                         ServiceJourneyRef(
+                                                                            value='',
                                                                             ref='netex:JOURNEY',
                                                                             version_ref='netex:OPTIONAL'
                                                                         ),
@@ -3722,6 +3970,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
@@ -3763,6 +4012,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_purchase'
                                                         ),
@@ -3809,10 +4059,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
@@ -3870,6 +4122,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
@@ -3936,10 +4189,12 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
                                                         fare_structure_element_ref=FareStructureElementRef(
+                                                            value='',
                                                             version='01',
                                                             ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                         ),
@@ -3978,6 +4233,7 @@ obj = PublicationDelivery(
                                                                                 id='atc:ATOC@Tariff@Trip@Group_Saver_3-to-9_people@adult',
                                                                                 version='any',
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='atc:adult'
                                                                                 ),
@@ -3991,6 +4247,7 @@ obj = PublicationDelivery(
                                                                                     value='3. Children between the ages of 5 and 15 years old inclusive may travel with an Adult Ticket provided the Group size is in accordance with Condition 1.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='atc:child'
                                                                                 ),
@@ -4009,6 +4266,7 @@ obj = PublicationDelivery(
                                                         temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                             day_type_ref=[
                                                                 DayTypeRef(
+                                                                    value='',
                                                                     ref='atc:Group_Saver_3-to-9_people@validDay',
                                                                     version_ref='TODO'
                                                                 ),
@@ -4017,6 +4275,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     ref='eura:second'
                                                                 ),
                                                             ]
@@ -4200,6 +4459,7 @@ obj = PublicationDelivery(
                                                                     order=5,
                                                                     is_allowed=False,
                                                                     group_of_distance_matrix_elements_ref=GroupOfDistanceMatrixElementsRef(
+                                                                        value='',
                                                                         ref='atc:Group_Save@West_Midlands_exclusion_area'
                                                                     ),
                                                                     validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
@@ -4279,6 +4539,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_purchase'
                                                         ),
@@ -4296,6 +4557,7 @@ obj = PublicationDelivery(
                                                                     companion_profiles=CompanionProfilesRelStructure(
                                                                         companion_profile_ref_or_companion_profile=[
                                                                             CompanionProfileRef(
+                                                                                value='',
                                                                                 ref='atc:adult'
                                                                             ),
                                                                         ]
@@ -4318,6 +4580,7 @@ obj = PublicationDelivery(
                                                                                 id='atc:ATOC@Tariff@Trip@Group@family@Adult',
                                                                                 version='any',
                                                                                 user_profile_ref=CompanionProfileRef(
+                                                                                    value='',
                                                                                     ref='atc:adult'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
@@ -4327,6 +4590,7 @@ obj = PublicationDelivery(
                                                                                 id='atc:ATOC@Tariff@Trip@Group@Family@Child',
                                                                                 version='any',
                                                                                 user_profile_ref=CompanionProfileRef(
+                                                                                    value='',
                                                                                     ref='atc:child'
                                                                                 ),
                                                                                 minimum_number_of_persons=1,
@@ -4357,6 +4621,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
@@ -4367,6 +4632,7 @@ obj = PublicationDelivery(
                                                                     id='atc:ATOC@Tariff@Trip@entitles@Seat_Reservation',
                                                                     version='any',
                                                                     choice=SupplementProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                                     ),
@@ -4377,6 +4643,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             type_of_product_category_ref=[
                                                                 TypeOfProductCategoryRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:ice'
                                                                 ),
@@ -4398,6 +4665,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
@@ -4408,6 +4676,7 @@ obj = PublicationDelivery(
                                                                     id='atc:ATOC@Tariff@Trip@entitles@Bicycle_Reservation',
                                                                     version='any',
                                                                     choice=SupplementProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Trip@Supplement@Bicycle'
                                                                     ),
@@ -4418,6 +4687,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             facility_set_ref=[
                                                                 ServiceFacilitySetRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:allows_bicycles@reservation'
                                                                 ),
@@ -4439,6 +4709,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
@@ -4449,6 +4720,7 @@ obj = PublicationDelivery(
                                                                     id='atc:ATOC@Tariff@Trip@entitles@Excess_Baggage',
                                                                     version='any',
                                                                     choice=SupplementProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Trip@Supplement@Excess_Baggage'
                                                                     ),
@@ -4472,6 +4744,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
@@ -4489,6 +4762,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='http://www.nationalrail.co.uk/times_fares/ticket_types/46544.aspx',
                                                                     choice=SupplementProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Trip@Supplement@Upgrade@to_first_class'
                                                                     ),
@@ -4512,6 +4786,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
@@ -4529,6 +4804,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='http://www.nationalrail.co.uk/times_fares/ticket_types/46544.aspx',
                                                                     choice=SupplementProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Trip@Supplement@Extension'
                                                                     )
@@ -4548,6 +4824,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
@@ -4555,6 +4832,7 @@ obj = PublicationDelivery(
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 PurchaseWindowRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:ATOC@Tariff@General@buy_before_travel'
                                                                 ),
@@ -4591,6 +4869,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -4635,6 +4914,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -4683,6 +4963,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -4715,6 +4996,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -4751,6 +5033,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -4786,6 +5069,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -4833,6 +5117,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_purchase_when'
                                                                     ),
@@ -4876,6 +5161,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_sale'
                                                         ),
@@ -4912,6 +5198,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_sale'
                                                         ),
@@ -4973,6 +5260,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_sale'
                                                         ),
@@ -5024,10 +5312,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_sale'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                                 ),
@@ -5035,10 +5325,12 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ExchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route'
                                                                         ),
                                                                         RefundingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@after_sales@can_refund'
                                                                         ),
@@ -5053,10 +5345,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_sale'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
@@ -5064,10 +5358,12 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ExchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route'
                                                                         ),
                                                                         RefundingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@after_sales@can_refund'
                                                                         ),
@@ -5082,10 +5378,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_sale'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@advance'
                                                                 ),
@@ -5093,10 +5391,12 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         ExchangingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route'
                                                                         ),
                                                                         RefundingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@General@after_sales@can_refund'
                                                                         ),
@@ -5123,6 +5423,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5136,6 +5437,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access'
                                                                             ),
@@ -5143,6 +5445,7 @@ obj = PublicationDelivery(
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                                     ),
@@ -5165,6 +5468,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -5172,6 +5476,7 @@ obj = PublicationDelivery(
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 RoundTripRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                 ),
@@ -5196,6 +5501,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=3,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5207,6 +5513,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5214,6 +5521,7 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                             ),
@@ -5222,6 +5530,7 @@ obj = PublicationDelivery(
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         fare_zone_ref=[
                                                                             FareZoneRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:FareZone:ATOC@London_terminii'
                                                                             ),
@@ -5241,6 +5550,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=2,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@London_transfer@leg'
                                                                 ),
@@ -5252,6 +5562,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5275,6 +5586,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=3,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5286,6 +5598,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5293,6 +5606,7 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                             ),
@@ -5301,6 +5615,7 @@ obj = PublicationDelivery(
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         fare_zone_ref=[
                                                                             FareZoneRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:FareZone:ATOC@London_terminii'
                                                                             ),
@@ -5334,6 +5649,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5345,6 +5661,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5352,10 +5669,12 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@outbound'
                                                                             ),
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return@outbound'
                                                                             ),
@@ -5372,6 +5691,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=2,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5383,6 +5703,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5390,10 +5711,12 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@inbound'
                                                                             ),
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return@inbound'
                                                                             ),
@@ -5424,6 +5747,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5435,6 +5759,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5442,10 +5767,12 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@outbound'
                                                                             ),
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return@outbound'
                                                                             ),
@@ -5462,6 +5789,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=2,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@London_transfer@leg'
                                                                 ),
@@ -5473,6 +5801,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5496,6 +5825,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5507,6 +5837,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5514,10 +5845,12 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@outbound'
                                                                             ),
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return@outbound'
                                                                             ),
@@ -5534,6 +5867,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5545,6 +5879,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5552,6 +5887,7 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@inbound'
                                                                             ),
@@ -5568,6 +5904,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=2,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@London_transfer@leg'
                                                                 ),
@@ -5579,6 +5916,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5602,6 +5940,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@rail_leg@generic'
                                                                 ),
@@ -5613,6 +5952,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -5620,6 +5960,7 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             RoundTripRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@inbound'
                                                                             ),
@@ -5648,10 +5989,12 @@ obj = PublicationDelivery(
                                             ref='uic:1170'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -5722,12 +6065,14 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:quota_applies'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     class_of_use_ref=[
                                                                         ClassOfUseRef(
+                                                                            value='',
                                                                             ref='eura:first'
                                                                         ),
                                                                     ]
@@ -5739,10 +6084,12 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
                                                                             quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@first@Q1'
                                                                             )
@@ -5752,10 +6099,12 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=2,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
                                                                             quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@first@Q2'
                                                                             )
@@ -5765,10 +6114,12 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=3,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
                                                                             quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@first@Q3'
                                                                             )
@@ -5792,12 +6143,14 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:quota_applies'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     class_of_use_ref=[
                                                                         ClassOfUseRef(
+                                                                            value='',
                                                                             ref='eura:second'
                                                                         ),
                                                                     ]
@@ -5809,10 +6162,12 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
                                                                             quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@second@Q1'
                                                                             )
@@ -5822,10 +6177,12 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=2,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
                                                                             quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@second@Q2'
                                                                             )
@@ -5835,10 +6192,12 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             order=3,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:quota_applies'
                                                                             ),
                                                                             quality_structure_factor_ref=FareQuotaFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Quotas@advance@second@Q3'
                                                                             )
@@ -5864,6 +6223,7 @@ obj = PublicationDelivery(
                                                         value='Available  quotas'
                                                     ),
                                                     choice_1=GroupOfDistanceMatrixElementsRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:TfL@ODs@London_transfers'
                                                     ),
@@ -5874,6 +6234,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:quota_applies'
                                                                 ),
@@ -5904,94 +6265,117 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@ODs@p2p_OD'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility@second_class_only'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@categories'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@transferring'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@luggage'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@penalties'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@reserving_xD3'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@groups@all_tocs'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@groups@Group_Saver_4_people@off_peak@some_tocs'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@groups@Group_Saver_3-to-9_people@off_peak@some_tocs'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@groups@some_tocs'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@entitles@reservation@seat'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@entitles@reservation@bicycle'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@entitles@excess_baggage'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@entitles@upgrade@to_first_class'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@entitles@upgrade@extend_trip'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@replacing'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@purchase_windows'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@after_sales_xD3'
                                                 ),
@@ -6010,10 +6394,12 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
@@ -6032,18 +6418,22 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@ODs@p2p_OD'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                 ),
@@ -6059,6 +6449,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -6071,10 +6462,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                             ),
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                             ),
@@ -6097,6 +6490,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -6109,10 +6503,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@outbound'
                                                             ),
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                             ),
@@ -6135,6 +6531,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -6147,10 +6544,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@period_return@inbound'
                                                             ),
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                             ),
@@ -6169,6 +6568,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:TfL@ODs@London_transfers'
                                                 ),
@@ -6181,6 +6581,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -6188,12 +6589,14 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         choice=[
                                                             OperatorRef(
+                                                                value='',
                                                                 ref='LUL',
                                                                 version_ref='TODO'
                                                             ),
                                                         ],
                                                         tariff_zone_ref=[
                                                             TariffZoneRef(
+                                                                value='',
                                                                 ref='tfl:Zone1',
                                                                 version_ref='TODO'
                                                             ),
@@ -6222,6 +6625,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -6234,6 +6638,7 @@ obj = PublicationDelivery(
                                                         ],
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:first'
                                                             ),
                                                         ]
@@ -6251,6 +6656,7 @@ obj = PublicationDelivery(
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@single@legs',
                                                     order=1
@@ -6270,6 +6676,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                 ),
@@ -6278,16 +6685,19 @@ obj = PublicationDelivery(
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@outbound@legs',
                                                     order=3
                                                 ),
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@London_transfer@legs',
                                                     order=3
                                                 ),
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@inbound@legs',
                                                     order=3
@@ -6307,11 +6717,13 @@ obj = PublicationDelivery(
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@outbound@trip',
                                                     order=2
                                                 ),
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@inbound@trip',
                                                     order=5
@@ -6331,11 +6743,13 @@ obj = PublicationDelivery(
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@outbound@trip',
                                                     order=2
                                                 ),
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMPOSITION@return@inbound@trip',
                                                     order=5
@@ -6368,11 +6782,13 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -6398,6 +6814,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
@@ -6405,22 +6822,27 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             ExchangingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@after_sales@cannot_change_trip_date_or_route'
                                                             ),
                                                             RefundingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@after_sales@can_refund'
                                                             ),
                                                             TransferabilityRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@transferring@individual@not_transferable'
                                                             ),
                                                             TransferabilityRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@transferring@corporate@can_transfer'
                                                             ),
                                                             ReplacingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@replacing'
                                                             ),
@@ -6445,6 +6867,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
@@ -6452,10 +6875,12 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@Group@10_or_more_people'
                                                                         ),
                                                                         GroupTicketRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@Group@family@trip'
                                                                         ),
@@ -6473,10 +6898,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
@@ -6484,6 +6911,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@Group_Saver_3-to-9_people@trip'
                                                                         ),
@@ -6493,6 +6921,7 @@ obj = PublicationDelivery(
                                                                 temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                                     day_type_ref=[
                                                                         DayTypeRef(
+                                                                            value='',
                                                                             ref='atc:Group_Saver_3-to-9_people@validDay'
                                                                         ),
                                                                     ]
@@ -6500,6 +6929,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     class_of_use_ref=[
                                                                         ClassOfUseRef(
+                                                                            value='',
                                                                             ref='eura:second'
                                                                         ),
                                                                     ]
@@ -6683,6 +7113,7 @@ obj = PublicationDelivery(
                                                                             order=5,
                                                                             is_allowed=False,
                                                                             group_of_distance_matrix_elements_ref=GroupOfDistanceMatrixElementsRef(
+                                                                                value='',
                                                                                 ref='atc:Group_Save@West_Midlands_exclusion_area'
                                                                             ),
                                                                             validity_parameter_grouping_type=LogicalOperationEnumeration.AND,
@@ -6761,10 +7192,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                                 ),
@@ -6772,6 +7205,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@Group_Saver_4_people@CH'
                                                                         ),
@@ -6797,6 +7231,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
@@ -6804,6 +7239,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         GroupTicketRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@Group_Saver_4_people@SX'
                                                                         ),
@@ -6829,6 +7265,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=5,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
@@ -6836,26 +7273,32 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             LuggageAllowanceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@luggage@carry_on'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Seat_Reservation'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Bicycle_Reservation'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Excess_Baggage'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Upgrade@to_first_class'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Extend'
                                                             ),
@@ -6867,14 +7310,17 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMMON'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='jsp:JSP@Products@Pass@PlusBus@origin_station'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@single@COMMON_rail_leg'
                                                 ),
@@ -6889,6 +7335,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=False,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@zone_pass@1day'
                                                     )
@@ -6898,6 +7345,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@single@COMMON_rail_leg'
                                                     )
@@ -6909,6 +7357,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=True,
                                                     order=3,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@destination_station'
                                                     )
@@ -6924,11 +7373,13 @@ obj = PublicationDelivery(
                                             value='Standard return Fare'
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -6944,14 +7395,17 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMMON'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg'
                                                 ),
@@ -6969,6 +7423,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=False,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg'
                                                     )
@@ -6983,6 +7438,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=True,
                                                     order=2,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg'
                                                     )
@@ -7002,11 +7458,13 @@ obj = PublicationDelivery(
                                             value='Crossing London with tickets marked  "CROSS"\nIf your journey involves travelling via, or across London to connect with another National Rail service, your ticket should include the cost of transfer on London Underground, DLR or Thameslink services between the relevant main London stations.\n\nFor example - a Hastings to York ticket is valid for travel on Underground services between Victoria, Charing Cross, Cannon Street or London Bridge and Kings Cross St Pancras stations, or on Thameslink services from London Bridge or Blackfriars to St. Pancras International.\nTo check if the cost of travel across London is included in your ticket, look for the \'CROSS\' symbol which will be shown in the tickets \'Route\' information, e.g. [\'CROSS\' ANY PERMITTED].\n\nTickets displaying this indicator are valid for travel between any two stations shown in the \'Station List\'(below) appropriate to the route of the through journey being made.\n\nYou can \'break your transfer journey\' and leave the Underground at any intermediate station, e.g. if you are travelling between Victoria and Euston you can exit at Oxford Circus. However, if you subsequently wish to continue your journey by Underground you will have to purchase another ticket.\n\nList of London Underground and DLR Stations between which single/return tickets valid for travel \'via London\' may be used - subject to route of the through journey being made. '
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
@@ -7027,6 +7485,7 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@London_transfer@leg'
                                                 ),
@@ -7042,6 +7501,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@London_transfer@leg'
                                                     )
@@ -7073,6 +7533,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7093,10 +7554,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@anytime'
                                                     ),
@@ -7133,6 +7596,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7153,10 +7617,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@anytime'
                                                     ),
@@ -7193,6 +7659,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7213,10 +7680,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@off_peak_regular'
                                                     ),
@@ -7253,6 +7722,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7273,10 +7743,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@off_peak_regular'
                                                     ),
@@ -7313,6 +7785,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7333,10 +7806,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@off_peak_day'
                                                     ),
@@ -7348,6 +7823,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return'
                                                             ),
@@ -7381,6 +7857,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7401,10 +7878,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@anytime'
                                                     ),
@@ -7416,6 +7895,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return'
                                                             ),
@@ -7449,6 +7929,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7469,10 +7950,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@super_off_peak'
                                                     ),
@@ -7509,6 +7992,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7529,10 +8013,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@super_off_peak'
                                                     ),
@@ -7544,6 +8030,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return'
                                                             ),
@@ -7577,6 +8064,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -7597,10 +8085,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@advance'
                                                     ),
@@ -7649,10 +8139,12 @@ obj = PublicationDelivery(
                                                         value='With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Standard@single@generic'
                                                     ),
@@ -7665,10 +8157,12 @@ obj = PublicationDelivery(
                                                         value='Reservation With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -7681,10 +8175,12 @@ obj = PublicationDelivery(
                                                         value='London Transfer With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:TFL@Products@Trip@Standard@London_transfer'
                                                     ),
@@ -7697,10 +8193,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -7711,10 +8209,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:JSP@Products@Pass@PlusBus@origin_station'
                                                                 )
@@ -7730,10 +8230,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -7744,10 +8246,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:JSP@Products@Pass@PlusBus@destination_station'
                                                                 )
@@ -7761,22 +8265,27 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@anytime-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@off_peak_regular-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@off_peak_day-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@super_off_peak-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@advance-SOP'
                                                 ),
@@ -7801,10 +8310,12 @@ obj = PublicationDelivery(
                                                         value='tickets ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Standard@return@generic'
                                                     ),
@@ -7818,10 +8329,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg'
                                                                 ),
@@ -7835,10 +8348,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg'
                                                                 ),
@@ -7855,10 +8370,12 @@ obj = PublicationDelivery(
                                                         value='Reservation With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -7869,10 +8386,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@outbound'
                                                                 )
@@ -7888,10 +8407,12 @@ obj = PublicationDelivery(
                                                         value='Reservation With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -7902,10 +8423,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@inbound'
                                                                 )
@@ -7921,10 +8444,12 @@ obj = PublicationDelivery(
                                                         value='London Transfer With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:TFL@Products@Trip@Standard@London_transfer'
                                                     ),
@@ -7937,10 +8462,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -7951,10 +8478,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:JSP@Products@Pass@PlusBus@origin_station'
                                                                 )
@@ -7970,10 +8499,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -7984,10 +8515,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:JSP@Products@Pass@PlusBus@destination_station'
                                                                 )
@@ -8001,18 +8534,22 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@anytime-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@off_peak_regular-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@off_peak_day-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@super_off_peak-SOP'
                                                 ),
@@ -8056,10 +8593,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access_when'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@anytime'
                                                     )
@@ -8069,41 +8608,49 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@ticket_machine',
                                                     order=1
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@self_print',
                                                     order=4
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@mobile',
                                                     order=6
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@travel_agent@despatch',
                                                     order=9
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@courier',
                                                     order=10
@@ -8113,10 +8660,12 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@anytime-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@anytime-SOP'
                                                 ),
@@ -8160,10 +8709,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access_when'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@any_off_peak'
                                                     )
@@ -8173,31 +8724,37 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@ticket_machine',
                                                     order=1
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@mobile',
                                                     order=6
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@travel_agent@despatch',
                                                     order=9
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@courier',
                                                     order=10
@@ -8207,26 +8764,32 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@off_peak_regular-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@off_peak_day-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@super_off_peak-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@off_peak_regular-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@off_peak_day-SOP'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@return@super_off_peak-SOP'
                                                 ),
@@ -8270,10 +8833,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access_when'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@advance'
                                                     )
@@ -8286,6 +8851,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:quota_applies'
                                                     ),
@@ -8299,10 +8865,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:quota_applies'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Quotas@advance@first'
                                                                 )
@@ -8315,10 +8883,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:quota_applies'
                                                                 ),
                                                                 fare_structure_element_ref=FareStructureElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Quotas@advance@second'
                                                                 )
@@ -8331,36 +8901,43 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@ticket_machine',
                                                     order=1
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@self_print',
                                                     order=4
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@mobile',
                                                     order=6
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@courier',
                                                     order=10
@@ -8370,6 +8947,7 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Standard@single@advance-SOP'
                                                 ),
@@ -8388,6 +8966,7 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='atc:atoc_data'
                                 )
                             ),
@@ -8405,10 +8984,12 @@ obj = PublicationDelivery(
                                             ref='uic:1170'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:flat'
                                         ),
@@ -8417,34 +8998,42 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@ODs@p2p_OD'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@purchase_windows'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@reservations'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@luggage'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@trip_types'
                                                 ),
@@ -8462,6 +9051,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:prerequisites'
                                                         ),
@@ -8475,6 +9065,7 @@ obj = PublicationDelivery(
                                                                         value='Requires  Trip ticket'
                                                                     ),
                                                                     choice=PreassignedFareProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Trip@Standard@single@generic'
                                                                     )
@@ -8486,6 +9077,7 @@ obj = PublicationDelivery(
                                                                         value='Requires  Trip ticket'
                                                                     ),
                                                                     choice=PreassignedFareProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Trip@Standard@return@generic'
                                                                     )
@@ -8510,34 +9102,42 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@ODs@p2p_OD'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility@second_class_only'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@purchase_windows'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@supplements@prerequisites'
                                                 ),
@@ -8563,6 +9163,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
@@ -8573,10 +9174,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     distance_matrix_element_view=DistanceMatrixElementView(
                                                         start_stop_point_ref_or_start_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             ref='netex:ORIGIN',
                                                             version_ref='SAME_AS_TRIP'
                                                         ),
                                                         end_stop_point_ref_or_end_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             ref='netex:DESTINATION',
                                                             version_ref='SAME_AS_TRIP'
                                                         )
@@ -8584,6 +9187,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         service_journey_ref=[
                                                             ServiceJourneyRef(
+                                                                value='',
                                                                 ref='netex:JOURNEY',
                                                                 version_ref='REQUIRED'
                                                             ),
@@ -8612,6 +9216,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
@@ -8622,10 +9227,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     distance_matrix_element_view=DistanceMatrixElementView(
                                                         start_stop_point_ref_or_start_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             ref='netex:DESTINATION',
                                                             version_ref='SAME_AS_TRIP'
                                                         ),
                                                         end_stop_point_ref_or_end_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             ref='netex:ORIGIN',
                                                             version_ref='SAME_AS_TRIP'
                                                         )
@@ -8633,6 +9240,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         service_journey_ref=[
                                                             ServiceJourneyRef(
+                                                                value='',
                                                                 ref='netex:JOUENEY',
                                                                 version_ref='REQUIRED'
                                                             ),
@@ -8661,6 +9269,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
@@ -8671,10 +9280,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     distance_matrix_element_view=DistanceMatrixElementView(
                                                         start_stop_point_ref_or_start_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             ref='netex:DESTINATION',
                                                             version_ref='SAME_AS_TRIP'
                                                         ),
                                                         end_stop_point_ref_or_end_tariff_zone_ref=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             ref='netex:ORIGIN',
                                                             version_ref='SAME_AS_TRIP'
                                                         )
@@ -8682,6 +9293,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         service_journey_ref=[
                                                             ServiceJourneyRef(
+                                                                value='',
                                                                 ref='netex:JOURNEY',
                                                                 version_ref='REQUIRED'
                                                             ),
@@ -8707,6 +9319,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
@@ -8735,6 +9348,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
@@ -8759,10 +9373,12 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -8790,6 +9406,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
@@ -8806,6 +9423,7 @@ obj = PublicationDelivery(
                                                                 refund_basis=PerBasisEnumeration.PER_PERSON,
                                                                 to_fare_class=FareClassEnumeration.FIRST_CLASS,
                                                                 to_class_of_use_ref=ClassOfUseRefStructure(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:first'
                                                                 )
@@ -8826,10 +9444,12 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@COMMON'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@in_first_class'
                                                 ),
@@ -8845,6 +9465,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@in_first_class'
                                                     )
@@ -8862,10 +9483,12 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -8893,6 +9516,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
@@ -8916,10 +9540,12 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@COMMON'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@Extension@add_on'
                                                 ),
@@ -8935,6 +9561,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Extension@add_on'
                                                     )
@@ -8952,10 +9579,12 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@free'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -8982,6 +9611,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=5,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
@@ -9005,14 +9635,17 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@COMMON'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@outbound'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@inbound'
                                                 ),
@@ -9028,6 +9661,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@outbound'
                                                     )
@@ -9049,10 +9683,12 @@ obj = PublicationDelivery(
                                         ),
                                         info_url='http://www.nationalrail.co.uk/stations_destinations/cyclists.aspx',
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@free'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -9069,10 +9705,12 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@COMMON'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@Bicycle@add_on'
                                                 ),
@@ -9085,6 +9723,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Bicycle@add_on'
                                                     )
@@ -9106,10 +9745,12 @@ obj = PublicationDelivery(
                                         ),
                                         info_url='http://www.nationalrail.co.uk/stations_destinations/luggage_animals.aspx',
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@free'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -9126,10 +9767,12 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@COMMON'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@Excess_Baggage@add_on'
                                                 ),
@@ -9142,6 +9785,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Excess_Baggage@add_on'
                                                     )
@@ -9167,36 +9811,43 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@self_print',
                                                     order=4
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@mobile',
                                                     order=6
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@travel_agent@despatch',
                                                     order=9
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@courier',
                                                     order=10
@@ -9212,10 +9863,12 @@ obj = PublicationDelivery(
                                                         value='With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -9228,10 +9881,12 @@ obj = PublicationDelivery(
                                                         value='With self Printed ticket for some online channels'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:self_print_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -9245,6 +9900,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
@@ -9252,12 +9908,14 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='eura:online'
                                                                         ),
                                                                     ],
                                                                     fulfilment_method_ref=[
                                                                         FulfilmentMethodRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='eura:self_print'
                                                                         ),
@@ -9275,10 +9933,12 @@ obj = PublicationDelivery(
                                                         value='With Mobile ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:mobile_app_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -9289,12 +9949,14 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:operatorGroup:mobile_app'
                                                                         ),
@@ -9325,6 +9987,7 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@onboard',
                                                     order=3
@@ -9340,10 +10003,12 @@ obj = PublicationDelivery(
                                                         value='With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Extension'
                                                     ),
@@ -9368,6 +10033,7 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation-SOP'
                                                 ),
@@ -9389,6 +10055,7 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='atc:atoc_data'
                                 )
                             ),
@@ -9396,10 +10063,12 @@ obj = PublicationDelivery(
                                 id='atc:ATOC@Products@Trip@Prices',
                                 version='01',
                                 rounding_ref=RoundingRef(
+                                    value='',
                                     version='any',
                                     ref='atc:split'
                                 ),
                                 day_type_ref=FareDayTypeRef(
+                                    value='',
                                     version='any',
                                     ref='atc:working_day'
                                 ),
@@ -9465,6 +10134,7 @@ obj = PublicationDelivery(
                                                                 prices_for=PriceableObjectRefsRelStructure(
                                                                     choice=[
                                                                         FareStructureElementRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:ATOC@Tariff@Demand@anytime'
                                                                         ),
@@ -9486,6 +10156,7 @@ obj = PublicationDelivery(
                                                                             prices_for=PriceableObjectRefsRelStructure(
                                                                                 choice=[
                                                                                     SalesOfferPackageRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:ATOC@Products@Trip@Standard@single@anytime-SOP'
                                                                                     ),
@@ -9494,6 +10165,7 @@ obj = PublicationDelivery(
                                                                             limitations=UsageParameterRefsRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                                     ),
@@ -9509,6 +10181,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:first'
                                                                                             )
@@ -9524,6 +10197,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -9538,6 +10212,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('10.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -9550,6 +10225,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('9.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -9562,6 +10238,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('12.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:onboard'
                                                                                                                 ),
@@ -9579,6 +10256,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -9595,6 +10273,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                                                                                 ),
@@ -9609,6 +10288,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -9623,6 +10303,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                                                                                 ),
@@ -9637,6 +10318,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -9651,6 +10333,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                                                                                 ),
@@ -9665,6 +10348,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:onboard'
                                                                                                                 ),
@@ -9684,6 +10368,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:second'
                                                                                             )
@@ -9699,6 +10384,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -9713,6 +10399,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('15.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -9725,6 +10412,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('12.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -9737,6 +10425,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('9.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:onboard'
                                                                                                                 ),
@@ -9754,6 +10443,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -9770,6 +10460,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station'
                                                                                                                                 ),
@@ -9784,6 +10475,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -9798,6 +10490,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station'
                                                                                                                                 ),
@@ -9812,6 +10505,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -9826,6 +10520,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@second@adult@in_station'
                                                                                                                                 ),
@@ -9840,6 +10535,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:onboard'
                                                                                                                 ),
@@ -9863,6 +10559,7 @@ obj = PublicationDelivery(
                                                                             prices_for=PriceableObjectRefsRelStructure(
                                                                                 choice=[
                                                                                     SalesOfferPackageRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:ATOC@Products@Trip@Standard@return@anytime-SOP'
                                                                                     ),
@@ -9871,6 +10568,7 @@ obj = PublicationDelivery(
                                                                             limitations=UsageParameterRefsRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@return'
                                                                                     ),
@@ -9886,6 +10584,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:first'
                                                                                             )
@@ -9901,6 +10600,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -9915,6 +10615,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('18.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -9927,6 +10628,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('15.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -9942,6 +10644,7 @@ obj = PublicationDelivery(
                                                                                                                     is_allowed=False
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:onboard'
                                                                                                                 ),
@@ -9959,6 +10662,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -9975,6 +10679,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@in_station'
                                                                                                                                 ),
@@ -9989,6 +10694,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10003,6 +10709,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@first@adult@in_station'
                                                                                                                                 ),
@@ -10017,6 +10724,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10032,6 +10740,7 @@ obj = PublicationDelivery(
                                                                                                                     is_allowed=False
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:onboard'
                                                                                                                 ),
@@ -10051,6 +10760,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:second'
                                                                                             )
@@ -10066,6 +10776,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -10080,6 +10791,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('17.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10092,6 +10804,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('21.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10120,6 +10833,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -10136,6 +10850,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@in_station'
                                                                                                                                 ),
@@ -10150,6 +10865,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10164,6 +10880,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@return@second@adult@in_station'
                                                                                                                                 ),
@@ -10178,6 +10895,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10193,6 +10911,7 @@ obj = PublicationDelivery(
                                                                                                                     is_allowed=False
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:onboard'
                                                                                                                 ),
@@ -10219,6 +10938,7 @@ obj = PublicationDelivery(
                                                                 prices_for=PriceableObjectRefsRelStructure(
                                                                     choice=[
                                                                         FareStructureElementRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:ATOC@Tariff@Demand@off_peak_regular'
                                                                         ),
@@ -10240,6 +10960,7 @@ obj = PublicationDelivery(
                                                                             prices_for=PriceableObjectRefsRelStructure(
                                                                                 choice=[
                                                                                     SalesOfferPackageRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:ATOC@Products@Trip@Standard@single@off_peak_regular-SOP'
                                                                                     ),
@@ -10248,6 +10969,7 @@ obj = PublicationDelivery(
                                                                             limitations=UsageParameterRefsRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                                     ),
@@ -10263,6 +10985,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:first'
                                                                                             )
@@ -10278,6 +11001,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -10292,6 +11016,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('9.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10304,6 +11029,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('9.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10321,6 +11047,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -10337,6 +11064,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@in_station'
                                                                                                                                 ),
@@ -10351,6 +11079,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10365,6 +11094,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@first@adult@in_station'
                                                                                                                                 ),
@@ -10379,6 +11109,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10398,6 +11129,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:second'
                                                                                             )
@@ -10413,6 +11145,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -10427,6 +11160,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('12.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10439,6 +11173,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('9.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10456,6 +11191,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -10472,6 +11208,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@in_station'
                                                                                                                                 ),
@@ -10486,6 +11223,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10500,6 +11238,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@single@second@adult@in_station'
                                                                                                                                 ),
@@ -10514,6 +11253,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10537,6 +11277,7 @@ obj = PublicationDelivery(
                                                                             prices_for=PriceableObjectRefsRelStructure(
                                                                                 choice=[
                                                                                     SalesOfferPackageRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:ATOC@Products@Trip@Standard@return@off_peak_regular-SOP'
                                                                                     ),
@@ -10545,6 +11286,7 @@ obj = PublicationDelivery(
                                                                             limitations=UsageParameterRefsRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@return'
                                                                                     ),
@@ -10560,6 +11302,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:first'
                                                                                             )
@@ -10575,6 +11318,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -10589,6 +11333,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('12.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10601,6 +11346,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('9.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10618,6 +11364,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -10634,6 +11381,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@in_station'
                                                                                                                                 ),
@@ -10648,6 +11396,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10662,6 +11411,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@first@adult@in_station'
                                                                                                                                 ),
@@ -10676,6 +11426,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10695,6 +11446,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:second'
                                                                                             )
@@ -10710,6 +11462,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -10724,6 +11477,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('9.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10736,6 +11490,7 @@ obj = PublicationDelivery(
                                                                                                                     amount=Decimal('2.00')
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10753,6 +11508,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -10769,6 +11525,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@in_station'
                                                                                                                                 ),
@@ -10783,6 +11540,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:in_station'
                                                                                                                 ),
@@ -10797,6 +11555,7 @@ obj = PublicationDelivery(
                                                                                                                         rule_step_result=[
                                                                                                                             PriceRuleStepResultStructure(
                                                                                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                                                                    value='',
                                                                                                                                     version='01',
                                                                                                                                     ref='atc:ATOC@Products@Trip@Prices@off_peak@return@second@adult@in_station'
                                                                                                                                 ),
@@ -10811,6 +11570,7 @@ obj = PublicationDelivery(
                                                                                                                     )
                                                                                                                 ),
                                                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                                                    value='',
                                                                                                                     version='01',
                                                                                                                     ref='eura:online'
                                                                                                                 ),
@@ -10840,6 +11600,7 @@ obj = PublicationDelivery(
                                                                 prices_for=PriceableObjectRefsRelStructure(
                                                                     choice=[
                                                                         FareStructureElementRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:ATOC@Tariff@Demand@advance'
                                                                         ),
@@ -10861,6 +11622,7 @@ obj = PublicationDelivery(
                                                                             prices_for=PriceableObjectRefsRelStructure(
                                                                                 choice=[
                                                                                     SalesOfferPackageRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:ATOC@Products@Trip@Standard@single@advance-SOP'
                                                                                     ),
@@ -10869,6 +11631,7 @@ obj = PublicationDelivery(
                                                                             limitations=UsageParameterRefsRelStructure(
                                                                                 choice=[
                                                                                     RoundTripRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                                     ),
@@ -10876,6 +11639,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             specifics=FareTableSpecificsStructure(
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=DistributionChannelRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='eura:online'
                                                                                 )
@@ -10890,6 +11654,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:first'
                                                                                             )
@@ -10908,6 +11673,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -10923,6 +11689,7 @@ obj = PublicationDelivery(
                                                                                                                         value='Prices will be fetched dynamically'
                                                                                                                     ),
                                                                                                                     pricing_service_ref=PricingServiceRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
@@ -10932,6 +11699,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 choice_1=[
                                                                                                                     FareQuotaFactorRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q1'
                                                                                                                     ),
@@ -10946,6 +11714,7 @@ obj = PublicationDelivery(
                                                                                                                         value='Prices will be fetched dynamically'
                                                                                                                     ),
                                                                                                                     pricing_service_ref=PricingServiceRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
@@ -10955,6 +11724,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 choice_1=[
                                                                                                                     FareQuotaFactorRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q2'
                                                                                                                     ),
@@ -10969,6 +11739,7 @@ obj = PublicationDelivery(
                                                                                                                         value='Prices will be fetched dynamically'
                                                                                                                     ),
                                                                                                                     pricing_service_ref=PricingServiceRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
@@ -10978,6 +11749,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 choice_1=[
                                                                                                                     FareQuotaFactorRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@first@Q3'
                                                                                                                     ),
@@ -10996,6 +11768,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -11029,6 +11802,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         specifics=FareTableSpecificsStructure(
                                                                                             class_of_use_ref=ClassOfUseRef(
+                                                                                                value='',
                                                                                                 version='any',
                                                                                                 ref='eura:second'
                                                                                             )
@@ -11047,6 +11821,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:adult'
                                                                                                             ),
@@ -11062,6 +11837,7 @@ obj = PublicationDelivery(
                                                                                                                         value='Prices will be fetched dynamically'
                                                                                                                     ),
                                                                                                                     pricing_service_ref=PricingServiceRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
@@ -11071,6 +11847,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 choice_1=[
                                                                                                                     FareQuotaFactorRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q1'
                                                                                                                     ),
@@ -11085,6 +11862,7 @@ obj = PublicationDelivery(
                                                                                                                         value='Prices will be fetched dynamically'
                                                                                                                     ),
                                                                                                                     pricing_service_ref=PricingServiceRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
@@ -11094,6 +11872,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 choice_1=[
                                                                                                                     FareQuotaFactorRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q2'
                                                                                                                     ),
@@ -11108,6 +11887,7 @@ obj = PublicationDelivery(
                                                                                                                         value='Prices will be fetched dynamically'
                                                                                                                     ),
                                                                                                                     pricing_service_ref=PricingServiceRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:dynamic_pricing_service'
                                                                                                                     ),
@@ -11117,6 +11897,7 @@ obj = PublicationDelivery(
                                                                                                                 ),
                                                                                                                 choice_1=[
                                                                                                                     FareQuotaFactorRef(
+                                                                                                                        value='',
                                                                                                                         version='01',
                                                                                                                         ref='atc:ATOC@Tariff@Quotas@advance@second@Q3'
                                                                                                                     ),
@@ -11135,6 +11916,7 @@ obj = PublicationDelivery(
                                                                                                     limitations=UsageParameterRefsRelStructure(
                                                                                                         choice=[
                                                                                                             UserProfileRef(
+                                                                                                                value='',
                                                                                                                 version='any',
                                                                                                                 ref='atc:child'
                                                                                                             ),
@@ -11191,6 +11973,7 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='atc:atoc_data'
                                 )
                             ),
@@ -11208,10 +11991,12 @@ obj = PublicationDelivery(
                                             ref='uic:1170'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -11264,14 +12049,17 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@ODs@p2p_OD'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
@@ -11292,6 +12080,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
@@ -11344,6 +12133,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_purchase_when'
                                                         ),
@@ -11423,6 +12213,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:gives_entitlement'
                                                         ),
@@ -11470,24 +12261,29 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@1week'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@3month'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@1month'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                             ),
                                                         ]
                                                     ),
                                                     choice_1=GroupOfDistanceMatrixElementsRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@ODs@LE@season'
                                                     ),
@@ -11501,6 +12297,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Pass@Season@repeated_trip_p2p'
                                                                 )
@@ -11515,6 +12312,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -11547,6 +12345,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
@@ -11561,6 +12360,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=5,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:eligible'
                                                                     ),
@@ -11568,6 +12368,7 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             UserProfileRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:adult'
                                                                             ),
@@ -11591,6 +12392,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=5,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:eligible'
                                                                     ),
@@ -11598,6 +12400,7 @@ obj = PublicationDelivery(
                                                                     limitations=UsageParametersRelStructure(
                                                                         choice=[
                                                                             UserProfileRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:child'
                                                                             ),
@@ -11633,10 +12436,12 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@validities'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@COMPOSITION'
                                                 ),
@@ -11645,6 +12450,7 @@ obj = PublicationDelivery(
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@COMPOSITION@trips',
                                                     order=1
@@ -11661,18 +12467,22 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@COMPOSITION'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@validities'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@purchase_windows'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@after_sales'
                                                 ),
@@ -11688,6 +12498,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Photocard@validities'
                                                 ),
@@ -11723,6 +12534,7 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     ref='atc:ATOC@Products@Pass@Photocard@holder'
                                                 ),
                                             ]
@@ -11749,10 +12561,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@free'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
@@ -11790,15 +12604,18 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:first'
                                                             ),
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:second'
                                                             ),
                                                         ]
@@ -11812,6 +12629,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -11819,30 +12637,37 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:child'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@16to25'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@senior'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@HM_forces'
                                                             ),
@@ -11857,6 +12682,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
@@ -11864,10 +12690,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@unlimited_use'
                                                             ),
                                                             TransferabilityRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@transferring@individual@not_transferable'
                                                             ),
@@ -11882,6 +12710,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
@@ -11889,10 +12718,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RefundingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@can_refund'
                                                             ),
                                                             ReplacingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@can_replace'
                                                             ),
@@ -11907,6 +12738,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
@@ -11914,18 +12746,22 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             PurchaseWindowRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@buy@7day'
                                                             ),
                                                             PurchaseWindowRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@renew@7day'
                                                             ),
                                                             PurchaseWindowRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@buy@1M-1Y'
                                                             ),
                                                             PurchaseWindowRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@renew@1M-1Y'
                                                             ),
@@ -11940,6 +12776,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=5,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
@@ -11947,18 +12784,22 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             LuggageAllowanceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@luggage@carry_on'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Seat_Reservation'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Bicycle_Reservation'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Excess_Baggage'
                                                             ),
@@ -11974,6 +12815,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season@repeated_trip_p2p'
                                                     )
@@ -11983,6 +12825,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Common@access@first_class_lounge'
                                                     )
@@ -12105,14 +12948,17 @@ obj = PublicationDelivery(
                                         members=DistributionChannelRefsRelStructure(
                                             distribution_channel_ref=[
                                                 DistributionChannelRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:online'
                                                 ),
                                                 DistributionChannelRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:at_counter'
                                                 ),
                                                 DistributionChannelRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:call_centre'
                                                 ),
@@ -12128,18 +12974,22 @@ obj = PublicationDelivery(
                                         members=DistributionChannelRefsRelStructure(
                                             distribution_channel_ref=[
                                                 DistributionChannelRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:online'
                                                 ),
                                                 DistributionChannelRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:at_counter'
                                                 ),
                                                 DistributionChannelRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:self_service_ticket_machine'
                                                 ),
                                                 DistributionChannelRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:call_centre'
                                                 ),
@@ -12169,6 +13019,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -12183,10 +13034,12 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Products@Pass@Photocard-SOP@adult',
                                                     version='01',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Photocard'
                                                     ),
@@ -12214,6 +13067,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:child'
                                                             ),
@@ -12228,10 +13082,12 @@ obj = PublicationDelivery(
                                                     id='atc:ATOC@Products@Pass@Photocard-SOP@child',
                                                     version='01',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Photocard'
                                                     ),
@@ -12259,6 +13115,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -12266,14 +13123,17 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@week'
                                                             ),
                                                             UsageValidityPeriodRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@month'
                                                             ),
                                                             UsageValidityPeriodRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@period'
                                                             ),
@@ -12291,6 +13151,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
@@ -12298,34 +13159,42 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:infant'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:child'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:youth'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@senior'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled'
                                                             ),
                                                             CompanionProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:disabledCompanion'
                                                             ),
@@ -12334,6 +13203,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='eura:at_counter'
                                                             ),
@@ -12367,6 +13237,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -12374,6 +13245,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UsageValidityPeriodRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@period'
                                                             ),
@@ -12391,6 +13263,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -12398,6 +13271,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -12415,6 +13289,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
@@ -12422,6 +13297,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='eura:at_counter'
                                                             ),
@@ -12439,6 +13315,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
@@ -12456,6 +13333,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 url='http://www.nationalrail.co.uk/times_fares/ticket_types/46573.aspx',
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card'
                                                                 )
@@ -12466,10 +13344,12 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:gold_card@at_counter'
                                                             ),
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:gold_card@online'
                                                             ),
@@ -12481,21 +13361,25 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@courier',
                                                     order=10
@@ -12514,10 +13398,12 @@ obj = PublicationDelivery(
                                                         value='Supported type supported by all operators'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12533,10 +13419,12 @@ obj = PublicationDelivery(
                                                         value='Supported type supported by seelcted operators'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12550,6 +13438,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
+                                                                            value='',
                                                                             ref='atc:smart_card_pass_operators',
                                                                             version_ref='TODO'
                                                                         ),
@@ -12584,6 +13473,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:gold_card@at_counter'
                                                     )
@@ -12596,6 +13486,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:gold_card@online'
                                                     )
@@ -12611,10 +13502,12 @@ obj = PublicationDelivery(
                                                         value='Gold Card Physical'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card'
                                                     ),
@@ -12627,10 +13520,12 @@ obj = PublicationDelivery(
                                                         value='Gold Card Record'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card'
                                                     ),
@@ -12677,16 +13572,19 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
@@ -12702,10 +13600,12 @@ obj = PublicationDelivery(
                                                         value='Supported type supported by all operators'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12718,10 +13618,12 @@ obj = PublicationDelivery(
                                                         value='Supported type supported by some operators'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:mobile_app_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -12732,6 +13634,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
@@ -12739,6 +13642,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:operatorGroup:mobile_app'
                                                                         ),
@@ -12774,10 +13678,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus Season as pass'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -12790,10 +13696,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus Season on smart card'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -12804,6 +13712,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
@@ -12811,6 +13720,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
+                                                                            value='',
                                                                             ref='atc:smart_card_pass_operators',
                                                                             version_ref='TODO'
                                                                         ),
@@ -12836,6 +13746,7 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='atc:atoc_data'
                                 )
                             ),
@@ -12866,10 +13777,12 @@ obj = PublicationDelivery(
                                             ref='atc:Consortium:NRE'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Lines@Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:flat'
                                         ),
@@ -12920,6 +13833,7 @@ obj = PublicationDelivery(
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:working_day_not_July_or_August'
                                                                             ),
@@ -12963,20 +13877,24 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@1year'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@2year'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@3year'
                                                             ),
                                                         ]
                                                     ),
                                                     choice_1=GroupOfDistanceMatrixElementsRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@ODs@LE@season'
                                                     )
@@ -12994,6 +13912,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:eligible'
                                                                 ),
@@ -13012,10 +13931,12 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             url='http://www.nationalrail.co.uk/times_fares/prd359000a04000200b5da61f1e92b72.aspx',
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@student'
                                                                             ),
                                                                             type_of_concession_ref=TypeOfConcessionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:student'
                                                                             ),
@@ -13037,10 +13958,12 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             url='https://www.16-25railcard.co.uk/',
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@student'
                                                                             ),
                                                                             type_of_concession_ref=TypeOfConcessionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:young_adult'
                                                                             ),
@@ -13063,10 +13986,12 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             url='https://www.railcard.co.uk/26-30/',
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@student'
                                                                             ),
                                                                             type_of_concession_ref=TypeOfConcessionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:young_adult'
                                                                             ),
@@ -13084,10 +14009,12 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             url='http://www.nationalrail.co.uk/times_fares/46540.aspx',
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:senior_rate'
                                                                             ),
                                                                             type_of_concession_ref=TypeOfConcessionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:senior'
                                                                             ),
@@ -13106,10 +14033,12 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             url='https://www.raileasy.co.uk/information/rail-cards/jobcentre-plus/#/',
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@concession'
                                                                             ),
                                                                             type_of_concession_ref=TypeOfConcessionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:social'
                                                                             ),
@@ -13127,10 +14056,12 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             url='https://www.disabledpersons-railcard.co.uk/',
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@disabled'
                                                                             ),
                                                                             type_of_concession_ref=TypeOfConcessionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:statutory'
                                                                             ),
@@ -13148,6 +14079,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         url='https://www.disabledpersons-railcard.co.uk/',
                                                                                         user_profile_ref=UserProfileRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='atc:adult'
                                                                                         ),
@@ -13168,10 +14100,12 @@ obj = PublicationDelivery(
                                                                                 value='To apply for your Railcard please see your Unit HR admin staff.  HM Forces Railcards cannot be purchased at National Rail stations.\nHM Forces Railcard - £21 for one year\nThe HM Forces Railcard costs £21 and it will save you 1/3 on most rail fares throughout Great Britain for a whole year. That works out to under £2 a month for huge savings.\n\nYou are eligible if you are a member of the Armed Forces, certain reservists and in most cases, a spouse or partner of a member or a dependent. Service personnel can obtain an application form from their Unit Personnel/Administration Office.\nPlease note that a £12 minimum fare for Single and Return tickets applies between 04:30 and 09:59  Monday to Friday except on Public Holidays or during July and August. \t\t\t\t\t\t\t\n\t\t\t\t\t\t\t'
                                                                             ),
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:ATOC@Common@rate@armed_forces'
                                                                             ),
                                                                             type_of_concession_ref=TypeOfConcessionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:statutory'
                                                                             ),
@@ -13199,6 +14133,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
@@ -13234,6 +14169,7 @@ obj = PublicationDelivery(
                                                                             companion_profiles=CompanionProfilesRelStructure(
                                                                                 companion_profile_ref_or_companion_profile=[
                                                                                     CompanionProfileRef(
+                                                                                        value='',
                                                                                         ref='atc:adult'
                                                                                     ),
                                                                                 ]
@@ -13284,6 +14220,7 @@ obj = PublicationDelivery(
                                                                                         id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@adult',
                                                                                         version='any',
                                                                                         user_profile_ref=CompanionProfileRef(
+                                                                                            value='',
                                                                                             ref='atc:adult'
                                                                                         ),
                                                                                         minimum_number_of_persons=1,
@@ -13294,6 +14231,7 @@ obj = PublicationDelivery(
                                                                                         id='atc:ATOC@Tariff@Discount@Rail_Card@group@family@child',
                                                                                         version='any',
                                                                                         user_profile_ref=CompanionProfileRef(
+                                                                                            value='',
                                                                                             ref='atc:child'
                                                                                         ),
                                                                                         minimum_number_of_persons=1,
@@ -13328,6 +14266,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Discount@Rail_Card@intervals'
                                                 ),
@@ -13340,6 +14279,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -13365,6 +14305,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Discount@Rail_Card@intervals'
                                                 ),
@@ -13377,6 +14318,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -13390,6 +14332,7 @@ obj = PublicationDelivery(
                                                         ],
                                                         group_of_operators_ref=[
                                                             GroupOfOperatorsRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:operatorGroup:gold_card'
                                                             ),
@@ -13460,30 +14403,37 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@16to25'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@senior'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@job_seeker'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@HM_forces'
                                                             ),
@@ -13500,10 +14450,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             GroupTicketRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@group@family'
                                                             ),
                                                             GroupTicketRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@group@two_together'
                                                             ),
@@ -13515,6 +14467,7 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Rail_Card@use@general'
                                                 ),
@@ -13542,11 +14495,13 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@freebie'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
@@ -13591,12 +14546,14 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         group_of_operators_ref=[
                                                             GroupOfOperatorsRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:operatorGroup:gold_card'
                                                             ),
                                                         ],
                                                         fare_zone_ref=[
                                                             FareZoneRef(
+                                                                value='',
                                                                 ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card_Area',
                                                                 version_ref='TODO'
                                                             ),
@@ -13616,6 +14573,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -13627,6 +14585,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 url='http://www.nationalrail.co.uk/times_fares/ticket_types/season_tickets.as',
                                                                 choice=PreassignedFareProductRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Pass@Season'
                                                                 )
@@ -13639,6 +14598,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 url='http://www.nationalrail.co.uk/times_fares/ticket_types/season_tickets.as',
                                                                 choice=PreassignedFareProductRef(
+                                                                    value='',
                                                                     ref='tfl:TravelCard',
                                                                     version_ref='TODO'
                                                                 )
@@ -13646,6 +14606,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     ),
@@ -13659,6 +14620,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:gold_card@online'
                                                                         ),
@@ -13672,6 +14634,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:gold_card@at_counter'
                                                                         ),
@@ -13727,6 +14690,7 @@ obj = PublicationDelivery(
                                                                     value='\nAnnual Gold Card holders can buy one of the following one year Railcards for only £10 anytime during the validity of their Annual Gold Card for either themselves or someone else:\n\n16-25 Railcard, Two Together Railcard , Family & Friends Railcard, Disabled Persons Railcard, Senior Railcard, Network Railcard\nAnnual Gold Card holders can apply for a Railcard for £10 at the National Rail station where they purchased their Annual Season ticket. Holders of Annual Gold Cards bought online or Gold Record Card holders can apply at their local National Rail station.\n\nA Railcard application will need to be completed by the applicant and, where required, evidence of eligibility and photos - see the relevant Railcard application form for details. The Annual Gold Card holder will need to show their Annual Gold Card or Gold Record Card at the time of purchase and only one discounted Railcard can be purchased during the validity of the Annual Season ticket.'
                                                                 ),
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card@extra_rail_card_at_discount'
                                                                 )
@@ -13750,6 +14714,7 @@ obj = PublicationDelivery(
                                                                     value='Annual Gold Card holders can upgrade to First Class on a route covered by their Annual Season ticket by paying the difference between the full single fare for First Class accommodation and the full single fare for Standard accommodation or a First Class supplement offered by the train company before their journey starts.'
                                                                 ),
                                                                 choice=SupplementProductRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@Supplement@Upgrade@to_first_class'
                                                                 )
@@ -13762,6 +14727,7 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Rail_Card@use@gold'
                                                 ),
@@ -13787,14 +14753,17 @@ obj = PublicationDelivery(
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:weekend'
                                                                             ),
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:public_holiday_UK'
                                                                             ),
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:working_day_after_9.30'
                                                                             ),
@@ -13828,11 +14797,13 @@ obj = PublicationDelivery(
                                             value='\nAnnual Gold Card holders can buy one of the following one year Railcards for only £10 anytime during the validity of their Annual Gold Card for either themselves or someone else:\n\n16-25 Railcard, Two Together Railcard , Family & Friends Railcard, Disabled Persons Railcard, Senior Railcard, Network Railcard\nAnnual Gold Card holders can apply for a Railcard for £10 at the National Rail station where they purchased their Annual Season ticket. Holders of Annual Gold Cards bought online or Gold Record Card holders can apply at their local National Rail station.\n\nA Railcard application will need to be completed by the applicant and, where required, evidence of eligibility and photos - see the relevant Railcard application form for details. The Annual Gold Card holder will need to show their Annual Gold Card or Gold Record Card at the time of purchase and only one discounted Railcard can be purchased during the validity of the Annual Season ticket.'
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@freebie'
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@selected_tocs'
                                         ),
@@ -13871,6 +14842,7 @@ obj = PublicationDelivery(
                                                                     value='Must have a Annual gold card'
                                                                 ),
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card'
                                                                 ),
@@ -13880,6 +14852,7 @@ obj = PublicationDelivery(
                                                                     specific_to_profiles=UserProfileRefsRelStructure(
                                                                         user_profile_ref=[
                                                                             UserProfileRef(
+                                                                                value='',
                                                                                 ref='atc:family_member',
                                                                                 version_ref='EXTERNAL'
                                                                             ),
@@ -13892,12 +14865,14 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         scheduled_stop_point_ref=[
                                                             FareScheduledStopPointRef(
+                                                                value='',
                                                                 ref='netex:PURCHASE_STATION',
                                                                 version_ref='netex:REQUIRED'
                                                             ),
                                                         ],
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='eura:at_counter'
                                                             ),
@@ -13923,6 +14898,7 @@ obj = PublicationDelivery(
                                                                             version='01',
                                                                             amount=Decimal('10.00'),
                                                                             price_unit_ref=PriceUnitRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:GBP'
                                                                             )
@@ -13930,6 +14906,7 @@ obj = PublicationDelivery(
                                                                     ]
                                                                 ),
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Rail_Card'
                                                                 )
@@ -13944,6 +14921,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Two_Together'
                                                                 )
@@ -13953,6 +14931,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@16to25'
                                                                 )
@@ -13962,6 +14941,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Family_and_Friends'
                                                                 )
@@ -13971,6 +14951,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Senior'
                                                                 )
@@ -13980,6 +14961,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Disabled'
                                                                 )
@@ -13989,6 +14971,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Network'
                                                                 )
@@ -14001,6 +14984,7 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Rail_Card@use@gold'
                                                 ),
@@ -14032,6 +15016,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14039,6 +15024,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -14053,6 +15039,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access_when'
                                                     ),
@@ -14069,6 +15056,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     )
@@ -14081,12 +15069,14 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         fare_zone_ref=[
                                                             FareZoneRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:FareZone:ATOC@Network_railcard_area'
                                                             ),
@@ -14098,16 +15088,19 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
@@ -14115,6 +15108,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14139,6 +15133,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14146,6 +15141,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -14155,6 +15151,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14179,6 +15176,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14186,10 +15184,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@16to25'
                                                             ),
@@ -14204,6 +15204,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
@@ -14211,6 +15212,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@16to25'
                                                             ),
@@ -14229,10 +15231,12 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@16to25'
                                                                         ),
                                                                         UserProfileRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student'
                                                                         ),
@@ -14242,12 +15246,14 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         GroupOfDistributionChannelsRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='atc:normal_channels@pass'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@1year'
                                                                 )
@@ -14274,12 +15280,14 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='eura:online'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Tariff@Discount@Rail_Cardrail_card@3year'
                                                                 )
@@ -14295,6 +15303,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14305,6 +15314,7 @@ obj = PublicationDelivery(
                                                                 id='atc:ATOC@Products@Discount@Railcard-SOP@16to25@price_limit@peak',
                                                                 version='01',
                                                                 discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                    value='',
                                                                     ref=''
                                                                 ),
                                                                 usage_trigger=UsageTriggerEnumeration.START_OUTBOUND_RIDE,
@@ -14313,6 +15323,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     quality_structure_factor_ref=FareDemandFactorRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Discount@demand@off_peak_day@all_stations@peak'
                                                     )
@@ -14320,6 +15331,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14344,6 +15356,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14351,10 +15364,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:child'
                                                             ),
@@ -14364,6 +15379,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14388,6 +15404,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14395,6 +15412,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@senior'
                                                             ),
@@ -14404,6 +15422,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14428,6 +15447,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14435,6 +15455,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled'
                                                             ),
@@ -14450,6 +15471,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:statutory_organisation'
                                                     ),
@@ -14459,6 +15481,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14483,6 +15506,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14490,6 +15514,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@job_seeker'
                                                             ),
@@ -14499,6 +15524,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14523,6 +15549,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -14530,6 +15557,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@HM_forces'
                                                             ),
@@ -14545,6 +15573,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:employee_organisation'
                                                     ),
@@ -14554,6 +15583,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                         )
@@ -14577,10 +15607,12 @@ obj = PublicationDelivery(
                                                         value='Rail card as pass'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Rail_Card'
                                                     ),
@@ -14591,30 +15623,37 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Two_Together'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@16to25'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Family_and_Friends'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Senior'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Disabled'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Job_Seeker'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Network'
                                                 ),
@@ -14639,13 +15678,16 @@ obj = PublicationDelivery(
                 responsibility_set_ref_attribute='abga:products:LT',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='abga'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='abga:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='abga:products:LT'
                     )
@@ -14671,13 +15713,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='abga'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='abga:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='abga:products:LT'
                                 )
@@ -14708,6 +15753,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.FARE_MANAGEMENT,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='atc:LT'
                                                     ),
@@ -14734,6 +15780,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='atc:LT'
                                                     ),
@@ -14926,10 +15973,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='abga:term@spring@2018'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='abga:suffolk_school_day'
                                         )
@@ -14942,10 +15991,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='abga:term@summer@full@2018'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='abga:suffolk_school_day'
                                         )
@@ -14958,10 +16009,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='abga:term@autumn@2018'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='abga:suffolk_school_day'
                                         )
@@ -14985,46 +16038,57 @@ obj = PublicationDelivery(
                                 members=LineRefsRelStructure(
                                     line_ref=[
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Braintree'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Felixstowe'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Great-Yarmouth'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Kings_Lynn'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Lowestoft'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Norwich'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Sudbury'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_London-to-Walton_on_the_Naze'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_Stansted Express'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_Stansted_Airport-to-Ely'
                                         ),
                                         LineRef(
+                                            value='',
                                             version='01',
                                             ref='abga:ln_Ely-to-Norwich'
                                         ),
@@ -15039,6 +16103,7 @@ obj = PublicationDelivery(
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
                                         TariffZoneRef(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus_zone:IPSWICH'
                                         ),
@@ -15070,14 +16135,17 @@ obj = PublicationDelivery(
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
                                                 TariffZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='abga:LE@Rover@Norfolk'
                                                 ),
                                                 TariffZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='abga:LE@Rover@Suffolk'
                                                 ),
                                                 TariffZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='abga:LE@Rover@Cambridge'
                                                 ),
@@ -15096,6 +16164,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15109,6 +16178,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15122,6 +16192,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         )
@@ -15134,6 +16205,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15147,6 +16219,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15160,6 +16233,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15173,6 +16247,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15186,6 +16261,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15199,6 +16275,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         )
@@ -15220,6 +16297,7 @@ obj = PublicationDelivery(
                                         ),
                                         url='https://www.stanstedexpress.com/',
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
@@ -15233,6 +16311,7 @@ obj = PublicationDelivery(
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         )
@@ -15253,6 +16332,7 @@ obj = PublicationDelivery(
                                         members=LineRefsRelStructure(
                                             line_ref=[
                                                 LineRef(
+                                                    value='',
                                                     ref='abga:Tottenham_Hale-to-Shelford',
                                                     version_ref='TODO'
                                                 ),
@@ -15271,34 +16351,42 @@ obj = PublicationDelivery(
                                         members=LineRefsRelStructure(
                                             line_ref=[
                                                 LineRef(
+                                                    value='',
                                                     version='01',
                                                     ref='abga:ln_London-to-Norwich'
                                                 ),
                                                 LineRef(
+                                                    value='',
                                                     version='01',
                                                     ref='abga:ln_London-to-Lowestoft'
                                                 ),
                                                 LineRef(
+                                                    value='',
                                                     version='01',
                                                     ref='abga:ln_London-to-Felixstowe'
                                                 ),
                                                 LineRef(
+                                                    value='',
                                                     version='01',
                                                     ref='abga:ln_London-to-Great-Yarmouth'
                                                 ),
                                                 LineRef(
+                                                    value='',
                                                     ref='abga:ln_London-to-Sheringham',
                                                     version_ref='TODO'
                                                 ),
                                                 LineRef(
+                                                    value='',
                                                     version='01',
                                                     ref='abga:ln_London-to-Walton_on_the_Naze'
                                                 ),
                                                 LineRef(
+                                                    value='',
                                                     ref='abga:ln_London-to-Clacton_on_Sea',
                                                     version_ref='TODO'
                                                 ),
                                                 LineRef(
+                                                    value='',
                                                     ref='abga:ln_London-to-Ely',
                                                     version_ref='TODO'
                                                 ),
@@ -15535,6 +16623,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         departure_time=XmlTime(16, 30, 0, 0),
                                                         line_ref=LineRef(
+                                                            value='',
                                                             version='01',
                                                             ref='abga:ln_London-to-Felixstowe'
                                                         )
@@ -15557,6 +16646,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         departure_time=XmlTime(16, 32, 0, 0),
                                                         line_ref=LineRef(
+                                                            value='',
                                                             version='01',
                                                             ref='abga:ln_London-to-Felixstowe'
                                                         )
@@ -15579,6 +16669,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         departure_time=XmlTime(18, 30, 0, 0),
                                                         line_ref=LineRef(
+                                                            value='',
                                                             version='01',
                                                             ref='abga:ln_London-to-Felixstowe'
                                                         )
@@ -15601,6 +16692,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         departure_time=XmlTime(18, 34, 0, 0),
                                                         line_ref=LineRef(
+                                                            value='',
                                                             version='01',
                                                             ref='abga:ln_London-to-Braintree'
                                                         )
@@ -15623,6 +16715,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         departure_time=XmlTime(18, 12, 0, 0),
                                                         line_ref=LineRef(
+                                                            value='',
                                                             version='01',
                                                             ref='abga:ln_London-to-Sudbury'
                                                         )
@@ -15645,6 +16738,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         departure_time=XmlTime(18, 32, 0, 0),
                                                         line_ref=LineRef(
+                                                            value='',
                                                             version='01',
                                                             ref='abga:ln_London-to-Walton_on_the_Naze'
                                                         )
@@ -15675,14 +16769,17 @@ obj = PublicationDelivery(
                                             value='Carnet Tariff'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='abga:Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -15720,6 +16817,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='abga:rail_trip@carnet'
                                                                 ),
@@ -15731,12 +16829,14 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                                         day_type_ref=[
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:everyday'
                                                                             ),
@@ -15771,6 +16871,7 @@ obj = PublicationDelivery(
                                                                 access_number_is_limited=False,
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='abga:rail_trip@carnet'
                                                                 ),
@@ -15782,12 +16883,14 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                                         day_type_ref=[
                                                                             FareDayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='atc:everyday'
                                                                             ),
@@ -15913,6 +17016,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                 ),
@@ -15925,6 +17029,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -15937,6 +17042,7 @@ obj = PublicationDelivery(
                                                         ],
                                                         service_journey_ref=[
                                                             ServiceJourneyRef(
+                                                                value='',
                                                                 ref='netex:OPTIONAL'
                                                             ),
                                                         ]
@@ -15948,6 +17054,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
@@ -15955,10 +17062,12 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     type_of_product_category_ref=[
                                                                         TypeOfProductCategoryRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='eura:local'
                                                                         ),
                                                                         TypeOfProductCategoryRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='eura:ice'
                                                                         ),
@@ -15973,6 +17082,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:condition_of_use'
                                                                 ),
@@ -15980,6 +17090,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         RoundTripRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                                         ),
@@ -16003,6 +17114,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=2,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
@@ -16010,10 +17122,12 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     class_of_use_ref=[
                                                                         ClassOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='eura:first'
                                                                         ),
                                                                         ClassOfUseRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='eura:second'
                                                                         ),
@@ -16062,6 +17176,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     user_profile_ref=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='atc:adult'
                                                     ),
@@ -16086,6 +17201,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     user_profile_ref=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='atc:child'
                                                     ),
@@ -16138,10 +17254,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:product@single_toc'
                                         ),
@@ -16178,15 +17296,18 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:first'
                                                             ),
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:second'
                                                             ),
                                                         ]
@@ -16200,6 +17321,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -16207,6 +17329,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -16221,6 +17344,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
@@ -16228,18 +17352,22 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@single'
                                                             ),
                                                             InterchangingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@interchanging@can_break_trip'
                                                             ),
                                                             UsageValidityPeriodRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@single@validity@anytime'
                                                             ),
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@frequency@single_use'
                                                             ),
@@ -16256,6 +17384,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
@@ -16280,6 +17409,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
@@ -16307,6 +17437,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
@@ -16322,6 +17453,7 @@ obj = PublicationDelivery(
                                                                 allowed=ResellTypeEnumeration.NONE
                                                             ),
                                                             TransferabilityRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@transferring@individual@can_transfer'
                                                             ),
@@ -16336,6 +17468,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=5,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
@@ -16343,18 +17476,22 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             LuggageAllowanceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@luggage@carry_on'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Seat_Reservation'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Bicycle_Reservation'
                                                             ),
                                                             EntitlementGivenRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@entitles@Excess_Baggage'
                                                             ),
@@ -16370,6 +17507,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='abga:rail_trip@carnet'
                                                     )
@@ -16386,6 +17524,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@single@anytime-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -16408,6 +17547,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16428,10 +17568,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@anytime'
                                                     ),
@@ -16446,46 +17588,55 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@ticket_machine',
                                                     order=1
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@self_print',
                                                     order=4
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@mobile',
                                                     order=6
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@travel_agent@despatch',
                                                     order=9
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@courier',
                                                     order=10
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@onboard',
                                                     order=3
@@ -16502,6 +17653,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@return@anytime-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -16521,6 +17673,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16541,10 +17694,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@anytime'
                                                     ),
@@ -16559,46 +17714,55 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@ticket_machine',
                                                     order=1
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@self_print',
                                                     order=4
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@mobile',
                                                     order=6
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@travel_agent@despatch',
                                                     order=9
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@courier',
                                                     order=10
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@onboard',
                                                     order=3
@@ -16615,6 +17779,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@single@off_peak_regular-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -16637,6 +17802,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16657,10 +17823,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@off_peak_regular'
                                                     ),
@@ -16697,6 +17865,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16717,10 +17886,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@off_peak_regular'
                                                     ),
@@ -16742,6 +17913,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@single@off_peak_day-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -16761,6 +17933,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16781,10 +17954,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@off_peak_day'
                                                     ),
@@ -16796,6 +17971,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return'
                                                             ),
@@ -16814,6 +17990,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@return@off_peak_day-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -16833,6 +18010,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16853,10 +18031,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@anytime'
                                                     ),
@@ -16868,6 +18048,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return'
                                                             ),
@@ -16886,6 +18067,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@single@super_off_peak-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -16905,6 +18087,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16925,10 +18108,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@super_off_peak'
                                                     ),
@@ -16950,6 +18135,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@return@super_off_peak-SOP@Xtra',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -16969,6 +18155,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -16989,10 +18176,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@super_off_peak'
                                                     ),
@@ -17004,6 +18193,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@trip_type@day_return'
                                                             ),
@@ -17018,16 +18208,19 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@advance'
                                                     ),
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             GroupTicketRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='abga:LE@Products@Group@Duo_family'
                                                             ),
@@ -17046,6 +18239,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Standard@single@advance-SOP@Xtra',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17068,6 +18262,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
@@ -17088,10 +18283,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:takes_properties_from_group'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@advance'
                                                     ),
@@ -17118,16 +18315,19 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Demand@advance'
                                                     ),
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             PurchaseWindowRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='abga:LE@Products@advance@purchase_when'
                                                             ),
@@ -17146,6 +18346,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@Anytime_Day_Travel_Card@return-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17176,26 +18377,31 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@ticket_machine',
                                                     order=1
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@self_print',
                                                     order=4
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@mobile',
                                                     order=6
@@ -17211,10 +18417,12 @@ obj = PublicationDelivery(
                                                         value='tickets ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Standard@return@generic'
                                                     ),
@@ -17228,10 +18436,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@outbound@COMMON_rail_leg'
                                                                 ),
@@ -17245,10 +18455,12 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@return@inbound@COMMON_rail_leg'
                                                                 ),
@@ -17265,10 +18477,12 @@ obj = PublicationDelivery(
                                                         value='Reservation With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -17279,10 +18493,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@outbound'
                                                                 )
@@ -17298,10 +18514,12 @@ obj = PublicationDelivery(
                                                         value='Reservation With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:distribution_channel_dependent'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SupplementProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation'
                                                     ),
@@ -17312,10 +18530,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@Supplement@Seat_Reservation@inbound'
                                                                 )
@@ -17331,10 +18551,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus With Printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -17345,10 +18567,12 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:JSP@Products@Pass@PlusBus@origin_station'
                                                                 )
@@ -17367,6 +18591,7 @@ obj = PublicationDelivery(
                                                         value='The Anytime Day Travelcard is available from all Greater Anglia stations. From outside Greater London it offers one return train journey to London, at any time of the day during the week and includes unlimited use of the transport network in Greater London. This covers the London Underground, London Overground, almost all other National Rail services, all scheduled London Buses, the DLR (Docklands Light Railway) and the London Tramlink system in south London.'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
@@ -17380,6 +18605,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='atc:ATOC@Products@Trip@Standard@demand@anytime-COMMON-GSOP'
                                         )
@@ -17388,6 +18614,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Trip@multi_trip@carnet-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17418,11 +18645,13 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
@@ -17438,10 +18667,12 @@ obj = PublicationDelivery(
                                                         value='tickets ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=AmountOfPriceUnitProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='abga:LE@Products@Trip@multi_trip@carnet'
                                                     ),
@@ -17469,32 +18700,39 @@ obj = PublicationDelivery(
                                             value='Season  Tariff'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='abga:Network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@1week'
                                                 ),
                                                 TimeIntervalRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@1month'
                                                 ),
                                                 TimeIntervalRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@3month'
                                                 ),
                                                 TimeIntervalRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                 ),
@@ -17503,10 +18741,12 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Pass@Season@COMPOSITION'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Demand@anytime'
                                                 ),
@@ -17515,6 +18755,7 @@ obj = PublicationDelivery(
                                         groups_of_distance_matrix_elements=GroupsOfDistanceMatrixElementsRelStructure(
                                             group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements=[
                                                 GroupOfDistanceMatrixElementsRef(
+                                                    value='',
                                                     version='01',
                                                     ref='abga:season_pass_ODs'
                                                 ),
@@ -17528,32 +18769,39 @@ obj = PublicationDelivery(
                                             value='Season  Tariff'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='abga:LE@Network@Rover'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:zonal'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
+                                                    value='',
                                                     ref='abga:LE@Tariff@Pass@Rover@1day',
                                                     version_ref='TODO'
                                                 ),
                                                 TimeIntervalRef(
+                                                    value='',
                                                     ref='abga:LE@Tariff@Pass@Rover@1week',
                                                     version_ref='TODO'
                                                 ),
                                                 TimeIntervalRef(
+                                                    value='',
                                                     ref='abga:LE@Tariff@Pass@Rover@full_term',
                                                     version_ref='TODO'
                                                 ),
                                                 TimeIntervalRef(
+                                                    value='',
                                                     ref='abga:LE@Tariff@Pass@Rover@short_term',
                                                     version_ref='TODO'
                                                 ),
@@ -17574,6 +18822,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Pass@Season@repeated_trip_p2p'
                                                                 )
@@ -17588,6 +18837,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -17595,6 +18845,7 @@ obj = PublicationDelivery(
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 FrequencyOfUseRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='atc:ATOC@Tariff@Pass@Season@unlimited_use'
                                                                 ),
@@ -17619,10 +18870,12 @@ obj = PublicationDelivery(
                                             value="The beauty of these train tickets is that you can 'hop on and hop off' the train - so you can visit more than one destination in a day.\n\nYou can choose between an Anglia Plus One Day Ranger or a 'Three Days in Seven' Flexi Rover, and there's no need to book in advance - just turn up and go! These tickets can be purchased on the day of travel from any staffed Greater Anglia station or from the conductor on the train if you start your journey from an unstaffed station.\n\nAnglia Plus tickets are also available as weekly, monthly and annual Season Tickets within the entire Anglia Plus area or in county-based zones.\n\nFind out more about choosing your Season Ticket here\n\nAnglia Plus One Day Ranger\nSpend the day travelling wherever you like within the Anglia Plus area for just £19.00 per adult. Up to four accompanied children can travel with each adult for only £2.00 per child with this great value fare."
                                         ),
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:product@single_toc'
                                         ),
@@ -17669,6 +18922,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Pass_Season@period-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17685,6 +18939,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -17692,30 +18947,37 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:child'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:youth'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@mature_student'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@senior'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@pass_profile@disabled'
                                                             ),
                                                             CompanionProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:disabledCompanion'
                                                             ),
@@ -17724,6 +18986,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='eura:at_counter'
                                                             ),
@@ -17735,16 +18998,19 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
@@ -17761,6 +19027,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Pass@Season@annual-SOP@LE',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17777,6 +19044,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -17784,6 +19052,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -17798,6 +19067,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase'
                                                     ),
@@ -17805,6 +19075,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='eura:at_counter'
                                                             ),
@@ -17819,6 +19090,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:gives_entitlement'
                                                     ),
@@ -17836,6 +19108,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 url='http://www.nationalrail.co.uk/times_fares/ticket_types/46573.aspx',
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Discount@Railcard@Annual_Gold_Card'
                                                                 )
@@ -17846,10 +19119,12 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:gold_card@at_counter'
                                                             ),
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:gold_card@online'
                                                             ),
@@ -17861,16 +19136,19 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
@@ -17886,10 +19164,12 @@ obj = PublicationDelivery(
                                                         value='As pass'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -17902,10 +19182,12 @@ obj = PublicationDelivery(
                                                         value='On smart card'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Pass@Season'
                                                     ),
@@ -17923,6 +19205,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Pass@Rover@day_ranger-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17937,6 +19220,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Pass@Rover@3-in7-flexi_rover-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17951,6 +19235,7 @@ obj = PublicationDelivery(
                                         id='abga:LE@Products@Pass@Season@scholar',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='abga:Greater_Anglia@brand'
                                         ),
@@ -17995,13 +19280,16 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='jsp_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='jsp:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='jsp:products:JSP'
                     )
@@ -18017,13 +19305,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='jsp_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='jsp:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='jsp:products:JSP'
                                 )
@@ -18054,6 +19345,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.FARE_MANAGEMENT,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='jsp:JSP'
                                                     ),
@@ -18080,6 +19372,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.FARE_MANAGEMENT,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:DfT'
                                                     ),
@@ -18188,13 +19481,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='jsp_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='jsp:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='nptg:tariff_zones'
                                 )
@@ -18206,20 +19502,24 @@ obj = PublicationDelivery(
                                     value='Plusbus Network'
                                 ),
                                 transport_organisation_ref=OperatorRef(
+                                    value='',
                                     version='any',
                                     ref='jsp:JSP'
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
                                         TariffZoneRef(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus_zone:IPSWICH'
                                         ),
                                         TariffZoneRef(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus_zone:NORWICH'
                                         ),
                                         TariffZoneRef(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus_zone:LOWESTOFT'
                                         ),
@@ -18391,6 +19691,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PlusBus_region'
                                                 ),
@@ -18400,6 +19701,7 @@ obj = PublicationDelivery(
                                             projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.UK,
                                                         ref_principality='GB-UKM'
                                                     )
@@ -18420,6 +19722,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PlusBus_region'
                                                 ),
@@ -18429,6 +19732,7 @@ obj = PublicationDelivery(
                                             projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.UK,
                                                         ref_principality='GB-ENG'
                                                     )
@@ -18436,6 +19740,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus:All_Zones'
                                         )
@@ -18453,6 +19758,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PlusBus_region'
                                                 ),
@@ -18462,6 +19768,7 @@ obj = PublicationDelivery(
                                             projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.UK,
                                                         ref_principality='GB-ENG'
                                                     )
@@ -18469,6 +19776,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus:All_Zones'
                                         )
@@ -18488,6 +19796,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PlusBus_zone'
                                                 ),
@@ -18550,6 +19859,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus:South_East_Region'
                                         )
@@ -18569,6 +19879,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PlusBus_zone'
                                                 ),
@@ -18631,6 +19942,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus:South_East_Region'
                                         )
@@ -18650,6 +19962,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PlusBus_zone'
                                                 ),
@@ -18712,6 +20025,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='nptg:PlusBus:South_East_Region'
                                         )
@@ -18728,13 +20042,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='jsp_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='jsp:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='jsp:products:JSP'
                                 )
@@ -18751,6 +20068,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='jsp:everyday'
                                                 ),
@@ -18767,14 +20085,17 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:weekend'
                                                 ),
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:public_holiday_UK'
                                                 ),
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='jsp:working_day_after_9.30'
                                                 ),
@@ -18791,14 +20112,17 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:weekend'
                                                 ),
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:public_holiday_UK'
                                                 ),
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='jsp:working_day_after_10.00'
                                                 ),
@@ -18815,14 +20139,17 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:weekend'
                                                 ),
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:public_holiday_UK'
                                                 ),
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='jsp:working_day_after_10.00'
                                                 ),
@@ -18908,13 +20235,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='jsp_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='jsp:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='nptg:tariff_zones'
                                 )
@@ -18931,14 +20261,17 @@ obj = PublicationDelivery(
                                             value='Tariff for plus bus passes'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
                                         line_ref_or_group_of_lines_ref=NetworkRef(
+                                            value='',
                                             version='01',
                                             ref='nptg:JSP@PlusBus@Zones@network'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:zonal'
                                         ),
@@ -18994,6 +20327,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:anytime@anyday'
                                                                 ),
@@ -19012,6 +20346,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:working_day_after_10.00'
                                                                 ),
@@ -19034,6 +20369,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='jsp:working_day_after_9.30'
                                                                 ),
@@ -19062,6 +20398,7 @@ obj = PublicationDelivery(
                                                                         value='** outside of the South East of England at all times;'
                                                                     ),
                                                                     with_condition_ref=ValidityConditionRefStructure(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='jsp:anytime@anyday'
                                                                     ),
@@ -19081,6 +20418,7 @@ obj = PublicationDelivery(
                                                                         value='** in the South East after the Monday to Friday morning peak period* (excluding Bank Holidays) for a journey wholly within the South East region.\n     * times of off-peak services vary by route, but generally related to the availability of Off-Peak tickets.'
                                                                     ),
                                                                     with_condition_ref=ValidityConditionRefStructure(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='jsp:working_day_offpeak'
                                                                     ),
@@ -19111,6 +20449,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementsRelStructure(
                                             fare_structure_element_ref_or_fare_structure_element=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@Trip@supplements@prerequisites'
                                                 ),
@@ -19125,6 +20464,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -19155,6 +20495,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:prerequisites'
                                                         ),
@@ -19168,6 +20509,7 @@ obj = PublicationDelivery(
                                                                         value='Must have a rail season pass'
                                                                     ),
                                                                     choice=FareProductRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='atc:ATOC@Products@Pass@Season'
                                                                     )
@@ -19192,6 +20534,7 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@day_pass@1day'
                                                             ),
                                                         ]
@@ -19199,18 +20542,22 @@ obj = PublicationDelivery(
                                                     choice=QualityStructureFactorsRelStructure(
                                                         quality_structure_factor_ref_or_quality_structure_factor=[
                                                             FareDemandFactorRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@anytime'
                                                             ),
                                                             FareDemandFactorRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_1000am'
                                                             ),
                                                             FareDemandFactorRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_0930am'
                                                             ),
                                                             FareDemandFactorRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region'
                                                             ),
@@ -19224,6 +20571,7 @@ obj = PublicationDelivery(
                                                                 order=1,
                                                                 is_allowed=True,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
@@ -19231,6 +20579,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_lines_ref=[
                                                                         NetworkRef(
+                                                                            value='',
                                                                             ref='nptg:PlusBus_zones'
                                                                         ),
                                                                     ]
@@ -19247,6 +20596,7 @@ obj = PublicationDelivery(
                                                                             order=1,
                                                                             is_allowed=False,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:cannot_access'
                                                                             ),
@@ -19254,6 +20604,7 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 group_of_lines_ref=[
                                                                                     NetworkRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='nptg:JSP@PlusBus@Zones@network@excluded'
                                                                                     ),
@@ -19274,6 +20625,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
@@ -19304,14 +20656,17 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Discount@Railcard-SOP@Network'
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_1000am'
                                                                             )
@@ -19327,14 +20682,17 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Discount@Railcard-SOP@Two_Together'
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@after_0930am'
                                                                             )
@@ -19350,14 +20708,17 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
                                                                             group_of_sales_offer_packages_ref=GroupOfSalesOfferPackagesRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Railcards@off_peak@varies_by_region'
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@off_peak@varies_by_region'
                                                                             )
@@ -19373,14 +20734,17 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:can_access_when'
                                                                             ),
                                                                             group_of_sales_offer_packages_ref=GroupOfSalesOfferPackagesRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Railcards@anytime'
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@anytime'
                                                                             )
@@ -19400,18 +20764,22 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@season_pass@1week'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@season_pass@1month'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@season_pass@3month'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@season_pass@1year'
                                                             ),
@@ -19425,6 +20793,7 @@ obj = PublicationDelivery(
                                                                 order=1,
                                                                 is_allowed=True,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access'
                                                                 ),
@@ -19432,6 +20801,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_lines_ref=[
                                                                         NetworkRef(
+                                                                            value='',
                                                                             ref='nptg:PlusBus_zones'
                                                                         ),
                                                                     ]
@@ -19444,6 +20814,7 @@ obj = PublicationDelivery(
                                                                             order=1,
                                                                             is_allowed=False,
                                                                             type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:cannot_access'
                                                                             ),
@@ -19451,6 +20822,7 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 group_of_lines_ref=[
                                                                                     NetworkRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='nptg:JSP@PlusBus@Zones@network@excluded'
                                                                                     ),
@@ -19468,6 +20840,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_access_when'
                                                                 ),
@@ -19515,10 +20888,12 @@ obj = PublicationDelivery(
                                                     ref='atc:ATOC@Tariff@General@access@classes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@eligibility'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='jsp:JSP@Tariff@General@access@modes'
                                                 ),
@@ -19539,6 +20914,7 @@ obj = PublicationDelivery(
                                                     ref='atc:ATOC@Tariff@Trip@supplements@prerequisites'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     ref='jsp:JSP@Tariff@Pass@PlusBus@1zone@1day'
                                                 ),
                                             ]
@@ -19550,6 +20926,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -19575,6 +20952,7 @@ obj = PublicationDelivery(
                                                     ref='jsp:JSP@Tariff@Pass@PlusBus@Season@prerequisites'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     ref='jsp:JSP@Tariff@Pass@PlusBus@1zone@season'
                                                 ),
                                             ]
@@ -19586,6 +20964,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -19607,6 +20986,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     ref='jsp:JSP@Products@Pass@PlusBus@1zone'
                                                 ),
                                             ]
@@ -19621,6 +21001,7 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     ref='jsp:JSP@Products@Pass@PlusBus@1zone'
                                                 ),
                                             ]
@@ -19641,14 +21022,17 @@ obj = PublicationDelivery(
                                         ),
                                         info_url='http://www.plusbus.info/',
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@bundled'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
@@ -19673,6 +21057,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -19693,10 +21078,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
                                                     group_of_sales_offer_packages_ref=GroupOfSalesOfferPackagesRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                                     ),
@@ -19704,10 +21091,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             GroupTicketRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Discount@Rail_Card@group@two_together'
                                                             ),
                                                             GroupTicketRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Trip@Group_Saver_3-to-9_people@trip'
                                                             ),
@@ -19722,6 +21111,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
@@ -19738,6 +21128,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='eura:online'
                                                             ),
@@ -19755,6 +21146,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
@@ -19762,6 +21154,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RefundingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@after_sales@can_refund'
                                                             ),
@@ -19780,6 +21173,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@zone_pass@1day'
                                                     )
@@ -19799,14 +21193,17 @@ obj = PublicationDelivery(
                                         ),
                                         info_url='http://www.plusbus.info/',
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid@bundled'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@all_tocs'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='jsp:JSP'
                                         ),
@@ -19828,6 +21225,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -19835,6 +21233,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:adult'
                                                             ),
@@ -19850,10 +21249,12 @@ obj = PublicationDelivery(
                                                     order=1,
                                                     is_allowed=False,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase'
                                                     ),
                                                     group_of_sales_offer_packages_ref=GroupOfSalesOfferPackagesRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Products@Discount@Rail_Card-GSOP@pass'
                                                     )
@@ -19866,6 +21267,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
@@ -19873,10 +21275,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@unlimited_use'
                                                             ),
                                                             TransferabilityRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@General@transferring@individual@not_transferable'
                                                             ),
@@ -19894,6 +21298,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_sale'
                                                     ),
@@ -19901,10 +21306,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RefundingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@can_refund'
                                                             ),
                                                             ReplacingRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='atc:ATOC@Tariff@Pass@Season@can_replace'
                                                             ),
@@ -19923,6 +21330,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@zone_pass@season'
                                                     )
@@ -19953,6 +21361,7 @@ obj = PublicationDelivery(
                                                         can_be_cumulative=True
                                                     ),
                                                     choice=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='atc:child'
                                                     )
@@ -19968,6 +21377,7 @@ obj = PublicationDelivery(
                                         id='jsp:JSP@Products@Pass@PlusBus@Day-SOP@1D',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='jsp:PlusBus@brand'
                                         ),
@@ -19991,6 +21401,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_when'
                                                     ),
@@ -20008,6 +21419,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_purchase_where'
                                                                 ),
@@ -20021,6 +21433,7 @@ obj = PublicationDelivery(
                                                                     ],
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='eura:at_counter'
                                                                         ),
@@ -20038,12 +21451,14 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_purchase_where'
                                                                 ),
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='eura:onboard'
                                                                         ),
@@ -20058,11 +21473,13 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@onboard',
                                                     order=3
@@ -20078,10 +21495,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus printed ticket'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                     ),
@@ -20113,10 +21532,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1week'
                                                     )
@@ -20124,6 +21545,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='jsp:JSP@Products@Pass@PlusBus@Season-GSOP'
                                         )
@@ -20151,10 +21573,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1month'
                                                     )
@@ -20162,6 +21586,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='jsp:JSP@Products@Pass@PlusBus@Season-GSOP'
                                         )
@@ -20189,10 +21614,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@3month'
                                                     )
@@ -20200,6 +21627,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='jsp:JSP@Products@Pass@PlusBus@Season-GSOP'
                                         )
@@ -20227,10 +21655,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:prerequisites'
                                                     ),
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                     )
@@ -20238,6 +21668,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='01',
                                             ref='jsp:JSP@Products@Pass@PlusBus@Season-GSOP'
                                         )
@@ -20250,6 +21681,7 @@ obj = PublicationDelivery(
                                         id='jsp:JSP@Products@Pass@PlusBus@Season-GSOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='jsp:PlusBus@brand'
                                         ),
@@ -20269,6 +21701,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
@@ -20276,6 +21709,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='eura:at_counter'
                                                             ),
@@ -20290,6 +21724,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase_where'
                                                     ),
@@ -20304,6 +21739,7 @@ obj = PublicationDelivery(
                                                         ],
                                                         distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                             DistributionChannelRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='atc:gold_card@online'
                                                             ),
@@ -20315,16 +21751,19 @@ obj = PublicationDelivery(
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@at_counter',
                                                     order=2
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@online@post',
                                                     order=5
                                                 ),
                                                 DistributionAssignmentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Tariff@General@call_centre@post',
                                                     order=7
@@ -20340,10 +21779,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus Season as pass'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:pass'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -20356,10 +21797,12 @@ obj = PublicationDelivery(
                                                         value='PlusBus Season on smart card'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:smart_card'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='jsp:JSP@Products@Pass@PlusBus@Season'
                                                     ),
@@ -20370,6 +21813,7 @@ obj = PublicationDelivery(
                                                                 version='01',
                                                                 order=1,
                                                                 type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='eura:can_use_with_type_of_travel_document'
                                                                 ),
@@ -20377,6 +21821,7 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     group_of_operators_ref=[
                                                                         GroupOfOperatorsRef(
+                                                                            value='',
                                                                             ref='atc:smart_card_pass_operators',
                                                                             version_ref='TODO'
                                                                         ),
@@ -20392,6 +21837,7 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='jsp:JSP@Products@Pass@PlusBus@Day-SOP@1D'
                                                 ),
@@ -20407,14 +21853,17 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Disabled'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@16to25'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@HM_Forces'
                                                 ),
@@ -20430,10 +21879,12 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Senior'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Family_and_Friends'
                                                 ),
@@ -20449,6 +21900,7 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='01',
                                                     ref='atc:ATOC@Products@Discount@Railcard-SOP@Disabled'
                                                 ),
@@ -20476,13 +21928,16 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='atc:atoc_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='atc:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='atc:products:NRE'
                     )
@@ -20631,9 +22086,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -20649,6 +22106,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:68010'
                                         ),
@@ -20657,10 +22115,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0055768'
                                             ),
                                             name=MultilingualString(
@@ -20695,9 +22155,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -20713,6 +22175,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:68500'
                                         ),
@@ -20721,10 +22184,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0057399'
                                             ),
                                             name=MultilingualString(
@@ -20759,9 +22224,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -20777,6 +22244,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:73280'
                                         ),
@@ -20785,10 +22253,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:N0060683'
                                             ),
                                             name=MultilingualString(
@@ -20823,9 +22293,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -20841,6 +22313,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:69050'
                                         ),
@@ -20849,10 +22322,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0055830'
                                             ),
                                             name=MultilingualString(
@@ -20887,9 +22362,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -20905,6 +22382,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:72170'
                                         ),
@@ -20913,10 +22391,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0057632'
                                             ),
                                             name=MultilingualString(
@@ -20962,9 +22442,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -20980,6 +22462,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:69650'
                                         ),
@@ -20990,10 +22473,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:N0077693'
                                             ),
                                             name=MultilingualString(
@@ -21031,9 +22516,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21049,6 +22536,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:72680'
                                         ),
@@ -21057,10 +22545,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0025243'
                                             ),
                                             name=MultilingualString(
@@ -21095,9 +22585,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21113,6 +22605,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:73090'
                                         ),
@@ -21121,10 +22614,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0057571'
                                             ),
                                             name=MultilingualString(
@@ -21159,9 +22654,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21177,6 +22674,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:7190'
                                         ),
@@ -21185,10 +22683,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:N0060321'
                                             ),
                                             name=MultilingualString(
@@ -21226,9 +22726,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21244,6 +22746,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:68880'
                                         ),
@@ -21252,10 +22755,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0011132'
                                             ),
                                             name=MultilingualString(
@@ -21293,9 +22798,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21311,6 +22818,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:68340'
                                         ),
@@ -21320,10 +22828,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.COACH,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:N0071618'
                                             ),
                                             name=MultilingualString(
@@ -21358,9 +22868,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21376,6 +22888,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:74200'
                                         ),
@@ -21384,10 +22897,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0057248'
                                             ),
                                             name=MultilingualString(
@@ -21422,9 +22937,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21440,6 +22957,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:70980'
                                         ),
@@ -21448,10 +22966,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0051349'
                                             ),
                                             name=MultilingualString(
@@ -21489,9 +23009,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21507,6 +23029,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:69510'
                                         ),
@@ -21516,10 +23039,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0034413'
                                             ),
                                             name=MultilingualString(
@@ -21556,9 +23081,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='naptan:TypeOfPoint:RLY'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -21574,6 +23101,7 @@ obj = PublicationDelivery(
                                             type_value='naptan'
                                         ),
                                         external_stop_point_ref=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='uicLocation',
                                             ref='uic:68580'
                                         ),
@@ -21582,10 +23110,12 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.GB
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 ref='nptg:E0011499'
                                             ),
                                             name=MultilingualString(
@@ -21611,6 +23141,7 @@ obj = PublicationDelivery(
                                             projection_ref_or_projection=[
                                                 TopographicProjection(
                                                     country_ref_or_topographic_place_ref=CountryRef(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.UK,
                                                         ref_principality='GB-UKM'
                                                     )
@@ -22249,6 +23780,7 @@ obj = PublicationDelivery(
                                             ref='uic:1170'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -22261,6 +23793,7 @@ obj = PublicationDelivery(
                                                         value='A single O/D pair from the following'
                                                     ),
                                                     choice_1=GroupOfDistanceMatrixElementsRef(
+                                                        value='',
                                                         version='01',
                                                         ref='atc:ATOC@ODs@any_to_any'
                                                     )
@@ -22345,10 +23878,12 @@ obj = PublicationDelivery(
                                             value='P2P  based fare structure elements for  UK, Greater Anglia'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -22369,10 +23904,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to Tottenham Hale'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:TOM'
                                                                 )
@@ -22384,10 +23921,12 @@ obj = PublicationDelivery(
                                                                     value='Tottenham Hale to London Liverpool Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:TOM'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 )
@@ -22399,10 +23938,12 @@ obj = PublicationDelivery(
                                                                     value='Tottenham Hale  to  Stansted Airport'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:TOM'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SSD'
                                                                 )
@@ -22414,10 +23955,12 @@ obj = PublicationDelivery(
                                                                     value='Stansted Airport to Tottenham Hale'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SSD'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:TOM'
                                                                 )
@@ -22429,10 +23972,12 @@ obj = PublicationDelivery(
                                                                     value='Stansted Airport  to  Great Yarmouth'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SSD'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:GYM'
                                                                 )
@@ -22444,10 +23989,12 @@ obj = PublicationDelivery(
                                                                     value='Great Yarmouth to  Stansted Airport'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:GYM'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SSD'
                                                                 )
@@ -22459,10 +24006,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to Stansted Airport'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SSD'
                                                                 )
@@ -22474,10 +24023,12 @@ obj = PublicationDelivery(
                                                                     value='Stansted Airport to London Liverpool Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SSD'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 )
@@ -22489,10 +24040,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street  to Shenfield'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SNF'
                                                                 )
@@ -22504,10 +24057,12 @@ obj = PublicationDelivery(
                                                                     value='Shenfield to London Liverpool Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SNF'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 )
@@ -22519,10 +24074,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street  to Ipswich'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:IPS'
                                                                 )
@@ -22534,10 +24091,12 @@ obj = PublicationDelivery(
                                                                     value='Ipswich to London Liverpool Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:IPS'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 )
@@ -22549,10 +24108,12 @@ obj = PublicationDelivery(
                                                                     value='Shenfield to Ipswich'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SNF'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:IPS'
                                                                 )
@@ -22564,10 +24125,12 @@ obj = PublicationDelivery(
                                                                     value='Ipswich to Shenfield'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:IPS'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SNF'
                                                                 )
@@ -22579,10 +24142,12 @@ obj = PublicationDelivery(
                                                                     value='Ipswich to Norwich'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:IPS'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:NRW'
                                                                 )
@@ -22594,10 +24159,12 @@ obj = PublicationDelivery(
                                                                     value='Norwich to Ipswich'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:NRW'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:IPS'
                                                                 )
@@ -22609,10 +24176,12 @@ obj = PublicationDelivery(
                                                                     value='Shenfield to Norwich'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SNF'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:NRW'
                                                                 )
@@ -22624,10 +24193,12 @@ obj = PublicationDelivery(
                                                                     value='Norwich to Shenfield'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:NRW'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SNF'
                                                                 )
@@ -22639,10 +24210,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to Norwich'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:NRW'
                                                                 )
@@ -22654,10 +24227,12 @@ obj = PublicationDelivery(
                                                                     value='Norwich to London Liverpool Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:NRW'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 )
@@ -22669,10 +24244,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to Southend Victoria'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SOV'
                                                                 )
@@ -22684,10 +24261,12 @@ obj = PublicationDelivery(
                                                                     value='Southend Victoria to London Liverpool Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:SOV'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 )
@@ -22699,10 +24278,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to Lowestoft'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LWT'
                                                                 )
@@ -22714,10 +24295,12 @@ obj = PublicationDelivery(
                                                                     value='Lowestoft to London Liverpool Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LWT'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 )
@@ -22873,10 +24456,12 @@ obj = PublicationDelivery(
                                             value='London Transfers '
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='atc:LE'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:zonal'
                                         ),
@@ -22897,10 +24482,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  Waterloo'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:WAT',
                                                                     version_ref='TODO'
                                                                 )
@@ -22912,10 +24499,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  Kings CRoss'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:KGX',
                                                                     version_ref='TODO'
                                                                 )
@@ -22927,10 +24516,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  Victoria'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:VIC',
                                                                     version_ref='TODO'
                                                                 )
@@ -22942,10 +24533,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  Paddington'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:PAD',
                                                                     version_ref='TODO'
                                                                 )
@@ -22957,10 +24550,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  London Bridge'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:LBG',
                                                                     version_ref='TODO'
                                                                 )
@@ -22972,10 +24567,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  London Charing Cross'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:CHX',
                                                                     version_ref='TODO'
                                                                 )
@@ -22987,10 +24584,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  London Marylebone'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:MYB',
                                                                     version_ref='TODO'
                                                                 )
@@ -23002,10 +24601,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  London Fenchurch Street'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:FST',
                                                                     version_ref='TODO'
                                                                 )
@@ -23017,10 +24618,12 @@ obj = PublicationDelivery(
                                                                     value='London Liverpool Street to  London St Pancras'
                                                                 ),
                                                                 choice=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:Station:LST'
                                                                 ),
                                                                 choice_1=FareScheduledStopPointRefStructure(
+                                                                    value='',
                                                                     ref='atc:Station:STP',
                                                                     version_ref='TODO'
                                                                 )
@@ -23053,10 +24656,12 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:weekend'
                                                 ),
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:public_holiday_UK'
                                                 ),
@@ -23070,6 +24675,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:working_day'
                                                 ),
@@ -23083,6 +24689,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 FareDayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:everyday'
                                                 ),
@@ -23220,6 +24827,7 @@ obj = PublicationDelivery(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     country_ref=CountryRefStructure(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.GB,
                                                         ref_principality='GB-UKM'
                                                     ),
@@ -23243,6 +24851,7 @@ obj = PublicationDelivery(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     country_ref=CountryRefStructure(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.GB,
                                                         ref_principality='GB-SCT'
                                                     ),
@@ -23266,6 +24875,7 @@ obj = PublicationDelivery(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     country_ref=CountryRefStructure(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.GB,
                                                         ref_principality='GB-WLS'
                                                     ),
@@ -23313,6 +24923,7 @@ obj = PublicationDelivery(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     country_ref=CountryRefStructure(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.GB,
                                                         ref_principality='GB-NIR'
                                                     ),
@@ -23336,6 +24947,7 @@ obj = PublicationDelivery(
                                             property_of_day=[
                                                 PropertyOfDay(
                                                     country_ref=CountryRefStructure(
+                                                        value='',
                                                         ref=IanaCountryTldEnumeration.GB,
                                                         ref_principality='GB-ENG'
                                                     ),
@@ -23472,6 +25084,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 1, 1),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23485,6 +25098,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 1, 2),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
                                         )
@@ -23498,6 +25112,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 3, 1),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_Wales'
                                         )
@@ -23511,6 +25126,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 3, 19),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_Northern_Ireland'
                                         )
@@ -23524,6 +25140,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 3, 30),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23537,6 +25154,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 4, 2),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_not_Scotland'
                                         )
@@ -23550,6 +25168,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 5, 7),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23563,6 +25182,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 5, 28),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23576,6 +25196,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 7, 12),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_Northern_Ireland'
                                         )
@@ -23589,6 +25210,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 8, 6),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
                                         )
@@ -23602,6 +25224,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 8, 27),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_not_Scotland'
                                         )
@@ -23615,6 +25238,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 11, 30),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_Scotland'
                                         )
@@ -23628,6 +25252,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 12, 15),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23641,6 +25266,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2018, 12, 26),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23654,6 +25280,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2019, 1, 1),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:public_holiday_UK'
                                         )
@@ -23666,10 +25293,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w1_d'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23682,10 +25311,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w1_we'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23698,10 +25329,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w2_d'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23714,10 +25347,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=2,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w2_we'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23730,10 +25365,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w3_d'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23746,10 +25383,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w3_we'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23762,10 +25401,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w4_d'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23778,10 +25419,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w4_we'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23794,10 +25437,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w5_d'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:working_day'
                                         )
@@ -23810,10 +25455,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         choice=OperatingPeriodRef(
+                                            value='',
                                             version='01',
                                             ref='atc:op@2018_w5_we'
                                         ),
                                         day_type_ref=FareDayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='atc:weekend'
                                         )
@@ -23846,9 +25493,11 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='atc:atoc_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='atc:example'
                                 ),
@@ -23908,6 +25557,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OTHER,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='atc:Consortium:NRE'
                                                     ),
@@ -24096,6 +25746,7 @@ obj = PublicationDelivery(
                                         ],
                                         status=True,
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.UK,
                                             ref_principality='ENG'
                                         ),
@@ -24135,6 +25786,7 @@ obj = PublicationDelivery(
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.UK,
                                             ref_principality='GB-ENG'
                                         ),
@@ -24251,6 +25903,7 @@ obj = PublicationDelivery(
                                                     ref='atc:GW'
                                                 ),
                                                 OperatorRef(
+                                                    value='',
                                                     version='any',
                                                     ref='atc:LE'
                                                 ),
@@ -24662,13 +26315,16 @@ obj = PublicationDelivery(
                 responsibility_set_ref_attribute='abga:sales:LT',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='abga_transactions'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='abga:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='abga:sales:LT'
                     ),
@@ -24704,13 +26360,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='abga_transactions'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='abga:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='abga:sales:LT'
                                 )
@@ -24726,10 +26385,12 @@ obj = PublicationDelivery(
                                         start_date=XmlDateTime(2018, 7, 8, 4, 30, 0),
                                         end_date=XmlDateTime(2018, 8, 8, 4, 29, 0),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             ref='abga-t:ANONYMOUS',
                                             version_ref='TODO'
                                         ),
                                         type_of_fare_contract_ref=TypeOfFareContractRef(
+                                            value='',
                                             version='any',
                                             ref='atc:contract@trip'
                                         ),
@@ -24739,6 +26400,7 @@ obj = PublicationDelivery(
                                                     id='abga-t:Anon001@trans001@purchase_ticket',
                                                     version='any',
                                                     branding_ref=BrandingRef(
+                                                        value='',
                                                         version='any',
                                                         ref='abga:Greater_Anglia@brand'
                                                     ),
@@ -24747,6 +26409,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:product_purchase'
                                                     ),
@@ -24759,6 +26422,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                                 fare_price_ref_or_cell_ref=SalesOfferPackagePriceRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='atc:ATOC@Products@Trip@Prices@anytime@single@first@adult@in_station'
                                                                 ),
@@ -24771,14 +26435,17 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Trip@COMPOSITION@single'
                                                                             ),
                                                                             preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Trip@Standard@single@generic'
                                                                             ),
                                                                             fare_structure_element_ref=FareStructureElementRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Demand@anytime'
                                                                             ),
@@ -24788,12 +26455,14 @@ obj = PublicationDelivery(
                                                                                 ref='atc:LST_to_IPS'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='abga:LE@Products@Trip@Standard@single@anytime-SOP'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     UserProfileRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:adult'
                                                                                     ),
@@ -24802,18 +26471,21 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 class_of_use_ref=[
                                                                                     ClassOfUseRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='eura:first'
                                                                                     ),
                                                                                 ],
                                                                                 type_of_travel_document_ref=[
                                                                                     TypeOfTravelDocumentRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:printed_ticket'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:ATOC@Tariff@General@self_service_ticket_machine'
                                                                                     ),
@@ -24828,6 +26500,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                                 fare_price_ref_or_cell_ref=SalesOfferPackagePriceRef(
+                                                                    value='',
                                                                     ref='jsp:JSP@Products@Pass@Prices@1day@IPS@adult@in_station',
                                                                     version_ref='TODO'
                                                                 ),
@@ -24840,20 +26513,24 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Pass@PlusBus@zone_pass@1day'
                                                                             ),
                                                                             preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Products@Pass@PlusBus@1day'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='abga:LE@Products@Trip@Standard@single@anytime-SOP'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     UserProfileRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:adult'
                                                                                     ),
@@ -24862,34 +26539,40 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 tariff_zone_ref=[
                                                                                     TariffZoneRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='nptg:PlusBus_zone:IPSWICH'
                                                                                     ),
                                                                                 ],
                                                                                 scheduled_stop_point_ref=[
                                                                                     FareScheduledStopPointRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:Station:IPS'
                                                                                     ),
                                                                                 ],
                                                                                 type_of_travel_document_ref=[
                                                                                     TypeOfTravelDocumentRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:printed_ticket'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='atc:ATOC@Tariff@General@self_service_ticket_machine'
                                                                                     ),
                                                                                 ]
                                                                             ),
                                                                             time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@Pass@PlusBus@day_pass@1day'
                                                                             ),
                                                                             quality_structure_factor_ref=FareDemandFactorRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='jsp:JSP@Tariff@PlusBus@Demand@anytime'
                                                                             )
@@ -24924,10 +26607,12 @@ obj = PublicationDelivery(
                                         start_date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                         status='Active',
                                         customer_ref=CustomerRef(
+                                            value='',
                                             ref='abga-t:34567',
                                             version_ref='TODO'
                                         ),
                                         type_of_fare_contract_ref=TypeOfFareContractRef(
+                                            value='',
                                             version='any',
                                             ref='atc:contract@pass@season'
                                         ),
@@ -24937,6 +26622,7 @@ obj = PublicationDelivery(
                                                     id='abga-t:34567@trans008@purchase_pass',
                                                     version='any',
                                                     branding_ref=BrandingRef(
+                                                        value='',
                                                         version='any',
                                                         ref='abga:Greater_Anglia@brand'
                                                     ),
@@ -24945,6 +26631,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     date=XmlDateTime(2018, 7, 10, 1, 7, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                        value='',
                                                         ref='eura:product_purchase'
                                                     ),
                                                     amount=Decimal('1000.50'),
@@ -24956,6 +26643,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                                 sales_transaction_ref=SalesTransactionRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='abga-t:34567@trans008@purchase_pass'
                                                                 ),
@@ -24968,14 +26656,17 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Pass@Season@repeated_trip_p2p'
                                                                             ),
                                                                             preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Products@Pass@Season'
                                                                             ),
                                                                             fare_structure_element_ref=FareStructureElementRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Pass@Season@COMPOSITION'
                                                                             ),
@@ -24985,16 +26676,19 @@ obj = PublicationDelivery(
                                                                                 ref='atc:LST_to_SSD'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='abga:LE@Products@Pass_Season@period-SOP'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     UserProfileRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:adult'
                                                                                     ),
                                                                                     UsageValidityPeriodRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='atc:ATOC@Products@Pass@Season@annual'
                                                                                     ),
@@ -25003,24 +26697,28 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 class_of_use_ref=[
                                                                                     ClassOfUseRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='eura:second'
                                                                                     ),
                                                                                 ],
                                                                                 type_of_travel_document_ref=[
                                                                                     TypeOfTravelDocumentRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:pass'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:at_counter'
                                                                                     ),
                                                                                 ]
                                                                             ),
                                                                             time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='atc:ATOC@Tariff@Pass@Season@1year'
                                                                             )
@@ -25062,13 +26760,16 @@ obj = PublicationDelivery(
                 responsibility_set_ref_attribute='eura:code_sets',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='eura_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='eura:common_example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='eura:code_sets'
                     )
@@ -25100,13 +26801,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='eura_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:common_example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:code_sets'
                                 ),
@@ -25143,6 +26847,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='uic:Station_Management@0070'
                                                     ),
@@ -25173,6 +26878,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.DATA_REGISTRAR,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:EURA'
                                                     ),
@@ -25750,6 +27456,7 @@ obj = PublicationDelivery(
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.UK,
                                             ref_principality='GB-UKM'
                                         )
@@ -25771,6 +27478,7 @@ obj = PublicationDelivery(
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.UK,
                                             ref_principality='GB-UKM'
                                         )
@@ -25804,13 +27512,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='eura_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:common_example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:code_sets'
                                 ),
@@ -26026,18 +27737,22 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
@@ -26054,18 +27769,22 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
@@ -26082,26 +27801,32 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:hand_written_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
@@ -26118,10 +27843,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:hand_written_ticket'
                                                 ),
@@ -26139,10 +27866,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
@@ -26159,10 +27888,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:electronic_document'
                                                 ),
@@ -26179,6 +27910,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:mobile_app_ticket'
                                                 ),
@@ -26195,10 +27927,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:self_print_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:electronic_document'
                                                 ),
@@ -26215,6 +27949,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:self_print_ticket'
                                                 ),

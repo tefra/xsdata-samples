@@ -16,8 +16,7 @@ class OverrideCode:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
     value: str = field(
-        default="",
         metadata={
             "length": 4,
-        },
+        }
     )

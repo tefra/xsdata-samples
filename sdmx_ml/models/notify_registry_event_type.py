@@ -106,13 +106,12 @@ class NotifyRegistryEventType:
 
     @dataclass(frozen=True, kw_only=True)
     class ObjectUrn:
-        value: str = field(default="")
+        value: str = field()
 
     @dataclass(frozen=True, kw_only=True)
     class RegistrationId:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

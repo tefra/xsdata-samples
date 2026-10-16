@@ -417,19 +417,17 @@ class ReportingCategoryType(ReportingCategoryBaseType):
     @dataclass(frozen=True, kw_only=True)
     class StructuralMetadata:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class ProvisioningMetadata:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )
 
 
@@ -955,28 +953,25 @@ class VtlMappingType(VtlMappingBaseType):
     @dataclass(frozen=True, kw_only=True)
     class Dataflow:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.Dataflow=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Codelist:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.codelist\.Codelist=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Concept:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.conceptscheme\.Concept=.+",
-            },
+            }
         )
 
 

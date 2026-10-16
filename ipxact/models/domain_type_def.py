@@ -54,7 +54,7 @@ class DomainTypeDef:
 
     @dataclass(kw_only=True)
     class TypeName:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={
@@ -65,7 +65,7 @@ class DomainTypeDef:
 
     @dataclass(kw_only=True)
     class TypeDefinition:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={
@@ -76,7 +76,7 @@ class DomainTypeDef:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={

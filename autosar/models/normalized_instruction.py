@@ -34,10 +34,9 @@ class NormalizedInstruction:
         name = "NORMALIZED-INSTRUCTION"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[1-9][0-9]*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

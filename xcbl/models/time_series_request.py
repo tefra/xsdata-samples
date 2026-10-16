@@ -14,17 +14,17 @@ from xcbl.models.time_series_response import (
 
 @dataclass(kw_only=True)
 class KeyFigureNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class KeyFigurePurposeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class KeyFigurePurposeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

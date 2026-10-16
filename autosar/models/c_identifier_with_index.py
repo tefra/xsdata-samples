@@ -28,10 +28,9 @@ class CIdentifierWithIndex:
         name = "C-IDENTIFIER-WITH-INDEX"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[a-zA-Z_][a-zA-Z0-9_]*\[[0-9]+\]",
-        },
+        }
     )
     s: None | str = field(
         default=None,

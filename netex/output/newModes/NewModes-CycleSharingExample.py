@@ -390,15 +390,18 @@ obj = PublicationDelivery(
                     choice_1=[
                         NetworkFilterByValueStructure(
                             layer_ref=LayerRef(
+                                value='',
                                 ref='fxc:fareNetwork_fareProducts_farePrices'
                             ),
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     OperatorRef(
+                                        value='',
                                         version='any',
                                         ref='noc:MBIKE'
                                     ),
                                     VehicleSharingRef(
+                                        value='',
                                         version='any',
                                         ref='cycle_share'
                                     ),
@@ -436,15 +439,18 @@ obj = PublicationDelivery(
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         CodespaceRef(
+                            value='',
                             ref='mb_data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mb_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='1.0',
                         ref='mb:metrobike'
                     ),
@@ -640,6 +646,7 @@ obj = PublicationDelivery(
                                         ),
                                         contact_details=ContactStructure(
                                             contact_ref=ContactRef(
+                                                value='',
                                                 version='any',
                                                 ref='mbike'
                                             )
@@ -653,6 +660,7 @@ obj = PublicationDelivery(
                                                     id='noc:MBIKE',
                                                     version='any',
                                                     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='floggit'
                                                     ),
@@ -675,6 +683,7 @@ obj = PublicationDelivery(
                                             value=SelfDriveSubmodeEnumeration.HIRE_CYCLE
                                         ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehicleSharingRef(
+                                            value='',
                                             version='any',
                                             ref='cycle_share'
                                         )
@@ -791,6 +800,7 @@ obj = PublicationDelivery(
                                                     id='electric_cycle@scooter',
                                                     version='any',
                                                     type_of_driver_permit_ref=TypeOfDriverPermitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ecycle_permit'
                                                     )
@@ -799,6 +809,7 @@ obj = PublicationDelivery(
                                                     id='electric_cycle@car',
                                                     version='any',
                                                     type_of_driver_permit_ref=TypeOfDriverPermitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='car_permit'
                                                     )
@@ -817,10 +828,12 @@ obj = PublicationDelivery(
                                             value='Old Model Bike'
                                         ),
                                         transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                            value='',
                                             version='any',
                                             ref='pedal_cycle'
                                         ),
                                         vehicle_model_profile_ref=CycleModelProfileRef(
+                                            value='',
                                             version='any',
                                             ref='boneKitA'
                                         )
@@ -832,10 +845,12 @@ obj = PublicationDelivery(
                                             value='New Model Bike'
                                         ),
                                         transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                            value='',
                                             version='any',
                                             ref='pedal_cycle'
                                         ),
                                         vehicle_model_profile_ref=CycleModelProfileRef(
+                                            value='',
                                             version='any',
                                             ref='boneKitA'
                                         )
@@ -847,18 +862,21 @@ obj = PublicationDelivery(
                                             value='New Model Bike v2'
                                         ),
                                         transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                            value='',
                                             version='any',
                                             ref='electric_cycle'
                                         ),
                                         equipment_profiles=VehicleEquipmentProfileRefsRelStructure(
                                             vehicle_equipment_profile_ref=[
                                                 ChargingEquipmentProfileRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ebike_charging'
                                                 ),
                                             ]
                                         ),
                                         vehicle_model_profile_ref=CycleModelProfileRef(
+                                            value='',
                                             version='any',
                                             ref='boneKitB'
                                         )
@@ -881,6 +899,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     minimum_units=2,
                                                     type_of_equipment_ref=TypeOfEquipmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='battery'
                                                     )
@@ -893,6 +912,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     minimum_units=1,
                                                     type_of_equipment_ref=TypeOfEquipmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='charger'
                                                     )
@@ -960,6 +980,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example'
                                     ),
@@ -1062,10 +1083,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='Alphaville'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
@@ -1076,6 +1099,7 @@ obj = PublicationDelivery(
                                         vehicle_types=TransportTypeRefsRelStructure(
                                             transport_type_ref_or_vehicle_type_ref=[
                                                 SimpleVehicleTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='pedal_cycle'
                                                 ),
@@ -1197,6 +1221,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.PEDAL_CYCLE,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='electric_cycle'
                                                                 ),
@@ -1230,6 +1255,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.PEDAL_CYCLE,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='electric_cycle'
                                                                 ),
@@ -1277,10 +1303,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='Alphaville'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
@@ -1291,6 +1319,7 @@ obj = PublicationDelivery(
                                         vehicle_types=TransportTypeRefsRelStructure(
                                             transport_type_ref_or_vehicle_type_ref=[
                                                 SimpleVehicleTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='pedal_cycle'
                                                 ),
@@ -1396,6 +1425,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.PEDAL_CYCLE,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='electric_cycle'
                                                                 ),
@@ -1421,6 +1451,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.PEDAL_CYCLE,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='electric_cycle'
                                                                 ),
@@ -1463,10 +1494,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='Alphaville'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
@@ -1543,10 +1576,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example'
                                     ),
                                     ServiceCalendarFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example'
                                     ),
@@ -1566,14 +1601,17 @@ obj = PublicationDelivery(
                                                     id='P01',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='penny_farthing'
                                                     ),
@@ -1594,14 +1632,17 @@ obj = PublicationDelivery(
                                                     id='P02',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='penny_farthing'
                                                     ),
@@ -1622,14 +1663,17 @@ obj = PublicationDelivery(
                                                     id='P03',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='penny_farthing'
                                                     ),
@@ -1650,14 +1694,17 @@ obj = PublicationDelivery(
                                                     id='P04',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='penny_farthing'
                                                     )
@@ -1666,14 +1713,17 @@ obj = PublicationDelivery(
                                                     id='B01',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='boneShaker'
                                                     )
@@ -1682,14 +1732,17 @@ obj = PublicationDelivery(
                                                     id='N02',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='boneShaker'
                                                     )
@@ -1698,14 +1751,17 @@ obj = PublicationDelivery(
                                                     id='B03',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='boneShaker'
                                                     )
@@ -1714,14 +1770,17 @@ obj = PublicationDelivery(
                                                     id='B04',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='boneShaker'
                                                     )
@@ -1730,14 +1789,17 @@ obj = PublicationDelivery(
                                                     id='B05',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='boneShaker'
                                                     )
@@ -1746,14 +1808,17 @@ obj = PublicationDelivery(
                                                     id='C01',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='electric_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='electric_boneshaker'
                                                     ),
@@ -1763,6 +1828,7 @@ obj = PublicationDelivery(
                                                                 id='C01_battery_1',
                                                                 version='any',
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='battery'
                                                                 ),
@@ -1773,6 +1839,7 @@ obj = PublicationDelivery(
                                                                 id='C01_battery_2',
                                                                 version='any',
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='battery'
                                                                 ),
@@ -1786,14 +1853,17 @@ obj = PublicationDelivery(
                                                     id='C02',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='electric_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='electric_boneshaker'
                                                     ),
@@ -1803,6 +1873,7 @@ obj = PublicationDelivery(
                                                                 id='C02_battery_1',
                                                                 version='any',
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='battery'
                                                                 ),
@@ -1813,6 +1884,7 @@ obj = PublicationDelivery(
                                                                 id='C02_battery_2',
                                                                 version='any',
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='battery'
                                                                 ),
@@ -1826,14 +1898,17 @@ obj = PublicationDelivery(
                                                     id='C03',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:MBIKE'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='electric_cycle'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='electric_boneshaker'
                                                     ),
@@ -1843,6 +1918,7 @@ obj = PublicationDelivery(
                                                                 id='C03_battery_1',
                                                                 version='any',
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='battery'
                                                                 ),
@@ -1853,6 +1929,7 @@ obj = PublicationDelivery(
                                                                 id='C03_battery_2',
                                                                 version='any',
                                                                 type_of_equipment_ref=TypeOfEquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='battery'
                                                                 ),
@@ -1876,24 +1953,29 @@ obj = PublicationDelivery(
                                             value='Restricted Pool -zone'
                                         ),
                                         mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
                                         mobility_service_constraint_zone_ref=MobilityServiceConstraintZoneRef(
+                                            value='',
                                             version='any',
                                             ref='bring_back_to_zone'
                                         ),
                                         vehicles=VehicleRefsRelStructure(
                                             vehicle_ref=[
                                                 VehicleRef(
+                                                    value='',
                                                     version='any',
                                                     ref='B01'
                                                 ),
                                                 VehicleRef(
+                                                    value='',
                                                     version='any',
                                                     ref='B03'
                                                 ),
                                                 VehicleRef(
+                                                    value='',
                                                     version='any',
                                                     ref='B05'
                                                 ),
@@ -1907,16 +1989,19 @@ obj = PublicationDelivery(
                                             value='Restricted Pool - parking'
                                         ),
                                         mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta'
                                         ),
                                         parking_components=ParkingComponentRefsRelStructure(
                                             parking_area_ref_or_parking_bay_ref_or_vehicle_sharing_parking_bay_ref=[
                                                 VehicleSharingParkingAreaRef(
+                                                    value='',
                                                     version='any',
                                                     ref='bike_station_beta_B1'
                                                 ),
@@ -1925,10 +2010,12 @@ obj = PublicationDelivery(
                                         vehicles=VehicleRefsRelStructure(
                                             vehicle_ref=[
                                                 VehicleRef(
+                                                    value='',
                                                     version='any',
                                                     ref='P03'
                                                 ),
                                                 VehicleRef(
+                                                    value='',
                                                     version='any',
                                                     ref='P04'
                                                 ),
@@ -1943,6 +2030,7 @@ obj = PublicationDelivery(
                                         id='metrobike',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1988,6 +2076,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
@@ -1996,12 +2085,14 @@ obj = PublicationDelivery(
                                         proposed_by_services=OnlineServiceRefsRelStructure(
                                             online_service_ref=[
                                                 OnlineServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='metrobike_online'
                                                 ),
                                             ]
                                         ),
                                         vehicle_sharing_ref=VehicleSharingRef(
+                                            value='',
                                             version='any',
                                             ref='cycle_share'
                                         ),
@@ -2011,6 +2102,7 @@ obj = PublicationDelivery(
                                         fleets=FleetRefsRelStructure(
                                             fleet_ref=[
                                                 FleetRef(
+                                                    value='',
                                                     version='any',
                                                     ref='metrobike_fleet'
                                                 ),
@@ -2028,12 +2120,14 @@ obj = PublicationDelivery(
                                             value='Online registration for metrobike'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
                                         proposing_services=MobilityServiceRefsRelStructure(
                                             mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=[
                                                 VehicleSharingServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='metrobike'
                                                 ),
@@ -2049,10 +2143,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
                                         vehicle_sharing_parking_area_ref=VehicleSharingParkingAreaRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1'
                                         )
@@ -2062,10 +2158,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
                                         vehicle_sharing_parking_area_ref=VehicleSharingParkingAreaRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta_B1'
                                         )
@@ -2085,6 +2183,7 @@ obj = PublicationDelivery(
                                                         day_types=DayTypesRelStructure(
                                                             day_type_ref_or_day_type=[
                                                                 DayTypeRef(
+                                                                    value='',
                                                                     ref='working_day'
                                                                 ),
                                                             ]
@@ -2160,6 +2259,7 @@ obj = PublicationDelivery(
                                         ),
                                         rule_applicability=ZoneRuleApplicabilityEnumeration.INSIDE,
                                         mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
@@ -2170,6 +2270,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     zone_use=TransportZoneUseEnumeration.FORBIDDEN_ZONE,
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     )
@@ -2184,6 +2285,7 @@ obj = PublicationDelivery(
                                             value='Normal Use of zone'
                                         ),
                                         mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
@@ -2194,6 +2296,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     zone_use=TransportZoneUseEnumeration.ALL_USES_ALLOWED,
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pedal_cycle'
                                                     )
@@ -2208,6 +2311,7 @@ obj = PublicationDelivery(
                                             value='Must bring back to same zone'
                                         ),
                                         mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
@@ -2235,10 +2339,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     MobilityServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example'
                                     ),
                                     SiteFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example'
                                     ),
@@ -2269,10 +2375,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
                                         choice_1=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
@@ -2321,6 +2429,7 @@ obj = PublicationDelivery(
                                                         value='Anywhere in Zone'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
@@ -2328,6 +2437,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2335,12 +2445,14 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='all_metropolis'
                                                                 ),
                                                             ],
                                                             choice_2=[
                                                                 VehicleSharingServiceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='metrobike'
                                                                 ),
@@ -2355,6 +2467,7 @@ obj = PublicationDelivery(
                                                         value='Any where in Zone'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access_when'
                                                     ),
                                                     fare_structure_elements_in_sequence=FareStructureElementsInSequenceRelStructure(
@@ -2371,10 +2484,12 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         ref='fxc:can_access_during',
                                                                         version_ref='EXTERNAL'
                                                                     ),
                                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='metrobike@M0+M45'
                                                                     )
@@ -2391,10 +2506,12 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         ref='fxc:can_access_during',
                                                                         version_ref='EXTERNAL'
                                                                     ),
                                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='metrobike@M45+M90'
                                                                     )
@@ -2411,10 +2528,12 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         ref='fxc:can_access_during',
                                                                         version_ref='EXTERNAL'
                                                                     ),
                                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='metrobike@M90-eachM60'
                                                                     )
@@ -2432,10 +2551,12 @@ obj = PublicationDelivery(
                                                                     version='any',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         ref='fxc:can_access_during',
                                                                         version_ref='EXTERNAL'
                                                                     ),
                                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='metrobike@M600+'
                                                                     )
@@ -2451,6 +2572,7 @@ obj = PublicationDelivery(
                                                         value='Eligible user types'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:eligibility',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2459,6 +2581,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:eligible',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2484,6 +2607,7 @@ obj = PublicationDelivery(
                                                         value='Conditions on travel'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:travel_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2495,6 +2619,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2539,6 +2664,7 @@ obj = PublicationDelivery(
                                                         value='Conditions of sale'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:sale_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2550,6 +2676,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_sale',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2603,6 +2730,7 @@ obj = PublicationDelivery(
                                         id='metrobike_online@membership',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2610,6 +2738,7 @@ obj = PublicationDelivery(
                                             value='Registered member of Metrobike online'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         )
@@ -2654,6 +2783,7 @@ obj = PublicationDelivery(
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL_THEN_ADJUST_AT_END_OF_TRAVEL,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
@@ -2677,22 +2807,27 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session@durations'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session@conditions_of_travel'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session@conditions_of_sale'
                                                             ),
@@ -2708,6 +2843,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@single_session@travel'
                                                     )
@@ -2728,6 +2864,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.AT_STOP,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
@@ -2749,6 +2886,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.MOBILE_DEVICE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -2768,6 +2906,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.ONLINE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -2795,6 +2934,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='any',
                                                     ref='printed_ticket'
                                                 ),
@@ -2811,6 +2951,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mobile_application_data'
                                                 ),
@@ -2851,6 +2992,7 @@ obj = PublicationDelivery(
                                         id='metrobike_online@membership-SOP@mobile_app',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2863,10 +3005,12 @@ obj = PublicationDelivery(
                                                     id='metrobike_online@membership-SOP@mobile_app',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike_online@membership'
                                                     ),
@@ -2879,6 +3023,7 @@ obj = PublicationDelivery(
                                         id='metrobike@single_session-SOP@p-ticket',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2895,6 +3040,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ticket_machine'
                                                     ),
@@ -2911,6 +3057,7 @@ obj = PublicationDelivery(
                                                         PaymentMethodEnumeration.EPAY_DEVICE,
                                                     ],
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='collect_from_machine'
                                                     )
@@ -2923,10 +3070,12 @@ obj = PublicationDelivery(
                                                     id='metrobike@single_session-SOP@p-ticket',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@single_session'
                                                     ),
@@ -2939,6 +3088,7 @@ obj = PublicationDelivery(
                                         id='metrobike@single_session-SOP@mobileApp',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2963,6 +3113,7 @@ obj = PublicationDelivery(
                                                                 id='metrobike@single_session-SOP@mobileApp@registered',
                                                                 version='any',
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='metrobike_online@membership'
                                                                 ),
@@ -2975,6 +3126,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         choice_2=[
                                                             OnlineServiceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike_online'
                                                             ),
@@ -2993,6 +3145,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application'
                                                     ),
@@ -3004,6 +3157,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_device'
                                                     )
@@ -3016,10 +3170,12 @@ obj = PublicationDelivery(
                                                     id='metrobike@single_session-SOP@mobileApp',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@single_session'
                                                     ),
@@ -3042,10 +3198,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     MobilityServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example'
                                     ),
                                     SiteFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example'
                                     ),
@@ -3076,10 +3234,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
                                         choice_1=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
@@ -3104,6 +3264,7 @@ obj = PublicationDelivery(
                                                         value='Any where in Zone'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
@@ -3111,6 +3272,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -3118,12 +3280,14 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='all_metropolis'
                                                                 ),
                                                             ],
                                                             choice_2=[
                                                                 VehicleSharingServiceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='metrobike'
                                                                 ),
@@ -3138,9 +3302,11 @@ obj = PublicationDelivery(
                                                         value='Access up to end of fare day'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access_when'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@1D'
                                                     )
@@ -3152,6 +3318,7 @@ obj = PublicationDelivery(
                                                         value='Eligible user types'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:eligibility',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -3160,16 +3327,19 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:eligible',
                                                             version_ref='EXTERNAL'
                                                         ),
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='notATot'
                                                                 ),
                                                                 EntitlementRequiredRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='metrobike_registered'
                                                                 ),
@@ -3184,6 +3354,7 @@ obj = PublicationDelivery(
                                                         value='COnditions on travel'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:travel_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -3195,6 +3366,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -3246,6 +3418,7 @@ obj = PublicationDelivery(
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
@@ -3269,22 +3442,27 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@day_pass@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@day_pass@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@day_pass@durations'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@day_pass@conditions_of_travel'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session@conditions_of_sale'
                                                             ),
@@ -3300,6 +3478,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@day_pass@travel'
                                                     )
@@ -3316,6 +3495,7 @@ obj = PublicationDelivery(
                                         id='metrobike@day_pass-SOP@mobileApp',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -3340,6 +3520,7 @@ obj = PublicationDelivery(
                                                                 id='metrobike_registered',
                                                                 version='any',
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='metrobike_online@membership'
                                                                 ),
@@ -3352,6 +3533,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         choice_2=[
                                                             OnlineServiceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike_online'
                                                             ),
@@ -3370,6 +3552,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application'
                                                     ),
@@ -3381,6 +3564,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_device'
                                                     )
@@ -3393,10 +3577,12 @@ obj = PublicationDelivery(
                                                     id='metrobike@day_pass-SOP@mobileApp',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@day_pass'
                                                     ),
@@ -3419,6 +3605,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mb:cycle_sharing_example-single_session'
                                     ),
@@ -3455,12 +3642,14 @@ obj = PublicationDelivery(
                                             value='Metrobike prices'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:MBIKE'
                                         ),
                                         limitations=UsageParameterRefsRelStructure(
                                             choice=[
                                                 UserProfileRef(
+                                                    value='',
                                                     version='any',
                                                     ref='notATot'
                                                 ),
@@ -3468,10 +3657,12 @@ obj = PublicationDelivery(
                                         ),
                                         specifics=FareTableSpecificsStructure(
                                             tariff_zone_ref=TariffZoneRef(
+                                                value='',
                                                 version='any',
                                                 ref='all_metropolis'
                                             ),
                                             choice_1=VehicleSharingServiceRef(
+                                                value='',
                                                 version='any',
                                                 ref='metrobike'
                                             )
@@ -3487,10 +3678,12 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session-SOP@p-ticket'
                                                             ),
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session-SOP@mobileApp'
                                                             ),
@@ -3499,6 +3692,7 @@ obj = PublicationDelivery(
                                                     used_in=UsedInRefsRelStructure(
                                                         choice=[
                                                             TariffRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@single_session'
                                                             ),
@@ -3519,6 +3713,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('300.00'),
                                                                             choice=ChargingPolicyRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@charging_policy@Deposit'
                                                                             )
@@ -3531,6 +3726,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('-300.00'),
                                                                             choice=ChargingPolicyRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@charging_policy@Deposit'
                                                                             )
@@ -3544,6 +3740,7 @@ obj = PublicationDelivery(
                                                                             amount=Decimal('2.10'),
                                                                             units=Decimal('45'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M0+M45'
                                                                             )
@@ -3557,6 +3754,7 @@ obj = PublicationDelivery(
                                                                             amount=Decimal('3.00'),
                                                                             units=Decimal('45'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M45+M90'
                                                                             )
@@ -3570,6 +3768,7 @@ obj = PublicationDelivery(
                                                                             amount=Decimal('4.00'),
                                                                             units=Decimal('60'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M90-eachM60'
                                                                             )
@@ -3583,6 +3782,7 @@ obj = PublicationDelivery(
                                                                             amount=Decimal('40.00'),
                                                                             units=Decimal('600'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M600+'
                                                                             )
@@ -3599,6 +3799,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParameterRefsRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='notATot'
                                                                         ),
@@ -3614,6 +3815,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('100.00'),
                                                                             choice=RentalPenaltyPolicyRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@hire_penalty@late_return'
                                                                             )
@@ -3626,6 +3828,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('900.00'),
                                                                             choice=RentalPenaltyPolicyRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@hire_penalty@lost_vehicle'
                                                                             )
@@ -3645,6 +3848,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@day_pass-SOP@mobileApp'
                                                             ),
@@ -3653,6 +3857,7 @@ obj = PublicationDelivery(
                                                     used_in=UsedInRefsRelStructure(
                                                         choice=[
                                                             TariffRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='metrobike@day_pass'
                                                             ),
@@ -3669,6 +3874,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParameterRefsRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='notATot'
                                                                         ),
@@ -3684,6 +3890,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('12.00'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@1D'
                                                                             )
@@ -3714,6 +3921,7 @@ obj = PublicationDelivery(
                 prerequisites=VersionFrameRefsRelStructure(
                     version_frame_ref=[
                         CompositeFrameRef(
+                            value='',
                             version='1.0',
                             ref='mb:cycle_sharing_example'
                         ),
@@ -3731,14 +3939,17 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
                                         vehicle_ref=VehicleRef(
+                                            value='',
                                             version='any',
                                             ref='C01'
                                         ),
                                         service_access_code_ref=ServiceAccessCodeRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Anon001@027@purchase_single_session'
                                         )
@@ -3748,14 +3959,17 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='metrobike'
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             ref='mbt:317867122222',
                                             version_ref='External'
                                         ),
                                         service_access_code_ref=ServiceAccessCodeRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Good@Cust444@005@purchase_day_pass'
                                         )
@@ -3772,6 +3986,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2020, 10, 8, 11, 6, 55),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha'
                                         ),
@@ -3788,6 +4003,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@01'
                                         ),
@@ -3798,6 +4014,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@02'
                                         ),
@@ -3808,6 +4025,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@03'
                                         ),
@@ -3818,6 +4036,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@04'
                                         ),
@@ -3828,6 +4047,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@05'
                                         ),
@@ -3838,6 +4058,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@06'
                                         ),
@@ -3848,6 +4069,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@07'
                                         ),
@@ -3858,6 +4080,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@08'
                                         ),
@@ -3868,6 +4091,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@09'
                                         ),
@@ -3878,6 +4102,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@10'
                                         ),
@@ -3891,6 +4116,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 20),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha'
                                         ),
@@ -3907,6 +4133,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 11, 7, 20),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_alpha_A1@10'
                                         ),
@@ -3920,6 +4147,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 0),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta'
                                         ),
@@ -3934,6 +4162,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta_B1@01'
                                         ),
@@ -3944,6 +4173,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta_B1@02'
                                         ),
@@ -3954,6 +4184,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta_B1@03'
                                         ),
@@ -3964,6 +4195,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta_B1@04'
                                         ),
@@ -3974,6 +4206,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta_B1@05'
                                         ),
@@ -3987,6 +4220,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 5),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta'
                                         ),
@@ -4004,6 +4238,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2020, 10, 8, 13, 10, 5),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='bike_station_beta_B1@04'
                                         ),
@@ -4021,6 +4256,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='mb_data'
                                     ),
                                     Codespace(
@@ -4062,12 +4298,14 @@ obj = PublicationDelivery(
                                                     customer_purchase_packages=CustomerPurchasePackageRefsRelStructure(
                                                         customer_purchase_package_ref=[
                                                             CustomerPurchasePackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='mbt:Good@Cust444@005'
                                                             ),
                                                         ]
                                                     ),
                                                     customer_payment_means_ref=CustomerPaymentMeansRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mbt:Cust444@AC7651@p1'
                                                     ),
@@ -4080,6 +4318,7 @@ obj = PublicationDelivery(
                                                                     value='B.Johnson Visa Card'
                                                                 ),
                                                                 medium_access_device_ref=EmvCardRef(
+                                                                    value='',
                                                                     ref='visa:47594444555666',
                                                                     version_ref='external'
                                                                 )
@@ -4091,6 +4330,7 @@ obj = PublicationDelivery(
                                                                     value='B.Johnson mobile device'
                                                                 ),
                                                                 medium_access_device_ref=MobileDeviceRef(
+                                                                    value='',
                                                                     ref='mbt:317867122222',
                                                                     version_ref='external'
                                                                 )
@@ -4099,6 +4339,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     medium_access_devices=MediumAccessDeviceRefsRelStructure(
                                                         medium_access_device_ref=MobileDeviceRef(
+                                                            value='',
                                                             ref='mbt:317867122222',
                                                             version_ref='External'
                                                         )
@@ -4112,6 +4353,7 @@ obj = PublicationDelivery(
                                                     id='mbt:Cust444@contract001',
                                                     version='any',
                                                     customer_ref=CustomerRef(
+                                                        value='',
                                                         ref='mbt:Cust444',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -4125,6 +4367,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -4136,6 +4379,7 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mbt:Cust444@contract001@t001@join_as_member'
                                                                             ),
@@ -4144,10 +4388,12 @@ obj = PublicationDelivery(
                                                                             travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                                 start=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                                                 authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='noc:MBIKE'
                                                                                 ),
                                                                                 choice=VehicleSharingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='metrobike'
                                                                                 )
@@ -4162,6 +4408,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='metrobike_online@membership'
                                                                                         )
@@ -4174,6 +4421,7 @@ obj = PublicationDelivery(
                                                                 customer_purchase_packages=CustomerPurchasePackagesRelStructure(
                                                                     customer_purchase_package_or_customer_purchase_package_ref=[
                                                                         CustomerPurchasePackageRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mbt:Good@Cust444@001'
                                                                         ),
@@ -4188,6 +4436,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -4200,10 +4449,12 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mbt:Cust444@trans005@purchase_day_pass'
                                                                             ),
                                                                             fare_price_ref_or_cell_ref=TimeIntervalPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@1D'
                                                                             ),
@@ -4213,6 +4464,7 @@ obj = PublicationDelivery(
                                                                                 start=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                                                 duration=XmlDuration("P1D"),
                                                                                 choice=VehicleSharingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='metrobike'
                                                                                 )
@@ -4227,64 +4479,76 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         validable_element_ref=ValidableElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='metrobike@day_pass@travel'
                                                                                         ),
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='metrobike@day_pass'
                                                                                         ),
                                                                                         fare_structure_element_ref=FareStructureElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='metrobike@day_pass@access'
                                                                                         ),
                                                                                         sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='metrobike@day_pass-SOP@mobileApp'
                                                                                         ),
                                                                                         validity_parameters=ValidityParametersRelStructure(
                                                                                             mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                                 VehicleSharingRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='cycle_share'
                                                                                                 ),
                                                                                             ],
                                                                                             choice=[
                                                                                                 OperatorRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='noc:MBIKE'
                                                                                                 ),
                                                                                                 OnlineServiceOperatorRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='floggit'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_2=[
                                                                                                 VehicleSharingServiceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='metrobike'
                                                                                                 ),
                                                                                             ],
                                                                                             type_of_travel_document_ref=[
                                                                                                 TypeOfTravelDocumentRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application_data'
                                                                                                 ),
                                                                                             ],
                                                                                             distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                                 DistributionChannelRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application'
                                                                                                 ),
                                                                                             ],
                                                                                             fulfilment_method_ref=[
                                                                                                 FulfilmentMethodRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_device'
                                                                                                 ),
                                                                                             ]
                                                                                         ),
                                                                                         time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='metrobike@1D'
                                                                                         )
@@ -4297,6 +4561,7 @@ obj = PublicationDelivery(
                                                                 customer_purchase_packages=CustomerPurchasePackagesRelStructure(
                                                                     customer_purchase_package_or_customer_purchase_package_ref=[
                                                                         CustomerPurchasePackageRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mbt:Good@Cust444@005'
                                                                         ),
@@ -4305,6 +4570,7 @@ obj = PublicationDelivery(
                                                                 travel_documents=TravelDocumentsRelStructure(
                                                                     choice=[
                                                                         ServiceAccessCodeRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mbt:Good@Cust444@005@purchase_day_pass'
                                                                         ),
@@ -4325,6 +4591,7 @@ obj = PublicationDelivery(
                                         id='mbt:Anon001@trans069',
                                         version='any',
                                         customer_ref=CustomerRef(
+                                            value='',
                                             ref='mbt:Anon001',
                                             version_ref='EXTERNAL'
                                         ),
@@ -4338,6 +4605,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     date=XmlDateTime(2020, 12, 8, 12, 1, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                        value='',
                                                         ref='fxc:product_purchase',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -4350,10 +4618,12 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 date=XmlDateTime(2020, 12, 8, 12, 1, 0),
                                                                 sales_transaction_ref=SalesTransactionRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mbt:Anon001@trans069@purchase_single_session@checkout'
                                                                 ),
                                                                 fare_price_ref_or_cell_ref=TimeIntervalPriceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='metrobike@M0+M45'
                                                                 ),
@@ -4362,6 +4632,7 @@ obj = PublicationDelivery(
                                                                 travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                     origin=TravelSpecificationSummaryEndpointStructure(
                                                                         stop_place_ref_or_site_ref=ParkingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='bike_station_alpha'
                                                                         )
@@ -4369,14 +4640,17 @@ obj = PublicationDelivery(
                                                                     start=XmlDateTime(2020, 12, 8, 12, 1, 0),
                                                                     duration=XmlDuration("PT45M"),
                                                                     authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='noc:MBIKE'
                                                                     ),
                                                                     user_profile_ref=UserProfileRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='notATot'
                                                                     ),
                                                                     choice=VehicleSharingServiceRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='metrobike'
                                                                     )
@@ -4391,24 +4665,29 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@travel'
                                                                             ),
                                                                             preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session'
                                                                             ),
                                                                             fare_structure_element_ref=FareStructureElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@access'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session-SOP@p-ticket'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     UserProfileRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='notATot'
                                                                                     ),
@@ -4417,86 +4696,101 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                     VehicleSharingRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='cycle_share'
                                                                                     ),
                                                                                 ],
                                                                                 choice=[
                                                                                     OperatorRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='noc:MBIKE'
                                                                                     ),
                                                                                 ],
                                                                                 tariff_zone_ref=[
                                                                                     TariffZoneRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='all_metropolis'
                                                                                     ),
                                                                                 ],
                                                                                 choice_1=[
                                                                                     MonitoredVehicleSharingParkingBayRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='bike_station_alpha_A1@02'
                                                                                     ),
                                                                                     VehicleSharingParkingAreaRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='bike_station_alpha_A1'
                                                                                     ),
                                                                                     MonitoredVehicleSharingParkingBayRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='bike_station_alpha_A1@10'
                                                                                     ),
                                                                                 ],
                                                                                 transport_type_ref_or_vehicle_type_ref=[
                                                                                     SimpleVehicleTypeRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='electric_cycle'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_model_ref=[
                                                                                     VehicleModelRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='electric_boneshaker'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_model_profile_ref=[
                                                                                     CycleModelProfileRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='boneKitB'
                                                                                     ),
                                                                                 ],
                                                                                 choice_2=[
                                                                                     VehicleSharingServiceRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='metrobike'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_ref=[
                                                                                     VehicleRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='C01'
                                                                                     ),
                                                                                 ],
                                                                                 type_of_travel_document_ref=[
                                                                                     TypeOfTravelDocumentRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='printed_ticket'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='ticket_machine'
                                                                                     ),
                                                                                 ],
                                                                                 fulfilment_method_ref=[
                                                                                     FulfilmentMethodRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='collect_from_machine'
                                                                                     ),
                                                                                 ]
                                                                             ),
                                                                             time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M0+M45'
                                                                             )
@@ -4509,6 +4803,7 @@ obj = PublicationDelivery(
                                                     customer_purchase_packages=CustomerPurchasePackagesRelStructure(
                                                         customer_purchase_package_or_customer_purchase_package_ref=[
                                                             CustomerPurchasePackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='mbt:Anon001@027'
                                                             ),
@@ -4526,11 +4821,13 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 version='any',
                                                                 type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='printed_ticket'
                                                                 )
                                                             ),
                                                             ServiceAccessCodeRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='mbt:Anon001@027@purchase_single_session'
                                                             ),
@@ -4545,6 +4842,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     date=XmlDateTime(2020, 12, 8, 14, 47, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                        value='',
                                                         ref='fxc:product_purchase',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -4556,6 +4854,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 date=XmlDateTime(2020, 10, 8, 13, 10, 0),
                                                                 sales_transaction_ref=SalesTransactionRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mbt:Anon001@trans069@purchase_single_session@return'
                                                                 ),
@@ -4564,12 +4863,14 @@ obj = PublicationDelivery(
                                                                     rule_step_result=[
                                                                         PriceRuleStepResultStructure(
                                                                             fare_price_ref=TimeIntervalPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M45+M90'
                                                                             ),
                                                                             amount=Decimal('3.00'),
                                                                             adjustment_amount=Decimal('3.00'),
                                                                             discounting_rule_ref_or_pricing_rule_ref=PricingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='cumulative_total'
                                                                             ),
@@ -4581,6 +4882,7 @@ obj = PublicationDelivery(
                                                                         ),
                                                                         PriceRuleStepResultStructure(
                                                                             fare_price_ref=TimeIntervalPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M90-eachM60'
                                                                             ),
@@ -4588,6 +4890,7 @@ obj = PublicationDelivery(
                                                                             adjustment_amount=Decimal('8.00'),
                                                                             adjustment_units=Decimal('120'),
                                                                             discounting_rule_ref_or_pricing_rule_ref=PricingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='per_hour'
                                                                             ),
@@ -4603,6 +4906,7 @@ obj = PublicationDelivery(
                                                                 travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                     destination=TravelSpecificationSummaryEndpointStructure(
                                                                         stop_place_ref_or_site_ref=ParkingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='bike_station_beta'
                                                                         )
@@ -4610,14 +4914,17 @@ obj = PublicationDelivery(
                                                                     start=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                                     duration=XmlDuration("PT45M"),
                                                                     authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='noc:MBIKE'
                                                                     ),
                                                                     user_profile_ref=UserProfileRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='notATot'
                                                                     ),
                                                                     choice=VehicleSharingServiceRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='metrobike'
                                                                     )
@@ -4632,88 +4939,104 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@travel'
                                                                             ),
                                                                             preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session'
                                                                             ),
                                                                             fare_structure_element_ref=FareStructureElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session@access'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@single_session-SOP@p-ticket'
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                     VehicleSharingRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='cycle_share'
                                                                                     ),
                                                                                 ],
                                                                                 choice=[
                                                                                     OperatorRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='noc:MBIKE'
                                                                                     ),
                                                                                 ],
                                                                                 tariff_zone_ref=[
                                                                                     TariffZoneRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='all_metropolis'
                                                                                     ),
                                                                                 ],
                                                                                 choice_1=[
                                                                                     VehicleSharingParkingAreaRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='bike_station_beta_B1'
                                                                                     ),
                                                                                     MonitoredVehicleSharingParkingBayRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='bike_station_beta_B1@04'
                                                                                     ),
                                                                                 ],
                                                                                 transport_type_ref_or_vehicle_type_ref=[
                                                                                     SimpleVehicleTypeRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='electric_cycle'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_model_ref=[
                                                                                     VehicleModelRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='electric_boneshaker'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_model_profile_ref=[
                                                                                     CycleModelProfileRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='boneKitB'
                                                                                     ),
                                                                                 ],
                                                                                 choice_2=[
                                                                                     VehicleSharingServiceRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='metrobike'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_ref=[
                                                                                     VehicleRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='C01'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='online'
                                                                                     ),
                                                                                 ]
                                                                             ),
                                                                             time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='metrobike@M90-eachM60'
                                                                             )
@@ -4726,6 +5049,7 @@ obj = PublicationDelivery(
                                                     customer_purchase_packages=CustomerPurchasePackagesRelStructure(
                                                         customer_purchase_package_or_customer_purchase_package_ref=[
                                                             CustomerPurchasePackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='mbt:Anon001@027'
                                                             ),
@@ -4753,10 +5077,12 @@ obj = PublicationDelivery(
                                             value='Membership'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Cust444'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Cust444@AC7651'
                                         ),
@@ -4767,6 +5093,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike_online@membership-SOP@mobile_app'
                                                     ),
@@ -4775,14 +5102,17 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Cust444@contract001@t001@join_as_member'
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             ref='mbt:317867122222',
                                             version_ref='external'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             ref='mbt:317867122222@mboik',
                                             version_ref='external'
                                         )
@@ -4802,10 +5132,12 @@ obj = PublicationDelivery(
                                             value='Day Pass'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Cust444'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Cust444@AC7651'
                                         ),
@@ -4816,6 +5148,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@day_pass-SOP@mobileApp'
                                                     ),
@@ -4850,36 +5183,42 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                         VehicleSharingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='cycle_share'
                                                                         ),
                                                                     ],
                                                                     choice=[
                                                                         OperatorRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='noc:MBIKE'
                                                                         ),
                                                                     ],
                                                                     choice_2=[
                                                                         VehicleSharingServiceRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='metrobike'
                                                                         ),
                                                                     ],
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application_data'
                                                                         ),
                                                                     ],
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application'
                                                                         ),
                                                                     ],
                                                                     fulfilment_method_ref=[
                                                                         FulfilmentMethodRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_device'
                                                                         ),
@@ -4893,6 +5232,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Cust444@trans005@purchase_day_pass'
                                         ),
@@ -4904,6 +5244,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('12.00'),
                                                     customer_purchase_package_ref_or_customer_purchase_package_element_ref=CustomerPurchasePackageRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mbt:Good@Cust444@005'
                                                     )
@@ -4922,15 +5263,18 @@ obj = PublicationDelivery(
                                                     ],
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     customer_purchase_package_ref=CustomerPurchasePackageRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mbt:Good@Cust444@005'
                                                     ),
                                                     access_code='9876',
                                                     vehicle_access_credentials_assignment_ref=VehicleAccessCredentialsAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mbt:Cust444@trans005@purchase_day_pase'
                                                     )
@@ -4938,10 +5282,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             ref='mbt:317867122222',
                                             version_ref='external'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             ref='mbt:317867122222@mboik',
                                             version_ref='external'
                                         )
@@ -4961,6 +5307,7 @@ obj = PublicationDelivery(
                                             value='Single session cycle use'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             ref='mbt:Anon001',
                                             version_ref='EXTERNAL'
                                         ),
@@ -4971,6 +5318,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2020, 12, 8, 12, 1, 0),
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='metrobike@day_pass-SOP@mobileApp'
                                                     ),
@@ -4994,6 +5342,7 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 choice_1=[
                                                                                     MonitoredVehicleSharingParkingBayRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='bike_station_alpha_A1@01'
                                                                                     ),
@@ -5021,6 +5370,7 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 choice_1=[
                                                                                     MonitoredVehicleSharingParkingBayRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='bike_station_beta_B1@04'
                                                                                     ),
@@ -5041,36 +5391,42 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                         VehicleSharingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='cycle_share'
                                                                         ),
                                                                     ],
                                                                     choice=[
                                                                         OperatorRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='noc:MBIKE'
                                                                         ),
                                                                     ],
                                                                     choice_2=[
                                                                         VehicleSharingServiceRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='metrobike'
                                                                         ),
                                                                     ],
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application_data'
                                                                         ),
                                                                     ],
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application'
                                                                         ),
                                                                     ],
                                                                     fulfilment_method_ref=[
                                                                         FulfilmentMethodRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_device'
                                                                         ),
@@ -5084,12 +5440,14 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='mbt:Anon001@trans069@purchase_single_session@checkout'
                                         ),
                                         sales_transactions=SalesTransactionRefsRelStructure(
                                             sales_transaction_ref=[
                                                 SalesTransactionRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mbt:Anon001@trans069@purchase_single_session@return'
                                                 ),
@@ -5106,6 +5464,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     amount=Decimal('2.10'),
                                                     customer_purchase_package_ref_or_customer_purchase_package_element_ref=CustomerPurchasePackageRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mbt:Anon001@027'
                                                     )
@@ -5119,6 +5478,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     amount=Decimal('7.00'),
                                                     customer_purchase_package_ref_or_customer_purchase_package_element_ref=CustomerPurchasePackageRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mbt:Anon001@027'
                                                     )
@@ -5137,11 +5497,13 @@ obj = PublicationDelivery(
                                                     ],
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     access_code='1234',
                                                     vehicle_access_credentials_assignment_ref=VehicleAccessCredentialsAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mbt:Anon001@trans069@purchase_single_session@one_time'
                                                     )
@@ -5149,10 +5511,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             ref='mbt:317867122222',
                                             version_ref='external'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             ref='mbt:317867122222@mboik',
                                             version_ref='external'
                                         )

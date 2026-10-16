@@ -30,10 +30,9 @@ class CategoryString:
         name = "CATEGORY-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -116,10 +116,9 @@ class DigestValue:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
     value: bytes = field(
-        default=b"",
         metadata={
             "format": "base64",
-        },
+        }
     )
 
 
@@ -128,7 +127,7 @@ class KeyName:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -136,7 +135,7 @@ class MgmtData:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -307,10 +306,9 @@ class SignaturePropertyType:
 @dataclass(frozen=True, kw_only=True)
 class SignatureValueType:
     value: bytes = field(
-        default=b"",
         metadata={
             "format": "base64",
-        },
+        }
     )
     id: None | str = field(
         default=None,

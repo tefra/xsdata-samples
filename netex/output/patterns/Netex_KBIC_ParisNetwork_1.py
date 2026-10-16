@@ -126,6 +126,7 @@ obj = PublicationDelivery(
                     choice='',
                     choice_1=[
                         CompositeFrameRef(
+                            value='',
                             ref='spqes:Fr1234'
                         ),
                     ]
@@ -166,6 +167,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='spq'
                     )
                 ),
@@ -250,6 +252,7 @@ obj = PublicationDelivery(
                             version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     ref='spq:RS_02'
                                 )
                             ),
@@ -822,9 +825,11 @@ obj = PublicationDelivery(
                                                     id='spq:LP_RL_Rt001o_01to02_PJ01',
                                                     version='any',
                                                     type_of_projection_ref=TypeOfProjectionRefStructure(
+                                                        value='',
                                                         ref='spq:Spatial'
                                                     ),
                                                     spatial_feature_ref=SpatialFeatureRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gis:St_RueDeParis_01'
                                                     )
@@ -832,10 +837,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt1'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt2'
                                         )
@@ -844,10 +851,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_02to03',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt2'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt3'
                                         )
@@ -856,10 +865,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_03to04',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt3'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt4'
                                         )
@@ -868,10 +879,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_04to05',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt4'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt5'
                                         )
@@ -880,10 +893,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_05to06',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt5'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt6'
                                         )
@@ -892,10 +907,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_06to07',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt6'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt7'
                                         )
@@ -904,10 +921,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_07to08',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt7'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt8'
                                         )
@@ -916,10 +935,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_08to09',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt8'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt9'
                                         )
@@ -928,10 +949,12 @@ obj = PublicationDelivery(
                                         id='spq:RL_Rt001o_09to10',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt9'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='spq:Rtpt10'
                                         )
@@ -950,6 +973,7 @@ obj = PublicationDelivery(
                                             value='Route 66b outbound'
                                         ),
                                         line_ref=LineRef(
+                                            value='',
                                             version='002',
                                             ref='spq:LN0066'
                                         ),
@@ -963,10 +987,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt1'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_01to02'
                                                     )
@@ -976,10 +1002,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt2'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_02to03'
                                                     )
@@ -989,10 +1017,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt3'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_03to04'
                                                     )
@@ -1002,10 +1032,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=4,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt4'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_04to05'
                                                     )
@@ -1015,10 +1047,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=5,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt5'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_05to06'
                                                     )
@@ -1028,10 +1062,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=6,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt6'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_06to07'
                                                     )
@@ -1041,10 +1077,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=7,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt7'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_07to08'
                                                     )
@@ -1054,10 +1092,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=8,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt8'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_08to09'
                                                     )
@@ -1067,10 +1107,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=9,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt9'
                                                     ),
                                                     onward_route_link_ref=RouteLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_09to10'
                                                     )
@@ -1080,6 +1122,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=10,
                                                     choice_1=RoutePointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:Rtpt10'
                                                     )
@@ -1122,6 +1165,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_SSP1_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR1'
                                                     )
@@ -1149,6 +1193,7 @@ obj = PublicationDelivery(
                                                     id='ssp:LPJ_SSP2_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_02to03'
                                                     ),
@@ -1177,6 +1222,7 @@ obj = PublicationDelivery(
                                                     id='ssp:LPJ_SSP3_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_04to05'
                                                     ),
@@ -1205,6 +1251,7 @@ obj = PublicationDelivery(
                                                     id='ssp:LPJ_SSP4_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_05to06'
                                                     ),
@@ -1233,6 +1280,7 @@ obj = PublicationDelivery(
                                                     id='ssp:LPJ_SSP5_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_07to08'
                                                     ),
@@ -1261,6 +1309,7 @@ obj = PublicationDelivery(
                                                     id='ssp:LPJ_SSP6_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_08to09'
                                                     ),
@@ -1289,6 +1338,7 @@ obj = PublicationDelivery(
                                                     id='ssp:LPJ_SSP7_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_09to10'
                                                     ),
@@ -1317,6 +1367,7 @@ obj = PublicationDelivery(
                                                     id='ssp:LPJ_SSP8_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_09to10'
                                                     ),
@@ -1345,6 +1396,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_SSP9_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR10'
                                                     )
@@ -1352,7 +1404,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         label=MultilingualString(
-
+                                            value=''
                                         )
                                     ),
                                     ScheduledStopPoint(
@@ -1372,6 +1424,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_SSP10_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR10'
                                                     )
@@ -1379,7 +1432,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         label=MultilingualString(
-
+                                            value=''
                                         )
                                     ),
                                 ]
@@ -1403,6 +1456,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_02to03'
                                                     ),
@@ -1413,10 +1467,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP1'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP2'
                                         )
@@ -1438,6 +1494,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_02to03'
                                                     ),
@@ -1453,6 +1510,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_03to04'
                                                     )
@@ -1465,6 +1523,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_04to05'
                                                     ),
@@ -1475,10 +1534,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP2'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP3'
                                         )
@@ -1500,6 +1561,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_04to05'
                                                     ),
@@ -1515,6 +1577,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_05to06'
                                                     ),
@@ -1525,10 +1588,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP3'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP4'
                                         )
@@ -1550,6 +1615,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_05to06'
                                                     ),
@@ -1565,6 +1631,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_06to07'
                                                     )
@@ -1577,6 +1644,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_07to08'
                                                     ),
@@ -1587,10 +1655,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP4'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP5'
                                         )
@@ -1612,6 +1682,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_07to08'
                                                     ),
@@ -1627,6 +1698,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_08to09'
                                                     ),
@@ -1637,10 +1709,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP5'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP6'
                                         )
@@ -1662,6 +1736,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_08to09'
                                                     ),
@@ -1677,6 +1752,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_09to10'
                                                     ),
@@ -1687,10 +1763,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP6'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP7'
                                         )
@@ -1712,6 +1790,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_09to10'
                                                     ),
@@ -1725,10 +1804,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP7'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP8'
                                         )
@@ -1750,6 +1831,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_09to10'
                                                     ),
@@ -1760,10 +1842,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP8'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP9'
                                         )
@@ -1780,6 +1864,7 @@ obj = PublicationDelivery(
                                             value='SSP1 - SSP9'
                                         ),
                                         route_ref_or_route_view=RouteRef(
+                                            value='',
                                             version='004',
                                             ref='spq:Rt001o'
                                         ),
@@ -1790,10 +1875,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP1'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_1to2'
                                                     ),
@@ -1805,10 +1892,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP2'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_2to3'
                                                     ),
@@ -1820,10 +1909,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP3'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_3to4'
                                                     ),
@@ -1835,10 +1926,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=4,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP4'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_4to5'
                                                     ),
@@ -1850,10 +1943,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=5,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP5'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_5to6'
                                                     ),
@@ -1865,10 +1960,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=6,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP6'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_6to7'
                                                     ),
@@ -1880,10 +1977,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=7,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP7'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_7to8'
                                                     ),
@@ -1895,10 +1994,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=8,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP8'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SL_SvP001o_8to9'
                                                     ),
@@ -1910,6 +2011,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=9,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP9'
                                                     ),
@@ -1931,14 +2033,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP1'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP1'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP1'
                                         )
@@ -1951,14 +2056,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP2'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP2'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP2'
                                         )
@@ -1971,14 +2079,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP3'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP3'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP3'
                                         )
@@ -1991,14 +2102,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP4'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP4'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP4'
                                         )
@@ -2011,14 +2125,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP5'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP5'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP5'
                                         )
@@ -2031,14 +2148,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP6'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP6'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP6'
                                         )
@@ -2051,14 +2171,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP7'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP7'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP7'
                                         )
@@ -2071,14 +2194,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP8'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP8'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP8'
                                         )
@@ -2091,14 +2217,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP9'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP9'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SSP9'
                                         )
@@ -2111,10 +2240,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='001',
                                             ref='ssp:SSP10'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='spq:SP10'
                                         )
@@ -2135,6 +2266,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_TP1_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR1'
                                                     )
@@ -2154,6 +2286,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_TP2_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR2'
                                                     )
@@ -2173,6 +2306,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_TP3_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR5'
                                                     )
@@ -2192,6 +2326,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_TP4_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR8'
                                                     )
@@ -2211,6 +2346,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_TP5_pj01',
                                                     version='any',
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_05to06'
                                                     ),
@@ -2231,6 +2367,7 @@ obj = PublicationDelivery(
                                                     id='tim:PPJ_TP6_pj01',
                                                     version='any',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:PorR10'
                                                     )
@@ -2257,6 +2394,7 @@ obj = PublicationDelivery(
                                                         value='Exact projection  of links TL  1-2 ::>RL  1-2 '
                                                     ),
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_01to02'
                                                     )
@@ -2264,10 +2402,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP1'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP2'
                                         )
@@ -2288,6 +2428,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_02to03'
                                                     )
@@ -2300,6 +2441,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_03to04'
                                                     )
@@ -2312,6 +2454,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_04to05'
                                                     ),
@@ -2322,10 +2465,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP2'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP3'
                                         )
@@ -2346,6 +2491,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_04to05'
                                                     ),
@@ -2361,6 +2507,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_05to06'
                                                     )
@@ -2373,6 +2520,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_06to07'
                                                     )
@@ -2385,6 +2533,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=4,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_07to08'
                                                     )
@@ -2397,6 +2546,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=5,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_08to09'
                                                     ),
@@ -2407,10 +2557,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP3'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP4'
                                         )
@@ -2431,6 +2583,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_08to09'
                                                     ),
@@ -2444,10 +2597,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP4'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP5'
                                         )
@@ -2468,6 +2623,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_08to09'
                                                     ),
@@ -2483,6 +2639,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     project_to_link_ref=LinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='spq:RL_Rt001o_09to10'
                                                     )
@@ -2490,10 +2647,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP5'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tim:TP6'
                                         )
@@ -2508,6 +2667,7 @@ obj = PublicationDelivery(
                                         version='001',
                                         responsibility_set_ref_attribute='tim:RS_03',
                                         route_ref=RouteRefStructure(
+                                            value='',
                                             version='004',
                                             ref='spq:Rt001o'
                                         ),
@@ -2515,6 +2675,7 @@ obj = PublicationDelivery(
 
                                         ),
                                         time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                            value='',
                                             version='any',
                                             ref='tim:TDT001'
                                         ),
@@ -2525,10 +2686,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TL_TP001o_TP1toTP2'
                                                     ),
@@ -2539,10 +2702,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TL_TP001o_TP1toTP2'
                                                     ),
@@ -2553,10 +2718,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TL_TP001o_TP3toTP4'
                                                     ),
@@ -2567,10 +2734,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TL_TP001o_TP4toTP5'
                                                     ),
@@ -2581,10 +2750,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TL_TP001o_TP5toTP6'
                                                     ),
@@ -2595,6 +2766,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
@@ -2611,10 +2783,12 @@ obj = PublicationDelivery(
                                         id='ssp:JP001o',
                                         version='any',
                                         route_ref_or_route_view=RouteRef(
+                                            value='',
                                             version='004',
                                             ref='spq:Rt001o'
                                         ),
                                         timing_pattern_ref=TimingPatternRef(
+                                            value='',
                                             version='001',
                                             ref='tim:TP001o'
                                         ),
@@ -2624,10 +2798,12 @@ obj = PublicationDelivery(
                                                     id='tim:JPRT_001',
                                                     version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TDT001'
                                                     ),
                                                     choice=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
@@ -2637,10 +2813,12 @@ obj = PublicationDelivery(
                                                     id='tim:JPRT_002',
                                                     version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TDT002'
                                                     ),
                                                     choice=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
@@ -2655,6 +2833,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP1'
                                                     ),
@@ -2672,6 +2851,7 @@ obj = PublicationDelivery(
                                                                     value='Additional projection because there is a separate TimingPointIdID as well as a SSP'
                                                                 ),
                                                                 project_to_point_ref=PointRefStructure(
+                                                                    value='',
                                                                     name_of_ref_class='TimingPoint',
                                                                     version='001',
                                                                     ref='tim:TP2'
@@ -2681,6 +2861,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP1'
                                                     ),
@@ -2691,6 +2872,7 @@ obj = PublicationDelivery(
                                                                 id='tim:JPRT_003',
                                                                 version='any',
                                                                 time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tim:TDT001'
                                                                 ),
@@ -2704,6 +2886,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP2'
                                                     ),
@@ -2714,6 +2897,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=4,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP3'
                                                     ),
@@ -2724,6 +2908,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP3'
                                                     ),
@@ -2734,6 +2919,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=6,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP4'
                                                     ),
@@ -2744,6 +2930,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=7,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP5'
                                                     ),
@@ -2754,6 +2941,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=8,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP4'
                                                     ),
@@ -2764,6 +2952,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=9,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP6'
                                                     ),
@@ -2774,6 +2963,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=10,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tim:TP5'
                                                     ),
@@ -2784,6 +2974,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=11,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP7'
                                                     ),
@@ -2794,6 +2985,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=12,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP8'
                                                     ),
@@ -2811,6 +3003,7 @@ obj = PublicationDelivery(
                                                                     value='Additional projection because there is a separate TimingPointIdID as well as a SSP'
                                                                 ),
                                                                 project_to_point_ref=PointRefStructure(
+                                                                    value='',
                                                                     name_of_ref_class='TimingPoint',
                                                                     version='001',
                                                                     ref='tim:TP6'
@@ -2820,6 +3013,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=13,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='ssp:SSP9'
                                                     ),
@@ -2866,6 +3060,7 @@ obj = PublicationDelivery(
                                                     id='gis:Road_RueDeParis1_P001',
                                                     version='any',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueDeParis1_001'
                                                     )
@@ -2873,6 +3068,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:Road_RueDeParis1_P002',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueDeParis1_002'
                                                     )
@@ -2881,6 +3077,7 @@ obj = PublicationDelivery(
                                                     id='gis:Road_RueDeParis1_P003',
                                                     version='any',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueDeParis1_003'
                                                     )
@@ -2889,6 +3086,7 @@ obj = PublicationDelivery(
                                                     id='gis:Road_RueDeParis1_P004',
                                                     version='any',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueDeParis1_004'
                                                     )
@@ -2896,6 +3094,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:Road_RueDeParis1_L001',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadElement',
                                                         ref='gis:RdE_RueDeParis1_002to003'
                                                     )
@@ -2903,6 +3102,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:Road_RueDeParis1_L002',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadElement',
                                                         ref='gis:RdE_RueDeParis1_003to004'
                                                     )
@@ -2921,6 +3121,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RouteDeLaReine1_P001',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RouteDeLaReine_021'
                                                     )
@@ -2928,6 +3129,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RouteDeLaReine1_P002',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RouteDeLaReine_022'
                                                     )
@@ -2935,6 +3137,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RouteDeLaReine1_L001',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadElement',
                                                         ref='gis:RdE_RouteDeLaReine_004to005'
                                                     )
@@ -2953,6 +3156,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_P002',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueThiere_002'
                                                     )
@@ -2960,6 +3164,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_P003',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueThiere_003'
                                                     )
@@ -2967,6 +3172,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_P004',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueThiere_004'
                                                     )
@@ -2974,6 +3180,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_P005',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadJunction',
                                                         ref='gis:RdP_RueThiere_005'
                                                     )
@@ -2981,6 +3188,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_L001',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadElement',
                                                         ref='gis:RdE_RueThiere_X022to002'
                                                     )
@@ -2988,6 +3196,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_L002',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadElement',
                                                         ref='gis:RdE_RueThiere_002to003'
                                                     )
@@ -2995,6 +3204,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_L003',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadElement',
                                                         ref='gis:RdE_RueThiere_003to004'
                                                     )
@@ -3002,6 +3212,7 @@ obj = PublicationDelivery(
                                                 ComplexFeatureMemberVersionedChildStructure(
                                                     id='gis:RdP_RueThiere1_L004',
                                                     choice=VersionOfObjectRef(
+                                                        value='',
                                                         name_of_ref_class='RoadElement',
                                                         ref='gis:RdE_RueThiere_004to005'
                                                     )
@@ -3157,10 +3368,12 @@ obj = PublicationDelivery(
                                             value="Rue de Paris:  x Rue de Silly to Rue de Paris x Rue d'Agguesseau"
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueDeParis1_002'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueDeParis1_003'
                                         )
@@ -3172,10 +3385,12 @@ obj = PublicationDelivery(
                                             value="Rue de Paris:  x  Rue d'Agguesseau to Rue de Paris x Rue de l'est"
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueDeParis1_003'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueDeParis1_004'
                                         )
@@ -3187,10 +3402,12 @@ obj = PublicationDelivery(
                                             value="Rue de l'est : x Rue de Silly to Route De la Reine x Rue de l'est "
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueDeParis1_004'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RouteDeLaReine_021'
                                         )
@@ -3202,10 +3419,12 @@ obj = PublicationDelivery(
                                             value="Route De la Reine:  x Rue de l'est to Route De la Reine  x Av Victor Hugo   "
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RouteDeLaReine_021'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RouteDeLaReine_022'
                                         )
@@ -3217,10 +3436,12 @@ obj = PublicationDelivery(
                                             value='Rue Thiere: Route De la Reine  x AV Victor Hugo   to Rue Thiere x Rue Galieni '
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RouteDeLaReine_022'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_002'
                                         )
@@ -3232,10 +3453,12 @@ obj = PublicationDelivery(
                                             value='Rue Thiere : x Rue Galieni    to Rue Thiere x Av Edouard Vaillant  '
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_002'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_003'
                                         )
@@ -3247,10 +3470,12 @@ obj = PublicationDelivery(
                                             value='Rue Thiere : x Av Eiouard Vaillant  to  Rue Thiere x Rue Marcel Dassault'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_003'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_004'
                                         )
@@ -3262,10 +3487,12 @@ obj = PublicationDelivery(
                                             value='Rue Thiere:  x  Rue Marcel Dassault to   Rue Thiere x DuPontDuJour '
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_004'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_005'
                                         )
@@ -3277,10 +3504,12 @@ obj = PublicationDelivery(
                                             value='Rue  Du Point du Jour: Rue Thiere x  Rue du Pont du Jourto  Rue Du Point du Jour x  Rue de Seine'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_RueThiere_005'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_DuPointDuJour_041'
                                         )
@@ -3292,10 +3521,12 @@ obj = PublicationDelivery(
                                             value='Rue Du Point du Jour : x  Rue de Seine to   Rue du Pont du Jour  x Bvd  Jean Jaures'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_DuPointDuJour_041'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_BvdJeanJaures_021'
                                         )
@@ -3307,10 +3538,12 @@ obj = PublicationDelivery(
                                             value='Bvd Jean Jaures:  Rue du Pont du Jour  x Bvd  Jean Jaures to  Bvd  Jean Jaures x Rue Du Dome'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_BvdJeanJaures_021'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_BvdJeanJaures_022'
                                         )
@@ -3322,10 +3555,12 @@ obj = PublicationDelivery(
                                             value='Bvd Jean Jaures:   Bvd  Jean Jaures x Rue Du Dome to    Av Gen Leclerc :   x Bvd  Jean Jaures'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_BvdJeanJaures_022'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_AvGenLeclerc_050'
                                         )
@@ -3337,10 +3572,12 @@ obj = PublicationDelivery(
                                             value='Av Gen Leclerc :   x Bvd  Jean Jaures  to  Av Gen Leclerc x Rue de la ferme'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_AvGenLeclerc_050'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_AvGenLeclerc_051'
                                         )
@@ -3352,10 +3589,12 @@ obj = PublicationDelivery(
                                             value='Av Gen Leclerc : Av Gen Leclerc x Rue de la ferme to    Av Gen Leclerc   x Pont de Sevres'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_AvGenLeclerc_051'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gis:RdP_AvGenLeclerc_052'
                                         )

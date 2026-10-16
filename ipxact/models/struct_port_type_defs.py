@@ -93,7 +93,7 @@ class StructPortTypeDefs:
                 constrained the number of bits in the vector
             """
 
-            value: str = field(default="")
+            value: str = field()
             constrained: list[str] = field(
                 default_factory=list,
                 metadata={
@@ -104,7 +104,7 @@ class StructPortTypeDefs:
 
         @dataclass(kw_only=True)
         class TypeDefinition:
-            value: str = field(default="")
+            value: str = field()
             id: None | str = field(
                 default=None,
                 metadata={
@@ -126,7 +126,7 @@ class StructPortTypeDefs:
 
         @dataclass(kw_only=True)
         class ViewRef:
-            value: str = field(default="")
+            value: str = field()
             id: None | str = field(
                 default=None,
                 metadata={

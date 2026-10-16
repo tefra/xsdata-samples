@@ -16,10 +16,9 @@ class Orcid:
         namespace = "http://www.crossref.org/schema/5.3.1"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"https?://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[X0-9]{1}",
-        },
+        }
     )
     authenticated: bool = field(
         default=False,

@@ -132,17 +132,15 @@ class MetadataSetType(MetadataSetBaseType):
     @dataclass(frozen=True, kw_only=True)
     class MetadataProvisionAgreement:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.registry\.MetadataProvisionAgreement=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )

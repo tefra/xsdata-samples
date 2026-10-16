@@ -129,11 +129,10 @@ class ProfileChildSearchReq1(BaseReq2):
         """
 
         value: str = field(
-            default="",
             metadata={
                 "min_length": 1,
                 "max_length": 128,
-            },
+            }
         )
         profile_type: ProvisioningCodeProfileType1 = field(
             metadata={
@@ -159,11 +158,10 @@ class ProfileChildSearchReq1(BaseReq2):
         """
 
         value: str = field(
-            default="",
             metadata={
                 "min_length": 6,
                 "max_length": 128,
-            },
+            }
         )
         profile_type: UniqueProfileIdProfileType1 = field(
             metadata={

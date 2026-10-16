@@ -140,6 +140,7 @@ obj = PublicationDelivery(
                 version='1.0',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -164,6 +165,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='acs:ACS@Common_Resources'
                                     ),
@@ -183,6 +185,7 @@ obj = PublicationDelivery(
                                         transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                         public_code='24',
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='1.0',
                                             ref='acs:ACS'
                                         )
@@ -343,10 +346,12 @@ obj = PublicationDelivery(
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
                                                     DayTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='acs:DT_01-MF-NH'
                                                     ),
                                                     DayTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='acs:DT_03-WE-NH'
                                                     ),
@@ -363,18 +368,22 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:ACS@Line_24@Network'
                                     ),
                                     ServiceFrameRef(
+                                        value='',
                                         ref='mybus:ACS@Line_24@Routes_and_JourneyPatterns',
                                         version_ref='EXTERNAL'
                                     ),
                                     ServiceCalendarFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='acs:ACS@Winter_2010'
                                     ),
                                     VehicleScheduleFrameRef(
+                                        value='',
                                         ref='mybus:ACS@Line_24@Schedule',
                                         version_ref='EXTERNAL'
                                     ),
@@ -392,6 +401,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='acs:DT_01-MF-NH'
                                                 ),
@@ -413,6 +423,7 @@ obj = PublicationDelivery(
                                             version_ref='EXTERNAL'
                                         ),
                                         choice=LineRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
@@ -423,6 +434,7 @@ obj = PublicationDelivery(
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:Charley'
                                             )
@@ -433,6 +445,7 @@ obj = PublicationDelivery(
                                                     id='acs:sj_24o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -448,6 +461,7 @@ obj = PublicationDelivery(
                                                     id='acs:sj_24o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -467,6 +481,7 @@ obj = PublicationDelivery(
                                                     id='acs:sj_24o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -483,6 +498,7 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
+                                                    value='',
                                                     version='any',
                                                     ref='acs:sfs_24o_01'
                                                 ),
@@ -496,6 +512,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='acs:DT_01-MF-NH'
                                                 ),
@@ -514,6 +531,7 @@ obj = PublicationDelivery(
                                             ref='mybus:BLK_24o5'
                                         ),
                                         choice=LineRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
@@ -524,6 +542,7 @@ obj = PublicationDelivery(
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:Charley'
                                             )
@@ -534,6 +553,7 @@ obj = PublicationDelivery(
                                                     id='acs:sj_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -547,6 +567,7 @@ obj = PublicationDelivery(
                                                         none_or_via=[
                                                             ViaVersionedChildStructure(
                                                                 destination_display_ref_or_destination_display_view_or_name=DestinationDisplayRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mybus:Bravo'
                                                                 )
@@ -560,6 +581,7 @@ obj = PublicationDelivery(
                                                     id='acs:sj_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -582,6 +604,7 @@ obj = PublicationDelivery(
                                                     id='acs:sj_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -598,6 +621,7 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
+                                                    value='',
                                                     version='any',
                                                     ref='acs:sfs_24o_01'
                                                 ),
@@ -767,6 +791,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 1),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -780,6 +805,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 2),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -793,6 +819,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 3),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -806,6 +833,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 4),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -819,6 +847,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 5),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -832,6 +861,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 6),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_03-WE-NH'
                                         )
@@ -845,6 +875,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 7),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_03-WE-NH'
                                         )
@@ -858,6 +889,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 8),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -871,6 +903,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 9),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -884,6 +917,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 10),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -897,6 +931,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 11),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -910,6 +945,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 12),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_01-MF-NH'
                                         )
@@ -923,6 +959,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 13),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_03-WE-NH'
                                         )
@@ -936,6 +973,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 14),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='acs:DT_03-WE-NH'
                                         )
@@ -958,6 +996,7 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='acs'
                                 )
                             ),

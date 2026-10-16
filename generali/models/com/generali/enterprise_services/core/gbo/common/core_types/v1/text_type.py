@@ -45,7 +45,7 @@ class TextType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: str = field(default="")
+    value: str = field()
     language_id: None | str = field(
         default=None,
         metadata={

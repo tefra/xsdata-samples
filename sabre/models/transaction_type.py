@@ -215,7 +215,7 @@ class TransactionType:
 
     @dataclass(kw_only=True)
     class RequestType:
-        value: str = field(default="")
+        value: str = field()
         name: None | str = field(
             default=None,
             metadata={
@@ -226,7 +226,7 @@ class TransactionType:
 
     @dataclass(kw_only=True)
     class ServiceTag:
-        value: str = field(default="")
+        value: str = field()
         name: None | str = field(
             default=None,
             metadata={

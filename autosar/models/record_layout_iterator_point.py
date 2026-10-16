@@ -32,10 +32,9 @@ class RecordLayoutIteratorPoint:
         name = "RECORD-LAYOUT-ITERATOR-POINT"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"-?([0-9]+|MAX-TEXT-SIZE|ARRAY-SIZE)",
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -11,4 +11,4 @@ class CrossmarkVersion:
         name = "crossmark_version"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: str = field(default="")
+    value: str = field()

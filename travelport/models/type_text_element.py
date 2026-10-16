@@ -25,7 +25,7 @@ class TypeTextElement:
     class Meta:
         name = "typeTextElement"
 
-    value: str = field(default="")
+    value: str = field()
     type_value: str = field(
         metadata={
             "name": "Type",

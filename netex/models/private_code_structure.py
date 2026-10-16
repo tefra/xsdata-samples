@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class PrivateCodeStructure:
-    value: str = field(default="")
+    value: str = field()
     type_value: None | str = field(
         default=None,
         metadata={

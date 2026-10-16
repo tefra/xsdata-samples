@@ -184,7 +184,7 @@ class AddressBankDefinitionType:
 
     @dataclass(kw_only=True)
     class BankDefinitionRef:
-        value: str = field(default="")
+        value: str = field()
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",

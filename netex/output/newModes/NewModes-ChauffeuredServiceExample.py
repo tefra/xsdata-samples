@@ -320,15 +320,18 @@ obj = PublicationDelivery(
                     choice_1=[
                         NetworkFilterByValueStructure(
                             layer_ref=LayerRef(
+                                value='',
                                 ref='fxc:fareNetwork_fareProducts_farePrices'
                             ),
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     OperatorRef(
+                                        value='',
                                         version='any',
                                         ref='noc:HJM'
                                     ),
                                     VehiclePoolingRef(
+                                        value='',
                                         ref='chauffeured_car'
                                     ),
                                 ]
@@ -365,15 +368,18 @@ obj = PublicationDelivery(
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         CodespaceRef(
+                            value='',
                             ref='hjm_data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='hjm_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='1.0',
                         ref='hjm:home_james'
                     ),
@@ -530,6 +536,7 @@ obj = PublicationDelivery(
                                             OrganisationTypeEnumeration.OPERATOR,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.FR
                                         ),
                                         address=TransportOrganisationVersionStructure.Address(
@@ -547,6 +554,7 @@ obj = PublicationDelivery(
                                             value=TaxiSubmodeEnumeration.CHARTER_TAXI
                                         ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehiclePoolingRef(
+                                            value='',
                                             version='any',
                                             ref='chauffeured_car'
                                         )
@@ -769,10 +777,12 @@ obj = PublicationDelivery(
                                             value='Cadillac'
                                         ),
                                         transport_type_ref_or_vehicle_type_ref=VehicleTypeRef(
+                                            value='',
                                             version='any',
                                             ref='stretch_limo'
                                         ),
                                         vehicle_model_profile_ref=CarModelProfileRef(
+                                            value='',
                                             version='any',
                                             ref='stretch_model'
                                         )
@@ -800,6 +810,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example'
                                     ),
@@ -838,12 +849,14 @@ obj = PublicationDelivery(
                                                     value='en soleil'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='pays_de_soleil'
                                                 )
                                             )
                                         ),
                                         parent_topographic_place_ref=TopographicPlaceRefStructure(
+                                            value='',
                                             version='any',
                                             ref='pays_de_soleil'
                                         )
@@ -864,6 +877,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_topographic_place_ref=TopographicPlaceRefStructure(
+                                            value='',
                                             version='any',
                                             ref='pays_de_soleil'
                                         )
@@ -887,6 +901,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_topographic_place_ref=TopographicPlaceRefStructure(
+                                            value='',
                                             version='any',
                                             ref='pays_de_soleil'
                                         )
@@ -933,11 +948,13 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='belaire'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.AIR,
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=ScheduledModeOfOperationRef(
+                                            value='',
                                             version='any',
                                             ref='scheduled_flights'
                                         ),
@@ -947,14 +964,17 @@ obj = PublicationDelivery(
                                         served_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     version='any',
                                                     ref='alphaville'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     version='any',
                                                     ref='gamma_sur_mer'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     version='any',
                                                     ref='pays_de_soleil'
                                                 ),
@@ -963,6 +983,7 @@ obj = PublicationDelivery(
                                         main_terminus_for_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     version='any',
                                                     ref='alphaville'
                                                 ),
@@ -1003,17 +1024,20 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville'
                                         ),
                                         transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=ScheduledModeOfOperationRef(
+                                            value='',
                                             version='any',
                                             ref='scheduled_flights'
                                         ),
                                         main_terminus_for_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     version='any',
                                                     ref='alphaville'
                                                 ),
@@ -1052,14 +1076,17 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville'
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare'
                                         ),
                                         contained_in_place_ref=TopographicPlaceRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville'
                                         ),
@@ -1102,6 +1129,7 @@ obj = PublicationDelivery(
                                         adjacent_sites=SiteRefsRelStructure(
                                             stop_place_ref_or_site_ref=[
                                                 PointOfInterestRef(
+                                                    value='',
                                                     version='any',
                                                     ref='alphaville_hdv'
                                                 ),
@@ -1136,6 +1164,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville'
                                         ),
@@ -1160,15 +1189,18 @@ obj = PublicationDelivery(
                                         ),
                                         covered=CoveredEnumeration.OUTDOORS,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='belaire'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
                                         parking_type=ParkingTypeEnumeration.AIRPORT_PARKING,
                                         type_of_parking_ref=TypeOfParkingRef(
+                                            value='',
                                             version='any',
                                             ref='airport'
                                         ),
@@ -1219,6 +1251,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example'
                                     ),
@@ -1239,18 +1272,22 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     registration_number='SWK007',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:HJM'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=VehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='stretch_limo'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='stretch_cadillac'
                                                     ),
                                                     vehicle_model_profile_ref=CarModelProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='stretch_model'
                                                     )
@@ -1260,18 +1297,22 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     registration_number='SWK044',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='noc:HJM'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=VehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='stretch_limo'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='stretch_cadillac'
                                                     ),
                                                     vehicle_model_profile_ref=CarModelProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='stretch_model'
                                                     )
@@ -1287,6 +1328,7 @@ obj = PublicationDelivery(
                                         id='hj_cars',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1294,6 +1336,7 @@ obj = PublicationDelivery(
                                             value='Home James Cars.'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
@@ -1326,12 +1369,14 @@ obj = PublicationDelivery(
                                         proposed_by_services=OnlineServiceRefsRelStructure(
                                             online_service_ref=[
                                                 OnlineServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hjm_online'
                                                 ),
                                             ]
                                         ),
                                         vehicle_pooling_ref=VehiclePoolingRef(
+                                            value='',
                                             version='any',
                                             ref='chauffeured_car'
                                         )
@@ -1347,12 +1392,14 @@ obj = PublicationDelivery(
                                             value='Online booking for HJ Cars'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
                                         proposing_services=MobilityServiceRefsRelStructure(
                                             mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=[
                                                 ChauffeuredVehicleServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hj_cars'
                                                 ),
@@ -1416,10 +1463,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('40'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gamma_area'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport'
                                         )
@@ -1429,10 +1478,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('40'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gamma_area'
                                         )
@@ -1442,10 +1493,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('15'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gamma_area'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare'
                                         )
@@ -1455,10 +1508,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('15'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gamma_area'
                                         )
@@ -1468,10 +1523,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('20'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_centre'
                                         )
@@ -1481,10 +1538,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('20'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_centre'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport'
                                         )
@@ -1505,6 +1564,7 @@ obj = PublicationDelivery(
                                             ref='belaire'
                                         ),
                                         choice=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare@taxi_set_down'
                                         )
@@ -1521,6 +1581,7 @@ obj = PublicationDelivery(
                                             ref='belaire'
                                         ),
                                         choice=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare@taxi_pick_up'
                                         )
@@ -1534,14 +1595,17 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         vehicle_pooling_service_ref=ChauffeuredVehicleServiceRef(
+                                            value='',
                                             version='any',
                                             ref='hj_cars'
                                         ),
                                         vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref=VehiclePoolingMeetingPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport_pick_up'
                                         ),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=ParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport_taxi_parking@A1@chauff_1'
                                         )
@@ -1551,14 +1615,17 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         vehicle_pooling_service_ref=ChauffeuredVehicleServiceRef(
+                                            value='',
                                             version='any',
                                             ref='hj_cars'
                                         ),
                                         vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref=VehiclePoolingMeetingPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport_set_down'
                                         ),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=ParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_airport_taxi_parking@A1@chauff_2'
                                         )
@@ -1568,10 +1635,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         vehicle_pooling_service_ref=ChauffeuredVehicleServiceRef(
+                                            value='',
                                             version='any',
                                             ref='hj_cars'
                                         ),
                                         vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref=VehiclePoolingMeetingPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare_pick_up'
                                         )
@@ -1581,10 +1650,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         vehicle_pooling_service_ref=ChauffeuredVehicleServiceRef(
+                                            value='',
                                             version='any',
                                             ref='hj_cars'
                                         ),
                                         vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref=VehiclePoolingMeetingPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare_set_down'
                                         )
@@ -1603,10 +1674,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     MobilityServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example'
                                     ),
                                     SiteFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example'
                                     ),
@@ -1637,10 +1710,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
                                         choice_1=ChauffeuredVehicleServiceRef(
+                                            value='',
                                             version='any',
                                             ref='hj_cars'
                                         ),
@@ -1653,6 +1728,7 @@ obj = PublicationDelivery(
                                                         value='Access to one of the prepriced trips'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1661,6 +1737,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:access',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1668,26 +1745,32 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             vehicle_meeting_link_ref=[
                                                                 VehicleMeetingLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='gamma_area+alphaville_airport'
                                                                 ),
                                                                 VehicleMeetingLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='alphaville_airport+gamma_area'
                                                                 ),
                                                                 VehicleMeetingLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='gamma_area+alphaville_gare'
                                                                 ),
                                                                 VehicleMeetingLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='alphaville_gare+gamma_area'
                                                                 ),
                                                                 VehicleMeetingLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='alphaville_airport+alphaville_centre'
                                                                 ),
                                                                 VehicleMeetingLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='alphaville_centre+alphaville_airport'
                                                                 ),
@@ -1702,6 +1785,7 @@ obj = PublicationDelivery(
                                                         value='Eligible user types'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:eligibility',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1710,6 +1794,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:eligible',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1729,6 +1814,7 @@ obj = PublicationDelivery(
                                                                                 id="'pet_with_person",
                                                                                 version='any',
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='pet'
                                                                                 ),
@@ -1757,6 +1843,7 @@ obj = PublicationDelivery(
                                                         value='COnditions on travel'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:travel_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1768,6 +1855,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1801,6 +1889,7 @@ obj = PublicationDelivery(
                                                         value='Conditions of sale'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:sale_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1812,6 +1901,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_sale',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1834,6 +1924,7 @@ obj = PublicationDelivery(
                                                         value='Conditions of sale'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:sale_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1845,6 +1936,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_travel',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1852,6 +1944,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             facility_set_ref=[
                                                                 ServiceFacilitySetRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='no_smoking'
                                                                 ),
@@ -1868,10 +1961,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     inverse_allowed=True,
                                                     choice=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area'
                                                     ),
                                                     choice_1=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_airport'
                                                     )
@@ -1881,10 +1976,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     inverse_allowed=True,
                                                     choice=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_airport'
                                                     ),
                                                     choice_1=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_centre'
                                                     )
@@ -1894,10 +1991,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     inverse_allowed=True,
                                                     choice=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area'
                                                     ),
                                                     choice_1=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_gare'
                                                     )
@@ -1917,6 +2016,7 @@ obj = PublicationDelivery(
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.AT_END_OF_TRAVEL,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
@@ -1940,18 +2040,22 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@prepriced_trip@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@prepriced_trip@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@prepriced_trip@conditions_of_travel'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@prepriced_trip@accommodation'
                                                             ),
@@ -1967,6 +2071,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='home_james@prepriced_trip@travel'
                                                     )
@@ -1987,6 +2092,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.ONLINE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -2006,6 +2112,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.TELEPHONE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
@@ -2025,6 +2132,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='any',
                                                     ref='email_confirmation'
                                                 ),
@@ -2048,6 +2156,7 @@ obj = PublicationDelivery(
                                         id='home_james@prepriced_trip-SOP@online',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2064,6 +2173,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='online'
                                                     ),
@@ -2076,6 +2186,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='email'
                                                     )
@@ -2085,6 +2196,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='call_centre'
                                                     ),
@@ -2097,6 +2209,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='email'
                                                     )
@@ -2109,10 +2222,12 @@ obj = PublicationDelivery(
                                                     id='home_james@prepriced_trip-SOP@online',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='email_confirmation'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='home_james@prepriced_trip'
                                                     ),
@@ -2135,6 +2250,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example-prepriced_trips'
                                     ),
@@ -2151,6 +2267,7 @@ obj = PublicationDelivery(
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='any',
                                                     ref='home_james@prepriced_trip-SOP@online'
                                                 ),
@@ -2159,17 +2276,20 @@ obj = PublicationDelivery(
                                         used_in=UsedInRefsRelStructure(
                                             choice=[
                                                 TariffRef(
+                                                    value='',
                                                     version='any',
                                                     ref='home_james@prepriced_trip'
                                                 ),
                                             ]
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
                                         specifics=FareTableSpecificsStructure(
                                             choice_1=ChauffeuredVehicleServiceRef(
+                                                value='',
                                                 version='any',
                                                 ref='hj_cars'
                                             )
@@ -2181,6 +2301,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('80'),
                                                     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area+alphaville_airport'
                                                     )
@@ -2190,6 +2311,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('60'),
                                                     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_airport+alphaville_centre'
                                                     )
@@ -2199,6 +2321,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('40'),
                                                     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area+alphaville_gare'
                                                     )
@@ -2220,10 +2343,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     MobilityServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example'
                                     ),
                                     SiteFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example'
                                     ),
@@ -2262,10 +2387,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
                                         choice_1=ChauffeuredVehicleServiceRef(
+                                            value='',
                                             version='any',
                                             ref='hj_cars'
                                         ),
@@ -2317,6 +2444,7 @@ obj = PublicationDelivery(
                                                         value='Access to one of the servic'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2325,6 +2453,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:access',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2332,6 +2461,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             choice=[
                                                                 OperatorRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='noc:HJM'
                                                                 ),
@@ -2346,6 +2476,7 @@ obj = PublicationDelivery(
                                                         value='Access to one of the servic'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:can_access_when',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2354,6 +2485,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access_when',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2361,6 +2493,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             choice=[
                                                                 OperatorRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='noc:HJM'
                                                                 ),
@@ -2375,6 +2508,7 @@ obj = PublicationDelivery(
                                                         value='COnditions on travel'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:travel_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2386,6 +2520,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2411,6 +2546,7 @@ obj = PublicationDelivery(
                                                         value='Conditions of sale'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:sale_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2422,6 +2558,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_sale',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -2458,6 +2595,7 @@ obj = PublicationDelivery(
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.AT_END_OF_TRAVEL,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
@@ -2481,18 +2619,22 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@charter@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@prepriced_trip@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@charter@conditions_of_travel'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='home_james@prepriced_trip@accommodation'
                                                             ),
@@ -2508,6 +2650,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='home_james@charter@travel'
                                                     )
@@ -2524,6 +2667,7 @@ obj = PublicationDelivery(
                                         id='home_james@charter-SOP@online',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2540,6 +2684,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='online'
                                                     ),
@@ -2552,6 +2697,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='email'
                                                     )
@@ -2561,6 +2707,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='call_centre'
                                                     ),
@@ -2573,6 +2720,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='email'
                                                     )
@@ -2585,10 +2733,12 @@ obj = PublicationDelivery(
                                                     id='home_james@charter-SOP@online',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='email_confirmation'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='home_james@charter'
                                                     ),
@@ -2611,6 +2761,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='hjm:chauffeured_taxi_example-charters'
                                     ),
@@ -2627,6 +2778,7 @@ obj = PublicationDelivery(
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='any',
                                                     ref='home_james@charter-SOP@online'
                                                 ),
@@ -2635,17 +2787,20 @@ obj = PublicationDelivery(
                                         used_in=UsedInRefsRelStructure(
                                             choice=[
                                                 TariffRef(
+                                                    value='',
                                                     version='any',
                                                     ref='home_james@charter'
                                                 ),
                                             ]
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:HJM'
                                         ),
                                         specifics=FareTableSpecificsStructure(
                                             choice_1=ChauffeuredVehicleServiceRef(
+                                                value='',
                                                 version='any',
                                                 ref='hj_cars'
                                             )
@@ -2657,6 +2812,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('80'),
                                                     time_interval_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='any',
                                                         ref='charter@4H'
                                                     )
@@ -2666,6 +2822,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('120'),
                                                     time_interval_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='any',
                                                         ref='charter@1D'
                                                     )
@@ -2687,6 +2844,7 @@ obj = PublicationDelivery(
                 prerequisites=VersionFrameRefsRelStructure(
                     version_frame_ref=[
                         CompositeFrameRef(
+                            value='',
                             version='1.0',
                             ref='hjm:chauffeured_taxi_example'
                         ),
@@ -2731,10 +2889,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     choice_1=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_airport'
                                                     ),
                                                     onward_vehicle_meeting_link_ref=OnwardVehicleMeetingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_airport+alphaville_centre'
                                                     )
@@ -2744,6 +2904,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     choice_1=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_centre'
                                                     )
@@ -2768,15 +2929,18 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=ChauffeuredVehicleServiceRef(
+                                            value='',
                                             version='any',
                                             ref='hj_cars'
                                         ),
                                         vehicle_ref=VehicleRef(
+                                            value='',
                                             version='any',
                                             ref='SWK007'
                                         ),
                                         departure_time=XmlTime(10, 15, 0, 0),
                                         operating_day_ref=OperatingDayRef(
+                                            value='',
                                             ref='opday_7656',
                                             version_ref='EXTERNAL'
                                         ),
@@ -2786,6 +2950,7 @@ obj = PublicationDelivery(
                                                     id='hjmt:anon@trans005@ride5163',
                                                     version='any',
                                                     point_in_journey_pattern_ref=PointInSingleJourneyPathRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hmjt:anon@trans005@ride5163',
                                                         order=1
@@ -2800,6 +2965,7 @@ obj = PublicationDelivery(
                                                     id='hjmt:anon@trans005@ride5163',
                                                     version='any',
                                                     point_in_journey_pattern_ref=PointInSingleJourneyPathRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hmjt:anon@trans005@ride5163',
                                                         order=2
@@ -2819,10 +2985,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_airport'
                                                     ),
                                                     choice=QuayRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_aeroport@taxi_pick_up'
                                                     ),
@@ -2833,10 +3001,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area'
                                                     ),
                                                     choice=AddressablePlaceRef(
+                                                        value='',
                                                         version='any',
                                                         ref='chez_ritter'
                                                     ),
@@ -2857,6 +3027,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='hjm_data'
                                     ),
                                     Codespace(
@@ -2873,6 +3044,7 @@ obj = PublicationDelivery(
                                         id='hjmt:anon@trans005',
                                         version='any',
                                         customer_ref=CustomerRef(
+                                            value='',
                                             ref='hjmt:Anon',
                                             version_ref='EXTERNAL'
                                         ),
@@ -2886,6 +3058,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                        value='',
                                                         ref='fxc:product_purchase',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2898,10 +3071,12 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 date=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                                 sales_transaction_ref=SalesTransactionRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hjmt:anon@trans005@purchase_ride'
                                                                 ),
                                                                 fare_price_ref_or_cell_ref=DistanceMatrixElementPriceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='gamma_area+alphaville_airport'
                                                                 ),
@@ -2910,12 +3085,14 @@ obj = PublicationDelivery(
                                                                 travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                     origin=TravelSpecificationSummaryEndpointStructure(
                                                                         vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='alphaville_airport'
                                                                         )
                                                                     ),
                                                                     destination=TravelSpecificationSummaryEndpointStructure(
                                                                         address_ref=AddressRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='chez_ritter'
                                                                         )
@@ -2923,10 +3100,12 @@ obj = PublicationDelivery(
                                                                     start=XmlDateTime(2020, 10, 8, 11, 7, 0),
                                                                     duration=XmlDuration("PT60M"),
                                                                     authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='noc:HJM'
                                                                     ),
                                                                     choice=ChauffeuredVehicleServiceRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='hj_cars'
                                                                     )
@@ -2941,66 +3120,78 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='home_james@prepriced_trip@travel'
                                                                             ),
                                                                             preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='home_james@prepriced_trip'
                                                                             ),
                                                                             fare_structure_element_ref=FareStructureElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='home_james@prepriced_trip@access'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='home_james@prepriced_trip-SOP@online'
                                                                             ),
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                     VehiclePoolingRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='chauffeured_car'
                                                                                     ),
                                                                                 ],
                                                                                 choice=[
                                                                                     OperatorRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='noc:HJM'
                                                                                     ),
                                                                                 ],
                                                                                 facility_set_ref=[
                                                                                     ServiceFacilitySetRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='no_smoking'
                                                                                     ),
                                                                                 ],
                                                                                 single_journey_ref=[
                                                                                     SingleJourneyRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='hjmt:anon@trans005@ride5163'
                                                                                     ),
                                                                                 ],
                                                                                 choice_2=[
                                                                                     ChauffeuredVehicleServiceRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='hj_cars'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_ref=[
                                                                                     VehicleRef(
+                                                                                        value='',
                                                                                         ref='CD886645',
                                                                                         version_ref='external'
                                                                                     ),
                                                                                 ],
                                                                                 type_of_travel_document_ref=[
                                                                                     TypeOfTravelDocumentRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='email_confirmation'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='online'
                                                                                     ),
@@ -3023,6 +3214,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 version='any',
                                                                 type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='email_confirmation'
                                                                 )

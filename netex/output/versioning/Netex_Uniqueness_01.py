@@ -377,6 +377,7 @@ obj = PublicationDelivery(
                                         members=TransportOrganisationRefsRelStructure(
                                             transport_organisation_ref=[
                                                 OperatorRef(
+                                                    value='',
                                                     version='001',
                                                     ref='bar:foo'
                                                 ),
@@ -502,6 +503,7 @@ obj = PublicationDelivery(
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 WirePointRef(
+                                                    value='',
                                                     version='001',
                                                     ref='bar:foo'
                                                 ),
@@ -513,6 +515,7 @@ obj = PublicationDelivery(
                                                     id='bar:foo',
                                                     version='001',
                                                     project_to_point_ref=PointRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='bar:foo'
                                                     )
@@ -521,6 +524,7 @@ obj = PublicationDelivery(
                                                     id='bar:foo',
                                                     version='001',
                                                     projected_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='bar:foo'
                                                     )
@@ -587,10 +591,12 @@ obj = PublicationDelivery(
                                             value='LINK'
                                         ),
                                         from_point_ref=WirePointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo'
                                         ),
                                         to_point_ref=WirePointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo'
                                         )
@@ -602,10 +608,12 @@ obj = PublicationDelivery(
                                             value='LINK'
                                         ),
                                         from_point_ref=RailwayPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo1'
                                         ),
                                         to_point_ref=RailwayPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo1'
                                         )
@@ -617,10 +625,12 @@ obj = PublicationDelivery(
                                             value='LINK'
                                         ),
                                         from_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo2'
                                         ),
                                         to_point_ref=RoadPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo2'
                                         )
@@ -904,10 +914,12 @@ obj = PublicationDelivery(
                                             value='LINK'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo5'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='bar:foo5'
                                         )
@@ -929,6 +941,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='bar:foo5'
                                                     )
@@ -938,6 +951,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='bar:foo5'
                                                     )
@@ -974,6 +988,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=1,
                                                     choice_1=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='bar:foo5'
                                                     )
@@ -983,6 +998,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=2,
                                                     choice_1=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='bar:foo5'
                                                     )

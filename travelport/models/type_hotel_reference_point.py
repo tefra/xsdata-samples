@@ -21,10 +21,9 @@ class TypeHotelReferencePoint:
         name = "typeHotelReferencePoint"
 
     value: str = field(
-        default="",
         metadata={
             "max_length": 30,
-        },
+        }
     )
     country: None | str = field(
         default=None,

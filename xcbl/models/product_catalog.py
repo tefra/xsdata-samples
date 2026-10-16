@@ -28,7 +28,7 @@ class ActionValue(Enum):
 
 @dataclass(kw_only=True)
 class Amount:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -36,7 +36,7 @@ class AttachmentMimetype:
     class Meta:
         name = "AttachmentMIMEType"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -44,7 +44,7 @@ class AttachmentUrl:
     class Meta:
         name = "AttachmentURL"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -52,7 +52,7 @@ class AttributeId:
     class Meta:
         name = "AttributeID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 class AttributeTypeScalarType(Enum):
@@ -74,12 +74,12 @@ class AttributeValue:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BaseProductNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -91,7 +91,7 @@ class Buyer:
             "type": "Attribute",
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 class CatalogAudienceCatalogAudienceCoded(Enum):
@@ -104,7 +104,7 @@ class CatalogContractId:
     class Meta:
         name = "CatalogContractID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -112,7 +112,7 @@ class CatalogContractItemId:
     class Meta:
         name = "CatalogContractItemID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 class CatalogContractType(Enum):
@@ -123,7 +123,7 @@ class CatalogContractType(Enum):
 
 @dataclass(kw_only=True)
 class CatalogDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -131,7 +131,7 @@ class CatalogIdref:
     class Meta:
         name = "CatalogIDRef"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -139,12 +139,12 @@ class CatalogLogoUrl:
     class Meta:
         name = "CatalogLogoURL"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CatalogPrettyName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -152,7 +152,7 @@ class CatalogProviderIdref:
     class Meta:
         name = "CatalogProviderIDRef"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 class CatalogSchemaType(Enum):
@@ -163,7 +163,7 @@ class CatalogSchemaType(Enum):
 
 @dataclass(kw_only=True)
 class CatalogVersion:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -171,7 +171,7 @@ class CategoryIdref:
     class Meta:
         name = "CategoryIDRef"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -184,7 +184,7 @@ class CategoryName:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -192,7 +192,7 @@ class ComparableUomconversionFactor:
     class Meta:
         name = "ComparableUOMConversionFactor"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -209,7 +209,7 @@ class DefaultLanguage:
 
 @dataclass(kw_only=True)
 class EnumeratedValue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -217,12 +217,12 @@ class ExtensionToSchemasUrn:
     class Meta:
         name = "ExtensionToSchemasURN"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ExternalCategory:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -255,12 +255,12 @@ class ItemGuid:
     class Meta:
         name = "ItemGUID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LeadTime:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -280,17 +280,17 @@ class LongDescription:
             "type": "Attribute",
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LotSize:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ManuPartNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -302,27 +302,27 @@ class Manufacturer:
             "type": "Attribute",
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class MinOrder:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class MinimumQuantity:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PartnerRelationshipCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PartnerRelationshipCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 class PartnerRelationship1(Enum):
@@ -335,7 +335,7 @@ class PartnerRelationship1(Enum):
 
 @dataclass(kw_only=True)
 class PriceBasisQuant:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -343,7 +343,7 @@ class PriceCatalogId:
     class Meta:
         name = "PriceCatalogID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -351,12 +351,12 @@ class PriceCatalogIdref:
     class Meta:
         name = "PriceCatalogIDRef"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PriceType:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -364,7 +364,7 @@ class ProductIdextension:
     class Meta:
         name = "ProductIDExtension"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -372,7 +372,7 @@ class ProductIdref:
     class Meta:
         name = "ProductIDRef"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 class ProductIdstandardAgency(Enum):
@@ -398,7 +398,7 @@ class ProductName:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 class ProductType(Enum):
@@ -416,17 +416,17 @@ class RelatedProductTargetType(Enum):
 
 @dataclass(kw_only=True)
 class SchemaName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SchemaSource:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SchemaStandard:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -434,12 +434,12 @@ class SchemaUrn:
     class Meta:
         name = "SchemaURN"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SchemaVersion:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -452,7 +452,7 @@ class ShortDescription:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -460,27 +460,27 @@ class SupplierAccountId:
     class Meta:
         name = "SupplierAccountID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SystemAddress:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SystemType:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ValidFrom:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ValidUntil:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -493,12 +493,12 @@ class VendorIdref:
     class Meta:
         name = "VendorIDRef"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class VendorPartNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -725,7 +725,7 @@ class ProductId:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -741,7 +741,7 @@ class ProductIdstandard:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -754,7 +754,7 @@ class RelatedProduct:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

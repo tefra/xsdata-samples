@@ -31,7 +31,7 @@ class MsrQueryArg:
     class Meta:
         name = "MSR-QUERY-ARG"
 
-    value: str = field(default="")
+    value: str = field()
     s: None | str = field(
         default=None,
         metadata={

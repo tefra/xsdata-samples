@@ -15,7 +15,7 @@ class TitleSearchType:
     class Meta:
         name = "titleSearchType"
 
-    value: str = field(default="")
+    value: str = field()
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={

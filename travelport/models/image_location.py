@@ -22,7 +22,7 @@ class ImageLocation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     type_value: str = field(
         metadata={
             "name": "Type",

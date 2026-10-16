@@ -125,6 +125,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
+                                            value='',
                                             ref=''
                                         ),
                                     ]
@@ -164,6 +165,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
+                                            value='',
                                             ref=''
                                         ),
                                     ]
@@ -185,6 +187,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mypark'
                     )
                 ),
@@ -196,6 +199,7 @@ obj = PublicationDelivery(
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityConditionRef(
+                                            value='',
                                             version='any',
                                             ref='mysite:PP01_OpeningHours'
                                         ),
@@ -270,6 +274,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mysite:PP01_OpeningHours'
                                                     ),
@@ -281,6 +286,7 @@ obj = PublicationDelivery(
                                             value='Main Vehicle Entrance from street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mysite::PP01'
                                         ),
@@ -300,6 +306,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mysite:PP01_ExitHours'
                                                     ),
@@ -311,6 +318,7 @@ obj = PublicationDelivery(
                                             value='Main Vehicle Exit to street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mysite::PP01'
                                         ),
@@ -342,12 +350,14 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='napt:9100:00476'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='mysite::PP01'
                                             )
                                         )
@@ -396,6 +406,7 @@ obj = PublicationDelivery(
                                                     id='mysite:PP01_01_disabled',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         ref='mysite::PP01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
@@ -407,6 +418,7 @@ obj = PublicationDelivery(
                                                     id='mysite:PP01_other',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         ref='mysite::PP01_01_01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL_USERS,
@@ -422,10 +434,12 @@ obj = PublicationDelivery(
                             vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                 parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mysite:PP_E11_Entrance'
                                     ),
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mysite:PP_E12_Exit'
                                     ),
@@ -458,7 +472,7 @@ obj = PublicationDelivery(
                                                             property_of_day=[
                                                                 PropertyOfDay(
                                                                     description=MultilingualString(
-
+                                                                        value=''
                                                                     ),
                                                                     days_of_week=[
                                                                         DayOfWeekEnumeration.MONDAY,
@@ -475,6 +489,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     DayTypeRef(
+                                                        value='',
                                                         ref=''
                                                     ),
                                                 ]
@@ -534,12 +549,14 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='napt:9100:00476'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='mysite::PP01'
                                             )
                                         )
@@ -599,6 +616,7 @@ obj = PublicationDelivery(
                                                     id='mysite:PS22_01_disabled',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         ref='mysite::PS22'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
@@ -610,6 +628,7 @@ obj = PublicationDelivery(
                                                     id='mysite:PS22_other',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         ref='mysite::PS22_01_01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL_USERS,

@@ -10,7 +10,7 @@ class RelationType2:
     class Meta:
         name = "relationType"
 
-    value: str = field(default="")
+    value: str = field()
     uri_ref: None | str = field(
         default=None,
         metadata={

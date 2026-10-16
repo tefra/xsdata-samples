@@ -50,17 +50,15 @@ class FixedValueMapType(AnnotableType):
     @dataclass(frozen=True, kw_only=True)
     class Source:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Target:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

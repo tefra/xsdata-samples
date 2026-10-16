@@ -24,17 +24,17 @@ class AccountAssignmentId:
     class Meta:
         name = "AccountAssignmentID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AccountAssignmentOrderNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BusinessArea:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -42,52 +42,52 @@ class BuyerOrderConfirmationId:
     class Meta:
         name = "BuyerOrderConfirmationID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BuyerOrderConfirmationItemNum:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CommitmentItem:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ControllingArea:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CostCenter:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DistributionPercentage:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FixedAssetSub:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FunctionalArea:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Fund:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FundsCenter:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -95,72 +95,72 @@ class Glaccount:
     class Meta:
         name = "GLAccount"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class GenericAccounting:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Network:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OperationNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationItemNum:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseCode:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseHeaderNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ProfitCenter:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SalesOrderReference:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

@@ -23,7 +23,7 @@ class CorporateDiscountId6:
         name = "CorporateDiscountID"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    value: str = field(default="")
+    value: str = field()
     negotiated_rate_code: None | bool = field(
         default=None,
         metadata={

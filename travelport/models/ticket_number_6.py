@@ -16,9 +16,8 @@ class TicketNumber6:
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 1,
             "max_length": 13,
-        },
+        }
     )

@@ -12,7 +12,7 @@ class TwitterType:
     class Meta:
         name = "twitterType"
 
-    value: str = field(default="")
+    value: str = field()
     type_value: None | TwitterTypeType = field(
         default=None,
         metadata={

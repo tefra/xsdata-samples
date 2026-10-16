@@ -141,6 +141,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='oda'
                     )
                 ),
@@ -176,14 +177,17 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB03_egress'
                                                 ),
@@ -206,14 +210,17 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB03_egress'
                                                 ),
@@ -236,14 +243,17 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB03_egress'
                                                 ),
@@ -266,14 +276,17 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB01_ingress'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB02_during'
                                                 ),
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB03_egress'
                                                 ),
@@ -321,6 +334,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 7, 27),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT01_Very_Busy'
                                         )
@@ -334,6 +348,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 7, 28),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT01_Very_Busy'
                                         )
@@ -347,6 +362,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 7, 29),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT01_Very_Busy'
                                         )
@@ -360,6 +376,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 7, 30),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -373,6 +390,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 7, 31),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT03_Normal'
                                         )
@@ -386,6 +404,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 8, 1),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT03_Normal'
                                         )
@@ -399,6 +418,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 8, 2),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -412,6 +432,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 8, 3),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -425,6 +446,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 8, 4),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -438,6 +460,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2012, 8, 5),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='oda:DT02_Busy'
                                         )
@@ -459,6 +482,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
                                                 ),
@@ -467,6 +491,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB01_ingress'
                                                 ),
@@ -479,6 +504,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
                                                 ),
@@ -487,6 +513,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB02_during'
                                                 ),
@@ -499,6 +526,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
                                                 ),
@@ -507,6 +535,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB03_egress'
                                                 ),
@@ -519,6 +548,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT01_Very_Busy'
                                                 ),
@@ -549,6 +579,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT02_Busy'
                                                 ),
@@ -557,6 +588,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB01_ingress'
                                                 ),
@@ -569,6 +601,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT02_Busy'
                                                 ),
@@ -577,6 +610,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB02_during'
                                                 ),
@@ -589,6 +623,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT02_Busy'
                                                 ),
@@ -597,6 +632,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB03_egress'
                                                 ),
@@ -609,6 +645,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT02_Busy'
                                                 ),
@@ -639,6 +676,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT03_Normal'
                                                 ),
@@ -647,6 +685,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB01_ingress'
                                                 ),
@@ -659,6 +698,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT03_Normal'
                                                 ),
@@ -667,6 +707,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB02_during'
                                                 ),
@@ -679,6 +720,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT03_Normal'
                                                 ),
@@ -687,6 +729,7 @@ obj = PublicationDelivery(
                                         timebands=TimebandsRelStructure(
                                             timeband_ref_or_timeband=[
                                                 TimebandRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:TMB03_egress'
                                                 ),
@@ -699,6 +742,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='oda:DT03_Normal'
                                                 ),
@@ -739,6 +783,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -753,6 +798,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Park'
                                                 ),
@@ -782,6 +828,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -813,10 +860,12 @@ obj = PublicationDelivery(
                                                         post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
@@ -840,6 +889,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
@@ -858,6 +908,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -876,6 +927,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -894,6 +946,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
                                                                                         ),
@@ -912,6 +965,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -930,6 +984,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -948,6 +1003,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
                                                                                         ),
@@ -966,6 +1022,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -984,6 +1041,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -1017,6 +1075,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -1035,6 +1094,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
@@ -1053,6 +1113,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -1071,6 +1132,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -1089,6 +1151,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
                                                                                         ),
@@ -1107,6 +1170,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -1125,6 +1189,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -1143,6 +1208,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
                                                                                         ),
@@ -1161,6 +1227,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -1189,6 +1256,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -1208,6 +1276,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_place@Venue'
                                                             ),
@@ -1228,10 +1297,12 @@ obj = PublicationDelivery(
                                                         post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
@@ -1255,6 +1326,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
@@ -1273,6 +1345,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -1291,6 +1364,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -1309,6 +1383,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
                                                                                         ),
@@ -1327,6 +1402,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -1345,6 +1421,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -1363,6 +1440,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
                                                                                         ),
@@ -1381,6 +1459,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -1399,6 +1478,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -1432,6 +1512,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -1450,6 +1531,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
@@ -1468,6 +1550,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -1486,6 +1569,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -1504,6 +1588,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
                                                                                         ),
@@ -1522,6 +1607,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -1540,6 +1626,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -1558,6 +1645,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
                                                                                         ),
@@ -1576,6 +1664,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -1604,6 +1693,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -1635,10 +1725,12 @@ obj = PublicationDelivery(
                                                         post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
@@ -1662,6 +1754,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
@@ -1680,6 +1773,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -1698,6 +1792,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -1716,6 +1811,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
                                                                                         ),
@@ -1734,6 +1830,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -1752,6 +1849,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -1770,6 +1868,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
                                                                                         ),
@@ -1788,6 +1887,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -1806,6 +1906,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -1839,6 +1940,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -1857,6 +1959,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
@@ -1875,6 +1978,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -1893,6 +1997,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -1911,6 +2016,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
                                                                                         ),
@@ -1929,6 +2035,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -1947,6 +2054,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -1965,6 +2073,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
                                                                                         ),
@@ -1983,6 +2092,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -2011,6 +2121,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -2042,10 +2153,12 @@ obj = PublicationDelivery(
                                                         post_code='E15'
                                                     ),
                                                     site_ref=PointOfInterestRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_Lvl_01'
                                                     ),
@@ -2069,6 +2182,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
@@ -2087,6 +2201,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -2105,6 +2220,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -2123,6 +2239,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
                                                                                         ),
@@ -2141,6 +2258,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -2159,6 +2277,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -2177,6 +2296,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
                                                                                         ),
@@ -2195,6 +2315,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -2213,6 +2334,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -2246,6 +2368,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_during'
                                                                                         ),
@@ -2264,6 +2387,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
@@ -2282,6 +2406,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -2300,6 +2425,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_during'
                                                                                         ),
@@ -2318,6 +2444,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
                                                                                         ),
@@ -2336,6 +2463,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -2354,6 +2482,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_during'
                                                                                         ),
@@ -2372,6 +2501,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
                                                                                         ),
@@ -2390,6 +2520,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -2414,6 +2545,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_OlympicPark'
                                                 ),
@@ -2430,16 +2562,19 @@ obj = PublicationDelivery(
                                                     distance=Decimal('500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V1_STDM'
                                                         )
@@ -2459,20 +2594,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V3_HAND'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V3_HAND_E1'
                                                         )
@@ -2492,20 +2631,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V2_HOCK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V2_HOCK_E1'
                                                         )
@@ -2525,20 +2668,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V4_AQUA'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V4_AQUA_E1'
                                                         )
@@ -2558,20 +2705,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V5_WPOL'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V5_WPOL_E2'
                                                         )
@@ -2591,20 +2742,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V6_BKTB'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V6_BKTB_E1'
                                                         )
@@ -2624,20 +2779,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V7_VELO'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V7_VELO_E1'
                                                         )
@@ -2657,20 +2816,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1850'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V8_BMXT'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V8_BMXT_E1'
                                                         )
@@ -2690,20 +2853,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('2000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V9_EMAN'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V9_EMAN_E1'
                                                         )
@@ -2723,20 +2890,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1700'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V10_PRSC'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V10_PRSC_E1'
                                                         )
@@ -2756,16 +2927,19 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1200'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V11_WARM'
                                                         )
@@ -2785,16 +2959,19 @@ obj = PublicationDelivery(
                                                     distance=Decimal('500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V1_STDM'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -2814,20 +2991,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V3_HAND'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V3_HAND_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -2847,20 +3028,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1500'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V2_HOCK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V2_HOCK_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -2880,20 +3065,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V4_AQUA'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V4_AQUA_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -2913,20 +3102,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('100'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V5_WPOL'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V5_WPOL_E2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -2946,20 +3139,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V6_BKTB'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V6_BKTB_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -2979,20 +3176,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1750'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V7_VELO'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V7_VELO_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -3012,20 +3213,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1850'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V8_BMXT'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V8_BMXT_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -3045,20 +3250,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('2000'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V9_EMAN'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V9_EMAN_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -3078,20 +3287,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1700'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V10_PRSC'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V10_PRSC_E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -3111,16 +3324,19 @@ obj = PublicationDelivery(
                                                     distance=Decimal('1200'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_V11_WARM'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PointOfInterestRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK'
                                                         ),
                                                         entrance_ref=PointOfInterestEntranceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='naptPoi:8100OPK_E1'
                                                         )
@@ -3143,6 +3359,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3151,18 +3368,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_OlympicStadium'
                                                 ),
@@ -3178,6 +3398,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3186,12 +3407,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3206,6 +3429,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3222,6 +3446,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3234,6 +3459,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_Hockey'
                                                 ),
@@ -3249,6 +3475,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3257,12 +3484,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3277,6 +3506,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3292,6 +3522,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_Handball'
                                                 ),
@@ -3307,6 +3538,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3315,12 +3547,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3335,6 +3569,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3351,6 +3586,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3363,6 +3599,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_Aquatics'
                                                 ),
@@ -3378,6 +3615,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3386,12 +3624,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3406,6 +3646,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3422,6 +3663,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3434,6 +3676,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_WaterPolo'
                                                 ),
@@ -3449,6 +3692,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3457,12 +3701,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3477,6 +3723,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3489,6 +3736,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_Basketball'
                                                 ),
@@ -3504,6 +3752,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3512,12 +3761,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3532,6 +3783,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3547,6 +3799,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_BMX'
                                                 ),
@@ -3562,6 +3815,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3570,12 +3824,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3590,6 +3846,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3616,6 +3873,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_ingress'
                                                                                         ),
@@ -3634,6 +3892,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -3652,6 +3911,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_ingress'
                                                                                         ),
@@ -3670,6 +3930,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -3688,6 +3949,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_ingress'
                                                                                         ),
@@ -3706,6 +3968,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -3740,6 +4003,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_egress'
                                                                                         ),
@@ -3758,6 +4022,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Very_Busy_other'
                                                                                         ),
@@ -3776,6 +4041,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_egress'
                                                                                         ),
@@ -3794,6 +4060,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Busy_other'
                                                                                         ),
@@ -3812,6 +4079,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_egress'
                                                                                         ),
@@ -3830,6 +4098,7 @@ obj = PublicationDelivery(
                                                                                 ValidityConditionsRelStructure(
                                                                                     choice=[
                                                                                         AvailabilityConditionRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='oda:Avl_Normal_other'
                                                                                         ),
@@ -3854,6 +4123,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_BMX'
                                                 ),
@@ -3869,6 +4139,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3877,12 +4148,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3897,6 +4170,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3909,6 +4183,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_SportsArea'
                                                 ),
@@ -3924,6 +4199,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -3932,12 +4208,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
@@ -3952,6 +4230,7 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:type_of_zone@PIE'
                                                             ),
@@ -3964,6 +4243,7 @@ obj = PublicationDelivery(
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Media_Centre'
                                                 ),
@@ -3986,6 +4266,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_V10_PRSC'
                                                     ),
@@ -3993,10 +4274,12 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.COVERED,
                                                     gated=GatedEnumeration.GATED_AREA,
                                                     site_ref=PointOfInterestRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_Lvl_01'
                                                     )
@@ -4016,6 +4299,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_V10_PRSC'
                                                     ),
@@ -4023,10 +4307,12 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.COVERED,
                                                     gated=GatedEnumeration.GATED_AREA,
                                                     site_ref=PointOfInterestRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='naptPoi:8100OPK_Lvl_01'
                                                     )
@@ -4043,6 +4329,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_zone@POI'
                                                 ),
@@ -4051,18 +4338,21 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:type_of_place@Venue'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         ),
                                         classifications=PointOfInterestClassificationsViewsRelStructure(
                                             point_of_interest_classification_ref_or_point_of_interest_classification_view=[
                                                 PointOfInterestClassificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:PoiCat_Sports_WarmUp'
                                                 ),

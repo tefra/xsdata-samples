@@ -34,10 +34,9 @@ class StrongRevisionLabelString:
         name = "STRONG-REVISION-LABEL-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(-((0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(\.(0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(\+([0-9a-zA-Z-]+(\.[0-9a-zA-Z-]+)*))?",
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -30,10 +30,9 @@ class AmountType:
 @dataclass(frozen=True, kw_only=True)
 class BinaryObjectType:
     value: bytes = field(
-        default=b"",
         metadata={
             "format": "base64",
-        },
+        }
     )
     format: None | str = field(
         default=None,
@@ -78,7 +77,7 @@ class BinaryObjectType:
 
 @dataclass(frozen=True, kw_only=True)
 class CodeType:
-    value: str = field(default="")
+    value: str = field()
     list_id: None | str = field(
         default=None,
         metadata={
@@ -145,7 +144,7 @@ class CodeType:
 
 @dataclass(frozen=True, kw_only=True)
 class DateTimeType:
-    value: str = field(default="")
+    value: str = field()
     format: None | str = field(
         default=None,
         metadata={
@@ -156,7 +155,7 @@ class DateTimeType:
 
 @dataclass(frozen=True, kw_only=True)
 class IdentifierType:
-    value: str = field(default="")
+    value: str = field()
     scheme_id: None | str = field(
         default=None,
         metadata={
@@ -210,7 +209,7 @@ class IdentifierType:
 
 @dataclass(frozen=True, kw_only=True)
 class IndicatorType:
-    value: str = field(default="")
+    value: str = field()
     format: None | str = field(
         default=None,
         metadata={
@@ -284,7 +283,7 @@ class QuantityType:
 
 @dataclass(frozen=True, kw_only=True)
 class TextType:
-    value: str = field(default="")
+    value: str = field()
     language_id: None | str = field(
         default=None,
         metadata={

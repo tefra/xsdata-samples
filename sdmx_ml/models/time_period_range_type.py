@@ -17,10 +17,9 @@ class TimePeriodRangeType:
     """
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r".{5}A1.*",
-        },
+        }
     )
     is_inclusive: bool = field(
         default=True,

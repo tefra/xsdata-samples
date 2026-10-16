@@ -12,7 +12,7 @@ class TagType:
     class Meta:
         name = "tagType"
 
-    value: str = field(default="")
+    value: str = field()
     lang: None | str | LangValue = field(
         default=None,
         metadata={

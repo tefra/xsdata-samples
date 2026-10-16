@@ -123,7 +123,7 @@ class MemoryRemapType:
 
     @dataclass(kw_only=True)
     class RemapDefinitionRef:
-        value: str = field(default="")
+        value: str = field()
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",

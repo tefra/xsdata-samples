@@ -18,4 +18,4 @@ class SellMessage4:
         name = "SellMessage"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    value: str = field(default="")
+    value: str = field()

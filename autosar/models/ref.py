@@ -40,10 +40,9 @@ class Ref:
         name = "REF"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"/?[a-zA-Z][a-zA-Z0-9_]{0,127}(/[a-zA-Z][a-zA-Z0-9_]{0,127})*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

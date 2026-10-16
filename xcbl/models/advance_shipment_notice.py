@@ -71,7 +71,7 @@ class AsnheaderNote:
     class Meta:
         name = "ASNHeaderNote"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -79,7 +79,7 @@ class AsnissueDate:
     class Meta:
         name = "ASNIssueDate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -87,7 +87,7 @@ class AsnpurposeCoded:
     class Meta:
         name = "ASNPurposeCoded"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -95,7 +95,7 @@ class AsnpurposeCodedOther:
     class Meta:
         name = "ASNPurposeCodedOther"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -103,7 +103,7 @@ class AsnstatusCoded:
     class Meta:
         name = "ASNStatusCoded"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -111,7 +111,7 @@ class AsnstatusCodedOther:
     class Meta:
         name = "ASNStatusCodedOther"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -119,7 +119,7 @@ class AsntypeCoded:
     class Meta:
         name = "ASNTypeCoded"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -127,37 +127,37 @@ class AsntypeCodedOther:
     class Meta:
         name = "ASNTypeCodedOther"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CollectionDateOfCargo:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class EarliestDeliveryDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LatestDeliveryDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ScheduleDeliveryDateAfter:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ScheduleDeliveryDateBefore:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ShippedDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

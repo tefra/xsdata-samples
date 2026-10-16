@@ -22,7 +22,7 @@ class AnnotationUrltype:
     class Meta:
         name = "AnnotationURLType"
 
-    value: str = field(default="")
+    value: str = field()
     lang: None | str = field(
         default=None,
         metadata={

@@ -11,10 +11,9 @@ class PromotionCode:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
     value: str = field(
-        default="",
         metadata={
             "max_length": 30,
-        },
+        }
     )
     key: None | str = field(
         default=None,

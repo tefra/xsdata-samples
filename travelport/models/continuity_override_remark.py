@@ -20,7 +20,7 @@ class ContinuityOverrideRemark:
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     category: str = field(
         default="MCT",
         metadata={

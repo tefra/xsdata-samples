@@ -38,7 +38,7 @@ class Tt:
     class Meta:
         name = "TT"
 
-    value: str = field(default="")
+    value: str = field()
     s: None | str = field(
         default=None,
         metadata={

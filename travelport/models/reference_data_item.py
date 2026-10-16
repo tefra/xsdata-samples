@@ -78,11 +78,10 @@ class ReferenceDataItem:
         """
 
         value: str = field(
-            default="",
             metadata={
                 "min_length": 1,
                 "max_length": 255,
-            },
+            }
         )
         type_value: None | str = field(
             default=None,

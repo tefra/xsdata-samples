@@ -37,27 +37,27 @@ class Achindicator:
     class Meta:
         name = "ACHIndicator"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ComputationalMethodCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ComputationalMethodCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CurrencyDecimalPlaces:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CurrentDateTime:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -65,7 +65,7 @@ class FxquoteTypeCoded:
     class Meta:
         name = "FXQuoteTypeCoded"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -73,7 +73,7 @@ class FxquoteTypeCodedOther:
     class Meta:
         name = "FXQuoteTypeCodedOther"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -81,7 +81,7 @@ class Fxrate:
     class Meta:
         name = "FXRate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -89,7 +89,7 @@ class FxrateResponseIssueDate:
     class Meta:
         name = "FXRateResponseIssueDate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -97,7 +97,7 @@ class FxrateResponseNote:
     class Meta:
         name = "FXRateResponseNote"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -105,7 +105,7 @@ class FxtransactionTypeCoded:
     class Meta:
         name = "FXTransactionTypeCoded"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -113,27 +113,27 @@ class FxtransactionTypeCodedOther:
     class Meta:
         name = "FXTransactionTypeCodedOther"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FeeType:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FundsTransferIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class IndicativeIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class IndicativeRateRetrievedDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -141,7 +141,7 @@ class InverseFxrate:
     class Meta:
         name = "InverseFXRate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -149,37 +149,37 @@ class NumberOfFxrateRequest:
     class Meta:
         name = "NumberOfFXRateRequest"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OnsiteCheckIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OtherPaymentServiceNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class QuoteExpirationDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RemitCurrencyIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RemittanceDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RemoteCheckIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

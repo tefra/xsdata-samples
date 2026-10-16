@@ -25,8 +25,7 @@ class ObservationalTimePeriodValueType(ValueType):
         },
     )
     value: XmlPeriod | XmlDate | XmlDateTime | str = field(
-        default="",
         metadata={
             "pattern": r".{5}A1.*",
-        },
+        }
     )

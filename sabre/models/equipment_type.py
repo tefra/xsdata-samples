@@ -16,7 +16,7 @@ class EquipmentType:
         change_of_gauge: Indicates there is an equipment change.
     """
 
-    value: str = field(default="")
+    value: str = field()
     air_equip_type: str = field(
         metadata={
             "name": "AirEquipType",

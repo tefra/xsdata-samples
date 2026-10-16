@@ -40,62 +40,62 @@ class BuyerIdreferenceDate:
     class Meta:
         name = "BuyerIDReferenceDate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CompletionText:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class GeneralLineItemNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LangString:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class MinRetrySecs:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Parameter:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PriceCheckItemError:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PriceCheckResultIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PriceCheckResultNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class QuoteDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SeverityCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SeverityCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -103,17 +103,17 @@ class SupplierIdreferenceDate:
     class Meta:
         name = "SupplierIDReferenceDate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SwVendorErrorRef:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalNumberOfLineItem:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

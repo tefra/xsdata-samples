@@ -16,7 +16,7 @@ class FreeTextType:
         language: Language identification.
     """
 
-    value: str = field(default="")
+    value: str = field()
     language: None | str = field(
         default=None,
         metadata={

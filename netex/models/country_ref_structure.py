@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class CountryRefStructure:
-    value: str = field(default="")
+    value: str = field()
     ref: None | IanaCountryTldEnumeration = field(
         default=None,
         metadata={

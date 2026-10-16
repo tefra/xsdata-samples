@@ -27,7 +27,7 @@ class AttributedUritype:
     class Meta:
         name = "AttributedURIType"
 
-    value: str = field(default="")
+    value: str = field()
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
@@ -132,7 +132,7 @@ class ReferenceParameters(ReferenceParametersType):
 
 @dataclass(kw_only=True)
 class RelatesToType:
-    value: str = field(default="")
+    value: str = field()
     relationship_type: RelationshipType | str = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,
         metadata={

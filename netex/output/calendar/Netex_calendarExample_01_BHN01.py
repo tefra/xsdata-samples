@@ -60,6 +60,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='ust'
                     )
                 ),
@@ -387,10 +388,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -400,10 +403,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -413,10 +418,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -426,10 +433,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -439,10 +448,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:278'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -452,10 +463,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -465,10 +478,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -478,10 +493,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -491,10 +508,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:279'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -504,10 +523,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -517,10 +538,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -530,10 +553,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -543,10 +568,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:280'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -556,10 +583,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -569,10 +598,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -582,10 +613,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -595,10 +628,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:281'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -608,10 +643,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -621,10 +658,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -634,10 +673,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_33'
                             )
@@ -647,10 +688,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:282'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -660,10 +703,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_13'
                             )
@@ -673,10 +718,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -686,10 +733,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:283'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -699,10 +748,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_14'
                             )
@@ -712,10 +763,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_22'
                             )
@@ -725,10 +778,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -738,10 +793,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -751,10 +808,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -764,10 +823,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -777,10 +838,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:278'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -790,10 +853,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -803,10 +868,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -816,10 +883,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_31'
                             )
@@ -829,10 +898,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:279'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -842,10 +913,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -855,10 +928,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -868,10 +943,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -881,10 +958,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:280'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -894,10 +973,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -907,10 +988,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -920,10 +1003,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_32'
                             )
@@ -933,10 +1018,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:281'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_01'
                             )
@@ -946,10 +1033,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_11'
                             )
@@ -959,10 +1048,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -972,10 +1063,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_33'
                             )
@@ -985,10 +1078,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:282'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -998,10 +1093,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_13'
                             )
@@ -1011,10 +1108,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_21'
                             )
@@ -1024,10 +1123,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:283'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_02'
                             )
@@ -1037,10 +1138,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_14'
                             )
@@ -1050,10 +1153,12 @@ obj = PublicationDelivery(
                             version='any',
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='ust:277'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='ust:DT_22'
                             )

@@ -15,7 +15,7 @@ class ModeRef:
         name = "modeRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: str = field(default="")
+    value: str = field()
     priority: int = field(
         metadata={
             "type": "Attribute",

@@ -43,7 +43,7 @@ class EnumeratedValues:
 
     @dataclass(kw_only=True)
     class EnumerationDefinitionRef:
-        value: str = field(default="")
+        value: str = field()
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",

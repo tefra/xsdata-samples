@@ -40,11 +40,10 @@ class Identifier:
         name = "IDENTIFIER"
 
     value: str = field(
-        default="",
         metadata={
             "max_length": 128,
             "pattern": r"[a-zA-Z][a-zA-Z0-9_]*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -14,7 +14,7 @@ class ComplexBaseExpression:
     class Meta:
         name = "complexBaseExpression"
 
-    value: str = field(default="")
+    value: str = field()
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={

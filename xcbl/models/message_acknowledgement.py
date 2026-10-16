@@ -5,17 +5,17 @@ from dataclasses import dataclass, field
 
 @dataclass(kw_only=True)
 class AcknowledgementLocation:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AcknowledgementNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AcknowledgementReferenceNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

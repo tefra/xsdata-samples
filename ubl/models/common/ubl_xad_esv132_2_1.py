@@ -92,10 +92,9 @@ class EncapsulatedPkidataType:
         name = "EncapsulatedPKIDataType"
 
     value: bytes = field(
-        default=b"",
         metadata={
             "format": "base64",
-        },
+        }
     )
     id: None | str = field(
         default=None,
@@ -194,7 +193,7 @@ class Spuri:
         name = "SPURI"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -367,7 +366,7 @@ class EncapsulatedPkidata(EncapsulatedPkidataType):
 
 @dataclass(frozen=True, kw_only=True)
 class IdentifierType:
-    value: str = field(default="")
+    value: str = field()
     qualifier: None | QualifierType = field(
         default=None,
         metadata={

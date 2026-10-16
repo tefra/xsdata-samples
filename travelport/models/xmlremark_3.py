@@ -34,7 +34,7 @@ class Xmlremark3:
         name = "XMLRemark"
         namespace = "http://www.travelport.com/schema/common_v33_0"
 
-    value: str = field(default="")
+    value: str = field()
     key: None | str = field(
         default=None,
         metadata={

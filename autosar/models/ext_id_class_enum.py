@@ -33,7 +33,7 @@ class ExtIdClassEnum:
     class Meta:
         name = "EXT-ID-CLASS-ENUM"
 
-    value: str = field(default="")
+    value: str = field()
     s: None | str = field(
         default=None,
         metadata={

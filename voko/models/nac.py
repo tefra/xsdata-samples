@@ -8,4 +8,4 @@ class Nac:
     class Meta:
         name = "nac"
 
-    value: str = field(default="")
+    value: str = field()

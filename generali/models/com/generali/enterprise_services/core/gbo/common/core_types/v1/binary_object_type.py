@@ -74,10 +74,9 @@ class BinaryObjectType:
     """
 
     value: bytes = field(
-        default=b"",
         metadata={
             "format": "base64",
-        },
+        }
     )
     format: None | str = field(
         default=None,

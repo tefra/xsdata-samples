@@ -35,10 +35,9 @@ class Date:
         name = "DATE"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
-        },
+        }
     )
     s: None | str = field(
         default=None,

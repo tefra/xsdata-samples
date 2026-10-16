@@ -53,6 +53,7 @@ obj = PublicationDelivery(
                     ),
                     choice_1=[
                         TimetableFrameRef(
+                            value='',
                             ref='hde:TimetableFrameTIM_23_O'
                         ),
                     ]
@@ -84,6 +85,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='hde_data'
                     )
                 ),
@@ -104,6 +106,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 1),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -117,6 +120,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 2),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -130,6 +134,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 3),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -143,6 +148,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 4),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -156,6 +162,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 5),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -169,6 +176,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 6),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -182,6 +190,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 7),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -195,6 +204,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 8),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -208,6 +218,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 9),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -221,6 +232,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 10),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -234,6 +246,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 11),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -247,6 +260,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 12),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -260,6 +274,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 13),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -273,6 +288,7 @@ obj = PublicationDelivery(
                             order=1,
                             choice=XmlDate(2010, 11, 14),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -461,10 +477,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-01'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -477,10 +495,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-02'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -493,10 +513,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-03'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -509,10 +531,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-04'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -525,10 +549,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-05'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -541,10 +567,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-06'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -557,10 +585,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-07'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -573,10 +603,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-08'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -589,10 +621,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-09'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -605,10 +639,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-10'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -621,10 +657,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-11'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -637,10 +675,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-12'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_01-MF-NH'
                             )
@@ -653,10 +693,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-13'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )
@@ -669,10 +711,12 @@ obj = PublicationDelivery(
                             ),
                             order=1,
                             choice=OperatingDayRef(
+                                value='',
                                 version='any',
                                 ref='hde:OperatingDay:OPDAY_2010-11-14'
                             ),
                             day_type_ref=DayTypeRef(
+                                value='',
                                 version='any',
                                 ref='hde:DayType:DT_03-WE-NH'
                             )

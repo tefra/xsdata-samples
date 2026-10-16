@@ -184,11 +184,10 @@ class PtcfareBreakdownType:
             """
 
             value: str = field(
-                default="",
                 metadata={
                     "min_length": 1,
                     "max_length": 16,
-                },
+                }
             )
             private_fare_type: None | str = field(
                 default=None,
@@ -353,7 +352,7 @@ class PtcfareBreakdownType:
 
         @dataclass(kw_only=True)
         class FareType:
-            value: str = field(default="")
+            value: str = field()
             name: None | str = field(
                 default=None,
                 metadata={

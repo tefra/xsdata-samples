@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass(kw_only=True)
 class CodeType:
-    value: str = field(default="")
+    value: str = field()
     code_space: None | str = field(
         default=None,
         metadata={

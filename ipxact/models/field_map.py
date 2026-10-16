@@ -156,7 +156,7 @@ class FieldMap:
 
     @dataclass(kw_only=True)
     class ModeRef:
-        value: str = field(default="")
+        value: str = field()
         priority: int = field(
             metadata={
                 "type": "Attribute",

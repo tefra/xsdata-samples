@@ -27,10 +27,9 @@ class Address:
         name = "ADDRESS"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"0x[0-9a-z]*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

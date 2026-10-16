@@ -10,7 +10,7 @@ class OrganizationType:
     class Meta:
         name = "organizationType"
 
-    value: str = field(default="")
+    value: str = field()
     id: None | str = field(
         default=None,
         metadata={

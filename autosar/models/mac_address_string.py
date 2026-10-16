@@ -30,10 +30,9 @@ class MacAddressString:
         name = "MAC-ADDRESS-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"([0-9a-fA-F]{2}:){5}[0-9a-fA-F]{2}",
-        },
+        }
     )
     s: None | str = field(
         default=None,

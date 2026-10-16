@@ -103,28 +103,25 @@ class MetadataRegistrationEventsType:
     @dataclass(frozen=True, kw_only=True)
     class RegistrationId:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class DataProvider:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
@@ -138,8 +135,7 @@ class MetadataRegistrationEventsType:
     @dataclass(frozen=True, kw_only=True)
     class Category:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.categoryscheme\.Category=.+",
-            },
+            }
         )

@@ -52,7 +52,7 @@ class GroupSelector:
 
     @dataclass(kw_only=True)
     class Name:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={

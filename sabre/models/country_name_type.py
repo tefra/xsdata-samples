@@ -17,11 +17,10 @@ class CountryNameType:
     """
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 0,
             "max_length": 64,
-        },
+        }
     )
     code: None | str = field(
         default=None,

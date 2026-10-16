@@ -288,7 +288,7 @@ obj = ProductActivity(
             ),
             activity_origin_location=ActivityOriginLocation(
                 id=Id(
-
+                    value=''
                 )
             ),
             sales_item=[

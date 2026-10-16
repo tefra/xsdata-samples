@@ -203,6 +203,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -244,6 +245,7 @@ obj = PublicationDelivery(
 
                                         ),
                                         direction_ref=DirectionRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DR_Westbound'
                                         )
@@ -266,6 +268,7 @@ obj = PublicationDelivery(
                                         routes=RouteRefsRelStructure(
                                             route_ref=[
                                                 RouteRef(
+                                                    value='',
                                                     ref='ao:RT_24o'
                                                 ),
                                             ]
@@ -393,10 +396,12 @@ obj = PublicationDelivery(
                                         id='ao:Briga-p_to_Banjaloka-p',
                                         version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Briga-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p'
                                         )
@@ -405,10 +410,12 @@ obj = PublicationDelivery(
                                         id='ao:Banjaloka-p_to_NovaSela-p',
                                         version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:NovaSela-p'
                                         )
@@ -417,10 +424,12 @@ obj = PublicationDelivery(
                                         id='ao:NovaSela-p_to_Banjaloka-p',
                                         version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:NovaSela-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p'
                                         )
@@ -429,10 +438,12 @@ obj = PublicationDelivery(
                                         id='ao:Banjaloka-p_to_Briga-p',
                                         version='any',
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Briga-p'
                                         )
@@ -451,6 +462,7 @@ obj = PublicationDelivery(
                                         journey_patterns=JourneyPatternRefsRelStructure(
                                             journey_pattern_ref=[
                                                 ServiceJourneyPatternRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:sjp_24o'
                                                 ),
@@ -463,6 +475,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p'
                                                     ),
@@ -473,6 +486,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     )
@@ -482,6 +496,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:NovaSela-p'
                                                     ),
@@ -532,10 +547,12 @@ obj = PublicationDelivery(
                                             value='Overall timing Alpha  to  Charley reen'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Briga-p'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:NovaSela-p'
                                         )
@@ -547,10 +564,12 @@ obj = PublicationDelivery(
                                             value='After Alpha   t1'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Briga-p'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Briga-p_t1'
                                         )
@@ -562,10 +581,12 @@ obj = PublicationDelivery(
                                             value='After Alpha   t1 to After Alpha  t2'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Briga-p_t1'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p_t3'
                                         )
@@ -577,10 +598,12 @@ obj = PublicationDelivery(
                                             value='After Alpha  t2 to Bravo'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Briga-p_t2'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p'
                                         )
@@ -592,10 +615,12 @@ obj = PublicationDelivery(
                                             value='Bravo to After Bravo t1'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p_t3'
                                         )
@@ -607,10 +632,12 @@ obj = PublicationDelivery(
                                             value='After Bravo t1 to Charley'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:Banjaloka-p_t3'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:NovaSela-p'
                                         )
@@ -626,6 +653,7 @@ obj = PublicationDelivery(
                                             value='Route 24'
                                         ),
                                         route_ref=RouteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:RT_24o'
                                         ),
@@ -641,12 +669,14 @@ obj = PublicationDelivery(
                                                     choice_1=DerivedElement(
                                                         qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Briga-p'
                                                         ),
                                                         type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_Briga-p_t1'
                                                     )
@@ -656,10 +686,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t1_to_Briga-p_t2'
                                                     )
@@ -669,10 +701,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t2'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t2_to_Banjaloka-p'
                                                     )
@@ -682,10 +716,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                     )
@@ -695,10 +731,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_t3'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_t3_to_NovaSela-p'
                                                     )
@@ -708,6 +746,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:NovaSela-p'
                                                     )
@@ -726,6 +765,7 @@ obj = PublicationDelivery(
                                             value='Alpha to Charley - All POINTs'
                                         ),
                                         route_ref_or_route_view=RouteRef(
+                                            value='',
                                             version='any',
                                             ref='ao:RT_24o'
                                         ),
@@ -736,10 +776,12 @@ obj = PublicationDelivery(
                                                     id='ao:jprt_24o1_Briga-p_to_NovaSela-p',
                                                     version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_NovaSela-p'
                                                     ),
@@ -754,6 +796,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p'
                                                     )
@@ -763,6 +806,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t1'
                                                     )
@@ -772,6 +816,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t2'
                                                     )
@@ -781,6 +826,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=4,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     )
@@ -790,6 +836,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_t3'
                                                     )
@@ -799,6 +846,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=6,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:NovaSela-p'
                                                     )
@@ -812,6 +860,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     service_link_ref=ServiceLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_Banjaloka-p'
                                                     )
@@ -821,6 +870,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     service_link_ref=ServiceLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_to_NovaSela-p'
                                                     )
@@ -844,6 +894,7 @@ obj = PublicationDelivery(
                                                     id='ao:tdtr_TD01_Briga-p_to_Briga-p_t1',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_Briga-p_t1'
                                                     ),
@@ -853,6 +904,7 @@ obj = PublicationDelivery(
                                                     id='ao:tdtr_TD01_Briga-p_t1_to_Briga-p_t2',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t1_to_Briga-p_t2'
                                                     ),
@@ -862,6 +914,7 @@ obj = PublicationDelivery(
                                                     id='ao:tdtr_TD01_Briga-p_t2_to_Banjaloka-p',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_t2_to_Banjaloka-p'
                                                     ),
@@ -871,6 +924,7 @@ obj = PublicationDelivery(
                                                     id='ao:tdtr_TD01_Banjaloka-p_to_Banjaloka-p_t3',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                     ),
@@ -880,6 +934,7 @@ obj = PublicationDelivery(
                                                     id='ao:tdtr_TD01_Banjaloka-p_t3_to_NovaSela-p',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_t3_to_NovaSela-p'
                                                     ),
@@ -896,6 +951,7 @@ obj = PublicationDelivery(
                                                         value='Wait at Stop B'
                                                     ),
                                                     choice=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     ),
@@ -913,13 +969,16 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         time_demand_type_ref=TimeDemandTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:tdt_01'
                                         ),
                                         timeband_ref=TimebandRef(
+                                            value='',
                                             ref='ao:tdt_01'
                                         ),
                                         group_of_timing_links_ref=GroupOfTimingLinksRef(
+                                            value='',
                                             version='any',
                                             ref='ao:Bogus'
                                         )
@@ -937,10 +996,12 @@ obj = PublicationDelivery(
                                         members=LinkRefsRelStructure(
                                             link_ref_or_infrastructure_link_ref_or_link_ref_by_value=[
                                                 TimingLinkRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:Briga-p_t2_to_Banjaloka-p'
                                                 ),
                                                 TimingLinkRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                 ),
@@ -983,52 +1044,64 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_02-Everyday-NotHoliday'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_ChristmasEve'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_ChristmasDay'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_ChristmasDayDisplacement'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_NewYearsEve'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_NewYearsDay'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_2ndJanuary'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_GoodFriday'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_EasterSunday'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_EasterMonday'
                                                 ),
                                             ]
                                         ),
                                         journey_pattern_ref=ServicePatternRef(
+                                            value='',
                                             version='any',
                                             ref='ao:K66_outbound'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:tdt_01'
                                         ),
@@ -1038,11 +1111,13 @@ obj = PublicationDelivery(
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
+                                                value='',
                                                 version='any',
                                                 ref='ao:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='ao:DST_Charley'
                                             )
@@ -1055,10 +1130,12 @@ obj = PublicationDelivery(
                                                         value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_NovaSela-p'
                                                     ),
@@ -1072,20 +1149,24 @@ obj = PublicationDelivery(
                                                     id='ao:K66_outbound_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Briga-p_to_Briga-p_t1'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Briga-p_t1'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_Banjaloka-p'
                                                     ),
@@ -1101,20 +1182,24 @@ obj = PublicationDelivery(
                                                     id='ao:K66_outbound_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Banjaloka-p_t3'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_to_NovaSela-p'
                                                     ),
@@ -1134,6 +1219,7 @@ obj = PublicationDelivery(
                                                     id='ao:K66_outbound_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:NovaSela-p'
                                                     ),
@@ -1155,12 +1241,14 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:DT_01-MF-NotHoliday'
                                                 ),
                                             ]
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:tdt_01'
                                         ),
@@ -1170,11 +1258,13 @@ obj = PublicationDelivery(
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
+                                                value='',
                                                 version='any',
                                                 ref='ao:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.INBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='ao:DST_Charley'
                                             )
@@ -1187,10 +1277,12 @@ obj = PublicationDelivery(
                                                         value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_NovaSela-p'
                                                     ),
@@ -1204,20 +1296,24 @@ obj = PublicationDelivery(
                                                     id='ao:K66_inbound_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Briga-p_to_Briga-p_t1'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Briga-p_t1'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Briga-p_to_Banjaloka-p'
                                                     ),
@@ -1231,6 +1327,7 @@ obj = PublicationDelivery(
                                                         none_or_via=[
                                                             ViaVersionedChildStructure(
                                                                 destination_display_ref_or_destination_display_view_or_name=DestinationDisplayRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ao:DST_Bravo'
                                                                 )
@@ -1244,20 +1341,24 @@ obj = PublicationDelivery(
                                                     id='ao:K66_inbound_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p'
                                                     ),
                                                     onward_timing_link_view=OnwardTimingLinkView(
                                                         timing_link_ref=TimingLinkRef(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Banjaloka-p_to_Banjaloka-p_t3'
                                                         ),
                                                         to_point_ref=TimingPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='ao:Banjaloka-p_t3'
                                                         )
                                                     ),
                                                     onward_service_link_ref_or_onward_service_link_view=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:Banjaloka-p_to_NovaSela-p'
                                                     ),
@@ -1274,6 +1375,7 @@ obj = PublicationDelivery(
                                                     id='ao:K66_inbound_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ao:NovaSela-p'
                                                     ),
@@ -1290,6 +1392,7 @@ obj = PublicationDelivery(
                                         facilities=ServiceFacilitySetsRelStructure(
                                             service_facility_set_ref_or_service_facility_set=[
                                                 ServiceFacilitySetRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ao:sfs_24o_01'
                                                 ),
@@ -1679,10 +1782,12 @@ obj = PublicationDelivery(
                                             value='WInter 2011'
                                         ),
                                         from_operating_day_ref_or_from_date=OperatingDayRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:OD_2010-11-01'
                                         ),
                                         to_operating_day_ref_or_to_date=OperatingDayRefStructure(
+                                            value='',
                                             version='any',
                                             ref='ao:OD_2011-04-30'
                                         ),
@@ -1705,10 +1810,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         choice=OperatingDayRef(
+                                            value='',
                                             version='any',
                                             ref='ao:OD_2010-11-01'
                                         ),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1722,6 +1829,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 2),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1735,6 +1843,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 3),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1748,6 +1857,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 4),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1761,6 +1871,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 5),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1774,6 +1885,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 6),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
                                         )
@@ -1787,6 +1899,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 7),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
                                         )
@@ -1800,6 +1913,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 8),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1813,6 +1927,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 9),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1826,6 +1941,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 10),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1839,6 +1955,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 11),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1852,6 +1969,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 12),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -1865,6 +1983,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 13),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
                                         )
@@ -1878,6 +1997,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 14),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
                                         )
@@ -1891,6 +2011,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 12, 31),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_ChristmasEve'
                                         )
@@ -1904,6 +2025,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 12, 25),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_ChristmasDay'
                                         )
@@ -1917,6 +2039,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 12, 27),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_ChristmasDayDisplacement'
                                         )
@@ -1930,6 +2053,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 12, 31),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_NewYearsEve'
                                         )
@@ -1943,6 +2067,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2011, 1, 1),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_NewYearsDay'
                                         )
@@ -1956,6 +2081,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2011, 1, 3),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_NewYearsDayDisplacement'
                                         )
@@ -1969,6 +2095,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2011, 4, 22),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_GoodFriday'
                                         )
@@ -1982,6 +2109,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2011, 4, 24),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_EasterSunday'
                                         )
@@ -1995,6 +2123,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2011, 4, 25),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_EasterMonday'
                                         )
@@ -2008,6 +2137,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2011, 4, 29),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_01-MF-NotHoliday'
                                         )
@@ -2020,10 +2150,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         choice=OperatingDayRef(
+                                            value='',
                                             version='any',
                                             ref='ao:OD_2011-04-30'
                                         ),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='ao:DT_03-WE-NotHoliday'
                                         )

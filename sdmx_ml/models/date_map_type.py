@@ -79,26 +79,23 @@ class DateMapType(IdentifiableType):
     @dataclass(frozen=True, kw_only=True)
     class FrequencyDimension:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class MappedFrequencies:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class TargetFrequencyId:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

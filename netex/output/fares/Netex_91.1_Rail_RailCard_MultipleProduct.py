@@ -197,6 +197,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='myfares:DTA@Common_Resources'
                                     ),
@@ -211,10 +212,12 @@ obj = PublicationDelivery(
                                             value='Railcard Discount  tariff'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mytoc:DTA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:zonal'
                                         ),
@@ -266,6 +269,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
@@ -278,6 +282,7 @@ obj = PublicationDelivery(
                                                             ],
                                                             choice=[
                                                                 OperatorRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mytoc:DTA'
                                                                 ),
@@ -294,10 +299,12 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard_discount@1year'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard_discount@2year'
                                                             ),
@@ -308,6 +315,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access_when',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -351,14 +359,17 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:payment_installment@3month'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:payment_installment@6month'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:payment_installment@1year'
                                                             ),
@@ -369,6 +380,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_purchase',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -386,6 +398,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:eligible'
                                                         ),
@@ -399,6 +412,7 @@ obj = PublicationDelivery(
                                                                         value='Normal'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:standard'
                                                                     )
@@ -410,6 +424,7 @@ obj = PublicationDelivery(
                                                                         value='Child'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:concession'
                                                                     ),
@@ -422,6 +437,7 @@ obj = PublicationDelivery(
                                                                         value='Student'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:concession'
                                                                     ),
@@ -436,6 +452,7 @@ obj = PublicationDelivery(
                                                                         value='Senior'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:concession'
                                                                     ),
@@ -460,6 +477,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_sale'
                                                         ),
@@ -482,6 +500,7 @@ obj = PublicationDelivery(
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
                                                 FareTableRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Railcard@prices'
                                                 ),
@@ -499,10 +518,12 @@ obj = PublicationDelivery(
                                             value='Adult  Standard Flat  fare'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:discount_card'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mytoc:DTA'
                                         ),
@@ -517,14 +538,17 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard_discount@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard_discount@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard_discount@conditions_of_sale'
                                                             ),
@@ -543,6 +567,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Railcard@travel'
                                                     )
@@ -567,6 +592,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -574,10 +600,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:child'
                                                             ),
@@ -587,6 +615,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='1.0',
                                             ref='myfares:Railcard-GSOP'
                                         )
@@ -604,6 +633,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -611,6 +641,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:student'
                                                             ),
@@ -625,10 +656,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:can_access_when'
                                                     ),
                                                     time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Railcard_discount@1year'
                                                     )
@@ -636,6 +669,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='1.0',
                                             ref='myfares:Railcard-GSOP'
                                         )
@@ -653,6 +687,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -660,6 +695,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:senior'
                                                             ),
@@ -671,6 +707,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:can_purchase'
                                                     ),
@@ -686,14 +723,17 @@ obj = PublicationDelivery(
                                                                 possible_installmentt_intervals=TimeIntervalRefsRelStructure(
                                                                     time_interval_ref=[
                                                                         TimeIntervalRef(
+                                                                            value='',
                                                                             version='1.0',
                                                                             ref='myfares:payment_installment@3month'
                                                                         ),
                                                                         TimeIntervalRef(
+                                                                            value='',
                                                                             version='1.0',
                                                                             ref='myfares:payment_installment@6month'
                                                                         ),
                                                                         TimeIntervalRef(
+                                                                            value='',
                                                                             version='1.0',
                                                                             ref='myfares:payment_installment@1year'
                                                                         ),
@@ -772,6 +812,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages=GroupOfSalesOfferPackagesRef(
+                                            value='',
                                             version='1.0',
                                             ref='myfares:Railcard-GSOP'
                                         )
@@ -793,6 +834,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='ntx:v1.0',
                                                         ref='ntx:eligible'
                                                     ),
@@ -806,6 +848,7 @@ obj = PublicationDelivery(
                                                                     value='Right to buy rail tickets at a discount'
                                                                 ),
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     ref='myfares:Rail_Trip',
                                                                     version_ref='EXTERNAL'
                                                                 )
@@ -817,6 +860,7 @@ obj = PublicationDelivery(
                                                                     value='Right to buy rail season passes at a discount'
                                                                 ),
                                                                 sales_offer_package_ref=SalesOfferPackageRef(
+                                                                    value='',
                                                                     ref='myfares:Rail_Pass',
                                                                     version_ref='EXTERNAL'
                                                                 )
@@ -832,10 +876,12 @@ obj = PublicationDelivery(
                                                     id='myfares:Railcard-GSOP',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:card'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Railcard'
                                                     ),
@@ -846,14 +892,17 @@ obj = PublicationDelivery(
                                         members=SalesOfferPackageRefsRelStructure(
                                             sales_offer_package_ref=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Railcard-SOP@standard'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Railcard-SOP@student'
                                                 ),
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Railcard-SOP@senior'
                                                 ),
@@ -872,6 +921,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='myfares:DTA@RailCards@products'
                                     ),
@@ -917,10 +967,12 @@ obj = PublicationDelivery(
                                                         value='Standard discount - all fares'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:normal_discount'
                                                     ),
                                                     choice=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:adult'
                                                     )
@@ -932,10 +984,12 @@ obj = PublicationDelivery(
                                                         value='Standard discount - child fares'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:normal_discount'
                                                     ),
                                                     choice=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:child'
                                                     )
@@ -947,10 +1001,12 @@ obj = PublicationDelivery(
                                                         value='Student  discount - all fares'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:student_discount'
                                                     ),
                                                     choice=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:student'
                                                     )
@@ -962,10 +1018,12 @@ obj = PublicationDelivery(
                                                         value='Senior discount - all fares'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:senior_discount'
                                                     ),
                                                     choice=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:senior'
                                                     )
@@ -986,6 +1044,7 @@ obj = PublicationDelivery(
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 SaleDiscountRightRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Railcard'
                                                 ),
@@ -994,6 +1053,7 @@ obj = PublicationDelivery(
                                         used_in=UsedInRefsRelStructure(
                                             choice=[
                                                 TariffRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Railcard_discount'
                                                 ),
@@ -1010,6 +1070,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard-SOP@standard'
                                                             ),
@@ -1018,6 +1079,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:adult'
                                                             ),
@@ -1033,6 +1095,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 amount=Decimal('80'),
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@1year'
                                                                 )
@@ -1045,6 +1108,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 amount=Decimal('140'),
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@2year'
                                                                 )
@@ -1061,6 +1125,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard-SOP@standard'
                                                             ),
@@ -1069,6 +1134,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:child'
                                                             ),
@@ -1084,6 +1150,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 amount=Decimal('40'),
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@1year'
                                                                 )
@@ -1096,6 +1163,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 amount=Decimal('70'),
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@2year'
                                                                 )
@@ -1112,6 +1180,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard-SOP@student'
                                                             ),
@@ -1120,6 +1189,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:student'
                                                             ),
@@ -1135,6 +1205,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 amount=Decimal('50'),
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@1year'
                                                                 )
@@ -1147,6 +1218,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 is_allowed=False,
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@2year'
                                                                 )
@@ -1163,6 +1235,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Railcard-SOP@senior'
                                                             ),
@@ -1171,6 +1244,7 @@ obj = PublicationDelivery(
                                                     limitations=UsageParameterRefsRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:senior'
                                                             ),
@@ -1186,6 +1260,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 amount=Decimal('60'),
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@1year'
                                                                 )
@@ -1198,6 +1273,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 amount=Decimal('120'),
                                                                 time_interval_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Railcard_discount@2year'
                                                                 )

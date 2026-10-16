@@ -307,7 +307,7 @@ class RegisterFileDefinitions:
 
             @dataclass(kw_only=True)
             class RegisterDefinitionRef:
-                value: str = field(default="")
+                value: str = field()
                 type_definitions: str = field(
                     metadata={
                         "name": "typeDefinitions",

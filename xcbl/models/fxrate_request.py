@@ -42,7 +42,7 @@ class FxrateRequestIssueDate:
     class Meta:
         name = "FXRateRequestIssueDate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -50,7 +50,7 @@ class FxrateRequestNote:
     class Meta:
         name = "FXRateRequestNote"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

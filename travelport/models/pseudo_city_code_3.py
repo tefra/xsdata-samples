@@ -12,9 +12,8 @@ class PseudoCityCode3:
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 2,
             "max_length": 10,
-        },
+        }
     )

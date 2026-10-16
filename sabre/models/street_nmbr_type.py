@@ -16,11 +16,10 @@ class StreetNmbrType:
     """
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 0,
             "max_length": 64,
-        },
+        }
     )
     po_box: None | str = field(
         default=None,

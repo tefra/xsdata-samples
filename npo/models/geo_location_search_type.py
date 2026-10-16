@@ -14,7 +14,7 @@ class GeoLocationSearchType:
     class Meta:
         name = "geoLocationSearchType"
 
-    value: str = field(default="")
+    value: str = field()
     owner: None | OwnerTypeEnum = field(
         default=None,
         metadata={

@@ -117,12 +117,15 @@ obj = PublicationDelivery(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     ScheduledStopPointRef(
+                                        value='',
                                         ref=''
                                     ),
                                     StopPlaceRef(
+                                        value='',
                                         ref=''
                                     ),
                                     TopographicPlaceRef(
+                                        value='',
                                         ref=''
                                     ),
                                 ]
@@ -176,6 +179,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -198,6 +202,7 @@ obj = PublicationDelivery(
                             version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='3.0',
                                     ref='frtop:RS_22'
                                 )
@@ -226,6 +231,7 @@ obj = PublicationDelivery(
                                                     lang='fr'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='frtop:TP_0082A'
                                                 )
@@ -317,6 +323,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='frtop:TP_0032A'
                                         ),
@@ -406,6 +413,7 @@ obj = PublicationDelivery(
                             version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='3.0',
                                     ref='frtop:RS_24'
                                 )
@@ -443,6 +451,7 @@ obj = PublicationDelivery(
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 ScheduledStopPointRef(
+                                                    value='',
                                                     version='032',
                                                     ref='frtop:SSP0042A'
                                                 ),
@@ -462,14 +471,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='032',
                                             ref='frtop:SSP0042A'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_02456A'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:Q_SSP_02456A_1'
                                         )
@@ -501,6 +513,7 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:Org_Mb042'
                                                     )
@@ -527,6 +540,7 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='frtop:Org_Hd001'
                                                     )

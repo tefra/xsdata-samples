@@ -11,4 +11,4 @@ class SrsName2:
         name = "SrsName"
         namespace = "http://www.netex.org.uk/netex"
 
-    value: str = field(default="")
+    value: str = field()

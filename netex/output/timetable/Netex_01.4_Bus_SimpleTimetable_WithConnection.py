@@ -230,6 +230,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -373,6 +374,7 @@ obj = PublicationDelivery(
 
                                         ),
                                         direction_ref=DirectionRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DR_Westbound'
                                         )
@@ -387,6 +389,7 @@ obj = PublicationDelivery(
 
                                         ),
                                         direction_ref=DirectionRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DR_Southbound'
                                         )
@@ -593,10 +596,12 @@ obj = PublicationDelivery(
                                             value='Alpha & Castle to Bravo'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_001'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         )
@@ -608,10 +613,12 @@ obj = PublicationDelivery(
                                             value='Bravo to Charley'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_077'
                                         )
@@ -623,10 +630,12 @@ obj = PublicationDelivery(
                                             value='Bravoe  to Quebec'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_021'
                                         )
@@ -638,10 +647,12 @@ obj = PublicationDelivery(
                                             value='Quebec to Romeo'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_021'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_022'
                                         )
@@ -657,6 +668,7 @@ obj = PublicationDelivery(
                                             value='Alpha to Charley'
                                         ),
                                         route_ref_or_route_view=RouteRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:RT_24o'
                                         ),
@@ -668,10 +680,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_001+SSP_002'
                                                     ),
@@ -682,10 +696,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_002+SSP_077'
                                                     )
@@ -695,6 +711,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -710,6 +727,7 @@ obj = PublicationDelivery(
                                             value='Bravo  to Romeo'
                                         ),
                                         route_ref_or_route_view=RouteRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:RT_46o'
                                         ),
@@ -721,10 +739,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_002+SSP_021'
                                                     ),
@@ -735,10 +755,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_021'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_021+SSP_022'
                                                     ),
@@ -752,6 +774,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 notice_ref_or_group_of_notices_ref_or_notice=NoticeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sj_24o@02'
                                                                 ),
@@ -767,6 +790,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_022'
                                                     ),
@@ -788,6 +812,7 @@ obj = PublicationDelivery(
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllModesEnumeration.BUS,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_002'
                                             )
@@ -795,6 +820,7 @@ obj = PublicationDelivery(
                                         to=ConnectionEndStructure(
                                             transport_mode=AllModesEnumeration.BUS,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_002'
                                             )
@@ -813,14 +839,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_021'
                                         ),
                                         flexible_stop_place_ref=FlexibleStopPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:fsp_Quebec'
                                         ),
                                         flexible_quay_ref=HailAndRideAreaRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:HailAndRideArea:hara_Quebec_EW'
                                         )
@@ -876,10 +905,12 @@ obj = PublicationDelivery(
                                             value='Overall timing Alpha  to  Charley  '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_001'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_077'
                                         )
@@ -891,10 +922,12 @@ obj = PublicationDelivery(
                                             value='Overall timing Bravo  to  Quebec  '
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_022'
                                         )
@@ -906,10 +939,12 @@ obj = PublicationDelivery(
                                             value='Alpha  to  After Alpha  t1'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_001'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_001_t1'
                                         )
@@ -921,10 +956,12 @@ obj = PublicationDelivery(
                                             value='After Alpha   t1 to After Alpha   t2'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_001_t1'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002_t1'
                                         )
@@ -936,10 +973,12 @@ obj = PublicationDelivery(
                                             value='After Alpha t2 to Bravo'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_001_t2'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         )
@@ -951,10 +990,12 @@ obj = PublicationDelivery(
                                             value='Bravo to After Bravo t1'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002_t1'
                                         )
@@ -966,10 +1007,12 @@ obj = PublicationDelivery(
                                             value='After Bravo t1 to Charley'
                                         ),
                                         from_point_ref=TimingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002_t1'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_077'
                                         )
@@ -981,10 +1024,12 @@ obj = PublicationDelivery(
                                             value='Bravo  to Quebec'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_021'
                                         )
@@ -996,10 +1041,12 @@ obj = PublicationDelivery(
                                             value='Quebec to Romeo'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_021'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_022'
                                         )
@@ -1015,6 +1062,7 @@ obj = PublicationDelivery(
                                             value='Route 24'
                                         ),
                                         route_ref=RouteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:RT_24o'
                                         ),
@@ -1030,12 +1078,14 @@ obj = PublicationDelivery(
                                                     choice_1=DerivedElement(
                                                         qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='mybus:SSP_001'
                                                         ),
                                                         type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001+SSP_001_t1'
                                                     )
@@ -1045,10 +1095,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001_t1+SSP_001_t2'
                                                     )
@@ -1058,10 +1110,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001_t2'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001_t2+SSP_002'
                                                     )
@@ -1071,10 +1125,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=4,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_002_t1'
                                                     )
@@ -1084,10 +1140,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=5,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002_t1'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002_t1+SSP_077'
                                                     )
@@ -1097,6 +1155,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=6,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     )
@@ -1111,6 +1170,7 @@ obj = PublicationDelivery(
                                             value='Route 24'
                                         ),
                                         route_ref=RouteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:RT_46o'
                                         ),
@@ -1126,12 +1186,14 @@ obj = PublicationDelivery(
                                                     choice_1=DerivedElement(
                                                         qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='mybus:SSP_002'
                                                         ),
                                                         type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_021'
                                                     )
@@ -1143,12 +1205,14 @@ obj = PublicationDelivery(
                                                     choice_1=DerivedElement(
                                                         qname='{http://www.netex.org.uk/netex}TimingPointRef',
                                                         value=ScheduledStopPointRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='mybus:SSP_021'
                                                         ),
                                                         type='{http://www.netex.org.uk/netex}ScheduledStopPointRefStructure'
                                                     ),
                                                     onward_timing_link_ref=TimingLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_021+SSP_022'
                                                     )
@@ -1158,6 +1222,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     choice_1=TimingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_022'
                                                     )
@@ -1176,6 +1241,7 @@ obj = PublicationDelivery(
                                             value='Alpha to Charley'
                                         ),
                                         route_ref_or_route_view=RouteRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:RT_24o'
                                         ),
@@ -1186,10 +1252,12 @@ obj = PublicationDelivery(
                                                     id='mybus:jp_24o1_SSP_001+SSP_077',
                                                     version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001+SSP_077'
                                                     ),
@@ -1204,10 +1272,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_001+SSP_002'
                                                     )
@@ -1217,10 +1287,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_002+SSP_077'
                                                     )
@@ -1230,6 +1302,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     )
@@ -1244,6 +1317,7 @@ obj = PublicationDelivery(
                                             value='Bravo to Romeo'
                                         ),
                                         route_ref_or_route_view=RouteRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:RT_46o'
                                         ),
@@ -1254,10 +1328,12 @@ obj = PublicationDelivery(
                                                     id='mybus:jp_46o1_SSP_002+SSP_021',
                                                     version='any',
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_021'
                                                     ),
@@ -1272,10 +1348,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_002+SSP_021'
                                                     )
@@ -1285,10 +1363,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_021'
                                                     ),
                                                     onward_service_link_ref=ServiceLinkRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SL@SSP_021+SSP_022'
                                                     )
@@ -1298,6 +1378,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_022'
                                                     )
@@ -1321,6 +1402,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tdtr_TD01@SSP_001+SSP_001_t1',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001+SSP_001_t1'
                                                     ),
@@ -1330,6 +1412,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tdtr_TD01@SSP_001_t1+SSP_001_t2',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001_t1+SSP_001_t2'
                                                     ),
@@ -1339,6 +1422,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tdtr_TD01@SSP_001_t2+SSP_002',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001_t2+SSP_002'
                                                     ),
@@ -1348,6 +1432,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tdtr_TD01@SSP_002+SSP_002_t1',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_002_t1'
                                                     ),
@@ -1357,6 +1442,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tdtr_TD01@SSP_002_t1+SSP_077',
                                                     version='any',
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002_t1+SSP_077'
                                                     ),
@@ -1373,6 +1459,7 @@ obj = PublicationDelivery(
                                                         value='Wait at Stop B'
                                                     ),
                                                     choice=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -1400,10 +1487,12 @@ obj = PublicationDelivery(
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
                                                     DayTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:DT_01-MF-NH'
                                                     ),
                                                     DayTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:DT_03-WE-NH'
                                                     ),
@@ -1428,6 +1517,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hde:DotheboysTerm'
                                                 ),
@@ -1448,30 +1538,36 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         journey_pattern_ref=ServicePatternRef(
+                                            value='',
                                             version='any',
                                             ref='hde:svp_24o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:tdt_01'
                                         ),
                                         choice=LineRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='hde:DST_Charley'
                                             )
@@ -1484,10 +1580,12 @@ obj = PublicationDelivery(
                                                         value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001+SSP_077'
                                                     ),
@@ -1501,6 +1599,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_24o@01_SSP_001',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_24o@01',
                                                         order=1
@@ -1511,6 +1610,7 @@ obj = PublicationDelivery(
                                                     id='hde:tpt_24o@01_SSP_001_t1',
                                                     version='any',
                                                     point_in_journey_pattern_ref=TimingPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:tpijp_24o@02',
                                                         order=2
@@ -1521,6 +1621,7 @@ obj = PublicationDelivery(
                                                     id='hde:tpt_24o@01_SSP_001_t2',
                                                     version='any',
                                                     point_in_journey_pattern_ref=TimingPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:tpijp_24o@03',
                                                         order=3
@@ -1531,6 +1632,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_24o@01_SSP_002',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_24o@02',
                                                         order=2
@@ -1541,6 +1643,7 @@ obj = PublicationDelivery(
                                                     id='hde:tpt_24o@01_SSP_002_t1',
                                                     version='any',
                                                     point_in_journey_pattern_ref=TimingPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:tpijp_24o@05',
                                                         order=5
@@ -1551,6 +1654,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_24o@01_SSP_077',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_24o@03',
                                                         order=3
@@ -1565,6 +1669,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_24o@01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -1580,6 +1685,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_24o@01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -1592,6 +1698,7 @@ obj = PublicationDelivery(
                                                         journey_meetings=JourneyMeetingViewsRelStructure(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:jm_24o@46o_01'
                                                                 ),
@@ -1601,6 +1708,7 @@ obj = PublicationDelivery(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeView(
                                                                     service_journey_interchange_ref=ServiceJourneyInterchangeRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='hde:sji_24o@01+46o_01'
                                                                     ),
@@ -1612,12 +1720,14 @@ obj = PublicationDelivery(
                                                                     guaranteed=True,
                                                                     advertised=True,
                                                                     connecting_journey_ref_or_connecting_journey_view=VehicleJourneyRefStructure(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='hde:sj_46o_01'
                                                                     ),
                                                                     connecting_line_view=LineDerivedViewStructure(
                                                                         id='',
                                                                         line_ref=LineRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mybus:LN_46'
                                                                         )
@@ -1636,6 +1746,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_24o@01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -1657,30 +1768,36 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         journey_pattern_ref=ServicePatternRef(
+                                            value='',
                                             version='any',
                                             ref='hde:svp_24o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:tdt_01'
                                         ),
                                         choice=LineRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:LN_24'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:RT_24o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='hde:DST_Charley'
                                             )
@@ -1693,10 +1810,12 @@ obj = PublicationDelivery(
                                                         value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_001+SSP_077'
                                                     ),
@@ -1710,6 +1829,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_24o@02_SSP_001',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_24o@02',
                                                         order=2
@@ -1720,6 +1840,7 @@ obj = PublicationDelivery(
                                                     id='hde:tpt_24o@02_SSP_001_t1',
                                                     version='any',
                                                     point_in_journey_pattern_ref=TimingPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:tpijp_24o@02',
                                                         order=2
@@ -1730,6 +1851,7 @@ obj = PublicationDelivery(
                                                     id='hde:tpt_24o@02_SSP_001_t2',
                                                     version='any',
                                                     point_in_journey_pattern_ref=TimingPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:tpijp_24o@03',
                                                         order=3
@@ -1740,6 +1862,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_24o@02_SSP_002',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_24o@02',
                                                         order=2
@@ -1750,6 +1873,7 @@ obj = PublicationDelivery(
                                                     id='hde:tpt_24o@02_SSP_002_t1',
                                                     version='any',
                                                     point_in_journey_pattern_ref=TimingPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:tpijp_24o@05',
                                                         order=5
@@ -1760,6 +1884,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_24o@02_SSP_077',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_24o@03',
                                                         order=3
@@ -1774,6 +1899,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_24o@02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -1787,6 +1913,7 @@ obj = PublicationDelivery(
                                                         none_or_via=[
                                                             ViaVersionedChildStructure(
                                                                 destination_display_ref_or_destination_display_view_or_name=DestinationDisplayRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:DST_Bravo'
                                                                 )
@@ -1800,6 +1927,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_24o@02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -1812,6 +1940,7 @@ obj = PublicationDelivery(
                                                         journey_meetings=JourneyMeetingViewsRelStructure(
                                                             journey_meeting_ref_or_journey_meeting_view=[
                                                                 JourneyMeetingRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:jm_24o@46o_02'
                                                                 ),
@@ -1821,6 +1950,7 @@ obj = PublicationDelivery(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeView(
                                                                     service_journey_interchange_ref=ServiceJourneyInterchangeRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='hde:sji_24o@02+46o_02'
                                                                     ),
@@ -1832,12 +1962,14 @@ obj = PublicationDelivery(
                                                                     guaranteed=True,
                                                                     advertised=True,
                                                                     connecting_journey_ref_or_connecting_journey_view=VehicleJourneyRefStructure(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='hde:sj_46o_02'
                                                                     ),
                                                                     connecting_line_view=LineDerivedViewStructure(
                                                                         id='',
                                                                         line_ref=LineRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mybus:LN_46'
                                                                         )
@@ -1863,6 +1995,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 notice_ref_or_group_of_notices_ref_or_notice=NoticeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sj_24o@02'
                                                                 ),
@@ -1878,6 +2011,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_24o@02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
@@ -1898,6 +2032,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:Dth_termtime_Only'
                                                     ),
@@ -1913,6 +2048,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mybus:Dth_termtime_Only'
                                                                 ),
@@ -1925,10 +2061,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     notice_ref_or_group_of_notices_ref_or_notice=NoticeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:sj_46o_01'
                                                     ),
                                                     choice=JourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:sjp_46o'
                                                     ),
@@ -1942,30 +2080,36 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         journey_pattern_ref=ServicePatternRef(
+                                            value='',
                                             version='any',
                                             ref='hde:svp_46o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:tdt_01'
                                         ),
                                         choice=LineRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:LN_46'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:RT_46o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='hde:DST_Charley'
                                             )
@@ -1978,10 +2122,12 @@ obj = PublicationDelivery(
                                                         value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_022'
                                                     ),
@@ -1995,6 +2141,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_46o_01_SSP_002',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_46o_01'
                                                     ),
@@ -2004,6 +2151,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_46o_01_SSP_021',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_46o_02'
                                                     ),
@@ -2013,6 +2161,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_46o_01_SSP_022',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_46o_03'
                                                     ),
@@ -2026,6 +2175,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_46o_01_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -2034,6 +2184,7 @@ obj = PublicationDelivery(
                                                         interchanges=ServiceJourneyInterchangesRelStructure(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sji_24o@01+46o_01'
                                                                 ),
@@ -2049,6 +2200,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_46o_01_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_021'
                                                     ),
@@ -2063,6 +2215,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             AvailabilityConditionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mybus:Dth_termtime_Only'
                                                                             ),
@@ -2075,18 +2228,22 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 notice_ref_or_group_of_notices_ref_or_notice=NoticeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sj_46_021'
                                                                 ),
                                                                 choice=JourneyPatternRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sjp_46o'
                                                                 ),
                                                                 start_point_in_pattern_ref=PointInSequenceRefStructure(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:pijp_46o_02'
                                                                 ),
                                                                 end_point_in_pattern_ref=PointInSequenceRefStructure(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:pijp_46o_03'
                                                                 ),
@@ -2102,6 +2259,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_46o_01_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_022'
                                                     ),
@@ -2123,30 +2281,36 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hde:DT_01-MF-NH'
                                                 ),
                                             ]
                                         ),
                                         journey_pattern_ref=ServicePatternRef(
+                                            value='',
                                             version='any',
                                             ref='hde:svp_46o'
                                         ),
                                         time_demand_type_ref=TimeDemandTypeRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:tdt_01'
                                         ),
                                         choice=LineRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:LN_46'
                                         ),
                                         journey_pattern_view=JourneyPatternView(
                                             route_ref_or_route_view=RouteRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:RT_46o'
                                             ),
                                             direction_type=DirectionTypeEnumeration.OUTBOUND,
                                             destination_display_ref_or_destination_display_view=DestinationDisplayRef(
+                                                value='',
                                                 version='any',
                                                 ref='hde:DST_Romeo'
                                             )
@@ -2159,10 +2323,12 @@ obj = PublicationDelivery(
                                                         value='Overall run time'
                                                     ),
                                                     time_demand_type_ref_or_timeband_ref=TimeDemandTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:tdt_01'
                                                     ),
                                                     timing_link_ref=TimingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:TL@SSP_002+SSP_022'
                                                     ),
@@ -2176,6 +2342,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_46o_02_SSP_002',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_46o_02'
                                                     ),
@@ -2185,6 +2352,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_46o_02_SSP_021',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_46o_02'
                                                     ),
@@ -2194,6 +2362,7 @@ obj = PublicationDelivery(
                                                     id='mybus:tpt_46o_02_SSP_022',
                                                     version='any',
                                                     point_in_journey_pattern_ref=StopPointInJourneyPatternRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:spijp_46o_03'
                                                     ),
@@ -2207,6 +2376,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_46o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -2215,6 +2385,7 @@ obj = PublicationDelivery(
                                                         interchanges=ServiceJourneyInterchangesRelStructure(
                                                             service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view=[
                                                                 ServiceJourneyInterchangeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sji_24o@02+46o_02'
                                                                 ),
@@ -2228,6 +2399,7 @@ obj = PublicationDelivery(
                                                         none_or_via=[
                                                             ViaVersionedChildStructure(
                                                                 destination_display_ref_or_destination_display_view_or_name=DestinationDisplayRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:DST_Bravo'
                                                                 )
@@ -2240,6 +2412,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_46o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_021'
                                                     ),
@@ -2260,6 +2433,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             AvailabilityConditionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mybus:Dth_termtime_Only'
                                                                             ),
@@ -2272,18 +2446,22 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 notice_ref_or_group_of_notices_ref_or_notice=NoticeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sj_46_021'
                                                                 ),
                                                                 choice=JourneyPatternRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:sjp_46o'
                                                                 ),
                                                                 start_point_in_pattern_ref=PointInSequenceRefStructure(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:pijp_46o_02'
                                                                 ),
                                                                 end_point_in_pattern_ref=PointInSequenceRefStructure(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='hde:pijp_46o_03'
                                                                 ),
@@ -2299,6 +2477,7 @@ obj = PublicationDelivery(
                                                     id='hde:sj_46o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_022'
                                                     ),
@@ -2403,14 +2582,17 @@ obj = PublicationDelivery(
                                         id='hde:jm_24o@46o_01',
                                         version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_24o@01'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_46o_01'
                                         ),
@@ -2424,14 +2606,17 @@ obj = PublicationDelivery(
                                         id='hde:jm_24o@46o_02',
                                         version='any',
                                         at_stop_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_24o@01'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_46o_01'
                                         ),
@@ -2452,6 +2637,7 @@ obj = PublicationDelivery(
                                             value='15:00  Change for Romeo\t '
                                         ),
                                         connection_ref=ConnectionRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:cx_SSP_002+SSP_002'
                                         ),
@@ -2465,18 +2651,22 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT1M"),
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_24o@01'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_46o_01'
                                         )
@@ -2488,6 +2678,7 @@ obj = PublicationDelivery(
                                             value='16:00  Change for Romeo\t '
                                         ),
                                         connection_ref=ConnectionRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:cx_SSP_002+SSP_002'
                                         ),
@@ -2501,18 +2692,22 @@ obj = PublicationDelivery(
                                         standard_transfer_time=XmlDuration("PT1M"),
                                         minimum_transfer_time=XmlDuration("PT1M"),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:SSP_002'
                                         ),
                                         from_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_24o@02'
                                         ),
                                         to_journey_ref=VehicleJourneyRefStructure(
+                                            value='',
                                             version='any',
                                             ref='hde:sj_46o_02'
                                         )
@@ -2620,6 +2815,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         is_service_day=True,
                                         serviced_organisation_ref=ServicedOrganisationRef(
+                                            value='',
                                             version='1',
                                             ref='dth:Dotheboys'
                                         )
@@ -2637,6 +2833,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 1),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2650,6 +2847,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 2),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2663,6 +2861,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 3),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2676,6 +2875,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 4),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2689,6 +2889,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 5),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2702,6 +2903,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 6),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_03-WE-NH'
                                         )
@@ -2715,6 +2917,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 7),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_03-WE-NH'
                                         )
@@ -2728,6 +2931,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 8),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2741,6 +2945,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 9),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2754,6 +2959,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 10),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2767,6 +2973,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 11),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2780,6 +2987,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 12),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_01-MF-NH'
                                         )
@@ -2793,6 +3001,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 13),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_03-WE-NH'
                                         )
@@ -2806,6 +3015,7 @@ obj = PublicationDelivery(
                                         order=1,
                                         choice=XmlDate(2010, 11, 14),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='any',
                                             ref='hde:DT_03-WE-NH'
                                         )
@@ -2834,6 +3044,7 @@ obj = PublicationDelivery(
                                             email='enquiries@Dotheboys.ac.uk'
                                         ),
                                         service_calendar_ref=ServiceCalendarRef(
+                                            value='',
                                             version='any',
                                             ref='dth:DTH_01'
                                         ),

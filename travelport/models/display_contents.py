@@ -14,4 +14,4 @@ class DisplayContents:
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    value: str = field(default="")
+    value: str = field()

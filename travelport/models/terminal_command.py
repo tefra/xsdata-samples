@@ -14,4 +14,4 @@ class TerminalCommand:
     class Meta:
         namespace = "http://www.travelport.com/schema/terminal_v33_0"
 
-    value: str = field(default="")
+    value: str = field()

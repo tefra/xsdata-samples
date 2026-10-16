@@ -10,4 +10,4 @@ class OperationTime:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    value: str = field(default="")
+    value: str = field()

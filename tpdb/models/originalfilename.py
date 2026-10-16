@@ -8,4 +8,4 @@ class Originalfilename:
     class Meta:
         name = "originalfilename"
 
-    value: str = field(default="")
+    value: str = field()

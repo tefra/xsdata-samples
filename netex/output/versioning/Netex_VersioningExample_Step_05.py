@@ -61,6 +61,7 @@ obj = PublicationDelivery(
                     choice='',
                     choice_1=[
                         ServiceFrameRef(
+                            value='',
                             ref='mybus:ntwkf001',
                             version_ref='ANY'
                         ),
@@ -102,6 +103,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -117,6 +119,7 @@ obj = PublicationDelivery(
                             ),
                             version_type=VersionTypeEnumeration.BASELINE,
                             derived_from_version_ref=VersionRefStructure(
+                                value='',
                                 version='004',
                                 ref='mybus:ntwkf001'
                             )
@@ -139,6 +142,7 @@ obj = PublicationDelivery(
                                             value='Version 3 of Service Calendar Frame: ntwkf001'
                                         ),
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:ntwkf001'
                                         )
@@ -234,10 +238,12 @@ obj = PublicationDelivery(
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
                                                     DayTypeRef(
+                                                        value='',
                                                         version='001',
                                                         ref='mybus:DT001_MF'
                                                     ),
                                                     DayTypeRef(
+                                                        value='',
                                                         version='001',
                                                         ref='mybus:DT002_MFHols'
                                                     ),
@@ -271,6 +277,7 @@ obj = PublicationDelivery(
                                         ),
                                         version_type=VersionTypeEnumeration.BASELINE,
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='004',
                                             ref='mybus:ntwkf001'
                                         )
@@ -284,6 +291,7 @@ obj = PublicationDelivery(
                                             value='Version 2 of StopPoint SSP001A '
                                         ),
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SSP0001A'
                                         )
@@ -297,6 +305,7 @@ obj = PublicationDelivery(
                                             value='Version 2 of StopPoint SSP001B '
                                         ),
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SSP0002B'
                                         )
@@ -319,6 +328,7 @@ obj = PublicationDelivery(
                                             value='Version 2 of ServiceLink SL_AtoB01 '
                                         ),
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybu:SL_AtoB01'
                                         )
@@ -341,6 +351,7 @@ obj = PublicationDelivery(
                                             value='Version 2 of ServicePattern  SP_001 '
                                         ),
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SP_001B'
                                         )
@@ -407,10 +418,12 @@ obj = PublicationDelivery(
                                         ),
                                         distance=Decimal('1.12'),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0001A'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0002B'
                                         )
@@ -424,10 +437,12 @@ obj = PublicationDelivery(
                                         ),
                                         distance=Decimal('1.25'),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0002B'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SSP0003C'
                                         )
@@ -451,6 +466,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='002',
                                                         ref='mybus:SSP0001A'
                                                     )
@@ -460,6 +476,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='002',
                                                         ref='mybus:SSP0002B'
                                                     ),
@@ -471,6 +488,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='mybus:SSP0003C'
                                                     )

@@ -24,4 +24,4 @@ class StringValueType(ValueType):
             "type": "Ignore",
         },
     )
-    value: str = field(default="")
+    value: str = field()

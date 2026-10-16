@@ -60,6 +60,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='hde'
                     )
                 ),
@@ -72,10 +73,12 @@ obj = PublicationDelivery(
                                 value='Use when Icy'
                             ),
                             conditioned_object_ref=VersionOfObjectRefStructure(
+                                value='',
                                 name_of_ref_class='TimetableFrame',
                                 ref='abc:Tf01'
                             ),
                             with_condition_ref=ValidityConditionRefStructure(
+                                value='',
                                 version='any',
                                 ref='hde:VC_ntwkf003_002_winter'
                             ),
@@ -101,14 +104,17 @@ obj = PublicationDelivery(
                                 value='Use when Winter'
                             ),
                             conditioned_object_ref=VersionOfObjectRefStructure(
+                                value='',
                                 name_of_ref_class='TimetableFrame',
                                 ref='abc:Tf01'
                             ),
                             with_condition_ref=ValidityConditionRefStructure(
+                                value='',
                                 version='any',
                                 ref='hde:rp_02_long'
                             ),
                             rule_object_ref=VersionOfObjectRefStructure(
+                                value='',
                                 name_of_ref_class='DayType',
                                 version='1',
                                 ref='Myobj:DT001'
@@ -124,14 +130,17 @@ obj = PublicationDelivery(
                                 value='If run time is greater than five minuets'
                             ),
                             conditioned_object_ref=VersionOfObjectRefStructure(
+                                value='',
                                 name_of_ref_class='TimetableFrame',
                                 ref='abc:Tf01'
                             ),
                             with_condition_ref=ValidityConditionRefStructure(
+                                value='',
                                 version='any',
                                 ref='hde:vt_01'
                             ),
                             rule_object_ref=VersionOfObjectRefStructure(
+                                value='',
                                 name_of_ref_class='JourneyPatternRunTime',
                                 ref='JourneyPatternRunTime:JPRT_1234234'
                             ),
@@ -152,6 +161,7 @@ obj = PublicationDelivery(
                                 value='Special event day'
                             ),
                             conditioned_object_ref=VersionOfObjectRefStructure(
+                                value='',
                                 name_of_ref_class='TimetableFrame',
                                 ref='abc:Tf01'
                             )

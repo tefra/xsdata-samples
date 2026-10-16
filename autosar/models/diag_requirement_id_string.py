@@ -27,10 +27,9 @@ class DiagRequirementIdString:
         name = "DIAG-REQUIREMENT-ID-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[0-9a-zA-Z_\-]+",
-        },
+        }
     )
     s: None | str = field(
         default=None,

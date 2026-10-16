@@ -91,7 +91,7 @@ class ServiceTypeDef:
             service in a language specific top-level netlist
         """
 
-        value: str = field(default="")
+        value: str = field()
         implicit: bool = field(
             default=False,
             metadata={
@@ -101,7 +101,7 @@ class ServiceTypeDef:
 
     @dataclass(kw_only=True)
     class TypeDefinition:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={

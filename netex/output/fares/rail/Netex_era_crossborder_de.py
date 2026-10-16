@@ -257,13 +257,16 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='tlx_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='tlx:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='tlx:products@TLX'
                     )
@@ -280,6 +283,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='tlx_data'
                                     ),
                                 ]
@@ -525,10 +529,12 @@ obj = PublicationDelivery(
                                             value='Flat fares   based fares for  Tagesticket'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:flat'
                                         ),
@@ -574,18 +580,22 @@ obj = PublicationDelivery(
                                                             ],
                                                             fare_section_ref=[
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Goerlitz'
                                                                 ),
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Liberec'
                                                                 ),
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Seifhennersdorf-to-Liberec'
                                                                 ),
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Rybniste-to-Liberec'
                                                                 ),
@@ -613,7 +623,7 @@ obj = PublicationDelivery(
                                                                         value='Group'
                                                                     ),
                                                                     description=MultilingualString(
-
+                                                                        value=''
                                                                     ),
                                                                     url='https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/',
                                                                     prices=UsageParameterPricesRelStructure(
@@ -637,6 +647,7 @@ obj = PublicationDelivery(
                                                                                 id='tlx:Trilex@Tariff@Tagesticket@adult',
                                                                                 version='any',
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -651,6 +662,7 @@ obj = PublicationDelivery(
                                                                                     value='Children up to the age of five are free of charge.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -665,6 +677,7 @@ obj = PublicationDelivery(
                                                                                     value='Accompanied dogs liable for pay are counted as persons in the determination of the number of persons. Further reductions can not be granted.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -699,6 +712,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access_when'
                                                         ),
@@ -722,12 +736,14 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=1,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access_when'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                                         day_type_ref=[
                                                                             DayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='tlx:working_day@off_peak'
                                                                             ),
@@ -739,12 +755,14 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=2,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access_when'
                                                                     ),
                                                                     temporal_validity_parameters=TemporalValidityParametersRelStructure(
                                                                         day_type_ref=[
                                                                             DayTypeRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='tlx:not_working_day'
                                                                             ),
@@ -767,6 +785,7 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='tlx:Trilex@1day'
                                                             ),
@@ -782,6 +801,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 validable_element_ref=ValidableElementRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip'
                                                                 )
@@ -796,6 +816,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=5,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -987,6 +1008,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='tlx:Trilex@Product@Pass@Tagesticket@period-SOP'
                                                             ),
@@ -1011,6 +1033,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice=GroupTicketRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1030,12 +1053,14 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 fare_price_ref=UsageParameterPriceRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('2'),
                                                                                 discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1046,6 +1071,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice=GroupTicketRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1065,12 +1091,14 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 fare_price_ref=UsageParameterPriceRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('3'),
                                                                                 discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1081,6 +1109,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice=GroupTicketRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1100,12 +1129,14 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 fare_price_ref=UsageParameterPriceRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('4'),
                                                                                 discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1116,6 +1147,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice=GroupTicketRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1135,12 +1167,14 @@ obj = PublicationDelivery(
                                                                         rule_step_result=[
                                                                             PriceRuleStepResultStructure(
                                                                                 fare_price_ref=UsageParameterPriceRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@1'
                                                                                 ),
                                                                                 adjustment_amount=Decimal('7.00'),
                                                                                 adjustment_units=Decimal('5'),
                                                                                 discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                                    value='',
                                                                                     version='01',
                                                                                     ref='tlx:Trilex@Tariff@Tagesticket@price_per_person'
                                                                                 ),
@@ -1151,6 +1185,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     can_be_cumulative=False,
                                                                     choice=GroupTicketRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                     )
@@ -1170,16 +1205,19 @@ obj = PublicationDelivery(
                                             value='Flat fare  based fares for  internal germany routes'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:flat'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@1day'
                                                 ),
@@ -1212,6 +1250,7 @@ obj = PublicationDelivery(
                                                             ],
                                                             fare_section_ref=[
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Wroclaw'
                                                                 ),
@@ -1263,6 +1302,7 @@ obj = PublicationDelivery(
                                                                                 id='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@adult',
                                                                                 version='any',
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -1277,6 +1317,7 @@ obj = PublicationDelivery(
                                                                                     value='Children up to the age of five are free of charge.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1477,16 +1518,19 @@ obj = PublicationDelivery(
                                             value='Flat fare  Dresden Bautzen'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:flat'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@1day'
                                                 ),
@@ -1505,6 +1549,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
@@ -1521,6 +1566,7 @@ obj = PublicationDelivery(
                                                                         value='Adult  - if not eligible for CONCESSION'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:adult'
                                                                     ),
@@ -1537,6 +1583,7 @@ obj = PublicationDelivery(
                                                                                     value=' Children up to the age of five are free of charge.  '
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:infant'
                                                                                 ),
@@ -1553,6 +1600,7 @@ obj = PublicationDelivery(
                                                                                     value='A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1570,6 +1618,7 @@ obj = PublicationDelivery(
                                                                                     value=' Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. \nGuide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).\nDogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .\n\nAll other animals and animals with infectious diseases are excluded from carriage.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -1597,6 +1646,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Bautzen'
                                                                 ),
@@ -1618,6 +1668,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Wilthen'
                                                                 ),
@@ -1639,6 +1690,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Bischofswerda'
                                                                 ),
@@ -1660,14 +1712,17 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_section_ref=[
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Bautzen'
                                                                 ),
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Bischofswerda'
                                                                 ),
                                                                 FareSectionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Dresden-to-Wilthen'
                                                                 ),
@@ -1695,7 +1750,7 @@ obj = PublicationDelivery(
                                                                         value='Group'
                                                                     ),
                                                                     description=MultilingualString(
-
+                                                                        value=''
                                                                     ),
                                                                     url='https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/',
                                                                     minimum_number_of_persons=1,
@@ -1706,6 +1761,7 @@ obj = PublicationDelivery(
                                                                                 id='tlx:Trilex@Tariff@Katzensprungticket@adult',
                                                                                 version='any',
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -1719,6 +1775,7 @@ obj = PublicationDelivery(
                                                                                     value='Three free children.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1831,6 +1888,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP'
                                                             ),
@@ -1850,6 +1908,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 choice_1=[
                                                                     FareStructureElementRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bischofswerda'
                                                                     ),
@@ -1868,6 +1927,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 choice_1=[
                                                                     FareStructureElementRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Bautzen'
                                                                     ),
@@ -1886,6 +1946,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 choice_1=[
                                                                     FareStructureElementRef(
+                                                                        value='',
                                                                         version='01',
                                                                         ref='tlx:Trilex@Tariff@Katzensprungticket@sections@Dresden-to-Wilthen'
                                                                     ),
@@ -1905,16 +1966,19 @@ obj = PublicationDelivery(
                                             value='L7 tariff'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:TLX'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
                                         time_intervals=TimeIntervalsRelStructure(
                                             time_interval_ref_or_time_interval=[
                                                 TimeIntervalRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@1day'
                                                 ),
@@ -1933,6 +1997,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
@@ -1949,6 +2014,7 @@ obj = PublicationDelivery(
                                                                         value='Adult  - if not eligible for CONCESSION'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:adult'
                                                                     ),
@@ -1965,6 +2031,7 @@ obj = PublicationDelivery(
                                                                                     value=' Children up to the age of five are free of charge.  '
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:infant'
                                                                                 ),
@@ -1981,6 +2048,7 @@ obj = PublicationDelivery(
                                                                                     value='A short jump ticket can be used by one person with up to 3 children aged 6-14 years.  Further reductions can not be granted.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -1998,6 +2066,7 @@ obj = PublicationDelivery(
                                                                                     value=' Living pets, small (up to the size of a domestic cat), non-hazardous and housed in containers such as carry-on luggage, can be taken for free. The transport containers must be such as to preclude any damage to persons or property. The entrainment may not take place on passenger seats. \nGuide dogs and handicapped dogs are excluded from the muzzle force. These dogs are transported free of charge according to  Section8 paragraph 2 of the tariff regulations (TBL 200).\nDogs that are not housed or can not be accommodated in containers such as carry-on luggage can be carried on the condition that they are leashed and equipped with a suitable muzzle. The entrainment may not take place on passenger seats. For these dogs tickets are to be solved according to the tariff regulations  Section 8 (TBL 200) .\n\nAll other animals and animals with infectious diseases are excluded from carriage.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -2014,6 +2083,7 @@ obj = PublicationDelivery(
                                                                         value='Child fare 5e - 15 or over'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:child'
                                                                     ),
@@ -2044,7 +2114,7 @@ obj = PublicationDelivery(
                                                                         value='Group'
                                                                     ),
                                                                     description=MultilingualString(
-
+                                                                        value=''
                                                                     ),
                                                                     url='https://www.laenderbahn.com/trilex/tarife/katzensprungtickets/',
                                                                     minimum_number_of_persons=1,
@@ -2055,6 +2125,7 @@ obj = PublicationDelivery(
                                                                                 id='tlx:Trilex@Tariff@L7@adult',
                                                                                 version='any',
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -2068,6 +2139,7 @@ obj = PublicationDelivery(
                                                                                     value='Three free children.'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:child'
                                                                                 ),
@@ -2150,6 +2222,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='tlx:Trilex@Product@Trip@single-SOP'
                                                             ),
@@ -2166,6 +2239,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParameterRefsRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='tlx:Trilex@Tariff@L7@eligibilities@adult'
                                                                         ),
@@ -2193,6 +2267,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-54212'
                                                                                             ),
@@ -2211,6 +2286,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-6113'
                                                                                             ),
@@ -2229,6 +2305,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-96045'
                                                                                             ),
@@ -2258,6 +2335,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-54212'
                                                                                             ),
@@ -2276,6 +2354,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-6113'
                                                                                             ),
@@ -2294,6 +2373,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-96045'
                                                                                             ),
@@ -2323,6 +2403,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-54212'
                                                                                             ),
@@ -2341,6 +2422,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-6113'
                                                                                             ),
@@ -2370,6 +2452,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6113-to-54212'
                                                                                             ),
@@ -2391,6 +2474,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParameterRefsRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
+                                                                            value='',
                                                                             version='01',
                                                                             ref='tlx:Trilex@Tariff@L7@eligibilities@child'
                                                                         ),
@@ -2418,6 +2502,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-54212'
                                                                                             ),
@@ -2436,6 +2521,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-6113'
                                                                                             ),
@@ -2454,6 +2540,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6121-to-96045'
                                                                                             ),
@@ -2483,6 +2570,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-54212'
                                                                                             ),
@@ -2501,6 +2589,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-6113'
                                                                                             ),
@@ -2519,6 +2608,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:56719-to-96045'
                                                                                             ),
@@ -2548,6 +2638,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-54212'
                                                                                             ),
@@ -2566,6 +2657,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:96045-to-6113'
                                                                                             ),
@@ -2595,6 +2687,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         choice_1=[
                                                                                             DistanceMatrixElementRef(
+                                                                                                value='',
                                                                                                 version='01',
                                                                                                 ref='dbn:6113-to-54212'
                                                                                             ),
@@ -2626,18 +2719,22 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Tagesticket@sections'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Tagesticket@groups'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Tagesticket@validities'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Tagesticket@COMPOSITION'
                                                 ),
@@ -2646,6 +2743,7 @@ obj = PublicationDelivery(
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips',
                                                     order=1
@@ -2662,18 +2760,22 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Katzensprungticket@eligibilities'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Katzensprungticket@sections'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Tagesticket@validities'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Tariff@Tagesticket@COMPOSITION'
                                                 ),
@@ -2682,6 +2784,7 @@ obj = PublicationDelivery(
                                         fare_elements_in_sequence=FareElementInSequenceRefsRelStructure(
                                             fare_element_in_sequence_ref=[
                                                 FareStructureElementInSequenceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Product@Pass@Tagesticket@COMPOSITION@trips',
                                                     order=1
@@ -2698,10 +2801,12 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='db:DB@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='db:DB@Tariff@General@access@classes'
                                                 ),
@@ -2714,6 +2819,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -2721,10 +2827,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:DB@Tariff@Trip@trip_type@period_return@outbound'
                                                             ),
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:DB@Tariff@Trip@frequency@single_use'
                                                             ),
@@ -2740,10 +2848,12 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='db:DB@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='db:DB@Tariff@General@access@classes'
                                                 ),
@@ -2756,6 +2866,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -2763,10 +2874,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:DB@Tariff@Trip@trip_type@period_return@inbound'
                                                             ),
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:DB@Tariff@Trip@frequency@single_use'
                                                             ),
@@ -2785,10 +2898,12 @@ obj = PublicationDelivery(
                                         fare_structure_elements=FareStructureElementRefsRelStructure(
                                             fare_structure_element_ref=[
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='db:DB@Tariff@General@access@modes'
                                                 ),
                                                 FareStructureElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='db:DB@Tariff@General@access@classes'
                                                 ),
@@ -2801,6 +2916,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
@@ -2808,10 +2924,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             RoundTripRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:DB@Tariff@Trip@trip_type@single'
                                                             ),
                                                             FrequencyOfUseRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:DB@Tariff@Trip@frequency@single_use'
                                                             ),
@@ -2833,14 +2951,17 @@ obj = PublicationDelivery(
                                         ),
                                         info_url='https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/',
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@single_toc'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -2854,12 +2975,14 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:second'
                                                             ),
                                                         ]
@@ -2870,6 +2993,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -2877,10 +3001,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:child'
                                                             ),
@@ -2896,6 +3022,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip'
                                                     )
@@ -2911,14 +3038,17 @@ obj = PublicationDelivery(
                                         ),
                                         info_url='https://www.laenderbahn.com/trilex/tarife/trilex-Tagesticket/',
                                         charging_moment_ref=ChargingMomentRef(
+                                            value='',
                                             version='any',
                                             ref='eura:prepaid'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='any',
                                             ref='eura:standard_product@single_toc'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:TLX'
                                         ),
@@ -2932,12 +3062,14 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:second'
                                                             ),
                                                         ]
@@ -2948,6 +3080,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:eligible'
                                                     ),
@@ -2955,10 +3088,12 @@ obj = PublicationDelivery(
                                                     limitations=UsageParametersRelStructure(
                                                         choice=[
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:adult'
                                                             ),
                                                             UserProfileRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='db:child'
                                                             ),
@@ -2974,6 +3109,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Pass@Katzensprungticket@repeated_trip'
                                                     )
@@ -3001,12 +3137,14 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:second'
                                                             ),
                                                         ]
@@ -3017,10 +3155,12 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_purchase'
                                                     ),
                                                     fare_structure_element_ref=FareStructureElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Tariff@Dresden-Wroclaw-Spezial@groups'
                                                     )
@@ -3033,6 +3173,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:condition_of_use'
                                                     ),
@@ -3059,10 +3200,12 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg'
                                                 ),
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg'
                                                 ),
@@ -3080,6 +3223,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=False,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Trip@return@outbound@COMMON_rail_leg'
                                                     )
@@ -3094,6 +3238,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=True,
                                                     order=2,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Trip@return@inbound@COMMON_rail_leg'
                                                     )
@@ -3118,12 +3263,14 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:can_access'
                                                     ),
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         class_of_use_ref=[
                                                             ClassOfUseRef(
+                                                                value='',
                                                                 ref='eura:second'
                                                             ),
                                                         ]
@@ -3134,6 +3281,7 @@ obj = PublicationDelivery(
                                         validable_elements=ValidableElementsRelStructure(
                                             validable_element_ref_or_validable_element=[
                                                 ValidableElementRef(
+                                                    value='',
                                                     version='01',
                                                     ref='tlx:Trilex@Product@Trip@single@rail_leg'
                                                 ),
@@ -3146,6 +3294,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Trip@single@rail_leg'
                                                     )
@@ -3161,6 +3310,7 @@ obj = PublicationDelivery(
                                         id='tlx:Trilex@Product@Pass@Tagesticket@period-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='tlx:Trilex@brand'
                                         ),
@@ -3178,6 +3328,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:at_counter'
                                                     )
@@ -3187,6 +3338,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:self_service_ticket_machine'
                                                     )
@@ -3196,6 +3348,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:online'
                                                     )
@@ -3214,10 +3367,12 @@ obj = PublicationDelivery(
                                                         value='Supported type supported by all operators'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Pass@Tagesticket'
                                                     ),
@@ -3230,6 +3385,7 @@ obj = PublicationDelivery(
                                         id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='tlx:Trilex@brand'
                                         ),
@@ -3247,6 +3403,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:at_counter'
                                                     )
@@ -3256,6 +3413,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:self_service_ticket_machine'
                                                     )
@@ -3265,6 +3423,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:online'
                                                     )
@@ -3274,6 +3433,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:onboard'
                                                     )
@@ -3286,10 +3446,12 @@ obj = PublicationDelivery(
                                                     id='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@period-SOP@travel_document',
                                                     version='01',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Trip@Dresden-Wroclaw-Spezial@return'
                                                     ),
@@ -3302,6 +3464,7 @@ obj = PublicationDelivery(
                                         id='tlx:Trilex@Product@Pass@Katzensprungticket@period-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='tlx:Trilex@brand'
                                         ),
@@ -3319,6 +3482,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:at_counter'
                                                     )
@@ -3328,6 +3492,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:self_service_ticket_machine'
                                                     )
@@ -3337,6 +3502,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:online'
                                                     )
@@ -3352,10 +3518,12 @@ obj = PublicationDelivery(
                                                         value='As separate pass'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Pass@Katzensprungticket'
                                                     ),
@@ -3368,6 +3536,7 @@ obj = PublicationDelivery(
                                         id='tlx:Trilex@Product@Trip@single-SOP',
                                         version='01',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='tlx:Trilex@brand'
                                         ),
@@ -3381,6 +3550,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:at_counter'
                                                     )
@@ -3390,6 +3560,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:self_service_ticket_machine'
                                                     )
@@ -3399,6 +3570,7 @@ obj = PublicationDelivery(
                                                     version='01',
                                                     order=2,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:onboard'
                                                     )
@@ -3411,10 +3583,12 @@ obj = PublicationDelivery(
                                                     id='tlx:Trilex@Product@single-SOP@travel_document',
                                                     version='01',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='01',
                                                         ref='eura:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='01',
                                                         ref='tlx:Trilex@Product@Trip@single'
                                                     ),
@@ -3435,13 +3609,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='tlx_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='tlx:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='tlx:products@TLX'
                                 )
@@ -3604,10 +3781,12 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OTHER,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='db:TLX'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         ref='tlx:de',
                                                         version_ref='TODO'
                                                     )
@@ -3630,6 +3809,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='db:TLX'
                                                     )
@@ -3678,6 +3858,7 @@ obj = PublicationDelivery(
                                             value='Trilex'
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -3702,13 +3883,16 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='wo_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='vvo:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='vvo:products@VVO'
                     )
@@ -3725,6 +3909,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='wo_data'
                                     ),
                                 ]
@@ -3741,10 +3926,12 @@ obj = PublicationDelivery(
                                             value="On the section Dresden Hbf - Arnsdorf (Re1, RB60, RE2 and RB61)\nThe Verbundraum Oberelbe (VVO) around Dresden is divided into 21 tariff zones. The trilex trains pass through Tarizonen 10 (Dresden) and 31 (Radeberg) in the section Dresden Hbf - Arnsdorf. Tariff zones 10 and 31 are highlighted in color in the trilex network (yellow or light blue). Between Langebrück and Radeberg there is a border area.\n\nThe price level and validity period of the respective ticket result from the number of fare zones that are passed through. Within the validity range of the ticket, all city and regional buses, trams and commuter trains (S-Bahn, RB / RE etc.) as well as almost all ferries can be used.\n\nThe following tickets are offered in the VVO tariff (selection):\n\nSingle tickets\n\nSingle journeys *\n4-Card\nDay tickets\n\nDay passes for individuals\nFamily day passes\nBicycle Day Tickets\nnight ticket\nSmall group tickets\nElbe-Labe-Ticket\nSeason tickets\nweekly tickets\n\n(ABO) monthly passes\n9 o'clock (ABO) monthly passes\nannual passes\nBicycle monthly pass\n* Sections of the 4-card short-haul 1 are valid on the following sections (from / to):\n\nDresden central station - Dresden center\nDresden Mitte - Dresden central station or Dresden-Neustadt\nDresden-Neustadt - Dresden center\nDetails on tickets and fares in the VVO joint area.  s."
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:VVO'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -3761,10 +3948,12 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='dbn:Saxony@10@Dresden'
                                                                 ),
                                                                 FareZoneRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='dbn:Saxony@30@ZVON'
                                                                 ),
@@ -3794,10 +3983,12 @@ obj = PublicationDelivery(
                                             value='Frequent drivers who regularly travel between the Oberlausitz Lower Silesia (ZVON) and Verkehrsverbund Oberelbe (VVO) transport networks and use the Dresden - Bautzen - Görlitz / Zittau railway lines can use a common time ticket service. It can be purchased from any tariff point in the ZVON to each tariff zone in the VVO a continuous ticket. This allows you to use local buses and trams as well as the Elbe ferries included in the VVO tariff in both interconnected areas within the scope of the spatial validity of your season ticket.\nTobe offered:\n\nWeekly tickets (reduced and normal)\nMonthly passes (reduced and normal)\nSubscription monthly pass (reduced and normal)\nIn conjunction with a subscription-monthly or annual ticket to the ZVON-VVO transitional tariff, the fleXX ticket from or to Arnsdorf applies to the usual fare regulations of the ZVON.\nDriving privilege:\n\nThe respective take-off arrangements for time cards of the corresponding transport associations apply. \nSeason tickets at the regular fare, except week tickets, entitle to carry 5 persons on weekends and public holidays within the period from 6 pm on the day before until 6 am on the following day, of which a maximum of one person may be older than 14 years. \nThe ZVON bicycle day pass and monthly pass is valid in conjunction with the ZVON-VVO transition tariff from or to Arnsdorf. From Arnsdorf bike transport to VVO fare.'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:VVO'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -3817,6 +4008,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='dbn:Saxony@31@Radeburg'
                                                                 ),
@@ -3832,10 +4024,12 @@ obj = PublicationDelivery(
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         fare_zone_ref=[
                                                                             FareZoneRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='dbn:Saxony@10@Dresden'
                                                                             ),
                                                                             FareZoneRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='dbn:Saxony@31@Radeburg'
                                                                             ),
@@ -4001,10 +4195,12 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OTHER,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='db:VVO'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         ref='vvo:de',
                                                         version_ref='TODO'
                                                     )
@@ -4029,6 +4225,7 @@ obj = PublicationDelivery(
                                             value='VVO'
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -4053,13 +4250,16 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='zvo_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='zvo:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='zvo:products@ZVON'
                     )
@@ -4076,6 +4276,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='zvo_data'
                                     ),
                                 ]
@@ -4092,10 +4293,12 @@ obj = PublicationDelivery(
                                             value='On the lines RE1, RB60, RE2 and RB61  , only the ZVON tariff applies for journeys within the ZVON area. On line L7  you can choose to travel to the ZVON tariff or the trilex tariff. Travelers who change from and to other means of transport within the scope of the ZVON tariff are recommended to use the ZVON tariff. The sale of the tickets to the ZVON tariff takes place in the trilex trains at no extra charge.\n\nExample: If you are traveling with the trilex from Hainewalde to Zittau and transfer there to the city bus, then we recommend the ZVON tariff.'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='db:ZVON'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -4112,6 +4315,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='dbn:Saxony@31@Radeburg'
                                                                 ),
@@ -4127,18 +4331,22 @@ obj = PublicationDelivery(
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         line_ref=[
                                                                             LineRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='db:RE1'
                                                                             ),
                                                                             LineRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='db:RE2'
                                                                             ),
                                                                             LineRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='db:RB60'
                                                                             ),
                                                                             LineRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='db:RB61'
                                                                             ),
@@ -4329,10 +4537,12 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OTHER,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='db:ZVON'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         ref='zvo:de',
                                                         version_ref='TODO'
                                                     )
@@ -4357,6 +4567,7 @@ obj = PublicationDelivery(
                                             value='ZVON'
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -4381,13 +4592,16 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='dbn_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='dbn:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='db:products@DB'
                     )
@@ -4404,6 +4618,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='dbn_data'
                                     ),
                                 ]
@@ -4425,6 +4640,7 @@ obj = PublicationDelivery(
                                             ref='uic:0080'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -4441,6 +4657,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -4460,6 +4677,7 @@ obj = PublicationDelivery(
                                                                     version='01',
                                                                     order=2,
                                                                     type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:can_access'
                                                                     ),
@@ -4467,10 +4685,12 @@ obj = PublicationDelivery(
                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                         type_of_product_category_ref=[
                                                                             TypeOfProductCategoryRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:local'
                                                                             ),
                                                                             TypeOfProductCategoryRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='eura:ice'
                                                                             ),
@@ -4492,6 +4712,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -4499,9 +4720,11 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     ref='eura:first'
                                                                 ),
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     ref='eura:second'
                                                                 ),
                                                             ]
@@ -4519,6 +4742,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:eligible'
                                                         ),
@@ -4535,6 +4759,7 @@ obj = PublicationDelivery(
                                                                         value='Adult  - if not eligible for CONCESSION'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:adult'
                                                                     ),
@@ -4548,6 +4773,7 @@ obj = PublicationDelivery(
                                                                                     value='Up to 2 Infants  under 5 are free for each adult'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:infant'
                                                                                 ),
@@ -4561,6 +4787,7 @@ obj = PublicationDelivery(
                                                                                     value='Small animals are free'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:small_animal'
                                                                                 ),
@@ -4581,6 +4808,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='https://www.bahn.de/hilfe/view/pk/en/kindermitnahme.shtml',
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:infant'
                                                                     ),
@@ -4596,6 +4824,7 @@ obj = PublicationDelivery(
                                                                                     value='Infants must have paying adult with them. No seat'
                                                                                 ),
                                                                                 user_profile_ref=UserProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='db:adult'
                                                                                 ),
@@ -4617,6 +4846,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='https://www.bahn.de/hilfe/view/pk/en/kindermitnahme.shtml',
                                                                     discounting_rule_ref_or_pricing_rule_ref=LimitingRuleRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='db:child@rate'
                                                                     ),
@@ -4635,6 +4865,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:child'
                                                                     ),
@@ -4650,6 +4881,7 @@ obj = PublicationDelivery(
                                                                     ),
                                                                     url='https://www.bahn.de/p/view/bahncard/ueberblick/jugendbahncard25.shtml',
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:youth'
                                                                     ),
@@ -4690,6 +4922,7 @@ obj = PublicationDelivery(
                                                                         ]
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:senior'
                                                                     ),
@@ -4703,6 +4936,7 @@ obj = PublicationDelivery(
                                                                         value='Small Animal'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='eura:animal'
                                                                     ),
@@ -4723,6 +4957,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:can_access'
                                                         ),
@@ -4816,6 +5051,7 @@ obj = PublicationDelivery(
                                                         version='01',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='any',
                                                             ref='eura:condition_of_use'
                                                         ),
@@ -4996,6 +5232,7 @@ obj = PublicationDelivery(
                                             ref='db:VVO'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -5029,6 +5266,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='dbn:Saxony@all'
                                                                 ),
@@ -5041,6 +5279,7 @@ obj = PublicationDelivery(
                                         groups_of_distance_matrix_elements=GroupsOfDistanceMatrixElementsRelStructure(
                                             group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements=[
                                                 GroupOfDistanceMatrixElementsRef(
+                                                    value='',
                                                     ref='dbn:DBN@ODs@de@saxony'
                                                 ),
                                             ]
@@ -5061,6 +5300,7 @@ obj = PublicationDelivery(
                                             ref='uic:0080'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
@@ -5077,10 +5317,12 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             line_ref=[
                                                                 LineRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='db:RE2'
                                                                 ),
                                                                 LineRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='db:RB61'
                                                                 ),
@@ -5157,16 +5399,19 @@ obj = PublicationDelivery(
                                             ref='uic:0080'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='any',
                                             ref='eura:point_to_point'
                                         ),
                                         groups_of_distance_matrix_elements=GroupsOfDistanceMatrixElementsRelStructure(
                                             group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements=[
                                                 GroupOfDistanceMatrixElementsRef(
+                                                    value='',
                                                     version='01',
                                                     ref='dbn:DBN@ODs@de_pl'
                                                 ),
                                                 GroupOfDistanceMatrixElementsRef(
+                                                    value='',
                                                     version='01',
                                                     ref='dbn:DBN@ODs@de_cz'
                                                 ),
@@ -5186,6 +5431,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='dbn_data'
                                     ),
                                 ]
@@ -5208,9 +5454,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:DED25'
                                                 ),
                                             ]
@@ -5224,6 +5472,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5243,9 +5492,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:199'
                                                 ),
                                             ]
@@ -5259,6 +5510,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5278,9 +5530,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:DED24'
                                                 ),
                                             ]
@@ -5294,6 +5548,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5324,9 +5579,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:199'
                                                 ),
                                             ]
@@ -5340,6 +5597,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5359,9 +5617,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:199'
                                                 ),
                                             ]
@@ -5374,6 +5634,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5393,9 +5654,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:DED24'
                                                 ),
                                             ]
@@ -5409,6 +5672,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5428,9 +5692,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:CZ051'
                                                 ),
                                             ]
@@ -5443,6 +5709,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.CZ
                                         )
                                     ),
@@ -5462,9 +5729,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:DED28'
                                                 ),
                                             ]
@@ -5477,6 +5746,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.CZ
                                         )
                                     ),
@@ -5496,9 +5766,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:DED28'
                                                 ),
                                             ]
@@ -5511,6 +5783,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5530,6 +5803,7 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                             ]
@@ -5542,6 +5816,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5561,9 +5836,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:DED24'
                                                 ),
                                             ]
@@ -5576,6 +5853,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5595,9 +5873,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:PL51'
                                                 ),
                                             ]
@@ -5610,6 +5890,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.PL
                                         )
                                     ),
@@ -5629,9 +5910,11 @@ obj = PublicationDelivery(
                                         types=TypeOfPointRefsRelStructure(
                                             type_of_point_ref=[
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:Type_of_Point@00'
                                                 ),
                                                 TypeOfPointRef(
+                                                    value='',
                                                     ref='uic:NUTS:DED28'
                                                 ),
                                             ]
@@ -5645,6 +5928,7 @@ obj = PublicationDelivery(
                                             VehicleModeEnumeration.BUS,
                                         ],
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -5672,6 +5956,7 @@ obj = PublicationDelivery(
                                             lang='de'
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='dbn:Saxony@all'
                                         )
@@ -5688,6 +5973,7 @@ obj = PublicationDelivery(
                                             lang='de'
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='dbn:Saxony@all'
                                         )
@@ -5704,6 +5990,7 @@ obj = PublicationDelivery(
                                             lang='de'
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='dbn:Saxony@all'
                                         )
@@ -5752,6 +6039,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='dbn:Saxony@all'
                                         ),
@@ -5816,6 +6104,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='dbn:Saxony@all'
                                         ),
@@ -5845,6 +6134,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_fare_zone_ref=FareZoneRefStructure(
+                                            value='',
                                             version='01',
                                             ref='dbn:Saxony@all'
                                         ),
@@ -5906,10 +6196,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Arnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     )
@@ -5921,10 +6213,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Grossharthau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     )
@@ -5936,10 +6230,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Bischofswerda'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     )
@@ -5951,10 +6247,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56145'
                                                     )
@@ -5966,10 +6264,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56715'
                                                     )
@@ -5981,10 +6281,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Grossharthau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     )
@@ -5996,10 +6298,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Bischofswerda'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     )
@@ -6011,10 +6315,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56145'
                                                     )
@@ -6026,10 +6332,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56715'
                                                     )
@@ -6041,10 +6349,12 @@ obj = PublicationDelivery(
                                                         value='Grossharthau to Bischofswerda'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     )
@@ -6056,10 +6366,12 @@ obj = PublicationDelivery(
                                                         value='Grossharthau to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56145'
                                                     )
@@ -6071,10 +6383,12 @@ obj = PublicationDelivery(
                                                         value='Grossharthau to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56715'
                                                     )
@@ -6086,10 +6400,12 @@ obj = PublicationDelivery(
                                                         value='Bischofswerda to Bautzen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56145'
                                                     )
@@ -6101,10 +6417,12 @@ obj = PublicationDelivery(
                                                         value='Bischofswerda to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56715'
                                                     )
@@ -6116,10 +6434,12 @@ obj = PublicationDelivery(
                                                         value='Bautzen to Goerlitz'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56145'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56715'
                                                     )
@@ -6131,10 +6451,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6129'
                                                     )
@@ -6146,10 +6468,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6161,10 +6485,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6129'
                                                     )
@@ -6176,10 +6502,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6191,10 +6519,12 @@ obj = PublicationDelivery(
                                                         value='Grossharthau to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6129'
                                                     )
@@ -6206,10 +6536,12 @@ obj = PublicationDelivery(
                                                         value='Grossharthau to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6221,10 +6553,12 @@ obj = PublicationDelivery(
                                                         value='Bischofswerda to Wilthen'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6129'
                                                     )
@@ -6236,10 +6570,12 @@ obj = PublicationDelivery(
                                                         value='Bischofswerda to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6251,10 +6587,12 @@ obj = PublicationDelivery(
                                                         value='Wilthen to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6129'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6266,10 +6604,12 @@ obj = PublicationDelivery(
                                                         value='Zittau  to Varnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:96045'
                                                     )
@@ -6281,10 +6621,12 @@ obj = PublicationDelivery(
                                                         value='Zittau  to Seifhennersdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6121'
                                                     )
@@ -6296,10 +6638,12 @@ obj = PublicationDelivery(
                                                         value='Zittau  to Rybniste'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56719'
                                                     )
@@ -6311,10 +6655,12 @@ obj = PublicationDelivery(
                                                         value='Varnsdorf  to Seifhennersdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6121'
                                                     )
@@ -6326,10 +6672,12 @@ obj = PublicationDelivery(
                                                         value='Varnsdorf  to Rybniste'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56719'
                                                     )
@@ -6483,10 +6831,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     ),
@@ -6586,10 +6936,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6601,10 +6953,12 @@ obj = PublicationDelivery(
                                                         value='Grossharthau to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6616,10 +6970,12 @@ obj = PublicationDelivery(
                                                         value='Bischofswerda to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6631,10 +6987,12 @@ obj = PublicationDelivery(
                                                         value='Wilthen to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6129'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6646,10 +7004,12 @@ obj = PublicationDelivery(
                                                         value='Zittau to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6661,10 +7021,12 @@ obj = PublicationDelivery(
                                                         value='Seifhennersdorf to Varnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6121'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:96045'
                                                     )
@@ -6676,10 +7038,12 @@ obj = PublicationDelivery(
                                                         value='Seifhennersdorf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6121'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6691,10 +7055,12 @@ obj = PublicationDelivery(
                                                         value='Seifhennersdorf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6121'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6706,10 +7072,12 @@ obj = PublicationDelivery(
                                                         value='Rybniste to Varnsdorf'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56719'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:96045'
                                                     )
@@ -6721,10 +7089,12 @@ obj = PublicationDelivery(
                                                         value='Rybniste to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56719'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6736,10 +7106,12 @@ obj = PublicationDelivery(
                                                         value='Rybniste to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56719'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6751,10 +7123,12 @@ obj = PublicationDelivery(
                                                         value='Varnsdorf to Zittau'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6113'
                                                     )
@@ -6766,10 +7140,12 @@ obj = PublicationDelivery(
                                                         value='Varnsdorf to Liberec'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:96045'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:54212'
                                                     )
@@ -6797,10 +7173,12 @@ obj = PublicationDelivery(
                                                         value='Dresden hbf to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6050'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6010'
                                                     ),
@@ -6897,10 +7275,12 @@ obj = PublicationDelivery(
                                                         value='Arnsdorf to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6176'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6010'
                                                     )
@@ -6912,10 +7292,12 @@ obj = PublicationDelivery(
                                                         value='Grossharthau to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6105'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6010'
                                                     )
@@ -6927,10 +7309,12 @@ obj = PublicationDelivery(
                                                         value='Bischofswerda to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6103'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6010'
                                                     )
@@ -6942,10 +7326,12 @@ obj = PublicationDelivery(
                                                         value='Bautzen to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56145'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6010'
                                                     )
@@ -6957,10 +7343,12 @@ obj = PublicationDelivery(
                                                         value='Goerlitz to Wroclaw'
                                                     ),
                                                     choice=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:56715'
                                                     ),
                                                     choice_1=FareScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='uic:6010'
                                                     )
@@ -6981,6 +7369,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='dbn_data'
                                     ),
                                 ]
@@ -7084,9 +7473,11 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='dbn_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='dbn:example'
                                 ),
@@ -7157,10 +7548,12 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='uic:0080'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         ref='dbn:de',
                                                         version_ref='TODO'
                                                     )
@@ -7183,10 +7576,12 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='uic:0080'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         ref='dbn:de',
                                                         version_ref='TODO'
                                                     )
@@ -7244,13 +7639,16 @@ obj = PublicationDelivery(
                 responsibility_set_ref_attribute='tlx-t:sales@TLX',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='tlx_transactions'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='tlx:example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='tlx-t:sales@TLX'
                     ),
@@ -7286,13 +7684,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='tlx_transactions'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='tlx:example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='tlx-t:sales@TLX'
                                 )
@@ -7308,10 +7709,12 @@ obj = PublicationDelivery(
                                         start_date=XmlDateTime(2018, 7, 8, 4, 30, 0),
                                         end_date=XmlDateTime(2018, 8, 8, 4, 29, 0),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             ref='tlx-t:ANONYMOUS',
                                             version_ref='TODO'
                                         ),
                                         type_of_fare_contract_ref=TypeOfFareContractRef(
+                                            value='',
                                             version='any',
                                             ref='db:contract@pass@day'
                                         ),
@@ -7321,6 +7724,7 @@ obj = PublicationDelivery(
                                                     id='tlx-t:Anon001@trans001@purchase_ticket',
                                                     version='any',
                                                     branding_ref=BrandingRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tlx:Trilex@brand'
                                                     ),
@@ -7329,6 +7733,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                     type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:product_purchase'
                                                     ),
@@ -7341,6 +7746,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 date=XmlDateTime(2018, 7, 8, 1, 7, 0),
                                                                 fare_price_ref_or_cell_ref=UsageParameterPriceRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='tlx:Trilex@Tariff@Tagesticket@4'
                                                                 ),
@@ -7354,28 +7760,34 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             order=1,
                                                                             validable_element_ref=ValidableElementRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='tlx:Trilex@Product@Pass@Tagesticket@repeated_trip'
                                                                             ),
                                                                             preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='tlx:Trilex@Product@Pass@Tagesticket'
                                                                             ),
                                                                             fare_structure_element_ref=FareStructureElementRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='tlx:Trilex@Tariff@Tagesticket@COMPOSITION'
                                                                             ),
                                                                             sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='01',
                                                                                 ref='tlx:Trilex@Product@Pass@Tagesticket@period-SOP'
                                                                             ),
                                                                             limitations=UsageParametersRelStructure(
                                                                                 choice=[
                                                                                     UserProfileRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='db:adult'
                                                                                     ),
                                                                                     GroupTicketRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='tlx:Trilex@Tariff@Tagesticket@group'
                                                                                     ),
@@ -7384,24 +7796,28 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 fare_section_ref=[
                                                                                     FareSectionRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='tlx:Trilex@Dresden-to-Goerlitz'
                                                                                     ),
                                                                                 ],
                                                                                 class_of_use_ref=[
                                                                                     ClassOfUseRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='eura:second'
                                                                                     ),
                                                                                 ],
                                                                                 type_of_travel_document_ref=[
                                                                                     TypeOfTravelDocumentRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:printed_ticket'
                                                                                     ),
                                                                                 ],
                                                                                 distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                     DistributionChannelRef(
+                                                                                        value='',
                                                                                         version='01',
                                                                                         ref='eura:self_service_ticket_machine'
                                                                                     ),
@@ -7445,13 +7861,16 @@ obj = PublicationDelivery(
                 responsibility_set_ref_attribute='eura:code_sets',
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='eura_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='any',
                         ref='eura:common_example'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         version='any',
                         ref='eura:code_sets'
                     )
@@ -7483,13 +7902,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='eura_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:common_example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:code_sets'
                                 ),
@@ -7526,6 +7948,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='uic:Station_Management@0080'
                                                     ),
@@ -7556,6 +7979,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.DATA_REGISTRAR,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='eura:EURA'
                                                     ),
@@ -8143,6 +8567,7 @@ obj = PublicationDelivery(
                                             from_date=XmlDateTime(2003, 11, 13, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.PL
                                         )
                                     ),
@@ -8173,13 +8598,14 @@ obj = PublicationDelivery(
                                             from_date=XmlDateTime(2009, 1, 1, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.CZ
                                         ),
                                         address=TransportOrganisationVersionStructure.Address(
                                             info_links=InfoLinksRelStructure(
                                                 info_link=[
                                                     InfoLink(
-
+                                                        value=''
                                                     ),
                                                 ]
                                             )
@@ -8201,6 +8627,7 @@ obj = PublicationDelivery(
                                             from_date=XmlDateTime(1999, 11, 29, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -8221,6 +8648,7 @@ obj = PublicationDelivery(
                                             to_date=XmlDateTime(2020, 1, 1, 0, 0, 0, 0, 0)
                                         ),
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.DE
                                         )
                                     ),
@@ -8253,13 +8681,16 @@ obj = PublicationDelivery(
                             ),
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_codespace_ref=CodespaceRefStructure(
+                                    value='',
                                     ref='eura_data'
                                 ),
                                 default_data_source_ref=DataSourceRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:common_example'
                                 ),
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='any',
                                     ref='eura:code_sets'
                                 ),
@@ -8475,18 +8906,22 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
@@ -8503,18 +8938,22 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
@@ -8531,26 +8970,32 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:pass'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:hand_written_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:smart_card'
                                                 ),
@@ -8567,10 +9012,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:hand_written_ticket'
                                                 ),
@@ -8588,10 +9035,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:magstripe_printed_ticket'
                                                 ),
@@ -8608,10 +9057,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:printed_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:electronic_document'
                                                 ),
@@ -8628,6 +9079,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:mobile_app_ticket'
                                                 ),
@@ -8644,10 +9096,12 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:self_print_ticket'
                                                 ),
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:electronic_document'
                                                 ),
@@ -8664,6 +9118,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='01',
                                                     ref='eura:self_print_ticket'
                                                 ),

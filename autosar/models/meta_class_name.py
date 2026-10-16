@@ -27,10 +27,9 @@ class MetaClassName:
         name = "META-CLASS-NAME"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[A-Z][a-zA-Z0-9_]*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

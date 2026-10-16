@@ -46,12 +46,12 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class AvailabilityCheckRequestIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AvailabilityCheckRequestNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

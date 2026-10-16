@@ -10,7 +10,7 @@ class RelationType1:
     class Meta:
         name = "relationType"
 
-    value: str = field(default="")
+    value: str = field()
     type_value: str = field(
         metadata={
             "name": "type",
