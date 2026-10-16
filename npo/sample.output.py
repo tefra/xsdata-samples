@@ -22,6 +22,7 @@ obj = PageSearchResult(
                     ],
                     broadcaster=[
                         BroadcasterType(
+                            value='',
                             id='VPRO'
                         ),
                     ],

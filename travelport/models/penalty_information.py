@@ -50,7 +50,7 @@ class PenaltyInformation:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     carrier: None | str = field(
         default=None,
         metadata={

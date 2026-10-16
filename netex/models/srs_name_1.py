@@ -11,4 +11,4 @@ class SrsName1:
         name = "SrsName"
         namespace = "http://www.siri.org.uk/siri"
 
-    value: str = field(default="")
+    value: str = field()

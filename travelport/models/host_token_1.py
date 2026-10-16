@@ -42,7 +42,7 @@ class HostToken1:
         name = "HostToken"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     host: None | str = field(
         default=None,
         metadata={

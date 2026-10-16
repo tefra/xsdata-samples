@@ -57,6 +57,7 @@ obj = PublicationDelivery(
                                 day_types=DayTypesRelStructure(
                                     day_type_ref_or_day_type=[
                                         DayTypeRef(
+                                            value='',
                                             ref='mybus:DT001_MF'
                                         ),
                                     ]
@@ -89,9 +90,11 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                        value='',
                         ref='mybus:RS_10'
                     )
                 ),
@@ -100,42 +103,49 @@ obj = PublicationDelivery(
                         GeneralFrameMember(
                             id='mybus:ntwkf001_01',
                             choice=ScheduledStopPointRef(
+                                value='',
                                 ref='mybus:SSP0001A'
                             )
                         ),
                         GeneralFrameMember(
                             id='mybus:ntwkf001_02',
                             choice=ScheduledStopPointRef(
+                                value='',
                                 ref='mybus:SSP0001B'
                             )
                         ),
                         GeneralFrameMember(
                             id='mybus:ntwkf001_05',
                             choice=ScheduledStopPointRef(
+                                value='',
                                 ref='mybus:SSP0001C'
                             )
                         ),
                         GeneralFrameMember(
                             id='mybus:ntwkf001_03',
                             choice=DayTypeRef(
+                                value='',
                                 ref='mybus:DT001_MF'
                             )
                         ),
                         GeneralFrameMember(
                             id='mybus:ntwkf001_04',
                             choice=ServiceLinkRef(
+                                value='',
                                 ref='mybu:SL_AtoB01'
                             )
                         ),
                         GeneralFrameMember(
                             id='mybus:ntwkf001_06',
                             choice=ServiceLinkRef(
+                                value='',
                                 ref='mybu:SL_BtoC01'
                             )
                         ),
                         GeneralFrameMember(
                             id='mybus:ntwkf001_07',
                             choice=ServicePatternRef(
+                                value='',
                                 ref='mybus:SP001'
                             )
                         ),

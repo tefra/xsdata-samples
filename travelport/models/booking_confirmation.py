@@ -17,8 +17,7 @@ class BookingConfirmation:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
     value: str = field(
-        default="",
         metadata={
             "max_length": 32,
-        },
+        }
     )

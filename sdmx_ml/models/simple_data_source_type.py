@@ -18,7 +18,7 @@ class SimpleDataSourceType:
         referenced in a uniqueness constraint.
     """
 
-    value: str = field(default="")
+    value: str = field()
     type_value: str = field(
         init=False,
         default="SIMPLE",

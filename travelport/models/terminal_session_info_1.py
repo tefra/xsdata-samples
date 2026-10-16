@@ -18,4 +18,4 @@ class TerminalSessionInfo1:
         name = "TerminalSessionInfo"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    value: str = field(default="")
+    value: str = field()

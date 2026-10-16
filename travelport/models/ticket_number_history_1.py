@@ -16,9 +16,8 @@ class TicketNumberHistory1:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 0,
             "max_length": 13,
-        },
+        }
     )

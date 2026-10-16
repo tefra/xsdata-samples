@@ -44,47 +44,47 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class AggregationTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AggregationTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AllOrNothing:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AlternativeBuyerContactName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AlternativeContactEmail:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AlternativeContactFaxNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AlternativeContactMobile:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AlternativeContactPhoneNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AttributeCharacteristic:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -97,17 +97,17 @@ class AttributeName:
             "required": True,
         },
     )
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BundleName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BuyerContactName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -115,82 +115,82 @@ class CommunityId:
     class Meta:
         name = "CommunityID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ComponentSourcingIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactEmail:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactFaxNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactMobile:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ContactPhoneNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Credit:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DecisionDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DeliveryDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FormulaName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class GroupIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class KeyValString:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Keyword:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LineItemNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Operator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PartialQuoteIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -198,67 +198,67 @@ class PreferredUom:
     class Meta:
         name = "PreferredUOM"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ProjectName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class QuoteWinRuleCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class QuoteWinRuleCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RequiredToRespond:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RequisitionNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeDataTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeDataTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeFieldSize:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeType:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingCreateGeneralNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -266,67 +266,67 @@ class SourcingCreateId:
     class Meta:
         name = "SourcingCreateID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingCreateIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingCreateName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingItemDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingStatus:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingType:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SupplierView:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class VisibilityIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class VisibilityOfAmounts:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class VisibilityOfComments:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class VisibilityOfParticipants:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class VisibilityOfQuantities:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class Weighting:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

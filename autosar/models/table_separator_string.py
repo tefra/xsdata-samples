@@ -29,10 +29,9 @@ class TableSeparatorString:
         name = "TABLE-SEPARATOR-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[0-1]",
-        },
+        }
     )
     s: None | str = field(
         default=None,

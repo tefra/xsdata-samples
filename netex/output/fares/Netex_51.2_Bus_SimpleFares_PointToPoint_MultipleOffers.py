@@ -188,6 +188,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='myfares'
                     ),
                     default_currency='EUR'
@@ -203,6 +204,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Common_resources'
                                     ),
@@ -218,6 +220,7 @@ obj = PublicationDelivery(
                                         ),
                                         public_code='24',
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         )
@@ -235,6 +238,7 @@ obj = PublicationDelivery(
                                         members=LineRefsRelStructure(
                                             line_ref=[
                                                 LineRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mybus:LN_24'
                                                 ),
@@ -305,6 +309,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Line24@network'
                                     ),
@@ -319,10 +324,12 @@ obj = PublicationDelivery(
                                             value='Point to Point   Tariff'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:point_to_point'
                                         ),
@@ -334,14 +341,17 @@ obj = PublicationDelivery(
                                                     choice_1=DistanceMatrixElementsRelStructure(
                                                         distance_matrix_element_ref_or_distance_matrix_element=[
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:SSP_001+SSP_002'
                                                             ),
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:SSP_001+SSP_077'
                                                             ),
                                                             DistanceMatrixElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='myfares:SSP_002+SSP_077'
                                                             ),
@@ -352,6 +362,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
@@ -359,6 +370,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             group_of_lines_ref=[
                                                                 GroupOfLinesRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mybus:my_lines'
                                                                 ),
@@ -377,6 +389,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:eligible'
                                                         ),
@@ -390,6 +403,7 @@ obj = PublicationDelivery(
                                                                         value='Child Fare'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:adult'
                                                                     ),
@@ -402,6 +416,7 @@ obj = PublicationDelivery(
                                                                         value='Child Fare'
                                                                     ),
                                                                     type_of_concession_ref=TypeOfConcessionRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:child'
                                                                     ),
@@ -422,6 +437,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
@@ -429,10 +445,12 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             class_of_use_ref=[
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='myfares:standard'
                                                                 ),
                                                                 ClassOfUseRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='myfares:first'
                                                                 ),
@@ -451,6 +469,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
@@ -496,28 +515,34 @@ obj = PublicationDelivery(
                                                         value='A to B'
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
                                                     choice_1=ScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
                                                         distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@p-ticket@SSP_001+SSP_002@standard'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@p-ticket@SSP_001+SSP_002@first'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@m-ticket@SSP_001+SSP_002@standard'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@m-ticket@SSP_001+SSP_002@first'
                                                             ),
@@ -531,28 +556,34 @@ obj = PublicationDelivery(
                                                         value='A to C'
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
                                                     choice_1=ScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
                                                         distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@p-ticket@SSP_001+SSP_077@standard'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@p-ticket@SSP_001+SSP_077@first'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@m-ticket@SSP_001+SSP_077@standard'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@m-ticket@SSP_001+SSP_077@first'
                                                             ),
@@ -566,28 +597,34 @@ obj = PublicationDelivery(
                                                         value='B to C'
                                                     ),
                                                     choice=ScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
                                                     choice_1=ScheduledStopPointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),
                                                     prices=DistanceMatrixElementPricesRelStructure(
                                                         distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref=[
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@p-ticket@SSP_002+SSP_077@standard'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@p-ticket@SSP_002+SSP_077@first'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@m-ticket@SSP_002+SSP_077@standard'
                                                             ),
                                                             DistanceMatrixElementPriceRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@m-ticket@SSP_002+SSP_077@first'
                                                             ),
@@ -599,6 +636,7 @@ obj = PublicationDelivery(
                                         price_groups=PriceGroupsRelStructure(
                                             price_group_ref_or_price_group=[
                                                 PriceGroupRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Line24@discounts'
                                                 ),
@@ -607,6 +645,7 @@ obj = PublicationDelivery(
                                         fare_tables=FareTablesRelStructure(
                                             fare_table_ref_or_fare_table=[
                                                 FareTableRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Line24'
                                                 ),
@@ -624,10 +663,12 @@ obj = PublicationDelivery(
                                             value='Standard Point To Point Trip  fare   '
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -642,18 +683,22 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@classes_of_use'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:PointToPoint_01@conditions_of_travel'
                                                             ),
@@ -674,6 +719,7 @@ obj = PublicationDelivery(
                                                     is_last_in_sequence=True,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Trip@travel'
                                                     )
@@ -689,7 +735,7 @@ obj = PublicationDelivery(
                                         id='myfares:Trip-SOP@p-ticket',
                                         version='1.0',
                                         name=MultilingualString(
-
+                                            value=''
                                         ),
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
@@ -713,6 +759,7 @@ obj = PublicationDelivery(
                                                         PaymentMethodEnumeration.CASH_AND_CARD,
                                                     ],
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         ref='ntx:collect_on_board',
                                                         version_ref='ntx:v1.0'
                                                     )
@@ -737,6 +784,7 @@ obj = PublicationDelivery(
                                                         PaymentMethodEnumeration.CASH_AND_CARD,
                                                     ],
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         ref='ntx:collect_on_board',
                                                         version_ref='ntx:v1.0'
                                                     )
@@ -749,10 +797,12 @@ obj = PublicationDelivery(
                                                     id='myfares:Trip-SOP@p-ticket',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Trip'
                                                     ),
@@ -765,7 +815,7 @@ obj = PublicationDelivery(
                                         id='myfares:Trip-SOP@m-ticket',
                                         version='1.0',
                                         name=MultilingualString(
-
+                                            value=''
                                         ),
                                         distribution_assignments=DistributionAssignmentsRelStructure(
                                             distribution_assignment_ref_or_distribution_assignment=[
@@ -781,6 +831,7 @@ obj = PublicationDelivery(
                                                         PaymentMethodEnumeration.CARDS_ONLY,
                                                     ],
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         ref='ntx:mobile_app',
                                                         version_ref='ntx:v1.0'
                                                     )
@@ -793,10 +844,12 @@ obj = PublicationDelivery(
                                                     id='myfares:Trip-SOP@m-ticket',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:mobile_app'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Trip'
                                                     ),
@@ -817,6 +870,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='myfares:DTA@Line24@products'
                                     ),
@@ -854,10 +908,12 @@ obj = PublicationDelivery(
                                                         value='Adult price'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:0%'
                                                     ),
                                                     choice=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:adult'
                                                     )
@@ -869,10 +925,12 @@ obj = PublicationDelivery(
                                                         value='Child discount - all fares'
                                                     ),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:50%'
                                                     ),
                                                     choice=UserProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:child'
                                                     )
@@ -893,6 +951,7 @@ obj = PublicationDelivery(
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 PreassignedFareProductRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:Trip'
                                                 ),
@@ -901,6 +960,7 @@ obj = PublicationDelivery(
                                         used_in=UsedInRefsRelStructure(
                                             choice=[
                                                 TariffRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:PointToPoint_01'
                                                 ),
@@ -909,6 +969,7 @@ obj = PublicationDelivery(
                                         limitations=UsageParameterRefsRelStructure(
                                             choice=[
                                                 UserProfileRef(
+                                                    value='',
                                                     version='any',
                                                     ref='myfares:adult'
                                                 ),
@@ -925,6 +986,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Trip-SOP@p-ticket'
                                                             ),
@@ -940,6 +1002,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 specifics=FareTableSpecificsStructure(
                                                                     class_of_use_ref=ClassOfUseRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:standard'
                                                                     )
@@ -954,6 +1017,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('1.00'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_002'
                                                                             )
@@ -966,6 +1030,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('3.00'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_077'
                                                                             )
@@ -978,6 +1043,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('2.00'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_002+SSP_077'
                                                                             )
@@ -993,6 +1059,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 specifics=FareTableSpecificsStructure(
                                                                     class_of_use_ref=ClassOfUseRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:first'
                                                                     )
@@ -1007,6 +1074,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('1.50'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_002'
                                                                             )
@@ -1019,6 +1087,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('5.00'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_077'
                                                                             )
@@ -1031,6 +1100,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('3.00'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_002+SSP_077'
                                                                             )
@@ -1050,6 +1120,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Trip-SOP@m-ticket'
                                                             ),
@@ -1065,6 +1136,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 specifics=FareTableSpecificsStructure(
                                                                     class_of_use_ref=ClassOfUseRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:standard'
                                                                     )
@@ -1079,6 +1151,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('0.90'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_002'
                                                                             )
@@ -1091,6 +1164,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('2.70'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_077'
                                                                             )
@@ -1103,6 +1177,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('1.90'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_002+SSP_077'
                                                                             )
@@ -1118,6 +1193,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 specifics=FareTableSpecificsStructure(
                                                                     class_of_use_ref=ClassOfUseRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='myfares:first'
                                                                     )
@@ -1132,6 +1208,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('1.40'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_002'
                                                                             )
@@ -1144,6 +1221,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('4.80'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_001+SSP_077'
                                                                             )
@@ -1156,6 +1234,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('2.80'),
                                                                             distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='myfares:SSP_002+SSP_077'
                                                                             )

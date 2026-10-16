@@ -30,10 +30,9 @@ class Boolean:
         name = "BOOLEAN"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"0|1|true|false",
-        },
+        }
     )
     s: None | str = field(
         default=None,

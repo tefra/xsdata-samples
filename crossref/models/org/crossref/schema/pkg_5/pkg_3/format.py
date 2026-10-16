@@ -21,11 +21,10 @@ class Format:
         namespace = "http://www.crossref.org/schema/5.3.1"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 0,
             "max_length": 130,
-        },
+        }
     )
     mime_type: None | FormatMimeType = field(
         default=None,

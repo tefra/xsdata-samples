@@ -13,7 +13,7 @@ class DescriptionType:
     class Meta:
         name = "descriptionType"
 
-    value: str = field(default="")
+    value: str = field()
     type_value: None | TextualTypeEnum = field(
         default=None,
         metadata={

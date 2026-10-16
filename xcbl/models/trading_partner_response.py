@@ -13,7 +13,7 @@ class AlternateId:
     class Meta:
         name = "AlternateID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -21,37 +21,37 @@ class MessageType:
     class Meta:
         name = "MessageClass"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class MessageDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class MessageNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class MessageTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class MessageTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PrimaryReturnCodeDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PrimaryReturnCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -59,17 +59,17 @@ class RedirectUrl:
     class Meta:
         name = "RedirectURL"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RefDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RefNum:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -77,7 +77,7 @@ class ReturnedIdentificationUrn:
     class Meta:
         name = "ReturnedIdentificationURN"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -85,7 +85,7 @@ class ServiceId:
     class Meta:
         name = "ServiceID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

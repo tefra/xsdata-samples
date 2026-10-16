@@ -209,6 +209,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
+                                            value='',
                                             ref=''
                                         ),
                                     ]
@@ -248,6 +249,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
+                                            value='',
                                             ref=''
                                         ),
                                     ]
@@ -275,6 +277,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mypark_data'
                     )
                 ),
@@ -302,6 +305,7 @@ obj = PublicationDelivery(
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityConditionRef(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01@Opening_Hours'
                                         ),
@@ -496,6 +500,7 @@ obj = PublicationDelivery(
                                 ]
                             ),
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                value='',
                                 version='any',
                                 ref='nptgLocality:TP_0032A'
                             ),
@@ -534,6 +539,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PP01@Exit_Hours'
                                                     ),
@@ -549,10 +555,12 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01@Level@01'
                                         ),
@@ -591,6 +599,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
                                                     ),
@@ -606,10 +615,12 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01@Level@03'
                                         ),
@@ -641,6 +652,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
                                                     ),
@@ -652,10 +664,12 @@ obj = PublicationDelivery(
                                             value='Main Vehicle Entrance from street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01@Level@01'
                                         ),
@@ -680,6 +694,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
+                                                                                value='',
                                                                                 ref='mypark:Peek'
                                                                             ),
                                                                         ]
@@ -690,6 +705,7 @@ obj = PublicationDelivery(
                                                                     value='pek delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mypark:PP01@EV11@Entrance'
                                                                 ),
@@ -703,6 +719,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
+                                                                                value='',
                                                                                 ref='mypark:Off_peak'
                                                                             ),
                                                                         ]
@@ -713,6 +730,7 @@ obj = PublicationDelivery(
                                                                     value='Off peak delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mypark:PP01@EV11@Entrance'
                                                                 ),
@@ -728,6 +746,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV11@Entrance@peak',
                                                                 version='any',
                                                                 check_constraint_ref=CheckConstraintRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mypark:PP01@EV11@Entrance'
                                                                 ),
@@ -767,6 +786,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PP01@Opening_Hours'
                                                     ),
@@ -778,10 +798,12 @@ obj = PublicationDelivery(
                                             value='Main Vehicle Exit to street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01@Level@01'
                                         ),
@@ -806,6 +828,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
+                                                                                value='',
                                                                                 ref='mypark:Peek'
                                                                             ),
                                                                         ]
@@ -816,6 +839,7 @@ obj = PublicationDelivery(
                                                                     value='pek delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
+                                                                    value='',
                                                                     ref='mypark:PP01@EV12@Exit'
                                                                 ),
                                                                 minimum_likely_delay=XmlDuration("PT5M"),
@@ -828,6 +852,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             ValidityTriggerRef(
+                                                                                value='',
                                                                                 ref='mypark:Off_peak'
                                                                             ),
                                                                         ]
@@ -838,6 +863,7 @@ obj = PublicationDelivery(
                                                                     value='Off peak delay'
                                                                 ),
                                                                 check_constraint_ref=CheckConstraintRef(
+                                                                    value='',
                                                                     ref='mypark:PP01@EV12@Exit'
                                                                 ),
                                                                 minimum_likely_delay=XmlDuration("PT1M"),
@@ -852,6 +878,7 @@ obj = PublicationDelivery(
                                                                 id='mypark:PP01@EV12@Exit',
                                                                 version='any',
                                                                 check_constraint_ref=CheckConstraintRef(
+                                                                    value='',
                                                                     ref='mypark:PP01@EV12@Exit'
                                                                 ),
                                                                 period=XmlDuration("PT10M"),
@@ -893,6 +920,7 @@ obj = PublicationDelivery(
                                             value='Entrance from level 1 to level 2'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
@@ -912,6 +940,7 @@ obj = PublicationDelivery(
                                             value='Entrance from level 2 to level 3'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
@@ -931,6 +960,7 @@ obj = PublicationDelivery(
                                             value='Entrance Dwon from level 2 to level 1'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
@@ -950,6 +980,7 @@ obj = PublicationDelivery(
                                             value='Entrance  Down from level 3 to level 2'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PP01'
                                         ),
@@ -978,6 +1009,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PP01@QPP01',
                                                     version='any',
                                                     choice=EquipmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PP01@Q01'
                                                     ),
@@ -1025,6 +1057,7 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
@@ -1032,6 +1065,7 @@ obj = PublicationDelivery(
                                         to=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mypark:PP01'
                                             )
@@ -1089,6 +1123,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PP01@C01_disabled',
                                                     version='any',
                                                     parking_ref=ParkingRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PP01'
                                                     ),
@@ -1101,6 +1136,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PP01@C02_other',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PP01'
                                                     ),
@@ -1126,9 +1162,11 @@ obj = PublicationDelivery(
                                             value='Street Level'
                                         ),
                                         site_ref=SiteRefStructure(
+                                            value='',
                                             ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             ref='mypark:PP01@Level@01'
                                         ),
                                         label=MultilingualString(
@@ -1152,6 +1190,7 @@ obj = PublicationDelivery(
                                                         id='mypark:PP01@01_01',
                                                         version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
+                                                            value='',
                                                             ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
@@ -1162,6 +1201,7 @@ obj = PublicationDelivery(
                                                         id='mypark:PP01@01_02',
                                                         version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
+                                                            value='',
                                                             ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
@@ -1174,22 +1214,27 @@ obj = PublicationDelivery(
                                         entrances=EntranceRefsRelStructure(
                                             entrance_ref_or_parking_entrance_ref=[
                                                 ParkingEntranceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EP01'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV11@Entrance'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV12@Exit'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV01+02'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV02+01'
                                                 ),
@@ -1206,9 +1251,11 @@ obj = PublicationDelivery(
                                             value='Mezzanine'
                                         ),
                                         site_ref=SiteRefStructure(
+                                            value='',
                                             ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             ref='mypark:PP01@Level@012'
                                         ),
                                         label=MultilingualString(
@@ -1232,6 +1279,7 @@ obj = PublicationDelivery(
                                                         id='mypark:PP01@A02@C01',
                                                         version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
+                                                            value='',
                                                             ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
@@ -1244,18 +1292,22 @@ obj = PublicationDelivery(
                                         entrances=EntranceRefsRelStructure(
                                             entrance_ref_or_parking_entrance_ref=[
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV02+03'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV03+02'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV01+02'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV02+01'
                                                 ),
@@ -1272,9 +1324,11 @@ obj = PublicationDelivery(
                                             value='Parking 2'
                                         ),
                                         site_ref=SiteRefStructure(
+                                            value='',
                                             ref='mypark:PP01'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             ref='mypark:PP01@Level@03'
                                         ),
                                         label=MultilingualString(
@@ -1298,6 +1352,7 @@ obj = PublicationDelivery(
                                                         id='mypark:PP01@A03@C01',
                                                         version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
+                                                            value='',
                                                             ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
@@ -1308,6 +1363,7 @@ obj = PublicationDelivery(
                                                         id='mypark:PP01@A03@C02',
                                                         version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
+                                                            value='',
                                                             ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
@@ -1320,14 +1376,17 @@ obj = PublicationDelivery(
                                         entrances=EntranceRefsRelStructure(
                                             entrance_ref_or_parking_entrance_ref=[
                                                 ParkingEntranceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EP02 '
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV02+03'
                                                 ),
                                                 ParkingEntranceForVehiclesRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mypark:PP01@EV03+02'
                                                 ),
@@ -1339,26 +1398,32 @@ obj = PublicationDelivery(
                             vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                 parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PP01@EV11@Entrance'
                                     ),
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PP01@EV12@Exit'
                                     ),
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PP01@EV02+03'
                                     ),
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PP01@EV03+02'
                                     ),
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PP01@EV01+02'
                                     ),
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PP01@EV02+01'
                                     ),
@@ -1405,6 +1470,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     DayTypeRef(
+                                                        value='',
                                                         ref=''
                                                     ),
                                                 ]
@@ -1450,6 +1516,7 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.WELL_LIT,
                             all_areas_wheelchair_accessible=True,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                value='',
                                 version='any',
                                 ref='nptgLocality:TP_0032A'
                             ),
@@ -1467,6 +1534,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PS22@QPP01@L01',
                                                     version='any',
                                                     choice=EquipmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PS22@QP01@L01'
                                                     ),
@@ -1514,6 +1582,7 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
@@ -1521,6 +1590,7 @@ obj = PublicationDelivery(
                                         to=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mypark:PP01'
                                             )
@@ -1575,6 +1645,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PS22@01_disabled',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PS22'
                                                     ),
@@ -1587,6 +1658,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PS22@01_other',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PS22'
                                                     ),
@@ -1612,6 +1684,7 @@ obj = PublicationDelivery(
                                             value='S1'
                                         ),
                                         site_ref=SiteRefStructure(
+                                            value='',
                                             ref='mypark:PS22'
                                         ),
                                         parking_payment_code='ABCD',
@@ -1630,10 +1703,12 @@ obj = PublicationDelivery(
                                             spaces=ParkingCapacitiesRelStructure(
                                                 parking_capacity_ref_or_parking_capacity=[
                                                     ParkingCapacityRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PS22@01_disabled'
                                                     ),
                                                     ParkingCapacityRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PS22@01_other'
                                                     ),
@@ -1671,6 +1746,7 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.WELL_LIT,
                             all_areas_wheelchair_accessible=True,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                value='',
                                 version='any',
                                 ref='nptgLocality:TP_0032A'
                             ),
@@ -1698,6 +1774,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PS44@C01_disabled',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PB44'
                                                     ),
@@ -1738,6 +1815,7 @@ obj = PublicationDelivery(
                                                         id='mypark:PB44@A01@C01',
                                                         version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
+                                                            value='',
                                                             ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.ALL,
@@ -1748,6 +1826,7 @@ obj = PublicationDelivery(
                                                         id='mypark:PB44@A01@C02',
                                                         version='any',
                                                         parent_ref=ParkingPropertiesRefStructure(
+                                                            value='',
                                                             ref=''
                                                         ),
                                                         parking_user_type=ParkingUserEnumeration.REGISTERED_DISABLED,
@@ -1859,6 +1938,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PB44@A01'
                                                     ),
@@ -1887,6 +1967,7 @@ obj = PublicationDelivery(
                                                     lighting='',
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
+                                                        value='',
                                                         ref='blue_badge_Holders',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1995,6 +2076,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PB44@A01'
                                                     ),
@@ -2023,6 +2105,7 @@ obj = PublicationDelivery(
                                                     lighting='',
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
+                                                        value='',
                                                         ref='blue_badge_Holders',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2131,6 +2214,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PB44@A01'
                                                     ),
@@ -2159,6 +2243,7 @@ obj = PublicationDelivery(
                                                     lighting='',
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
+                                                        value='',
                                                         ref='blue_badge_Holders',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2335,6 +2420,7 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.UNLIT,
                             all_areas_wheelchair_accessible=True,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                value='',
                                 version='any',
                                 ref='nptgLocality:TP_0032A'
                             ),
@@ -2348,6 +2434,7 @@ obj = PublicationDelivery(
                                             value='Main Vehicle Entrance from street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mypark:PNR01'
                                         ),
@@ -2377,6 +2464,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PNR01@Q01',
                                                     version='any',
                                                     choice=EquipmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:PNR01@Q01@ticketing'
                                                     ),
@@ -2424,6 +2512,7 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
@@ -2431,6 +2520,7 @@ obj = PublicationDelivery(
                                         to=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mypark:PNR01'
                                             )
@@ -2480,6 +2570,7 @@ obj = PublicationDelivery(
                                                     id='mypark:PNR01@C01_all',
                                                     version='any',
                                                     parent_ref=ParkingPropertiesRefStructure(
+                                                        value='',
                                                         ref='mypark:PNR01'
                                                     ),
                                                     parking_user_type=ParkingUserEnumeration.ALL,
@@ -2495,6 +2586,7 @@ obj = PublicationDelivery(
                             vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                 parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PNR01@EV01'
                                     ),
@@ -2525,6 +2617,7 @@ obj = PublicationDelivery(
                                     value='VAT Tax rate'
                                 ),
                                 type_of_pricing_rule_ref=TypeOfPricingRuleRef(
+                                    value='',
                                     version='any',
                                     ref='mypark:vat@parking'
                                 ),
@@ -2548,6 +2641,7 @@ obj = PublicationDelivery(
                             applies_to=ParkingRefsRelStructure(
                                 parking_ref=[
                                     ParkingRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PP01'
                                     ),
@@ -2567,6 +2661,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('0.25'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2586,6 +2681,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('1.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2605,6 +2701,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('1.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2624,6 +2721,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('2.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2643,6 +2741,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('3.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2662,6 +2761,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('4.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2681,6 +2781,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('10.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2700,6 +2801,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('18.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2719,6 +2821,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('24.00'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2743,6 +2846,7 @@ obj = PublicationDelivery(
                             applies_to=ParkingRefsRelStructure(
                                 parking_ref=[
                                     ParkingRef(
+                                        value='',
                                         version='any',
                                         ref='mypark:PNR01'
                                     ),
@@ -2765,6 +2869,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('0.25'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )
@@ -2837,6 +2942,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('0.10'),
                                                     discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule=DiscountingRuleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mypark:Vat'
                                                     )

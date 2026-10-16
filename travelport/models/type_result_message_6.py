@@ -23,7 +23,7 @@ class TypeResultMessage6:
     class Meta:
         name = "typeResultMessage"
 
-    value: str = field(default="")
+    value: str = field()
     code: int = field(
         metadata={
             "name": "Code",

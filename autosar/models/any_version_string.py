@@ -25,10 +25,9 @@ class AnyVersionString:
         name = "ANY-VERSION-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[0-9]+|ANY",
-        },
+        }
     )
     s: None | str = field(
         default=None,

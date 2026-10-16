@@ -94,6 +94,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
@@ -113,6 +114,7 @@ obj = PublicationDelivery(
                             ),
                             version_type=VersionTypeEnumeration.BASELINE,
                             derived_from_version_ref=VersionRefStructure(
+                                value='',
                                 version='001',
                                 ref='mybus:ntwkf001'
                             )
@@ -192,6 +194,7 @@ obj = PublicationDelivery(
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
                                                     DayTypeRef(
+                                                        value='',
                                                         version='001',
                                                         ref='mybus:DT001_MF'
                                                     ),
@@ -221,6 +224,7 @@ obj = PublicationDelivery(
                                         ),
                                         version_type=VersionTypeEnumeration.BASELINE,
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:ntwkf001'
                                         )
@@ -235,6 +239,7 @@ obj = PublicationDelivery(
                                             value='Version 2 of StopPoint SSP001A '
                                         ),
                                         derived_from_version_ref=VersionRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SSP0001A'
                                         )

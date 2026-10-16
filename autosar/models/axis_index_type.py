@@ -36,10 +36,9 @@ class AxisIndexType:
         name = "AXIS-INDEX-TYPE"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[0-9]+|STRING|ARRAY",
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -12,12 +12,12 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class AuctionResultResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionResultResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -25,12 +25,12 @@ class AuctionResultResponseId:
     class Meta:
         name = "AuctionResultResponseID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionResultResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

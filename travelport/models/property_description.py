@@ -18,7 +18,7 @@ class PropertyDescription:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",

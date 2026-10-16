@@ -20,12 +20,11 @@ class Isbn:
         namespace = "http://www.crossref.org/schema/5.3.1"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 10,
             "max_length": 17,
             "pattern": r"(97(8|9)-)?\d[\d \-]+[\dX]",
-        },
+        }
     )
     media_type: IsbnMediaType = field(
         default=IsbnMediaType.PRINT,

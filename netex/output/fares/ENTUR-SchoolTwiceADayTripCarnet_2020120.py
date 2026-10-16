@@ -187,6 +187,7 @@ obj = PublicationDelivery(
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
                                                                             DayTypeRef(
+                                                                                value='',
                                                                                 ref='ENT:school_day'
                                                                             ),
                                                                         ]
@@ -220,6 +221,7 @@ obj = PublicationDelivery(
                                                                     day_types=DayTypesRelStructure(
                                                                         day_type_ref_or_day_type=[
                                                                             DayTypeRef(
+                                                                                value='',
                                                                                 ref='ENT:school_day'
                                                                             ),
                                                                         ]
@@ -253,6 +255,7 @@ obj = PublicationDelivery(
                                                         value='Available zones'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access',
                                                         version_ref='fxc:v1.0'
                                                     ),
@@ -261,6 +264,7 @@ obj = PublicationDelivery(
                                                         version='1',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -268,6 +272,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             fare_zone_ref=[
                                                                 FareZoneRef(
+                                                                    value='',
                                                                     ref='ENT:Bergen@X',
                                                                     version_ref='1'
                                                                 ),
@@ -282,10 +287,12 @@ obj = PublicationDelivery(
                                                         value='Access time restrictions'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access_when',
                                                         version_ref='fxc:v1.0'
                                                     ),
                                                     choice=FareDemandFactorRef(
+                                                        value='',
                                                         ref='ENT:school_carnet@school_day@morning',
                                                         version_ref='1'
                                                     )
@@ -297,10 +304,12 @@ obj = PublicationDelivery(
                                                         value='Access time restrictions'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access_whenn',
                                                         version_ref='fxc:v1.0'
                                                     ),
                                                     choice=FareDemandFactorRef(
+                                                        value='',
                                                         ref='ENT:school_carnet@school_day@afternoon',
                                                         version_ref='1'
                                                     )
@@ -312,6 +321,7 @@ obj = PublicationDelivery(
                                                         value='Eligible user types'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:eligibility',
                                                         version_ref='fxc:v1.0'
                                                     ),
@@ -320,6 +330,7 @@ obj = PublicationDelivery(
                                                         version='1',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:eligible',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -348,10 +359,12 @@ obj = PublicationDelivery(
                                                         value='Usage limit  restrictions'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:usage_limit',
                                                         version_ref='fxc:v1.0'
                                                     ),
                                                     choice=QualityStructureFactorRef(
+                                                        value='',
                                                         ref='ENT:school_carnet@380',
                                                         version_ref='1'
                                                     )
@@ -363,12 +376,14 @@ obj = PublicationDelivery(
                                                         value='Available durations NOTE WE DONT REALLY NEED THIS FOR A CARNET - WOULD NEED IT FOR A PASS  '
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:durations',
                                                         version_ref='fxc:v1.0'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@academic_year'
                                                             ),
@@ -386,6 +401,7 @@ obj = PublicationDelivery(
                                                         version='1',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -434,6 +450,7 @@ obj = PublicationDelivery(
                                                         version='1',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -483,6 +500,7 @@ obj = PublicationDelivery(
                                                         version='1',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_salee',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -558,6 +576,7 @@ obj = PublicationDelivery(
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             ref='ENT:bergen_muni',
                                             version_ref='1.0'
                                         ),
@@ -566,6 +585,7 @@ obj = PublicationDelivery(
                                             version='1',
                                             order=1,
                                             fare_structure_element_ref=FareStructureElementRef(
+                                                value='',
                                                 version='1',
                                                 ref='ENT:school_carnet@conditions_of_sale'
                                             )
@@ -581,26 +601,32 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@access_zones'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@usage_limit'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@access_when@morning'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@durations'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@conditions_of_travel@trip'
                                                             ),
@@ -616,26 +642,32 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@access_zones'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@usage_limit'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@access_when@afternoon'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@durations'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1',
                                                                 ref='ENT:school_carnet@conditions_of_travel@trip'
                                                             ),
@@ -652,6 +684,7 @@ obj = PublicationDelivery(
                                                     maximum_access=1,
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1',
                                                         ref='ENT:school_carnet@morning_trip'
                                                     )
@@ -662,6 +695,7 @@ obj = PublicationDelivery(
                                                     maximum_access=1,
                                                     order=2,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1',
                                                         ref='ENT:school_carnet@afternoon_trip'
                                                     )
@@ -691,10 +725,12 @@ obj = PublicationDelivery(
                                                         lang='no'
                                                     ),
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         ref='ENT:smartcard',
                                                         version_ref='1.0'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=AmountOfPriceUnitProductRef(
+                                                        value='',
                                                         version='1',
                                                         ref='ENT:school_carnet'
                                                     ),
@@ -750,10 +786,12 @@ obj = PublicationDelivery(
                                         version='1',
                                         order=1,
                                         choice=UicOperatingPeriodRef(
+                                            value='',
                                             version='1',
                                             ref='ENT:Bergen2020'
                                         ),
                                         day_type_ref=DayTypeRef(
+                                            value='',
                                             version='1',
                                             ref='ENT:school_day'
                                         )
@@ -822,12 +860,14 @@ obj = PublicationDelivery(
                                                                                         version='1',
                                                                                         order=1,
                                                                                         sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                            value='',
                                                                                             version='1',
                                                                                             ref='ENT:school_carnet'
                                                                                         ),
                                                                                         validity_parameters=ValidityParametersRelStructure(
                                                                                             fare_zone_ref=[
                                                                                                 FareZoneRef(
+                                                                                                    value='',
                                                                                                     ref='ENT:Bergen@X',
                                                                                                     version_ref='1'
                                                                                                 ),
@@ -845,10 +885,12 @@ obj = PublicationDelivery(
                                                                             id='ENX:1234@school_transport',
                                                                             version='1',
                                                                             customer_ref=CustomerRef(
+                                                                                value='',
                                                                                 version='1',
                                                                                 ref='ENX:1234'
                                                                             ),
                                                                             customer_account_ref=CustomerAccountRef(
+                                                                                value='',
                                                                                 version='1',
                                                                                 ref='ENX:1234-T'
                                                                             ),
@@ -868,12 +910,14 @@ obj = PublicationDelivery(
                                                                                                     version='1',
                                                                                                     order=1,
                                                                                                     sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                                        value='',
                                                                                                         version='1',
                                                                                                         ref='ENT:school_carnet'
                                                                                                     ),
                                                                                                     validity_parameters=ValidityParametersRelStructure(
                                                                                                         fare_zone_ref=[
                                                                                                             FareZoneRef(
+                                                                                                                value='',
                                                                                                                 ref='ENT:Bergen@X',
                                                                                                                 version_ref='1'
                                                                                                             ),
@@ -912,6 +956,7 @@ obj = PublicationDelivery(
                                                                                                                 limitations=UsageParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         UsageValidityPeriodRef(
+                                                                                                                            value='',
                                                                                                                             version='1',
                                                                                                                             ref='ENT:school_carnet@trip@validity'
                                                                                                                         ),
@@ -920,18 +965,21 @@ obj = PublicationDelivery(
                                                                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         OperatorRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:bergen_muni',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     choice_1=[
                                                                                                                         StopPlaceRef(
+                                                                                                                            value='',
                                                                                                                             ref='NSR:123',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     service_journey_ref=[
                                                                                                                         ServiceJourneyRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:ServiceJourney:1234578',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
@@ -955,6 +1003,7 @@ obj = PublicationDelivery(
                                                                                                                 limitations=UsageParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         UsageValidityPeriodRef(
+                                                                                                                            value='',
                                                                                                                             version='1',
                                                                                                                             ref='ENT:school_carnet@trip@validity'
                                                                                                                         ),
@@ -963,18 +1012,21 @@ obj = PublicationDelivery(
                                                                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         OperatorRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:bergen_muni',
                                                                                                                             version_ref='1.0'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     choice_1=[
                                                                                                                         StopPlaceRef(
+                                                                                                                            value='',
                                                                                                                             ref='NSR:123',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     service_journey_ref=[
                                                                                                                         ServiceJourneyRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:ServiceJourney:12348',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
@@ -998,6 +1050,7 @@ obj = PublicationDelivery(
                                                                                                                 limitations=UsageParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         UsageValidityPeriodRef(
+                                                                                                                            value='',
                                                                                                                             version='1',
                                                                                                                             ref='ENT:school_carnet@trip@validity'
                                                                                                                         ),
@@ -1006,18 +1059,21 @@ obj = PublicationDelivery(
                                                                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         OperatorRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:bergen_muni',
                                                                                                                             version_ref='1.0'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     choice_1=[
                                                                                                                         StopPlaceRef(
+                                                                                                                            value='',
                                                                                                                             ref='NSR:123',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     service_journey_ref=[
                                                                                                                         ServiceJourneyRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:ServiceJourney:12347',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
@@ -1036,6 +1092,7 @@ obj = PublicationDelivery(
                                                                                                     version='1',
                                                                                                     order=1,
                                                                                                     validable_element_ref=ValidableElementRef(
+                                                                                                        value='',
                                                                                                         version='1',
                                                                                                         ref='ENT:school_carnet@morning_trip'
                                                                                                     )
@@ -1069,6 +1126,7 @@ obj = PublicationDelivery(
                                                                                                                 limitations=UsageParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         UsageValidityPeriodRef(
+                                                                                                                            value='',
                                                                                                                             version='1',
                                                                                                                             ref='ENT:school_carnet@trip@validity'
                                                                                                                         ),
@@ -1077,18 +1135,21 @@ obj = PublicationDelivery(
                                                                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         OperatorRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:bergen_muni',
                                                                                                                             version_ref='1.0'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     choice_1=[
                                                                                                                         StopPlaceRef(
+                                                                                                                            value='',
                                                                                                                             ref='NSR:891',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     service_journey_ref=[
                                                                                                                         ServiceJourneyRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:ServiceJourney:123455438',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
@@ -1112,6 +1173,7 @@ obj = PublicationDelivery(
                                                                                                                 limitations=UsageParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         UsageValidityPeriodRef(
+                                                                                                                            value='',
                                                                                                                             version='1',
                                                                                                                             ref='ENT:school_carnet@trip@validity'
                                                                                                                         ),
@@ -1120,18 +1182,21 @@ obj = PublicationDelivery(
                                                                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                                                                     choice=[
                                                                                                                         OperatorRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:bergen_muni',
                                                                                                                             version_ref='1.0'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     choice_1=[
                                                                                                                         StopPlaceRef(
+                                                                                                                            value='',
                                                                                                                             ref='NSR:891',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
                                                                                                                     ],
                                                                                                                     service_journey_ref=[
                                                                                                                         ServiceJourneyRef(
+                                                                                                                            value='',
                                                                                                                             ref='ENT:ServiceJourney:123455438',
                                                                                                                             version_ref='EXTERNAl'
                                                                                                                         ),
@@ -1150,6 +1215,7 @@ obj = PublicationDelivery(
                                                                                                     version='1',
                                                                                                     order=1,
                                                                                                     validable_element_ref=ValidableElementRef(
+                                                                                                        value='',
                                                                                                         version='1',
                                                                                                         ref='ENT:school_carnet@afternoon_trip'
                                                                                                     )
@@ -1161,10 +1227,12 @@ obj = PublicationDelivery(
                                                                                 ]
                                                                             ),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='1',
                                                                                 ref='ENX:5781234501'
                                                                             ),
                                                                             medium_access_device_ref=SmartcardRef(
+                                                                                value='',
                                                                                 ref='ENX:87654',
                                                                                 version_ref='1'
                                                                             )

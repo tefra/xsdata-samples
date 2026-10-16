@@ -339,15 +339,18 @@ obj = PublicationDelivery(
                     choice_1=[
                         NetworkFilterByValueStructure(
                             layer_ref=LayerRef(
+                                value='',
                                 ref='fxc:fareNetwork_fareProducts_farePrices'
                             ),
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     OperatorRef(
+                                        value='',
                                         version='any',
                                         ref='coc:MCR'
                                     ),
                                     VehicleSharingRef(
+                                        value='',
                                         version='any',
                                         ref='car_club'
                                     ),
@@ -385,15 +388,18 @@ obj = PublicationDelivery(
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         CodespaceRef(
+                            value='',
                             ref='mc_data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mc_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='1.0',
                         ref='mc:my_car'
                     ),
@@ -537,6 +543,7 @@ obj = PublicationDelivery(
                                         ),
                                         contact_details=ContactStructure(
                                             contact_ref=ContactRef(
+                                                value='',
                                                 version='any',
                                                 ref='MCR'
                                             )
@@ -550,6 +557,7 @@ obj = PublicationDelivery(
                                                     id='coc:MCR',
                                                     version='any',
                                                     organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='floggit'
                                                     ),
@@ -572,6 +580,7 @@ obj = PublicationDelivery(
                                             value=SelfDriveSubmodeEnumeration.HIRE_CAR
                                         ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehicleSharingRef(
+                                            value='',
                                             version='any',
                                             ref='car_club'
                                         )
@@ -668,10 +677,12 @@ obj = PublicationDelivery(
                                             value='Model A'
                                         ),
                                         transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                            value='',
                                             version='any',
                                             ref='small_car'
                                         ),
                                         vehicle_model_profile_ref=CarModelProfileRef(
+                                            value='',
                                             version='any',
                                             ref='model_a'
                                         )
@@ -707,6 +718,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mc:car_club_example'
                                     ),
@@ -783,10 +795,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.OPEN_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='Alphaville'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='coc:MCR'
                                         ),
@@ -797,6 +811,7 @@ obj = PublicationDelivery(
                                         vehicle_types=TransportTypeRefsRelStructure(
                                             transport_type_ref_or_vehicle_type_ref=[
                                                 SimpleVehicleTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='small_car'
                                                 ),
@@ -832,6 +847,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.CAR,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='small_car'
                                                                 ),
@@ -842,6 +858,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.CAR,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='small_car'
                                                                 ),
@@ -868,10 +885,12 @@ obj = PublicationDelivery(
                                         ),
                                         covered=CoveredEnumeration.OUTDOORS,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='Alphaville'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='coc:MCR'
                                         ),
@@ -882,6 +901,7 @@ obj = PublicationDelivery(
                                         vehicle_types=TransportTypeRefsRelStructure(
                                             transport_type_ref_or_vehicle_type_ref=[
                                                 SimpleVehicleTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='small_car'
                                                 ),
@@ -917,6 +937,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.CAR,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='small_car'
                                                                 ),
@@ -927,6 +948,7 @@ obj = PublicationDelivery(
                                                                 version='any',
                                                                 parking_vehicle_type=ParkingVehicleEnumeration.CAR,
                                                                 transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='small_car'
                                                                 ),
@@ -1023,10 +1045,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mc:car_club_example'
                                     ),
                                     ServiceCalendarFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mc:car_club_example'
                                     ),
@@ -1046,18 +1070,22 @@ obj = PublicationDelivery(
                                                     id='car_01',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='coc:MCR'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='small_car'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mini_whiz'
                                                     ),
                                                     vehicle_model_profile_ref=CarModelProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='model_a'
                                                     ),
@@ -1078,18 +1106,22 @@ obj = PublicationDelivery(
                                                     id='car_02',
                                                     version='any',
                                                     transport_organisation_ref=OperatorRef(
+                                                        value='',
                                                         version='any',
                                                         ref='coc:MCR'
                                                     ),
                                                     transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='small_car'
                                                     ),
                                                     vehicle_model_ref=VehicleModelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mini_whiz'
                                                     ),
                                                     vehicle_model_profile_ref=CarModelProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='model_a'
                                                     ),
@@ -1117,6 +1149,7 @@ obj = PublicationDelivery(
                                         id='my_car_club',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1162,6 +1195,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='coc:MCR'
                                         ),
@@ -1170,12 +1204,14 @@ obj = PublicationDelivery(
                                         proposed_by_services=OnlineServiceRefsRelStructure(
                                             online_service_ref=[
                                                 OnlineServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mycar_online'
                                                 ),
                                             ]
                                         ),
                                         vehicle_sharing_ref=VehicleSharingRef(
+                                            value='',
                                             version='any',
                                             ref='car_club'
                                         ),
@@ -1184,6 +1220,7 @@ obj = PublicationDelivery(
                                         fleets=FleetRefsRelStructure(
                                             fleet_ref=[
                                                 FleetRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mycar_fleet'
                                                 ),
@@ -1201,12 +1238,14 @@ obj = PublicationDelivery(
                                             value='Online registration for My Car'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
                                         proposing_services=MobilityServiceRefsRelStructure(
                                             mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=[
                                                 VehicleSharingServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='my_car_club'
                                                 ),
@@ -1222,10 +1261,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='my_car_club'
                                         ),
                                         vehicle_sharing_parking_area_ref=VehicleSharingParkingAreaRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha_A1'
                                         )
@@ -1235,10 +1276,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='my_car_club'
                                         ),
                                         vehicle_sharing_parking_area_ref=VehicleSharingParkingAreaRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_beta_B1'
                                         )
@@ -1257,10 +1300,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     MobilityServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mc:car_club_example'
                                     ),
                                     SiteFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mc:car_club_example'
                                     ),
@@ -1285,10 +1330,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='coc:MCR'
                                         ),
                                         choice_1=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='my_car_club'
                                         ),
@@ -1313,6 +1360,7 @@ obj = PublicationDelivery(
                                                         value='Access rights'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:can_access',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1321,6 +1369,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1331,6 +1380,7 @@ obj = PublicationDelivery(
                                                                     id='mycar_online@membership@entitlements_given',
                                                                     version='any',
                                                                     choice=PreassignedFareProductRef(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='my_car@single_session'
                                                                     ),
@@ -1350,11 +1400,13 @@ obj = PublicationDelivery(
                                                         value='Any where in Zone'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access_when'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@1-year'
                                                             ),
@@ -1368,6 +1420,7 @@ obj = PublicationDelivery(
                                                         value='Eligible user types'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:eligibility',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1376,6 +1429,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:eligible',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1392,6 +1446,7 @@ obj = PublicationDelivery(
                                                                     types_of_proof_required_ref=TypesOfProofRefsRelStructure(
                                                                         type_of_proof_ref=[
                                                                             TypeOfProofRef(
+                                                                                value='',
                                                                                 ref='driving_licence',
                                                                                 version_ref='external'
                                                                             ),
@@ -1409,6 +1464,7 @@ obj = PublicationDelivery(
                                                         value='Conditions on travel'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:travel_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1420,6 +1476,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1445,6 +1502,7 @@ obj = PublicationDelivery(
                                                         value='Conditions of sale'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:sale_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1456,6 +1514,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_sale',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1497,10 +1556,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='coc:MCR'
                                         ),
                                         choice_1=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='my_car_club'
                                         ),
@@ -1541,6 +1602,7 @@ obj = PublicationDelivery(
                                                         value='Anywhere in Zone'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access'
                                                     ),
                                                     validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context=GenericParameterAssignment(
@@ -1548,6 +1610,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1555,12 +1618,14 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='AllMetropolis'
                                                                 ),
                                                             ],
                                                             choice_2=[
                                                                 VehicleSharingServiceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='my_car_club'
                                                                 ),
@@ -1575,19 +1640,23 @@ obj = PublicationDelivery(
                                                         value='Any where in Zone'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access_when'
                                                     ),
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeIntervalsRelStructure(
                                                         time_interval_ref_or_time_interval=[
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@2-hours'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@12-hours'
                                                             ),
                                                             TimeIntervalRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@1-day'
                                                             ),
@@ -1601,6 +1670,7 @@ obj = PublicationDelivery(
                                                         value='Eligible user types'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:eligibility',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1609,12 +1679,14 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:eligible',
                                                             version_ref='EXTERNAL'
                                                         ),
                                                         limitations=UsageParametersRelStructure(
                                                             choice=[
                                                                 UserProfileRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='adult_driver'
                                                                 ),
@@ -1629,6 +1701,7 @@ obj = PublicationDelivery(
                                                         value='Conditions on travel'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:travel_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1640,6 +1713,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1683,6 +1757,7 @@ obj = PublicationDelivery(
                                                         value='Conditions of sale'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:sale_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1694,6 +1769,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_sale',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1736,6 +1812,7 @@ obj = PublicationDelivery(
                                         id='mycar_online@membership',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1743,6 +1820,7 @@ obj = PublicationDelivery(
                                             value='1 years membership of My Car online'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -1757,22 +1835,27 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@membership@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@membership@durations'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@membership@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@membership@conditions_of_travel'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@membership@conditions_of_sale'
                                                             ),
@@ -1822,6 +1905,7 @@ obj = PublicationDelivery(
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL_THEN_ADJUST_AT_END_OF_TRAVEL,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='coc:MCR'
                                         ),
@@ -1844,22 +1928,27 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@single_session@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@single_session@durations'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@single_session@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@single_session@conditions_of_travel'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@single_session@conditions_of_sale'
                                                             ),
@@ -1875,6 +1964,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='my_car@single_session@travel'
                                                     )
@@ -1895,6 +1985,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.MOBILE_DEVICE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -1914,6 +2005,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.ONLINE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -1941,6 +2033,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mobile_application_data'
                                                 ),
@@ -1970,6 +2063,7 @@ obj = PublicationDelivery(
                                         id='mycar_online@membership-SOP@mobile_app',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1982,10 +2076,12 @@ obj = PublicationDelivery(
                                                     id='mycar_online@membership-SOP@mobile_app',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=SaleDiscountRightRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mycar_online@membership'
                                                     ),
@@ -1998,6 +2094,7 @@ obj = PublicationDelivery(
                                         id='my_car@single_session-SOP@mobileApp',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2022,6 +2119,7 @@ obj = PublicationDelivery(
                                                                 id='my_car@single_session-SOP@mobileApp@registered',
                                                                 version='any',
                                                                 choice=SaleDiscountRightRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mycar_online@membership'
                                                                 ),
@@ -2034,6 +2132,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         choice_2=[
                                                             OnlineServiceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='mycar_online'
                                                             ),
@@ -2052,6 +2151,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application'
                                                     ),
@@ -2063,6 +2163,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_device'
                                                     )
@@ -2075,10 +2176,12 @@ obj = PublicationDelivery(
                                                     id='my_car@single_session-SOP@mobileApp',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='my_car@single_session'
                                                     ),
@@ -2101,6 +2204,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mc:car_club_example-single_session'
                                     ),
@@ -2132,12 +2236,14 @@ obj = PublicationDelivery(
                                             value='My Car  prices'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='coc:MCR'
                                         ),
                                         limitations=UsageParameterRefsRelStructure(
                                             choice=[
                                                 UserProfileRef(
+                                                    value='',
                                                     version='any',
                                                     ref='adult_driver'
                                                 ),
@@ -2145,10 +2251,12 @@ obj = PublicationDelivery(
                                         ),
                                         specifics=FareTableSpecificsStructure(
                                             tariff_zone_ref=TariffZoneRef(
+                                                value='',
                                                 version='any',
                                                 ref='AllMetropolis'
                                             ),
                                             choice_1=VehicleSharingServiceRef(
+                                                value='',
                                                 version='any',
                                                 ref='my_car_club'
                                             )
@@ -2164,6 +2272,7 @@ obj = PublicationDelivery(
                                                     prices_for=PriceableObjectRefsRelStructure(
                                                         choice=[
                                                             SalesOfferPackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@single_session-SOP@mobileApp'
                                                             ),
@@ -2172,6 +2281,7 @@ obj = PublicationDelivery(
                                                     used_in=UsedInRefsRelStructure(
                                                         choice=[
                                                             TariffRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='my_car@single_session'
                                                             ),
@@ -2192,6 +2302,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('30.00'),
                                                                             sales_offer_package_ref_or_sales_offer_package_element_ref=SalesOfferPackageRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mycar_online@membership-SOP@mobile_app'
                                                                             )
@@ -2204,6 +2315,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('300.00'),
                                                                             choice=ChargingPolicyRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@single_session@charging_policy@Deposit'
                                                                             )
@@ -2216,6 +2328,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('-300.00'),
                                                                             choice=ChargingPolicyRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@single_session@charging_policy@Deposit'
                                                                             )
@@ -2225,6 +2338,7 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             amount=Decimal('45.00'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@2-hours'
                                                                             )
@@ -2234,6 +2348,7 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             amount=Decimal('60.00'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@12-hours'
                                                                             )
@@ -2243,6 +2358,7 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             amount=Decimal('90.00'),
                                                                             time_interval_ref=TimeIntervalRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@1-day'
                                                                             )
@@ -2259,6 +2375,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParameterRefsRelStructure(
                                                                     choice=[
                                                                         UserProfileRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='adult_driver'
                                                                         ),
@@ -2274,6 +2391,7 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             amount=Decimal('100.00'),
                                                                             choice=RentalPenaltyPolicyRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@single_session@hire_penalty@late_return'
                                                                             )
@@ -2304,6 +2422,7 @@ obj = PublicationDelivery(
                 prerequisites=VersionFrameRefsRelStructure(
                     version_frame_ref=[
                         CompositeFrameRef(
+                            value='',
                             version='1.0',
                             ref='mc:car_club_example'
                         ),
@@ -2321,14 +2440,17 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=VehicleSharingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='my_car_club'
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             ref='mct:317867122222',
                                             version_ref='External'
                                         ),
                                         service_access_code_ref=ServiceAccessCodeRef(
+                                            value='',
                                             version='any',
                                             ref='mct:Good@Cust444@005@purchase_single_session'
                                         )
@@ -2345,6 +2467,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2021, 10, 8, 11, 6, 55),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha'
                                         ),
@@ -2361,6 +2484,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2021, 10, 8, 11, 15, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha_A1@01'
                                         ),
@@ -2371,6 +2495,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2021, 10, 8, 11, 15, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha_A1@02'
                                         ),
@@ -2384,6 +2509,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2021, 10, 8, 11, 7, 20),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha'
                                         ),
@@ -2398,6 +2524,7 @@ obj = PublicationDelivery(
                                         version='any',
                                         date=XmlDateTime(2021, 10, 8, 11, 7, 20),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha_A1@01'
                                         ),
@@ -2411,6 +2538,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2021, 10, 8, 23, 10, 0),
                                         parking_ref=ParkingRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha'
                                         ),
@@ -2428,6 +2556,7 @@ obj = PublicationDelivery(
                                         ),
                                         date=XmlDateTime(2021, 10, 8, 23, 10, 0),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=MonitoredVehicleSharingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='car_station_alpha_A1@01'
                                         ),
@@ -2445,6 +2574,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='mc_data'
                                     ),
                                     Codespace(
@@ -2484,12 +2614,14 @@ obj = PublicationDelivery(
                                                     customer_purchase_packages=CustomerPurchasePackageRefsRelStructure(
                                                         customer_purchase_package_ref=[
                                                             CustomerPurchasePackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='mct:Good@Cust444@005'
                                                             ),
                                                         ]
                                                     ),
                                                     customer_payment_means_ref=CustomerPaymentMeansRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mct:Cust444@AC7651@p1'
                                                     ),
@@ -2502,6 +2634,7 @@ obj = PublicationDelivery(
                                                                     value='B.Johnson Visa Card'
                                                                 ),
                                                                 medium_access_device_ref=EmvCardRef(
+                                                                    value='',
                                                                     ref='visa:47594444555666',
                                                                     version_ref='external'
                                                                 )
@@ -2513,6 +2646,7 @@ obj = PublicationDelivery(
                                                                     value='B.Johnson mobile device'
                                                                 ),
                                                                 medium_access_device_ref=MobileDeviceRef(
+                                                                    value='',
                                                                     ref='mct:317867122222',
                                                                     version_ref='external'
                                                                 )
@@ -2521,6 +2655,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     medium_access_devices=MediumAccessDeviceRefsRelStructure(
                                                         medium_access_device_ref=MobileDeviceRef(
+                                                            value='',
                                                             ref='mct:317867122222',
                                                             version_ref='External'
                                                         )
@@ -2534,6 +2669,7 @@ obj = PublicationDelivery(
                                                     id='mct:Cust444@contract001',
                                                     version='any',
                                                     customer_ref=CustomerRef(
+                                                        value='',
                                                         ref='mct:Cust444',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -2547,6 +2683,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2021, 2, 28, 13, 0, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -2561,10 +2698,12 @@ obj = PublicationDelivery(
                                                                             ),
                                                                             date=XmlDateTime(2021, 2, 28, 13, 0, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mct:Cust444@contract001@t001@join_as_member'
                                                                             ),
                                                                             fare_price_ref_or_cell_ref=SalesOfferPackagePriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mycar_online@membership-SOP@mobile_app'
                                                                             ),
@@ -2573,12 +2712,14 @@ obj = PublicationDelivery(
                                                                                 rule_step_result=[
                                                                                     PriceRuleStepResultStructure(
                                                                                         fare_price_ref=SalesOfferPackagePriceRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='mycar_online@membership-SOP@mobile_app'
                                                                                         ),
                                                                                         amount=Decimal('30.00'),
                                                                                         adjustment_amount=Decimal('4.50'),
                                                                                         discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='vat'
                                                                                         ),
@@ -2595,10 +2736,12 @@ obj = PublicationDelivery(
                                                                             travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                                 start=XmlDateTime(2021, 2, 28, 13, 0, 0),
                                                                                 authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='coc:MCR'
                                                                                 ),
                                                                                 choice=VehicleSharingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='my_car_club'
                                                                                 )
@@ -2613,10 +2756,12 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='mycar_online@membership-SOP@mobile_app'
                                                                                         ),
                                                                                         time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='my_car@1-day'
                                                                                         )
@@ -2629,6 +2774,7 @@ obj = PublicationDelivery(
                                                                 customer_purchase_packages=CustomerPurchasePackagesRelStructure(
                                                                     customer_purchase_package_or_customer_purchase_package_ref=[
                                                                         CustomerPurchasePackageRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mct:Good@Cust444@001'
                                                                         ),
@@ -2646,6 +2792,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             version='any',
                                                                             type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mobile_application_data'
                                                                             )
@@ -2662,6 +2809,7 @@ obj = PublicationDelivery(
                                                                 date=XmlDateTime(2021, 10, 1, 10, 10, 0),
                                                                 is_valid=True,
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -2670,12 +2818,14 @@ obj = PublicationDelivery(
                                                                     rule_step_result=[
                                                                         PriceRuleStepResultStructure(
                                                                             fare_price_ref=TimeIntervalPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@1-day'
                                                                             ),
                                                                             amount=Decimal('90.00'),
                                                                             adjustment_amount=Decimal('13.50'),
                                                                             discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='vat'
                                                                             ),
@@ -2698,10 +2848,12 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2021, 10, 8, 11, 15, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mct:Cust444@trans005@purchase_single_session'
                                                                             ),
                                                                             fare_price_ref_or_cell_ref=TimeIntervalPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='my_car@1-day'
                                                                             ),
@@ -2712,6 +2864,7 @@ obj = PublicationDelivery(
                                                                                 end=XmlDateTime(2021, 10, 9, 11, 14, 59),
                                                                                 duration=XmlDuration("P1D"),
                                                                                 choice=VehicleSharingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='my_car_club'
                                                                                 )
@@ -2726,86 +2879,102 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         validable_element_ref=ValidableElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='my_car@single_session@travel'
                                                                                         ),
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='my_car@single_session'
                                                                                         ),
                                                                                         fare_structure_element_ref=FareStructureElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='my_car@single_session@access'
                                                                                         ),
                                                                                         sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='my_car@single_session-SOP@mobileApp'
                                                                                         ),
                                                                                         validity_parameters=ValidityParametersRelStructure(
                                                                                             mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                                 VehicleSharingRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='car_club'
                                                                                                 ),
                                                                                             ],
                                                                                             choice=[
                                                                                                 OperatorRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='coc:MCR'
                                                                                                 ),
                                                                                                 OnlineServiceOperatorRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='floggit'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_1=[
                                                                                                 VehicleSharingParkingAreaRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='car_station_alpha_A1'
                                                                                                 ),
                                                                                                 MonitoredVehicleSharingParkingBayRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='car_station_alpha_A1@01'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_model_profile_ref=[
                                                                                                 CarModelProfileRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='model_a'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_2=[
                                                                                                 VehicleSharingServiceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='my_car_club'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_ref=[
                                                                                                 VehicleRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='car_01'
                                                                                                 ),
                                                                                             ],
                                                                                             type_of_travel_document_ref=[
                                                                                                 TypeOfTravelDocumentRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application_data'
                                                                                                 ),
                                                                                             ],
                                                                                             distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                                 DistributionChannelRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application'
                                                                                                 ),
                                                                                             ],
                                                                                             fulfilment_method_ref=[
                                                                                                 FulfilmentMethodRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_device'
                                                                                                 ),
                                                                                             ]
                                                                                         ),
                                                                                         time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='my_car@1-day'
                                                                                         )
@@ -2818,6 +2987,7 @@ obj = PublicationDelivery(
                                                                 customer_purchase_packages=CustomerPurchasePackagesRelStructure(
                                                                     customer_purchase_package_or_customer_purchase_package_ref=[
                                                                         CustomerPurchasePackageRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mct:Good@Cust444@005'
                                                                         ),
@@ -2826,6 +2996,7 @@ obj = PublicationDelivery(
                                                                 travel_documents=TravelDocumentsRelStructure(
                                                                     choice=[
                                                                         ServiceAccessCodeRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mct:Good@Cust444@005@purchase_single_session'
                                                                         ),
@@ -2856,10 +3027,12 @@ obj = PublicationDelivery(
                                             value='Membership'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='mct:Cust444'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='mct:Cust444@AC7651'
                                         ),
@@ -2870,6 +3043,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2021, 2, 28, 13, 0, 0),
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mycar_online@membership-SOP@mobile_app'
                                                     ),
@@ -2878,6 +3052,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='mct:Cust444@contract001@t001@join_as_member'
                                         ),
@@ -2892,12 +3067,14 @@ obj = PublicationDelivery(
                                                         rule_step_result=[
                                                             PriceRuleStepResultStructure(
                                                                 fare_price_ref=SalesOfferPackagePriceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='mycar_online@membership-SOP@mobile_app'
                                                                 ),
                                                                 amount=Decimal('30.00'),
                                                                 adjustment_amount=Decimal('4.50'),
                                                                 discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='vat'
                                                                 ),
@@ -2910,6 +3087,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     customer_purchase_package_ref_or_customer_purchase_package_element_ref=CustomerPurchasePackageRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mct:Good@Cust444@001'
                                                     )
@@ -2917,10 +3095,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             ref='mct:317867122222',
                                             version_ref='external'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             ref='mct:317867122222@mboik',
                                             version_ref='external'
                                         )
@@ -2940,10 +3120,12 @@ obj = PublicationDelivery(
                                             value='Day Hire on  2021-10-08  at 11:15:00 '
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='mct:Cust444'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='mct:Cust444@AC7651'
                                         ),
@@ -2954,6 +3136,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2021, 10, 1, 10, 10, 0),
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='my_car@single_session-SOP@mobileApp'
                                                     ),
@@ -2991,41 +3174,48 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                         VehicleSharingRef(
+                                                                            value='',
                                                                             ref='car_club'
                                                                         ),
                                                                     ],
                                                                     choice=[
                                                                         OperatorRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='coc:MCR'
                                                                         ),
                                                                     ],
                                                                     choice_2=[
                                                                         VehicleSharingServiceRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='my_car_club'
                                                                         ),
                                                                     ],
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application_data'
                                                                         ),
                                                                     ],
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application'
                                                                         ),
                                                                     ],
                                                                     fulfilment_method_ref=[
                                                                         FulfilmentMethodRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_device'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref=TimeIntervalRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='my_car@1-day'
                                                                 )
@@ -3037,6 +3227,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='mct:Cust444@trans005@purchase_single_session'
                                         ),
@@ -3051,12 +3242,14 @@ obj = PublicationDelivery(
                                                         rule_step_result=[
                                                             PriceRuleStepResultStructure(
                                                                 fare_price_ref=TimeIntervalPriceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='my_car@1-day'
                                                                 ),
                                                                 amount=Decimal('90.00'),
                                                                 adjustment_amount=Decimal('13.50'),
                                                                 discounting_rule_ref_or_pricing_rule_ref=DiscountingRuleRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='vat'
                                                                 ),
@@ -3069,6 +3262,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     customer_purchase_package_ref_or_customer_purchase_package_element_ref=CustomerPurchasePackageRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mct:Good@Cust444@005'
                                                     )
@@ -3088,15 +3282,18 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2021, 10, 1, 10, 10, 0),
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     customer_purchase_package_ref=CustomerPurchasePackageRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mct:Good@Cust444@005'
                                                     ),
                                                     access_code='9876',
                                                     vehicle_access_credentials_assignment_ref=VehicleAccessCredentialsAssignmentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mct:Cust444@trans005@purchase_day_pase'
                                                     )
@@ -3104,10 +3301,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             ref='mct:317867122222',
                                             version_ref='external'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             ref='mct:31786712244@mboik',
                                             version_ref='external'
                                         )

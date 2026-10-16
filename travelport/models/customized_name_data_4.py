@@ -16,7 +16,7 @@ class CustomizedNameData4:
         name = "CustomizedNameData"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    value: str = field(default="")
+    value: str = field()
     key: None | str = field(
         default=None,
         metadata={

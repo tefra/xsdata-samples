@@ -41,7 +41,7 @@ class SectionInitializationPolicyType:
     class Meta:
         name = "SECTION-INITIALIZATION-POLICY-TYPE"
 
-    value: str = field(default="")
+    value: str = field()
     s: None | str = field(
         default=None,
         metadata={

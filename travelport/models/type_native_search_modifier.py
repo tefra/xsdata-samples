@@ -18,7 +18,7 @@ class TypeNativeSearchModifier:
     class Meta:
         name = "typeNativeSearchModifier"
 
-    value: str = field(default="")
+    value: str = field()
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",

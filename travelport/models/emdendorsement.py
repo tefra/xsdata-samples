@@ -18,9 +18,8 @@ class Emdendorsement:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 1,
             "max_length": 255,
-        },
+        }
     )

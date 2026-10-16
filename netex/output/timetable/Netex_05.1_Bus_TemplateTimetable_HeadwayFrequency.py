@@ -111,6 +111,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -120,7 +121,7 @@ obj = PublicationDelivery(
                             id='hde:TIM_24o_FS_Outbound',
                             version='any',
                             name=MultilingualString(
-
+                                value=''
                             ),
                             service_calendar=ServiceCalendar(
                                 id='hde:TIM_24o_FS_Outbound',
@@ -200,6 +201,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypeRefsRelStructure(
                                             day_type_ref=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hde:DT_01MTWTFSS'
                                                 ),
@@ -210,6 +212,7 @@ obj = PublicationDelivery(
                                             ref='hde:svp_24o'
                                         ),
                                         choice=LineRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:LN_234'
                                         ),
@@ -219,6 +222,7 @@ obj = PublicationDelivery(
                                                     id='hde:tvjh_24o_02_001',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_001'
                                                     ),
@@ -234,6 +238,7 @@ obj = PublicationDelivery(
                                                     id='hde:tvjh_24o_02_002',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_002'
                                                     ),
@@ -250,6 +255,7 @@ obj = PublicationDelivery(
                                                     id='hde:tvjh_24o_02_003',
                                                     version='any',
                                                     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view=ScheduledStopPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:SSP_077'
                                                     ),

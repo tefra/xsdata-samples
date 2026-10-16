@@ -297,10 +297,10 @@ obj = ForecastRevision(
     forecast_revision_line=[
         ForecastRevisionLine(
             id=Id(
-
+                value=''
             ),
             revised_forecast_line_id=RevisedForecastLineId(
-
+                value=''
             ),
             source_forecast_issue_date=SourceForecastIssueDate(
                 value=XmlDate(2005, 2, 17)

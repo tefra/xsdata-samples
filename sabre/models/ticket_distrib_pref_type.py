@@ -26,11 +26,10 @@ class TicketDistribPrefType:
     """
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 0,
             "max_length": 64,
-        },
+        }
     )
     prefer_level: PreferLevelType = field(
         default=PreferLevelType.PREFERRED,

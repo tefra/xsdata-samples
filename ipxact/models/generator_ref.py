@@ -15,7 +15,7 @@ class GeneratorRef:
         name = "generatorRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: str = field(default="")
+    value: str = field()
     id: None | str = field(
         default=None,
         metadata={

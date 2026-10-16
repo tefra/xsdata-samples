@@ -19,7 +19,7 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
     class Meta:
         global_type = False
 
-    value: str = field(default="")
+    value: str = field()
     party_type: None | str = field(
         default=None,
         metadata={

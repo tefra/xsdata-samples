@@ -126,6 +126,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
+                                            value='',
                                             ref=''
                                         ),
                                     ]
@@ -165,6 +166,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         DayTypeRef(
+                                            value='',
                                             ref=''
                                         ),
                                     ]
@@ -186,6 +188,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='pkg_data'
                     )
                 ),
@@ -197,6 +200,7 @@ obj = PublicationDelivery(
                                 ValidityConditionsRelStructure(
                                     choice=[
                                         AvailabilityConditionRef(
+                                            value='',
                                             version='any',
                                             ref='pkg:PP01_Opening_Hours'
                                         ),
@@ -271,6 +275,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pkg:PP01_Opening_Hours'
                                                     ),
@@ -282,6 +287,7 @@ obj = PublicationDelivery(
                                             value='Main Vehicle Entrance from street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='pkg:PP01'
                                         ),
@@ -301,6 +307,7 @@ obj = PublicationDelivery(
                                             ValidityConditionsRelStructure(
                                                 choice=[
                                                     AvailabilityConditionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pkg:PP01_Exit_Hours'
                                                     ),
@@ -312,6 +319,7 @@ obj = PublicationDelivery(
                                             value='Main Vehicle Exit to street'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='pkg:PP01'
                                         ),
@@ -343,6 +351,7 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
@@ -350,6 +359,7 @@ obj = PublicationDelivery(
                                         to=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='pkg:PP01'
                                             )
@@ -399,6 +409,7 @@ obj = PublicationDelivery(
                                                     id='pkg:PP01@C01_disabled',
                                                     version='any',
                                                     parking_properties_ref=ParkingPropertiesRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pkg:PP01'
                                                     ),
@@ -411,6 +422,7 @@ obj = PublicationDelivery(
                                                     id='pkg:PP01@C02_other',
                                                     version='any',
                                                     parking_properties_ref=ParkingPropertiesRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pkg:PP01'
                                                     ),
@@ -427,10 +439,12 @@ obj = PublicationDelivery(
                             vehicle_entrances=ParkingEntrancesForVehiclesRelStructure(
                                 parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles=[
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='pkg:PP01@EV11@Entrance'
                                     ),
                                     ParkingEntranceForVehiclesRef(
+                                        value='',
                                         version='any',
                                         ref='pkg:PP01@EV12@Exit'
                                     ),
@@ -463,7 +477,7 @@ obj = PublicationDelivery(
                                                             property_of_day=[
                                                                 PropertyOfDay(
                                                                     description=MultilingualString(
-
+                                                                        value=''
                                                                     ),
                                                                     days_of_week=[
                                                                         DayOfWeekEnumeration.MONDAY,
@@ -536,6 +550,7 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 ref='napt:9100:00476',
                                                 version_ref='EXTERNAL'
                                             )
@@ -543,6 +558,7 @@ obj = PublicationDelivery(
                                         to=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.SELF_DRIVE,
                                             place_ref=ParkingRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='pkg:PS22'
                                             )
@@ -603,6 +619,7 @@ obj = PublicationDelivery(
                                                     id='pkg:PS22@01_disabled',
                                                     version='any',
                                                     parking_properties_ref=ParkingPropertiesRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pkg:PS22'
                                                     ),
@@ -615,6 +632,7 @@ obj = PublicationDelivery(
                                                     id='pkg:PS22@other',
                                                     version='any',
                                                     parking_properties_ref=ParkingPropertiesRef(
+                                                        value='',
                                                         version='any',
                                                         ref='pkg:PS22'
                                                     ),

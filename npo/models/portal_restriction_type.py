@@ -12,7 +12,7 @@ class PortalRestrictionType:
     class Meta:
         name = "portalRestrictionType"
 
-    value: str = field(default="")
+    value: str = field()
     portal_id: None | str = field(
         default=None,
         metadata={

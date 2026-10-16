@@ -34,12 +34,11 @@ class Organization:
         namespace = "http://www.crossref.org/schema/5.3.1"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 1,
             "max_length": 511,
             "white_space": "collapse",
-        },
+        }
     )
     sequence: OrganizationSequence = field(
         metadata={

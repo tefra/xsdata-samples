@@ -36,10 +36,9 @@ class Sd:
         name = "SD"
 
     value: str = field(
-        default="",
         metadata={
             "white_space": "preserve",
-        },
+        }
     )
     s: None | str = field(
         default=None,

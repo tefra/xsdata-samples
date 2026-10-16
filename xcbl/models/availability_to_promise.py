@@ -28,7 +28,7 @@ from xcbl.models.trading_partner_response import Reference
 
 @dataclass(kw_only=True)
 class AvailabilityIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

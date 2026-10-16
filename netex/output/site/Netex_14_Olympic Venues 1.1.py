@@ -92,6 +92,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='oda'
                     )
                 ),
@@ -121,11 +122,13 @@ obj = PublicationDelivery(
                                             value='Olympic Park'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Park'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -144,6 +147,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Park',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -185,6 +189,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -206,6 +211,7 @@ obj = PublicationDelivery(
                                                                 check_process=CheckProcessTypeEnumeration.SECURITY_CHECK,
                                                                 congestion=CongestionEnumeration.QUEUE,
                                                                 facility_ref=FacilityRef(
+                                                                    value='',
                                                                     ref='12345'
                                                                 ),
                                                                 delays=CheckConstraintDelaysRelStructure(
@@ -265,6 +271,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -340,6 +347,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -415,6 +423,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -484,11 +493,13 @@ obj = PublicationDelivery(
                                             value='Aquatics Centre'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -507,6 +518,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -524,6 +536,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -541,11 +554,13 @@ obj = PublicationDelivery(
                                             value='Olympic Stadium'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -564,6 +579,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -581,6 +597,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -598,11 +615,13 @@ obj = PublicationDelivery(
                                             value='Velodrome'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -621,6 +640,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -638,6 +658,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -655,11 +676,13 @@ obj = PublicationDelivery(
                                             value='Basketball Arena'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -678,6 +701,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -695,6 +719,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -712,11 +737,13 @@ obj = PublicationDelivery(
                                             value='Hockey Centre'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -735,6 +762,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -752,6 +780,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -769,11 +798,13 @@ obj = PublicationDelivery(
                                             value='Water Polo Arena'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -792,6 +823,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -809,6 +841,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -826,11 +859,13 @@ obj = PublicationDelivery(
                                             value='Handball Arena'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -849,6 +884,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -866,6 +902,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -883,11 +920,13 @@ obj = PublicationDelivery(
                                             value='BMX Track'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -906,6 +945,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -923,6 +963,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -938,11 +979,13 @@ obj = PublicationDelivery(
                                             value='Eton Manor (Paralympics only)'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -961,12 +1004,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100OPK'
                                         )
@@ -987,16 +1032,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1562'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
@@ -1017,16 +1065,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1562'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1045,16 +1096,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1033'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
@@ -1075,16 +1129,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1033'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1103,16 +1160,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('442'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
@@ -1133,16 +1193,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('442'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1163,16 +1226,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1707'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
@@ -1193,16 +1259,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1707'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1221,16 +1290,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('566'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
@@ -1251,16 +1323,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('566'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1279,16 +1354,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('631'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
@@ -1309,16 +1387,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('631'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1339,16 +1420,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1826'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
@@ -1369,16 +1453,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1826'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1399,16 +1486,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2086'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
@@ -1429,16 +1519,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2086'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1459,16 +1552,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2076'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
@@ -1489,16 +1585,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2076'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1519,16 +1618,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
@@ -1549,16 +1651,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgE'
                                             )
@@ -1579,16 +1684,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1627'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
@@ -1609,16 +1717,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1627'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -1639,16 +1750,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1243'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
@@ -1669,16 +1783,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1243'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -1697,16 +1814,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('387'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
@@ -1727,16 +1847,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('387'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -1757,16 +1880,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1852'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
@@ -1787,16 +1913,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1852'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -1815,16 +1944,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('774'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
@@ -1845,16 +1977,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('774'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -1873,16 +2008,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('470'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
@@ -1903,16 +2041,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('470'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -1933,16 +2074,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2036'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
@@ -1963,16 +2107,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2036'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -1993,16 +2140,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2296'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
@@ -2023,16 +2173,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2296'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -2053,16 +2206,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2286'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
@@ -2083,16 +2239,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2286'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -2113,16 +2272,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
@@ -2143,16 +2305,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgS'
                                             )
@@ -2173,16 +2338,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('148'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
@@ -2203,16 +2371,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('148'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2231,16 +2402,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('407'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
@@ -2261,16 +2435,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('407'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2289,16 +2466,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('620'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
@@ -2319,16 +2499,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('620'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2347,16 +2530,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('808'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
@@ -2377,16 +2563,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('808'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2407,16 +2596,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1211'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
@@ -2437,16 +2629,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1211'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2467,16 +2662,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1528'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
@@ -2497,16 +2695,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1528'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2527,16 +2728,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1664'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
@@ -2557,16 +2761,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1664'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2587,16 +2794,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2054'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
@@ -2617,16 +2827,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('2054'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2647,16 +2860,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('657'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
@@ -2677,16 +2893,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('657'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2707,16 +2926,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
@@ -2737,16 +2959,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgN'
                                             )
@@ -2767,16 +2992,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1313'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
@@ -2797,16 +3025,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1313'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HOC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -2827,16 +3058,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
@@ -2857,16 +3091,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -2885,16 +3122,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('792'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
@@ -2915,16 +3155,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('792'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HBA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -2943,16 +3186,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('733'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
@@ -2973,16 +3219,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('733'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AWP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -3003,16 +3252,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1123'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
@@ -3033,16 +3285,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1123'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100AQC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -3063,16 +3318,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
@@ -3093,16 +3351,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100STA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -3123,16 +3384,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1560'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
@@ -3153,16 +3417,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1560'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100VEL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -3183,16 +3450,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1830'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
@@ -3213,16 +3483,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1830'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -3243,16 +3516,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1810'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
@@ -3273,16 +3549,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1810'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100BMX'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -3303,16 +3582,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
@@ -3333,16 +3615,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPK'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100OPKgW'
                                             )
@@ -3378,11 +3663,13 @@ obj = PublicationDelivery(
                                             value='ExCeL'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Park'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -3401,6 +3688,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -3430,6 +3718,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -3483,6 +3772,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -3528,11 +3818,13 @@ obj = PublicationDelivery(
                                             value='Excel North Sports Hall 1'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -3551,12 +3843,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100EXL'
                                         )
@@ -3572,11 +3866,13 @@ obj = PublicationDelivery(
                                             value='Excel North Sports Hall 2'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -3595,12 +3891,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100EXL'
                                         )
@@ -3616,11 +3914,13 @@ obj = PublicationDelivery(
                                             value='Excel South Sports Hall 1'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -3639,12 +3939,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100EXL'
                                         )
@@ -3660,11 +3962,13 @@ obj = PublicationDelivery(
                                             value='Excel South Sports Hall 2'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -3683,12 +3987,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100EXL'
                                         )
@@ -3704,11 +4010,13 @@ obj = PublicationDelivery(
                                             value='Excel South Sports Hall 3'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -3727,12 +4035,14 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
                                             ]
                                         ),
                                         parent_site_ref=SiteRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptPoi:8100EXL'
                                         )
@@ -3751,16 +4061,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLN1'
                                             )
@@ -3779,16 +4092,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLN2'
                                             )
@@ -3807,16 +4123,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLS1'
                                             )
@@ -3835,16 +4154,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLS2'
                                             )
@@ -3863,16 +4185,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('600'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLS3'
                                             )
@@ -3891,16 +4216,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             )
@@ -3919,16 +4247,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('550'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLN1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gExit'
                                             )
@@ -3947,16 +4278,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('300'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLN2'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gExit'
                                             )
@@ -3975,16 +4309,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('550'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLS1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gExit'
                                             )
@@ -4003,16 +4340,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('300'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLS2'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gExit'
                                             )
@@ -4031,16 +4371,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXLS3'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gExit'
                                             )
@@ -4059,16 +4402,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('300'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EXL@gExit'
                                             )
@@ -4104,11 +4450,13 @@ obj = PublicationDelivery(
                                             value='Greenwich Park'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -4127,6 +4475,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -4156,6 +4505,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -4245,6 +4595,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -4334,6 +4685,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -4406,16 +4758,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP@gGNW'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             )
@@ -4436,16 +4791,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('180'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP@gGNW'
                                             )
@@ -4464,16 +4822,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('940'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP@gBKH1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             )
@@ -4494,16 +4855,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('940'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP@gBKH1'
                                             )
@@ -4522,16 +4886,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('490'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP@gBKH6'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             )
@@ -4552,16 +4919,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('490'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100GRP@gBKH6'
                                             )
@@ -4597,11 +4967,13 @@ obj = PublicationDelivery(
                                             value='North Greenwich Arena'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -4620,6 +4992,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -4649,6 +5022,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -4702,6 +5076,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -4750,16 +5125,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('500'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100NGA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100NGA@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100NGA'
                                             )
@@ -4778,16 +5156,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('330'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100NGA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100NGA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100NGA@gExit'
                                             )
@@ -4823,11 +5204,13 @@ obj = PublicationDelivery(
                                             value='The Royal Artillery Barracks'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -4846,6 +5229,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -4875,6 +5259,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -4952,6 +5337,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5026,16 +5412,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             )
@@ -5056,16 +5445,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB@g0'
                                             )
@@ -5086,16 +5478,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB@g1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             )
@@ -5116,16 +5511,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('260'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100RAB@g1'
                                             )
@@ -5161,11 +5559,13 @@ obj = PublicationDelivery(
                                             value='Earls Court'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -5184,6 +5584,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -5213,6 +5614,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5266,6 +5668,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5314,16 +5717,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EAR'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EAR@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EAR'
                                             )
@@ -5344,16 +5750,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1380'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EAR'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EAR'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100EAR@gExit'
                                             )
@@ -5389,11 +5798,13 @@ obj = PublicationDelivery(
                                             value='Lords Cricket Ground'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -5412,6 +5823,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -5441,6 +5853,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5518,6 +5931,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5592,16 +6006,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             )
@@ -5622,16 +6039,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG@g0'
                                             )
@@ -5652,16 +6072,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('250'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG@g1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             )
@@ -5682,16 +6105,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('250'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LCG@g1'
                                             )
@@ -5727,11 +6153,13 @@ obj = PublicationDelivery(
                                             value='Wimbledon'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -5750,6 +6178,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -5779,6 +6208,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5854,6 +6284,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5929,6 +6360,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -5999,16 +6431,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('236'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM@gN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             )
@@ -6027,16 +6462,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('236'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM@gN'
                                             )
@@ -6055,16 +6493,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('156'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM@gC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             )
@@ -6083,16 +6524,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('156'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM@gC'
                                             )
@@ -6111,16 +6555,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('333'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM@gS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             )
@@ -6139,16 +6586,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('333'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WIM@gS'
                                             )
@@ -6184,11 +6634,13 @@ obj = PublicationDelivery(
                                             value='Horse Guards Parade'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -6207,6 +6659,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -6236,6 +6689,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -6289,6 +6743,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -6342,6 +6797,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -6395,6 +6851,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -6443,16 +6900,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP@gInN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             )
@@ -6471,16 +6931,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP@gOutN'
                                             )
@@ -6499,16 +6962,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('320'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP@gInS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             )
@@ -6527,16 +6993,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('360'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HGP@gOutS'
                                             )
@@ -6572,11 +7041,13 @@ obj = PublicationDelivery(
                                             value='The Mall'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -6595,6 +7066,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -6624,6 +7096,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -6699,6 +7172,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -6769,16 +7243,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL@gN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             )
@@ -6797,16 +7274,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL@gN'
                                             )
@@ -6825,16 +7305,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL@gS'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             )
@@ -6853,16 +7336,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100MAL@gS'
                                             )
@@ -6898,11 +7384,13 @@ obj = PublicationDelivery(
                                             value='Hyde Park'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -6921,6 +7409,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -6950,6 +7439,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -7020,16 +7510,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('200'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HYD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HYD@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HYD'
                                             )
@@ -7048,16 +7541,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('200'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HYD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HYD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HYD@g0'
                                             )
@@ -7093,11 +7589,13 @@ obj = PublicationDelivery(
                                             value='Wembley Arena'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7116,6 +7614,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7145,6 +7644,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -7198,6 +7698,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -7246,16 +7747,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('172'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEA@gEntr'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEA'
                                             )
@@ -7274,16 +7778,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('100'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEA'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEA'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEA@gExit'
                                             )
@@ -7319,11 +7826,13 @@ obj = PublicationDelivery(
                                             value='Lee Valley White Water Centre'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7342,6 +7851,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7371,6 +7881,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -7441,16 +7952,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('303'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LVC'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LVC@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LVC'
                                             )
@@ -7469,16 +7983,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('303'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LVC'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LVC'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100LVC@g0'
                                             )
@@ -7514,11 +8031,13 @@ obj = PublicationDelivery(
                                             value='Hadleigh Farm'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7537,6 +8056,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7566,6 +8086,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -7636,16 +8157,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('500'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HAD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HAD@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HAD'
                                             )
@@ -7664,16 +8188,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('500'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HAD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HAD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100HAD@g0'
                                             )
@@ -7709,11 +8236,13 @@ obj = PublicationDelivery(
                                             value='Eton Dorney'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7732,6 +8261,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -7761,6 +8291,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -7836,6 +8367,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -7906,16 +8438,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('750'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD@gN'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             )
@@ -7934,16 +8469,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('750'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD@gN'
                                             )
@@ -7962,16 +8500,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD@gTHub'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             )
@@ -7990,16 +8531,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('1400'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100ETD@gTHub'
                                             )
@@ -8035,11 +8579,13 @@ obj = PublicationDelivery(
                                             value='Weymouth and Portland - The Nothe'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8058,6 +8604,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8087,6 +8634,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -8157,16 +8705,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WAP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WAP@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WAP'
                                             )
@@ -8185,16 +8736,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('150'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WAP'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WAP'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WAP@g0'
                                             )
@@ -8230,11 +8784,13 @@ obj = PublicationDelivery(
                                             value='Wembley Stadium'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8253,6 +8809,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8280,6 +8837,7 @@ obj = PublicationDelivery(
                                                     place_types=TypeOfPlaceRefsRelStructure(
                                                         type_of_place_ref=[
                                                             TypeOfPlaceRef(
+                                                                value='',
                                                                 ref='napt:type_of_place@PIE',
                                                                 version_ref='EXTERNAL'
                                                             ),
@@ -8348,16 +8906,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEM@g0'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEM'
                                             )
@@ -8376,16 +8937,19 @@ obj = PublicationDelivery(
                                         distance=Decimal('175'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEM'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEM'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptPoi:8100WEM@g0'
                                             )
@@ -8417,11 +8981,13 @@ obj = PublicationDelivery(
                                             value='Millennium Stadium'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8440,6 +9006,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8469,11 +9036,13 @@ obj = PublicationDelivery(
                                             value='Hampden Park'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8492,6 +9061,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8521,11 +9091,13 @@ obj = PublicationDelivery(
                                             value='Old Trafford'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8544,6 +9116,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8573,11 +9146,13 @@ obj = PublicationDelivery(
                                             value='City of Coventry Stadium'
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8596,6 +9171,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8629,11 +9205,13 @@ obj = PublicationDelivery(
                                             value="St James' Park (Newcastle)"
                                         ),
                                         purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                            value='',
                                             ref='Venue'
                                         ),
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     ref='napt:type_of_zone@POI',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -8652,6 +9230,7 @@ obj = PublicationDelivery(
                                         place_types=TypeOfPlaceRefsRelStructure(
                                             type_of_place_ref=[
                                                 TypeOfPlaceRef(
+                                                    value='',
                                                     ref='napt:type_of_place@Venue',
                                                     version_ref='EXTERNAL'
                                                 ),

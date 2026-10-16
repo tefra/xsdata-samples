@@ -108,7 +108,7 @@ class MultilineString:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -127,10 +127,9 @@ class AdminEmail:
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[^@]+@[^.]+\..+",
-        },
+        }
     )
 
 
@@ -146,7 +145,7 @@ class OtherHeiId:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
-    value: str = field(default="")
+    value: str = field()
     type_value: OtherHeiIdValue = field(
         metadata={
             "name": "type",
@@ -178,10 +177,9 @@ class HttpwithOptionalLang:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"https?://.+",
-        },
+        }
     )
     lang: None | str | LangValue = field(
         default=None,
@@ -241,7 +239,7 @@ class StringWithOptionalLang:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: str = field(default="")
+    value: str = field()
     lang: None | str | LangValue = field(
         default=None,
         metadata={
@@ -971,10 +969,9 @@ class Catalogue:
             """
 
             value: bytes = field(
-                default=b"",
                 metadata={
                     "format": "base64",
-                },
+                }
             )
             sha_256: str = field(
                 metadata={

@@ -162,6 +162,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='myfares'
                     ),
                     default_currency='EUR'
@@ -177,6 +178,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Common_Resources'
                                     ),
@@ -186,12 +188,14 @@ obj = PublicationDelivery(
                                 id='mybus:DTA',
                                 version='any',
                                 transport_organisation_ref=OperatorRef(
+                                    value='',
                                     version='any',
                                     ref='mybus:DTA'
                                 ),
                                 tariff_zones=TariffZoneRefsRelStructure(
                                     tariff_zone_ref=[
                                         TariffZoneRef(
+                                            value='',
                                             version='any',
                                             ref='myfares:1'
                                         ),
@@ -216,6 +220,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Time_Interval@network'
                                     ),
@@ -241,14 +246,17 @@ obj = PublicationDelivery(
                                             value='Zonal Fare'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:zonal'
                                         ),
                                         time_unit_ref=TimeUnitRef(
+                                            value='',
                                             version='1.0',
                                             ref='myfares:1hour'
                                         ),
@@ -271,6 +279,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 factor='1',
                                                                 time_unit_ref=TimeUnitRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:1hour'
                                                                 )
@@ -295,6 +304,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 factor='2',
                                                                 time_unit_ref=TimeUnitRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:1hour'
                                                                 )
@@ -321,6 +331,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 factor='24',
                                                                 time_unit_ref=TimeUnitRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:1hour'
                                                                 )
@@ -340,6 +351,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -347,6 +359,7 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             tariff_zone_ref=[
                                                                 TariffZoneRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='myfares:1'
                                                                 ),
@@ -363,14 +376,17 @@ obj = PublicationDelivery(
                                                     time_interval_ref_or_time_intervals_or_time_structure_factors=TimeStructureFactorsRelStructure(
                                                         parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor=[
                                                             TimeStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:tsf_1h'
                                                             ),
                                                             TimeStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:tsf_2h'
                                                             ),
                                                             TimeStructureFactorRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:tsf_day'
                                                             ),
@@ -381,6 +397,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:can_access_when',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -401,6 +418,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='fxc:v1.0'
                                                         ),
@@ -427,6 +445,7 @@ obj = PublicationDelivery(
                                         price_groups=PriceGroupsRelStructure(
                                             price_group_ref_or_price_group=[
                                                 PriceGroupRef(
+                                                    value='',
                                                     version='1.0',
                                                     ref='myfares:DTA@Time_interval'
                                                 ),
@@ -444,10 +463,12 @@ obj = PublicationDelivery(
                                             value='1 zone use for specified period'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:period_pass'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='mybus:DTA'
                                         ),
@@ -459,14 +480,17 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Time_interval@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Time_interval@access_when'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Time_interval@conditions_of_travel'
                                                             ),
@@ -482,6 +506,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Period_pass@travel'
                                                     )
@@ -521,6 +546,7 @@ obj = PublicationDelivery(
                                                         PaymentMethodEnumeration.CASH_AND_CARD,
                                                     ],
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         ref='ntx:collect_on_board',
                                                         version_ref='ntx:v1.0'
                                                     )
@@ -545,6 +571,7 @@ obj = PublicationDelivery(
                                                         PaymentMethodEnumeration.CASH_AND_CARD,
                                                     ],
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         ref='ntx:collect_on_board',
                                                         version_ref='ntx:v1.0'
                                                     )
@@ -557,10 +584,12 @@ obj = PublicationDelivery(
                                                     id='myfares:PeriodPass-SOP@p-ticket',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:printed_ticket'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Period_pass'
                                                     ),
@@ -589,6 +618,7 @@ obj = PublicationDelivery(
                                                         PaymentMethodEnumeration.CARDS_ONLY,
                                                     ],
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         ref='ntx:mobile_app',
                                                         version_ref='ntx:v1.0'
                                                     )
@@ -601,10 +631,12 @@ obj = PublicationDelivery(
                                                     id='myfares:PeriodPass-SOP@m-ticket',
                                                     version='1.0',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:mobile_app'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Period_pass'
                                                     ),
@@ -622,6 +654,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='myfares:DTA@Time_Interval@products'
                                     ),
@@ -642,6 +675,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     amount=Decimal('1.50'),
                                                     time_interval_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:1hour'
                                                     )
@@ -651,6 +685,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     amount=Decimal('2.00'),
                                                     time_interval_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:2hour'
                                                     )
@@ -660,6 +695,7 @@ obj = PublicationDelivery(
                                                     version='1.0',
                                                     amount=Decimal('5.00'),
                                                     time_interval_ref=TimeIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:1day'
                                                     )

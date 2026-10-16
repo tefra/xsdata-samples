@@ -18,7 +18,7 @@ class ApplicationId:
     class Meta:
         name = "ApplicationID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -26,57 +26,57 @@ class ApplicationIdextension:
     class Meta:
         name = "ApplicationIDExtension"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ApplicationInstance:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ApplicationResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ApplicationResponseNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ApplicationResponseTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BusinessDocumentTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BusinessDocumentTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DocumentStatusCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DocumentStatusCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ErrorTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ErrorTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

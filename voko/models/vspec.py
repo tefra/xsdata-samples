@@ -8,4 +8,4 @@ class Vspec:
     class Meta:
         name = "vspec"
 
-    value: str = field(default="")
+    value: str = field()

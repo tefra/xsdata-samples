@@ -28,11 +28,10 @@ class TicketAdvisory:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 1,
             "max_length": 500,
-        },
+        }
     )
     key: None | str = field(
         default=None,

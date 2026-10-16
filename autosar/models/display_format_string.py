@@ -50,10 +50,9 @@ class DisplayFormatString:
         name = "DISPLAY-FORMAT-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"%[ \-+#]?[0-9]*(\.[0-9]+)?[diouxXfeEgGcs]",
-        },
+        }
     )
     s: None | str = field(
         default=None,

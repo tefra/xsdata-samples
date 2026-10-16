@@ -47,47 +47,47 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class AuctionAttributeDataTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionAttributeDataTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionAttributeDefaultValue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionAttributeDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionAttributeFieldSize:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionAttributeName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionCategoryLevel:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionCategoryName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionCreateGeneralNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -95,17 +95,17 @@ class AuctionCreateId:
     class Meta:
         name = "AuctionCreateID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionCreateIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionCreateName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -113,27 +113,27 @@ class AuctionCreateResponseId:
     class Meta:
         name = "AuctionCreateResponseID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionCreateResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionCreateResponseNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionItemDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionItemHierarchyLevel:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -141,72 +141,72 @@ class AuctionItemId:
     class Meta:
         name = "AuctionItemID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionItemName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionItemResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionItemResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionLineItemNum:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionStatus:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AuctionType:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BidIncrement:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BidRuleCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BidRuleCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ComponentAuctionIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FowardAuctionIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -214,62 +214,62 @@ class Mvbtemplate:
     class Meta:
         name = "MVBTemplate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OpenPrice:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PartialBidIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RequiredIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ReservePrice:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RuleDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RuleFormula:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RuleName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RuleValue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalNumberOfAuctionItems:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class WinRuleCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class WinRuleCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

@@ -14,4 +14,4 @@ class TypeFreeFormText5:
     class Meta:
         name = "typeFreeFormText"
 
-    value: str = field(default="")
+    value: str = field()

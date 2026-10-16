@@ -100,7 +100,7 @@ class CodeType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: str = field(default="")
+    value: str = field()
     list_id: None | str = field(
         default=None,
         metadata={

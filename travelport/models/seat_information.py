@@ -81,7 +81,7 @@ class SeatInformation:
             being good. Providers: 1G, 1V, 1P
         """
 
-        value: str = field(default="")
+        value: str = field()
         number: int = field(
             metadata={
                 "name": "Number",

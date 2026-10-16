@@ -132,26 +132,23 @@ class PayloadStructureType:
     @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class StructureUsage:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Structure:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
-            },
+            }
         )

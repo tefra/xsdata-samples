@@ -243,7 +243,7 @@ class FieldType:
 
     @dataclass(kw_only=True)
     class FieldDefinitionRef:
-        value: str = field(default="")
+        value: str = field()
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",

@@ -11,4 +11,4 @@ class ReversePropertyName:
         name = "reversePropertyName"
         namespace = "http://www.opengis.net/gml/3.2"
 
-    value: str = field(default="")
+    value: str = field()

@@ -31,10 +31,9 @@ class AnyServiceInstanceId:
         name = "ANY-SERVICE-INSTANCE-ID"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[1-9][0-9]*|0[xX][0-9a-fA-F]+|0[0-7]*|0[bB][0-1]+|ANY|ALL",
-        },
+        }
     )
     s: None | str = field(
         default=None,

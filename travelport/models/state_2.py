@@ -15,4 +15,4 @@ class State2:
         name = "State"
         namespace = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
-    value: str = field(default="")
+    value: str = field()

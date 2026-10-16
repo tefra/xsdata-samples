@@ -12,8 +12,7 @@ class ReferencePoint1:
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
     value: str = field(
-        default="",
         metadata={
             "max_length": 30,
-        },
+        }
     )

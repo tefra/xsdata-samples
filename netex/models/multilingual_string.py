@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class MultilingualString:
-    value: str = field(default="")
+    value: str = field()
     lang: None | str = field(
         default=None,
         metadata={

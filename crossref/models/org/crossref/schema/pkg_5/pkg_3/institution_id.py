@@ -23,10 +23,9 @@ class InstitutionId:
         namespace = "http://www.crossref.org/schema/5.3.1"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[hH][tT][tT][pP][sS]://.{1,50}",
-        },
+        }
     )
     type_value: InstitutionIdType = field(
         metadata={

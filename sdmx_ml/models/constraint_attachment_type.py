@@ -89,71 +89,63 @@ class ConstraintAttachmentType:
     @dataclass(frozen=True, kw_only=True)
     class DataProvider:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class MetadataProvider:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class DataStructure:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.DataStructure=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class MetadataStructure:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.metadatastructure\.MetadataStructure=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Dataflow:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.Dataflow=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class MetadataProvisionAgreement:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.registry\.MetadataProvisionAgreement=.+",
-            },
+            }
         )

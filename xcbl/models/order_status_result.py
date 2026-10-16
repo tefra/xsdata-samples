@@ -43,47 +43,47 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class OrderDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderStatusCheckItemError:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderStatusDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderStatusIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderStatusResultNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ShipDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class StatusEventCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class StatusEventCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class StatusNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

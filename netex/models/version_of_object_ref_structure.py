@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class VersionOfObjectRefStructure:
-    value: str = field(default="")
+    value: str = field()
     name_of_ref_class: None | str = field(
         default=None,
         metadata={

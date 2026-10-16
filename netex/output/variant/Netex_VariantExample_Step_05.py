@@ -67,6 +67,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -182,6 +183,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         ref='mybus:ScheduledStopPoint:SSP0001A'
                                                     )
                                                 ),
@@ -190,6 +192,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         ref='mybus:ScheduledStopPoint:SSP0003C'
                                                     )
                                                 ),
@@ -234,6 +237,7 @@ obj = PublicationDelivery(
                                 value='ntwkf002  - Frame with SERVICE PATTERN for Normal conditions'
                             ),
                             baseline_version_frame_ref=VersionRefStructure(
+                                value='',
                                 version='001',
                                 ref='mybus:GeneralFrame'
                             ),
@@ -275,6 +279,7 @@ obj = PublicationDelivery(
                                         id='mybus:GeneralFrameMember:ntwkf002_04',
                                         modification=ModificationEnumeration.REVISE,
                                         choice=ServiceLinkRef(
+                                            value='',
                                             version='001',
                                             ref='mybus:ServiceLink:SL_AtoB01'
                                         )
@@ -282,6 +287,7 @@ obj = PublicationDelivery(
                                     GeneralFrameMember(
                                         id='mybus:GeneralFrameMember:ntwkf002_06',
                                         choice=ServiceLinkRef(
+                                            value='',
                                             version='001',
                                             ref='mybus:ServiceLink:SL_BtoC01'
                                         )
@@ -289,6 +295,7 @@ obj = PublicationDelivery(
                                     GeneralFrameMember(
                                         id='mybus:GeneralFrameMember:ntwkf002_07',
                                         choice=ServicePatternRef(
+                                            value='',
                                             version='001',
                                             ref='mybus:ServicePattern:SP001'
                                         )
@@ -337,6 +344,7 @@ obj = PublicationDelivery(
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
                                                     DayTypeRef(
+                                                        value='',
                                                         ref='mybus:DayType:DT001_MF'
                                                     ),
                                                 ]
@@ -354,6 +362,7 @@ obj = PublicationDelivery(
                                 value='ntwkf003 Different Frame  with a different condition - a different frame'
                             ),
                             baseline_version_frame_ref=VersionRefStructure(
+                                value='',
                                 version='001',
                                 ref='mybus:GeneralFrame:ntwkf001'
                             ),
@@ -363,6 +372,7 @@ obj = PublicationDelivery(
                                         id='mybus:GeneralFrameMember:ntwkf003_01',
                                         modification=ModificationEnumeration.REVISE,
                                         choice=ScheduledStopPointRef(
+                                            value='',
                                             ref='mybus:ScheduledStopPoint:SSP0001A'
                                         )
                                     ),
@@ -370,6 +380,7 @@ obj = PublicationDelivery(
                                         id='mybus:GeneralFrameMember:ntwkf003_05',
                                         modification=ModificationEnumeration.REVISE,
                                         choice=ScheduledStopPointRef(
+                                            value='',
                                             ref='mybus:ScheduledStopPoint:SSP0001C'
                                         )
                                     ),
@@ -377,6 +388,7 @@ obj = PublicationDelivery(
                                         id='mybus:GeneralFrameMember:ntwkf003_03',
                                         modification=ModificationEnumeration.REVISE,
                                         choice=DayTypeRef(
+                                            value='',
                                             ref='mybus:DayType:DT001_MF'
                                         )
                                     ),
@@ -384,6 +396,7 @@ obj = PublicationDelivery(
                                         id='mybus:GeneralFrameMember:ntwkf003_04',
                                         modification=ModificationEnumeration.REVISE,
                                         choice=ServiceLinkRef(
+                                            value='',
                                             version='001',
                                             ref='mybus:ServiceLink:SL_AtoC01'
                                         )
@@ -391,6 +404,7 @@ obj = PublicationDelivery(
                                     GeneralFrameMember(
                                         id='mybus:GeneralFrameMember:ntwkf003_07',
                                         choice=ServicePatternRef(
+                                            value='',
                                             ref='mybus:ServicePattern:SP002'
                                         )
                                     ),

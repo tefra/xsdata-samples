@@ -31,11 +31,10 @@ class PrimitiveIdentifier:
         name = "PRIMITIVE-IDENTIFIER"
 
     value: str = field(
-        default="",
         metadata={
             "max_length": 128,
             "pattern": r"[a-zA-Z]([a-zA-Z0-9]|_[a-zA-Z0-9])*_?",
-        },
+        }
     )
     s: None | str = field(
         default=None,

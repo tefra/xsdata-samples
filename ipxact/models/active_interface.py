@@ -63,11 +63,10 @@ class ActiveInterface(InterfaceType):
         @dataclass(kw_only=True)
         class ExcludePort:
             value: str = field(
-                default="",
                 metadata={
                     "white_space": "collapse",
                     "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
-                },
+                }
             )
             id: None | str = field(
                 default=None,

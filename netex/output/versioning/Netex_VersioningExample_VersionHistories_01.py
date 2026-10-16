@@ -119,6 +119,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -214,10 +215,12 @@ obj = PublicationDelivery(
                                         ),
                                         distance=Decimal('1.01'),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SSP0001A'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SSP0002B'
                                         )
@@ -234,10 +237,12 @@ obj = PublicationDelivery(
                                         ),
                                         distance=Decimal('1.12'),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0001A'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0002B'
                                         )
@@ -251,10 +256,12 @@ obj = PublicationDelivery(
                                             value='Version one of Link from B to C'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0002B'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='001',
                                             ref='mybus:SSP0003C'
                                         )
@@ -270,10 +277,12 @@ obj = PublicationDelivery(
                                             value='Version two - deleteing  Link from B to A'
                                         ),
                                         from_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0002B'
                                         ),
                                         to_point_ref=ScheduledStopPointRefStructure(
+                                            value='',
                                             version='002',
                                             ref='mybus:SSP0001A'
                                         )
@@ -296,6 +305,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='002',
                                                         ref='mybus:SSP0001A'
                                                     )
@@ -305,6 +315,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='002',
                                                         ref='mybus:SSP0002B'
                                                     )
@@ -314,6 +325,7 @@ obj = PublicationDelivery(
                                                     version='001',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='mybus:SSP0003C'
                                                     )
@@ -336,6 +348,7 @@ obj = PublicationDelivery(
                                                     version='002',
                                                     order=1,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='mybus:SSP0001A'
                                                     )
@@ -345,6 +358,7 @@ obj = PublicationDelivery(
                                                     version='002',
                                                     order=2,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='002',
                                                         ref='mybus:SSP0002B'
                                                     ),
@@ -356,6 +370,7 @@ obj = PublicationDelivery(
                                                     version='002',
                                                     order=3,
                                                     scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                        value='',
                                                         version='001',
                                                         ref='mybus:SSP0003C'
                                                     )

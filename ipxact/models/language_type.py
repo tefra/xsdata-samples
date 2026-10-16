@@ -16,7 +16,7 @@ class LanguageType:
     class Meta:
         name = "languageType"
 
-    value: str = field(default="")
+    value: str = field()
     strict: bool = field(
         default=False,
         metadata={

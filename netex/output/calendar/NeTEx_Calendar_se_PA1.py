@@ -37,6 +37,7 @@ obj = PublicationDelivery(
                     choice='',
                     choice_1=[
                         ServiceCalendarFrameRef(
+                            value='',
                             ref='noptis:9085002000100000'
                         ),
                     ]
@@ -66,6 +67,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='noptis'
                     )
                 ),
@@ -98,6 +100,7 @@ obj = PublicationDelivery(
                                 order=1,
                                 choice=XmlDate(2007, 6, 17),
                                 day_type_ref=DayTypeRef(
+                                    value='',
                                     version='any',
                                     ref='noptis:9086002000100001'
                                 )
@@ -108,6 +111,7 @@ obj = PublicationDelivery(
                                 order=1,
                                 choice=XmlDate(2007, 6, 24),
                                 day_type_ref=DayTypeRef(
+                                    value='',
                                     version='any',
                                     ref='noptis:9086002000100001'
                                 )
@@ -118,6 +122,7 @@ obj = PublicationDelivery(
                                 order=1,
                                 choice=XmlDate(2007, 6, 18),
                                 day_type_ref=DayTypeRef(
+                                    value='',
                                     version='any',
                                     ref='noptis:9086002000100002'
                                 )
@@ -128,6 +133,7 @@ obj = PublicationDelivery(
                                 order=1,
                                 choice=XmlDate(2007, 6, 25),
                                 day_type_ref=DayTypeRef(
+                                    value='',
                                     version='any',
                                     ref='noptis:9086002000100002'
                                 )

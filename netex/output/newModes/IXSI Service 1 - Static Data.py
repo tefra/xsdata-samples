@@ -145,6 +145,7 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.ENTITY_LEGAL_OWNERSHIP,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         ref='GE:Organsation:25'
                                                     )
                                                 ),
@@ -159,9 +160,11 @@ obj = PublicationDelivery(
                                         ),
                                         registration_number='GÖ-D 9849',
                                         transport_type_ref_or_vehicle_type_ref=VehicleTypeRef(
+                                            value='',
                                             ref='GE:SimpleVehicleType:1'
                                         ),
                                         vehicle_model_ref=VehicleModelRef(
+                                            value='',
                                             ref='GE:VehicleModel:1'
                                         )
                                     ),
@@ -187,6 +190,7 @@ obj = PublicationDelivery(
                                             value='Renault Trafic'
                                         ),
                                         vehicle_model_profile_ref=CarModelProfileRef(
+                                            value='',
                                             ref='GE:CarEquipmentProfile:1'
                                         )
                                     ),
@@ -205,6 +209,7 @@ obj = PublicationDelivery(
                                         members=VehiclesRelStructure(
                                             vehicle_ref_or_vehicle=[
                                                 VehicleRef(
+                                                    value='',
                                                     ref='GE:Vehicle:7292'
                                                 ),
                                             ]
@@ -212,6 +217,7 @@ obj = PublicationDelivery(
                                         transport_types=TransportTypeRefsRelStructure(
                                             transport_type_ref_or_vehicle_type_ref=[
                                                 VehicleTypeRef(
+                                                    value='',
                                                     ref='GE:VehicleType:1'
                                                 ),
                                             ]
@@ -221,6 +227,7 @@ obj = PublicationDelivery(
                                         id='GE:VehicleSharingService:1',
                                         version='any',
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             ref='GE:Operator:1'
                                         ),
                                         booking_required=True,
@@ -228,12 +235,14 @@ obj = PublicationDelivery(
                                         proposed_by_services=OnlineServiceRefsRelStructure(
                                             online_service_ref=[
                                                 OnlineServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='GE:OnlineServiceRef:12'
                                                 ),
                                             ]
                                         ),
                                         vehicle_sharing_ref=VehicleSharingRef(
+                                            value='',
                                             version='any',
                                             ref='GE:VehicleSharing:12'
                                         ),
@@ -242,6 +251,7 @@ obj = PublicationDelivery(
                                         fleets=FleetRefsRelStructure(
                                             fleet_ref=[
                                                 FleetRef(
+                                                    value='',
                                                     version='any',
                                                     ref='GE:Fleet:1'
                                                 ),

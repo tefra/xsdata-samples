@@ -166,6 +166,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='tbd'
                     )
                 ),
@@ -257,6 +258,7 @@ obj = PublicationDelivery(
                             lighting=LightingEnumeration.WELL_LIT,
                             topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                 topographic_place_ref=TopographicPlaceRef(
+                                    value='',
                                     version='any',
                                     ref='nptgLocality:TP_0032A'
                                 )
@@ -306,6 +308,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -342,10 +345,12 @@ obj = PublicationDelivery(
                                         ),
                                         public_use=PublicUseEnumeration.ALL,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         ),
@@ -391,6 +396,7 @@ obj = PublicationDelivery(
                                                                 id='tbd:POI_23_A1-E1_Eq1pos',
                                                                 version='any',
                                                                 choice=EquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_A1-E1_Eq2@validator'
                                                                 ),
@@ -466,6 +472,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -502,10 +509,12 @@ obj = PublicationDelivery(
                                         ),
                                         public_use=PublicUseEnumeration.ALL,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         ),
@@ -551,6 +560,7 @@ obj = PublicationDelivery(
                                                                 id='tbd:POI_23_A1-E1_Eq1pos _2',
                                                                 version='any',
                                                                 choice=EquipmentRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_A1-E1_Eq1'
                                                                 ),
@@ -647,6 +657,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -677,10 +688,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -700,6 +713,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -730,10 +744,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -753,6 +769,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -783,10 +800,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_02_upper'
                                         )
@@ -806,6 +825,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -836,10 +856,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -859,6 +881,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -889,10 +912,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -910,6 +935,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
@@ -940,10 +966,12 @@ obj = PublicationDelivery(
                                         gated=GatedEnumeration.GATED_AREA,
                                         lighting=LightingEnumeration.WELL_LIT,
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_02_upper'
                                         )
@@ -961,24 +989,29 @@ obj = PublicationDelivery(
                                         distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PointOfInterestRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_A1-E1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_A1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
@@ -1020,10 +1053,12 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -1037,20 +1072,24 @@ obj = PublicationDelivery(
                                         distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_A1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_A2'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
@@ -1092,10 +1131,12 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -1109,20 +1150,24 @@ obj = PublicationDelivery(
                                         distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_A1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_A3'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_02_upper'
                                             )
@@ -1163,6 +1208,7 @@ obj = PublicationDelivery(
                                             default_duration=XmlDuration("PT2M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         )
@@ -1176,24 +1222,29 @@ obj = PublicationDelivery(
                                         distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PointOfInterestRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             ),
                                             entrance_ref=EntranceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_B1-E1'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_B1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
@@ -1235,10 +1286,12 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -1252,20 +1305,24 @@ obj = PublicationDelivery(
                                         distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_B1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_B2'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
@@ -1307,10 +1364,12 @@ obj = PublicationDelivery(
                                             mobility_restricted_traveller_duration=XmlDuration("PT5M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         ),
                                         level_ref=LevelRef(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_Lvl_01_lower'
                                         )
@@ -1324,20 +1383,24 @@ obj = PublicationDelivery(
                                         distance=Decimal('20'),
                                         from_value=PathLinkEndStructure(
                                             place_ref=PlaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_B1-J1'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_01_lower'
                                             )
                                         ),
                                         to=PathLinkEndStructure(
                                             place_ref=PointOfInterestSpaceRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_B3'
                                             ),
                                             level_ref=LevelRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23_Lvl_02_upper'
                                             )
@@ -1378,6 +1441,7 @@ obj = PublicationDelivery(
                                             default_duration=XmlDuration("PT2M")
                                         ),
                                         site_ref=PointOfInterestRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23'
                                         )
@@ -1393,6 +1457,7 @@ obj = PublicationDelivery(
                                             value='Branch in Entrance Hall A'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_A1'
                                         )
@@ -1404,6 +1469,7 @@ obj = PublicationDelivery(
                                             value='Branch in Entrance Hall B'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='any',
                                             ref='tbd:POI_23_B1'
                                         )
@@ -1429,11 +1495,13 @@ obj = PublicationDelivery(
                                         from_value=AccessEndStructure(
                                             transport_mode=AllModesEnumeration.METRO,
                                             place_ref=StopPlaceRefStructure(
+                                                value='',
                                                 ref='naptStop:470012345'
                                             )
                                         ),
                                         to=AccessEndStructure(
                                             place_ref=PointOfInterestRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='tbd:POI_23'
                                             )
@@ -1502,6 +1570,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     place_ref=PointOfInterestEntranceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_A1-E1'
                                                     ),
@@ -1517,6 +1586,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                                 ),
@@ -1535,6 +1605,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     place_ref=PlaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_A1-J1'
                                                     ),
@@ -1550,6 +1621,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_pl_A1-J1_to_A2'
                                                                 ),
@@ -1568,6 +1640,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_A2'
                                                     )
@@ -1586,6 +1659,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                     ),
@@ -1603,6 +1677,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_A1-J1_to_A2'
                                                     ),
@@ -1676,6 +1751,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     place_ref=PlaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_A1-E1'
                                                     ),
@@ -1693,6 +1769,7 @@ obj = PublicationDelivery(
                                                                 path_link_ref=DerivedElement(
                                                                     qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                                     ),
@@ -1713,6 +1790,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     place_ref=PointOfInterestSpaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_A1'
                                                     ),
@@ -1728,6 +1806,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_pl_A1-J1_to_A3'
                                                                 ),
@@ -1746,6 +1825,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_A3'
                                                     )
@@ -1764,6 +1844,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_A1-E1_to_A1-J1'
                                                     ),
@@ -1781,6 +1862,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_A1-J1_to_A3'
                                                     ),
@@ -1850,6 +1932,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     place_ref=PointOfInterestEntranceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_B1-E1'
                                                     ),
@@ -1865,6 +1948,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                                 ),
@@ -1883,6 +1967,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     place_ref=PlaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_B1-J1'
                                                     ),
@@ -1898,6 +1983,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_pl_B1-J1_to_B2'
                                                                 ),
@@ -1916,6 +2002,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_B2'
                                                     )
@@ -1934,6 +2021,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                     ),
@@ -1951,6 +2039,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_B1-J1_to_B2'
                                                     ),
@@ -2024,6 +2113,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     place_ref=PointOfInterestEntranceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_B1-E1'
                                                     ),
@@ -2041,6 +2131,7 @@ obj = PublicationDelivery(
                                                                 path_link_ref=DerivedElement(
                                                                     qname='{http://www.netex.org.uk/netex}PathLinkRef',
                                                                     value=SitePathLinkRefStructure(
+                                                                        value='',
                                                                         version='any',
                                                                         ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                                     ),
@@ -2061,6 +2152,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=2,
                                                     place_ref=PointOfInterestSpaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_B1'
                                                     ),
@@ -2076,6 +2168,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='tbd:POI_23_pl_B1-J1_to_B3'
                                                                 ),
@@ -2094,6 +2187,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=3,
                                                     place_ref=PointOfInterestSpaceRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_B3'
                                                     )
@@ -2112,6 +2206,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=1,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_B1-E1_to_B1-J1'
                                                     ),
@@ -2129,6 +2224,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     order=2,
                                                     path_link_ref=PathLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='tbd:POI_23_pl_B1-J1_to_B3'
                                                     ),

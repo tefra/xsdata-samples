@@ -197,7 +197,7 @@ class BusDefinition:
 
         @dataclass(kw_only=True)
         class SystemGroupName:
-            value: str = field(default="")
+            value: str = field()
             id: None | str = field(
                 default=None,
                 metadata={

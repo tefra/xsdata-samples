@@ -22,7 +22,7 @@ class PriceChangeType:
         Contains segment reference information
     """
 
-    value: str = field(default="")
+    value: str = field()
     amount: str = field(
         metadata={
             "name": "Amount",

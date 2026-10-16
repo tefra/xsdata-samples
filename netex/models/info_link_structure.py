@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class InfoLinkStructure:
-    value: str = field(default="")
+    value: str = field()
     type_of_info_link: Sequence[TypeOfInfoLinkEnumeration] = field(
         default_factory=list,
         metadata={

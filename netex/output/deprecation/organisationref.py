@@ -62,6 +62,7 @@ obj = PublicationDelivery(
                                 value="Lycée Villaroy et Gymnase de l'Aviation"
                             ),
                             choice=OrganisationRef(
+                                value='',
                                 version='001',
                                 ref='AURIGE:Operator:768:LOC'
                             ),

@@ -28,7 +28,7 @@ class ResponseMessage7:
         name = "ResponseMessage"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    value: str = field(default="")
+    value: str = field()
     code: int = field(
         metadata={
             "name": "Code",

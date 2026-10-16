@@ -68,6 +68,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(

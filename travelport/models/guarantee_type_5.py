@@ -16,8 +16,7 @@ class GuaranteeType5:
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
     value: str = field(
-        default="",
         metadata={
             "max_length": 250,
-        },
+        }
     )

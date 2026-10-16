@@ -73,17 +73,17 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class PlanningScheduleHeaderNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PlanningScheduleResponseHeaderNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ScheduleIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

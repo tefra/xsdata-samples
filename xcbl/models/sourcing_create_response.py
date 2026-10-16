@@ -11,17 +11,17 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class EstimatedTotalValue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ItemNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ParentItemIdentifier:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -29,17 +29,17 @@ class SourcingCreateResponseId:
     class Meta:
         name = "SourcingCreateResponseID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingCreateResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingCreateResponseNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -47,42 +47,42 @@ class SourcingItemId:
     class Meta:
         name = "SourcingItemID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingItemName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingItemResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingItemResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SourcingResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalNumberOfParticipants:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalNumberOfSourcingItems:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -90,7 +90,7 @@ class TrackingIdnumber:
     class Meta:
         name = "TrackingIDNumber"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

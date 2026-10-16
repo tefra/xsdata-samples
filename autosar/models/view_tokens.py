@@ -27,10 +27,9 @@ class ViewTokens:
         name = "VIEW-TOKENS"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

@@ -55,157 +55,157 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class BuyerChangeOrderNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class BuyerOrderResponseNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ChangeOrderHeaderNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ChangeOrderIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ChangeOrderSequence:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ChangeTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ChangeTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ItemDetailChangeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ItemDetailChangeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ItemDetailResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ItemDetailResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class NumberOfLines:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderHeaderNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderInvoiceMediumTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderInvoiceMediumTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderResponseDocTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderResponseDocTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderResponseHeaderNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class OrderResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PackageDetailChangeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PackageDetailChangeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PackageDetailNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PackageDetailResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PackageDetailResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PartLocation:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PartialShipmentAllowed:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SellerChangeOrderNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SellerOrderResponseNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalPackageDepth:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalPackages:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class TotalTransport:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -213,7 +213,7 @@ class TrackingUrl:
     class Meta:
         name = "TrackingURL"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

@@ -45,12 +45,12 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class PriceCheckRequestIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PriceCheckRequestNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

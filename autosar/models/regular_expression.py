@@ -28,7 +28,7 @@ class RegularExpression:
     class Meta:
         name = "REGULAR-EXPRESSION"
 
-    value: str = field(default="")
+    value: str = field()
     s: None | str = field(
         default=None,
         metadata={

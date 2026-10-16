@@ -8,4 +8,4 @@ class K:
     class Meta:
         name = "k"
 
-    value: str = field(default="")
+    value: str = field()

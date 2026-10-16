@@ -20,11 +20,10 @@ class ContinuityCheckOverride4:
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 1,
             "white_space": "collapse",
-        },
+        }
     )
     key: None | str = field(
         default=None,

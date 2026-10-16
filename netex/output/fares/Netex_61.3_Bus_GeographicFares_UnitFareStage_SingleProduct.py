@@ -157,6 +157,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='myfares'
                     ),
                     default_currency='EUR'
@@ -172,6 +173,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Common_Resources'
                                     ),
@@ -186,6 +188,7 @@ obj = PublicationDelivery(
                                             value='Line 5'
                                         ),
                                         operator_ref=OperatorRef(
+                                            value='',
                                             version='1.0',
                                             ref='mybus:DTA'
                                         )
@@ -379,6 +382,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='mybus:DTA@Fare_Stage@network'
                                     ),
@@ -504,14 +508,17 @@ obj = PublicationDelivery(
                                             value='Unit distance fare.'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='1.0',
                                             ref='mybus:DTA'
                                         ),
                                         type_of_tariff_ref=TypeOfTariffRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:section'
                                         ),
                                         geographical_unit_ref=GeographicalUnitRef(
+                                            value='',
                                             version='any',
                                             ref='myfares:1click'
                                         ),
@@ -528,6 +535,7 @@ obj = PublicationDelivery(
                                                     number_of_units=1,
                                                     interval_type=IntervalTypeEnumeration.SECTION,
                                                     geographical_unit_ref=GeographicalUnitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:1click'
                                                     )
@@ -543,6 +551,7 @@ obj = PublicationDelivery(
                                                     number_of_units=2,
                                                     interval_type=IntervalTypeEnumeration.SECTION,
                                                     geographical_unit_ref=GeographicalUnitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:1click'
                                                     )
@@ -558,6 +567,7 @@ obj = PublicationDelivery(
                                                     number_of_units=3,
                                                     interval_type=IntervalTypeEnumeration.SECTION,
                                                     geographical_unit_ref=GeographicalUnitRef(
+                                                        value='',
                                                         version='any',
                                                         ref='myfares:1click'
                                                     )
@@ -574,6 +584,7 @@ obj = PublicationDelivery(
                                                         version='1.0',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:can_access'
                                                         ),
@@ -581,12 +592,14 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             line_ref=[
                                                                 LineRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='mybus:line_5'
                                                                 ),
                                                             ],
                                                             series_constraint_ref=[
                                                                 SeriesConstraintRef(
+                                                                    value='',
                                                                     version='1.0',
                                                                     ref='myfares:Line_5',
                                                                     order=1
@@ -609,6 +622,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             version='ntx:v1.0',
                                                             ref='ntx:condition_of_use'
                                                         ),
@@ -655,10 +669,12 @@ obj = PublicationDelivery(
                                             value='Point  to Point  fare'
                                         ),
                                         type_of_fare_product_ref_or_types_of_fare_product=TypeOfFareProductRef(
+                                            value='',
                                             version='ntx:v1.0',
                                             ref='ntx:trip'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='1.0',
                                             ref='mybus:DTA'
                                         ),
@@ -673,10 +689,12 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Stage@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='1.0',
                                                                 ref='myfares:Stage@conditions_of_travel'
                                                             ),
@@ -695,6 +713,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Single_trip@travel'
                                                     )
@@ -711,6 +730,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='myfares:DTA@Fare_Stage@products'
                                     ),
@@ -732,6 +752,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('1.50'),
                                                     units=Decimal('1'),
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Stage@gi_1'
                                                     )
@@ -742,6 +763,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('2.50'),
                                                     units=Decimal('2'),
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Stage@gi_2'
                                                     )
@@ -752,6 +774,7 @@ obj = PublicationDelivery(
                                                     amount=Decimal('4.00'),
                                                     units=Decimal('3'),
                                                     geographical_interval_ref=GeographicalIntervalRef(
+                                                        value='',
                                                         version='1.0',
                                                         ref='myfares:Stage@gi_3'
                                                     )

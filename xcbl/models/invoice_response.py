@@ -22,27 +22,27 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class BuyerInvoiceNumber:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseHeaderNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

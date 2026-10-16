@@ -12,10 +12,9 @@ class Cbytes:
         namespace = "http://www.w3.org/1998/Math/MathML"
 
     value: bytes = field(
-        default=b"",
         metadata={
             "format": "base64",
-        },
+        }
     )
     id: None | str = field(
         default=None,

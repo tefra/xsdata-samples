@@ -14,7 +14,7 @@ class UniversalModifyCommandError:
     class Meta:
         namespace = "http://www.travelport.com/schema/universal_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     universal_modify_cmd_key: str = field(
         metadata={
             "name": "UniversalModifyCmdKey",

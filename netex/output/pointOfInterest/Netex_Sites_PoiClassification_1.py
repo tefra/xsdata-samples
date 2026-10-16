@@ -52,6 +52,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='poix'
                     ),
                     default_responsibility_set_ref=ResponsibilitySetRefStructure(
@@ -173,10 +174,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_00',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl000'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl001'
                                         )
@@ -184,10 +187,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_01',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl001'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl002'
                                         )
@@ -195,10 +200,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_02',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl001'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl003'
                                         )
@@ -206,10 +213,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_00',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl000'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl004'
                                         )
@@ -217,10 +226,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_03',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl008'
                                         )
@@ -228,10 +239,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_04',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl008'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl005'
                                         )
@@ -239,10 +252,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_05',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl008'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl006'
                                         )
@@ -250,10 +265,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_1_06',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl009'
                                         )
@@ -272,10 +289,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_2_01',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl005'
                                         )
@@ -283,10 +302,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_2_02',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl006'
                                         )
@@ -294,10 +315,12 @@ obj = PublicationDelivery(
                                     PointOfInterestClassificationHierarchyMemberStructure(
                                         id='poix:hm_2_03',
                                         parent_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl004'
                                         ),
                                         point_of_interest_classification_ref=PointOfInterestClassificationRefStructure(
+                                            value='',
                                             version='any',
                                             ref='poix:Cl009'
                                         )

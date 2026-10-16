@@ -29,10 +29,9 @@ class Ip4AddressString:
         name = "IP4-ADDRESS-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)|ANY",
-        },
+        }
     )
     s: None | str = field(
         default=None,

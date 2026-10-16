@@ -10,7 +10,7 @@ class LanguageType:
     class Meta:
         name = "languageType"
 
-    value: str = field(default="")
+    value: str = field()
     code: None | str = field(
         default=None,
         metadata={

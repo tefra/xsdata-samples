@@ -93,20 +93,20 @@ class ContactType2:
 
     @dataclass(frozen=True, kw_only=True)
     class Telephone:
-        value: str = field(default="")
+        value: str = field()
 
     @dataclass(frozen=True, kw_only=True)
     class Fax:
-        value: str = field(default="")
+        value: str = field()
 
     @dataclass(frozen=True, kw_only=True)
     class X400:
-        value: str = field(default="")
+        value: str = field()
 
     @dataclass(frozen=True, kw_only=True)
     class Uri:
-        value: str = field(default="")
+        value: str = field()
 
     @dataclass(frozen=True, kw_only=True)
     class Email:
-        value: str = field(default="")
+        value: str = field()

@@ -30,7 +30,7 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class ExcpetionNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -38,17 +38,17 @@ class Finote:
     class Meta:
         name = "FINote"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -56,27 +56,27 @@ class PaymentRequestAcknId:
     class Meta:
         name = "PaymentRequestAcknID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentRequestNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentSequenceNo:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class SuccessfulReceptIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

@@ -25,4 +25,4 @@ class Uritype:
     class Meta:
         name = "URIType"
 
-    value: str = field(default="")
+    value: str = field()

@@ -7,7 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class CodespaceRefStructure:
-    value: str = field(default="")
+    value: str = field()
     ref: str = field(
         metadata={
             "type": "Attribute",

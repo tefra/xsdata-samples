@@ -112,6 +112,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -413,6 +414,7 @@ obj = PublicationDelivery(
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllModesEnumeration.BUS,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             )
@@ -420,6 +422,7 @@ obj = PublicationDelivery(
                                         to=ConnectionEndStructure(
                                             transport_mode=AllModesEnumeration.BUS,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             )
@@ -450,6 +453,7 @@ obj = PublicationDelivery(
                                 value='Winter timetable for route 23 outbound'
                             ),
                             baseline_version_frame_ref=VersionRefStructure(
+                                value='',
                                 name_of_ref_class='TimetableFrame',
                                 ref='hde:1'
                             ),
@@ -462,6 +466,7 @@ obj = PublicationDelivery(
                                             value='Main Station - All  inbound'
                                         ),
                                         connection_ref=ConnectionRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:CX_25'
                                         ),
@@ -476,6 +481,7 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT3M"),
                                         maximum_transfer_time=XmlDuration("PT8M"),
                                         control_centre_ref=ControlCentreRef(
+                                            value='',
                                             version='101',
                                             ref='hde:123'
                                         ),
@@ -494,6 +500,7 @@ obj = PublicationDelivery(
                                             value='Main Station - Line 1 inbound Special rule'
                                         ),
                                         connection_ref=ConnectionRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:CX_25'
                                         ),
@@ -506,6 +513,7 @@ obj = PublicationDelivery(
                                         maximum_wait_time=XmlDuration("PT3M"),
                                         maximum_automatic_wait_time=XmlDuration("PT1M"),
                                         control_centre_ref=ControlCentreRef(
+                                            value='',
                                             version='101',
                                             ref='hde:123'
                                         ),
@@ -514,24 +522,29 @@ obj = PublicationDelivery(
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
                                                 LineInDirectionRef(
                                                     line_ref=LineRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:LN_1'
                                                     ),
                                                     direction_ref=DirectionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:DR_hbf'
                                                     )
                                                 ),
                                             ],
                                             scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             ),
                                             adjacent_stop_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_003'
                                             ),
                                             end_stop_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_002'
                                             ),
@@ -545,6 +558,7 @@ obj = PublicationDelivery(
                                             value='Main Station - All lines outboundv '
                                         ),
                                         connection_ref=ConnectionRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:CX_25'
                                         ),
@@ -560,6 +574,7 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT3M"),
                                         maximum_transfer_time=XmlDuration("PT8M"),
                                         control_centre_ref=ControlCentreRef(
+                                            value='',
                                             version='101',
                                             ref='hde:123'
                                         ),
@@ -578,6 +593,7 @@ obj = PublicationDelivery(
                                             value='Main Station - Line 6 outbound '
                                         ),
                                         connection_ref=ConnectionRefStructure(
+                                            value='',
                                             version='any',
                                             ref='mybus:CX_25'
                                         ),
@@ -593,6 +609,7 @@ obj = PublicationDelivery(
                                         minimum_transfer_time=XmlDuration("PT3M"),
                                         maximum_transfer_time=XmlDuration("PT8M"),
                                         control_centre_ref=ControlCentreRef(
+                                            value='',
                                             version='101',
                                             ref='hde:123'
                                         ),
@@ -601,24 +618,29 @@ obj = PublicationDelivery(
                                             all_lines_or_lines_in_direction_refs_or_line_in_direction_ref=[
                                                 LineInDirectionRef(
                                                     line_ref=LineRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:LN_6'
                                                     ),
                                                     direction_ref=DirectionRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mybus:DR_Hospital'
                                                     )
                                                 ),
                                             ],
                                             scheduled_stop_point_ref=ScheduledStopPointRef(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_025'
                                             ),
                                             adjacent_stop_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_011'
                                             ),
                                             end_stop_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='mybus:SSP_012'
                                             ),
@@ -635,6 +657,7 @@ obj = PublicationDelivery(
                                 value='Resoucres'
                             ),
                             baseline_version_frame_ref=VersionRefStructure(
+                                value='',
                                 name_of_ref_class='ResourceFrame',
                                 ref='hde:1'
                             ),
@@ -658,6 +681,7 @@ obj = PublicationDelivery(
                                             value='Mission Central'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                            value='',
                                             version='101',
                                             ref='hde:TFO'
                                         )

@@ -41,7 +41,7 @@ class MemoryMapRefType:
         A reference to a mode.
         """
 
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={

@@ -21,7 +21,7 @@ class TypeRemark2:
     class Meta:
         name = "typeRemark"
 
-    value: str = field(default="")
+    value: str = field()
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={

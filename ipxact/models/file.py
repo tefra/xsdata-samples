@@ -178,7 +178,7 @@ class File:
             and another process may override this name.
         """
 
-        value: str = field(default="")
+        value: str = field()
         default: bool = field(
             default=False,
             metadata={
@@ -188,7 +188,7 @@ class File:
 
     @dataclass(kw_only=True)
     class ExportedName:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={
@@ -258,7 +258,7 @@ class File:
 
     @dataclass(kw_only=True)
     class ImageType:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={

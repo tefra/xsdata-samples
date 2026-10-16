@@ -34,10 +34,9 @@ class RevisionLabelString:
         name = "REVISION-LABEL-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[0-9]+\.[0-9]+\.[0-9]+([\._;].*)?",
-        },
+        }
     )
     s: None | str = field(
         default=None,

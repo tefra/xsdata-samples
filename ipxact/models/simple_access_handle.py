@@ -57,7 +57,7 @@ class SimpleAccessHandle:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={

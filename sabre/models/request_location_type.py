@@ -20,7 +20,7 @@ class RequestLocationType:
             such as IATA, ARC, or internal code, etc.
     """
 
-    value: str = field(default="")
+    value: str = field()
     location_code: None | str = field(
         default=None,
         metadata={

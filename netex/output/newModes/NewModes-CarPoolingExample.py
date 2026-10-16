@@ -397,15 +397,18 @@ obj = PublicationDelivery(
                     choice_1=[
                         NetworkFilterByValueStructure(
                             layer_ref=LayerRef(
+                                value='',
                                 ref='fxc:fareNetwork_fareProducts_farePrices'
                             ),
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     OperatorRef(
+                                        value='',
                                         version='any',
                                         ref='noc:XRYD'
                                     ),
                                     VehiclePoolingRef(
+                                        value='',
                                         ref='ride_share'
                                     ),
                                 ]
@@ -442,15 +445,18 @@ obj = PublicationDelivery(
                 codespaces=CodespacesRelStructure(
                     codespace_ref_or_codespace=[
                         CodespaceRef(
+                            value='',
                             ref='ryd_data'
                         ),
                     ]
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='ryd_data'
                     ),
                     default_data_source_ref=DataSourceRefStructure(
+                        value='',
                         version='1.0',
                         ref='rd:ryde'
                     ),
@@ -482,6 +488,7 @@ obj = PublicationDelivery(
                                         version='1.0',
                                         email='feedback@ryde.eu',
                                         data_licence_code=ExternalObjectRefStructure(
+                                            value='',
                                             type_value='SPX',
                                             ref='GSCYQ'
                                         ),
@@ -608,6 +615,7 @@ obj = PublicationDelivery(
                                             value=SelfDriveSubmodeEnumeration.OWN_CAR
                                         ),
                                         mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehiclePoolingRef(
+                                            value='',
                                             version='any',
                                             ref='ride_share'
                                         )
@@ -720,6 +728,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='rd:ride_sharing_example'
                                     ),
@@ -774,6 +783,7 @@ obj = PublicationDelivery(
                                             lang='fr'
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville'
                                         ),
@@ -818,6 +828,7 @@ obj = PublicationDelivery(
                                         adjacent_sites=SiteRefsRelStructure(
                                             stop_place_ref_or_site_ref=[
                                                 PointOfInterestRef(
+                                                    value='',
                                                     version='any',
                                                     ref='alphaville_hdv'
                                                 ),
@@ -854,6 +865,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='alphaville'
                                         ),
@@ -879,10 +891,12 @@ obj = PublicationDelivery(
                                         covered=CoveredEnumeration.OUTDOORS,
                                         all_areas_wheelchair_accessible=True,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='gamma_sur_mer'
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:XRYD'
                                         ),
@@ -1025,6 +1039,7 @@ obj = PublicationDelivery(
                                                     is_entry=True,
                                                     drop_off_point_close=True,
                                                     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehiclePoolingRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ride_share'
                                                     )
@@ -1045,6 +1060,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='rd:ride_sharing_example'
                                     ),
@@ -1072,10 +1088,12 @@ obj = PublicationDelivery(
                                         id='h1@p1+h1@p2',
                                         version='any',
                                         from_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='1.0',
                                             ref='rd:h1@p1'
                                         ),
                                         to_point_ref=RoutePointRefStructure(
+                                            value='',
                                             version='1.0',
                                             ref='rd:h1@p2'
                                         ),
@@ -1095,6 +1113,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=VehiclePoolingRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ride_share'
                                                     ),
@@ -1116,6 +1135,7 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.SELF_DRIVE,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=PointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='alphaville_gare'
                                             )
@@ -1123,11 +1143,13 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=PointRefStructure(
+                                                value='',
                                                 ref='alphaville_station',
                                                 version_ref='EXTERNAL'
                                             ),
                                             choice=[
                                                 TaxiRankRef(
+                                                    value='',
                                                     ref='alphaville_station@taxi',
                                                     version_ref='EXTERNAL'
                                                 ),
@@ -1144,6 +1166,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     ResourceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='rd:ride_sharing_example'
                                     ),
@@ -1155,6 +1178,7 @@ obj = PublicationDelivery(
                                         id='ryde',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1163,6 +1187,7 @@ obj = PublicationDelivery(
                                         ),
                                         start_date=XmlDate(2018, 1, 1),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:XRYD'
                                         ),
@@ -1192,12 +1217,14 @@ obj = PublicationDelivery(
                                         proposed_by_services=OnlineServiceRefsRelStructure(
                                             online_service_ref=[
                                                 OnlineServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ryde_online'
                                                 ),
                                             ]
                                         ),
                                         vehicle_pooling_ref=VehiclePoolingRef(
+                                            value='',
                                             version='any',
                                             ref='ride_share'
                                         )
@@ -1213,12 +1240,14 @@ obj = PublicationDelivery(
                                             value='Online registration for ryde'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
                                         proposing_services=MobilityServiceRefsRelStructure(
                                             mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref=[
                                                 CarPoolingServiceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ryde'
                                                 ),
@@ -1271,10 +1300,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('20'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gamma_area'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_centre'
                                         )
@@ -1284,10 +1315,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('23'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='gamma_area'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare'
                                         )
@@ -1297,10 +1330,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         distance=Decimal('3'),
                                         from_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_gare'
                                         ),
                                         to_point_ref=VehicleMeetingPointRefStructure(
+                                            value='',
                                             version='any',
                                             ref='alphaville_centre'
                                         )
@@ -1385,6 +1420,7 @@ obj = PublicationDelivery(
                                             ref='alphaville'
                                         ),
                                         choice=TaxiRankRef(
+                                            value='',
                                             ref='alphaville_gare@taxi',
                                             version_ref='EXTERNAL'
                                         )
@@ -1398,10 +1434,12 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=1,
                                         vehicle_pooling_service_ref=CarPoolingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='ryde'
                                         ),
                                         vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref=VehiclePoolingMeetingPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='delta_park_and_ride'
                                         )
@@ -1411,14 +1449,17 @@ obj = PublicationDelivery(
                                         version='any',
                                         order=2,
                                         vehicle_pooling_service_ref=CarPoolingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='ryde'
                                         ),
                                         vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref=VehiclePoolingMeetingPlaceRef(
+                                            value='',
                                             version='any',
                                             ref='delta_park_and_ride'
                                         ),
                                         parking_bay_ref_or_vehicle_sharing_parking_bay_ref=VehiclePoolingParkingBayRef(
+                                            value='',
                                             version='any',
                                             ref='delta_park_and_ride@A1@01'
                                         )
@@ -1437,10 +1478,12 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     MobilityServiceFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='rd:ride_sharing_example'
                                     ),
                                     SiteFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='rd:ride_sharing_example'
                                     ),
@@ -1471,10 +1514,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         choice=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:XRYD'
                                         ),
                                         choice_1=CarPoolingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='ryde'
                                         ),
@@ -1487,10 +1532,12 @@ obj = PublicationDelivery(
                                                         value='A ride on the service -  '
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:access',
                                                         version_ref='EXTERNAL'
                                                     ),
                                                     choice_1=DistanceMatrixElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area+alphaville_centre'
                                                     ),
@@ -1499,18 +1546,21 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:access',
                                                             version_ref='EXTERNAL'
                                                         ),
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             choice=[
                                                                 OperatorRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='noc:XRYD'
                                                                 ),
                                                             ],
                                                             choice_2=[
                                                                 CarPoolingServiceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ryde'
                                                                 ),
@@ -1525,6 +1575,7 @@ obj = PublicationDelivery(
                                                         value='eligible user types'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:eligibility',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1533,6 +1584,7 @@ obj = PublicationDelivery(
                                                         version='any',
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:eligible',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1603,6 +1655,7 @@ obj = PublicationDelivery(
                                                         value='COnditions on travel'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:travel_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1614,6 +1667,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_use',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1647,6 +1701,7 @@ obj = PublicationDelivery(
                                                         value='Conditions of sale'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:sale_conditions',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1658,6 +1713,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_sale',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1686,6 +1742,7 @@ obj = PublicationDelivery(
                                                         value='Accomodation'
                                                     ),
                                                     type_of_fare_structure_element_ref=TypeOfFareStructureElementRef(
+                                                        value='',
                                                         ref='fxc:condition_of_travel',
                                                         version_ref='EXTERNAL'
                                                     ),
@@ -1697,6 +1754,7 @@ obj = PublicationDelivery(
                                                         ),
                                                         order=1,
                                                         type_of_access_right_assignment_ref=TypeOfAccessRightAssignmentRef(
+                                                            value='',
                                                             ref='fxc:condition_of_travel',
                                                             version_ref='EXTERNAL'
                                                         ),
@@ -1704,10 +1762,12 @@ obj = PublicationDelivery(
                                                         validity_parameters=ValidityParametersRelStructure(
                                                             facility_set_ref=[
                                                                 ServiceFacilitySetRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='smoking'
                                                                 ),
                                                                 ServiceFacilitySetRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='no_smoking'
                                                                 ),
@@ -1723,10 +1783,12 @@ obj = PublicationDelivery(
                                                     id='gamma_area+alphaville_centre',
                                                     version='any',
                                                     choice=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area'
                                                     ),
                                                     choice_1=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_centre'
                                                     )
@@ -1735,10 +1797,12 @@ obj = PublicationDelivery(
                                                     id='gamma_area+alphaville_gare',
                                                     version='any',
                                                     choice=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area'
                                                     ),
                                                     choice_1=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_gare'
                                                     )
@@ -1747,10 +1811,12 @@ obj = PublicationDelivery(
                                                     id='alphaville_centre+alphaville_gare',
                                                     version='any',
                                                     choice=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_centre'
                                                     ),
                                                     choice_1=PointRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_gare'
                                                     )
@@ -1766,6 +1832,7 @@ obj = PublicationDelivery(
                                         id='ryde_online@membership',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1783,6 +1850,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         )
@@ -1795,6 +1863,7 @@ obj = PublicationDelivery(
                                         ),
                                         charging_moment_type=ChargingMomentEnumeration.BEFORE_TRAVEL_THEN_ADJUST_AT_END_OF_TRAVEL,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:XRYD'
                                         ),
@@ -1818,18 +1887,22 @@ obj = PublicationDelivery(
                                                     fare_structure_elements=FareStructureElementRefsRelStructure(
                                                         fare_structure_element_ref=[
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='ryde@single_trip@access'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='ryde@single_trip@eligibility'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='ryde@single_trip@conditions_of_travel'
                                                             ),
                                                             FareStructureElementRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='ryde@single_trip@accommodation'
                                                             ),
@@ -1845,6 +1918,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     validable_element_ref=ValidableElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde@single_trip@travel'
                                                     )
@@ -1865,6 +1939,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.ONLINE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -1884,6 +1959,7 @@ obj = PublicationDelivery(
                                         ),
                                         distribution_channel_type=DistributionChannelTypeEnumeration.MOBILE_DEVICE,
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OnlineServiceOperatorRef(
+                                            value='',
                                             version='any',
                                             ref='floggit'
                                         ),
@@ -1909,6 +1985,7 @@ obj = PublicationDelivery(
                                         types_of_travel_document=TypeOfTravelDocumentRefsRelStructure(
                                             type_of_travel_document_ref=[
                                                 TypeOfTravelDocumentRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mobile_application_data'
                                                 ),
@@ -1938,6 +2015,7 @@ obj = PublicationDelivery(
                                         id='ryde@membership-SOP@mobileApp',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -1957,6 +2035,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='online'
                                                     ),
@@ -1967,6 +2046,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_device'
                                                     )
@@ -1979,10 +2059,12 @@ obj = PublicationDelivery(
                                                     id='ryde@membership-SOP@mobileApp',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=ThirdPartyProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde_online@membership'
                                                     ),
@@ -1995,6 +2077,7 @@ obj = PublicationDelivery(
                                         id='ryde@single_trip-SOP@mobileApp',
                                         version='any',
                                         branding_ref=BrandingRef(
+                                            value='',
                                             version='any',
                                             ref='myBrand'
                                         ),
@@ -2019,6 +2102,7 @@ obj = PublicationDelivery(
                                                                 id='ryde@single_trip-SOP@mobileApp@registered',
                                                                 version='any',
                                                                 choice=ThirdPartyProductRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ryde_online@membership'
                                                                 ),
@@ -2031,6 +2115,7 @@ obj = PublicationDelivery(
                                                     validity_parameters=ValidityParametersRelStructure(
                                                         choice_2=[
                                                             OnlineServiceRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='ryde_online'
                                                             ),
@@ -2049,6 +2134,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     order=1,
                                                     all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref=DistributionChannelRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application'
                                                     ),
@@ -2060,6 +2146,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     fulfilment_method_ref=FulfilmentMethodRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_device'
                                                     )
@@ -2072,10 +2159,12 @@ obj = PublicationDelivery(
                                                     id='ryde@single_trip-SOP@mobileApp',
                                                     version='any',
                                                     type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='mobile_application_data'
                                                     ),
                                                     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde@single_trip'
                                                     ),
@@ -2098,6 +2187,7 @@ obj = PublicationDelivery(
                             prerequisites=VersionFrameRefsRelStructure(
                                 version_frame_ref=[
                                     FareFrameRef(
+                                        value='',
                                         version='1.0',
                                         ref='rd:ride_sharing_example'
                                     ),
@@ -2115,6 +2205,7 @@ obj = PublicationDelivery(
                                                 value='Dynamic pricing engine'
                                             ),
                                             organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                                value='',
                                                 version='any',
                                                 ref='noc:XRYD'
                                             ),
@@ -2134,6 +2225,7 @@ obj = PublicationDelivery(
                                         prices_for=PriceableObjectRefsRelStructure(
                                             choice=[
                                                 SalesOfferPackageRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ryde@single_trip-SOP@mobileApp'
                                                 ),
@@ -2142,17 +2234,20 @@ obj = PublicationDelivery(
                                         used_in=UsedInRefsRelStructure(
                                             choice=[
                                                 TariffRef(
+                                                    value='',
                                                     version='any',
                                                     ref='ryde@single_trip'
                                                 ),
                                             ]
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:XRYD'
                                         ),
                                         specifics=FareTableSpecificsStructure(
                                             choice_1=CarPoolingServiceRef(
+                                                value='',
                                                 version='any',
                                                 ref='ryde'
                                             )
@@ -2166,10 +2261,12 @@ obj = PublicationDelivery(
                                                         value='Dynamic Price'
                                                     ),
                                                     pricing_service_ref=PricingServiceRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde_pricer'
                                                     ),
                                                     distance_matrix_element_ref_or_group_of_distance_matrix_elements_ref=DistanceMatrixElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area+alphaville_centre'
                                                     )
@@ -2194,6 +2291,7 @@ obj = PublicationDelivery(
                 prerequisites=VersionFrameRefsRelStructure(
                     version_frame_ref=[
                         CompositeFrameRef(
+                            value='',
                             version='1.0',
                             ref='rd:ride_sharing_example'
                         ),
@@ -2233,6 +2331,7 @@ obj = PublicationDelivery(
                                             value='Porsche'
                                         ),
                                         vehicle_model_profile_ref=CarModelProfileRef(
+                                            value='',
                                             version='any',
                                             ref='porsche_404@A2'
                                         )
@@ -2278,14 +2377,17 @@ obj = PublicationDelivery(
                                         ),
                                         registration_number='db54278',
                                         transport_type_ref_or_vehicle_type_ref=SimpleVehicleTypeRef(
+                                            value='',
                                             version='any',
                                             ref='fast_car'
                                         ),
                                         vehicle_model_ref=VehicleModelRef(
+                                            value='',
                                             version='any',
                                             ref='porsche_404'
                                         ),
                                         vehicle_model_profile_ref=CarModelProfileRef(
+                                            value='',
                                             version='any',
                                             ref='porsche_404@A2'
                                         )
@@ -2325,10 +2427,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     choice_1=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area'
                                                     ),
                                                     onward_vehicle_meeting_link_ref=OnwardVehicleMeetingLinkRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area+alphaville_centre'
                                                     )
@@ -2338,6 +2442,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     choice_1=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_centre'
                                                     )
@@ -2362,19 +2467,23 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         common_vehicle_service_ref_or_vehicle_pooling_service_ref=CarPoolingServiceRef(
+                                            value='',
                                             version='any',
                                             ref='ryde'
                                         ),
                                         vehicle_ref=VehicleRef(
+                                            value='',
                                             version='any',
                                             ref='db54278'
                                         ),
                                         single_journey_path_ref=SingleJourneyPathRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777@trans001@ride1234'
                                         ),
                                         departure_time=XmlTime(7, 0, 0, 0),
                                         operating_day_ref=OperatingDayRef(
+                                            value='',
                                             version='any',
                                             ref='2020-08-10'
                                         ),
@@ -2384,6 +2493,7 @@ obj = PublicationDelivery(
                                                     id='rydt:Cust777@trans001@ride1234',
                                                     version='any',
                                                     point_in_journey_pattern_ref=PointInSingleJourneyPathRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust777@trans001@ride1234',
                                                         order=1
@@ -2398,6 +2508,7 @@ obj = PublicationDelivery(
                                                     id='rydt:Cust777@trans001@ride1234',
                                                     version='any',
                                                     point_in_journey_pattern_ref=PointInSingleJourneyPathRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust777@trans001@ride1234',
                                                         order=2
@@ -2417,10 +2528,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='gamma_area'
                                                     ),
                                                     choice=VehiclePoolingParkingAreaRef(
+                                                        value='',
                                                         version='any',
                                                         ref='delta_park_and_ride@A1'
                                                     ),
@@ -2431,10 +2544,12 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=2,
                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_centre'
                                                     ),
                                                     choice=PointOfInterestRef(
+                                                        value='',
                                                         version='any',
                                                         ref='alphaville_hdv'
                                                     ),
@@ -2456,6 +2571,7 @@ obj = PublicationDelivery(
                                             value='Esmerelda'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555'
                                         ),
@@ -2481,6 +2597,7 @@ obj = PublicationDelivery(
                                                     changed=XmlDateTime(2020, 8, 10, 9, 55, 0),
                                                     version='any',
                                                     individual_traveller_ref=IndividualTravellerRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust555'
                                                     ),
@@ -2503,6 +2620,7 @@ obj = PublicationDelivery(
                                             value='Freddy'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777'
                                         ),
@@ -2523,6 +2641,7 @@ obj = PublicationDelivery(
                                                     changed=XmlDateTime(2020, 8, 10, 14, 20, 0),
                                                     version='any',
                                                     individual_traveller_ref=IndividualTravellerRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust777'
                                                     ),
@@ -2538,6 +2657,7 @@ obj = PublicationDelivery(
                                                     number_of_proposed_trips=3,
                                                     number_of_travellers_carried=5,
                                                     vehicle_ref=VehicleRef(
+                                                        value='',
                                                         version='any',
                                                         ref='db54278'
                                                     )
@@ -2557,6 +2677,7 @@ obj = PublicationDelivery(
                             codespaces=CodespacesRelStructure(
                                 codespace_ref_or_codespace=[
                                     CodespaceRef(
+                                        value='',
                                         ref='ryd_data'
                                     ),
                                     Codespace(
@@ -2589,6 +2710,7 @@ obj = PublicationDelivery(
                                                     id='rydt:Cust555@trans001@pooler',
                                                     version='any',
                                                     user_profile_ref=VehiclePoolerProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='non_smoker'
                                                     )
@@ -2609,16 +2731,19 @@ obj = PublicationDelivery(
                                                     customer_purchase_packages=CustomerPurchasePackageRefsRelStructure(
                                                         customer_purchase_package_ref=[
                                                             CustomerPurchasePackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='rydt:CPP@Cust555@001'
                                                             ),
                                                             CustomerPurchasePackageRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='rydt:CPP@Cust555@005'
                                                             ),
                                                         ]
                                                     ),
                                                     customer_payment_means_ref=CustomerPaymentMeansRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust555@AC7651@p1'
                                                     ),
@@ -2631,6 +2756,7 @@ obj = PublicationDelivery(
                                                                     value='EZRitter Visa Card'
                                                                 ),
                                                                 medium_access_device_ref=EmvCardRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='visa:47594444555666'
                                                                 )
@@ -2642,6 +2768,7 @@ obj = PublicationDelivery(
                                                                     value='EZRitter mobile device'
                                                                 ),
                                                                 medium_access_device_ref=MobileDeviceRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='rydt:4178671234567'
                                                                 )
@@ -2650,6 +2777,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     medium_access_devices=MediumAccessDeviceRefsRelStructure(
                                                         medium_access_device_ref=MobileDeviceRef(
+                                                            value='',
                                                             version='any',
                                                             ref='rydt:4178671234567'
                                                         )
@@ -2664,6 +2792,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                     version='any',
                                                     customer_ref=CustomerRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust555'
                                                     ),
@@ -2678,6 +2807,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -2689,6 +2819,7 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:Cust555@trans001@join_as_member'
                                                                             ),
@@ -2697,14 +2828,17 @@ obj = PublicationDelivery(
                                                                             travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                                 start=XmlDateTime(2020, 2, 28, 13, 0, 0),
                                                                                 authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='noc:XRYD'
                                                                                 ),
                                                                                 user_profile_ref=VehiclePoolerProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='non_smoker'
                                                                                 ),
                                                                                 choice=CarPoolingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='ryde'
                                                                                 )
@@ -2719,6 +2853,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=ThirdPartyProductRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde_online@membership'
                                                                                         )
@@ -2739,10 +2874,12 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             version='any',
                                                                             type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mobile_application_data'
                                                                             ),
                                                                             customer_purchase_package_ref=CustomerPurchasePackageRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:CPP@Cust555@001'
                                                                             )
@@ -2762,6 +2899,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2020, 8, 8, 12, 0, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -2775,10 +2913,12 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2020, 8, 10, 7, 0, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:Cust555@trans005@purchase_ride'
                                                                             ),
                                                                             fare_price_ref_or_cell_ref=DistanceMatrixElementPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='gamma_area+alphaville_centre'
                                                                             ),
@@ -2787,12 +2927,14 @@ obj = PublicationDelivery(
                                                                             travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                                 origin=TravelSpecificationSummaryEndpointStructure(
                                                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='gamma_area'
                                                                                     )
                                                                                 ),
                                                                                 destination=TravelSpecificationSummaryEndpointStructure(
                                                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='alphaville_centre'
                                                                                     )
@@ -2800,14 +2942,17 @@ obj = PublicationDelivery(
                                                                                 start=XmlDateTime(2020, 8, 10, 7, 0, 0),
                                                                                 duration=XmlDuration("PT45M"),
                                                                                 authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='noc:XRYD'
                                                                                 ),
                                                                                 user_profile_ref=VehiclePoolerProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='non_smoker'
                                                                                 ),
                                                                                 choice=CarPoolingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='ryde'
                                                                                 )
@@ -2822,24 +2967,29 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         validable_element_ref=ValidableElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip@travel'
                                                                                         ),
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip'
                                                                                         ),
                                                                                         fare_structure_element_ref=FareStructureElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip@access'
                                                                                         ),
                                                                                         sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip-SOP@mobileApp'
                                                                                         ),
                                                                                         limitations=UsageParametersRelStructure(
                                                                                             choice=[
                                                                                                 VehiclePoolerProfileRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='non_smoker'
                                                                                                 ),
@@ -2848,80 +2998,94 @@ obj = PublicationDelivery(
                                                                                         validity_parameters=ValidityParametersRelStructure(
                                                                                             mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                                 VehiclePoolingRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='ride_share'
                                                                                                 ),
                                                                                             ],
                                                                                             choice=[
                                                                                                 OperatorRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='noc:XRYD'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_meeting_point_ref=[
                                                                                                 VehicleMeetingPointRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='gamma_area'
                                                                                                 ),
                                                                                                 VehicleMeetingPointRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='alphaville_centre'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_meeting_place_ref=[
                                                                                                 VehiclePoolingMeetingPlaceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='delta_park_and_ride'
                                                                                                 ),
                                                                                                 VehiclePoolingMeetingPlaceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='town_hall'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_1=[
                                                                                                 VehiclePoolingParkingAreaRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='delta_park_and_ride@A1'
                                                                                                 ),
                                                                                             ],
                                                                                             facility_set_ref=[
                                                                                                 ServiceFacilitySetRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='no_smoking'
                                                                                                 ),
                                                                                             ],
                                                                                             single_journey_ref=[
                                                                                                 SingleJourneyRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='rydt:Cust777@trans001@ride1234'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_2=[
                                                                                                 CarPoolingServiceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='ryde'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_ref=[
                                                                                                 VehicleRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='db54278'
                                                                                                 ),
                                                                                             ],
                                                                                             type_of_travel_document_ref=[
                                                                                                 TypeOfTravelDocumentRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application_data'
                                                                                                 ),
                                                                                             ],
                                                                                             distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                                 DistributionChannelRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application'
                                                                                                 ),
                                                                                             ],
                                                                                             fulfilment_method_ref=[
                                                                                                 FulfilmentMethodRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_device'
                                                                                                 ),
@@ -2946,10 +3110,12 @@ obj = PublicationDelivery(
                                                                             created=XmlDateTime(2020, 8, 8, 12, 0, 0),
                                                                             version='any',
                                                                             type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mobile_application_data'
                                                                             ),
                                                                             customer_purchase_package_ref=CustomerPurchasePackageRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:CPP@Cust555@005'
                                                                             )
@@ -2982,6 +3148,7 @@ obj = PublicationDelivery(
                                                     id='rydt:Cust777@trans001@pooler',
                                                     version='any',
                                                     user_profile_ref=VehiclePoolerProfileRef(
+                                                        value='',
                                                         version='any',
                                                         ref='non_smoker'
                                                     )
@@ -3014,6 +3181,7 @@ obj = PublicationDelivery(
                                                         ]
                                                     ),
                                                     customer_payment_means_ref=CustomerPaymentMeansRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust777@AC8145@p1'
                                                     ),
@@ -3026,6 +3194,7 @@ obj = PublicationDelivery(
                                                                     value='Freddy master Card'
                                                                 ),
                                                                 medium_access_device_ref=EmvCardRef(
+                                                                    value='',
                                                                     ref='mc:47594444555666',
                                                                     version_ref='ETXERNAL'
                                                                 )
@@ -3042,6 +3211,7 @@ obj = PublicationDelivery(
                                                     created=XmlDateTime(2019, 1, 5, 12, 0, 0),
                                                     version='any',
                                                     customer_ref=CustomerRef(
+                                                        value='',
                                                         ref='rydt:Cust777'
                                                     ),
                                                     fare_contract_entries=FareContractEntriesRelStructure(
@@ -3055,6 +3225,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2019, 1, 5, 12, 0, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:product_purchase',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -3066,6 +3237,7 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2019, 1, 5, 12, 0, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:Cust777@trans001@join_as_member'
                                                                             ),
@@ -3074,14 +3246,17 @@ obj = PublicationDelivery(
                                                                             travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                                 start=XmlDateTime(2019, 1, 5, 12, 0, 0),
                                                                                 authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='noc:XRYD'
                                                                                 ),
                                                                                 user_profile_ref=VehiclePoolerProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='non_smoker'
                                                                                 ),
                                                                                 choice=CarPoolingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='ryde'
                                                                                 )
@@ -3096,6 +3271,7 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=ThirdPartyProductRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde_online@membership'
                                                                                         )
@@ -3118,6 +3294,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2020, 8, 6, 16, 0, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:offer_ride',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -3131,10 +3308,12 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2020, 8, 10, 7, 0, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:Cust777@trans005@sell_ride'
                                                                             ),
                                                                             fare_price_ref_or_cell_ref=DistanceMatrixElementPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='gamma_area+alphaville_centre'
                                                                             ),
@@ -3142,12 +3321,14 @@ obj = PublicationDelivery(
                                                                             travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                                 origin=TravelSpecificationSummaryEndpointStructure(
                                                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='gamma_area'
                                                                                     )
                                                                                 ),
                                                                                 destination=TravelSpecificationSummaryEndpointStructure(
                                                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='alphaville_centre'
                                                                                     )
@@ -3155,14 +3336,17 @@ obj = PublicationDelivery(
                                                                                 start=XmlDateTime(2020, 8, 10, 7, 0, 0),
                                                                                 duration=XmlDuration("PT45M"),
                                                                                 authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='noc:XRYD'
                                                                                 ),
                                                                                 user_profile_ref=VehiclePoolerProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='non_smoker'
                                                                                 ),
                                                                                 choice=CarPoolingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='ryde'
                                                                                 )
@@ -3177,24 +3361,29 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         validable_element_ref=ValidableElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip@travel'
                                                                                         ),
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip'
                                                                                         ),
                                                                                         fare_structure_element_ref=FareStructureElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip@access'
                                                                                         ),
                                                                                         sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip-SOP@mobileApp'
                                                                                         ),
                                                                                         limitations=UsageParametersRelStructure(
                                                                                             choice=[
                                                                                                 VehiclePoolerProfileRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='non_smoker'
                                                                                                 ),
@@ -3203,54 +3392,63 @@ obj = PublicationDelivery(
                                                                                         validity_parameters=ValidityParametersRelStructure(
                                                                                             mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                                 VehiclePoolingRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='ride_share'
                                                                                                 ),
                                                                                             ],
                                                                                             choice=[
                                                                                                 OperatorRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='noc:XRYD'
                                                                                                 ),
                                                                                             ],
                                                                                             facility_set_ref=[
                                                                                                 ServiceFacilitySetRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='no_smoking'
                                                                                                 ),
                                                                                             ],
                                                                                             single_journey_ref=[
                                                                                                 SingleJourneyRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='rydt:Cust777@trans001@ride1234'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_2=[
                                                                                                 CarPoolingServiceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='ryde'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_ref=[
                                                                                                 VehicleRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='db54278'
                                                                                                 ),
                                                                                             ],
                                                                                             type_of_travel_document_ref=[
                                                                                                 TypeOfTravelDocumentRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application_data'
                                                                                                 ),
                                                                                             ],
                                                                                             distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                                 DistributionChannelRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application'
                                                                                                 ),
                                                                                             ],
                                                                                             fulfilment_method_ref=[
                                                                                                 FulfilmentMethodRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_device'
                                                                                                 ),
@@ -3275,6 +3473,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 date=XmlDateTime(2020, 8, 8, 12, 0, 0),
                                                                 type_of_fare_contract_entry_ref=TypeOfFareContractEntryRef(
+                                                                    value='',
                                                                     ref='fxc:sell_ride',
                                                                     version_ref='EXTERNAL'
                                                                 ),
@@ -3287,10 +3486,12 @@ obj = PublicationDelivery(
                                                                             version='any',
                                                                             date=XmlDateTime(2020, 8, 10, 7, 0, 0),
                                                                             sales_transaction_ref=SalesTransactionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:Cust777@trans005@sell_ride'
                                                                             ),
                                                                             fare_price_ref_or_cell_ref=DistanceMatrixElementPriceRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='gamma_area+alphaville_centre'
                                                                             ),
@@ -3301,6 +3502,7 @@ obj = PublicationDelivery(
                                                                                         amount=Decimal('-10'),
                                                                                         adjustment_amount=Decimal('2.00'),
                                                                                         discounting_rule_ref_or_pricing_rule_ref=PricingRuleRef(
+                                                                                            value='',
                                                                                             ref='ryde_fee'
                                                                                         ),
                                                                                         narrative=MultilingualString(
@@ -3315,12 +3517,14 @@ obj = PublicationDelivery(
                                                                             travel_specification_summary_view=TravelSpecificationSummaryView(
                                                                                 origin=TravelSpecificationSummaryEndpointStructure(
                                                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='gamma_area'
                                                                                     )
                                                                                 ),
                                                                                 destination=TravelSpecificationSummaryEndpointStructure(
                                                                                     vehicle_meeting_point_ref=VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='alphaville_centre'
                                                                                     )
@@ -3328,14 +3532,17 @@ obj = PublicationDelivery(
                                                                                 start=XmlDateTime(2020, 8, 10, 7, 0, 0),
                                                                                 duration=XmlDuration("PT45M"),
                                                                                 authority_ref_or_operator_ref_or_group_of_operators_ref=OperatorRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='noc:XRYD'
                                                                                 ),
                                                                                 user_profile_ref=VehiclePoolerProfileRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='non_smoker'
                                                                                 ),
                                                                                 choice=CarPoolingServiceRef(
+                                                                                    value='',
                                                                                     version='any',
                                                                                     ref='ryde'
                                                                                 )
@@ -3350,24 +3557,29 @@ obj = PublicationDelivery(
                                                                                         ),
                                                                                         order=1,
                                                                                         validable_element_ref=ValidableElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip@travel'
                                                                                         ),
                                                                                         preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref=PreassignedFareProductRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip'
                                                                                         ),
                                                                                         fare_structure_element_ref=FareStructureElementRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip@access'
                                                                                         ),
                                                                                         sales_offer_package_ref=SalesOfferPackageRef(
+                                                                                            value='',
                                                                                             version='any',
                                                                                             ref='ryde@single_trip-SOP@mobileApp'
                                                                                         ),
                                                                                         limitations=UsageParametersRelStructure(
                                                                                             choice=[
                                                                                                 VehiclePoolerProfileRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='non_smoker'
                                                                                                 ),
@@ -3376,80 +3588,94 @@ obj = PublicationDelivery(
                                                                                         validity_parameters=ValidityParametersRelStructure(
                                                                                             mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                                                 VehiclePoolingRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='ride_share'
                                                                                                 ),
                                                                                             ],
                                                                                             choice=[
                                                                                                 OperatorRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='noc:XRYD'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_meeting_point_ref=[
                                                                                                 VehicleMeetingPointRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='gamma_area'
                                                                                                 ),
                                                                                                 VehicleMeetingPointRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='alphaville_centre'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_meeting_place_ref=[
                                                                                                 VehiclePoolingMeetingPlaceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='delta_park_and_ride'
                                                                                                 ),
                                                                                                 VehiclePoolingMeetingPlaceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='town_hall'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_1=[
                                                                                                 VehiclePoolingParkingAreaRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='delta_park_and_ride@A1'
                                                                                                 ),
                                                                                             ],
                                                                                             facility_set_ref=[
                                                                                                 ServiceFacilitySetRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='no_smoking'
                                                                                                 ),
                                                                                             ],
                                                                                             single_journey_ref=[
                                                                                                 SingleJourneyRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='rydt:Cust777@trans001@ride1234'
                                                                                                 ),
                                                                                             ],
                                                                                             choice_2=[
                                                                                                 CarPoolingServiceRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='ryde'
                                                                                                 ),
                                                                                             ],
                                                                                             vehicle_ref=[
                                                                                                 VehicleRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='db54278'
                                                                                                 ),
                                                                                             ],
                                                                                             type_of_travel_document_ref=[
                                                                                                 TypeOfTravelDocumentRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application_data'
                                                                                                 ),
                                                                                             ],
                                                                                             distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                                                 DistributionChannelRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_application'
                                                                                                 ),
                                                                                             ],
                                                                                             fulfilment_method_ref=[
                                                                                                 FulfilmentMethodRef(
+                                                                                                    value='',
                                                                                                     version='any',
                                                                                                     ref='mobile_device'
                                                                                                 ),
@@ -3474,10 +3700,12 @@ obj = PublicationDelivery(
                                                                             created=XmlDateTime(2020, 8, 8, 12, 0, 0),
                                                                             version='any',
                                                                             type_of_travel_document_ref=TypeOfTravelDocumentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='mobile_application_data'
                                                                             ),
                                                                             customer_purchase_package_ref=CustomerPurchasePackageRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='rydt:CPP@Cust777@021'
                                                                             )
@@ -3511,6 +3739,7 @@ obj = PublicationDelivery(
                                             value="Esmerelda's phone"
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555'
                                         ),
@@ -3523,6 +3752,7 @@ obj = PublicationDelivery(
                                                         value='Ryde app'
                                                     ),
                                                     travel_document_ref=TravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:ticket@765452234'
                                                     )
@@ -3538,6 +3768,7 @@ obj = PublicationDelivery(
                                             value="Freddy's phone"
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777'
                                         ),
@@ -3550,6 +3781,7 @@ obj = PublicationDelivery(
                                                         value='Ryde app'
                                                     ),
                                                     travel_document_ref=TravelDocumentRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:ticket@765452234'
                                                     )
@@ -3565,6 +3797,7 @@ obj = PublicationDelivery(
                                         id='rydt:Bad',
                                         version='any',
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:XRYD'
                                         ),
@@ -3575,6 +3808,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     medium_access_device_ref=EmvCardRef(
+                                                        value='',
                                                         version='any',
                                                         ref='visa:47594444555666'
                                                     )
@@ -3593,6 +3827,7 @@ obj = PublicationDelivery(
                                             value='Approved listimgs>'
                                         ),
                                         organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=OperatorRef(
+                                            value='',
                                             version='any',
                                             ref='noc:XRYD'
                                         ),
@@ -3603,6 +3838,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     customer_ref=CustomerRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust555'
                                                     )
@@ -3612,6 +3848,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     medium_access_device_ref=MobileDeviceRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:4178671234567'
                                                     )
@@ -3621,6 +3858,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     customer_ref=CustomerRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:Cust777'
                                                     )
@@ -3630,6 +3868,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     medium_access_device_ref=EmvCardRef(
+                                                        value='',
                                                         ref='mc:47594444555666',
                                                         version_ref='ETXERNAL'
                                                     )
@@ -3639,6 +3878,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     order=1,
                                                     medium_access_device_ref=MobileDeviceRef(
+                                                        value='',
                                                         version='any',
                                                         ref='rydt:3178672020202'
                                                     )
@@ -3666,10 +3906,12 @@ obj = PublicationDelivery(
                                             value='Cust555 joins ride schem as a member'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555@AC7651'
                                         ),
@@ -3679,6 +3921,7 @@ obj = PublicationDelivery(
                                                     id='rydt:CPP@Cust555@001',
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde@membership-SOP@mobileApp'
                                                     ),
@@ -3687,14 +3930,17 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555@trans001@join_as_member'
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:4178671234567'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:4178671234567@Ryde'
                                         )
@@ -3711,16 +3957,19 @@ obj = PublicationDelivery(
                                             value='Cust555 Purchase of ride from CUST777 to be made on   2020-08-10 at - 07:00:00  '
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555@AC7651'
                                         ),
                                         travel_specifications=TravelSpecificationsRelStructure(
                                             travel_specification_ref_or_travel_specification=[
                                                 OfferedTravelSpecificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='rydt:Cust555@trans005@purchase_ride'
                                                 ),
@@ -3734,6 +3983,7 @@ obj = PublicationDelivery(
                                                     changed=XmlDateTime(2020, 8, 10, 11, 50, 0),
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde@single_trip-SOP@mobileApp'
                                                     ),
@@ -3763,18 +4013,21 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 vehicle_meeting_point_ref=[
                                                                                     VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='gamma_area'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_meeting_place_ref=[
                                                                                     VehiclePoolingMeetingPlaceRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='delta_park_and_ride'
                                                                                     ),
                                                                                 ],
                                                                                 choice_1=[
                                                                                     VehiclePoolingParkingAreaRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='delta_park_and_ride@A1'
                                                                                     ),
@@ -3801,12 +4054,14 @@ obj = PublicationDelivery(
                                                                             validity_parameters=ValidityParametersRelStructure(
                                                                                 vehicle_meeting_point_ref=[
                                                                                     VehicleMeetingPointRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='alphaville_centre'
                                                                                     ),
                                                                                 ],
                                                                                 vehicle_meeting_place_ref=[
                                                                                     VehiclePoolingMeetingPlaceRef(
+                                                                                        value='',
                                                                                         version='any',
                                                                                         ref='town_hall'
                                                                                     ),
@@ -3827,6 +4082,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         VehiclePoolerProfileRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='non_smoker'
                                                                         ),
@@ -3835,71 +4091,84 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                         VehiclePoolingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='ride_share'
                                                                         ),
                                                                     ],
                                                                     choice=[
                                                                         OperatorRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='noc:XRYD'
                                                                         ),
                                                                     ],
                                                                     facility_set_ref=[
                                                                         ServiceFacilitySetRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='no_smoking'
                                                                         ),
                                                                     ],
                                                                     single_journey_ref=[
                                                                         SingleJourneyRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='rydt:Cust777@trans001@ride1234'
                                                                         ),
                                                                     ],
                                                                     choice_2=[
                                                                         CarPoolingServiceRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='ryde'
                                                                         ),
                                                                     ],
                                                                     vehicle_ref=[
                                                                         VehicleRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='db54278'
                                                                         ),
                                                                     ],
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application_data'
                                                                         ),
                                                                     ],
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application'
                                                                         ),
                                                                     ],
                                                                     fulfilment_method_ref=[
                                                                         FulfilmentMethodRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_device'
                                                                         ),
                                                                     ]
                                                                 ),
                                                                 individual_traveller_ref=IndividualTravellerRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='rydt:Cust555'
                                                                 ),
                                                                 vehicle_pooling_driver_info_ref=VehiclePoolingDriverInfoRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='rydt:Cust777-01'
                                                                 ),
                                                                 trip_ref=TripRef(
+                                                                    value='',
                                                                     ref='123456'
                                                                 ),
                                                                 trip_leg_ref=TripLegRef(
+                                                                    value='',
                                                                     ref='123456-1'
                                                                 )
                                                             ),
@@ -3910,6 +4179,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust555@trans005@purchase_ride'
                                         ),
@@ -3920,6 +4190,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('8.00'),
                                                     pricing_service_ref=PricingServiceRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde_pricer'
                                                     )
@@ -3927,10 +4198,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:4178671234567'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:4178671234567@Ryde'
                                         )
@@ -3951,10 +4224,12 @@ obj = PublicationDelivery(
                                             value='Cust777 joins ride scheme'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777@AC8145'
                                         ),
@@ -3964,6 +4239,7 @@ obj = PublicationDelivery(
                                                     id='rydt:CPP@Cust777@001',
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde@membership-SOP@mobileApp'
                                                     ),
@@ -3972,14 +4248,17 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777@trans001@join_as_member'
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:3178672020202'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:3178672020202@Ryde'
                                         )
@@ -3996,16 +4275,19 @@ obj = PublicationDelivery(
                                             value='Cust777 to provide a ride to CUst555 on 2020-08-10'
                                         ),
                                         customer_ref=CustomerRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777'
                                         ),
                                         customer_account_ref=CustomerAccountRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777@AC8145'
                                         ),
                                         travel_specifications=TravelSpecificationsRelStructure(
                                             travel_specification_ref_or_travel_specification=[
                                                 OfferedTravelSpecificationRef(
+                                                    value='',
                                                     version='any',
                                                     ref='rydt:Cust777@trans005@sell_ride'
                                                 ),
@@ -4017,6 +4299,7 @@ obj = PublicationDelivery(
                                                     id='rydt:CPP@Cust777@021',
                                                     version='any',
                                                     sales_offer_package_element_ref=SalesOfferPackageElementRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde@single_trip-SOP@mobileApp'
                                                     ),
@@ -4051,6 +4334,7 @@ obj = PublicationDelivery(
                                                                 limitations=UsageParametersRelStructure(
                                                                     choice=[
                                                                         VehiclePoolerProfileRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='non_smoker'
                                                                         ),
@@ -4059,54 +4343,63 @@ obj = PublicationDelivery(
                                                                 validity_parameters=ValidityParametersRelStructure(
                                                                     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref=[
                                                                         VehiclePoolingRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='ride_share'
                                                                         ),
                                                                     ],
                                                                     choice=[
                                                                         OperatorRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='noc:XRYD'
                                                                         ),
                                                                     ],
                                                                     facility_set_ref=[
                                                                         ServiceFacilitySetRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='no_smoking'
                                                                         ),
                                                                     ],
                                                                     single_journey_ref=[
                                                                         SingleJourneyRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='rydt:Cust777@trans001@ride1234'
                                                                         ),
                                                                     ],
                                                                     choice_2=[
                                                                         CarPoolingServiceRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='ryde'
                                                                         ),
                                                                     ],
                                                                     vehicle_ref=[
                                                                         VehicleRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='db54278'
                                                                         ),
                                                                     ],
                                                                     type_of_travel_document_ref=[
                                                                         TypeOfTravelDocumentRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application_data'
                                                                         ),
                                                                     ],
                                                                     distribution_channel_ref_or_group_of_distribution_channels_ref=[
                                                                         DistributionChannelRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_application'
                                                                         ),
                                                                     ],
                                                                     fulfilment_method_ref=[
                                                                         FulfilmentMethodRef(
+                                                                            value='',
                                                                             version='any',
                                                                             ref='mobile_device'
                                                                         ),
@@ -4120,6 +4413,7 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         sales_transaction_ref=SalesTransactionRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:Cust777@trans005@sell_ride'
                                         ),
@@ -4130,6 +4424,7 @@ obj = PublicationDelivery(
                                                     version='any',
                                                     amount=Decimal('8.00'),
                                                     pricing_service_ref=PricingServiceRef(
+                                                        value='',
                                                         version='any',
                                                         ref='ryde_pricer'
                                                     )
@@ -4137,10 +4432,12 @@ obj = PublicationDelivery(
                                             ]
                                         ),
                                         medium_access_device_ref=MobileDeviceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:3178672020202'
                                         ),
                                         medium_application_instance_ref=MediumApplicationInstanceRef(
+                                            value='',
                                             version='any',
                                             ref='rydt:3178672020202@Ryde'
                                         )

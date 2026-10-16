@@ -16,9 +16,8 @@ class AddressLine1:
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
     value: str = field(
-        default="",
         metadata={
             "min_length": 1,
             "max_length": 128,
-        },
+        }
     )

@@ -22,7 +22,7 @@ class NotificationUrltype:
     class Meta:
         name = "NotificationURLType"
 
-    value: str = field(default="")
+    value: str = field()
     is_soap: bool = field(
         default=False,
         metadata={

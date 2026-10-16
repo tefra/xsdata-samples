@@ -22,7 +22,7 @@ class TravelArranger:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     company_short_name: None | str = field(
         default=None,
         metadata={

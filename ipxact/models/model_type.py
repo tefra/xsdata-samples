@@ -172,10 +172,9 @@ class ModelType:
             @dataclass(kw_only=True)
             class EnvIdentifier:
                 value: str = field(
-                    default="",
                     metadata={
                         "pattern": r"[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*",
-                    },
+                    }
                 )
                 id: None | str = field(
                     default=None,

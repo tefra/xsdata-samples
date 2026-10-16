@@ -27,7 +27,7 @@ class UriString:
     class Meta:
         name = "URI-STRING"
 
-    value: str = field(default="")
+    value: str = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -50,13 +50,12 @@ class IdentifiableObjectEventType:
 
     @dataclass(frozen=True, kw_only=True)
     class Urn:
-        value: str = field(default="")
+        value: str = field()
 
     @dataclass(frozen=True, kw_only=True)
     class Id:
         value: str | WildCardValueType = field(
-            default="",
             metadata={
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            },
+            }
         )

@@ -30,7 +30,7 @@ class FlightCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     carrier: str = field(
         metadata={
             "name": "Carrier",

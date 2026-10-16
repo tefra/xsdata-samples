@@ -14,4 +14,4 @@ class Command:
     class Meta:
         namespace = "http://www.travelport.com/schema/sharedBooking_v52_0"
 
-    value: str = field(default="")
+    value: str = field()

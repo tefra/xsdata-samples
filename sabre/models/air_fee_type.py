@@ -21,7 +21,7 @@ class AirFeeType:
             standard "minor unit".
     """
 
-    value: str = field(default="")
+    value: str = field()
     fee_code: str = field(
         metadata={
             "name": "FeeCode",

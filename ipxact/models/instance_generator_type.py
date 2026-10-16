@@ -40,7 +40,7 @@ class InstanceGeneratorType(GeneratorType):
 
     @dataclass(kw_only=True)
     class Group:
-        value: str = field(default="")
+        value: str = field()
         id: None | str = field(
             default=None,
             metadata={

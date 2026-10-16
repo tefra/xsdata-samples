@@ -37,7 +37,7 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class AccountControlKey:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -45,112 +45,112 @@ class AccountId:
     class Meta:
         name = "AccountID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AccountName1:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AccountName2:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AccountTypeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AccountTypeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class AdviseBefore:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CancelIfNotDelivered:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CardAuthCode:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CardExpirationDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CardHolderName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CardNum:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CardRefNum:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CardType:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class CardTypeOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DeliveryDateEarliest:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DeliveryDateLatest:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DiscountDateTimeRefCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DiscountDateTimeRefCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DiscountDayOfMonth:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DiscountDaysDue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DiscountDueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class DiscountPercent:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -158,7 +158,7 @@ class FibranchCity:
     class Meta:
         name = "FIBranchCity"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -166,7 +166,7 @@ class FibranchHouseNumber:
     class Meta:
         name = "FIBranchHouseNumber"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -174,7 +174,7 @@ class FibranchId:
     class Meta:
         name = "FIBranchID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -182,7 +182,7 @@ class FibranchName:
     class Meta:
         name = "FIBranchName"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -190,7 +190,7 @@ class FibranchPostalCode:
     class Meta:
         name = "FIBranchPostalCode"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -198,7 +198,7 @@ class FibranchStreet:
     class Meta:
         name = "FIBranchStreet"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -206,7 +206,7 @@ class FibranchStreetSupplement1:
     class Meta:
         name = "FIBranchStreetSupplement1"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -214,7 +214,7 @@ class FibranchStreetSupplement2:
     class Meta:
         name = "FIBranchStreetSupplement2"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -222,12 +222,12 @@ class FinancialInstitutionId:
     class Meta:
         name = "FinancialInstitutionID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class FinancialInstitutionName:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -235,87 +235,87 @@ class Iban:
     class Meta:
         name = "IBAN"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class NetDateTimeRefCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class NetDateTimeRefCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class NetDaysDue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class NetDueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentMeanCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentMeanCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentSystemCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentSystemCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentTermCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentTermCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentTermValue:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentTermsNote:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RequestQuoteGeneralNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RequestQuoteIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RequestQuotePurposeCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RequestQuotePurposeCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
@@ -323,7 +323,7 @@ class SecondaryAccountId:
     class Meta:
         name = "SecondaryAccountID"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

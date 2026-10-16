@@ -35,10 +35,9 @@ class CIdentifier:
         name = "C-IDENTIFIER"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[a-zA-Z_][a-zA-Z0-9_]*",
-        },
+        }
     )
     s: None | str = field(
         default=None,

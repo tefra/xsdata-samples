@@ -230,6 +230,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='zbt'
                     )
                 ),
@@ -240,6 +241,7 @@ obj = PublicationDelivery(
                             version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='01',
                                     ref='zbt:Resp01'
                                 )
@@ -403,6 +405,7 @@ obj = PublicationDelivery(
                             version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='01',
                                     ref='zbt:Resp02'
                                 )
@@ -415,10 +418,12 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='zbt:DT004Open_MFS'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='zbt:DT005Open_Sun'
                                                 ),
@@ -431,14 +436,17 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='zbt:DT001Open_MF'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='zbt:DT002Open_Sat'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='zbt:DT003Open_Sun'
                                                 ),
@@ -474,6 +482,7 @@ obj = PublicationDelivery(
                                                     value='Tyrol'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='01',
                                                     ref='topat:E0034'
                                                 )
@@ -482,9 +491,11 @@ obj = PublicationDelivery(
                                         topographic_place_type=TopographicPlaceTypeEnumeration.VILLAGE,
                                         place_centre=False,
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.AT
                                         ),
                                         parent_topographic_place_ref=TopographicPlaceRefStructure(
+                                            value='',
                                             version='01',
                                             ref='topat:E0034'
                                         )
@@ -506,6 +517,7 @@ obj = PublicationDelivery(
                                         topographic_place_type=TopographicPlaceTypeEnumeration.PROVINCE,
                                         place_centre=False,
                                         country_ref=CountryRef(
+                                            value='',
                                             ref=IanaCountryTldEnumeration.AT
                                         )
                                     ),
@@ -613,11 +625,13 @@ obj = PublicationDelivery(
                                         covered=CoveredEnumeration.MIXED,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='01',
                                                 ref='topat:E0034695'
                                             )
                                         ),
                                         contained_in_place_ref=TopographicPlaceRefStructure(
+                                            value='',
                                             version='01',
                                             ref='topat:E0034695'
                                         ),
@@ -642,6 +656,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='zbt:AC_01_Main_Opening'
                                                                 ),
@@ -658,10 +673,12 @@ obj = PublicationDelivery(
                                                         lang='en'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@A1'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -701,6 +718,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='01',
                                                                     ref='zbt:AC_02_CC_Opening'
                                                                 ),
@@ -717,10 +735,12 @@ obj = PublicationDelivery(
                                                         lang='en'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@A1'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -758,10 +778,12 @@ obj = PublicationDelivery(
                                                         lang='en'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Rail@Q1'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -801,10 +823,12 @@ obj = PublicationDelivery(
                                                         lang='en'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Rail@Q2'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -833,6 +857,7 @@ obj = PublicationDelivery(
                                         served_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                     ref='topat:E0034695'
                                                 ),
@@ -863,6 +888,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -878,6 +904,7 @@ obj = PublicationDelivery(
                                                                             id='ztb:bh0023@Rail@Q1@Sign1',
                                                                             version='any',
                                                                             choice=EquipmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='ztb:bh0023@Rail@Q1@Sign_01'
                                                                             ),
@@ -885,6 +912,7 @@ obj = PublicationDelivery(
                                                                                 value='Station name Sign on Platform 1,   10 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
+                                                                                value='',
                                                                                 ref='tbd:bh0023@A1-E2@Sign_01'
                                                                             ),
                                                                             xoffset=Decimal('10'),
@@ -894,6 +922,7 @@ obj = PublicationDelivery(
                                                                             id='ztb:bh0023@Rail@Q1@Sign_02',
                                                                             version='any',
                                                                             choice=EquipmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='ztb:bh0023@Rail@Q1@Sign_02'
                                                                             ),
@@ -901,6 +930,7 @@ obj = PublicationDelivery(
                                                                                 value='ExitSigtn  on Platform 1,  5 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='tbd:bh0023@A1-E2@Sign_011'
                                                                             ),
@@ -964,6 +994,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.MIXED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -979,6 +1010,7 @@ obj = PublicationDelivery(
                                                                             id='ztb:bh0023@Rail@Q2@Sign1',
                                                                             version='any',
                                                                             choice=EquipmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='ztb:bh0023@Rail@Q2@Sign1'
                                                                             ),
@@ -986,6 +1018,7 @@ obj = PublicationDelivery(
                                                                                 value='Station name Sign on Platform 1  "10 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='tbd:bh0023@Q2-E2'
                                                                             ),
@@ -1062,6 +1095,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.INDOORS,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -1099,10 +1133,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             EntranceRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='ztb:bh0023@A1-E1'
                                                             ),
                                                             EntranceRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='ztb:bh0023@A1-E2'
                                                             ),
@@ -1148,6 +1184,7 @@ obj = PublicationDelivery(
                                                     gated=GatedEnumeration.OPEN_AREA,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -1196,6 +1233,7 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     gated=GatedEnumeration.OPEN_AREA,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     ),
@@ -1214,10 +1252,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             EntranceRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='ztb:bh0023@Rail@Q1-E1tr'
                                                             ),
                                                             EntranceRef(
+                                                                value='',
                                                                 version='01',
                                                                 ref='ztb:bh0023@Rail@Q2-E1tr'
                                                             ),
@@ -1239,24 +1279,29 @@ obj = PublicationDelivery(
                                                     distance=Decimal('10'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1-E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0024_Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         )
@@ -1298,6 +1343,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT3M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     )
@@ -1312,28 +1358,34 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1-E1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1-E2'
                                                         )
@@ -1407,28 +1459,34 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@A1-E2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Rail@Q1-E1tr'
                                                         )
@@ -1502,28 +1560,34 @@ obj = PublicationDelivery(
                                                     distance=Decimal('10'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Rail@Q1-E1tr'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Rail@Q1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Lvl_0'
                                                         ),
                                                         entrance_ref=EntranceRefStructure(
+                                                            value='',
                                                             version='01',
                                                             ref='ztb:bh0023@Rail@Q2-E1tr'
                                                         )
@@ -1566,6 +1630,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT3M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='01',
                                                         ref='ztb:bh0023@Lvl_0'
                                                     )
@@ -1614,6 +1679,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E1+Bus-Q1'
                                                                 ),
@@ -1664,6 +1730,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E1+Bus-Q1'
                                                                 ),
@@ -1703,6 +1770,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
@@ -1742,6 +1810,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
@@ -1792,6 +1861,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
@@ -1809,6 +1879,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr'
                                                                 ),
@@ -1826,6 +1897,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
@@ -1876,6 +1948,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
@@ -1893,6 +1966,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E2+Rail@Q1-E1tr'
                                                                 ),
@@ -1910,6 +1984,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_A1-E1+A1-E2'
                                                                 ),
@@ -1983,6 +2058,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
@@ -2056,6 +2132,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='ztb:bh0023@lnk_Rail@Q1-E1tr+Rail@Q2-E1tr'
                                                                 ),
@@ -2105,6 +2182,7 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='01',
                                                 ref='topat:E0034695'
                                             )
@@ -2172,6 +2250,7 @@ obj = PublicationDelivery(
                             version='any',
                             frame_defaults=VersionFrameDefaultsStructure(
                                 default_responsibility_set_ref=ResponsibilitySetRefStructure(
+                                    value='',
                                     version='01',
                                     ref='zbt:Resp02'
                                 )
@@ -2227,6 +2306,7 @@ obj = PublicationDelivery(
                                         from_value=ConnectionEndStructure(
                                             transport_mode=AllModesEnumeration.BUS,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='002',
                                                 ref='ztb:ssa_bh0026'
                                             )
@@ -2234,6 +2314,7 @@ obj = PublicationDelivery(
                                         to=ConnectionEndStructure(
                                             transport_mode=AllModesEnumeration.RAIL,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='032',
                                                 ref='ztb:ssa_bh0023'
                                             )
@@ -2251,10 +2332,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='01',
                                             ref='ztb:bh0023'
                                         )
@@ -2267,14 +2350,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='01',
                                             ref='ztb:bh0023'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='01',
                                             ref='ztb:bh0023@Rail@Q1'
                                         )
@@ -2287,14 +2373,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='032',
                                             ref='ztb:ssa_bh0023'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='01',
                                             ref='ztb:bh0023'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='01',
                                             ref='ztb:bh0023@Rail@Q2'
                                         )
@@ -2331,6 +2420,7 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.ALL,
                                                     ],
                                                     responsible_organisation_ref=OperatorRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='zbt:Org_ZTLB'
                                                     )
@@ -2361,6 +2451,7 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.ALL,
                                                     ],
                                                     responsible_organisation_ref=OperatorRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='zbt:Org_ZTLB'
                                                     )

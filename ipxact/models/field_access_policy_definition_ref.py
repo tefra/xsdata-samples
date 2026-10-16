@@ -15,7 +15,7 @@ class FieldAccessPolicyDefinitionRef:
         name = "fieldAccessPolicyDefinitionRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: str = field(default="")
+    value: str = field()
     type_definitions: str = field(
         metadata={
             "name": "typeDefinitions",

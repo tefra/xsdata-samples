@@ -31,10 +31,9 @@ class Ip6AddressString:
         name = "IP6-ADDRESS-STRING"
 
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[0-9A-Fa-f]{1,4}(:[0-9A-Fa-f]{1,4}){7,7}|ANY",
-        },
+        }
     )
     s: None | str = field(
         default=None,

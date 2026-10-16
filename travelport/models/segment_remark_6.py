@@ -15,7 +15,7 @@ class SegmentRemark6:
         name = "SegmentRemark"
         namespace = "http://www.travelport.com/schema/common_v38_0"
 
-    value: str = field(default="")
+    value: str = field()
     key: str = field(
         metadata={
             "name": "Key",

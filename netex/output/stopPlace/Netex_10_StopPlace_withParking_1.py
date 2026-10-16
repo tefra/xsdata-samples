@@ -370,6 +370,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='tbd'
                     )
                 ),
@@ -613,10 +614,12 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Org_TL001'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Administrative_Zone@82'
                                                     )
@@ -642,10 +645,12 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Org_TD002'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Administrative_Zone@110'
                                                     )
@@ -671,10 +676,12 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.COLLECTS,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Org_TL001'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Administrative_Zone@147'
                                                     )
@@ -705,10 +712,12 @@ obj = PublicationDelivery(
                                                         StakeholderRoleTypeEnumeration.OPERATION,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Org_TD002'
                                                     ),
                                                     responsible_area_ref=VersionOfObjectRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Administrative_Zone@UK'
                                                     )
@@ -734,6 +743,7 @@ obj = PublicationDelivery(
                                                         DataRoleTypeEnumeration.ALL,
                                                     ],
                                                     responsible_organisation_ref=OrganisationRefStructure(
+                                                        value='',
                                                         version='any',
                                                         ref='nptg:Org_TD002'
                                                     )
@@ -914,6 +924,7 @@ obj = PublicationDelivery(
                                                                     codespace_assignment=[
                                                                         CodespaceAssignmentVersionedChildStructure(
                                                                             codespace_ref_or_codespace=CodespaceRef(
+                                                                                value='',
                                                                                 ref='napt_metadata'
                                                                             ),
                                                                             code_prefix=[
@@ -959,6 +970,7 @@ obj = PublicationDelivery(
                                                                         CodespaceAssignmentVersionedChildStructure(
                                                                             id='nptg:NA_UK_01',
                                                                             codespace_ref_or_codespace=CodespaceRef(
+                                                                                value='',
                                                                                 ref='nptg_metadata'
                                                                             ),
                                                                             description=MultilingualString(
@@ -979,6 +991,7 @@ obj = PublicationDelivery(
                                                                         CodespaceAssignmentVersionedChildStructure(
                                                                             id='nptg:NA_110_01',
                                                                             codespace_ref_or_codespace=CodespaceRef(
+                                                                                value='',
                                                                                 ref='napt_metadata'
                                                                             ),
                                                                             code_prefix=[
@@ -1002,6 +1015,7 @@ obj = PublicationDelivery(
                                                                         CodespaceAssignmentVersionedChildStructure(
                                                                             id='nptg:NA_144_01',
                                                                             codespace_ref_or_codespace=CodespaceRef(
+                                                                                value='',
                                                                                 ref='napt_metadata'
                                                                             ),
                                                                             code_prefix=[
@@ -1025,6 +1039,7 @@ obj = PublicationDelivery(
                                                                         CodespaceAssignmentVersionedChildStructure(
                                                                             id='nptg:NA_147_01',
                                                                             codespace_ref_or_codespace=CodespaceRef(
+                                                                                value='',
                                                                                 ref='napt_metadata'
                                                                             ),
                                                                             code_prefix=[
@@ -1079,6 +1094,7 @@ obj = PublicationDelivery(
                                         ),
                                         image_uri='http://www.tbde.com/Wimbledonplan1.jpg',
                                         depicted_object_ref=VersionOfObjectRefStructure(
+                                            value='',
                                             name_of_ref_class='StopPlace',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
@@ -1090,6 +1106,7 @@ obj = PublicationDelivery(
                                                         value='Entrance'
                                                     ),
                                                     choice=SchematicMapMemberRef(
+                                                        value='',
                                                         name_of_ref_class='StopPlaceEntrance',
                                                         ref='nptg:9100WIMBLDN_A1-EE1'
                                                     ),
@@ -1102,6 +1119,7 @@ obj = PublicationDelivery(
                                                         value='Side Entrance'
                                                     ),
                                                     choice=SchematicMapMemberRef(
+                                                        value='',
                                                         name_of_ref_class='StopPlaceEntrance',
                                                         ref='nptg:9100WIMBLDN_A4-EE1'
                                                     ),
@@ -1114,6 +1132,7 @@ obj = PublicationDelivery(
                                                         value="Men and Women's Toilets"
                                                     ),
                                                     choice=SchematicMapMemberRef(
+                                                        value='',
                                                         name_of_ref_class='SanitaryEquipment',
                                                         ref='nptg:9100WIMBLDN_A2-Eq-WC1'
                                                     ),
@@ -1137,10 +1156,12 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:DT004Open_MFS'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:DT005Open_Sun'
                                                 ),
@@ -1153,10 +1174,12 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:DT004Open_MFS'
                                                 ),
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:DT005Open_Sun'
                                                 ),
@@ -1169,6 +1192,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:DT006Rush_MF'
                                                 ),
@@ -1190,6 +1214,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:Region@L'
                                         ),
@@ -1204,6 +1229,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1226,6 +1252,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:Region@L'
                                         ),
@@ -1241,6 +1268,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1263,6 +1291,7 @@ obj = PublicationDelivery(
                                             lang='en'
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:Region@L'
                                         ),
@@ -1278,6 +1307,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1296,6 +1326,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Lo'
                                                 ),
@@ -1314,6 +1345,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@299'
                                         ),
@@ -1328,6 +1360,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:District@299'
                                                 )
@@ -1350,6 +1383,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Lo'
                                                 ),
@@ -1368,6 +1402,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@299'
                                         ),
@@ -1382,6 +1417,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1400,6 +1436,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Lo'
                                                 ),
@@ -1418,6 +1455,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@299'
                                         ),
@@ -1432,6 +1470,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1450,6 +1489,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Lo'
                                                 ),
@@ -1468,6 +1508,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@307'
                                         ),
@@ -1482,6 +1523,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1500,6 +1542,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Lo'
                                                 ),
@@ -1518,6 +1561,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@307'
                                         ),
@@ -1532,6 +1576,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1552,6 +1597,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Add'
                                                 ),
@@ -1570,6 +1616,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@299'
                                         ),
@@ -1584,6 +1631,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1604,6 +1652,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Add'
                                                 ),
@@ -1622,6 +1671,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@299'
                                         ),
@@ -1636,6 +1686,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1656,6 +1707,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='nptg:Type_of_zone@Add'
                                                 ),
@@ -1674,6 +1726,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_zone_ref=ZoneRefStructure(
+                                            value='',
                                             version='001',
                                             ref='nptg:District@307'
                                         ),
@@ -1688,6 +1741,7 @@ obj = PublicationDelivery(
                                                     lang='en'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptgLocality:E0034695'
                                                 )
@@ -1719,6 +1773,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:Type_of_zone@GRLS'
                                                 ),
@@ -1874,12 +1929,14 @@ obj = PublicationDelivery(
                                         covered=CoveredEnumeration.MIXED,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
                                             organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=GeneralOrganisationRef(
+                                                value='',
                                                 version='any',
                                                 ref='nptg:Org_Nr'
                                             ),
@@ -1888,6 +1945,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         contained_in_place_ref=TopographicPlaceRefStructure(
+                                            value='',
                                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                             version='001',
                                             ref='nptgLocality:E0034695'
@@ -1931,6 +1989,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='nptg:AC_01_Main_Opening'
                                                                 ),
@@ -1945,12 +2004,14 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@RSE'
                                                             ),
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A1'
                                                     ),
@@ -1970,6 +2031,7 @@ obj = PublicationDelivery(
                                                         )
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -1988,10 +2050,12 @@ obj = PublicationDelivery(
                                                         value='Internal Entrance to Upper Concourse from  Ticket Hall'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2044,10 +2108,12 @@ obj = PublicationDelivery(
                                                         value='Upper Concourse Stairs Entrance to District Line concourse (Platforms 1-4)'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2066,10 +2132,12 @@ obj = PublicationDelivery(
                                                         value='Upper Concourse Stairs Entrance  Platforms 5 and 6'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2088,10 +2156,12 @@ obj = PublicationDelivery(
                                                         value='Upper Concourse Stairs Entrance  Platforms 7 and 8'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2110,10 +2180,12 @@ obj = PublicationDelivery(
                                                         value='Upper Concourse Stairs Entrance  Platforms 9 and 10'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2132,10 +2204,12 @@ obj = PublicationDelivery(
                                                         value='Internal Entrance to Lift Area Concourse Corridor from Concourse at Main Entrance end'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2166,10 +2240,12 @@ obj = PublicationDelivery(
                                                         value='Internal Entrance to Lift Area Concourse Corridor from Concourse at Centre Court end'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2200,10 +2276,12 @@ obj = PublicationDelivery(
                                                         value='Upper concourse corridor  Lift Entrance to District LINE  (Platforms 1-4)'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2233,10 +2311,12 @@ obj = PublicationDelivery(
                                                         value='Upper concourse corridor  Lift Entrance to Platforms 5 and 6'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2266,10 +2346,12 @@ obj = PublicationDelivery(
                                                         value='Upper concourse corridor  Lift Entrance to Platforms 7 and 8'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2299,10 +2381,12 @@ obj = PublicationDelivery(
                                                         value='Upper concourse corridor  Lift Entrance Platforms 9 and 10'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2330,6 +2414,7 @@ obj = PublicationDelivery(
                                                         ValidityConditionsRelStructure(
                                                             choice=[
                                                                 AvailabilityConditionRef(
+                                                                    value='',
                                                                     version='any',
                                                                     ref='nptg:AC_01_Main_Opening'
                                                                 ),
@@ -2344,16 +2429,19 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@RSE'
                                                             ),
                                                         ]
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A3'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2383,10 +2471,12 @@ obj = PublicationDelivery(
                                                         value='Internal Entrance to Upper Concourse from  Centre Court Ticket Hall'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -2405,10 +2495,12 @@ obj = PublicationDelivery(
                                                         value='Lower Staris Entrance to Platforms 5 and 6'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_5n6'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2427,10 +2519,12 @@ obj = PublicationDelivery(
                                                         value='Lower Lift Entrance to Platforms 5 and 6'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_5n6'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2449,10 +2543,12 @@ obj = PublicationDelivery(
                                                         value='Lower Stairs Entrance to Platforms 7 and 8'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_7n8'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2471,10 +2567,12 @@ obj = PublicationDelivery(
                                                         value='Lower Lift Entrance to Platforms 7 and 8'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_7n8'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2493,10 +2591,12 @@ obj = PublicationDelivery(
                                                         value='Lower Stairs Entrance to Platforms 9 and 10'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_9n10'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2515,10 +2615,12 @@ obj = PublicationDelivery(
                                                         value='Lower Stairs Entrance to Platforms 9 and 10'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_9n10'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2605,6 +2707,7 @@ obj = PublicationDelivery(
                                         served_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                     ref='nptgLocality:E0034695'
                                                 ),
@@ -2664,6 +2767,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2693,10 +2797,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_5n6-EL1pl'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_5n6-ES1pl'
                                                             ),
@@ -2733,6 +2839,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_5n6'
                                                     )
@@ -2752,6 +2859,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_5n6'
                                                     )
@@ -2807,6 +2915,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2836,10 +2945,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_7n8-EL1pl'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_7n8-ES1pl'
                                                             ),
@@ -2876,6 +2987,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_7n8'
                                                     )
@@ -2895,6 +3007,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_7n8'
                                                     )
@@ -2950,6 +3063,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -2979,10 +3093,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_9n10-EL1pl'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_9n10-ES1pl'
                                                             ),
@@ -3014,6 +3130,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.RAIL_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_9n10'
                                                     )
@@ -3046,6 +3163,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.TRAM_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:9100WIMBLDN_9n10'
                                                     )
@@ -3073,6 +3191,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -3104,6 +3223,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -3157,6 +3277,7 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.COVERED,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -3265,10 +3386,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A1-EE1'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A1-EI1'
                                                             ),
@@ -3318,6 +3441,7 @@ obj = PublicationDelivery(
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     all_areas_wheelchair_accessible=True,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -3348,30 +3472,37 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A1-EI1'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EI5'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EI6'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES1g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES2g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES3g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES4g'
                                                             ),
@@ -3392,32 +3523,39 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.INDOORS,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EI5'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EI6'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL1g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL2g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL3g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL4g'
                                                             ),
@@ -3425,6 +3563,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     access_space_type=AccessSpaceTypeEnumeration.CONCOURSE,
                                                     parent_access_space_ref=AccessSpaceRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     )
@@ -3442,6 +3581,7 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.INDOORS,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -3456,6 +3596,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     access_space_type=AccessSpaceTypeEnumeration.CONCOURSE,
                                                     parent_access_space_ref=AccessSpaceRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     )
@@ -3501,6 +3642,7 @@ obj = PublicationDelivery(
                                                     covered=CoveredEnumeration.INDOORS,
                                                     lighting=LightingEnumeration.WELL_LIT,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -3557,10 +3699,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A4-EE1'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A4-EI3'
                                                             ),
@@ -3640,10 +3784,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             EntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL1g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A5-EL1pl'
                                                             ),
@@ -3717,10 +3863,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL2g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_5n6-EL1pl'
                                                             ),
@@ -3794,10 +3942,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL3g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_7n8-EL1pl'
                                                             ),
@@ -3871,10 +4021,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2b-EL4g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_9n10-EL1pl'
                                                             ),
@@ -3919,10 +4071,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES2g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_5n6-ES1pl'
                                                             ),
@@ -3967,10 +4121,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES3g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_9n10-ES1pl'
                                                             ),
@@ -4015,10 +4171,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES4g'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_9n10-ES1pl'
                                                             ),
@@ -4063,6 +4221,7 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A1-EE1'
                                                             ),
@@ -4084,19 +4243,23 @@ obj = PublicationDelivery(
                                                     distance=Decimal('2.0'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A1'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A1-EE1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A1'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A1-EI1'
                                                         )
                                                     ),
@@ -4133,6 +4296,7 @@ obj = PublicationDelivery(
                                                     transition=TransitionEnumeration.LEVEL,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -4168,6 +4332,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             AvailabilityConditionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='nptg:AC_01_Main_Opening'
                                                                             ),
@@ -4200,6 +4365,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             AvailabilityConditionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='nptg:AC_03_RushHourMF'
                                                                             ),
@@ -4239,15 +4405,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A1-EI1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J1'
                                                         )
@@ -4264,6 +4433,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4278,15 +4448,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EI6'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J2'
                                                         )
@@ -4304,6 +4477,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4318,15 +4492,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES1g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J1'
                                                         )
@@ -4344,6 +4521,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4358,16 +4536,19 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2-ES4g'
                                                         )
@@ -4384,6 +4565,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4398,15 +4580,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A4-EI1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J1'
                                                         )
@@ -4424,6 +4609,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4438,15 +4624,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A4-EI6'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J4'
                                                         )
@@ -4464,6 +4653,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4478,12 +4668,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J2'
                                                         )
@@ -4501,6 +4693,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4515,12 +4708,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b-EI6'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J1'
                                                         )
@@ -4538,6 +4733,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4552,15 +4748,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J2'
                                                         )
@@ -4578,6 +4777,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4592,12 +4792,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J3'
                                                         )
@@ -4615,6 +4817,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4629,15 +4832,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES3g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J3'
                                                         )
@@ -4652,6 +4858,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT30S")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4666,12 +4873,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J3'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J4'
                                                         )
@@ -4686,6 +4895,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT30S")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4700,15 +4910,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES4g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J4'
                                                         )
@@ -4723,6 +4936,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT30S")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -4737,15 +4951,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A1'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A1-EE1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_FC_J1'
                                                         )
@@ -4757,6 +4974,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -4771,12 +4989,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_FC_J1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_FC_J2'
                                                         )
@@ -4788,6 +5008,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -4802,12 +5023,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_FC_J2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw1'
                                                         )
@@ -4819,6 +5042,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -4833,27 +5057,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('20.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='naptStop:9100WIMBLDN_5n6'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_5n6-ES1pl'
                                                         )
                                                     ),
@@ -4918,27 +5148,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('20.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='naptStop:9100WIMBLDN_7n8'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_7n8-ES1pl'
                                                         )
                                                     ),
@@ -5002,27 +5238,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('20.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='naptStop:9100WIMBLDN_9n10'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_9n10-ES1pl'
                                                         )
                                                     ),
@@ -5086,27 +5328,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('0'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L2'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L2'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_5n6-EL1pl'
                                                         )
                                                     ),
@@ -5209,27 +5457,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('0'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L3'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L3'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_5n6-EL1pl'
                                                         )
                                                     ),
@@ -5332,27 +5586,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('0'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L4'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L4'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_9n10-EL1pl'
                                                         )
                                                     ),
@@ -5398,6 +5658,7 @@ obj = PublicationDelivery(
                                                                     ValidityConditionsRelStructure(
                                                                         choice=[
                                                                             AvailabilityConditionRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='nptg:AC_01_Main_Opening'
                                                                             ),
@@ -5451,14 +5712,17 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EI5'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J2'
                                                         )
@@ -5473,6 +5737,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT30S")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5487,15 +5752,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EI5'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J4'
                                                         )
@@ -5510,6 +5778,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT30S")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5524,12 +5793,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J5'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J6'
                                                         )
@@ -5544,6 +5815,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT30S")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5558,15 +5830,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EI6'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J5'
                                                         )
@@ -5584,6 +5859,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5598,15 +5874,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL1g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J5'
                                                         )
@@ -5624,6 +5903,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5638,15 +5918,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J5'
                                                         )
@@ -5664,6 +5947,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5678,15 +5962,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EI6'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J6'
                                                         )
@@ -5704,6 +5991,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5718,15 +6006,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL1g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J6'
                                                         )
@@ -5744,6 +6035,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5758,15 +6050,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL2g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J6'
                                                         )
@@ -5784,6 +6079,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5798,12 +6094,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A3'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2b_J5'
                                                         )
@@ -5821,6 +6119,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5835,15 +6134,18 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A4-EI3'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2_J4'
                                                         )
@@ -5858,6 +6160,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT30S")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5872,27 +6175,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('2.0'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A4'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A4-EE1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A4-EI3'
                                                         )
                                                     ),
@@ -5931,6 +6240,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.NARROW_ENTRANCE,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     )
@@ -5951,6 +6261,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
@@ -5968,6 +6279,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
@@ -5985,6 +6297,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
@@ -6002,6 +6315,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2'
                                                     ),
@@ -6019,6 +6333,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
@@ -6036,6 +6351,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A2b'
                                                     ),
@@ -6053,6 +6369,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_FC'
                                                     ),
@@ -6070,6 +6387,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_FC'
                                                     ),
@@ -6134,6 +6452,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6151,6 +6470,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6168,6 +6488,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -6185,6 +6506,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                 ),
@@ -6202,6 +6524,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2'
                                                                 ),
@@ -6268,6 +6591,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6285,6 +6609,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2'
                                                                 ),
@@ -6302,6 +6627,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2'
                                                                 ),
@@ -6367,6 +6693,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2'
                                                                 ),
@@ -6384,6 +6711,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                 ),
@@ -6401,6 +6729,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -6418,6 +6747,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6435,6 +6765,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6501,6 +6832,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2'
                                                                 ),
@@ -6518,6 +6850,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2'
                                                                 ),
@@ -6535,6 +6868,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6600,6 +6934,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6617,6 +6952,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6634,6 +6970,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -6651,6 +6988,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -6668,6 +7006,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -6685,6 +7024,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -6751,6 +7091,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6768,6 +7109,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -6785,6 +7127,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -6802,6 +7145,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -6867,6 +7211,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -6884,6 +7229,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -6901,6 +7247,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -6918,6 +7265,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -6935,6 +7283,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -6952,6 +7301,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7018,6 +7368,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -7035,6 +7386,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -7052,6 +7404,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -7069,6 +7422,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7134,6 +7488,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7151,6 +7506,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7168,6 +7524,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -7185,6 +7542,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -7202,6 +7560,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6'
                                                                 ),
@@ -7219,6 +7578,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4'
                                                                 ),
@@ -7285,6 +7645,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7302,6 +7663,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -7319,6 +7681,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J3_A2-J4'
                                                                 ),
@@ -7336,6 +7699,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4'
                                                                 ),
@@ -7353,6 +7717,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4'
                                                                 ),
@@ -7418,6 +7783,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4'
                                                                 ),
@@ -7435,6 +7801,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6'
                                                                 ),
@@ -7452,6 +7819,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -7469,6 +7837,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -7486,6 +7855,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7503,6 +7873,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7569,6 +7940,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4'
                                                                 ),
@@ -7586,6 +7958,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4'
                                                                 ),
@@ -7603,6 +7976,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J3_A2-J4'
                                                                 ),
@@ -7620,6 +7994,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -7637,6 +8012,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -7702,6 +8078,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1'
                                                                 ),
@@ -7719,6 +8096,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5'
                                                                 ),
@@ -7736,6 +8114,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -7753,6 +8132,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -7770,6 +8150,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -7836,6 +8217,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1'
                                                                 ),
@@ -7853,6 +8235,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1'
                                                                 ),
@@ -7870,6 +8253,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J1_A2-J2'
                                                                 ),
@@ -7887,6 +8271,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -7904,6 +8289,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -7921,6 +8307,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -7986,6 +8373,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -8003,6 +8391,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -8020,6 +8409,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -8037,6 +8427,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5'
                                                                 ),
@@ -8054,6 +8445,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1'
                                                                 ),
@@ -8120,6 +8512,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -8137,6 +8530,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -8154,6 +8548,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -8171,6 +8566,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J1_A2-J2'
                                                                 ),
@@ -8188,6 +8584,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1'
                                                                 ),
@@ -8205,6 +8602,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1'
                                                                 ),
@@ -8274,6 +8672,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2'
                                                                 ),
@@ -8291,6 +8690,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                 ),
@@ -8308,6 +8708,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -8325,6 +8726,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -8342,6 +8744,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -8411,6 +8814,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2'
                                                                 ),
@@ -8428,6 +8832,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2'
                                                                 ),
@@ -8445,6 +8850,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -8462,6 +8868,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -8479,6 +8886,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -8548,6 +8956,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -8565,6 +8974,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -8582,6 +8992,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -8599,6 +9010,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                 ),
@@ -8616,6 +9028,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2'
                                                                 ),
@@ -8685,6 +9098,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -8702,6 +9116,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -8719,6 +9134,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -8736,6 +9152,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -8753,6 +9170,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2'
                                                                 ),
@@ -8822,6 +9240,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2'
                                                                 ),
@@ -8839,6 +9258,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                 ),
@@ -8856,6 +9276,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -8873,6 +9294,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6'
                                                                 ),
@@ -8890,6 +9312,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4'
                                                                 ),
@@ -8960,6 +9383,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2'
                                                                 ),
@@ -8977,6 +9401,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2'
                                                                 ),
@@ -8994,6 +9419,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -9011,6 +9437,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J3_A2-J4'
                                                                 ),
@@ -9028,6 +9455,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4'
                                                                 ),
@@ -9045,6 +9473,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4'
                                                                 ),
@@ -9114,6 +9543,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4'
                                                                 ),
@@ -9131,6 +9561,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6'
                                                                 ),
@@ -9148,6 +9579,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-J5_A2b-J6'
                                                                 ),
@@ -9165,6 +9597,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                 ),
@@ -9182,6 +9615,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2'
                                                                 ),
@@ -9248,6 +9682,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4'
                                                                 ),
@@ -9265,6 +9700,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4'
                                                                 ),
@@ -9282,6 +9718,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J3_A2-J4'
                                                                 ),
@@ -9299,6 +9736,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J2_A2-J3'
                                                                 ),
@@ -9316,6 +9754,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2'
                                                                 ),
@@ -9333,6 +9772,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2'
                                                                 ),
@@ -9398,6 +9838,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -9415,6 +9856,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -9432,6 +9874,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6'
                                                                 ),
@@ -9449,6 +9892,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4'
                                                                 ),
@@ -9515,6 +9959,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -9532,6 +9977,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -9549,6 +9995,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J3_A2-J4'
                                                                 ),
@@ -9566,6 +10013,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4'
                                                                 ),
@@ -9583,6 +10031,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4'
                                                                 ),
@@ -9648,6 +10097,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4'
                                                                 ),
@@ -9665,6 +10115,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_A2b-J6'
                                                                 ),
@@ -9682,6 +10133,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_A2b-J6'
                                                                 ),
@@ -9699,6 +10151,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL3g_7n8-EL1pl_by-L3'
                                                                 ),
@@ -9765,6 +10218,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4'
                                                                 ),
@@ -9782,6 +10236,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES4g_A2-J4'
                                                                 ),
@@ -9799,6 +10254,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J3_A2-J4'
                                                                 ),
@@ -9816,6 +10272,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_A2-J3'
                                                                 ),
@@ -9833,6 +10290,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES3g_7n8-ES1pl_by-S3'
                                                                 ),
@@ -9865,6 +10323,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:Type_of_zone@GTMU'
                                                 ),
@@ -9910,11 +10369,13 @@ obj = PublicationDelivery(
                                         ],
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
                                         parent_site_ref=StopPlaceRefStructure(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
@@ -9928,10 +10389,12 @@ obj = PublicationDelivery(
                                                         value='Lower Stairs Entrance to District Line concourse'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A5'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -9950,10 +10413,12 @@ obj = PublicationDelivery(
                                                         value='Lower Lift Entrance to District Line concourse'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A5'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -9972,10 +10437,12 @@ obj = PublicationDelivery(
                                                         value='District Line concourse to Platforms 1 and 2'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A5'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -10004,10 +10471,12 @@ obj = PublicationDelivery(
                                                         value='District Line concourse to Platforms 3 and 4'
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_A5'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -10034,6 +10503,7 @@ obj = PublicationDelivery(
                                         tariff_zones=TariffZoneRefsRelStructure(
                                             tariff_zone_ref=[
                                                 TariffZoneRef(
+                                                    value='',
                                                     version='001',
                                                     ref='tfl:tf_03'
                                                 ),
@@ -10043,41 +10513,49 @@ obj = PublicationDelivery(
                                         main_terminus_for_places=TopographicPlaceRefsRelStructure(
                                             topographic_place_ref=[
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     ref='nptgLocality:E0034695'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     ref='nptgLocality:E0034696'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     ref='nptgLocality:E0034698'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     ref='nptgLocality:E0034907'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     ref='nptgLocality:E0034908'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     ref='nptgLocality:N0060499'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 4, 8, 0, 0, 0),
                                                     ref='nptgLocality:N0061138'
                                                 ),
                                                 TopographicPlaceRefStructure(
+                                                    value='',
                                                     created=XmlDateTime(2005, 8, 26, 0, 0, 0),
                                                     changed=XmlDateTime(2005, 8, 26, 0, 0, 0),
                                                     ref='nptgLocality:N0077726'
@@ -10138,6 +10616,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -10153,6 +10632,7 @@ obj = PublicationDelivery(
                                                                             id='nptg:4900ZZLUWIM1n2',
                                                                             version='any',
                                                                             choice=EquipmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='nptg:4900ZZLUWIM3n4_Eq-Seats1'
                                                                             ),
@@ -10160,6 +10640,7 @@ obj = PublicationDelivery(
                                                                                 value='Seats on Platform 1 and 2. "0 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_A5-EI1'
                                                                             ),
@@ -10197,10 +10678,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A5-ES1pl'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A5-EL1pl'
                                                             ),
@@ -10235,6 +10718,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.METRO_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:4900ZZLUWIM1n2'
                                                     )
@@ -10255,6 +10739,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.METRO_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:4900ZZLUWIM1n2'
                                                     )
@@ -10311,6 +10796,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -10329,6 +10815,7 @@ obj = PublicationDelivery(
                                                                             changed=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                             version='001',
                                                                             choice=EquipmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='nptg:4900ZZLUWIM3n4_Eq-Seats1'
                                                                             ),
@@ -10336,6 +10823,7 @@ obj = PublicationDelivery(
                                                                                 value='Seats on Platform 1 and 2. "0 metres from platform entrance'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_5n6-EL1p'
                                                                             ),
@@ -10373,6 +10861,7 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_5n6-EL1pl'
                                                             ),
@@ -10407,6 +10896,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.METRO_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:4900ZZLUWIM3n4'
                                                     )
@@ -10427,6 +10917,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     quay_type=QuayTypeEnumeration.METRO_PLATFORM,
                                                     parent_quay_ref=QuayRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:4900ZZLUWIM3n4'
                                                     )
@@ -10475,6 +10966,7 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     ),
@@ -10524,10 +11016,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A5-EL1pl'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A5-ES1pl'
                                                             ),
@@ -10580,6 +11074,7 @@ obj = PublicationDelivery(
                                                                             created=XmlDateTime(2010, 5, 17, 9, 30, 47, 0, 0),
                                                                             version='001',
                                                                             choice=EquipmentRef(
+                                                                                value='',
                                                                                 version='any',
                                                                                 ref='nptg:9100WIMBLDN_S1'
                                                                             ),
@@ -10587,6 +11082,7 @@ obj = PublicationDelivery(
                                                                                 value='Top fligh t of stairs ce'
                                                                             ),
                                                                             reference_point_ref=PointRefStructure(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_A5-ES1pl'
                                                                             ),
@@ -10653,10 +11149,12 @@ obj = PublicationDelivery(
                                                     entrances=SiteEntrancesRelStructure(
                                                         entrance_ref_or_parking_entrance_ref_or_entrance=[
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A5-ES1pl'
                                                             ),
                                                             StopPlaceEntranceRef(
+                                                                value='',
                                                                 version='001',
                                                                 ref='nptg:9100WIMBLDN_A2-ES1g'
                                                             ),
@@ -10678,27 +11176,33 @@ obj = PublicationDelivery(
                                                     distance=Decimal('0'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2b-EL1g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_L1'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A5-EL1'
                                                         )
                                                     ),
@@ -10786,19 +11290,23 @@ obj = PublicationDelivery(
                                                     distance=Decimal('10.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A2'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_G0'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A2-ES1g'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_S1_J1'
                                                         )
@@ -10846,20 +11354,24 @@ obj = PublicationDelivery(
                                                     distance=Decimal('10.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_S1_J1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A5'
                                                         ),
                                                         level_ref=LevelRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_Lvl_PL'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A5-ES1'
                                                         )
                                                     ),
@@ -10906,19 +11418,23 @@ obj = PublicationDelivery(
                                                     distance=Decimal('34'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A5'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A5-EL1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='naptStop:4900ZZLUWIM1n2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:4900ZZLUWIM1n2-EI1'
                                                         )
                                                     ),
@@ -10935,6 +11451,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     )
@@ -10949,19 +11466,23 @@ obj = PublicationDelivery(
                                                     distance=Decimal('34'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A5'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A5-EL1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='naptStop:4900ZZLUWIM3n4'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:4900ZZLUWIM3n4-EI1'
                                                         )
                                                     ),
@@ -10978,6 +11499,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     )
@@ -10992,18 +11514,22 @@ obj = PublicationDelivery(
                                                     distance=Decimal('17.5'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A5'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A5-ES1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=QuayRefStructure(
+                                                            value='',
                                                             ref='naptStop:4900ZZLUWIM1n2'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:4900ZZLUWIM1n2-EI1'
                                                         )
                                                     ),
@@ -11020,6 +11546,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     )
@@ -11034,19 +11561,23 @@ obj = PublicationDelivery(
                                                     distance=Decimal('17.5'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A5'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A5-ES1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='naptStop:4900ZZLUWIM3n4'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:4900ZZLUWIM3n4-EI1'
                                                         )
                                                     ),
@@ -11063,6 +11594,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     )
@@ -11077,19 +11609,23 @@ obj = PublicationDelivery(
                                                     distance=Decimal('8.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A5'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:4900ZZLUWIM1n2-EI1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='naptStop:4900ZZLUWIM3n4'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:4900ZZLUWIM3n4-EI1'
                                                         )
                                                     ),
@@ -11106,6 +11642,7 @@ obj = PublicationDelivery(
                                                         mobility_restricted_traveller_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_PL'
                                                     )
@@ -11126,6 +11663,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_S1'
                                                     ),
@@ -11190,6 +11728,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1'
                                                                 ),
@@ -11207,6 +11746,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1'
                                                                 ),
@@ -11224,6 +11764,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -11241,6 +11782,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A1-EI1_A2-J1'
                                                                 ),
@@ -11258,6 +11800,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -11275,6 +11818,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5'
                                                                 ),
@@ -11292,6 +11836,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=7,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1'
                                                                 ),
@@ -11309,6 +11854,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=8,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A5-EL1pl_1n2-EI1pl'
                                                                 ),
@@ -11374,6 +11920,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A5-EL1pl_1n2-EI1pl'
                                                                 ),
@@ -11391,6 +11938,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1'
                                                                 ),
@@ -11408,6 +11956,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A2b-J5'
                                                                 ),
@@ -11425,6 +11974,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                 ),
@@ -11442,6 +11992,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                 ),
@@ -11459,6 +12010,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-J1_A2-J2'
                                                                 ),
@@ -11476,6 +12028,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=7,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1'
                                                                 ),
@@ -11493,6 +12046,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=8,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1'
                                                                 ),
@@ -11558,6 +12112,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1'
                                                                 ),
@@ -11575,6 +12130,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1'
                                                                 ),
@@ -11592,6 +12148,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1'
                                                                 ),
@@ -11609,6 +12166,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1'
                                                                 ),
@@ -11626,6 +12184,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_S1-J1_A5-ES1pl_by-S1'
                                                                 ),
@@ -11643,6 +12202,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A5-ES1pl_1n2-EI1pl'
                                                                 ),
@@ -11708,6 +12268,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=1,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A5-ES1pl_1n2-EI1pl'
                                                                 ),
@@ -11725,6 +12286,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=2,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_S1-J1_A5-ES1pl_by-S1'
                                                                 ),
@@ -11742,6 +12304,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=3,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_S1-J1_by-S1'
                                                                 ),
@@ -11759,6 +12322,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=4,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1'
                                                                 ),
@@ -11776,6 +12340,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=5,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A2-EI1_A2-J1'
                                                                 ),
@@ -11793,6 +12358,7 @@ obj = PublicationDelivery(
                                                                 ],
                                                                 order=6,
                                                                 path_link_ref=PathLinkRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_lnk_A1-EE1_A1-EI1'
                                                                 ),
@@ -11878,6 +12444,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A1'
                                                                 ),
@@ -11894,6 +12461,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=5,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A1-EI1_A2-J2'
                                                                             ),
@@ -11911,6 +12479,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2_J2'
                                                                 ),
@@ -11927,6 +12496,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-J1_A2-J2'
                                                                             ),
@@ -11942,6 +12512,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=2,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                             ),
@@ -11958,6 +12529,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2_J1'
                                                                 ),
@@ -11974,6 +12546,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1'
                                                                             ),
@@ -11990,6 +12563,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_S1'
                                                                 ),
@@ -12006,6 +12580,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-J1_A2-J2'
                                                                             ),
@@ -12022,6 +12597,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-ES2g_A2-J2'
                                                                             ),
@@ -12039,6 +12615,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2b_J5'
                                                                 ),
@@ -12055,6 +12632,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                             ),
@@ -12072,6 +12650,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_L2'
                                                                 ),
@@ -12088,6 +12667,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=4,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EL1g_A5-EL1pl_by-L1'
                                                                             ),
@@ -12105,6 +12685,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A5'
                                                                 ),
@@ -12135,6 +12716,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:Type_of_zone@GTMU'
                                                 ),
@@ -12177,11 +12759,13 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
                                         parent_site_ref=StopPlaceRefStructure(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
@@ -12190,6 +12774,7 @@ obj = PublicationDelivery(
                                         quays=QuaysRelStructure(
                                             taxi_stand_ref_or_quay_ref_or_quay=[
                                                 QuayRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:9100WIMBLDN10'
                                                 ),
@@ -12207,6 +12792,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:Type_of_zone@GCLS'
                                                 ),
@@ -12244,12 +12830,14 @@ obj = PublicationDelivery(
                                         covered=CoveredEnumeration.OUTDOORS,
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
                                             organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                                value='',
                                                 version='any',
                                                 ref='nptg:Org_Tfl'
                                             ),
@@ -12258,6 +12846,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_site_ref=StopPlaceRefStructure(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
@@ -12283,10 +12872,12 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@BCT'
                                                             ),
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@MKD'
                                                             ),
@@ -12313,10 +12904,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.COVERED,
                                                     site_ref=SiteRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -12346,6 +12939,7 @@ obj = PublicationDelivery(
                                                                     value='Stop P Boarding Point '
                                                                 ),
                                                                 parent_zone_ref=ZoneRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='naptStop:490000272P'
                                                                 ),
@@ -12376,10 +12970,12 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@BCT'
                                                             ),
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@MKD'
                                                             ),
@@ -12429,10 +13025,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     site_ref=SiteRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -12472,10 +13070,12 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@BCT'
                                                             ),
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@MKD'
                                                             ),
@@ -12525,10 +13125,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     site_ref=SiteRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -12568,10 +13170,12 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@BCT'
                                                             ),
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@MKD'
                                                             ),
@@ -12621,10 +13225,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     site_ref=SiteRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -12660,12 +13266,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('20.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=StopPlaceRefStructure(
+                                                            value='',
                                                             ref='naptStop:490015472L'
                                                         )
                                                     ),
@@ -12676,6 +13284,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -12690,11 +13299,13 @@ obj = PublicationDelivery(
                                                     distance=Decimal('55.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=StopPlaceRefStructure(
+                                                            value='',
                                                             ref='naptStop:490000272P'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw3'
                                                         )
@@ -12706,6 +13317,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -12720,12 +13332,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('20.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw2'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=StopPlaceRefStructure(
+                                                            value='',
                                                             ref='naptStop:490000272P'
                                                         )
                                                     ),
@@ -12736,6 +13350,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -12750,12 +13365,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw2'
                                                         )
@@ -12767,6 +13384,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -12781,12 +13399,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('40.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw3'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw4'
                                                         )
@@ -12798,6 +13418,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -12812,12 +13433,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('15.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw4'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw5'
                                                         )
@@ -12829,6 +13452,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     )
@@ -12843,16 +13467,19 @@ obj = PublicationDelivery(
                                                     distance=Decimal('5.00'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:490G00272P_Jw5'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=AccessSpaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_A4'
                                                         ),
                                                         entrance_ref=StopPlaceEntranceRefStructure(
+                                                            value='',
                                                             ref='nptg:9100WIMBLDN_A4-EE1'
                                                         )
                                                     ),
@@ -12863,6 +13490,7 @@ obj = PublicationDelivery(
                                                     access_feature_type=AccessFeatureEnumeration.STREET,
                                                     maximum_flow_per_minute=200,
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -12892,6 +13520,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
@@ -12909,6 +13538,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
@@ -12926,6 +13556,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
@@ -12943,6 +13574,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
@@ -12960,6 +13592,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G00272P'
                                                     ),
@@ -13011,6 +13644,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 place_ref=StopPlaceRefStructure(
+                                                                    value='',
                                                                     ref='naptStop:490G00272P'
                                                                 ),
                                                                 branch_level='1',
@@ -13026,6 +13660,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:490G00272P_lnk_ST-Jw2_StopP'
                                                                             ),
@@ -13043,6 +13678,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:490G00272P_Jw2'
                                                                 ),
@@ -13059,6 +13695,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:490G00272P_lnk_ST-Jw1_ST-Jw2'
                                                                             ),
@@ -13076,6 +13713,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:490G00272P_Jw1'
                                                                 ),
@@ -13092,6 +13730,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=2,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_FC-J2_ST-Jw1'
                                                                             ),
@@ -13109,6 +13748,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_FC_J2'
                                                                 ),
@@ -13125,6 +13765,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_FC-J1_FC-J2'
                                                                             ),
@@ -13142,6 +13783,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_FC_J1'
                                                                 ),
@@ -13158,6 +13800,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A1-EE1_FC-J1'
                                                                             ),
@@ -13175,6 +13818,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A1'
                                                                 ),
@@ -13191,6 +13835,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A1-EI1_A2-J2'
                                                                             ),
@@ -13208,6 +13853,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2_J2'
                                                                 ),
@@ -13224,6 +13870,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1'
                                                                             ),
@@ -13239,6 +13886,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=2,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EI5_A2-J2'
                                                                             ),
@@ -13255,6 +13903,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2b'
                                                                 ),
@@ -13271,6 +13920,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:SitePathLink9100WIMBLDN_lnk_A2b-EI5_A2b-J5'
                                                                             ),
@@ -13288,6 +13938,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2b_J5'
                                                                 ),
@@ -13304,6 +13955,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_A2b-J5'
                                                                             ),
@@ -13321,6 +13973,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_L2'
                                                                 ),
@@ -13337,6 +13990,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EL2g_5n6-EL1pl_by-L2'
                                                                             ),
@@ -13354,6 +14008,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_S2'
                                                                 ),
@@ -13370,6 +14025,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-ES2g_5n6-ES1pl_by-S2'
                                                                             ),
@@ -13387,6 +14043,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=12,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='naptStop:9100WIMBLDN_5n6'
                                                                 ),
@@ -13437,6 +14094,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=1,
                                                                 place_ref=StopPlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='naptStop:490G00272L'
                                                                 ),
@@ -13453,6 +14111,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:490G00272P_lnk_ST-Jw3_ST-StopL'
                                                                             ),
@@ -13470,6 +14129,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=2,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:490G00272P_Jw3'
                                                                 ),
@@ -13486,6 +14146,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=2,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:490G00272P_lnk_ST-Jw3_ST-Jw4'
                                                                             ),
@@ -13503,6 +14164,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=3,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:490G00272P_Jw4'
                                                                 ),
@@ -13519,6 +14181,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:490G00272P_lnk_ST-Jw4_ST-Jw5'
                                                                             ),
@@ -13536,6 +14199,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=4,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:490G00272P_Jw5'
                                                                 ),
@@ -13552,6 +14216,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:490G00272P_lnk_A4-EE1-ST-Jw5'
                                                                             ),
@@ -13569,6 +14234,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=5,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A4'
                                                                 ),
@@ -13585,6 +14251,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A4-EE1_A4-EI3'
                                                                             ),
@@ -13602,6 +14269,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=6,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2'
                                                                 ),
@@ -13618,6 +14286,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-EI6_A2-J4'
                                                                             ),
@@ -13635,6 +14304,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=7,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2_J4'
                                                                 ),
@@ -13651,6 +14321,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-ES1g_A2-J1'
                                                                             ),
@@ -13666,6 +14337,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=2,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EI6_A2-J1'
                                                                             ),
@@ -13683,6 +14355,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=8,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_A2b_J6'
                                                                 ),
@@ -13699,6 +14372,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EI1_A2b-J6'
                                                                             ),
@@ -13716,6 +14390,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=9,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_L4'
                                                                 ),
@@ -13732,6 +14407,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2b-EL4g_9n10-EL1pl_by-L4'
                                                                             ),
@@ -13749,6 +14425,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=10,
                                                                 place_ref=AccessSpaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='nptg:9100WIMBLDN_S4'
                                                                 ),
@@ -13765,6 +14442,7 @@ obj = PublicationDelivery(
                                                                             ],
                                                                             order=1,
                                                                             path_link_ref=PathLinkRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='nptg:9100WIMBLDN_lnk_A2-ES4g_9n10-ES1pl_by-S4'
                                                                             ),
@@ -13782,6 +14460,7 @@ obj = PublicationDelivery(
                                                                 ),
                                                                 order=11,
                                                                 place_ref=PlaceRefStructure(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='naptStop:9100WIMBLDN_9n10'
                                                                 ),
@@ -13820,10 +14499,12 @@ obj = PublicationDelivery(
                                                                             id='naptStop:910GWIMBLDN@P',
                                                                             version='001',
                                                                             vehicle_stopping_position_ref=VehicleStoppingPositionRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='naptStop:910GWIMBLDN@P@stopping@p1'
                                                                             ),
                                                                             boarding_position_ref=BoardingPositionRef(
+                                                                                value='',
                                                                                 version='001',
                                                                                 ref='naptStop:490000272P@boarding_point'
                                                                             ),
@@ -13840,10 +14521,12 @@ obj = PublicationDelivery(
                                                                 id='naptStop:910GWIMBLDN@P',
                                                                 version='001',
                                                                 vehicle_stopping_place_ref=VehicleStoppingPlaceRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='naptStop:910GWIMBLDN@P@stopping'
                                                                 ),
                                                                 quay_ref=QuayRef(
+                                                                    value='',
                                                                     version='001',
                                                                     ref='naptStop:490000272P'
                                                                 ),
@@ -13869,6 +14552,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:Type_of_zone@GPBS'
                                                 ),
@@ -13905,12 +14589,14 @@ obj = PublicationDelivery(
                                         ],
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
                                             organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                                value='',
                                                 version='any',
                                                 ref='nptg:Org_Tfl'
                                             ),
@@ -13919,6 +14605,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_site_ref=StopPlaceRefStructure(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
@@ -13948,10 +14635,12 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@BCT'
                                                             ),
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@MKD'
                                                             ),
@@ -13978,10 +14667,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     site_ref=SiteRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G0019043'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -14018,10 +14709,12 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@BCT'
                                                             ),
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@MKD'
                                                             ),
@@ -14071,10 +14764,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     site_ref=SiteRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G0019043'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -14113,6 +14808,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G0019043'
                                                     ),
@@ -14131,6 +14827,7 @@ obj = PublicationDelivery(
                                                         latitude=Decimal('-90')
                                                     ),
                                                     parent_zone_ref=ZoneRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G0019043'
                                                     ),
@@ -14153,6 +14850,7 @@ obj = PublicationDelivery(
                                         types=TypeOfZoneRefsRelStructure(
                                             type_of_zone_ref=[
                                                 TypeOfZoneRef(
+                                                    value='',
                                                     version='any',
                                                     ref='napt:Type_of_zone@GPBS'
                                                 ),
@@ -14189,12 +14887,14 @@ obj = PublicationDelivery(
                                         ],
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptgLocality:E0034695'
                                             )
                                         ),
                                         choice=OrganisationDerivedViewStructure(
                                             organisation_ref_or_other_organisation_ref_or_transport_organisation_ref=AuthorityRef(
+                                                value='',
                                                 version='any',
                                                 ref='nptg:Org_Tfl'
                                             ),
@@ -14203,6 +14903,7 @@ obj = PublicationDelivery(
                                             )
                                         ),
                                         parent_site_ref=StopPlaceRefStructure(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
@@ -14225,10 +14926,12 @@ obj = PublicationDelivery(
                                                     types=TypeOfZoneRefsRelStructure(
                                                         type_of_zone_ref=[
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@BCT'
                                                             ),
                                                             TypeOfZoneRef(
+                                                                value='',
                                                                 version='any',
                                                                 ref='napt:Type_of_zone@MKD'
                                                             ),
@@ -14255,10 +14958,12 @@ obj = PublicationDelivery(
                                                     ),
                                                     covered=CoveredEnumeration.OUTDOORS,
                                                     site_ref=SiteRefStructure(
+                                                        value='',
                                                         version='001',
                                                         ref='naptStop:490G0019043'
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_ST'
                                                     ),
@@ -14318,12 +15023,14 @@ obj = PublicationDelivery(
                                                     distance=Decimal('10'),
                                                     from_value=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='any',
                                                             ref='nptg:Parking:9100WIMBLDN_A2b_P1'
                                                         )
                                                     ),
                                                     to=PathLinkEndStructure(
                                                         place_ref=PlaceRefStructure(
+                                                            value='',
                                                             version='001',
                                                             ref='nptg:9100WIMBLDN_FC_J1'
                                                         )
@@ -14338,6 +15045,7 @@ obj = PublicationDelivery(
                                                         default_duration=XmlDuration("PT1M")
                                                     ),
                                                     level_ref=LevelRef(
+                                                        value='',
                                                         version='001',
                                                         ref='nptg:9100WIMBLDN_Lvl_G0'
                                                     ),
@@ -14540,7 +15248,7 @@ obj = PublicationDelivery(
                                             value='Wimbledon Stop D'
                                         ),
                                         description=MultilingualString(
-
+                                            value=''
                                         ),
                                         private_code=PrivateCode(
                                             value='34567'
@@ -14558,7 +15266,7 @@ obj = PublicationDelivery(
                                             value='Wimbledon Stop L'
                                         ),
                                         description=MultilingualString(
-
+                                            value=''
                                         ),
                                         private_code=PrivateCode(
                                             value='34568'
@@ -14582,18 +15290,22 @@ obj = PublicationDelivery(
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 ScheduledStopPointRef(
+                                                    value='',
                                                     version='any',
                                                     ref='naptStop:490000272P'
                                                 ),
                                                 ScheduledStopPointRef(
+                                                    value='',
                                                     version='any',
                                                     ref='naptStop:490000272C'
                                                 ),
                                                 ScheduledStopPointRef(
+                                                    value='',
                                                     version='any',
                                                     ref='naptStop:490000272D'
                                                 ),
                                                 ScheduledStopPointRef(
+                                                    value='',
                                                     version='any',
                                                     ref='naptStop:490000272L'
                                                 ),
@@ -14601,6 +15313,7 @@ obj = PublicationDelivery(
                                         ),
                                         public_code='13456',
                                         parent_stop_area_ref=StopAreaRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptStopArea:9100WIMBLDN-MDV02'
                                         )
@@ -14614,12 +15327,14 @@ obj = PublicationDelivery(
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 ScheduledStopPointRef(
+                                                    value='',
                                                     version='any',
                                                     ref='naptStop:9400ZZLUWIM'
                                                 ),
                                             ]
                                         ),
                                         parent_stop_area_ref=StopAreaRefStructure(
+                                            value='',
                                             version='any',
                                             ref='naptStopArea:9100WIMBLDN-MDV02'
                                         )
@@ -14633,6 +15348,7 @@ obj = PublicationDelivery(
                                         members=PointRefsRelStructure(
                                             choice=[
                                                 ScheduledStopPointRef(
+                                                    value='',
                                                     version='any',
                                                     ref='naptStop:9100WIMBLDN10'
                                                 ),
@@ -14696,6 +15412,7 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptg:Region@L'
                                             ),
@@ -14722,6 +15439,7 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptg:Region@L'
                                             ),
@@ -14748,6 +15466,7 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptg:Region@L'
                                             ),
@@ -14774,6 +15493,7 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptg:Region@L'
                                             ),
@@ -14800,6 +15520,7 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='001',
                                                 ref='nptg:Region@L'
                                             ),
@@ -14824,6 +15545,7 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             )
@@ -14831,6 +15553,7 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             )
@@ -14849,11 +15572,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -14865,11 +15590,13 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -14932,11 +15659,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -14948,15 +15677,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -15019,11 +15751,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15035,15 +15769,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A2'
                                                 ),
@@ -15106,11 +15843,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15122,15 +15861,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -15193,11 +15935,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15209,15 +15953,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -15280,11 +16027,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15296,15 +16045,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15367,11 +16119,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15380,15 +16134,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15451,11 +16208,13 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:490G00272P'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
@@ -15468,6 +16227,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:490G0019043'
                                                 ),
@@ -15530,15 +16290,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -15550,15 +16313,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -15621,15 +16387,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -15641,15 +16410,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A2'
                                                 ),
@@ -15712,15 +16484,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -15732,15 +16507,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -15803,15 +16581,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -15823,15 +16604,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -15894,15 +16678,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -15914,19 +16701,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -15989,15 +16780,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -16009,19 +16803,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -16084,15 +16882,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.TRAM,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:940GZZCRWIM'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZCRWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZCRWIM'
                                                 ),
@@ -16105,6 +16906,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:490G0019043'
                                                 ),
@@ -16174,15 +16976,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A2'
                                                 ),
@@ -16194,15 +16999,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -16265,15 +17073,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A2'
                                                 ),
@@ -16285,15 +17096,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -16356,15 +17170,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A2'
                                                 ),
@@ -16376,19 +17193,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -16451,15 +17272,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A2'
                                                 ),
@@ -16471,19 +17295,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -16546,15 +17374,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV03'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A2'
                                                 ),
@@ -16567,6 +17398,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:490G0019043'
                                                 ),
@@ -16629,15 +17461,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -16649,15 +17484,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9400ZZLUWIM'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -16720,15 +17558,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -16740,15 +17581,18 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -16818,15 +17662,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -16838,19 +17685,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -16913,15 +17764,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -16933,19 +17787,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17008,15 +17866,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.METRO,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV04'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:940GZZLUWIM'
                                                 ),
@@ -17029,6 +17890,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:490G0019043'
                                                 ),
@@ -17098,15 +17960,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17118,19 +17983,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17193,15 +18062,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17213,19 +18085,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17288,15 +18164,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17309,6 +18188,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:490G0019043'
                                                 ),
@@ -17371,19 +18251,23 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17395,19 +18279,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV06'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17470,15 +18358,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17490,19 +18381,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17565,15 +18460,18 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV05'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17586,6 +18484,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:490G0019043'
                                                 ),
@@ -17655,19 +18554,23 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17679,19 +18582,23 @@ obj = PublicationDelivery(
                                         to=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17754,19 +18661,23 @@ obj = PublicationDelivery(
                                         from_value=SiteConnectionEndStructure(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.RAIL,
                                             stop_area_ref=StopAreaRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStopArea:9100WIMBLDN-MDV07'
                                             ),
                                             scheduled_stop_point_ref_or_vehicle_meeting_point_ref=ScheduledStopPointRefStructure(
+                                                value='',
                                                 version='any',
                                                 ref='naptStop:9100WIMBLDN'
                                             ),
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:910GWIMBLDN'
                                                 ),
                                                 AccessSpaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='nptg:9100WIMBLDN_A1'
                                                 ),
@@ -17779,6 +18690,7 @@ obj = PublicationDelivery(
                                             transport_mode=AllVehicleModesOfTransportEnumeration.BUS,
                                             choice=[
                                                 StopPlaceRef(
+                                                    value='',
                                                     version='001',
                                                     ref='naptStop:490G0019043'
                                                 ),
@@ -17862,10 +18774,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:9100WIMBLDN'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         )
@@ -17879,10 +18793,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:9100WIMBLDN10'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         )
@@ -17896,14 +18812,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:9100WIMBLDN10'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:9100WIMBLDN_5n6'
                                         )
@@ -17917,14 +18836,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:9400ZZCRWIM'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:9100WIMBLDN10'
                                         )
@@ -17938,14 +18860,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:9400ZZLUWIM'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:4900ZZLUWIM1n2'
                                         )
@@ -17959,14 +18884,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:9400ZZLUWIM'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:910GWIMBLDN'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:4900ZZLUWIM3n4'
                                         )
@@ -17980,14 +18908,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:490000272P'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490000272P'
                                         )
@@ -18001,14 +18932,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:490000272C'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490000272C'
                                         )
@@ -18022,14 +18956,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:490000272D'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490015472D'
                                         )
@@ -18042,14 +18979,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='any',
                                             ref='naptStop:490000272L'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490G00272P'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='001',
                                             ref='naptStop:490014734A'
                                         )

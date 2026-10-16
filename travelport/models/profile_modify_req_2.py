@@ -113,11 +113,10 @@ class ProfileModifyReq2(BaseReq5):
         """
 
         value: str = field(
-            default="",
             metadata={
                 "min_length": 1,
                 "max_length": 128,
-            },
+            }
         )
         profile_type: ProvisioningCodeProfileType2 = field(
             metadata={
@@ -143,11 +142,10 @@ class ProfileModifyReq2(BaseReq5):
         """
 
         value: str = field(
-            default="",
             metadata={
                 "min_length": 6,
                 "max_length": 128,
-            },
+            }
         )
         profile_type: UniqueProfileIdProfileType2 = field(
             metadata={

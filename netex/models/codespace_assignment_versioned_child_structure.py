@@ -134,8 +134,8 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
 
     @dataclass(kw_only=True)
     class StartValue:
-        value: str = field(default="")
+        value: str = field()
 
     @dataclass(kw_only=True)
     class EndValue:
-        value: str = field(default="")
+        value: str = field()

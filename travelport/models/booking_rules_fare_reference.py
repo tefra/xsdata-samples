@@ -16,7 +16,7 @@ class BookingRulesFareReference:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(default="")
+    value: str = field()
     class_of_service: None | str = field(
         default=None,
         metadata={

@@ -58,7 +58,7 @@ class Payload:
         :ivar mandatory: True if the payload extension is mandatory.
         """
 
-        value: str = field(default="")
+        value: str = field()
         mandatory: bool = field(
             default=False,
             metadata={

@@ -11,4 +11,4 @@ class Suggestion:
         name = "suggestion"
         namespace = "urn:vpro:api:2013"
 
-    value: str = field(default="")
+    value: str = field()

@@ -8,10 +8,9 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 @dataclass(frozen=True, kw_only=True)
 class OptionalLocalDimensionReferenceType:
     value: str = field(
-        default="",
         metadata={
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
-        },
+        }
     )
     optional: bool = field(
         default=False,

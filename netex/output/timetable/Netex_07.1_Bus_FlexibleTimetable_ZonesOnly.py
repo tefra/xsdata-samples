@@ -117,6 +117,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -216,6 +217,7 @@ obj = PublicationDelivery(
                                         lines=LineRefsRelStructure(
                                             line_ref=[
                                                 FlexibleLineRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mybus:FL_24'
                                                 ),
@@ -368,6 +370,7 @@ obj = PublicationDelivery(
                                         lines=LineRefsRelStructure(
                                             line_ref=[
                                                 FlexibleLineRef(
+                                                    value='',
                                                     version='any',
                                                     ref='mybus:FL_24'
                                                 ),
@@ -424,6 +427,7 @@ obj = PublicationDelivery(
                                             day_types=DayTypesRelStructure(
                                                 day_type_ref_or_day_type=[
                                                     DayTypeRef(
+                                                        value='',
                                                         version='any',
                                                         ref='hde:DT_01-MF-NotHoliday'
                                                     ),
@@ -454,6 +458,7 @@ obj = PublicationDelivery(
                             ],
                             line_view=LineView(
                                 line_ref=FlexibleLineRef(
+                                    value='',
                                     version='any',
                                     ref='mybus:FL_24'
                                 )
@@ -470,6 +475,7 @@ obj = PublicationDelivery(
                                         day_types=DayTypesRelStructure(
                                             day_type_ref_or_day_type=[
                                                 DayTypeRef(
+                                                    value='',
                                                     version='any',
                                                     ref='hde:DT_01-MF-NotHoliday'
                                                 ),

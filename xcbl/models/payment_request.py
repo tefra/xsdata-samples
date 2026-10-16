@@ -69,87 +69,87 @@ class AcceptFxmarketRate:
     class Meta:
         name = "AcceptFXMarketRate"
 
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ChargeRegulationCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class ChargeRegulationCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class IndustrySectorCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class IndustrySectorCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class InternationalPaymentIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class IntraCompanyPaymentIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LegalReportingDescription:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LegalReportingImportDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LegalReportingIndicator:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LegalReportingPaymentDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class LegalReportingSupplementalCode:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentInstructionNotes:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentRequestIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentUrgencyCoded:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class PaymentUrgencyCodedOther:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)
 class RepetitiveCode:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

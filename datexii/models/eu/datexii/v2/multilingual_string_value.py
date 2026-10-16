@@ -8,10 +8,9 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 @dataclass(kw_only=True)
 class MultilingualStringValue:
     value: str = field(
-        default="",
         metadata={
             "max_length": 1024,
-        },
+        }
     )
     lang: None | str = field(
         default=None,

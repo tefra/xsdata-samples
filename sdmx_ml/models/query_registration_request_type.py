@@ -139,35 +139,31 @@ class QueryRegistrationRequestType:
     @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class DataProvider:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Dataflow:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.datastructure\.Dataflow=.+",
-            },
+            }
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
         value: str = field(
-            default="",
             metadata={
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            },
+            }
         )

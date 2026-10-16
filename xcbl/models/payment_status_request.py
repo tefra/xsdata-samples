@@ -22,7 +22,7 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestIssueDate:
-    value: str = field(default="")
+    value: str = field()
 
 
 @dataclass(kw_only=True)

@@ -80,6 +80,7 @@ obj = PublicationDelivery(
                             object_references=ObjectFilterByValueStructure.ObjectReferences(
                                 choice=[
                                     TopographicPlaceRef(
+                                        value='',
                                         ref='detop:TP_0032A'
                                     ),
                                 ]
@@ -87,6 +88,7 @@ obj = PublicationDelivery(
                             places=NetworkFilterByValueStructure.Places(
                                 choice=[
                                     TopographicPlaceRef(
+                                        value='',
                                         version='any',
                                         ref='detop:TP_0032A'
                                     ),
@@ -143,6 +145,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='jqx'
                     )
                 ),
@@ -181,6 +184,7 @@ obj = PublicationDelivery(
                                                     lang='de'
                                                 ),
                                                 topographic_place_ref=TopographicPlaceRef(
+                                                    value='',
                                                     version='any',
                                                     ref='detop:TP_0100'
                                                 )
@@ -246,6 +250,7 @@ obj = PublicationDelivery(
                                         ),
                                         topographic_place_ref_or_topographic_place_view=TopographicPlaceView(
                                             topographic_place_ref=TopographicPlaceRef(
+                                                value='',
                                                 version='any',
                                                 ref='detop:TP_0032A'
                                             )
@@ -414,10 +419,12 @@ obj = PublicationDelivery(
                                         ),
                                         order=1,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='01',
                                             ref='mybus:SP_0751A'
                                         )
@@ -431,14 +438,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=2,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='01',
                                             ref='mybus:SP_0751A'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='01',
                                             ref='mybus:Q_SP_0751A_1'
                                         )
@@ -452,14 +462,17 @@ obj = PublicationDelivery(
                                         ),
                                         order=3,
                                         fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point=ScheduledStopPointRef(
+                                            value='',
                                             version='032',
                                             ref='jqx:SSP0021A'
                                         ),
                                         taxi_rank_ref_or_stop_place_ref_or_stop_place=StopPlaceRef(
+                                            value='',
                                             version='01',
                                             ref='mybus:SP_0751A'
                                         ),
                                         taxi_stand_ref_or_quay_ref_or_quay=QuayRef(
+                                            value='',
                                             version='01',
                                             ref='mybus:Q_SP_0751A_2'
                                         )

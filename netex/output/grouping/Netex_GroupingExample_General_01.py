@@ -59,6 +59,7 @@ obj = PublicationDelivery(
                 ),
                 frame_defaults=VersionFrameDefaultsStructure(
                     default_codespace_ref=CodespaceRefStructure(
+                        value='',
                         ref='mybus'
                     )
                 ),
@@ -68,7 +69,7 @@ obj = PublicationDelivery(
                             id='mybus:Purposes_of_Grouping',
                             version='001',
                             name=MultilingualString(
-
+                                value=''
                             ),
                             values=TypesOfValueStructure(
                                 type_of_value_or_type_of_entity=[
@@ -81,9 +82,11 @@ obj = PublicationDelivery(
                                         classes=ClassRefsRelStructure(
                                             class_ref=[
                                                 ClassRef(
+                                                    value='',
                                                     name_of_class='ScheduledStopPoint'
                                                 ),
                                                 ClassRef(
+                                                    value='',
                                                     name_of_class='ServiceLink'
                                                 ),
                                             ]
@@ -105,24 +108,29 @@ obj = PublicationDelivery(
                                 value='My Group'
                             ),
                             purpose_of_grouping_ref=PurposeOfGroupingRef(
+                                value='',
                                 version='any',
                                 ref='mybus:My_Purpose'
                             ),
                             members=ObjectRefsRelStructure(
                                 choice=[
                                     ScheduledStopPointRef(
+                                        value='',
                                         ref='mybus:SSP0001A',
                                         version_ref='EXTERNAL'
                                     ),
                                     ScheduledStopPointRef(
+                                        value='',
                                         ref='mybus:SSP0002B',
                                         version_ref='EXTERNAL'
                                     ),
                                     ScheduledStopPointRef(
+                                        value='',
                                         ref='mybus:SSP0003CA',
                                         version_ref='EXTERNAL'
                                     ),
                                     ServiceLinkRef(
+                                        value='',
                                         ref='mybus:SL_AtoB01'
                                     ),
                                 ]
@@ -142,10 +150,12 @@ obj = PublicationDelivery(
                             members=TariffZoneRefsRelStructure(
                                 tariff_zone_ref=[
                                     TariffZoneRef(
+                                        value='',
                                         ref='mybus:ZoneA',
                                         version_ref='EXTERNAL'
                                     ),
                                     TariffZoneRef(
+                                        value='',
                                         ref='mybus:ZoneB',
                                         version_ref='EXTERNAL'
                                     ),
@@ -158,10 +168,12 @@ obj = PublicationDelivery(
                             members=TariffZoneRefsRelStructure(
                                 tariff_zone_ref=[
                                     TariffZoneRef(
+                                        value='',
                                         ref='mybus:ZoneC',
                                         version_ref='EXTERNAL'
                                     ),
                                     TariffZoneRef(
+                                        value='',
                                         ref='mybus:ZoneD',
                                         version_ref='EXTERNAL'
                                     ),
