@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class StrategyValue(Enum):
+class StrategyValue(StrEnum):
     FULL = "FULL"
     INNERMOST = "INNERMOST"
     OUTERMOST = "OUTERMOST"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EocExecutableEntityRefAbstractSubtypesEnum(Enum):
+class EocExecutableEntityRefAbstractSubtypesEnum(StrEnum):
     EOC_EVENT_REF = "EOC-EVENT-REF"
     EOC_EXECUTABLE_ENTITY_REF = "EOC-EXECUTABLE-ENTITY-REF"
     EOC_EXECUTABLE_ENTITY_REF_ABSTRACT = "EOC-EXECUTABLE-ENTITY-REF-ABSTRACT"

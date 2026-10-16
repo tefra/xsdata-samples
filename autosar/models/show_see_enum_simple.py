@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ShowSeeEnumSimple(Enum):
+class ShowSeeEnumSimple(StrEnum):
     """
     :cvar NO_SHOW_SEE: The word "see" is '''not''' rendered before  the
         reference.

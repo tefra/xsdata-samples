@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventTriggerTypeEnumSimple(Enum):
+class TdEventTriggerTypeEnumSimple(StrEnum):
     """
     :cvar TRIGGER_ACTIVATED: A point in time where the referenced
         trigger has been successfully released and is activating

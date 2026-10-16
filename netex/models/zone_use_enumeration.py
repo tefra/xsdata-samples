@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ZoneUseEnumeration(Enum):
+class ZoneUseEnumeration(StrEnum):
     FORBIDDEN_ZONE = "forbiddenZone"
     CANNOT_BOARD_AND_ALIGHT_IN_SAME_ZONE = "cannotBoardAndAlightInSameZone"
     CANNOT_BOARD_IN_ZONE = "cannotBoardInZone"

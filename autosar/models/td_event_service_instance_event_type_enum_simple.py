@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventServiceInstanceEventTypeEnumSimple(Enum):
+class TdEventServiceInstanceEventTypeEnumSimple(StrEnum):
     """
     :cvar ADAPTIVE_EVENT_RECEIVED: A point in time where an event
         required by a service subscriber is received through the service

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class AssistanceAvailabilityEnumeration(Enum):
+class AssistanceAvailabilityEnumeration(StrEnum):
     NONE = "none"
     AVAILABLE = "available"
     AVAILABLE_IF_BOOKED = "availableIfBooked"

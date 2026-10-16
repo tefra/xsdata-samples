@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DoIpEntityRoleEnumSimple(Enum):
+class DoIpEntityRoleEnumSimple(StrEnum):
     """
     :cvar EDGE_NODE: Network node is a DoIP gateway that accepts
         external connections.

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class KeepWithPreviousEnumSimple(Enum):
+class KeepWithPreviousEnumSimple(StrEnum):
     """
     :cvar KEEP: This indicates that the block shall be kept together
         with the previous block.

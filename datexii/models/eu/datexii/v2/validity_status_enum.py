@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class ValidityStatusEnum(Enum):
+class ValidityStatusEnum(StrEnum):
     """
     Values of validity status that can be assigned to a described event,
     action or item.

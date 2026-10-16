@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticDenominatorConditionEnumSimple(Enum):
+class DiagnosticDenominatorConditionEnumSimple(StrEnum):
     """
     :cvar VALUE_500_MILES: Condition based on definition of 500miles
         conditions as defined for OBD2.

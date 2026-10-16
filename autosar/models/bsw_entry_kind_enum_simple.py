@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class BswEntryKindEnumSimple(Enum):
+class BswEntryKindEnumSimple(StrEnum):
     """
     :cvar ABSTRACT: This BswModuleEntry specifies an abstract signature
         of C-functions. The signature needs to be implemented by

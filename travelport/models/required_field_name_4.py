@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-class RequiredFieldName4(Enum):
+class RequiredFieldName4(StrEnum):
     CARD_TYPE = "CardType"
     NUMBER = "Number"
     CUSTOMER_REFERENCE = "CustomerReference"

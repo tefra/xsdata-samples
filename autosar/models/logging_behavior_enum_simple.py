@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class LoggingBehaviorEnumSimple(Enum):
+class LoggingBehaviorEnumSimple(StrEnum):
     """
     :cvar DOES_NOT_USE_LOGGING: The Executable indicates its intention
         to not use logging.

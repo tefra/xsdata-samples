@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class DistributionChannelTypeEnumeration(Enum):
+class DistributionChannelTypeEnumeration(StrEnum):
     AT_STOP = "atStop"
     ON_BOARD = "onBoard"
     ONLINE = "online"

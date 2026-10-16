@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-class PreformatPosition(Enum):
+class PreformatPosition(StrEnum):
     ANCHOR = "anchor"
     BACKGROUND = "background"
     FLOAT = "float"

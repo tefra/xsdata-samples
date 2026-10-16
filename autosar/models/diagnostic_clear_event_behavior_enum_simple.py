@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticClearEventBehaviorEnumSimple(Enum):
+class DiagnosticClearEventBehaviorEnumSimple(StrEnum):
     """
     :cvar NO_STATUS_BYTE_CHANGE: The event status byte keeps unchanged.
     :cvar ONLY_THIS_CYCLE_AND_READINESS: The OperationCycle and

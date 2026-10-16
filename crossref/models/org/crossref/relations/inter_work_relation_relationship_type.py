@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-class InterWorkRelationRelationshipType(Enum):
+class InterWorkRelationRelationshipType(StrEnum):
     IS_DERIVED_FROM = "isDerivedFrom"
     HAS_DERIVATION = "hasDerivation"
     IS_REVIEW_OF = "isReviewOf"

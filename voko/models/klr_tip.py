@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class KlrTip(Enum):
+class KlrTip(StrEnum):
     IND = "ind"
     AMB = "amb"

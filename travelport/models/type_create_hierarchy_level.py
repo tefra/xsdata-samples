@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-class TypeCreateHierarchyLevel(Enum):
+class TypeCreateHierarchyLevel(StrEnum):
     """
     Profile types that are used in creating a hiearchy.
     """

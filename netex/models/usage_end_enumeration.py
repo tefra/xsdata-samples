@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class UsageEndEnumeration(Enum):
+class UsageEndEnumeration(StrEnum):
     STANDARD_DURATION = "standardDuration"
     END_OF_CALENDAR_PERIOD = "endOfCalendarPeriod"
     END_OF_RIDE = "endOfRide"

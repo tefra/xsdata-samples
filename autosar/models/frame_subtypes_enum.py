@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class FrameSubtypesEnum(Enum):
+class FrameSubtypesEnum(StrEnum):
     ABSTRACT_ETHERNET_FRAME = "ABSTRACT-ETHERNET-FRAME"
     CAN_FRAME = "CAN-FRAME"
     ETHERNET_FRAME = "ETHERNET-FRAME"

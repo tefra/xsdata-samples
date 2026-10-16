@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DltLogChannelDesignSubtypesEnum(Enum):
+class DltLogChannelDesignSubtypesEnum(StrEnum):
     DLT_LOG_CHANNEL_DESIGN = "DLT-LOG-CHANNEL-DESIGN"

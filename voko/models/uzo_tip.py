@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class UzoTip(Enum):
+class UzoTip(StrEnum):
     FAK = "fak"
     REG = "reg"
     KLR = "klr"

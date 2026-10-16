@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ProvidedApServiceInstanceSubtypesEnum(Enum):
+class ProvidedApServiceInstanceSubtypesEnum(StrEnum):
     DDS_PROVIDED_SERVICE_INSTANCE = "DDS-PROVIDED-SERVICE-INSTANCE"
     PROVIDED_AP_SERVICE_INSTANCE = "PROVIDED-AP-SERVICE-INSTANCE"
     PROVIDED_SOMEIP_SERVICE_INSTANCE = "PROVIDED-SOMEIP-SERVICE-INSTANCE"

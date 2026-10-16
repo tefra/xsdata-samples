@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CycleRepetitionTypeSimple(Enum):
+class CycleRepetitionTypeSimple(StrEnum):
     """
     :cvar CYCLE_REPETITION_1: Attribute cycleRepetition value="1" valid
         only for FlexRay Protocol 2.1 Rev A

@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 
 
-class LangValue(Enum):
+class LangValue(StrEnum):
     VALUE = ""
 
 
-class OtherHeiIdValue(Enum):
+class OtherHeiIdValue(StrEnum):
     """
     :cvar PREVIOUS_SCHAC: A previously used SCHAC identifier. Servers
         MUST provide all SCHAC identifiers their HEI have used in the

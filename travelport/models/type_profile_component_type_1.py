@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-class TypeProfileComponentType1(Enum):
+class TypeProfileComponentType1(StrEnum):
     """
     Specifies the component names. (i.e AccountInfo, AirPreference,
     TravelDocument etc).

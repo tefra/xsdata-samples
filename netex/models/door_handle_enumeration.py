@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class DoorHandleEnumeration(Enum):
+class DoorHandleEnumeration(StrEnum):
     NONE = "none"
     LEVER = "lever"
     BUTTON = "button"

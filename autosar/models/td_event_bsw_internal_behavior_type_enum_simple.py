@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventBswInternalBehaviorTypeEnumSimple(Enum):
+class TdEventBswInternalBehaviorTypeEnumSimple(StrEnum):
     """
     :cvar BSW_MODULE_ENTITY_ACTIVATED: A point in time where the
         associated BswModuleEntity has been activated, which means that

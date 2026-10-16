@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v33_0"
 
 
-class TypeStatus3(Enum):
+class TypeStatus3(StrEnum):
     """
     The status of the service fees.
 

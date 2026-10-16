@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class NonOsModuleInstantiationSubtypesEnum(Enum):
+class NonOsModuleInstantiationSubtypesEnum(StrEnum):
     CRYPTO_MODULE_INSTANTIATION = "CRYPTO-MODULE-INSTANTIATION"
     DO_IP_INSTANTIATION = "DO-IP-INSTANTIATION"
     GENERIC_MODULE_INSTANTIATION = "GENERIC-MODULE-INSTANTIATION"

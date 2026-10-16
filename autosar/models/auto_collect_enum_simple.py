@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AutoCollectEnumSimple(Enum):
+class AutoCollectEnumSimple(StrEnum):
     """
     :cvar REF_ALL: All objects being referenced (recursively) from the
         objects mentioned directly in the collection are also considered

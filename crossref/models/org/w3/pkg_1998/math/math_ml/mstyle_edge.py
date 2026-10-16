@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
 
-class MstyleEdge(Enum):
+class MstyleEdge(StrEnum):
     LEFT = "left"
     RIGHT = "right"

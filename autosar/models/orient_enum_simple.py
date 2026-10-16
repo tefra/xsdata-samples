@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class OrientEnumSimple(Enum):
+class OrientEnumSimple(StrEnum):
     """
     :cvar LAND: This indicates that the table is rendered in landscape
         which results in turning the table 90 degree clockwise.

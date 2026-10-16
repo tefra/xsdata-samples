@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TransmissionModeDefinitionEnumSimple(Enum):
+class TransmissionModeDefinitionEnumSimple(StrEnum):
     """
     :cvar CYCLIC: The data is assumed to be transmitted in a cyclic
         manner. The cycle is defined by dataUpdatePeriod.

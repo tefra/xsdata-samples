@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticResponseOnEventActionEnumSimple(Enum):
+class DiagnosticResponseOnEventActionEnumSimple(StrEnum):
     """
     :cvar CLEAR: Clears the configured events.
     :cvar REPORT: Reports the activated events.

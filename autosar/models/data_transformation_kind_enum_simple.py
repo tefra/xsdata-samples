@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DataTransformationKindEnumSimple(Enum):
+class DataTransformationKindEnumSimple(StrEnum):
     """
     :cvar ASYMMETRIC_FROM_BYTE_ARRAY: The DataTransformation shall only
         be applied to the receiving end only, i.e. transform from byte

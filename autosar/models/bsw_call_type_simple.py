@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class BswCallTypeSimple(Enum):
+class BswCallTypeSimple(StrEnum):
     """
     :cvar CALLBACK: Callback (i.e. the caller specifies the signature)
     :cvar CALLOUT: Callout - provide defined means to extend the

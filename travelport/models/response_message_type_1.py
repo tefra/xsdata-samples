@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v52_0"
 
 
-class ResponseMessageType1(Enum):
+class ResponseMessageType1(StrEnum):
     WARNING = "Warning"
     ERROR = "Error"
     INFO = "Info"

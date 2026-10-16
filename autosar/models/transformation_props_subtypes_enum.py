@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TransformationPropsSubtypesEnum(Enum):
+class TransformationPropsSubtypesEnum(StrEnum):
     AP_SOMEIP_TRANSFORMATION_PROPS = "AP-SOMEIP-TRANSFORMATION-PROPS"
     SOMEIP_TRANSFORMATION_PROPS = "SOMEIP-TRANSFORMATION-PROPS"
     TRANSFORMATION_PROPS = "TRANSFORMATION-PROPS"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ServiceEventDeploymentSubtypesEnum(Enum):
+class ServiceEventDeploymentSubtypesEnum(StrEnum):
     DDS_EVENT_DEPLOYMENT = "DDS-EVENT-DEPLOYMENT"
     SERVICE_EVENT_DEPLOYMENT = "SERVICE-EVENT-DEPLOYMENT"
     SOMEIP_EVENT_DEPLOYMENT = "SOMEIP-EVENT-DEPLOYMENT"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.crossref.org/AccessIndicators.xsd"
 
 
-class LicenseRefAppliesTo(Enum):
+class LicenseRefAppliesTo(StrEnum):
     VOR = "vor"
     AM = "am"
     TDM = "tdm"

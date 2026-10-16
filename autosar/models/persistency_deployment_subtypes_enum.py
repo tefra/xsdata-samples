@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class PersistencyDeploymentSubtypesEnum(Enum):
+class PersistencyDeploymentSubtypesEnum(StrEnum):
     PERSISTENCY_DEPLOYMENT = "PERSISTENCY-DEPLOYMENT"
     PERSISTENCY_FILE_STORAGE = "PERSISTENCY-FILE-STORAGE"
     PERSISTENCY_KEY_VALUE_STORAGE = "PERSISTENCY-KEY-VALUE-STORAGE"

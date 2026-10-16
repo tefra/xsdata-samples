@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ServiceFieldDeploymentSubtypesEnum(Enum):
+class ServiceFieldDeploymentSubtypesEnum(StrEnum):
     DDS_FIELD_DEPLOYMENT = "DDS-FIELD-DEPLOYMENT"
     SERVICE_FIELD_DEPLOYMENT = "SERVICE-FIELD-DEPLOYMENT"
     SOMEIP_FIELD_DEPLOYMENT = "SOMEIP-FIELD-DEPLOYMENT"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
-class SimpleDataType(Enum):
+class SimpleDataType(StrEnum):
     """
     SimpleDataType restricts BasicComponentDataType to specify the
     allowable data types for a data structure definition component.

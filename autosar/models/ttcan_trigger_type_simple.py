@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TtcanTriggerTypeSimple(Enum):
+class TtcanTriggerTypeSimple(StrEnum):
     """
     :cvar RX_TRIGGER: Check for message reception
     :cvar TX_REF_TRIGGER: Send reference message in periodic case

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class GroupBookingEnumeration(Enum):
+class GroupBookingEnumeration(StrEnum):
     GROUPS_ALLOWED = "groupsAllowed"
     GROUPS_NOT_ALLOWED = "groupsNotAllowed"
     GROUPS_ALLOWED_WITH_RESERVATION = "groupsAllowedWithReservation"

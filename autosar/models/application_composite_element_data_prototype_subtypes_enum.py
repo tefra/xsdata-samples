@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ApplicationCompositeElementDataPrototypeSubtypesEnum(Enum):
+class ApplicationCompositeElementDataPrototypeSubtypesEnum(StrEnum):
     APPLICATION_ARRAY_ELEMENT = "APPLICATION-ARRAY-ELEMENT"
     APPLICATION_ASSOC_MAP_ELEMENT = "APPLICATION-ASSOC-MAP-ELEMENT"
     APPLICATION_COMPOSITE_ELEMENT_DATA_PROTOTYPE = (

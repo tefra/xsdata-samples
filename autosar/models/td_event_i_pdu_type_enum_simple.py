@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventIPduTypeEnumSimple(Enum):
+class TdEventIPduTypeEnumSimple(StrEnum):
     """
     :cvar I_PDU_RECEIVED_BY_COM: A point in time where the received
         frame is processed by the corresponding (FlexRay / CAN / LIN)

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class NvBlockNeedsReliabilityEnumSimple(Enum):
+class NvBlockNeedsReliabilityEnumSimple(StrEnum):
     """
     :cvar ERROR_CORRECTION: Errors shall be corrected
     :cvar ERROR_DETECTION: Errors shall be detected

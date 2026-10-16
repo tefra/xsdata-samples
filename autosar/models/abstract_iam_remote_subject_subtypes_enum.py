@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AbstractIamRemoteSubjectSubtypesEnum(Enum):
+class AbstractIamRemoteSubjectSubtypesEnum(StrEnum):
     ABSTRACT_IAM_REMOTE_SUBJECT = "ABSTRACT-IAM-REMOTE-SUBJECT"
     IP_IAM_REMOTE_SUBJECT = "IP-IAM-REMOTE-SUBJECT"
     IP_SEC_IAM_REMOTE_SUBJECT = "IP-SEC-IAM-REMOTE-SUBJECT"

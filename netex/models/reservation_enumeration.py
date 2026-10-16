@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ReservationEnumeration(Enum):
+class ReservationEnumeration(StrEnum):
     RESERVATIONS_COMPULSORY = "reservationsCompulsory"
     RESERVATIONS_COMPULSORY_FOR_GROUPS = "reservationsCompulsoryForGroups"
     RESERVATIONS_COMPULSORY_FOR_FIRST_CLASS = (

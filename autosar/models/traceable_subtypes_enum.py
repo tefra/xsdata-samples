@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TraceableSubtypesEnum(Enum):
+class TraceableSubtypesEnum(StrEnum):
     AGE_CONSTRAINT = "AGE-CONSTRAINT"
     ARBITRARY_EVENT_TRIGGERING = "ARBITRARY-EVENT-TRIGGERING"
     BURST_PATTERN_EVENT_TRIGGERING = "BURST-PATTERN-EVENT-TRIGGERING"

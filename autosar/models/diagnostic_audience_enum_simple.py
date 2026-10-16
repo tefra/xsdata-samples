@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticAudienceEnumSimple(Enum):
+class DiagnosticAudienceEnumSimple(StrEnum):
     """
     :cvar AFTER_SALES: The object is relevant for the OEM after-sales
         organization.

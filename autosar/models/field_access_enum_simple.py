@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class FieldAccessEnumSimple(Enum):
+class FieldAccessEnumSimple(StrEnum):
     """
     :cvar GETTER: Access to the getter of the Field.
     :cvar GETTER_SETTER: Access to getter and setter of the field

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ServiceVersionAcceptanceKindEnumSimple(Enum):
+class ServiceVersionAcceptanceKindEnumSimple(StrEnum):
     """
     :cvar EXACT_OR_ANY_MINOR_VERSION: Search for ANY or specific minor
         version service instance and select either ALL returned service

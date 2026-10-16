@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:shared:2009"
 
 
-class WorkflowEnumType(Enum):
+class WorkflowEnumType(StrEnum):
     """
     These are the possible values of several 'workflow' fields.
 

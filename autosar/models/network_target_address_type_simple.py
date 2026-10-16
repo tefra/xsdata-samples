@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class NetworkTargetAddressTypeSimple(Enum):
+class NetworkTargetAddressTypeSimple(StrEnum):
     """
     :cvar FUNCTIONAL: Functional request type
     :cvar FUNCTIONAL_CAN_FD: Functional request type via CAN FD

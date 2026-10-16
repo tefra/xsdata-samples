@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class SeasonEnumeration(Enum):
+class SeasonEnumeration(StrEnum):
     SPRING = "Spring"
     SUMMER = "Summer"
     AUTUMN = "Autumn"

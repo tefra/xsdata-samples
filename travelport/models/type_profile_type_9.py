@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-class TypeProfileType9(Enum):
+class TypeProfileType9(StrEnum):
     """
     A type for unique party identifiers of any party role.
     """

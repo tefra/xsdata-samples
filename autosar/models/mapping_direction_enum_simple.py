@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class MappingDirectionEnumSimple(Enum):
+class MappingDirectionEnumSimple(StrEnum):
     """
     :cvar BIDIRECTIONAL: The TextTableMapping is applicable in both
         directions.

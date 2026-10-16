@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CanTpAddressingFormatTypeSimple(Enum):
+class CanTpAddressingFormatTypeSimple(StrEnum):
     """
     :cvar EXTENDED: To use extended addressing format.
     :cvar MIXED: To use mixed 11bit addressing format.

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ReasonForMeetingEnumeration(Enum):
+class ReasonForMeetingEnumeration(StrEnum):
     SERVICE_FACILITY = "serviceFacility"
     JOINING = "joining"
     TARIFF_SECTION = "tariffSection"

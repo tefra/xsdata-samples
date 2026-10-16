@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TcpOptionFilterListSubtypesEnum(Enum):
+class TcpOptionFilterListSubtypesEnum(StrEnum):
     TCP_OPTION_FILTER_LIST = "TCP-OPTION-FILTER-LIST"

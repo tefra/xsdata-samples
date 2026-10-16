@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-class OverlineToggle(Enum):
+class OverlineToggle(StrEnum):
     NO = "no"
     YES = "yes"

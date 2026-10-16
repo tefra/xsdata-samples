@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class CouchetteFacilityEnumeration(Enum):
+class CouchetteFacilityEnumeration(StrEnum):
     UNKNOWN = "unknown"
     T2 = "T2"
     T3 = "T3"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SendIndicationEnumSimple(Enum):
+class SendIndicationEnumSimple(StrEnum):
     """
     :cvar ANY_SEND_OPERATION: This value represents the requirement that
         any send operation of the Software Cluster is indicated.

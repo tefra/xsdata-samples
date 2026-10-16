@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class HolidayTypeEnumeration(Enum):
+class HolidayTypeEnumeration(StrEnum):
     ANY_DAY = "AnyDay"
     WORKING_DAY = "WorkingDay"
     SCHOOL_DAY = "SchoolDay"

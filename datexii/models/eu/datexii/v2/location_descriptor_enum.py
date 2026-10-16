@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class LocationDescriptorEnum(Enum):
+class LocationDescriptorEnum(StrEnum):
     """
     List of descriptors to help to identify a specific location.
 

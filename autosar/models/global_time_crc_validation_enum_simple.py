@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class GlobalTimeCrcValidationEnumSimple(Enum):
+class GlobalTimeCrcValidationEnumSimple(StrEnum):
     """
     :cvar CRC_IGNORED: The CRC is supposed to be ignored
     :cvar CRC_NOT_VALIDATED: The CRC is not supposed to be present. If

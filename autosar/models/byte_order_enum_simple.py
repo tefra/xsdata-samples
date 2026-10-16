@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ByteOrderEnumSimple(Enum):
+class ByteOrderEnumSimple(StrEnum):
     """
     :cvar MOST_SIGNIFICANT_BYTE_FIRST: Most significant byte shall come
         at the lowest address (also known as BigEndian or as Motorola-

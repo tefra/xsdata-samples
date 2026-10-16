@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class FuelType2Enum(Enum):
+class FuelType2Enum(StrEnum):
     """
     Fuel types that are currently not supported in FuelTypeEnum.
 

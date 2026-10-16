@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class RoadsideServiceDisruptionTypeEnum(Enum):
+class RoadsideServiceDisruptionTypeEnum(StrEnum):
     """
     Types of disruption to roadside services relevant to road users.
 

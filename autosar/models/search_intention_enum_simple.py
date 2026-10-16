@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SearchIntentionEnumSimple(Enum):
+class SearchIntentionEnumSimple(StrEnum):
     """
     :cvar SEARCH_FOR_ALL: This value represents the intention to search
         for all instances of the given service

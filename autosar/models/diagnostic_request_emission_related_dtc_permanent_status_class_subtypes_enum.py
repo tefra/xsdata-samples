@@ -1,12 +1,12 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
 class DiagnosticRequestEmissionRelatedDtcPermanentStatusClassSubtypesEnum(
-    Enum
+    StrEnum
 ):
     DIAGNOSTIC_REQUEST_EMISSION_RELATED_DTC_PERMANENT_STATUS_CLASS = (
         "DIAGNOSTIC-REQUEST-EMISSION-RELATED-DTC-PERMANENT-STATUS-CLASS"

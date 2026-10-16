@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
-class QueryTypeType(Enum):
+class QueryTypeType(StrEnum):
     """
     QueryType provides an enumeration of values which specify the objects
     in the result-set for a registry query.

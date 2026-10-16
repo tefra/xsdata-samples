@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-class TestableTestConstraint(Enum):
+class TestableTestConstraint(StrEnum):
     UNCONSTRAINED = "unconstrained"
     RESTORE = "restore"
     WRITE_AS_READ = "writeAsRead"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class UserTypeEnumeration(Enum):
+class UserTypeEnumeration(StrEnum):
     ADULT = "adult"
     CHILD = "child"
     INFANT = "infant"

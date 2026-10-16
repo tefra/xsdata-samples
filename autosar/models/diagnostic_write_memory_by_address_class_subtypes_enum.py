@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticWriteMemoryByAddressClassSubtypesEnum(Enum):
+class DiagnosticWriteMemoryByAddressClassSubtypesEnum(StrEnum):
     DIAGNOSTIC_WRITE_MEMORY_BY_ADDRESS_CLASS = (
         "DIAGNOSTIC-WRITE-MEMORY-BY-ADDRESS-CLASS"
     )

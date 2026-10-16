@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class PurchaseActionEnumeration(Enum):
+class PurchaseActionEnumeration(StrEnum):
     PURCHASE = "purchase"
     ORDER_WITHOUT_PAYMENT = "orderWithoutPayment"
     RESERVE = "reserve"

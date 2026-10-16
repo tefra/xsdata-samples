@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
-class WildCardValueType(Enum):
+class WildCardValueType(StrEnum):
     """
     WildCardValueType is a single value code list, used to include the '%'
     character - indicating that an entire field is wildcarded.

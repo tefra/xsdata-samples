@@ -1,13 +1,13 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = (
     "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer"
 )
 
 
-class SeverityCodeType(Enum):
+class SeverityCodeType(StrEnum):
     """
     :cvar ERROR: Error indicates the status message corresponds to an
         error.

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
-class StandardFromVtlMappingMethodType(Enum):
+class StandardFromVtlMappingMethodType(StrEnum):
     """
     A simple type enumerating the standard mapping methods when converting
     from data structures from VTL to SDMX.

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TerminationBehaviorEnumSimple(Enum):
+class TerminationBehaviorEnumSimple(StrEnum):
     """
     :cvar PROCESS_IS_NOT_SELF_TERMINATING: The Process terminates only
         on request from Execution Management.

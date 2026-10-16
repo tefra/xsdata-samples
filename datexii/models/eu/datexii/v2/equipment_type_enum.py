@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class EquipmentTypeEnum(Enum):
+class EquipmentTypeEnum(StrEnum):
     """
     Equipment available on the parking or parking space or grouped parking
     spaces.

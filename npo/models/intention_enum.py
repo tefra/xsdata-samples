@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-class IntentionEnum(Enum):
+class IntentionEnum(StrEnum):
     INFORM = "INFORM"
     INFORM_NEWS_AND_FACTS = "INFORM_NEWS_AND_FACTS"
     INFORM_INDEPTH = "INFORM_INDEPTH"

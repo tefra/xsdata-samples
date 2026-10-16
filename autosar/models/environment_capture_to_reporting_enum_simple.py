@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EnvironmentCaptureToReportingEnumSimple(Enum):
+class EnvironmentCaptureToReportingEnumSimple(StrEnum):
     """
     :cvar CAPTURE_ASYNCHRONOUS_TO_REPORTING: The data capturing is
         postponed to the next cycle of the Dem_Mainfunction. (This means

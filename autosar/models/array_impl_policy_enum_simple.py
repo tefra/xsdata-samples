@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ArrayImplPolicyEnumSimple(Enum):
+class ArrayImplPolicyEnumSimple(StrEnum):
     """
     :cvar PAYLOAD_AS_ARRAY: This configuration demands the
         implementation of the payload as an array.

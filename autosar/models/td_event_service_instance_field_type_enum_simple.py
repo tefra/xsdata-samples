@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventServiceInstanceFieldTypeEnumSimple(Enum):
+class TdEventServiceInstanceFieldTypeEnumSimple(StrEnum):
     """
     :cvar ADAPTIVE_FIELD_GETTER_CALLED: A point in time where a field
         getter of a service is called by a service subscriber through

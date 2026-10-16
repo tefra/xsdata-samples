@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TriggerModeSimple(Enum):
+class TriggerModeSimple(StrEnum):
     """
     :cvar DYNAMIC_PART_TRIGGER: IPduM sends a transmission request to
         the PduR if a dynamic part is received.

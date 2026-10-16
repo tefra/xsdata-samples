@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class FrameTriggeringSubtypesEnum(Enum):
+class FrameTriggeringSubtypesEnum(StrEnum):
     CAN_FRAME_TRIGGERING = "CAN-FRAME-TRIGGERING"
     ETHERNET_FRAME_TRIGGERING = "ETHERNET-FRAME-TRIGGERING"
     FLEXRAY_FRAME_TRIGGERING = "FLEXRAY-FRAME-TRIGGERING"

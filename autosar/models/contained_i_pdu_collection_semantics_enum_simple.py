@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ContainedIPduCollectionSemanticsEnumSimple(Enum):
+class ContainedIPduCollectionSemanticsEnumSimple(StrEnum):
     """
     :cvar LAST_IS_BEST: The ContainedIPdu data will be fetched via
         TriggerTransmit just before the transmission executes.

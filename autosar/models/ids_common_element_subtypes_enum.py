@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class IdsCommonElementSubtypesEnum(Enum):
+class IdsCommonElementSubtypesEnum(StrEnum):
     IDS_COMMON_ELEMENT = "IDS-COMMON-ELEMENT"
     IDS_MAPPING = "IDS-MAPPING"
     IDSM_INSTANCE = "IDSM-INSTANCE"

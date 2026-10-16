@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class RptExecutionControlEnumSimple(Enum):
+class RptExecutionControlEnumSimple(StrEnum):
     """
     :cvar CONDITIONAL: The ExecutableEntity is only executed when the
         rapid prototyping disable flag is NOT set.

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 from typing import ForwardRef
 
 from xsdata.models.datatype import XmlDateTime
@@ -14,7 +14,7 @@ from reqif.models.org.w3.xml.pkg_1998.namespace import (
 __NAMESPACE__ = "http://www.w3.org/1999/xhtml"
 
 
-class XhtmlColTypeAlign(Enum):
+class XhtmlColTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -22,14 +22,14 @@ class XhtmlColTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlColTypeValign(Enum):
+class XhtmlColTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlColgroupTypeAlign(Enum):
+class XhtmlColgroupTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -37,24 +37,24 @@ class XhtmlColgroupTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlColgroupTypeValign(Enum):
+class XhtmlColgroupTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlObjectTypeDeclare(Enum):
+class XhtmlObjectTypeDeclare(StrEnum):
     DECLARE = "declare"
 
 
-class XhtmlParamTypeValuetype(Enum):
+class XhtmlParamTypeValuetype(StrEnum):
     DATA = "data"
     REF = "ref"
     OBJECT = "object"
 
 
-class XhtmlTableTypeFrame(Enum):
+class XhtmlTableTypeFrame(StrEnum):
     VOID = "void"
     ABOVE = "above"
     BELOW = "below"
@@ -66,7 +66,7 @@ class XhtmlTableTypeFrame(Enum):
     BORDER = "border"
 
 
-class XhtmlTableTypeRules(Enum):
+class XhtmlTableTypeRules(StrEnum):
     NONE = "none"
     GROUPS = "groups"
     ROWS = "rows"
@@ -74,7 +74,7 @@ class XhtmlTableTypeRules(Enum):
     ALL = "all"
 
 
-class XhtmlTbodyTypeAlign(Enum):
+class XhtmlTbodyTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -82,14 +82,14 @@ class XhtmlTbodyTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlTbodyTypeValign(Enum):
+class XhtmlTbodyTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlTdTypeAlign(Enum):
+class XhtmlTdTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -97,21 +97,21 @@ class XhtmlTdTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlTdTypeScope(Enum):
+class XhtmlTdTypeScope(StrEnum):
     ROW = "row"
     COL = "col"
     ROWGROUP = "rowgroup"
     COLGROUP = "colgroup"
 
 
-class XhtmlTdTypeValign(Enum):
+class XhtmlTdTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlTfootTypeAlign(Enum):
+class XhtmlTfootTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -119,14 +119,14 @@ class XhtmlTfootTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlTfootTypeValign(Enum):
+class XhtmlTfootTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlThTypeAlign(Enum):
+class XhtmlThTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -134,21 +134,21 @@ class XhtmlThTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlThTypeScope(Enum):
+class XhtmlThTypeScope(StrEnum):
     ROW = "row"
     COL = "col"
     ROWGROUP = "rowgroup"
     COLGROUP = "colgroup"
 
 
-class XhtmlThTypeValign(Enum):
+class XhtmlThTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlTheadTypeAlign(Enum):
+class XhtmlTheadTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -156,14 +156,14 @@ class XhtmlTheadTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlTheadTypeValign(Enum):
+class XhtmlTheadTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class XhtmlTrTypeAlign(Enum):
+class XhtmlTrTypeAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -171,7 +171,7 @@ class XhtmlTrTypeAlign(Enum):
     CHAR = "char"
 
 
-class XhtmlTrTypeValign(Enum):
+class XhtmlTrTypeValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"

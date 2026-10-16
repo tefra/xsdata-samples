@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from decimal import Decimal
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 from .voc import (
@@ -21,7 +21,7 @@ from .voc import (
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-class BinaryDataEncoding(Enum):
+class BinaryDataEncoding(StrEnum):
     B64 = "B64"
     TXT = "TXT"
 

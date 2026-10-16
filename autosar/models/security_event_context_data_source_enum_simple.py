@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SecurityEventContextDataSourceEnumSimple(Enum):
+class SecurityEventContextDataSourceEnumSimple(StrEnum):
     """
     :cvar USE_FIRST_CONTEXT_DATA: Context data of first received
         security event shall be used for resulting qualified security

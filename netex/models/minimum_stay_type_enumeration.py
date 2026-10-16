@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class MinimumStayTypeEnumeration(Enum):
+class MinimumStayTypeEnumeration(StrEnum):
     NONE = "none"
     SPECIFIED_NIGHTS_AWAY = "specifiedNightsAway"
     COUNT_NIGHTS_AWAY = "countNightsAway"

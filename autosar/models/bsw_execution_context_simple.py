@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class BswExecutionContextSimple(Enum):
+class BswExecutionContextSimple(StrEnum):
     """
     :cvar HOOK: Context of an OS "hook" routine always
     :cvar INTERRUPT_CAT_1: CAT1 interrupt context always

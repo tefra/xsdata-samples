@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ReservationChargeTypeEnumeration(Enum):
+class ReservationChargeTypeEnumeration(StrEnum):
     NO_FEE = "noFee"
     FEE = "fee"
     SINGLE_FEE_FOR_RETURN_TRIP = "singleFeeForReturnTrip"

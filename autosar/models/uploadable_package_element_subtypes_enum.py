@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class UploadablePackageElementSubtypesEnum(Enum):
+class UploadablePackageElementSubtypesEnum(StrEnum):
     ABSTRACT_EXECUTION_CONTEXT = "ABSTRACT-EXECUTION-CONTEXT"
     ADAPTIVE_PLATFORM_SERVICE_INSTANCE = "ADAPTIVE-PLATFORM-SERVICE-INSTANCE"
     COM_CERTIFICATE_TO_CRYPTO_CERTIFICATE_MAPPING = (

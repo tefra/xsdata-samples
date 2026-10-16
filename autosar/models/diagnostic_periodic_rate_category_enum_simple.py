@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticPeriodicRateCategoryEnumSimple(Enum):
+class DiagnosticPeriodicRateCategoryEnumSimple(StrEnum):
     """
     :cvar PERIODIC_RATE_FAST: This value represents a fast periodic
         rate.

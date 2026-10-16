@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ServiceProviderEnumSimple(Enum):
+class ServiceProviderEnumSimple(StrEnum):
     """
     :cvar ANY_STANDARDIZED: This value means that the specific nature is
         either unknown or it is not important for the given purpose.

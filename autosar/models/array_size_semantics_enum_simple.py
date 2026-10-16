@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ArraySizeSemanticsEnumSimple(Enum):
+class ArraySizeSemanticsEnumSimple(StrEnum):
     """
     :cvar FIXED_SIZE: This means that the ApplicationArrayDataType will
         always have a fixed number of elements.

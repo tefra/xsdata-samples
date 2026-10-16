@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class PenaltyPolicyTypeEnumeration(Enum):
+class PenaltyPolicyTypeEnumeration(StrEnum):
     NO_TICKET = "noTicket"
     NO_CHECK_IN = "noCheckIn"
     NO_CHECK_OUT = "noCheckOut"

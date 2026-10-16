@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ValignEnumSimple(Enum):
+class ValignEnumSimple(StrEnum):
     """
     :cvar BOTTOM: The contents of the table cell is bottom aligned.
     :cvar MIDDLE: The contents of the table is vertically centered.

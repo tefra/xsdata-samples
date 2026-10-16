@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class GlobalTimeMasterSubtypesEnum(Enum):
+class GlobalTimeMasterSubtypesEnum(StrEnum):
     GLOBAL_TIME_CAN_MASTER = "GLOBAL-TIME-CAN-MASTER"
     GLOBAL_TIME_ETH_MASTER = "GLOBAL-TIME-ETH-MASTER"
     GLOBAL_TIME_FR_MASTER = "GLOBAL-TIME-FR-MASTER"

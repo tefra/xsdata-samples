@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class TheoryValue(Enum):
+class TheoryValue(StrEnum):
     A = "A"
     C = "C"
     AC = "AC"

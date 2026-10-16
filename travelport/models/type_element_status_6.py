@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-class TypeElementStatus6(Enum):
+class TypeElementStatus6(StrEnum):
     """
     Values to specify the state of the element. "A" refers to "Add" , "M"
     refers to "Modified" and "C" refers to error conditions when value

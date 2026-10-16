@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class ProbabilityOfOccurrenceEnum(Enum):
+class ProbabilityOfOccurrenceEnum(StrEnum):
     """
     Levels of confidence that the sender has in the information, ordered
     {certain, probable, risk of}.

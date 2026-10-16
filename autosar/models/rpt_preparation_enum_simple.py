@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class RptPreparationEnumSimple(Enum):
+class RptPreparationEnumSimple(StrEnum):
     """
     :cvar NONE: No RP preparation for VariableDataPrototype.
     :cvar RPT_LEVEL_1: The RTE implementation uses an „RP global buffer"

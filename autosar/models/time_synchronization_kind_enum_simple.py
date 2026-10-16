@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TimeSynchronizationKindEnumSimple(Enum):
+class TimeSynchronizationKindEnumSimple(StrEnum):
     """
     :cvar OFFSET: Defines that the requested time base shall be an
         offset time based.

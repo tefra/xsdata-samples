@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class CoachSubmodeEnumeration(Enum):
+class CoachSubmodeEnumeration(StrEnum):
     UNKNOWN = "unknown"
     UNDEFINED = "undefined"
     INTERNATIONAL_COACH = "internationalCoach"

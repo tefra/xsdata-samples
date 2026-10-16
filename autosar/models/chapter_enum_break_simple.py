@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ChapterEnumBreakSimple(Enum):
+class ChapterEnumBreakSimple(StrEnum):
     """
     :cvar BREAK: This indicates the a page break shall be applied before
         the current block.

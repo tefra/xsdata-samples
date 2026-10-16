@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-class ApiType(Enum):
+class ApiType(StrEnum):
     TGI_2009 = "TGI_2009"
     TGI_2014_BASE = "TGI_2014_BASE"
     TGI_2014_EXTENDED = "TGI_2014_EXTENDED"

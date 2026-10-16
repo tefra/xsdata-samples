@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class XmlSpaceEnumSimple(Enum):
+class XmlSpaceEnumSimple(StrEnum):
     """
     :cvar DEFAULT: The value "default" signals that applications'
         default white-space processing modes are acceptable for this

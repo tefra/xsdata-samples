@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.omg.org/spec/BPMN/20100524/DI"
 
 
-class ParticipantBandKind(Enum):
+class ParticipantBandKind(StrEnum):
     TOP_INITIATING = "top_initiating"
     MIDDLE_INITIATING = "middle_initiating"
     BOTTOM_INITIATING = "bottom_initiating"

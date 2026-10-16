@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class UsageTriggerEnumeration(Enum):
+class UsageTriggerEnumeration(StrEnum):
     ENROLMENT = "enrolment"
     RESERVATION = "reservation"
     PURCHASE = "purchase"

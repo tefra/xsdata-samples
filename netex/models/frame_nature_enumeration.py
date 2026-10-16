@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class FrameNatureEnumeration(Enum):
+class FrameNatureEnumeration(StrEnum):
     PLANNED = "planned"
     OPERATIONAL = "operational"
     CONTINGENCY_PLAN = "contingencyPlan"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v37_0"
 
 
-class TypeResponseImageSize4(Enum):
+class TypeResponseImageSize4(StrEnum):
     """
     Allowable images sizes in response.
     """

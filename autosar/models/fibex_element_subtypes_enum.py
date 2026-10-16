@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class FibexElementSubtypesEnum(Enum):
+class FibexElementSubtypesEnum(StrEnum):
     ABSTRACT_CAN_CLUSTER = "ABSTRACT-CAN-CLUSTER"
     ABSTRACT_ETHERNET_FRAME = "ABSTRACT-ETHERNET-FRAME"
     BUS_MIRROR_CHANNEL_MAPPING = "BUS-MIRROR-CHANNEL-MAPPING"

@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class RefgrpTip(Enum):
+class RefgrpTip(StrEnum):
     VID = "vid"
     HOM = "hom"
     DIF = "dif"

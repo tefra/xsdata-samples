@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class RoadworksScaleEnum(Enum):
+class RoadworksScaleEnum(StrEnum):
     """
     Coarse classifications of the scale of roadworks in terms of the
     traffic disruption they are likely to cause.

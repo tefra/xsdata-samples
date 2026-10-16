@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AtpBlueprintableSubtypesEnum(Enum):
+class AtpBlueprintableSubtypesEnum(StrEnum):
     ABSTRACT_IMPLEMENTATION_DATA_TYPE = "ABSTRACT-IMPLEMENTATION-DATA-TYPE"
     ABSTRACT_PROVIDED_PORT_PROTOTYPE = "ABSTRACT-PROVIDED-PORT-PROTOTYPE"
     ABSTRACT_RAW_DATA_STREAM_INTERFACE = "ABSTRACT-RAW-DATA-STREAM-INTERFACE"

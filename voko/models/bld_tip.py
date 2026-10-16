@@ -1,8 +1,8 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class BldTip(Enum):
+class BldTip(StrEnum):
     IMG = "img"
     SVG = "svg"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-class TypeProfileDataCategory2(Enum):
+class TypeProfileDataCategory2(StrEnum):
     """
     The category of data that controls what data will be returned in the
     response.

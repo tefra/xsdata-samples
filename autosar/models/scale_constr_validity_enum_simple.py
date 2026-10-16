@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ScaleConstrValidityEnumSimple(Enum):
+class ScaleConstrValidityEnumSimple(StrEnum):
     """
     :cvar NOT_AVAILABLE: Currently invalid area The value usually is
         presented by the ECU but can currently not be performed due to

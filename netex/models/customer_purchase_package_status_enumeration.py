@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class CustomerPurchasePackageStatusEnumeration(Enum):
+class CustomerPurchasePackageStatusEnumeration(StrEnum):
     RESERVED = "reserved"
     ORDERED = "ordered"
     PAID_FOR = "paidFor"

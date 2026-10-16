@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ItemLabelPosEnumSimple(Enum):
+class ItemLabelPosEnumSimple(StrEnum):
     """
     :cvar NEWLINE: The label is renders in a new line.
     :cvar NEWLINE_IF_NECESSARY: The label is rendered in a new line if

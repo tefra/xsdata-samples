@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticDebounceBehaviorEnumSimple(Enum):
+class DiagnosticDebounceBehaviorEnumSimple(StrEnum):
     """
     :cvar FREEZE: The event debounce counter will be frozen with the
         current value and will not change while a related enable

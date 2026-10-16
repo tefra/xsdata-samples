@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple(Enum):
+class DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple(StrEnum):
     """
     :cvar CALCULATED: Freeze frame records will be numbered consecutive
         starting by 1 in their chronological order.

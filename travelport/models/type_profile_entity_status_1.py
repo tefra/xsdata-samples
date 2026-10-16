@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-class TypeProfileEntityStatus1(Enum):
+class TypeProfileEntityStatus1(StrEnum):
     """
     Status of the given profile/entity.
 

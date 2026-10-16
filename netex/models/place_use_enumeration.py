@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class PlaceUseEnumeration(Enum):
+class PlaceUseEnumeration(StrEnum):
     START_AT = "startAt"
     END_AT = "endAt"
     VIA = "via"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class MonotonyEnumSimple(Enum):
+class MonotonyEnumSimple(StrEnum):
     """
     :cvar DECREASING: This indicates that the related curve needs to be
         monotony decreasing.

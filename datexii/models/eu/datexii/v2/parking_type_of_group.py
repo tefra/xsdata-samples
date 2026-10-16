@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class ParkingTypeOfGroup(Enum):
+class ParkingTypeOfGroup(StrEnum):
     """
     The type of group specification (group of parking spaces).
 

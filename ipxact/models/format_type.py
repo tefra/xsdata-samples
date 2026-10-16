@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-class FormatType(Enum):
+class FormatType(StrEnum):
     """
     This is an indication on the format of the value. bit: 1-bit or more
     (vector) bits unsigned integer, byte: 8-bit signed integer, shortint:

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AreaEnumShapeSimple(Enum):
+class AreaEnumShapeSimple(StrEnum):
     """
     :cvar CIRCLE: The shape is a circle.
     :cvar DEFAULT: This specifies the fact that the area covers the rest

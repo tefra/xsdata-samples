@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class PhysicalChannelSubtypesEnum(Enum):
+class PhysicalChannelSubtypesEnum(StrEnum):
     ABSTRACT_CAN_PHYSICAL_CHANNEL = "ABSTRACT-CAN-PHYSICAL-CHANNEL"
     CAN_PHYSICAL_CHANNEL = "CAN-PHYSICAL-CHANNEL"
     ETHERNET_PHYSICAL_CHANNEL = "ETHERNET-PHYSICAL-CHANNEL"

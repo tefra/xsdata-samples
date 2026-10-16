@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import IntEnum
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-class SpanishFamilyDiscountLevel(Enum):
+class SpanishFamilyDiscountLevel(IntEnum):
     VALUE_1 = 1
     VALUE_2 = 2

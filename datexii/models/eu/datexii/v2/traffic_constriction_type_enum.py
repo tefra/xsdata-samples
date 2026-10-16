@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class TrafficConstrictionTypeEnum(Enum):
+class TrafficConstrictionTypeEnum(StrEnum):
     """
     Types of constriction to which traffic is subjected as a result of an
     event.

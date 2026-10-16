@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-class TypePrivateFare(Enum):
+class TypePrivateFare(StrEnum):
     """
     List the types of private fares, Agency private fare, Airline private
     Fare and Unknown.

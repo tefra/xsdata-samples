@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ShowContentEnumSimple(Enum):
+class ShowContentEnumSimple(StrEnum):
     """
     :cvar NO_SHOW_CONTENT: The content of the Xref.label is '''not'''
         rendered at the place of the reference.

@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class BoundValue(Enum):
+class BoundValue(StrEnum):
     QUESTION_MARK = "?"
     POLY = "POLY"
     O_1 = "O(1)"

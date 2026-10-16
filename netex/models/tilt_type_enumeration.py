@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class TiltTypeEnumeration(Enum):
+class TiltTypeEnumeration(StrEnum):
     STRONG_LEFT_TILT = "strongLeftTilt"
     MEDIUM_LEFT_TILT = "mediumLeftTilt"
     NEARLY_FLAT = "nearlyFlat"

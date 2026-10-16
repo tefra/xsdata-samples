@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class DelayBandEnum(Enum):
+class DelayBandEnum(StrEnum):
     """
     Classifications of a delay banded by length (i.e. the additional travel
     time).

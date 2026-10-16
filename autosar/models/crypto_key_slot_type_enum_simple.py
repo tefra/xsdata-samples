@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CryptoKeySlotTypeEnumSimple(Enum):
+class CryptoKeySlotTypeEnumSimple(StrEnum):
     """
     :cvar APPLICATION: KeySlot is used and modified exclusively by the
         Application.

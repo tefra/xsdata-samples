@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class BoardingPositionTypeEnumeration(Enum):
+class BoardingPositionTypeEnumeration(StrEnum):
     UNKNOWN = "unknown"
     DOOR_FROM_AIRLINE_GATE = "doorFromAirlineGate"
     POSITION_ON_RAIL_PLATFORM = "positionOnRailPlatform"

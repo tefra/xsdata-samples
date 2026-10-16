@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-class TypeHotelAvailability(Enum):
+class TypeHotelAvailability(StrEnum):
     """
     Availability status of hotel Hotel is Available NotAvailable Available,
     but not for the rates requested On request Unknown.

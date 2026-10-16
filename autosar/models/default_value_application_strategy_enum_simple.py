@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DefaultValueApplicationStrategyEnumSimple(Enum):
+class DefaultValueApplicationStrategyEnumSimple(StrEnum):
     """
     :cvar DEFAULT_IF_REVISION_UPDATE: If the AUTOSAR model is older than
         the Baseline of the Data Exchange Point and the older version

@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class FareBasisEnumeration(Enum):
+class FareBasisEnumeration(StrEnum):
     ROUTE = "route"
     DISTANCE = "distance"

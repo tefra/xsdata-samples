@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class IPsecModeEnumSimple(Enum):
+class IPsecModeEnumSimple(StrEnum):
     """
     :cvar TRANSPORT: Signifying that the IPSec transport mode is used.
         With the transport mode the original IP header is retained and

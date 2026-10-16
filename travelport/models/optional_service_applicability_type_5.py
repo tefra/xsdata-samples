@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-class OptionalServiceApplicabilityType5(Enum):
+class OptionalServiceApplicabilityType5(StrEnum):
     """
     The different levels at which an optional service may be applied.
 

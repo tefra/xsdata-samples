@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class EquipmentOrSystemFaultTypeEnum(Enum):
+class EquipmentOrSystemFaultTypeEnum(StrEnum):
     """
     Types of fault, malfunctioning or non operational conditions of
     equipment or systems.

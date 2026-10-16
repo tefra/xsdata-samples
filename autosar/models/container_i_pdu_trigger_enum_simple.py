@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ContainerIPduTriggerEnumSimple(Enum):
+class ContainerIPduTriggerEnumSimple(StrEnum):
     """
     :cvar DEFAULT_TRIGGER: Defines that the transmission of the
         ContainerIPdu shall be requested when the default trigger

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticWwhObdDtcClassEnumSimple(Enum):
+class DiagnosticWwhObdDtcClassEnumSimple(StrEnum):
     """
     :cvar DEM_DTC_WWH_OBD_CLASS_A: This attribute represents the
         severity class A.

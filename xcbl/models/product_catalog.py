@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 
 from xcbl.models.sourcing_create import AttributeName
 from xcbl.models.sourcing_result import (
@@ -19,7 +19,7 @@ from xcbl.models.trading_partner_organization_information import Currency
 from xcbl.models.trading_partner_user_information import Identifier
 
 
-class ActionValue(Enum):
+class ActionValue(StrEnum):
     ADD = "Add"
     UPDATE = "Update"
     DELETE = "Delete"
@@ -55,7 +55,7 @@ class AttributeId:
     value: str = field()
 
 
-class AttributeTypeScalarType(Enum):
+class AttributeTypeScalarType(StrEnum):
     STRING = "String"
     INTEGER = "Integer"
     NUMERIC = "Numeric"
@@ -94,7 +94,7 @@ class Buyer:
     value: str = field()
 
 
-class CatalogAudienceCatalogAudienceCoded(Enum):
+class CatalogAudienceCatalogAudienceCoded(StrEnum):
     ENUMERATED_BUYERS_ONLY = "EnumeratedBuyersOnly"
     PUBLIC = "Public"
 
@@ -115,7 +115,7 @@ class CatalogContractItemId:
     value: str = field()
 
 
-class CatalogContractType(Enum):
+class CatalogContractType(StrEnum):
     OTHER = "Other"
     BUYER = "Buyer"
     SUPPLIER = "Supplier"
@@ -155,7 +155,7 @@ class CatalogProviderIdref:
     value: str = field()
 
 
-class CatalogSchemaType(Enum):
+class CatalogSchemaType(StrEnum):
     OTHER = "Other"
     BUYER = "Buyer"
     SUPPLIER = "Supplier"
@@ -325,7 +325,7 @@ class PartnerRelationshipCodedOther:
     value: str = field()
 
 
-class PartnerRelationship1(Enum):
+class PartnerRelationship1(StrEnum):
     SUPPLIER = "Supplier"
     SUPPLIER_AGENT = "SupplierAgent"
     BUYER = "Buyer"
@@ -375,14 +375,14 @@ class ProductIdref:
     value: str = field()
 
 
-class ProductIdstandardAgency(Enum):
+class ProductIdstandardAgency(StrEnum):
     OTHER = "Other"
     GTIN = "GTIN"
     EAN = "EAN"
     UCC = "UCC"
 
 
-class ProductIdType(Enum):
+class ProductIdType(StrEnum):
     OTHER = "Other"
     BUYER = "Buyer"
     SUPPLIER = "Supplier"
@@ -401,13 +401,13 @@ class ProductName:
     value: str = field()
 
 
-class ProductType(Enum):
+class ProductType(StrEnum):
     OTHER = "Other"
     GOOD = "Good"
     SERVICE = "Service"
 
 
-class RelatedProductTargetType(Enum):
+class RelatedProductTargetType(StrEnum):
     COMPONENT = "Component"
     SUBSTITUTE = "Substitute"
     ALTERNATIVE = "Alternative"

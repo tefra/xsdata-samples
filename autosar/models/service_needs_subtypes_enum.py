@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ServiceNeedsSubtypesEnum(Enum):
+class ServiceNeedsSubtypesEnum(StrEnum):
     BSW_MGR_NEEDS = "BSW-MGR-NEEDS"
     COM_MGR_USER_NEEDS = "COM-MGR-USER-NEEDS"
     CRYPTO_CERTIFICATE_KEY_SLOT_NEEDS = "CRYPTO-CERTIFICATE-KEY-SLOT-NEEDS"
