@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-class TypePreferencePurpose1(Enum):
+class TypePreferencePurpose1(StrEnum):
     """
     Specify the preference purpose. (ie.
 

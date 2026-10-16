@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class PhmHealthChannelStatusSubtypesEnum(Enum):
+class PhmHealthChannelStatusSubtypesEnum(StrEnum):
     PHM_HEALTH_CHANNEL_STATUS = "PHM-HEALTH-CHANNEL-STATUS"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SoAdProtocolTypeSimple(Enum):
+class SoAdProtocolTypeSimple(StrEnum):
     """
     :cvar TCP: Transmission Control Protocol (TCP) enables two hosts to
         establish a connection and exchange streams of data.

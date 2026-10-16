@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 
 from xcbl.models.trading_partner_organization_information import (
     ExternalAddressId,
@@ -206,7 +206,7 @@ class Mdfbusiness:
     value: str = field()
 
 
-class MaximumValueConditionsCoded(Enum):
+class MaximumValueConditionsCoded(StrEnum):
     OTHER = "Other"
     WHERE_AIR_EQUALS1 = "WhereAirEquals1"
     WHERE_BUTYL_ACETATE_EQUALS1 = "WhereButylAcetateEquals1"
@@ -323,7 +323,7 @@ class MaximumValueConditionsCoded(Enum):
     NON_TIME_RELATED_DEMAND = "NonTimeRelatedDemand"
 
 
-class MaximumValueSignificanceCoded(Enum):
+class MaximumValueSignificanceCoded(StrEnum):
     OTHER = "Other"
     APPROXIMATELY = "Approximately"
     EQUAL_TO = "EqualTo"
@@ -338,7 +338,7 @@ class MaximumValueSignificanceCoded(Enum):
     OUT_OF_RANGE = "OutOfRange"
 
 
-class MeasurementValueConditionsCoded(Enum):
+class MeasurementValueConditionsCoded(StrEnum):
     OTHER = "Other"
     WHERE_AIR_EQUALS1 = "WhereAirEquals1"
     WHERE_BUTYL_ACETATE_EQUALS1 = "WhereButylAcetateEquals1"
@@ -455,7 +455,7 @@ class MeasurementValueConditionsCoded(Enum):
     NON_TIME_RELATED_DEMAND = "NonTimeRelatedDemand"
 
 
-class MeasurementValueSignificanceCoded(Enum):
+class MeasurementValueSignificanceCoded(StrEnum):
     OTHER = "Other"
     APPROXIMATELY = "Approximately"
     EQUAL_TO = "EqualTo"
@@ -470,7 +470,7 @@ class MeasurementValueSignificanceCoded(Enum):
     OUT_OF_RANGE = "OutOfRange"
 
 
-class MinimumValueConditionsCoded(Enum):
+class MinimumValueConditionsCoded(StrEnum):
     OTHER = "Other"
     WHERE_AIR_EQUALS1 = "WhereAirEquals1"
     WHERE_BUTYL_ACETATE_EQUALS1 = "WhereButylAcetateEquals1"
@@ -587,7 +587,7 @@ class MinimumValueConditionsCoded(Enum):
     NON_TIME_RELATED_DEMAND = "NonTimeRelatedDemand"
 
 
-class MinimumValueSignificanceCoded(Enum):
+class MinimumValueSignificanceCoded(StrEnum):
     OTHER = "Other"
     APPROXIMATELY = "Approximately"
     EQUAL_TO = "EqualTo"
@@ -626,7 +626,7 @@ class Name31:
     value: str = field()
 
 
-class NameAddressAddressTypeCoded(Enum):
+class NameAddressAddressTypeCoded(StrEnum):
     OTHER = "Other"
     ACCEPTANCE_LOCATION = "AcceptanceLocation"
     ACCOUNTS_PAYABLE_OFFICE = "AccountsPayableOffice"

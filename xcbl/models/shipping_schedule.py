@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 
 from xcbl.models.shipping_schedule_response import (
     ContractReferences,
@@ -53,7 +53,7 @@ class PackageCharacteristicCodedOther:
     value: str = field()
 
 
-class PackageDocDocumentTypeCoded(Enum):
+class PackageDocDocumentTypeCoded(StrEnum):
     OTHER = "Other"
     CERTIFICATE_OF_ANALYSIS = "CertificateOfAnalysis"
     CERTIFICATE_OF_CONFORMITY = "CertificateOfConformity"

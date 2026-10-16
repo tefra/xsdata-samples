@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
-class ResolvePeriodType(Enum):
+class ResolvePeriodType(StrEnum):
     """
     ResolvePeriodType defines an enumeration of how date periods should be
     resolved.

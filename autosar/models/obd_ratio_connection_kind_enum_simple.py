@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ObdRatioConnectionKindEnumSimple(Enum):
+class ObdRatioConnectionKindEnumSimple(StrEnum):
     """
     :cvar API_USE: The IUMPR service (of the DEM) uses an explicit API
         to connect to the component or module.

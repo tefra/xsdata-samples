@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class CodedReasonForSettingMessageEnum(Enum):
+class CodedReasonForSettingMessageEnum(StrEnum):
     """
     Coded reasons why a message has been selected for display on the sign.
 

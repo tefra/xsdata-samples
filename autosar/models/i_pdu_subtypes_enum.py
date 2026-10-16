@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class IPduSubtypesEnum(Enum):
+class IPduSubtypesEnum(StrEnum):
     CONTAINER_I_PDU = "CONTAINER-I-PDU"
     DCM_I_PDU = "DCM-I-PDU"
     GENERAL_PURPOSE_I_PDU = "GENERAL-PURPOSE-I-PDU"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum(Enum):
+class AbstractSignalBasedToISignalTriggeringMappingSubtypesEnum(StrEnum):
     ABSTRACT_SIGNAL_BASED_TO_I_SIGNAL_TRIGGERING_MAPPING = (
         "ABSTRACT-SIGNAL-BASED-TO-I-SIGNAL-TRIGGERING-MAPPING"
     )

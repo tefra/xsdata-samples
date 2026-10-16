@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SoAdConnectorTypeSimple(Enum):
+class SoAdConnectorTypeSimple(StrEnum):
     """
     :cvar DO_IP: Diagnosis over IP
     :cvar PDU_R: Pdu Router

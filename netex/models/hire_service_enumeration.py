@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class HireServiceEnumeration(Enum):
+class HireServiceEnumeration(StrEnum):
     SCOOTER_HIRE = "scooterHire"
     CYCLE_HIRE = "cycleHire"
     MOTORCYCLE_HIRE = "motorcycleHire"

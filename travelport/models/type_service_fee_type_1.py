@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
 
-class TypeServiceFeeType1(Enum):
+class TypeServiceFeeType1(StrEnum):
     """
     A code for categorizing service fees or charges.
     """

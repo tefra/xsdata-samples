@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-class SignType(Enum):
+class SignType(StrEnum):
     """
     This is an indication of the signedness of the value.
     """

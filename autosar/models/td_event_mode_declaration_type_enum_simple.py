@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventModeDeclarationTypeEnumSimple(Enum):
+class TdEventModeDeclarationTypeEnumSimple(StrEnum):
     """
     :cvar MODE_DECLARATION_SWITCH_COMPLETED: A point in time where the
         switch to the associated ModeDeclarationGroupPrototype has been

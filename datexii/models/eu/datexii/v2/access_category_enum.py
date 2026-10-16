@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class AccessCategoryEnum(Enum):
+class AccessCategoryEnum(StrEnum):
     """
     Specifies the category of the access.
 

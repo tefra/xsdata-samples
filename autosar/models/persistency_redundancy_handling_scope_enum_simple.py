@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class PersistencyRedundancyHandlingScopeEnumSimple(Enum):
+class PersistencyRedundancyHandlingScopeEnumSimple(StrEnum):
     """
     :cvar PERSISTENCY_REDUNDANCY_HANDLING_SCOPE_ELEMENT: The redundancy
         handling shall be applied on element level (key-value pair and

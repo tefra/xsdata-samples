@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-class FormatMimeType(Enum):
+class FormatMimeType(StrEnum):
     TEXT_CSS = "text/css"
     TEXT_CSV = "text/csv"
     TEXT_ENRICHED = "text/enriched"

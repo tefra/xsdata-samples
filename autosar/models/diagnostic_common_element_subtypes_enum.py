@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticCommonElementSubtypesEnum(Enum):
+class DiagnosticCommonElementSubtypesEnum(StrEnum):
     DIAGNOSTIC_ABSTRACT_ALIAS_EVENT = "DIAGNOSTIC-ABSTRACT-ALIAS-EVENT"
     DIAGNOSTIC_ABSTRACT_DATA_IDENTIFIER = "DIAGNOSTIC-ABSTRACT-DATA-IDENTIFIER"
     DIAGNOSTIC_ACCESS_PERMISSION = "DIAGNOSTIC-ACCESS-PERMISSION"

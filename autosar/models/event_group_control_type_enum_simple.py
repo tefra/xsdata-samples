@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EventGroupControlTypeEnumSimple(Enum):
+class EventGroupControlTypeEnumSimple(StrEnum):
     """
     :cvar ACTIVATION_AND_TRIGGER_UNICAST: Activate the data path for
         unicast events and triggered unicast events that are sent out

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-class OtaAirLowFareSearchRsTransactionStatusCode(Enum):
+class OtaAirLowFareSearchRsTransactionStatusCode(StrEnum):
     """
     Attributes:
         START: This is the first message within a transaction.

@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 
-class DeliveryMethodEnumeration(Enum):
+class DeliveryMethodEnumeration(StrEnum):
     DIRECT = "direct"
     FETCHED = "fetched"

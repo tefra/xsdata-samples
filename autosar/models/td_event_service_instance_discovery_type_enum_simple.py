@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventServiceInstanceDiscoveryTypeEnumSimple(Enum):
+class TdEventServiceInstanceDiscoveryTypeEnumSimple(StrEnum):
     """
     :cvar ADAPTIVE_SERVICE_FIND_COMPLETED: A point in time where a
         service subscriber completes to find a needed service.

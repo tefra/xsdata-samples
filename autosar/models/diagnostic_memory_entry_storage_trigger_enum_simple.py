@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticMemoryEntryStorageTriggerEnumSimple(Enum):
+class DiagnosticMemoryEntryStorageTriggerEnumSimple(StrEnum):
     """
     :cvar CONFIRMED: Status information of UDS DTC status bit 3
     :cvar FDC_THRESHOLD: Threshold to allocate an event memory entry and

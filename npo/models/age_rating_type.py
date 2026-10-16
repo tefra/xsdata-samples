@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-class AgeRatingType(Enum):
+class AgeRatingType(StrEnum):
     VALUE_6 = "6"
     VALUE_9 = "9"
     VALUE_12 = "12"

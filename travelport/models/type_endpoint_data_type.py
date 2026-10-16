@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-class TypeEndpointDataType(Enum):
+class TypeEndpointDataType(StrEnum):
     """
     Specify the Data type for an Endpoint (ex, Boolean, Integer, String,
     etc).

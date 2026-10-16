@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EthernetPhysicalLayerTypeEnumSimple(Enum):
+class EthernetPhysicalLayerTypeEnumSimple(StrEnum):
     """
     :cvar VALUE_1000_BASE_T: Ethernet Standard (IEEE 802.3ab) to support
         1Gbit/s over 4 twisted pairs.

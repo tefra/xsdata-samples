@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class GlobalTimeDomainSubtypesEnum(Enum):
+class GlobalTimeDomainSubtypesEnum(StrEnum):
     GLOBAL_TIME_DOMAIN = "GLOBAL-TIME-DOMAIN"

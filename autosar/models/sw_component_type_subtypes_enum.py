@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SwComponentTypeSubtypesEnum(Enum):
+class SwComponentTypeSubtypesEnum(StrEnum):
     ADAPTIVE_APPLICATION_SW_COMPONENT_TYPE = (
         "ADAPTIVE-APPLICATION-SW-COMPONENT-TYPE"
     )

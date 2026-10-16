@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class LockingMechanismEnumeration(Enum):
+class LockingMechanismEnumeration(StrEnum):
     NONE = "none"
     DOCK = "dock"
     IMMOBILISING_LOCK = "immobilisingLock"

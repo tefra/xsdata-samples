@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/vehicle_v52_0"
 
 
-class TypeVehicleChargeType(Enum):
+class TypeVehicleChargeType(StrEnum):
     NO_CHARGE = "NoCharge"
     PERCENT = "Percent"
     RENTAL = "Rental"

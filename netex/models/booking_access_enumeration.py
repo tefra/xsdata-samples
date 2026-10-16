@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class BookingAccessEnumeration(Enum):
+class BookingAccessEnumeration(StrEnum):
     PUBLIC = "public"
     AUTHORISED_PUBLIC = "authorisedPublic"
     STAFF = "staff"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class SamePeriodEnumeration(Enum):
+class SamePeriodEnumeration(StrEnum):
     ANY = "any"
     SAME_PERIOD = "samePeriod"
     WITHIN_SAME_PERIOD = "withinSamePeriod"

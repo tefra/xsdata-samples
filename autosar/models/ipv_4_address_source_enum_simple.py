@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class Ipv4AddressSourceEnumSimple(Enum):
+class Ipv4AddressSourceEnumSimple(StrEnum):
     """
     :cvar AUTO_IP: AutoIP is used to dynamically assign IP addresses at
         device startup.

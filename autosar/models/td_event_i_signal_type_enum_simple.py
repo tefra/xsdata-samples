@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventISignalTypeEnumSimple(Enum):
+class TdEventISignalTypeEnumSimple(StrEnum):
     """
     :cvar I_SIGNAL_AVAILABLE_FOR_RTE: A point in time, where the COM
         module makes the contained signal / signal group available for

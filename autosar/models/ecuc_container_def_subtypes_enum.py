@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EcucContainerDefSubtypesEnum(Enum):
+class EcucContainerDefSubtypesEnum(StrEnum):
     ECUC_CHOICE_CONTAINER_DEF = "ECUC-CHOICE-CONTAINER-DEF"
     ECUC_CONTAINER_DEF = "ECUC-CONTAINER-DEF"
     ECUC_PARAM_CONF_CONTAINER_DEF = "ECUC-PARAM-CONF-CONTAINER-DEF"

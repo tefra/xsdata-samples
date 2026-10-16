@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class UicProductCharacteristicEnumeration(Enum):
+class UicProductCharacteristicEnumeration(StrEnum):
     TARIFF_COMMUN_VOYAGEURS = "tariffCommunVoyageurs"
     ALL_INCLUSIVE_PRICE = "allInclusivePrice"
     EAST_WEST_TARIFF = "eastWestTariff"

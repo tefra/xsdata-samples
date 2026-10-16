@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticProcessingStyleEnumSimple(Enum):
+class DiagnosticProcessingStyleEnumSimple(StrEnum):
     """
     :cvar PROCESSING_STYLE_ASYNCHRONOUS: The software-component
         processes the request in background but still the Dcm has to

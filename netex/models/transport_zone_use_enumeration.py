@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class TransportZoneUseEnumeration(Enum):
+class TransportZoneUseEnumeration(StrEnum):
     ALL_USES_ALLOWED = "allUsesAllowed"
     FORBIDDEN_ZONE = "forbiddenZone"
     CANNOT_PICK_UP_AND_DROP_OFF_IN_SAME_ZONE = (

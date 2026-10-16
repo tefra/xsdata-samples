@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CppImplementationDataTypeContextTargetSubtypesEnum(Enum):
+class CppImplementationDataTypeContextTargetSubtypesEnum(StrEnum):
     CPP_IMPLEMENTATION_DATA_TYPE = "CPP-IMPLEMENTATION-DATA-TYPE"
     CPP_IMPLEMENTATION_DATA_TYPE_CONTEXT_TARGET = (
         "CPP-IMPLEMENTATION-DATA-TYPE-CONTEXT-TARGET"

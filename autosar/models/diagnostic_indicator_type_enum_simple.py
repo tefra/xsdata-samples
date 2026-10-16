@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticIndicatorTypeEnumSimple(Enum):
+class DiagnosticIndicatorTypeEnumSimple(StrEnum):
     """
     :cvar AMBER_WARNING: Amber Warning Lamp
     :cvar MALFUNCTION: Malfunction Indicator Lamp

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class HandleTimeoutEnumSimple(Enum):
+class HandleTimeoutEnumSimple(StrEnum):
     """
     :cvar NONE: If set to none no replacement shall take place.
     :cvar REPLACE: If set to replace, the replacement value shall be the

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.ncbi.nlm.nih.gov/JATS1"
 
 
-class QuestionQuestionResponseType(Enum):
+class QuestionQuestionResponseType(StrEnum):
     ESSAY = "essay"
     FILL_IN_THE_BLANK = "fill-in-the-blank"
     MULTI_SELECT = "multi-select"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class BswInterruptCategorySimple(Enum):
+class BswInterruptCategorySimple(StrEnum):
     """
     :cvar CAT_1: Cat1 interrupt routines are not controlled by the OS
         and are only allowed to make a very limited selection of OS

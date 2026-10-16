@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 
 from xcbl.models.sourcing_result_response import (
     GeneralNote,
@@ -397,7 +397,7 @@ class LineItemNote:
     value: str = field()
 
 
-class LineItemNumberReferenceLineItemNumTypeCoded(Enum):
+class LineItemNumberReferenceLineItemNumTypeCoded(StrEnum):
     BUYER = "Buyer"
     SELLER = "Seller"
 
@@ -460,7 +460,7 @@ class MonetaryLimitValue:
     value: str = field()
 
 
-class MonetaryLimitSignificanceCoded(Enum):
+class MonetaryLimitSignificanceCoded(StrEnum):
     OTHER = "Other"
     APPROXIMATELY = "Approximately"
     EQUAL_TO = "EqualTo"
@@ -615,7 +615,7 @@ class QuantityQualifierCodedOther:
     value: str = field()
 
 
-class QuantityValueConditionsCoded(Enum):
+class QuantityValueConditionsCoded(StrEnum):
     OTHER = "Other"
     WHERE_AIR_EQUALS1 = "WhereAirEquals1"
     WHERE_BUTYL_ACETATE_EQUALS1 = "WhereButylAcetateEquals1"
@@ -732,7 +732,7 @@ class QuantityValueConditionsCoded(Enum):
     NON_TIME_RELATED_DEMAND = "NonTimeRelatedDemand"
 
 
-class QuantityValueSignificanceCoded(Enum):
+class QuantityValueSignificanceCoded(StrEnum):
     OTHER = "Other"
     APPROXIMATELY = "Approximately"
     EQUAL_TO = "EqualTo"

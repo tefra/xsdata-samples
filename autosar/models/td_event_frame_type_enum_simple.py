@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventFrameTypeEnumSimple(Enum):
+class TdEventFrameTypeEnumSimple(StrEnum):
     """
     :cvar FRAME_QUEUED_FOR_TRANSMISSION: A point in time where the frame
         containing the named signal / I-PDU is queued for transmission

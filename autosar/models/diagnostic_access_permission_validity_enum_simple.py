@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticAccessPermissionValidityEnumSimple(Enum):
+class DiagnosticAccessPermissionValidityEnumSimple(StrEnum):
     """
     :cvar ACCES_PERRMISSION_SERVICE_CLASS: This means that the
         DiagnosticServiceClass is in charge to define the

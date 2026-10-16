@@ -1,13 +1,13 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = (
     "http://generali.com/enterprise-services/core/gbo/common/headers/v1"
 )
 
 
-class CacheOptions(Enum):
+class CacheOptions(StrEnum):
     """
     :cvar YES: <description xmlns="">Use cache during queries by default
         (code may override this).</description>

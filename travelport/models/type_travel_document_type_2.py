@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-class TypeTravelDocumentType2(Enum):
+class TypeTravelDocumentType2(StrEnum):
     """
     Specify the type of Travel Document.
     """

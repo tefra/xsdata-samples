@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DataExchangePointKindSimple(Enum):
+class DataExchangePointKindSimple(StrEnum):
     """
     :cvar AGREED: the data exchange point description represents the
         agreed data exchange point that should be used during data

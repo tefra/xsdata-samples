@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 
-class CollationAlgorithmCodeType(Enum):
+class CollationAlgorithmCodeType(StrEnum):
     """
     The collation (sort) algorithm to use in the sorting to the result set.
     """

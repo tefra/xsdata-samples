@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EthernetMacLayerTypeEnumSimple(Enum):
+class EthernetMacLayerTypeEnumSimple(StrEnum):
     """
     :cvar X_MII: Mac layer interface (data) bandwith class 100Mbit/s and
         10Mbit/s (e.g. RMII, RvMII, SMII, RvMII)

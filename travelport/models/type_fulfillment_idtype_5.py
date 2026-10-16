@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-class TypeFulfillmentIdtype5(Enum):
+class TypeFulfillmentIdtype5(StrEnum):
     """
     IdentificationType to define how the customer will identify himself
     when collecting the ticket.

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-class ColorType(Enum):
+class ColorType(StrEnum):
     COLOR = "COLOR"
     BLACK_AND_WHITE = "BLACK AND WHITE"
     BLACK_AND_WHITE_AND_COLOR = "BLACK AND WHITE AND COLOR"

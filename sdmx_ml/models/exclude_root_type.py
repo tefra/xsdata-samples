@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
-class ExcludeRootType(Enum):
+class ExcludeRootType(StrEnum):
     """
     ExcludeRootType is a single enumerated value that indciates that child
     values should be included, but that the actual root should not.

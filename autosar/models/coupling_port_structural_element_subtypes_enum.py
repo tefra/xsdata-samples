@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CouplingPortStructuralElementSubtypesEnum(Enum):
+class CouplingPortStructuralElementSubtypesEnum(StrEnum):
     COUPLING_PORT_FIFO = "COUPLING-PORT-FIFO"
     COUPLING_PORT_SCHEDULER = "COUPLING-PORT-SCHEDULER"
     COUPLING_PORT_SHAPER = "COUPLING-PORT-SHAPER"

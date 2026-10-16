@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-class DescriptionLanguage(Enum):
+class DescriptionLanguage(StrEnum):
     AA = "aa"
     AB = "ab"
     AE = "ae"

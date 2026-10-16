@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class GeneralInstructionToRoadUsersTypeEnum(Enum):
+class GeneralInstructionToRoadUsersTypeEnum(StrEnum):
     """
     General instructions that may be issued to road users (specifically
     drivers and sometimes passengers) by an operator or operational system

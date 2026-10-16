@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ArraySizeHandlingEnumSimple(Enum):
+class ArraySizeHandlingEnumSimple(StrEnum):
     """
     :cvar ALL_INDICES_DIFFERENT_ARRAY_SIZE: All elements of the variable
         size array may have different sizes.

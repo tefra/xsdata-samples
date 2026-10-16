@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ResumePositionSimple(Enum):
+class ResumePositionSimple(StrEnum):
     """
     :cvar CONTINUE_AT_IT_POSITION: Continue at IT Point.
     :cvar START_FROM_BEGINNING: Start from the beginning

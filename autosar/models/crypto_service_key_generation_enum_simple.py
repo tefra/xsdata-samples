@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CryptoServiceKeyGenerationEnumSimple(Enum):
+class CryptoServiceKeyGenerationEnumSimple(StrEnum):
     """
     :cvar KEY_DERIVATION: This means that the crypto key is created by
         derivation from a master key.

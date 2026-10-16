@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EcucAffectionEnumSimple(Enum):
+class EcucAffectionEnumSimple(StrEnum):
     """
     :cvar LT_AFFECTS_PB: A link time parameter affecting one or several
         post-build time parameter(s).

@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class J1939NmNodeSubtypesEnum(Enum):
+class J1939NmNodeSubtypesEnum(StrEnum):
     J_1939_NM_NODE = "J-1939-NM-NODE"

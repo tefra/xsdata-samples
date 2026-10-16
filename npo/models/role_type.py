@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:media:2009"
 
 
-class RoleType(Enum):
+class RoleType(StrEnum):
     DIRECTOR = "DIRECTOR"
     CHIEF_EDITOR = "CHIEF_EDITOR"
     EDITOR = "EDITOR"

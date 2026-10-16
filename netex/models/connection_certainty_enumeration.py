@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ConnectionCertaintyEnumeration(Enum):
+class ConnectionCertaintyEnumeration(StrEnum):
     GUARANTEED = "guaranteed"
     NORMALLY_GUARANTEED = "normallyGuaranteed"
     NOT_GUARANTEED = "notGuaranteed"

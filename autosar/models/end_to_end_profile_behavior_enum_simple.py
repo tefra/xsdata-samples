@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EndToEndProfileBehaviorEnumSimple(Enum):
+class EndToEndProfileBehaviorEnumSimple(StrEnum):
     """
     :cvar PRE_R_4_2: Check has the legacy behavior, before AUTOSAR
         Release 4.2.

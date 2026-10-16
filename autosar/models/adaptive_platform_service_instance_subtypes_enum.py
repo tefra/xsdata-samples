@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AdaptivePlatformServiceInstanceSubtypesEnum(Enum):
+class AdaptivePlatformServiceInstanceSubtypesEnum(StrEnum):
     ADAPTIVE_PLATFORM_SERVICE_INSTANCE = "ADAPTIVE-PLATFORM-SERVICE-INSTANCE"
     DDS_PROVIDED_SERVICE_INSTANCE = "DDS-PROVIDED-SERVICE-INSTANCE"
     DDS_REQUIRED_SERVICE_INSTANCE = "DDS-REQUIRED-SERVICE-INSTANCE"

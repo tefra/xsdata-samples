@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class GradientEnumeration(Enum):
+class GradientEnumeration(StrEnum):
     VERY_STEEP = "verySteep"
     STEEP = "steep"
     MEDIUM = "medium"

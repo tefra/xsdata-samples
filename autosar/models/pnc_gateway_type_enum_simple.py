@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class PncGatewayTypeEnumSimple(Enum):
+class PncGatewayTypeEnumSimple(StrEnum):
     """
     :cvar ACTIVE: The active PncGateway functionality shall be performed
     :cvar NONE: No PncGateway functionality shall be performed

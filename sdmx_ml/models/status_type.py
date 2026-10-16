@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
-class StatusType(Enum):
+class StatusType(StrEnum):
     """
     StatusType provides an enumeration of values that detail the status of
     queries or requests.

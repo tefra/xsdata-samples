@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class ParkingConditionsEnum(Enum):
+class ParkingConditionsEnum(StrEnum):
     """
     Defines if normal parking conditions are suspended or special parking
     conditions are in force.

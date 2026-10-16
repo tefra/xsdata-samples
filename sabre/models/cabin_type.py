@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-class CabinType(Enum):
+class CabinType(StrEnum):
     """
     A cabin is either Premium First (P), First (F), Premium Business (J),
     Business (C), Premium Economy (S) or Economy (Y).

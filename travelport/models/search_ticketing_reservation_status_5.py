@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-class SearchTicketingReservationStatus5(Enum):
+class SearchTicketingReservationStatus5(StrEnum):
     ON_HOLD = "OnHold"
     SET_FOR_TICKETING = "SetForTicketing"
     BOTH = "Both"

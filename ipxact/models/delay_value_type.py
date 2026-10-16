@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-class DelayValueType(Enum):
+class DelayValueType(StrEnum):
     """
     Indicates the type of delay value - minimum or maximum delay.
     """

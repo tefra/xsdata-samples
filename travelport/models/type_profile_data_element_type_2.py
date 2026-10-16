@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-class TypeProfileDataElementType2(Enum):
+class TypeProfileDataElementType2(StrEnum):
     """
     Specify which fixed field type this field refers to.
     """

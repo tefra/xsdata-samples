@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-class PageSortTypeEnum(Enum):
+class PageSortTypeEnum(StrEnum):
     SORT_DATE = "sortDate"
     LAST_MODIFIED = "lastModified"
     LAST_PUBLISHED = "lastPublished"

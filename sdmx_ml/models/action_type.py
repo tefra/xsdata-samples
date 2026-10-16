@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
-class ActionType(Enum):
+class ActionType(StrEnum):
     """
     ActionType provides a list of actions, describing the intention of the
     data transmission from the sender's side.

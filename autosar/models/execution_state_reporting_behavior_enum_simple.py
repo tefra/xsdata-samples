@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ExecutionStateReportingBehaviorEnumSimple(Enum):
+class ExecutionStateReportingBehaviorEnumSimple(StrEnum):
     """
     :cvar DOES_NOT_REPORT_EXECUTION_STATE: The Executable shall not
         report its execution state to the Execution Management.

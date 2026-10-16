@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CalprmAxisCategoryEnumSimple(Enum):
+class CalprmAxisCategoryEnumSimple(StrEnum):
     """
     :cvar COM_AXIS: COM-AXIS is equal to an STD_AXIS, the difference is,
         that a COM-AXIS is an shared axis, that means this axis can be

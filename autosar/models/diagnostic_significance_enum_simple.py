@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticSignificanceEnumSimple(Enum):
+class DiagnosticSignificanceEnumSimple(StrEnum):
     """
     :cvar FAULT: Failure, which affects the component/ECU itself.
     :cvar OCCURENCE: Issue, which indicates additional information

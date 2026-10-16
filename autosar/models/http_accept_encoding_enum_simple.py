@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class HttpAcceptEncodingEnumSimple(Enum):
+class HttpAcceptEncodingEnumSimple(StrEnum):
     """
     :cvar DEFLATE: Use deflate compression.
     :cvar GZIP: Use gzip pcompression.

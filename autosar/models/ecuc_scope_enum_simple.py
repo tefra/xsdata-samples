@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EcucScopeEnumSimple(Enum):
+class EcucScopeEnumSimple(StrEnum):
     """
     :cvar ECU: An element may be shared with other modules.
     :cvar LOCAL: An element is only be applicable for the module it is

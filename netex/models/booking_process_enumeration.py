@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class BookingProcessEnumeration(Enum):
+class BookingProcessEnumeration(StrEnum):
     PRODUCT_NOT_AVAILABLE = "productNotAvailable"
     PRODUCT_NOT_BOOKABLE = "productNotBookable"
     BOOKABLE_THROUGH_INTERNATIONAL_SYSTEM = (

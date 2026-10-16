@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v34_0"
 
 
-class EmailNotificationRecipients5(Enum):
+class EmailNotificationRecipients5(StrEnum):
     ALL = "All"
     DEFAULT = "Default"
     SPECIFIC = "Specific"

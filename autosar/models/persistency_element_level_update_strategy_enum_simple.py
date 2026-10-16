@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class PersistencyElementLevelUpdateStrategyEnumSimple(Enum):
+class PersistencyElementLevelUpdateStrategyEnumSimple(StrEnum):
     """
     :cvar DELETE: The update strategy is to delete the value of the
         respective data item.

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class CompanionRelationshipEnumeration(Enum):
+class CompanionRelationshipEnumeration(StrEnum):
     ANYONE = "anyone"
     PARENT = "parent"
     GRANDPARENT = "grandparent"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticTypeOfDtcSupportedEnumSimple(Enum):
+class DiagnosticTypeOfDtcSupportedEnumSimple(StrEnum):
     """
     :cvar ISO_11992_4: ISO11992-4 DTC format
     :cvar ISO_14229_1: ISO14229-1 DTC format (3 byte format)

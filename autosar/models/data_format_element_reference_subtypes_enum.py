@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DataFormatElementReferenceSubtypesEnum(Enum):
+class DataFormatElementReferenceSubtypesEnum(StrEnum):
     ABSTRACT_CLASS_TAILORING = "ABSTRACT-CLASS-TAILORING"
     AGGREGATION_TAILORING = "AGGREGATION-TAILORING"
     ATTRIBUTE_TAILORING = "ATTRIBUTE-TAILORING"

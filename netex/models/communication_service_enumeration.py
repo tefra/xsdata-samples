@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class CommunicationServiceEnumeration(Enum):
+class CommunicationServiceEnumeration(StrEnum):
     FREE_WIFI = "freeWifi"
     PUBLIC_WIFI = "publicWifi"
     PHONE = "phone"

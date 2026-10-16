@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class IntervalTypeEnumSimple(Enum):
+class IntervalTypeEnumSimple(StrEnum):
     """
     :cvar CLOSED: The area is limited by the value given. The value
         itself is included.

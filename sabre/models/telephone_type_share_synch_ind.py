@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-class TelephoneTypeShareSynchInd(Enum):
+class TelephoneTypeShareSynchInd(StrEnum):
     """
     value="Inherit" Permission for sharing data for synchronization of
     information held by other travel service providers.

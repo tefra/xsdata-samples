@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class FlexrayNmScheduleVariantSimple(Enum):
+class FlexrayNmScheduleVariantSimple(StrEnum):
     """
     :cvar SCHEDULE_VARIANT_1: NM-Vote and NM Data transmitted within one
         PDU in static segment. The NM-Vote has to be realized as

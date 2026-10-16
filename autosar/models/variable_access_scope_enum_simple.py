@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class VariableAccessScopeEnumSimple(Enum):
+class VariableAccessScopeEnumSimple(StrEnum):
     """
     :cvar COMMUNICATION_INTER_ECU: This case is foreseen to express that
         the corresponding communication shall be considered inter-ECU,

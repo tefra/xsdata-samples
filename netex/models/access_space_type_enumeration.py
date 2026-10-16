@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class AccessSpaceTypeEnumeration(Enum):
+class AccessSpaceTypeEnumeration(StrEnum):
     CONCOURSE = "concourse"
     BOOKING_HALL = "bookingHall"
     FORECOURT = "forecourt"

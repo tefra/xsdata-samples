@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class FilterDebouncingEnumSimple(Enum):
+class FilterDebouncingEnumSimple(StrEnum):
     """
     :cvar DEBOUNCE_DATA: The signal is a mean value
     :cvar RAW_DATA: Means that no modification of the signal has been

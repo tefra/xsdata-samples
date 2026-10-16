@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class PreassignedFareProductEnumeration(Enum):
+class PreassignedFareProductEnumeration(StrEnum):
     SINGLE_TRIP = "singleTrip"
     SHORT_TRIP = "shortTrip"
     TIME_LIMITED_SINGLE_TRIP = "timeLimitedSingleTrip"

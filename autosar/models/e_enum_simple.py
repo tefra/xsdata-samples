@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EEnumSimple(Enum):
+class EEnumSimple(StrEnum):
     """
     :cvar BOLD: The emphasis is preferably represented in boldface font.
     :cvar BOLDITALIC: The emphasis is preferably represented in boldface

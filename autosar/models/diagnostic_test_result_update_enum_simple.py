@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticTestResultUpdateEnumSimple(Enum):
+class DiagnosticTestResultUpdateEnumSimple(StrEnum):
     """
     :cvar ALWAYS: Any DTR result reported by the monitor is used by the
         Dem.

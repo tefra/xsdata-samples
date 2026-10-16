@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-class RequestPricingSourceType(Enum):
+class RequestPricingSourceType(StrEnum):
     """
     It can be used to indicate whether the fare is public or private.
     """

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class LinFrameSubtypesEnum(Enum):
+class LinFrameSubtypesEnum(StrEnum):
     LIN_EVENT_TRIGGERED_FRAME = "LIN-EVENT-TRIGGERED-FRAME"
     LIN_FRAME = "LIN-FRAME"
     LIN_SPORADIC_FRAME = "LIN-SPORADIC-FRAME"

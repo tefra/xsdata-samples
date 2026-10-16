@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DataTransformationErrorHandlingEnumSimple(Enum):
+class DataTransformationErrorHandlingEnumSimple(StrEnum):
     """
     :cvar NO_TRANSFORMER_ERROR_HANDLING: A runnable does not handle
         transformer errors.

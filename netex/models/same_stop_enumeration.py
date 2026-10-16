@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class SameStopEnumeration(Enum):
+class SameStopEnumeration(StrEnum):
     ANY = "any"
     SAME_AS_ORIGIN = "sameAsOrigin"
     SAME_AS_DESTINATION = "sameAsDestination"

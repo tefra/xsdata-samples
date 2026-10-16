@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ExchangableToEnumeration(Enum):
+class ExchangableToEnumeration(StrEnum):
     ANY_PRODUCT = "anyProduct"
     SAME_PRODUCT_SAME_DAY = "sameProductSameDay"
     SAME_PRODUCT_ANY_DAY = "sameProductAnyDay"

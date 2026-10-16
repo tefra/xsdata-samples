@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class MaxCommModeEnumSimple(Enum):
+class MaxCommModeEnumSimple(StrEnum):
     """
     :cvar FULL: Full communication is requested.
     :cvar NONE: No communication is requested.

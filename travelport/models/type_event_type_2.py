@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v32_0"
 
 
-class TypeEventType2(Enum):
+class TypeEventType2(StrEnum):
     """
     The various reservation events (book, cancel, void, etc).
     """

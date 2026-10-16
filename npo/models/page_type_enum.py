@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:pages:2013"
 
 
-class PageTypeEnum(Enum):
+class PageTypeEnum(StrEnum):
     ARTICLE = "ARTICLE"
     SPECIAL = "SPECIAL"
     HOME = "HOME"

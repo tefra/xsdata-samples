@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ProcessDesignToMachineDesignMappingSubtypesEnum(Enum):
+class ProcessDesignToMachineDesignMappingSubtypesEnum(StrEnum):
     PROCESS_DESIGN_TO_MACHINE_DESIGN_MAPPING = (
         "PROCESS-DESIGN-TO-MACHINE-DESIGN-MAPPING"
     )

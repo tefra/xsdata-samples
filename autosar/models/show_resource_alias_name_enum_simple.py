@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ShowResourceAliasNameEnumSimple(Enum):
+class ShowResourceAliasNameEnumSimple(StrEnum):
     """
     :cvar NO_SHOW_ALIAS_NAME: This indicates that alias names of the
         referenced object shall '''not''' be rendered at the place of

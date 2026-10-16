@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticStoreEventSupportEnumSimple(Enum):
+class DiagnosticStoreEventSupportEnumSimple(StrEnum):
     """
     :cvar ALL: The server supports both, storing and not storing the
         event.

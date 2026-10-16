@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class VehicleUsage2Enum(Enum):
+class VehicleUsage2Enum(StrEnum):
     """
     Vehicle usage types which are currently not supported in
     vehicleUsageType.

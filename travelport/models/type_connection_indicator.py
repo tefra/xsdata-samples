@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/air_v52_0"
 
 
-class TypeConnectionIndicator(Enum):
+class TypeConnectionIndicator(StrEnum):
     """
     Types of connection indicator : AvailabilityAndPricing : Specified
     availability and pricing connection; TurnAround : Specified turn

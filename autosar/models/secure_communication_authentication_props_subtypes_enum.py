@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SecureCommunicationAuthenticationPropsSubtypesEnum(Enum):
+class SecureCommunicationAuthenticationPropsSubtypesEnum(StrEnum):
     SECURE_COMMUNICATION_AUTHENTICATION_PROPS = (
         "SECURE-COMMUNICATION-AUTHENTICATION-PROPS"
     )

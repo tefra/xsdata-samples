@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-class MediaSortTypeEnum(Enum):
+class MediaSortTypeEnum(StrEnum):
     TITLE = "title"
     SORT_DATE = "sortDate"
     PUBLISH_DATE = "publishDate"

@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:vpro:api:2013"
 
 
-class OrderTypeEnum(Enum):
+class OrderTypeEnum(StrEnum):
     ASC = "ASC"
     DESC = "DESC"

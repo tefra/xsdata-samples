@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class GrantSubtypesEnum(Enum):
+class GrantSubtypesEnum(StrEnum):
     COM_EVENT_GRANT = "COM-EVENT-GRANT"
     COM_FIELD_GRANT = "COM-FIELD-GRANT"
     COM_FIND_SERVICE_GRANT = "COM-FIND-SERVICE-GRANT"

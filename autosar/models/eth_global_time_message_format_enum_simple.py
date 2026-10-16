@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EthGlobalTimeMessageFormatEnumSimple(Enum):
+class EthGlobalTimeMessageFormatEnumSimple(StrEnum):
     """
     :cvar IEEE802_1_AS: Message format according to IEEE 802.1AS
         standard.

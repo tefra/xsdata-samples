@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class FrameEnumSimple(Enum):
+class FrameEnumSimple(StrEnum):
     """
     :cvar ALL: Borders all around the table
     :cvar BOTTOM: Border at the bottom of the table

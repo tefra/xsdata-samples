@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class PlugTypeEnumeration(Enum):
+class PlugTypeEnumeration(StrEnum):
     UNDEFINED = "undefined"
     TYPE1 = "type1"
     TYPE2 = "type2"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SwCalibrationAccessEnumSimple(Enum):
+class SwCalibrationAccessEnumSimple(StrEnum):
     """
     :cvar NOT_ACCESSIBLE: The element will not be accessible via MCD
         tools, i.e. will not appear in the ASAP file.

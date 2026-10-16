@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class MllTip(Enum):
+class MllTip(StrEnum):
     KOM = "kom"
     MEZ = "mez"
     FIN = "fin"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class UdpCollectionTriggerEnumSimple(Enum):
+class UdpCollectionTriggerEnumSimple(StrEnum):
     """
     :cvar ALWAYS: ServiceInterface element will trigger the transmission
         of the data.

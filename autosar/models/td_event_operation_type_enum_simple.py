@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventOperationTypeEnumSimple(Enum):
+class TdEventOperationTypeEnumSimple(StrEnum):
     """
     :cvar OPERATION_CALL_RECEIVED: A point in time where the call of the
         referenced operation is received by the server SWC.

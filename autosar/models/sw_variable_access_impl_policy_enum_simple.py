@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SwVariableAccessImplPolicyEnumSimple(Enum):
+class SwVariableAccessImplPolicyEnumSimple(StrEnum):
     """
     :cvar DIRECT: Messages with DIRECT access are read but ignored by
         data consistency tool. Data consistency is not guaranteed.

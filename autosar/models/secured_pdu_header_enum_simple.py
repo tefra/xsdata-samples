@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SecuredPduHeaderEnumSimple(Enum):
+class SecuredPduHeaderEnumSimple(StrEnum):
     """
     :cvar NO_HEADER: No header included in the SecuredPdu.
     :cvar SECURED_PDU_HEADER_08_BIT: 8 Bit Secured I-PDU Header included

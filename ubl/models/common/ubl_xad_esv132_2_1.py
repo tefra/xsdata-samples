@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 from typing import Any
 
 from xsdata.models.datatype import XmlDateTime
@@ -141,7 +141,7 @@ class IntegerListType:
     )
 
 
-class QualifierType(Enum):
+class QualifierType(StrEnum):
     OIDAS_URI = "OIDAsURI"
     OIDAS_URN = "OIDAsURN"
 

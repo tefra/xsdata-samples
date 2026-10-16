@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class TypeOfInfoLinkEnumeration(Enum):
+class TypeOfInfoLinkEnumeration(StrEnum):
     CONTACT = "contact"
     RESOURCE = "resource"
     INFO = "info"

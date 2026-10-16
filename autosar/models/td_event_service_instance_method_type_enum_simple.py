@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TdEventServiceInstanceMethodTypeEnumSimple(Enum):
+class TdEventServiceInstanceMethodTypeEnumSimple(StrEnum):
     """
     :cvar ADAPTIVE_METHOD_CALL_RECEIVED: A point in time where a method
         call of a service is received through the service provider's

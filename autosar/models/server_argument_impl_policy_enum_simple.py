@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ServerArgumentImplPolicyEnumSimple(Enum):
+class ServerArgumentImplPolicyEnumSimple(StrEnum):
     """
     :cvar USE_ARGUMENT_TYPE: The argument type of the RunnableEntity is
         derived from the AutosarDataType of the ArgumentPrototype.

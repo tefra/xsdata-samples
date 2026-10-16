@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class QueueManagementEnumeration(Enum):
+class QueueManagementEnumeration(StrEnum):
     NONE = "none"
     MAZE = "maze"
     SEPARATE_LINES = "separateLines"

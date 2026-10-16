@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class LatencyConstraintTypeEnumSimple(Enum):
+class LatencyConstraintTypeEnumSimple(StrEnum):
     """
     :cvar AGE: In this case, the latency constraint is seen from the
         perspective of the response event of the associated event chain.

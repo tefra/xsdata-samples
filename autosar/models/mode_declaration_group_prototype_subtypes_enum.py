@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ModeDeclarationGroupPrototypeSubtypesEnum(Enum):
+class ModeDeclarationGroupPrototypeSubtypesEnum(StrEnum):
     MODE_DECLARATION_GROUP_PROTOTYPE = "MODE-DECLARATION-GROUP-PROTOTYPE"

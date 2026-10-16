@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class CurrencyEnum(Enum):
+class CurrencyEnum(StrEnum):
     """
     Three letter code defining the currency according to ISO 4217 (e.g.
 

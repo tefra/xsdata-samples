@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class EcuInstanceSubtypesEnum(Enum):
+class EcuInstanceSubtypesEnum(StrEnum):
     ECU_INSTANCE = "ECU-INSTANCE"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class StopTypeEnumeration(Enum):
+class StopTypeEnumeration(StrEnum):
     ONSTREET_BUS = "onstreetBus"
     ONSTREET_TRAM = "onstreetTram"
     AIRPORT = "airport"

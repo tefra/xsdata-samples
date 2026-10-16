@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/common_v38_0"
 
 
-class TypeResidency6(Enum):
+class TypeResidency6(StrEnum):
     """
     The passenger residency type.Residence Type can be Employee, National
     or Resident.

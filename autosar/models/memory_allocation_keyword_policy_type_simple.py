@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class MemoryAllocationKeywordPolicyTypeSimple(Enum):
+class MemoryAllocationKeywordPolicyTypeSimple(StrEnum):
     """
     :cvar ADDR_METHOD_SHORT_NAME: The MemorySection shortNames of
         referring MemorySections and therefore the belonging Memory

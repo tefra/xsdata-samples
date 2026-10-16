@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class AccessibilityInfoFacilityEnumeration(Enum):
+class AccessibilityInfoFacilityEnumeration(StrEnum):
     AUDIO_INFORMATION = "audioInformation"
     AUDIO_FOR_HEARING_IMPAIRED = "audioForHearingImpaired"
     VISUAL_DISPLAYS = "visualDisplays"

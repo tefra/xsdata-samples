@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 from typing import ForwardRef
 
 __NAMESPACE__ = "urn:hl7-org:v3"
@@ -13,7 +13,7 @@ class StrucDocBr:
         name = "StrucDoc.Br"
 
 
-class StrucDocColAlign(Enum):
+class StrucDocColAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -21,14 +21,14 @@ class StrucDocColAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocColValign(Enum):
+class StrucDocColValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class StrucDocColgroupAlign(Enum):
+class StrucDocColgroupAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -36,14 +36,14 @@ class StrucDocColgroupAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocColgroupValign(Enum):
+class StrucDocColgroupValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class StrucDocContentRevised(Enum):
+class StrucDocContentRevised(StrEnum):
     INSERT = "insert"
     DELETE = "delete"
 
@@ -82,7 +82,7 @@ class StrucDocFootnoteRef:
     )
 
 
-class StrucDocListListType(Enum):
+class StrucDocListListType(StrEnum):
     ORDERED = "ordered"
     UNORDERED = "unordered"
 
@@ -117,7 +117,7 @@ class StrucDocSup:
     )
 
 
-class StrucDocTableFrame(Enum):
+class StrucDocTableFrame(StrEnum):
     VOID = "void"
     ABOVE = "above"
     BELOW = "below"
@@ -129,7 +129,7 @@ class StrucDocTableFrame(Enum):
     BORDER = "border"
 
 
-class StrucDocTableRules(Enum):
+class StrucDocTableRules(StrEnum):
     NONE = "none"
     GROUPS = "groups"
     ROWS = "rows"
@@ -137,7 +137,7 @@ class StrucDocTableRules(Enum):
     ALL = "all"
 
 
-class StrucDocTbodyAlign(Enum):
+class StrucDocTbodyAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -145,14 +145,14 @@ class StrucDocTbodyAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocTbodyValign(Enum):
+class StrucDocTbodyValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class StrucDocTdAlign(Enum):
+class StrucDocTdAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -160,21 +160,21 @@ class StrucDocTdAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocTdScope(Enum):
+class StrucDocTdScope(StrEnum):
     ROW = "row"
     COL = "col"
     ROWGROUP = "rowgroup"
     COLGROUP = "colgroup"
 
 
-class StrucDocTdValign(Enum):
+class StrucDocTdValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class StrucDocTfootAlign(Enum):
+class StrucDocTfootAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -182,14 +182,14 @@ class StrucDocTfootAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocTfootValign(Enum):
+class StrucDocTfootValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class StrucDocThAlign(Enum):
+class StrucDocThAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -197,21 +197,21 @@ class StrucDocThAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocThScope(Enum):
+class StrucDocThScope(StrEnum):
     ROW = "row"
     COL = "col"
     ROWGROUP = "rowgroup"
     COLGROUP = "colgroup"
 
 
-class StrucDocThValign(Enum):
+class StrucDocThValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class StrucDocTheadAlign(Enum):
+class StrucDocTheadAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -219,14 +219,14 @@ class StrucDocTheadAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocTheadValign(Enum):
+class StrucDocTheadValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"
     BASELINE = "baseline"
 
 
-class StrucDocTrAlign(Enum):
+class StrucDocTrAlign(StrEnum):
     LEFT = "left"
     CENTER = "center"
     RIGHT = "right"
@@ -234,7 +234,7 @@ class StrucDocTrAlign(Enum):
     CHAR = "char"
 
 
-class StrucDocTrValign(Enum):
+class StrucDocTrValign(StrEnum):
     TOP = "top"
     MIDDLE = "middle"
     BOTTOM = "bottom"

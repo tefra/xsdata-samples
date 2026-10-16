@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.crossref.org/relations.xsd"
 
 
-class IntraWorkRelationRelationshipType(Enum):
+class IntraWorkRelationRelationshipType(StrEnum):
     IS_TRANSLATION_OF = "isTranslationOf"
     HAS_TRANSLATION = "hasTranslation"
     IS_PREPRINT_OF = "isPreprintOf"

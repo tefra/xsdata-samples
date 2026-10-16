@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class LimitedUseTypeEnumeration(Enum):
+class LimitedUseTypeEnumeration(StrEnum):
     INTERCHANGE_ONLY = "interchangeOnly"
     NO_DIRECT_ROAD_ACCESS = "noDirectRoadAccess"
     LONG_WALK_TO_ACCESS = "longWalkToAccess"

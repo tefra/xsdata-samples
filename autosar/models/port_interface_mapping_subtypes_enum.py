@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class PortInterfaceMappingSubtypesEnum(Enum):
+class PortInterfaceMappingSubtypesEnum(StrEnum):
     CLIENT_SERVER_INTERFACE_MAPPING = "CLIENT-SERVER-INTERFACE-MAPPING"
     MODE_INTERFACE_MAPPING = "MODE-INTERFACE-MAPPING"
     PORT_INTERFACE_MAPPING = "PORT-INTERFACE-MAPPING"

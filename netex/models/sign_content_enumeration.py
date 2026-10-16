@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class SignContentEnumeration(Enum):
+class SignContentEnumeration(StrEnum):
     ENTRANCE = "entrance"
     EXIT = "exit"
     EMERGENCY_EXIT = "emergencyExit"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ChargingMomentEnumeration(Enum):
+class ChargingMomentEnumeration(StrEnum):
     BEFORE_TRAVEL = "beforeTravel"
     ON_START_OF_TRAVEL = "onStartOfTravel"
     BEFORE_END_OF_TRAVEL = "beforeEndOfTravel"

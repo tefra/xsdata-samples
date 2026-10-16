@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticObdSupportEnumSimple(Enum):
+class DiagnosticObdSupportEnumSimple(StrEnum):
     """
     :cvar MASTER_ECU: This represent the role "master ECU".
     :cvar NO_OBD_SUPPORT: This represents the ability to explicitly

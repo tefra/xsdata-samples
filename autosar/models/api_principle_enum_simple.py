@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ApiPrincipleEnumSimple(Enum):
+class ApiPrincipleEnumSimple(StrEnum):
     """
     :cvar COMMON: The Rte or SchM API is provided for the whole software
         component / BSW Module

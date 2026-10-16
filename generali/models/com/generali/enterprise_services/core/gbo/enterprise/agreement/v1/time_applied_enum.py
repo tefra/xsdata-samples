@@ -1,13 +1,13 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = (
     "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1"
 )
 
 
-class TimeAppliedEnum(Enum):
+class TimeAppliedEnum(StrEnum):
     ON_RENEWAL = "OnRenewal"
     ON_EXPIRY = "OnExpiry"
     FIRST_INSTALMENT = "FirstInstalment"

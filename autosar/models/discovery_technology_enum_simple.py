@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiscoveryTechnologyEnumSimple(Enum):
+class DiscoveryTechnologyEnumSimple(StrEnum):
     """
     :cvar BONJOUR: Bonjour Service Discovery
     :cvar DLNA: DLNA UPnP Device Control Protocol Framework

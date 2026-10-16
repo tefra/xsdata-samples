@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofile_v37_0"
 
 
-class TypeMasked2(Enum):
+class TypeMasked2(StrEnum):
     """
     Defines whether the field data should be masked in messaging, and the
     masking pattern.

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AtpFeatureSubtypesEnum(Enum):
+class AtpFeatureSubtypesEnum(StrEnum):
     ABSTRACT_ACCESS_POINT = "ABSTRACT-ACCESS-POINT"
     ABSTRACT_IMPLEMENTATION_DATA_TYPE_ELEMENT = (
         "ABSTRACT-IMPLEMENTATION-DATA-TYPE-ELEMENT"

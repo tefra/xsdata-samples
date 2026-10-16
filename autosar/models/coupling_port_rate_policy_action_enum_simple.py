@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class CouplingPortRatePolicyActionEnumSimple(Enum):
+class CouplingPortRatePolicyActionEnumSimple(StrEnum):
     """
     :cvar BLOCK_SOURCE: If the rate policy is violated the CouplingPort
         this CouplingPortRatePolicy is defined on shall block all frames

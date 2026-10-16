@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class RxAcceptContainedIPduEnumSimple(Enum):
+class RxAcceptContainedIPduEnumSimple(StrEnum):
     """
     :cvar ACCEPT_ALL: No fixed set of containedIPdus is defined for
         reception, any known containedIPdu (based on headerId) shall be

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
-class DataType(Enum):
+class DataType(StrEnum):
     """
     DataTypeType provides an enumerated list of the types of data formats
     allowed as the for the representation of an object.

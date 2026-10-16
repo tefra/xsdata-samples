@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ContainerIPduHeaderTypeEnumSimple(Enum):
+class ContainerIPduHeaderTypeEnumSimple(StrEnum):
     """
     :cvar LONG_HEADER: Header size is 64 bit: * Header Id 32 bit * Dlc
         32 bit

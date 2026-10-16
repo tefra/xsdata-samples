@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TimeSyncTechnologyEnumSimple(Enum):
+class TimeSyncTechnologyEnumSimple(StrEnum):
     """
     :cvar AVB_IEEE_802_1_AS: Ethernet AVB compliant IEEE802.1AS
         Precision Time Protocol

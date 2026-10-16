@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class AccessControlEnumSimple(Enum):
+class AccessControlEnumSimple(StrEnum):
     """
     :cvar CUSTOM: The access restriction to the resource is defined by a
         non-AUTOSAR process.

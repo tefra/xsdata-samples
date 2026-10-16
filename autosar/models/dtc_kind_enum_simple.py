@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DtcKindEnumSimple(Enum):
+class DtcKindEnumSimple(StrEnum):
     """
     :cvar EMISSION_RELATED_DTC: This indicates that the monitor reports
         a OBD-relevant malfunction.

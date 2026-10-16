@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class BindingTimeEnumSimple(Enum):
+class BindingTimeEnumSimple(StrEnum):
     """
     :cvar CODE_GENERATION_TIME: * Coding by hand, based on requirements
         document. * Tool based code generation, e.g. from a model. * The

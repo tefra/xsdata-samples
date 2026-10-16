@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class SeriesTypeEnumeration(Enum):
+class SeriesTypeEnumeration(StrEnum):
     STATION_TO_STATION = "stationToStation"
     ORIGIN_TO_BORDER = "originToBorder"
     BORDER_TO_DESTINATION = "borderToDestination"

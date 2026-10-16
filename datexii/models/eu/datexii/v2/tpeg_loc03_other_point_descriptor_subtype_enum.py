@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class TpegLoc03OtherPointDescriptorSubtypeEnum(Enum):
+class TpegLoc03OtherPointDescriptorSubtypeEnum(StrEnum):
     """
     Descriptors other than junction names and road descriptors which can
     help to identify the location of points on the road network.

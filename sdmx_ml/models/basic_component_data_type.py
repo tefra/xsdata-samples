@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
-class BasicComponentDataType(Enum):
+class BasicComponentDataType(StrEnum):
     """
     BasicComponentDataType provides an enumerated list of the types of
     characters allowed in the textType attribute for all non-target object

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/hotel_v52_0"
 
 
-class CriteriaType(Enum):
+class CriteriaType(StrEnum):
     CORPORATE_DISCOUNT_ID = "CorporateDiscountID"
     PERMITTED_CHAINS = "PermittedChains"
     HOTEL_NAME = "HotelName"

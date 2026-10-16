@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import IntEnum
 
 __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 
-class AirItineraryPricingInfoTypeReissueExchange(Enum):
+class AirItineraryPricingInfoTypeReissueExchange(IntEnum):
     """
     Attributes:
         VALUE_1: Priced as Reissue

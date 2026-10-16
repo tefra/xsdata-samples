@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class LinearReferencingDirectionEnum(Enum):
+class LinearReferencingDirectionEnum(StrEnum):
     """
     Directions of traffic flow relative to the direction in which the
     linear element is defined.

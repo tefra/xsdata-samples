@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ProofOfIdentityEnumeration(Enum):
+class ProofOfIdentityEnumeration(StrEnum):
     NONE_REQUIRED = "noneRequired"
     CREDIT_CARD = "creditCard"
     PASSPORT = "passport"

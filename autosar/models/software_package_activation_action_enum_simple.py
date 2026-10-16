@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SoftwarePackageActivationActionEnumSimple(Enum):
+class SoftwarePackageActivationActionEnumSimple(StrEnum):
     """
     :cvar REBOOT: Reboot the whole Machine.
     :cvar RESTART_APPLICATION: Restart the application software on the

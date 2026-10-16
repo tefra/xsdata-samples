@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class TimingDescriptionSubtypesEnum(Enum):
+class TimingDescriptionSubtypesEnum(StrEnum):
     TD_EVENT_BSW = "TD-EVENT-BSW"
     TD_EVENT_BSW_INTERNAL_BEHAVIOR = "TD-EVENT-BSW-INTERNAL-BEHAVIOR"
     TD_EVENT_BSW_MODE_DECLARATION = "TD-EVENT-BSW-MODE-DECLARATION"

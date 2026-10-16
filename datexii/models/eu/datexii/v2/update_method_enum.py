@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class UpdateMethodEnum(Enum):
+class UpdateMethodEnum(StrEnum):
     """
     The types of updates of situations that may be requested by a client.
 

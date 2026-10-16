@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.w3.org/1998/Math/MathML"
 
 
-class MathMathvariant(Enum):
+class MathMathvariant(StrEnum):
     NORMAL = "normal"
     BOLD = "bold"
     ITALIC = "italic"

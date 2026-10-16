@@ -1,10 +1,10 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.travelport.com/schema/uprofileCommon_v30_0"
 
 
-class TypeGuaranteeInformationAgencyType2(Enum):
+class TypeGuaranteeInformationAgencyType2(StrEnum):
     AGENCY_IATA = "AgencyIATA"
     OTHER_AGENCY_IATA = "OtherAgencyIATA"

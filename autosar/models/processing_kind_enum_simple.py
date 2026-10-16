@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ProcessingKindEnumSimple(Enum):
+class ProcessingKindEnumSimple(StrEnum):
     """
     :cvar FILTERED: Indicates that a raw signal has been manipulated by
         some application software components by using filters.

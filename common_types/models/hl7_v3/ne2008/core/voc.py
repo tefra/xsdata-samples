@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-class AcknowledgementDetailType(Enum):
+class AcknowledgementDetailType(StrEnum):
     """
     vocSet: T19358 (C-0-T19358-cpt).
     """
@@ -15,7 +15,7 @@ class AcknowledgementDetailType(Enum):
     W = "W"
 
 
-class ActClass(Enum):
+class ActClass(StrEnum):
     """
     vocSet: T11527 (C-0-T11527-cpt).
     """
@@ -116,7 +116,7 @@ class ActClass(Enum):
     LIST = "LIST"
 
 
-class ActClassCareProvision(Enum):
+class ActClassCareProvision(StrEnum):
     """
     specDomain: S18964 (C-0-T11527-S13856-S18964-cpt).
     """
@@ -125,7 +125,7 @@ class ActClassCareProvision(Enum):
     ENC = "ENC"
 
 
-class ActClassClinicalDocument(Enum):
+class ActClassClinicalDocument(StrEnum):
     """
     specDomain: S13948 (C-0-T11527-S13856-A19445-S20083-S18938-S13948-cpt).
     """
@@ -134,7 +134,7 @@ class ActClassClinicalDocument(Enum):
     CDALVLONE = "CDALVLONE"
 
 
-class ActClassCondition(Enum):
+class ActClassCondition(StrEnum):
     """
     specDomain: S18862 (C-0-T11527-S13856-S11529-S18862-cpt).
     """
@@ -144,7 +144,7 @@ class ActClassCondition(Enum):
     COND = "COND"
 
 
-class ActClassContainer(Enum):
+class ActClassContainer(StrEnum):
     """
     abstDomain: A19445 (C-0-T11527-S13856-A19445-cpt).
     """
@@ -166,7 +166,7 @@ class ActClassContainer(Enum):
     FOLDER = "FOLDER"
 
 
-class ActClassContract(Enum):
+class ActClassContract(StrEnum):
     """
     specDomain: S14002 (C-0-T11527-S13856-S14002-cpt).
     """
@@ -176,7 +176,7 @@ class ActClassContract(Enum):
     CNTRCT = "CNTRCT"
 
 
-class ActClassControlAct(Enum):
+class ActClassControlAct(StrEnum):
     """
     specDomain: S11534 (C-0-T11527-S13856-S11534-cpt).
     """
@@ -187,7 +187,7 @@ class ActClassControlAct(Enum):
     STC = "STC"
 
 
-class ActClassDocument(Enum):
+class ActClassDocument(StrEnum):
     """
     specDomain: S18938 (C-0-T11527-S13856-A19445-S20083-S18938-cpt).
     """
@@ -197,7 +197,7 @@ class ActClassDocument(Enum):
     DOC = "DOC"
 
 
-class ActClassObservation(Enum):
+class ActClassObservation(StrEnum):
     """
     specDomain: S11529 (C-0-T11527-S13856-S11529-cpt).
     """
@@ -240,7 +240,7 @@ class ActClassObservation(Enum):
     SPCOBS = "SPCOBS"
 
 
-class ActClassPosition(Enum):
+class ActClassPosition(StrEnum):
     """
     specDomain: S21646 (C-0-T11527-S13856-S11529-S21646-cpt).
     """
@@ -250,7 +250,7 @@ class ActClassPosition(Enum):
     POSCOORD = "POSCOORD"
 
 
-class ActClassProcedure(Enum):
+class ActClassProcedure(StrEnum):
     """
     specDomain: S11532 (C-0-T11527-S13856-S11532-cpt).
     """
@@ -259,7 +259,7 @@ class ActClassProcedure(Enum):
     SPECCOLLECT = "SPECCOLLECT"
 
 
-class ActClassRoot(Enum):
+class ActClassRoot(StrEnum):
     """
     specDomain: S13856 (C-0-T11527-S13856-cpt).
     """
@@ -360,7 +360,7 @@ class ActClassRoot(Enum):
     LIST = "LIST"
 
 
-class ActClassSupply(Enum):
+class ActClassSupply(StrEnum):
     """
     specDomain: S11535 (C-0-T11527-S13856-S11535-cpt).
     """
@@ -369,7 +369,7 @@ class ActClassSupply(Enum):
     DIET = "DIET"
 
 
-class ActMood(Enum):
+class ActMood(StrEnum):
     """
     vocSet: T10196 (C-0-T10196-cpt).
     """
@@ -394,7 +394,7 @@ class ActMood(Enum):
     RSK = "RSK"
 
 
-class ActMoodCompletionTrack(Enum):
+class ActMoodCompletionTrack(StrEnum):
     """
     abstDomain: A10197 (C-0-T10196-A10197-cpt).
     """
@@ -411,7 +411,7 @@ class ActMoodCompletionTrack(Enum):
     EVN = "EVN"
 
 
-class ActMoodCriterion(Enum):
+class ActMoodCriterion(StrEnum):
     """
     specDomain: S22042 (C-0-T10196-A10202-S22042-cpt).
     """
@@ -420,7 +420,7 @@ class ActMoodCriterion(Enum):
     EVN_CRT = "EVN.CRT"
 
 
-class ActMoodIntent(Enum):
+class ActMoodIntent(StrEnum):
     """
     specDomain: S10199 (C-0-T10196-A10197-S10199-cpt).
     """
@@ -435,7 +435,7 @@ class ActMoodIntent(Enum):
     SLOT = "SLOT"
 
 
-class ActRelationshipConditional(Enum):
+class ActRelationshipConditional(StrEnum):
     """
     abstDomain: A18977 (C-0-T10317-A18977-cpt).
     """
@@ -454,7 +454,7 @@ class ActRelationshipConditional(Enum):
     TRIG = "TRIG"
 
 
-class ActRelationshipCostTracking(Enum):
+class ActRelationshipCostTracking(StrEnum):
     """
     abstDomain: A19610 (C-0-T10317-S10329-A14900-A19610-cpt).
     """
@@ -463,7 +463,7 @@ class ActRelationshipCostTracking(Enum):
     COST = "COST"
 
 
-class ActRelationshipFulfills(Enum):
+class ActRelationshipFulfills(StrEnum):
     """
     specDomain: S10342 (C-0-T10317-S10337-S10342-cpt).
     """
@@ -474,7 +474,7 @@ class ActRelationshipFulfills(Enum):
     SCH = "SCH"
 
 
-class ActRelationshipHasComponent(Enum):
+class ActRelationshipHasComponent(StrEnum):
     """
     specDomain: S10318 (C-0-T10317-S10318-cpt).
     """
@@ -485,7 +485,7 @@ class ActRelationshipHasComponent(Enum):
     CTRLV = "CTRLV"
 
 
-class ActRelationshipHasSupport(Enum):
+class ActRelationshipHasSupport(StrEnum):
     """
     specDomain: S10330 (C-0-T10317-S10329-S10330-cpt).
     """
@@ -494,7 +494,7 @@ class ActRelationshipHasSupport(Enum):
     SPRTBND = "SPRTBND"
 
 
-class ActRelationshipMitigates(Enum):
+class ActRelationshipMitigates(StrEnum):
     """
     specDomain: S19986 (C-0-T10317-A18977-S10321-S19986-cpt).
     """
@@ -503,7 +503,7 @@ class ActRelationshipMitigates(Enum):
     RCVY = "RCVY"
 
 
-class ActRelationshipOutcome(Enum):
+class ActRelationshipOutcome(StrEnum):
     """
     specDomain: S10324 (C-0-T10317-S10324-cpt).
     """
@@ -515,7 +515,7 @@ class ActRelationshipOutcome(Enum):
     RISK = "RISK"
 
 
-class ActRelationshipPertainsValue(Enum):
+class ActRelationshipPertainsValue(StrEnum):
     PERT = "PERT"
     NAME = "NAME"
     AUTH = "AUTH"
@@ -535,7 +535,7 @@ class ActRelationshipPertainsValue(Enum):
     SUMM = "SUMM"
 
 
-class ActRelationshipPosting(Enum):
+class ActRelationshipPosting(StrEnum):
     """
     abstDomain: A19609 (C-0-T10317-S10329-A14900-A19609-cpt).
     """
@@ -544,7 +544,7 @@ class ActRelationshipPosting(Enum):
     DEBIT = "DEBIT"
 
 
-class ActRelationshipReason(Enum):
+class ActRelationshipReason(StrEnum):
     """
     specDomain: S10321 (C-0-T10317-A18977-S10321-cpt).
     """
@@ -560,7 +560,7 @@ class ActRelationshipReason(Enum):
     SYMP = "SYMP"
 
 
-class ActRelationshipSequel(Enum):
+class ActRelationshipSequel(StrEnum):
     """
     specDomain: S10337 (C-0-T10317-S10337-cpt).
     """
@@ -588,7 +588,7 @@ class ActRelationshipSequel(Enum):
     UPDT = "UPDT"
 
 
-class ActRelationshipTemporallyPertains(Enum):
+class ActRelationshipTemporallyPertains(StrEnum):
     """
     abstDomain: A19587 (C-0-T10317-S10329-A19587-cpt).
     """
@@ -597,7 +597,7 @@ class ActRelationshipTemporallyPertains(Enum):
     SAS = "SAS"
 
 
-class AddressPartType(Enum):
+class AddressPartType(StrEnum):
     """
     vocSet: T10642 (C-0-T10642-cpt).
     """
@@ -631,7 +631,7 @@ class AddressPartType(Enum):
     STA = "STA"
 
 
-class CalendarCycleOneLetter(Enum):
+class CalendarCycleOneLetter(StrEnum):
     """
     abstDomain: A10701 (C-0-T10684-A10701-cpt).
     """
@@ -646,7 +646,7 @@ class CalendarCycleOneLetter(Enum):
     Y = "Y"
 
 
-class CalendarCycleTwoLetterValue(Enum):
+class CalendarCycleTwoLetterValue(StrEnum):
     CD = "CD"
     DM = "DM"
     DW = "DW"
@@ -664,7 +664,7 @@ class CalendarCycleTwoLetterValue(Enum):
     CY = "CY"
 
 
-class CommunicationFunctionType(Enum):
+class CommunicationFunctionType(StrEnum):
     """
     vocSet: T16031 (C-0-T16031-cpt).
     """
@@ -674,7 +674,7 @@ class CommunicationFunctionType(Enum):
     SND = "SND"
 
 
-class CompressionAlgorithm(Enum):
+class CompressionAlgorithm(StrEnum):
     """
     vocSet: T10620 (C-0-T10620-cpt).
     """
@@ -685,7 +685,7 @@ class CompressionAlgorithm(Enum):
     ZL = "ZL"
 
 
-class ContextControl(Enum):
+class ContextControl(StrEnum):
     """
     vocSet: T16478 (C-0-T16478-cpt).
     """
@@ -696,7 +696,7 @@ class ContextControl(Enum):
     OP = "OP"
 
 
-class EntityClass(Enum):
+class EntityClass(StrEnum):
     """
     vocSet: T10882 (C-0-T10882-cpt).
     """
@@ -730,7 +730,7 @@ class EntityClass(Enum):
     HCE = "HCE"
 
 
-class EntityClassContainer(Enum):
+class EntityClassContainer(StrEnum):
     """
     specDomain: S11622 (C-0-T10882-S13922-S10883-S13934-S11622-cpt).
     """
@@ -739,7 +739,7 @@ class EntityClassContainer(Enum):
     HOLD = "HOLD"
 
 
-class EntityClassDevice(Enum):
+class EntityClassDevice(StrEnum):
     """
     specDomain: S11623 (C-0-T10882-S13922-S10883-S13934-S11623-cpt).
     """
@@ -749,7 +749,7 @@ class EntityClassDevice(Enum):
     MODDV = "MODDV"
 
 
-class EntityClassManufacturedMaterial(Enum):
+class EntityClassManufacturedMaterial(StrEnum):
     """
     specDomain: S13934 (C-0-T10882-S13922-S10883-S13934-cpt).
     """
@@ -762,7 +762,7 @@ class EntityClassManufacturedMaterial(Enum):
     MMAT = "MMAT"
 
 
-class EntityClassMaterial(Enum):
+class EntityClassMaterial(StrEnum):
     """
     specDomain: S10883 (C-0-T10882-S13922-S10883-cpt).
     """
@@ -778,7 +778,7 @@ class EntityClassMaterial(Enum):
     FOOD = "FOOD"
 
 
-class EntityClassNonPersonLivingSubject(Enum):
+class EntityClassNonPersonLivingSubject(StrEnum):
     """
     specDomain: S11621 (C-0-T10882-S13922-S10884-S11621-cpt).
     """
@@ -789,7 +789,7 @@ class EntityClassNonPersonLivingSubject(Enum):
     PLNT = "PLNT"
 
 
-class EntityClassOrganization(Enum):
+class EntityClassOrganization(StrEnum):
     """
     specDomain: S10889 (C-0-T10882-S13922-S10889-cpt).
     """
@@ -800,7 +800,7 @@ class EntityClassOrganization(Enum):
     PUB = "PUB"
 
 
-class EntityClassPlace(Enum):
+class EntityClassPlace(StrEnum):
     """
     specDomain: S10892 (C-0-T10882-S13922-S10892-cpt).
     """
@@ -812,7 +812,7 @@ class EntityClassPlace(Enum):
     PROVINCE = "PROVINCE"
 
 
-class EntityClassRoot(Enum):
+class EntityClassRoot(StrEnum):
     """
     specDomain: S13922 (C-0-T10882-S13922-cpt).
     """
@@ -846,7 +846,7 @@ class EntityClassRoot(Enum):
     HCE = "HCE"
 
 
-class EntityClassState(Enum):
+class EntityClassState(StrEnum):
     """
     specDomain: S10890 (C-0-T10882-S13922-S10889-S10890-cpt).
     """
@@ -855,7 +855,7 @@ class EntityClassState(Enum):
     NAT = "NAT"
 
 
-class EntityDeterminer(Enum):
+class EntityDeterminer(StrEnum):
     """
     vocSet: T10878 (C-0-T10878-cpt).
     """
@@ -865,7 +865,7 @@ class EntityDeterminer(Enum):
     INSTANCE = "INSTANCE"
 
 
-class EntityDeterminerDetermined(Enum):
+class EntityDeterminerDetermined(StrEnum):
     """
     specDomain: S10879 (C-0-T10878-S10879-cpt).
     """
@@ -874,7 +874,7 @@ class EntityDeterminerDetermined(Enum):
     QUANTIFIED_KIND = "QUANTIFIED_KIND"
 
 
-class EntityNamePartQualifier(Enum):
+class EntityNamePartQualifier(StrEnum):
     """
     vocSet: T15888 (C-0-T15888-cpt).
     """
@@ -892,7 +892,7 @@ class EntityNamePartQualifier(Enum):
     TITLE = "TITLE"
 
 
-class EntityNamePartType(Enum):
+class EntityNamePartType(StrEnum):
     """
     vocSet: T15880 (C-0-T15880-cpt).
     """
@@ -904,7 +904,7 @@ class EntityNamePartType(Enum):
     GIV = "GIV"
 
 
-class EntityNameUse(Enum):
+class EntityNameUse(StrEnum):
     """
     vocSet: T15913 (C-0-T15913-cpt).
     """
@@ -925,7 +925,7 @@ class EntityNameUse(Enum):
     ASGN = "ASGN"
 
 
-class IntegrityCheckAlgorithm(Enum):
+class IntegrityCheckAlgorithm(StrEnum):
     """
     vocSet: T17385 (C-0-T17385-cpt).
     """
@@ -934,7 +934,7 @@ class IntegrityCheckAlgorithm(Enum):
     SHA_256 = "SHA-256"
 
 
-class NullFlavor(Enum):
+class NullFlavor(StrEnum):
     """
     vocSet: T10609 (C-0-T10609-cpt).
     """
@@ -954,7 +954,7 @@ class NullFlavor(Enum):
     UNC = "UNC"
 
 
-class ParticipationInformationRecipient(Enum):
+class ParticipationInformationRecipient(StrEnum):
     """
     specDomain: S10263 (C-0-T10901-S21573-S10263-cpt).
     """
@@ -967,7 +967,7 @@ class ParticipationInformationRecipient(Enum):
     NOT = "NOT"
 
 
-class ParticipationParticipation(Enum):
+class ParticipationParticipation(StrEnum):
     """
     specDomain: S21573 (C-0-T10901-S21573-cpt).
     """
@@ -1030,7 +1030,7 @@ class ParticipationParticipation(Enum):
     RESP = "RESP"
 
 
-class ParticipationPhysicalPerformer(Enum):
+class ParticipationPhysicalPerformer(StrEnum):
     """
     specDomain: S10248 (C-0-T10901-S21573-S10248-cpt).
     """
@@ -1041,7 +1041,7 @@ class ParticipationPhysicalPerformer(Enum):
     SPRF = "SPRF"
 
 
-class ParticipationTargetDevice(Enum):
+class ParticipationTargetDevice(StrEnum):
     """
     specDomain: S10298 (C-0-T10901-S21573-S10286-S10298-cpt).
     """
@@ -1051,7 +1051,7 @@ class ParticipationTargetDevice(Enum):
     RDV = "RDV"
 
 
-class ParticipationTargetLocation(Enum):
+class ParticipationTargetLocation(StrEnum):
     """
     specDomain: S10302 (C-0-T10901-S21573-S10302-cpt).
     """
@@ -1064,7 +1064,7 @@ class ParticipationTargetLocation(Enum):
     VIA = "VIA"
 
 
-class ParticipationTargetSubject(Enum):
+class ParticipationTargetSubject(StrEnum):
     """
     specDomain: S10287 (C-0-T10901-S21573-S10286-S10287-cpt).
     """
@@ -1073,7 +1073,7 @@ class ParticipationTargetSubject(Enum):
     SPC = "SPC"
 
 
-class ParticipationType(Enum):
+class ParticipationType(StrEnum):
     """
     vocSet: T10901 (C-0-T10901-cpt).
     """
@@ -1136,7 +1136,7 @@ class ParticipationType(Enum):
     RESP = "RESP"
 
 
-class ParticipationVerifier(Enum):
+class ParticipationVerifier(StrEnum):
     """
     specDomain: S10259 (C-0-T10901-S21573-S10259-cpt).
     """
@@ -1146,7 +1146,7 @@ class ParticipationVerifier(Enum):
     LA = "LA"
 
 
-class PostalAddressUse(Enum):
+class PostalAddressUse(StrEnum):
     """
     vocSet: T10637 (C-0-T10637-cpt).
     """
@@ -1166,7 +1166,7 @@ class PostalAddressUse(Enum):
     PST = "PST"
 
 
-class ProbabilityDistributionType(Enum):
+class ProbabilityDistributionType(StrEnum):
     """
     vocSet: T10747 (C-0-T10747-cpt).
     """
@@ -1182,7 +1182,7 @@ class ProbabilityDistributionType(Enum):
     U = "U"
 
 
-class RoleClassAgent(Enum):
+class RoleClassAgent(StrEnum):
     """
     specDomain: S14006 (C-0-T11555-S13940-A19313-A19316-A10416-S14006-cpt).
     """
@@ -1197,7 +1197,7 @@ class RoleClassAgent(Enum):
     GUARD = "GUARD"
 
 
-class RoleClassAssignedEntity(Enum):
+class RoleClassAssignedEntity(StrEnum):
     """
     specDomain: S11595
     (C-0-T11555-S13940-A19313-A19316-A10416-S14006-S11595-cpt).
@@ -1211,7 +1211,7 @@ class RoleClassAssignedEntity(Enum):
     SGNOFF = "SGNOFF"
 
 
-class RoleClassContact(Enum):
+class RoleClassContact(StrEnum):
     """
     specDomain: S12205
     (C-0-T11555-S13940-A19313-A19316-A10416-S14006-S11595-S12205-cpt).
@@ -1222,7 +1222,7 @@ class RoleClassContact(Enum):
     NOK = "NOK"
 
 
-class RoleClassCoveredParty(Enum):
+class RoleClassCoveredParty(StrEnum):
     """
     specDomain: S14011 (C-0-T11555-S13940-A19313-A19316-A10416-S14011-cpt).
     """
@@ -1236,7 +1236,7 @@ class RoleClassCoveredParty(Enum):
     PROG = "PROG"
 
 
-class RoleClassDistributedMaterial(Enum):
+class RoleClassDistributedMaterial(StrEnum):
     """
     specDomain: S10418 (C-0-T11555-S13940-A19313-A19105-S10418-cpt).
     """
@@ -1245,7 +1245,7 @@ class RoleClassDistributedMaterial(Enum):
     RET = "RET"
 
 
-class RoleClassEmployee(Enum):
+class RoleClassEmployee(StrEnum):
     """
     specDomain: S11569 (C-0-T11555-S13940-A19313-A19316-A10416-S11569-cpt).
     """
@@ -1254,7 +1254,7 @@ class RoleClassEmployee(Enum):
     MIL = "MIL"
 
 
-class RoleClassIngredientEntity(Enum):
+class RoleClassIngredientEntity(StrEnum):
     """
     specDomain: S10430 (C-0-T11555-S13940-A10429-S10430-cpt).
     """
@@ -1273,7 +1273,7 @@ class RoleClassIngredientEntity(Enum):
     BASE = "BASE"
 
 
-class RoleClassIsSpeciesEntity(Enum):
+class RoleClassIsSpeciesEntity(StrEnum):
     """
     specDomain: S10441 (C-0-T11555-S13940-A10428-S10441-cpt).
     """
@@ -1282,7 +1282,7 @@ class RoleClassIsSpeciesEntity(Enum):
     GRIC = "GRIC"
 
 
-class RoleClassLicensedEntity(Enum):
+class RoleClassLicensedEntity(StrEnum):
     """
     specDomain: S16773 (C-0-T11555-S13940-A19313-A19316-A10416-S16773-cpt).
     """
@@ -1292,7 +1292,7 @@ class RoleClassLicensedEntity(Enum):
     NOT = "NOT"
 
 
-class RoleClassLocatedEntity(Enum):
+class RoleClassLocatedEntity(StrEnum):
     """
     specDomain: S16815 (C-0-T11555-S13940-A10429-S16815-cpt).
     """
@@ -1301,7 +1301,7 @@ class RoleClassLocatedEntity(Enum):
     STOR = "STOR"
 
 
-class RoleClassManufacturedProduct(Enum):
+class RoleClassManufacturedProduct(StrEnum):
     """
     specDomain: S11580 (C-0-T11555-S13940-A19313-A19105-S11580-cpt).
     """
@@ -1310,7 +1310,7 @@ class RoleClassManufacturedProduct(Enum):
     THER = "THER"
 
 
-class RoleClassMutualRelationship(Enum):
+class RoleClassMutualRelationship(StrEnum):
     """
     abstDomain: A19316 (C-0-T11555-S13940-A19313-A19316-cpt).
     """
@@ -1355,7 +1355,7 @@ class RoleClassMutualRelationship(Enum):
     PRS = "PRS"
 
 
-class RoleClassOntological(Enum):
+class RoleClassOntological(StrEnum):
     """
     abstDomain: A10428 (C-0-T11555-S13940-A10428-cpt).
     """
@@ -1369,7 +1369,7 @@ class RoleClassOntological(Enum):
     SUBS = "SUBS"
 
 
-class RoleClassPartitive(Enum):
+class RoleClassPartitive(StrEnum):
     """
     abstDomain: A10429 (C-0-T11555-S13940-A10429-cpt).
     """
@@ -1400,7 +1400,7 @@ class RoleClassPartitive(Enum):
     MBR = "MBR"
 
 
-class RoleClassPartitivePartByBot(Enum):
+class RoleClassPartitivePartByBot(StrEnum):
     """
     specDomain: S19102 (C-0-T11555-S13940-A10429-S19102-cpt).
     """
@@ -1409,7 +1409,7 @@ class RoleClassPartitivePartByBot(Enum):
     ACTM = "ACTM"
 
 
-class RoleClassPassive(Enum):
+class RoleClassPassive(StrEnum):
     """
     abstDomain: A19105 (C-0-T11555-S13940-A19313-A19105-cpt).
     """
@@ -1436,11 +1436,11 @@ class RoleClassPassive(Enum):
     WRTE = "WRTE"
 
 
-class RoleClassRootValue(Enum):
+class RoleClassRootValue(StrEnum):
     ROL = "ROL"
 
 
-class RoleClassServiceDeliveryLocation(Enum):
+class RoleClassServiceDeliveryLocation(StrEnum):
     """
     specDomain: S16927 (C-0-T11555-S13940-A19313-A19105-S16927-cpt).
     """
@@ -1450,7 +1450,7 @@ class RoleClassServiceDeliveryLocation(Enum):
     ISDLOC = "ISDLOC"
 
 
-class RoleClassSpecimen(Enum):
+class RoleClassSpecimen(StrEnum):
     """
     specDomain: S11591 (C-0-T11555-S13940-A10429-S11591-cpt).
     """
@@ -1460,7 +1460,7 @@ class RoleClassSpecimen(Enum):
     ISLT = "ISLT"
 
 
-class RoleLinkType(Enum):
+class RoleLinkType(StrEnum):
     """
     vocSet: T11603 (C-0-T11603-cpt).
     """
@@ -1474,7 +1474,7 @@ class RoleLinkType(Enum):
     REPL = "REPL"
 
 
-class SetOperator(Enum):
+class SetOperator(StrEnum):
     """
     vocSet: T17416 (C-0-T17416-cpt).
     """
@@ -1487,7 +1487,7 @@ class SetOperator(Enum):
     P = "P"
 
 
-class TelecommunicationAddressUse(Enum):
+class TelecommunicationAddressUse(StrEnum):
     """
     vocSet: T201 (C-0-T201-cpt).
     """
@@ -1506,7 +1506,7 @@ class TelecommunicationAddressUse(Enum):
     PG = "PG"
 
 
-class TimingEvent(Enum):
+class TimingEvent(StrEnum):
     """
     vocSet: T10706 (C-0-T10706-cpt).
     """
@@ -1526,7 +1526,7 @@ class TimingEvent(Enum):
     PCV = "PCV"
 
 
-class XAccommodationRequestorRole(Enum):
+class XAccommodationRequestorRole(StrEnum):
     """
     abstDomain: A19352 (C-0-T11555-A19352-cpt).
     """
@@ -1537,7 +1537,7 @@ class XAccommodationRequestorRole(Enum):
     PRS = "PRS"
 
 
-class XActClassDocumentEntryAct(Enum):
+class XActClassDocumentEntryAct(StrEnum):
     """
     abstDomain: A19599 (C-0-T11527-A19599-cpt).
     """
@@ -1554,7 +1554,7 @@ class XActClassDocumentEntryAct(Enum):
     TRNS = "TRNS"
 
 
-class XActClassDocumentEntryOrganizer(Enum):
+class XActClassDocumentEntryOrganizer(StrEnum):
     """
     abstDomain: A19598 (C-0-T11527-A19598-cpt).
     """
@@ -1563,7 +1563,7 @@ class XActClassDocumentEntryOrganizer(Enum):
     BATTERY = "BATTERY"
 
 
-class XActMoodDefEvn(Enum):
+class XActMoodDefEvn(StrEnum):
     """
     abstDomain: A19375 (C-0-T10196-A19375-cpt).
     """
@@ -1572,7 +1572,7 @@ class XActMoodDefEvn(Enum):
     EVN = "EVN"
 
 
-class XActMoodDocumentObservation(Enum):
+class XActMoodDocumentObservation(StrEnum):
     """
     abstDomain: A18943 (C-0-T10196-A18943-cpt).
     """
@@ -1586,7 +1586,7 @@ class XActMoodDocumentObservation(Enum):
     RQO = "RQO"
 
 
-class XActMoodIntentEvent(Enum):
+class XActMoodIntentEvent(StrEnum):
     """
     abstDomain: A16742 (C-0-T10196-A16742-cpt).
     """
@@ -1594,7 +1594,7 @@ class XActMoodIntentEvent(Enum):
     EVN = "EVN"
 
 
-class XActMoodOrdPrms(Enum):
+class XActMoodOrdPrms(StrEnum):
     """
     abstDomain: A16735 (C-0-T10196-A16735-cpt).
     """
@@ -1603,7 +1603,7 @@ class XActMoodOrdPrms(Enum):
     RQO = "RQO"
 
 
-class XActRelationshipDocument(Enum):
+class XActRelationshipDocument(StrEnum):
     """
     abstDomain: A11610 (C-0-T10317-A11610-cpt).
     """
@@ -1613,7 +1613,7 @@ class XActRelationshipDocument(Enum):
     XFRM = "XFRM"
 
 
-class XActRelationshipEntry(Enum):
+class XActRelationshipEntry(StrEnum):
     """
     abstDomain: A19446 (C-0-T10317-A19446-cpt).
     """
@@ -1622,7 +1622,7 @@ class XActRelationshipEntry(Enum):
     DRIV = "DRIV"
 
 
-class XActRelationshipEntryRelationship(Enum):
+class XActRelationshipEntryRelationship(StrEnum):
     """
     abstDomain: A19447 (C-0-T10317-A19447-cpt).
     """
@@ -1639,7 +1639,7 @@ class XActRelationshipEntryRelationship(Enum):
     SAS = "SAS"
 
 
-class XActRelationshipExternalReference(Enum):
+class XActRelationshipExternalReference(StrEnum):
     """
     abstDomain: A19000 (C-0-T10317-A19000-cpt).
     """
@@ -1652,7 +1652,7 @@ class XActRelationshipExternalReference(Enum):
     RPLC = "RPLC"
 
 
-class XActRelationshipPatientTransport(Enum):
+class XActRelationshipPatientTransport(StrEnum):
     """
     abstDomain: A19005 (C-0-T10317-A19005-cpt).
     """
@@ -1661,7 +1661,7 @@ class XActRelationshipPatientTransport(Enum):
     DEP = "DEP"
 
 
-class XActRelationshipPertinentInfo(Enum):
+class XActRelationshipPertinentInfo(StrEnum):
     """
     abstDomain: A19562 (C-0-T10317-A19562-cpt).
     """
@@ -1673,7 +1673,7 @@ class XActRelationshipPertinentInfo(Enum):
     REFR = "REFR"
 
 
-class XActRelationshipRelatedAuthorizations(Enum):
+class XActRelationshipRelatedAuthorizations(StrEnum):
     """
     abstDomain: A19825 (C-0-T10317-A19825-cpt).
     """
@@ -1682,7 +1682,7 @@ class XActRelationshipRelatedAuthorizations(Enum):
     REFR = "REFR"
 
 
-class XActReplaceOrRevise(Enum):
+class XActReplaceOrRevise(StrEnum):
     """
     abstDomain: A19764 (C-0-T10317-A19764-cpt).
     """
@@ -1691,7 +1691,7 @@ class XActReplaceOrRevise(Enum):
     RPLC = "RPLC"
 
 
-class XClinicalStatementActMood(Enum):
+class XClinicalStatementActMood(StrEnum):
     """
     abstDomain: A19649 (C-0-T10196-A19649-cpt).
     """
@@ -1706,7 +1706,7 @@ class XClinicalStatementActMood(Enum):
     RQO = "RQO"
 
 
-class XClinicalStatementEncounterMood(Enum):
+class XClinicalStatementEncounterMood(StrEnum):
     """
     abstDomain: A19648 (C-0-T10196-A19648-cpt).
     """
@@ -1720,7 +1720,7 @@ class XClinicalStatementEncounterMood(Enum):
     RQO = "RQO"
 
 
-class XClinicalStatementObservationMood(Enum):
+class XClinicalStatementObservationMood(StrEnum):
     """
     abstDomain: A19644 (C-0-T10196-A19644-cpt).
     """
@@ -1736,7 +1736,7 @@ class XClinicalStatementObservationMood(Enum):
     RQO = "RQO"
 
 
-class XClinicalStatementProcedureMood(Enum):
+class XClinicalStatementProcedureMood(StrEnum):
     """
     abstDomain: A19647 (C-0-T10196-A19647-cpt).
     """
@@ -1751,7 +1751,7 @@ class XClinicalStatementProcedureMood(Enum):
     RQO = "RQO"
 
 
-class XClinicalStatementSubstanceMood(Enum):
+class XClinicalStatementSubstanceMood(StrEnum):
     """
     abstDomain: A19645 (C-0-T10196-A19645-cpt).
     """
@@ -1763,7 +1763,7 @@ class XClinicalStatementSubstanceMood(Enum):
     RQO = "RQO"
 
 
-class XClinicalStatementSupplyMood(Enum):
+class XClinicalStatementSupplyMood(StrEnum):
     """
     abstDomain: A19646 (C-0-T10196-A19646-cpt).
     """
@@ -1772,7 +1772,7 @@ class XClinicalStatementSupplyMood(Enum):
     INT = "INT"
 
 
-class XDeterminerInstanceKind(Enum):
+class XDeterminerInstanceKind(StrEnum):
     """
     abstDomain: A19670 (C-0-T10878-A19670-cpt).
     """
@@ -1782,7 +1782,7 @@ class XDeterminerInstanceKind(Enum):
     INSTANCE = "INSTANCE"
 
 
-class XDocumentActMood(Enum):
+class XDocumentActMood(StrEnum):
     """
     abstDomain: A19458 (C-0-T10196-A19458-cpt).
     """
@@ -1797,7 +1797,7 @@ class XDocumentActMood(Enum):
     RQO = "RQO"
 
 
-class XDocumentEncounterMood(Enum):
+class XDocumentEncounterMood(StrEnum):
     """
     abstDomain: A19459 (C-0-T10196-A19459-cpt).
     """
@@ -1811,7 +1811,7 @@ class XDocumentEncounterMood(Enum):
     RQO = "RQO"
 
 
-class XDocumentEntrySubject(Enum):
+class XDocumentEntrySubject(StrEnum):
     """
     abstDomain: A19367 (C-0-T11555-A19367-cpt).
     """
@@ -1821,7 +1821,7 @@ class XDocumentEntrySubject(Enum):
     SPEC = "SPEC"
 
 
-class XDocumentProcedureMood(Enum):
+class XDocumentProcedureMood(StrEnum):
     """
     abstDomain: A19460 (C-0-T10196-A19460-cpt).
     """
@@ -1836,7 +1836,7 @@ class XDocumentProcedureMood(Enum):
     RQO = "RQO"
 
 
-class XDocumentSubject(Enum):
+class XDocumentSubject(StrEnum):
     """
     abstDomain: A19368 (C-0-T11555-A19368-cpt).
     """
@@ -1845,7 +1845,7 @@ class XDocumentSubject(Enum):
     PRS = "PRS"
 
 
-class XDocumentSubstanceMood(Enum):
+class XDocumentSubstanceMood(StrEnum):
     """
     abstDomain: A19461 (C-0-T10196-A19461-cpt).
     """
@@ -1857,7 +1857,7 @@ class XDocumentSubstanceMood(Enum):
     RQO = "RQO"
 
 
-class XEncounterParticipant(Enum):
+class XEncounterParticipant(StrEnum):
     """
     abstDomain: A19600 (C-0-T10901-A19600-cpt).
     """
@@ -1869,7 +1869,7 @@ class XEncounterParticipant(Enum):
     REF = "REF"
 
 
-class XInformationRecipient(Enum):
+class XInformationRecipient(StrEnum):
     """
     abstDomain: A19366 (C-0-T10901-A19366-cpt).
     """
@@ -1878,7 +1878,7 @@ class XInformationRecipient(Enum):
     TRC = "TRC"
 
 
-class XInformationRecipientRole(Enum):
+class XInformationRecipientRole(StrEnum):
     """
     abstDomain: A16772 (C-0-T11555-A16772-cpt).
     """
@@ -1887,7 +1887,7 @@ class XInformationRecipientRole(Enum):
     HLTHCHRT = "HLTHCHRT"
 
 
-class XLabProcessClassCodes(Enum):
+class XLabProcessClassCodes(StrEnum):
     """
     abstDomain: A19657 (C-0-T11527-A19657-cpt).
     """
@@ -1899,7 +1899,7 @@ class XLabProcessClassCodes(Enum):
     TRNS = "TRNS"
 
 
-class XParticipationAuthorPerformer(Enum):
+class XParticipationAuthorPerformer(StrEnum):
     """
     abstDomain: A19080 (C-0-T10901-A19080-cpt).
     """
@@ -1908,7 +1908,7 @@ class XParticipationAuthorPerformer(Enum):
     PRF = "PRF"
 
 
-class XParticipationVrfRespSprfWit(Enum):
+class XParticipationVrfRespSprfWit(StrEnum):
     """
     abstDomain: A19083 (C-0-T10901-A19083-cpt).
     """
@@ -1919,7 +1919,7 @@ class XParticipationVrfRespSprfWit(Enum):
     WIT = "WIT"
 
 
-class XRoleClassAccommodationRequestor(Enum):
+class XRoleClassAccommodationRequestor(StrEnum):
     """
     abstDomain: A19382 (C-0-T11555-A19382-cpt).
     """
@@ -1930,7 +1930,7 @@ class XRoleClassAccommodationRequestor(Enum):
     PRS = "PRS"
 
 
-class XRoleClassCoverage(Enum):
+class XRoleClassCoverage(StrEnum):
     """
     abstDomain: A14008 (C-0-T11555-A14008-cpt).
     """
@@ -1941,7 +1941,7 @@ class XRoleClassCoverage(Enum):
     UNDWRT = "UNDWRT"
 
 
-class XRoleClassCoverageInvoice(Enum):
+class XRoleClassCoverageInvoice(StrEnum):
     """
     abstDomain: A14013 (C-0-T11555-A14013-cpt).
     """
@@ -1950,7 +1950,7 @@ class XRoleClassCoverageInvoice(Enum):
     PAYEE = "PAYEE"
 
 
-class XRoleClassCredentialedEntity(Enum):
+class XRoleClassCredentialedEntity(StrEnum):
     """
     abstDomain: A16930 (C-0-T11555-A16930-cpt).
     """
@@ -1959,7 +1959,7 @@ class XRoleClassCredentialedEntity(Enum):
     QUAL = "QUAL"
 
 
-class XRoleClassPayeePolicyRelationship(Enum):
+class XRoleClassPayeePolicyRelationship(StrEnum):
     """
     abstDomain: A19395 (C-0-T11555-A19395-cpt).
     """
@@ -1971,7 +1971,7 @@ class XRoleClassPayeePolicyRelationship(Enum):
     POLHOLD = "POLHOLD"
 
 
-class XSuccReplPrev(Enum):
+class XSuccReplPrev(StrEnum):
     """
     abstDomain: A19753 (C-0-T10317-A19753-cpt).
     """
@@ -1981,7 +1981,7 @@ class XSuccReplPrev(Enum):
     SUCC = "SUCC"
 
 
-class XServiceEventPerformer(Enum):
+class XServiceEventPerformer(StrEnum):
     """
     abstDomain: A19601 (C-0-T10901-A19601-cpt).
     """

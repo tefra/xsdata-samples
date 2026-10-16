@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class SenderIntentEnumSimple(Enum):
+class SenderIntentEnumSimple(StrEnum):
     """
     :cvar WILL_SEND: The sender will send the event or field notifier.
     :cvar WONT_SEND: The sender won't send the event or field notifier.

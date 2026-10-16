@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticValueAccessEnumSimple(Enum):
+class DiagnosticValueAccessEnumSimple(StrEnum):
     """
     :cvar READ_ONLY: The access to the data element is limited to read-
         only. This is typically used to read-out diagnostic information

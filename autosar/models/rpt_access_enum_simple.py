@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class RptAccessEnumSimple(Enum):
+class RptAccessEnumSimple(StrEnum):
     """
     :cvar ENABLED: The related data element is accessible by RP tool.
     :cvar NONE: The related data element is not accessible by RP tool.

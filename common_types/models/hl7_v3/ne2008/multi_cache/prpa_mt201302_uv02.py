@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from enum import Enum
+from enum import StrEnum
 
 from ..core.datatypes_base import (
     AdExplicit,
@@ -67,79 +67,79 @@ from .coct_mt960000_uv05 import CoctMt960000Uv05Position
 __NAMESPACE__ = "urn:hl7-org:v3"
 
 
-class PrpaMt201302Uv02AdministrativeObservationIdUpdateMode(Enum):
+class PrpaMt201302Uv02AdministrativeObservationIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02CareGiverIdUpdateMode(Enum):
+class PrpaMt201302Uv02CareGiverIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02CitizenIdUpdateMode(Enum):
+class PrpaMt201302Uv02CitizenIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02ContactPartyIdUpdateMode(Enum):
+class PrpaMt201302Uv02ContactPartyIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02EmployeeIdUpdateMode(Enum):
+class PrpaMt201302Uv02EmployeeIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02GuardianIdUpdateMode(Enum):
+class PrpaMt201302Uv02GuardianIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02MemberIdUpdateMode(Enum):
+class PrpaMt201302Uv02MemberIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02NonPersonLivingSubjectIdUpdateMode(Enum):
+class PrpaMt201302Uv02NonPersonLivingSubjectIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02OtherIdsIdUpdateMode(Enum):
+class PrpaMt201302Uv02OtherIdsIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02PatientIdUpdateMode(Enum):
+class PrpaMt201302Uv02PatientIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02PatientPatientNonPersonLivingSubjectUpdateMode(Enum):
+class PrpaMt201302Uv02PatientPatientNonPersonLivingSubjectUpdateMode(StrEnum):
     N = "N"
 
 
-class PrpaMt201302Uv02PatientPatientPersonUpdateMode(Enum):
+class PrpaMt201302Uv02PatientPatientPersonUpdateMode(StrEnum):
     N = "N"
 
 
-class PrpaMt201302Uv02PatientStatusCodeUpdateMode(Enum):
+class PrpaMt201302Uv02PatientStatusCodeUpdateMode(StrEnum):
     N = "N"
 
 
-class PrpaMt201302Uv02PersonIdUpdateMode(Enum):
+class PrpaMt201302Uv02PersonIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02PersonalRelationshipIdUpdateMode(Enum):
+class PrpaMt201302Uv02PersonalRelationshipIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 
 
-class PrpaMt201302Uv02StudentIdUpdateMode(Enum):
+class PrpaMt201302Uv02StudentIdUpdateMode(StrEnum):
     A = "A"
     N = "N"
 

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class IkeAuthenticationMethodEnumSimple(Enum):
+class IkeAuthenticationMethodEnumSimple(StrEnum):
     """
     :cvar DSA: Digital Signature Authentication
     :cvar PSK: Pre-shared key authentication

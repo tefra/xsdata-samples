@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DataIdModeEnumSimple(Enum):
+class DataIdModeEnumSimple(StrEnum):
     """
     :cvar ALL_16_BIT: Two bytes are included in the CRC (double ID
         configuration).

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class ParkingTypeEnumeration(Enum):
+class ParkingTypeEnumeration(StrEnum):
     PARK_AND_RIDE = "parkAndRide"
     LIFT_SHARE_PARKING = "liftShareParking"
     URBAN_PARKING = "urbanParking"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DataTransformationStatusForwardingEnumSimple(Enum):
+class DataTransformationStatusForwardingEnumSimple(StrEnum):
     """
     :cvar NO_TRANSFORMER_STATUS_FORWARDING: The runnable is not able to
         forward a transformer status.

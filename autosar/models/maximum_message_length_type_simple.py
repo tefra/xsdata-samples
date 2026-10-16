@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class MaximumMessageLengthTypeSimple(Enum):
+class MaximumMessageLengthTypeSimple(StrEnum):
     """
     :cvar I_4_G: SF-E allowed (SF of arbitrary length depending on
         FrTpPduLength), up to (2**32)-1 byte message length (all FF-x

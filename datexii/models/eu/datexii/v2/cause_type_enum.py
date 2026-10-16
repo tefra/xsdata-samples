@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 
-class CauseTypeEnum(Enum):
+class CauseTypeEnum(StrEnum):
     """
     Types of causes of situations which are not managed or are off network.
 

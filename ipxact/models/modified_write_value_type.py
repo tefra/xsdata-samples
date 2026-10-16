@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
 
-class ModifiedWriteValueType(Enum):
+class ModifiedWriteValueType(StrEnum):
     ONE_TO_CLEAR = "oneToClear"
     ONE_TO_SET = "oneToSet"
     ONE_TO_TOGGLE = "oneToToggle"

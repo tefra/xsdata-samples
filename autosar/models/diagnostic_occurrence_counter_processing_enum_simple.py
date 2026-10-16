@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class DiagnosticOccurrenceCounterProcessingEnumSimple(Enum):
+class DiagnosticOccurrenceCounterProcessingEnumSimple(StrEnum):
     """
     :cvar CONFIRMED_DTC_BIT: The occurrence counter is triggered by the
         TestFailed bit if the fault confirmation was successful

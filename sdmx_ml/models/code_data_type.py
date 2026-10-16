@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
-class CodeDataType(Enum):
+class CodeDataType(StrEnum):
     """
     CodeDataType is a restriction of the basic data types that are
     applicable to codes.

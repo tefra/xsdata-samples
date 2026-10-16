@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
-class ObsDimensionsCodeType(Enum):
+class ObsDimensionsCodeType(StrEnum):
     """
     ObsDimensionsCodeType is an enumeration containing the values
     "TimeDimension" and "AllDimensions".

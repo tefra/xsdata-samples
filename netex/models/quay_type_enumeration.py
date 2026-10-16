@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class QuayTypeEnumeration(Enum):
+class QuayTypeEnumeration(StrEnum):
     AIRLINE_GATE = "airlineGate"
     RAIL_PLATFORM = "railPlatform"
     RAIL_ISLAND_PLATFORM = "railIslandPlatform"

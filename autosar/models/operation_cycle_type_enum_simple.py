@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class OperationCycleTypeEnumSimple(Enum):
+class OperationCycleTypeEnumSimple(StrEnum):
     """
     :cvar IGNITION: Ignition ON / OFF cycle.
     :cvar OBD_DCY: OBD Driving cycle.

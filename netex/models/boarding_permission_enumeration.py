@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 
-class BoardingPermissionEnumeration(Enum):
+class BoardingPermissionEnumeration(StrEnum):
     NORMAL = "normal"
     EARLY_BOARDING_POSSIBLE_BEFORE_DEPARTURE = (
         "earlyBoardingPossibleBeforeDeparture"

@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://www.crossref.org/schema/5.3.1"
 
 
-class JournalMetadataLanguage(Enum):
+class JournalMetadataLanguage(StrEnum):
     AA = "aa"
     AB = "ab"
     AE = "ae"

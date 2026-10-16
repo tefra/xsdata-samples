@@ -1,9 +1,9 @@
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 __NAMESPACE__ = "http://autosar.org/schema/r4.0"
 
 
-class ApplicationPrimitiveDataTypeSubtypesEnum(Enum):
+class ApplicationPrimitiveDataTypeSubtypesEnum(StrEnum):
     APPLICATION_PRIMITIVE_DATA_TYPE = "APPLICATION-PRIMITIVE-DATA-TYPE"
