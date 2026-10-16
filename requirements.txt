@@ -1,6 +1,5 @@
 invoke
 mypy
-types-dataclasses
 pytest
 pre-commit
 requests

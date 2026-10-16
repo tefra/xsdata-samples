@@ -4,15 +4,15 @@ from typing import Any
 
 import pytest
 from xsdata.formats.dataclass.context import XmlContext
-from xsdata.formats.dataclass.parsers import JsonParser
-from xsdata.formats.dataclass.parsers import XmlParser
-from xsdata.formats.dataclass.serializers import JsonSerializer
-from xsdata.formats.dataclass.serializers import PycodeSerializer
-from xsdata.formats.dataclass.serializers import XmlSerializer
+from xsdata.formats.dataclass.parsers import JsonParser, XmlParser
+from xsdata.formats.dataclass.serializers import (
+    JsonSerializer,
+    PycodeSerializer,
+    TreeSerializer,
+    XmlSerializer,
+)
 from xsdata.formats.dataclass.serializers.config import SerializerConfig
-from xsdata.formats.dataclass.serializers import TreeSerializer
 from xsdata.utils.debug import convert
-
 
 _session_context_data: dict[str, Any] = {}
 

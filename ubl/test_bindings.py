@@ -1,11 +1,10 @@
 import functools
 from pathlib import Path
-from typing import Dict
 
 import pytest
 from lxml import etree
 
-from ubl.models.maindoc import *  # noqa
+from ubl.models.maindoc import *
 
 cases = []
 ids = []
@@ -28,7 +27,7 @@ def get_validator(xsd: str):
 
 @pytest.mark.parametrize("schema,sample", cases, ids=ids)
 def test_serialize(schema, sample, xml_parser, xml_serializer, code_serializer):
-    ns_map: Dict = {}
+    ns_map: dict = {}
 
     obj = xml_parser.from_path(samples.joinpath(sample), ns_map=ns_map)
     result = xml_serializer.render(obj, ns_map=ns_map)

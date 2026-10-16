@@ -1,8 +1,8 @@
 import asyncio
 import sys
-from typing import Iterator
+from collections.abc import Iterator
 
-from invoke import task, Context, Collection
+from invoke import Collection, Context, task
 
 # ANSI color codes for suite prefixes (similar to docker-compose)
 COLORS = [
@@ -55,7 +55,7 @@ def get_suite(c: Context, suite: str | None = None) -> Iterator[str]:
 
 def get_prefix(suite: str) -> str:
     """Get a colored prefix for a suite."""
-    max_suite_len = max(len(s) for s in SUITES.keys())
+    max_suite_len = max(len(s) for s in SUITES)
     suite_index = list(SUITES.keys()).index(suite)
     color = COLORS[suite_index % len(COLORS)]
     return f"{color}[{suite:<{max_suite_len}}]{RESET}"
@@ -150,9 +150,7 @@ async def run_suite_all(
         return False
     if not await run_suite_test(suite, output_format, dump_context):
         return False
-    if not await run_suite_mypy(suite):
-        return False
-    return True
+    return await run_suite_mypy(suite)
 
 
 def print_summary(results: dict[str, bool], task_name: str) -> bool:
@@ -301,7 +299,7 @@ ns.add_task(mypy)
 ns.add_task(test)
 ns.add_task(config)
 
-for key in SUITES.keys():
+for key in SUITES:
     collection = Collection(key)
     collection.add_task(build)
     collection.add_task(test)

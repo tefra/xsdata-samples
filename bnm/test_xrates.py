@@ -1,12 +1,9 @@
 from pathlib import Path
-from unittest import mock
-from unittest import TestCase
+from unittest import TestCase, mock
 
 from requests import Response
 
-from bnm.xrates import Currencies
-from bnm.xrates import Currency
-from bnm.xrates import fetch
+from bnm.xrates import Currencies, Currency, fetch
 
 
 class FetchTest(TestCase):

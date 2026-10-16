@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import Dict
 
 import pytest
 from lxml import etree
@@ -17,7 +16,7 @@ validator = etree.XMLSchema(etree.parse(str(schema)))
 
 @pytest.mark.parametrize("sample", samples)
 def test_bindings(sample, xml_parser, xml_serializer, code_serializer):
-    ns_map: Dict = {}
+    ns_map: dict = {}
     obj = xml_parser.from_path(functions.joinpath(sample), PublicationDelivery, ns_map)
     result = xml_serializer.render(obj, ns_map=ns_map)
     code = code_serializer.render(obj)

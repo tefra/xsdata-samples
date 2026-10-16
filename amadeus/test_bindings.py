@@ -3,8 +3,10 @@ from pathlib import Path
 
 from lxml import etree
 
-from amadeus.models import FareMasterPricerTravelBoardSearch
-from amadeus.models import FareMasterPricerTravelBoardSearchReply
+from amadeus.models import (
+    FareMasterPricerTravelBoardSearch,
+    FareMasterPricerTravelBoardSearchReply,
+)
 
 cwd = Path(__file__).parent.absolute()
 xsd_location = str(
