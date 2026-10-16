@@ -1,10 +1,11 @@
 [tools]
-python = "3.13"
-
+python = "3.11"
+uv = "latest"
 
 [env]
 _.python.venv = { path = ".venv", create = true }
 
-
-[settings]
-python.venv_stdlib = true
+[tasks.install]
+description = "Install dependencies"
+alias = "i"
+run = "uv pip install -r requirements.txt"
