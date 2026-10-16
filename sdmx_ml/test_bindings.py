@@ -1,10 +1,9 @@
 from pathlib import Path
-from typing import Dict
 
 import pytest
 from lxml import etree
 
-from sdmx_ml.models import *  # noqa
+from sdmx_ml.models import *
 
 here = Path(__file__).parent
 output = here.joinpath("output")
@@ -19,7 +18,7 @@ validator = etree.XMLSchema(etree.parse(str(schema)))
 
 @pytest.mark.parametrize("sample", samples)
 def test_bindings(sample, xml_parser, xml_serializer, code_serializer):
-    ns_map: Dict = {}
+    ns_map: dict = {}
     sample_xml = samples_dir.joinpath(sample).read_bytes()
     obj = xml_parser.from_bytes(sample_xml)
     result = xml_serializer.render(obj, ns_map=ns_map)

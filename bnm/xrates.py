@@ -1,9 +1,6 @@
 import datetime
-from dataclasses import asdict
-from dataclasses import dataclass
-from dataclasses import field
+from dataclasses import asdict, dataclass, field
 from decimal import Decimal
-from typing import List
 
 import requests
 from xsdata.formats.dataclass.parsers import XmlParser
@@ -13,12 +10,12 @@ from xsdata.formats.dataclass.parsers import XmlParser
 
 @dataclass
 class Currency:
-    id: int = field(metadata=dict(type="Attribute", name="ID"))
-    name: str = field(metadata=dict(type="Element", name="Name"))
-    num_code: int = field(metadata=dict(type="Element", name="NumCode"))
-    iso_code: str = field(metadata=dict(type="Element", name="CharCode"))
-    nominal: int = field(metadata=dict(type="Element", name="Nominal"))
-    value: Decimal = field(metadata=dict(type="Element", name="Value"))
+    id: int = field(metadata={"type": "Attribute", "name": "ID"})
+    name: str = field(metadata={"type": "Element", "name": "Name"})
+    num_code: int = field(metadata={"type": "Element", "name": "NumCode"})
+    iso_code: str = field(metadata={"type": "Element", "name": "CharCode"})
+    nominal: int = field(metadata={"type": "Element", "name": "Nominal"})
+    value: Decimal = field(metadata={"type": "Element", "name": "Value"})
 
 
 @dataclass
@@ -26,10 +23,10 @@ class Currencies:
     class Meta:
         name = "ValCurs"
 
-    date: str = field(metadata=dict(type="Attribute", name="Date"))
-    name: str = field(metadata=dict(type="Attribute"))
-    values: List[Currency] = field(
-        default_factory=list, metadata=dict(type="Element", name="Valute")
+    date: str = field(metadata={"type": "Attribute", "name": "Date"})
+    name: str = field(metadata={"type": "Attribute"})
+    values: list[Currency] = field(
+        default_factory=list, metadata={"type": "Element", "name": "Valute"}
     )
 
 

@@ -1,10 +1,9 @@
 from pathlib import Path
-from typing import Dict
 
 import pytest
 from lxml import etree
 
-from xcbl.models import *  # noqa
+from xcbl.models import *
 
 here = Path(__file__).parent
 schemas = here.joinpath("schemas")
@@ -15,7 +14,7 @@ samples = list(map(str, samples_dir.rglob("*.xml")))
 
 @pytest.mark.parametrize("sample", samples)
 def test_bindings(sample, xml_parser, xml_serializer):
-    ns_map: Dict = {}
+    ns_map: dict = {}
     obj = xml_parser.parse(sample, ns_map=ns_map)
     result = xml_serializer.render(obj, ns_map=ns_map)
 

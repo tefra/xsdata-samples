@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import Dict
 
 import pytest
 from lxml import etree
@@ -19,7 +18,7 @@ dtd = etree.DTD(schemas.joinpath("vokoxml.dtd"))
 def test_bindings(sample, xml_parser, xml_serializer):
     xml_parser.config.load_dtd = True
     xml_parser.config.resolve_entities = True
-    ns_map: Dict = {}
+    ns_map: dict = {}
     obj = xml_parser.parse(sample, Vortaro, ns_map)
     result = xml_serializer.render(obj, ns_map=ns_map)
 
