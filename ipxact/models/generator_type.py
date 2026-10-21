@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-from ipxact.models.api_type import ApiType
+from ipxact.models.api_type import ApiType as ApiTypeApiType
 from ipxact.models.description import Description
 from ipxact.models.display_name import DisplayName
 from ipxact.models.generator_type_api_service import GeneratorTypeApiService
@@ -150,7 +150,7 @@ class GeneratorType:
 
     @dataclass(kw_only=True)
     class ApiType:
-        value: ApiType = field()
+        value: ApiTypeApiType = field()
         id: None | str = field(
             default=None,
             metadata={

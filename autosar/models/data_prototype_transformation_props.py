@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from .data_prototype_in_port_interface_ref import (
-    DataPrototypeInPortInterfaceRef,
+    DataPrototypeInPortInterfaceRef as DataPrototypeInPortInterfaceRefDataPrototypeInPortInterfaceRef,
 )
 from .data_prototype_with_application_data_type_in_system_ref import (
     DataPrototypeWithApplicationDataTypeInSystemRef,
@@ -123,7 +123,8 @@ class DataPrototypeTransformationProps:
     @dataclass(kw_only=True)
     class DataProtototypeInPortInterfaceRef:
         data_prototype_in_port_interface_ref: (
-            None | DataPrototypeInPortInterfaceRef
+            None
+            | DataPrototypeInPortInterfaceRefDataPrototypeInPortInterfaceRef
         ) = field(
             default=None,
             metadata={
@@ -146,7 +147,8 @@ class DataPrototypeTransformationProps:
     @dataclass(kw_only=True)
     class DataPrototypeInPortInterfaceRef:
         data_prototype_in_port_interface_ref: (
-            None | DataPrototypeInPortInterfaceRef
+            None
+            | DataPrototypeInPortInterfaceRefDataPrototypeInPortInterfaceRef
         ) = field(
             default=None,
             metadata={
