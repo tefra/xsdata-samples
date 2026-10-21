@@ -878,7 +878,7 @@ class PrpaMt201304Uv02NonPersonLivingSubject:
         },
     )
     as_patient_of_other_provider: list[
-        PrpaMt201304Uv02PatientOfOtherProvider
+        None | PrpaMt201304Uv02PatientOfOtherProvider
     ] = field(
         default_factory=list,
         metadata={
@@ -888,7 +888,7 @@ class PrpaMt201304Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_member: list[PrpaMt201304Uv02Member] = field(
+    as_member: list[None | PrpaMt201304Uv02Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -897,7 +897,7 @@ class PrpaMt201304Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_other_ids: list[PrpaMt201304Uv02OtherIds] = field(
+    as_other_ids: list[None | PrpaMt201304Uv02OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -975,7 +975,7 @@ class PrpaMt201304Uv02Person:
         },
     )
     as_patient_of_other_provider: list[
-        PrpaMt201304Uv02PatientOfOtherProvider
+        None | PrpaMt201304Uv02PatientOfOtherProvider
     ] = field(
         default_factory=list,
         metadata={
@@ -985,7 +985,7 @@ class PrpaMt201304Uv02Person:
             "nillable": True,
         },
     )
-    as_employee: list[PrpaMt201304Uv02Employee] = field(
+    as_employee: list[None | PrpaMt201304Uv02Employee] = field(
         default_factory=list,
         metadata={
             "name": "asEmployee",
@@ -994,7 +994,7 @@ class PrpaMt201304Uv02Person:
             "nillable": True,
         },
     )
-    as_citizen: list[PrpaMt201304Uv02Citizen] = field(
+    as_citizen: list[None | PrpaMt201304Uv02Citizen] = field(
         default_factory=list,
         metadata={
             "name": "asCitizen",
@@ -1003,7 +1003,7 @@ class PrpaMt201304Uv02Person:
             "nillable": True,
         },
     )
-    as_student: list[PrpaMt201304Uv02Student] = field(
+    as_student: list[None | PrpaMt201304Uv02Student] = field(
         default_factory=list,
         metadata={
             "name": "asStudent",
@@ -1012,7 +1012,7 @@ class PrpaMt201304Uv02Person:
             "nillable": True,
         },
     )
-    as_member: list[PrpaMt201304Uv02Member] = field(
+    as_member: list[None | PrpaMt201304Uv02Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -1021,7 +1021,7 @@ class PrpaMt201304Uv02Person:
             "nillable": True,
         },
     )
-    as_other_ids: list[PrpaMt201304Uv02OtherIds] = field(
+    as_other_ids: list[None | PrpaMt201304Uv02OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -1146,7 +1146,7 @@ class PrpaMt201304Uv02Patient:
             "nillable": True,
         },
     )
-    covered_party_of: list[PrpaMt201304Uv02CoveredParty] = field(
+    covered_party_of: list[None | PrpaMt201304Uv02CoveredParty] = field(
         default_factory=list,
         metadata={
             "name": "coveredPartyOf",

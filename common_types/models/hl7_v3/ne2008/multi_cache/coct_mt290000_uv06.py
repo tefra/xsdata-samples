@@ -1292,7 +1292,7 @@ class CoctMt290000Uv06InjuryLocation:
             "nillable": True,
         },
     )
-    subject_of: list[CoctMt290000Uv06Subject3] = field(
+    subject_of: list[None | CoctMt290000Uv06Subject3] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf",
@@ -1948,7 +1948,7 @@ class CoctMt290000Uv06InjuryPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    injury_location: list[CoctMt290000Uv06InjuryLocation] = field(
+    injury_location: list[None | CoctMt290000Uv06InjuryLocation] = field(
         default_factory=list,
         metadata={
             "name": "injuryLocation",
@@ -2119,7 +2119,7 @@ class CoctMt290000Uv06PatientEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reason: list[CoctMt290000Uv06Reason5] = field(
+    reason: list[None | CoctMt290000Uv06Reason5] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2346,14 +2346,16 @@ class CoctMt290000Uv06AssignedEntity:
             "nillable": True,
         },
     )
-    indirect_authority: list[CoctMt290000Uv06IndirectAuthorithyOver] = field(
-        default_factory=list,
-        metadata={
-            "name": "indirectAuthority",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    indirect_authority: list[None | CoctMt290000Uv06IndirectAuthorithyOver] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "indirectAuthority",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2539,7 +2541,7 @@ class CoctMt290000Uv06Injury:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    origin: list[CoctMt290000Uv06Origin] = field(
+    origin: list[None | CoctMt290000Uv06Origin] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3100,7 +3102,7 @@ class CoctMt290000Uv06PatientCareProvisionRequest:
             "nillable": True,
         },
     )
-    reason: list[CoctMt290000Uv06Reason] = field(
+    reason: list[None | CoctMt290000Uv06Reason] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3402,7 +3404,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt290000Uv06Subject5] = field(
+    subject: list[None | CoctMt290000Uv06Subject5] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3419,7 +3421,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    product: list[CoctMt290000Uv06Product1] = field(
+    product: list[None | CoctMt290000Uv06Product1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3436,14 +3438,16 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    secondary_performer: list[CoctMt290000Uv06SecondaryPerformer] = field(
-        default_factory=list,
-        metadata={
-            "name": "secondaryPerformer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    secondary_performer: list[None | CoctMt290000Uv06SecondaryPerformer] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "secondaryPerformer",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     performer: None | CoctMt290000Uv06Performer = field(
         default=None,
@@ -3461,7 +3465,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    consultant: list[CoctMt290000Uv06Consultant] = field(
+    consultant: list[None | CoctMt290000Uv06Consultant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3477,7 +3481,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    in_fulfillment_of: list[CoctMt290000Uv06InFulfillmentOf] = field(
+    in_fulfillment_of: list[None | CoctMt290000Uv06InFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "name": "inFulfillmentOf",
@@ -3486,7 +3490,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    reason1: list[CoctMt290000Uv06Reason1] = field(
+    reason1: list[None | CoctMt290000Uv06Reason1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3494,7 +3498,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    reason2: list[CoctMt290000Uv06Reason4] = field(
+    reason2: list[None | CoctMt290000Uv06Reason4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3502,7 +3506,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    reason3: list[CoctMt290000Uv06Reason3] = field(
+    reason3: list[None | CoctMt290000Uv06Reason3] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3518,7 +3522,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    subject_of1: list[CoctMt290000Uv06Subject2] = field(
+    subject_of1: list[None | CoctMt290000Uv06Subject2] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -3536,7 +3540,7 @@ class CoctMt290000Uv06BillableClinicalService:
             "nillable": True,
         },
     )
-    component_of: list[CoctMt290000Uv06Component1] = field(
+    component_of: list[None | CoctMt290000Uv06Component1] = field(
         default_factory=list,
         metadata={
             "name": "componentOf",

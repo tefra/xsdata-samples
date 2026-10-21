@@ -496,14 +496,16 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    care_provision_reason: list[QupcMt040300Uv01CareProvisionReason] = field(
-        default_factory=list,
-        metadata={
-            "name": "careProvisionReason",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    care_provision_reason: list[None | QupcMt040300Uv01CareProvisionReason] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "careProvisionReason",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     care_record_time_period: None | QupcMt040300Uv01CareRecordTimePeriod = (
         field(

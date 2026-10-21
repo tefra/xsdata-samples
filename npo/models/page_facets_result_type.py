@@ -19,7 +19,7 @@ class PageFacetsResultType:
     class Meta:
         name = "pageFacetsResultType"
 
-    sort_dates: list[DateFacetResultItemType] = field(
+    sort_dates: list[None | DateFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "name": "sortDates",
@@ -28,7 +28,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    types: list[TermFacetResultItemType] = field(
+    types: list[None | TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -36,7 +36,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    broadcasters: list[TermFacetResultItemType] = field(
+    broadcasters: list[None | TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -44,7 +44,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    tags: list[TermFacetResultItemType] = field(
+    tags: list[None | TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -52,7 +52,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    keywords: list[TermFacetResultItemType] = field(
+    keywords: list[None | TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -60,7 +60,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    genres: list[PageGenreFacetResultItemType] = field(
+    genres: list[None | PageGenreFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -68,7 +68,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    portals: list[TermFacetResultItemType] = field(
+    portals: list[None | TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -76,7 +76,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    sections: list[TermFacetResultItemType] = field(
+    sections: list[None | TermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -84,7 +84,7 @@ class PageFacetsResultType:
             "nillable": True,
         },
     )
-    relations: list[NamedTermFacetResultItemType] = field(
+    relations: list[None | NamedTermFacetResultItemType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -185,7 +185,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
             "nillable": True,
         }
     )
-    in_fulfillment_of: list[MfmiMt700701Uv01InFulfillmentOf] = field(
+    in_fulfillment_of: list[None | MfmiMt700701Uv01InFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "name": "inFulfillmentOf",
@@ -194,7 +194,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    definition: list[MfmiMt700701Uv01Definition] = field(
+    definition: list[None | MfmiMt700701Uv01Definition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -202,7 +202,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    replacement_of: list[MfmiMt700701Uv01ReplacementOf] = field(
+    replacement_of: list[None | MfmiMt700701Uv01ReplacementOf] = field(
         default_factory=list,
         metadata={
             "name": "replacementOf",
@@ -406,7 +406,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    overseer: list[MfmiMt700701Uv01Overseer] = field(
+    overseer: list[None | MfmiMt700701Uv01Overseer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -414,16 +414,18 @@ class PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    author_or_performer: list[MfmiMt700701Uv01AuthorOrPerformer] = field(
-        default_factory=list,
-        metadata={
-            "name": "authorOrPerformer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    author_or_performer: list[None | MfmiMt700701Uv01AuthorOrPerformer] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "authorOrPerformer",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    data_enterer: list[MfmiMt700701Uv01DataEnterer] = field(
+    data_enterer: list[None | MfmiMt700701Uv01DataEnterer] = field(
         default_factory=list,
         metadata={
             "name": "dataEnterer",
@@ -432,7 +434,9 @@ class PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    information_recipient: list[MfmiMt700701Uv01InformationRecipient] = field(
+    information_recipient: list[
+        None | MfmiMt700701Uv01InformationRecipient
+    ] = field(
         default_factory=list,
         metadata={
             "name": "informationRecipient",
@@ -441,7 +445,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    subject: list[PrpaIn201304Uv02MfmiMt700701Uv01Subject1] = field(
+    subject: list[None | PrpaIn201304Uv02MfmiMt700701Uv01Subject1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -450,7 +454,7 @@ class PrpaIn201304Uv02MfmiMt700701Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    reason_of: list[MfmiMt700701Uv01Reason] = field(
+    reason_of: list[None | MfmiMt700701Uv01Reason] = field(
         default_factory=list,
         metadata={
             "name": "reasonOf",
@@ -598,7 +602,7 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "min_occurs": 1,
         },
     )
-    respond_to: list[McciMt000100Uv01RespondTo] = field(
+    respond_to: list[None | McciMt000100Uv01RespondTo] = field(
         default_factory=list,
         metadata={
             "name": "respondTo",
@@ -613,7 +617,7 @@ class PrpaIn201304Uv02McciMt000100Uv01Message:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    attention_line: list[McciMt000100Uv01AttentionLine] = field(
+    attention_line: list[None | McciMt000100Uv01AttentionLine] = field(
         default_factory=list,
         metadata={
             "name": "attentionLine",

@@ -1064,7 +1064,7 @@ class MfmiMt700711Uv01RegistrationRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: list[MfmiMt700711Uv01Author1] = field(
+    author: list[None | MfmiMt700711Uv01Author1] = field(
         default_factory=list,
         metadata={
             "type": "Element",

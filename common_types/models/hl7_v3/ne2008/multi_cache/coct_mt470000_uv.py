@@ -274,7 +274,7 @@ class CoctMt470000UvConsent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    responsible_party: list[CoctMt470000UvResponsibleParty] = field(
+    responsible_party: list[None | CoctMt470000UvResponsibleParty] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -284,7 +284,7 @@ class CoctMt470000UvConsent:
             "nillable": True,
         },
     )
-    performer: list[CoctMt470000UvPerformer] = field(
+    performer: list[None | CoctMt470000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",

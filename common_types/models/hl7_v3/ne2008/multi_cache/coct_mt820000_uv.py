@@ -244,17 +244,19 @@ class CoctMt820000UvPerson:
             "min_occurs": 1,
         },
     )
-    as_health_care_provider: list[CoctMt820000UvHealthCareProvider] = field(
-        default_factory=list,
-        metadata={
-            "name": "asHealthCareProvider",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "min_occurs": 1,
-            "nillable": True,
-        },
+    as_health_care_provider: list[None | CoctMt820000UvHealthCareProvider] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "asHealthCareProvider",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "min_occurs": 1,
+                "nillable": True,
+            },
+        )
     )
-    as_role_other: list[CoctMt820000UvRoleOther] = field(
+    as_role_other: list[None | CoctMt820000UvRoleOther] = field(
         default_factory=list,
         metadata={
             "name": "asRoleOther",

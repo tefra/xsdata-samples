@@ -361,7 +361,7 @@ class CoctMt670000Uv04GuarantorPerson:
             }
         )
     )
-    guarantor_language: list[CoctMt670000Uv04GuarantorLanguage] = field(
+    guarantor_language: list[None | CoctMt670000Uv04GuarantorLanguage] = field(
         default_factory=list,
         metadata={
             "name": "guarantorLanguage",
@@ -544,7 +544,7 @@ class CoctMt670000Uv04GuarantorRole:
             },
         )
     )
-    contract_held: list[CoctMt670000Uv04Holder] = field(
+    contract_held: list[None | CoctMt670000Uv04Holder] = field(
         default_factory=list,
         metadata={
             "name": "contractHeld",

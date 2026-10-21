@@ -1413,7 +1413,7 @@ class CoctMt010000Uv01ServiceDeliveryLocation:
             "nillable": True,
         },
     )
-    location_of: list[CoctMt010000Uv01Location3] = field(
+    location_of: list[None | CoctMt010000Uv01Location3] = field(
         default_factory=list,
         metadata={
             "name": "locationOf",
@@ -1657,7 +1657,7 @@ class CoctMt010000Uv01Encounter:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    responsible_party: list[CoctMt010000Uv01ResponsibleParty1] = field(
+    responsible_party: list[None | CoctMt010000Uv01ResponsibleParty1] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -1674,7 +1674,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    attender: list[CoctMt010000Uv01Attender] = field(
+    attender: list[None | CoctMt010000Uv01Attender] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1698,7 +1698,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    consultant: list[CoctMt010000Uv01Consultant] = field(
+    consultant: list[None | CoctMt010000Uv01Consultant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1706,16 +1706,18 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    notification_contact: list[CoctMt010000Uv01NotificationContact] = field(
-        default_factory=list,
-        metadata={
-            "name": "notificationContact",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    notification_contact: list[None | CoctMt010000Uv01NotificationContact] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "notificationContact",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    location: list[CoctMt010000Uv01Location1] = field(
+    location: list[None | CoctMt010000Uv01Location1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1741,7 +1743,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    cause_of: list[CoctMt010000Uv01CauseOf] = field(
+    cause_of: list[None | CoctMt010000Uv01CauseOf] = field(
         default_factory=list,
         metadata={
             "name": "causeOf",
@@ -1750,7 +1752,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    authorization: list[CoctMt010000Uv01Authorization] = field(
+    authorization: list[None | CoctMt010000Uv01Authorization] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1758,7 +1760,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    reference: list[CoctMt010000Uv01Reference] = field(
+    reference: list[None | CoctMt010000Uv01Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1766,29 +1768,29 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    pertinent_information1: list[CoctMt010000Uv01PertinentInformation2] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "pertinentInformation1",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    pertinent_information1: list[
+        None | CoctMt010000Uv01PertinentInformation2
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "pertinentInformation1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
-    pertinent_information2: list[CoctMt010000Uv01PertinentInformation3] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "pertinentInformation2",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    pertinent_information2: list[
+        None | CoctMt010000Uv01PertinentInformation3
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "pertinentInformation2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
-    transported_by: list[CoctMt010000Uv01TransportedBy] = field(
+    transported_by: list[None | CoctMt010000Uv01TransportedBy] = field(
         default_factory=list,
         metadata={
             "name": "transportedBy",
@@ -1797,7 +1799,7 @@ class CoctMt010000Uv01Encounter:
             "nillable": True,
         },
     )
-    component_of: list[CoctMt010000Uv01Component] = field(
+    component_of: list[None | CoctMt010000Uv01Component] = field(
         default_factory=list,
         metadata={
             "name": "componentOf",

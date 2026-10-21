@@ -360,7 +360,7 @@ class CoctMt910000UvRelatedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_other_ids: list[CoctMt910000UvOtherIds] = field(
+    as_other_ids: list[None | CoctMt910000UvOtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",

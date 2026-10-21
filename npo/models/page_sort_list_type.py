@@ -12,7 +12,7 @@ class PageSortListType:
     class Meta:
         name = "pageSortListType"
 
-    sort: list[PageSortType] = field(
+    sort: list[None | PageSortType] = field(
         default_factory=list,
         metadata={
             "type": "Element",

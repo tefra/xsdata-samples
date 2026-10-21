@@ -537,7 +537,7 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "nillable": True,
         },
     )
-    sort_control: list[PrpaMt900300Uv02SortControl] = field(
+    sort_control: list[None | PrpaMt900300Uv02SortControl] = field(
         default_factory=list,
         metadata={
             "name": "sortControl",

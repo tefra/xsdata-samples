@@ -155,7 +155,7 @@ class PrpaMt201307UvParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    data_source: list[PrpaMt201307UvDataSource] = field(
+    data_source: list[None | PrpaMt201307UvDataSource] = field(
         default_factory=list,
         metadata={
             "name": "dataSource",

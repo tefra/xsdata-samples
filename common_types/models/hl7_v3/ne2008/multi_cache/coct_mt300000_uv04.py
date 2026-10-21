@@ -1446,7 +1446,7 @@ class CoctMt300000Uv04SubstanceAdministrationIntent:
             },
         )
     )
-    subject_of: list[CoctMt300000Uv04Subject] = field(
+    subject_of: list[None | CoctMt300000Uv04Subject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf",

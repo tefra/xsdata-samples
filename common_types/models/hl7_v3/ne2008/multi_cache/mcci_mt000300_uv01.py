@@ -487,16 +487,16 @@ class McciMt000300Uv01Acknowledgement:
             "nillable": True,
         }
     )
-    acknowledgement_detail: list[McciMt000300Uv01AcknowledgementDetail] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "acknowledgementDetail",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    acknowledgement_detail: list[
+        None | McciMt000300Uv01AcknowledgementDetail
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "acknowledgementDetail",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -648,7 +648,7 @@ class McciMt000300Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entity_rsp: list[McciMt000300Uv01EntityRsp] = field(
+    entity_rsp: list[None | McciMt000300Uv01EntityRsp] = field(
         default_factory=list,
         metadata={
             "name": "entityRsp",
@@ -764,7 +764,7 @@ class McciMt000300Uv01Device:
             "nillable": True,
         },
     )
-    as_located_entity: list[McciMt000300Uv01LocatedEntity] = field(
+    as_located_entity: list[None | McciMt000300Uv01LocatedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLocatedEntity",

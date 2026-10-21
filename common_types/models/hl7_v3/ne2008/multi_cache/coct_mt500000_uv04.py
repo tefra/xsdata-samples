@@ -626,7 +626,7 @@ class CoctMt500000Uv04PolicyHolderPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_employment: list[CoctMt500000Uv04Employment] = field(
+    as_employment: list[None | CoctMt500000Uv04Employment] = field(
         default_factory=list,
         metadata={
             "name": "asEmployment",

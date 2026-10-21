@@ -1542,7 +1542,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[RepcMt004000Uv01Subject3] = field(
+    subject: list[None | RepcMt004000Uv01Subject3] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1559,7 +1559,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    performer: list[RepcMt004000Uv01Performer] = field(
+    performer: list[None | RepcMt004000Uv01Performer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1595,7 +1595,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    verifier: list[RepcMt004000Uv01Verifier] = field(
+    verifier: list[None | RepcMt004000Uv01Verifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1603,7 +1603,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    in_fulfillment_of: list[RepcMt004000Uv01InFulfillmentOf2] = field(
+    in_fulfillment_of: list[None | RepcMt004000Uv01InFulfillmentOf2] = field(
         default_factory=list,
         metadata={
             "name": "inFulfillmentOf",
@@ -1613,7 +1613,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    replacement_of: list[RepcMt004000Uv01ReplacementOf] = field(
+    replacement_of: list[None | RepcMt004000Uv01ReplacementOf] = field(
         default_factory=list,
         metadata={
             "name": "replacementOf",
@@ -1622,7 +1622,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    reason: list[RepcMt004000Uv01Reason] = field(
+    reason: list[None | RepcMt004000Uv01Reason] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1630,7 +1630,7 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    reference: list[RepcMt004000Uv01Reference] = field(
+    reference: list[None | RepcMt004000Uv01Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1638,7 +1638,9 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    pertinent_information1: list[RepcMt004000Uv01PertinentInformation] = field(
+    pertinent_information1: list[
+        None | RepcMt004000Uv01PertinentInformation
+    ] = field(
         default_factory=list,
         metadata={
             "name": "pertinentInformation1",
@@ -1647,29 +1649,29 @@ class RepcMt004000Uv01CareProvisionEvent:
             "nillable": True,
         },
     )
-    pertinent_information2: list[RepcMt004000Uv01PertinentInformation4] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "pertinentInformation2",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    pertinent_information2: list[
+        None | RepcMt004000Uv01PertinentInformation4
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "pertinentInformation2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
-    pertinent_information3: list[RepcMt004000Uv01PertinentInformation5] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "pertinentInformation3",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    pertinent_information3: list[
+        None | RepcMt004000Uv01PertinentInformation5
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "pertinentInformation3",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
-    component: list[RepcMt004000Uv01Component] = field(
+    component: list[None | RepcMt004000Uv01Component] = field(
         default_factory=list,
         metadata={
             "type": "Element",

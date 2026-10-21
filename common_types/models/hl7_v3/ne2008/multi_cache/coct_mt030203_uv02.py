@@ -149,16 +149,16 @@ class CoctMt030203Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_communication: list[CoctMt030203Uv02LanguageCommunication] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "languageCommunication",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    language_communication: list[
+        None | CoctMt030203Uv02LanguageCommunication
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "languageCommunication",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,

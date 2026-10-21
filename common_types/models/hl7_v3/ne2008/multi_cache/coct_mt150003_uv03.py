@@ -218,7 +218,7 @@ class CoctMt150003Uv03Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    contact_party: list[CoctMt150003Uv03ContactParty] = field(
+    contact_party: list[None | CoctMt150003Uv03ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",

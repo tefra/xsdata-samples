@@ -469,7 +469,7 @@ class CoctMt060000Uv01Transportation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt060000Uv01Subject] = field(
+    subject: list[None | CoctMt060000Uv01Subject] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -477,7 +477,7 @@ class CoctMt060000Uv01Transportation:
             "nillable": True,
         },
     )
-    performer: list[CoctMt060000Uv01Performer] = field(
+    performer: list[None | CoctMt060000Uv01Performer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -485,7 +485,7 @@ class CoctMt060000Uv01Transportation:
             "nillable": True,
         },
     )
-    escort: list[CoctMt060000Uv01Escort] = field(
+    escort: list[None | CoctMt060000Uv01Escort] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -493,7 +493,7 @@ class CoctMt060000Uv01Transportation:
             "nillable": True,
         },
     )
-    location: list[CoctMt060000Uv01Location] = field(
+    location: list[None | CoctMt060000Uv01Location] = field(
         default_factory=list,
         metadata={
             "type": "Element",

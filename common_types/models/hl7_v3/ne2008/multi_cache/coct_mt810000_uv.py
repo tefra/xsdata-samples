@@ -458,7 +458,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    primary_performer: list[CoctMt810000UvPrimaryPerformer] = field(
+    primary_performer: list[None | CoctMt810000UvPrimaryPerformer] = field(
         default_factory=list,
         metadata={
             "name": "primaryPerformer",
@@ -467,7 +467,7 @@ class CoctMt810000UvVerification:
             "nillable": True,
         },
     )
-    in_fulfillment_of: list[CoctMt810000UvInFulfillmentOf] = field(
+    in_fulfillment_of: list[None | CoctMt810000UvInFulfillmentOf] = field(
         default_factory=list,
         metadata={
             "name": "inFulfillmentOf",
@@ -476,7 +476,7 @@ class CoctMt810000UvVerification:
             "nillable": True,
         },
     )
-    support: list[CoctMt810000UvSupport] = field(
+    support: list[None | CoctMt810000UvSupport] = field(
         default_factory=list,
         metadata={
             "type": "Element",
