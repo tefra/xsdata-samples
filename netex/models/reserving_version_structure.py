@@ -53,6 +53,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "name": "MustReserveWholeCompartment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     reservation_charge_type: None | ReservationChargeTypeEnumeration = field(
@@ -93,6 +94,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "name": "IsFeeRefundable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     booking_arrangements: None | BookingArrangementsStructure = field(

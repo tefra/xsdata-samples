@@ -43,6 +43,7 @@ class DeltaStructure:
             "name": "Modification",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "revise",
         },
     )
     delta_values: None | DeltaValuesRelStructure = field(

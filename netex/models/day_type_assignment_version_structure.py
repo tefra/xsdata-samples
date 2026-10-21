@@ -97,5 +97,6 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "isAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )

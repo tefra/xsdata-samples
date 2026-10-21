@@ -42,6 +42,7 @@ class FrequencyStructure:
             "name": "HeadwayDisplay",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "DisplayInsteadOfPassingTimes",
         },
     )
     frequency_regulated: None | bool = field(

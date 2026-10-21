@@ -30,6 +30,7 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "name": "DeliveryVariantMediaType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "other",
         },
     )
     type_of_delivery_variant_ref: None | TypeOfDeliveryVariantRef = field(

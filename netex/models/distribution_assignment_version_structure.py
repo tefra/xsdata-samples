@@ -180,6 +180,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "name": "AllowedInCountry",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     topographic_place_ref: None | TopographicPlaceRef = field(
@@ -234,6 +235,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "name": "AllowedInChannel",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     restricted_to_channel: None | bool = field(
@@ -242,6 +244,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "name": "RestrictedToChannel",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     mandatory_product: None | bool = field(

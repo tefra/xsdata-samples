@@ -388,6 +388,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "name": "TariffBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "route",
         },
     )
     return_fare_twice_single: None | bool = field(
@@ -396,6 +397,7 @@ class TariffVersionStructure(DataManagedObjectStructure):
             "name": "ReturnFareTwiceSingle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     geographical_unit_ref: None | GeographicalUnitRef = field(

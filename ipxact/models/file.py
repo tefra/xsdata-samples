@@ -69,6 +69,7 @@ class File:
         metadata={
             "name": "isStructural",
             "type": "Element",
+            "empty_value": "false",
         },
     )
     is_include_file: None | File.IsIncludeFile = field(

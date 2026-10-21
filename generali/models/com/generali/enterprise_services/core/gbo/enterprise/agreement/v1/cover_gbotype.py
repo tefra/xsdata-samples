@@ -304,6 +304,7 @@ class CoverGbotype(AgreementType):
             "name": "ExchangeRate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
+            "empty_value": "1.00",
         },
     )
     is_centralised_premium_payment: None | bool = field(

@@ -67,6 +67,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "name": "OperationalOrientation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "forwards",
         },
     )
     order: None | int = field(

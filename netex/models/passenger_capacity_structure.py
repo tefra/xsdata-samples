@@ -16,6 +16,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "name": "FareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "any",
         },
     )
     total_capacity: None | int = field(

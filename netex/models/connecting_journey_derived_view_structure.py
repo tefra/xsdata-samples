@@ -131,5 +131,6 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "name": "ConnectingVisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "1",
         },
     )

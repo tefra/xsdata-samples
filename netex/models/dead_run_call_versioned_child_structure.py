@@ -246,6 +246,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "RequestStop",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     request_method: None | RequestMethodTypeEnumeration = field(
@@ -254,6 +255,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "RequestMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "noneRequired",
         },
     )
     stop_use: None | StopUseEnumeration = field(
@@ -278,6 +280,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "Print",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     dynamic: None | DynamicAdvertisementEnumeration = field(
@@ -286,6 +289,7 @@ class DeadRunCallVersionedChildStructure(VersionedChildStructure):
             "name": "Dynamic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "always",
         },
     )
     note: None | MultilingualString = field(

@@ -261,6 +261,7 @@ class FareTableSpecificsStructure:
             "name": "DirectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
         },
     )
     routing_type: None | RoutingTypeEnumeration = field(
@@ -269,6 +270,7 @@ class FareTableSpecificsStructure:
             "name": "RoutingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
         },
     )
     fare_class: None | FareClass = field(

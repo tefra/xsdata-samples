@@ -90,6 +90,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "name": "HolidayType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "AnyDay",
         },
     )
     season: Sequence[SeasonEnumeration] = field(
@@ -98,6 +99,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "name": "Season",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "Perennially",
             "max_occurs": 5,
         },
     )

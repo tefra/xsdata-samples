@@ -74,6 +74,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "name": "VisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "1",
         },
     )
     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: (
@@ -146,6 +147,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "name": "IsWaitPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     time_demand_type_ref_or_timeband_ref: (

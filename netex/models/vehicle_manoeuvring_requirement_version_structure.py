@@ -23,6 +23,7 @@ class VehicleManoeuvringRequirementVersionStructure(
             "name": "Reversible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     minimum_turning_circle: None | Decimal = field(

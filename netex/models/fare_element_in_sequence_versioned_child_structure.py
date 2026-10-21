@@ -35,6 +35,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "IsFirstInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     is_last_in_sequence: None | bool = field(
@@ -43,6 +44,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "IsLastInSequence",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     access_number_is_limited: None | bool = field(
@@ -67,6 +69,7 @@ class FareElementInSequenceVersionedChildStructure(VersionedChildStructure):
             "name": "MaximumAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "1",
         },
     )
     access_number: None | int = field(

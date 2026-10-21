@@ -36,6 +36,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "name": "AssistanceAvailability",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "available",
         },
     )
     wheelchair_booking_required: None | bool = field(

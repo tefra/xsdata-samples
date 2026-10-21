@@ -23,5 +23,6 @@ class NormalDatedVehicleJourneyVersionStructure(
             "name": "ServiceAlterationType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "planned",
         },
     )

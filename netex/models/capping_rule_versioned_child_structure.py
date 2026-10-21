@@ -39,6 +39,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "name": "CappingPeriod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "day",
         },
     )
     capped_discount_right_ref: Sequence[CappedDiscountRightRef] = field(

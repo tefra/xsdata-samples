@@ -21,6 +21,7 @@ class ShelterEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "name": "Enclosed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     distance_from_nearest_kerb: None | Decimal = field(

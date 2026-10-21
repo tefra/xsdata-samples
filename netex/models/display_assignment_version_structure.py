@@ -128,6 +128,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "DisplayAssignmentType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     number_of_journeys_to_show: None | int = field(

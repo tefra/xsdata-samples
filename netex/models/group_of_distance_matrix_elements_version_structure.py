@@ -37,6 +37,7 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             "name": "UseToExclude",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     price_groups: None | PriceGroupsRelStructure = field(

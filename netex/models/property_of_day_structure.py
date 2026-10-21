@@ -52,6 +52,7 @@ class PropertyOfDayStructure:
             "name": "WeeksOfMonth",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "EveryWeek",
             "tokens": True,
         },
     )
@@ -97,6 +98,7 @@ class PropertyOfDayStructure:
             "name": "HolidayTypes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "AnyDay",
             "tokens": True,
         },
     )
@@ -106,6 +108,7 @@ class PropertyOfDayStructure:
             "name": "Seasons",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "Perennially",
             "tokens": True,
         },
     )
@@ -115,6 +118,7 @@ class PropertyOfDayStructure:
             "name": "Tides",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "AllTides",
             "tokens": True,
         },
     )

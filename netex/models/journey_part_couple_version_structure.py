@@ -42,6 +42,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "name": "StartTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     end_time: XmlTime = field(
@@ -57,6 +58,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "name": "EndTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     from_stop_point_ref: ScheduledStopPointRefStructure = field(

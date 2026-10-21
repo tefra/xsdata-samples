@@ -33,6 +33,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "FirstDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     last_departure_time: None | XmlTime = field(
@@ -49,6 +50,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "LastDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     time_demand_types: None | TimeDemandTypeRefsRelStructure = field(

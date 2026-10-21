@@ -60,6 +60,7 @@ class AccessRightParameterAssignmentVersionStructure(
             "name": "IsAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     type_of_access_right_assignment_ref: (
@@ -78,6 +79,7 @@ class AccessRightParameterAssignmentVersionStructure(
             "name": "ChargingBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "any",
         },
     )
     validable_element_ref: None | ValidableElementRef = field(
@@ -268,6 +270,7 @@ class AccessRightParameterAssignmentVersionStructure(
             "name": "LimitationGroupingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "AND",
         },
     )
     limitation_set_selection_type: None | SetOperatorEnumeration = field(
@@ -292,6 +295,7 @@ class AccessRightParameterAssignmentVersionStructure(
                 "name": "ValidityParameterAssignmentType",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
+                "empty_value": "EQ",
             },
         )
     )
@@ -302,6 +306,7 @@ class AccessRightParameterAssignmentVersionStructure(
                 "name": "ValidityParameterGroupingType",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
+                "empty_value": "AND",
             },
         )
     )

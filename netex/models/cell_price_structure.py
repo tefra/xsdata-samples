@@ -321,6 +321,7 @@ class CellPriceStructure:
             "name": "CanBeCumulative",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     rounding_ref: None | RoundingRef = field(

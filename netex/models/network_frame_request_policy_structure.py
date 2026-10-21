@@ -26,6 +26,7 @@ class NetworkFrameRequestPolicyStructure:
             "name": "IncludeDeleted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     urgency: None | XmlDuration = field(

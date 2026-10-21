@@ -29,6 +29,7 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "name": "ToFareClass",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "any",
         },
     )
     to_class_of_use_ref: None | ClassOfUseRefStructure = field(
@@ -45,5 +46,6 @@ class ExchangingVersionStructure(ResellingVersionStructure):
             "name": "ExchangableTo",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "anyProduct",
         },
     )

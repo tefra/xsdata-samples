@@ -163,6 +163,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "name": "ProhibitedForHazardousMaterials",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     recharging_available: None | bool = field(
@@ -281,6 +282,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "name": "FreeParkingOutOfHours",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     parking_properties: None | ParkingPropertiesRelStructure = field(

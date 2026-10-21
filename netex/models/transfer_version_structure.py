@@ -71,6 +71,7 @@ class TransferVersionStructure(DataManagedObjectStructure):
             "name": "BothWays",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     transfer_mode: None | AccessModeEnumeration = field(

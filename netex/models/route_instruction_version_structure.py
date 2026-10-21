@@ -33,6 +33,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "Instruction",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     path_heading: None | PathHeadingEnumeration = field(
@@ -81,6 +82,7 @@ class RouteInstructionVersionStructure(DataManagedObjectStructure):
             "name": "RoadName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     simple_feature_ref: None | SimpleFeatureRef = field(

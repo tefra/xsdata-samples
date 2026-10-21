@@ -23,5 +23,6 @@ class TrainSizeStructure:
             "name": "TrainSizeType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "normal",
         },
     )

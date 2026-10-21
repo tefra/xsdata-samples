@@ -177,6 +177,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     validity_period: None | OrganisationVersionStructure.ValidityPeriod = (

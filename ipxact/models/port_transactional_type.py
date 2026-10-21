@@ -128,6 +128,7 @@ class PortTransactionalType:
                 "name": "maxConnections",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+                "empty_value": "0",
             },
         )
         min_connections: None | UnsignedIntExpression = field(
@@ -136,6 +137,7 @@ class PortTransactionalType:
                 "name": "minConnections",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+                "empty_value": "1",
             },
         )
 

@@ -160,6 +160,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "HandWashing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     drinking_water: None | bool = field(
@@ -168,6 +169,7 @@ class SanitaryEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "name": "DrinkingWater",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     toilets_type: None | ToiletsTypeEnumeration = field(

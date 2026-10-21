@@ -65,6 +65,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "name": "PlaceCentre",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     post_code: None | str = field(

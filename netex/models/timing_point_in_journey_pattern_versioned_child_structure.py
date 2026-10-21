@@ -99,6 +99,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             "name": "IsWaitPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     wait_time_or_wait_times: (

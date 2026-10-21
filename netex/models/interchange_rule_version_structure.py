@@ -42,6 +42,7 @@ class InterchangeRuleVersionStructure(InterchangeVersionStructure):
             "name": "Exclude",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     timings: None | InterchangeRuleTimingsRelStructure = field(

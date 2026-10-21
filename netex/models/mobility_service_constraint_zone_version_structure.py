@@ -32,6 +32,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             "name": "RuleApplicability",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "inside",
         },
     )
     zone_use: None | TransportZoneUseEnumeration = field(

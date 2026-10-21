@@ -169,6 +169,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "RequestStop",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     request_method_type: None | RequestMethodTypeEnumeration = field(
@@ -177,6 +178,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "RequestMethodType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "noneRequired",
         },
     )
     country_ref: None | CountryRef = field(
@@ -213,5 +215,6 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "name": "AtCentre",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )

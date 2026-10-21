@@ -33,6 +33,7 @@ class TimetabledPassingTimeVersionedChildStructure(
             "name": "ArrivalDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     departure_time: None | XmlTime = field(
@@ -49,6 +50,7 @@ class TimetabledPassingTimeVersionedChildStructure(
             "name": "DepartureDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     waiting_time: None | XmlDuration = field(
@@ -81,6 +83,7 @@ class TimetabledPassingTimeVersionedChildStructure(
             "name": "LatestArrivalDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     earliest_departure_time: None | XmlTime = field(
@@ -97,5 +100,6 @@ class TimetabledPassingTimeVersionedChildStructure(
             "name": "EarliestDepartureDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )

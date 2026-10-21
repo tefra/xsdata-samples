@@ -104,6 +104,7 @@ class ComponentInstantiationType:
             "name": "isVirtual",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "empty_value": "false",
         },
     )
     language: None | LanguageType = field(

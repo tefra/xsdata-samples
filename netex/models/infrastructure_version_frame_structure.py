@@ -60,6 +60,7 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
             "name": "MeetingsRestricted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     restricted_manoeuvres: None | bool = field(
@@ -68,6 +69,7 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
             "name": "RestrictedManoeuvres",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     overtaking_possibilities_restricted: None | bool = field(
@@ -76,6 +78,7 @@ class InfrastructureVersionFrameStructure(CommonVersionFrameStructure):
             "name": "OvertakingPossibilitiesRestricted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     spatial_features: None | SpatialFeaturesInFrameRelStructure = field(

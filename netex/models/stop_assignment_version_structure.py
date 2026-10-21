@@ -22,6 +22,7 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "BoardingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     alighting_use: None | bool = field(
@@ -30,6 +31,7 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "AlightingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     private_code: None | PrivateCode = field(

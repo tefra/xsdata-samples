@@ -85,6 +85,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "PublicUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     covered: None | CoveredEnumeration = field(
@@ -93,6 +94,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "Covered",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "indoors",
         },
     )
     gated: None | GatedEnumeration = field(
@@ -109,6 +111,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "Lighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "wellLit",
         },
     )
     all_areas_wheelchair_accessible: None | bool = field(
@@ -117,6 +120,7 @@ class NavigationPathVersionStructure(LinkSequenceVersionStructure):
             "name": "AllAreasWheelchairAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     person_capacity: None | int = field(

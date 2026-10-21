@@ -68,6 +68,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "name": "ReversingDirection",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     self_propelled: None | bool = field(
@@ -76,6 +77,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "name": "SelfPropelled",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     propulsion_type: None | PropulsionTypeEnumeration = field(

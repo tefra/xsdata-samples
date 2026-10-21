@@ -76,6 +76,7 @@ class ClearboxElementType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "empty_value": "false",
         },
     )
     parameters: None | Parameters = field(

@@ -224,6 +224,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
                 "name": "ReachedFloorAnnouncement",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
+                "empty_value": "visual",
             },
         )
     )

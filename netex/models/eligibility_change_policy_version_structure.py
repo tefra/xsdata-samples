@@ -20,6 +20,7 @@ class EligibilityChangePolicyVersionStructure(UsageParameterVersionStructure):
             "name": "OnBecomingEligiblePolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "noAction",
         },
     )
     on_ceasing_to_be_eligible_policy: None | OnCeasingEnumeration = field(

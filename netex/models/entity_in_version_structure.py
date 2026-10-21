@@ -1027,6 +1027,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "name": "IsAvailable",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     day_types: None | DayTypesRelStructure = field(

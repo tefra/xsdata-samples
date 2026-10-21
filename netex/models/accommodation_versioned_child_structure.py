@@ -93,6 +93,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "ShowerFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "none",
         },
     )
     toilet_facility: None | SanitaryFacilityEnumeration = field(
@@ -101,6 +102,7 @@ class AccommodationVersionedChildStructure(VersionedChildStructure):
             "name": "ToiletFacility",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "none",
         },
     )
     gender_limitation: None | GenderLimitation = field(

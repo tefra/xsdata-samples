@@ -48,6 +48,7 @@ class FarePointInPatternVersionedChildStructure(
             "name": "IsForbidden",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     interchange_allowed: None | bool = field(
@@ -56,6 +57,7 @@ class FarePointInPatternVersionedChildStructure(
             "name": "InterchangeAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     is_fare_stage: None | bool = field(
@@ -64,5 +66,6 @@ class FarePointInPatternVersionedChildStructure(
             "name": "IsFareStage",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )

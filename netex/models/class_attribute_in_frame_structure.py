@@ -24,6 +24,7 @@ class ClassAttributeInFrameStructure:
             "name": "Mandatory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "optional",
         },
     )
     name: None | QName = field(

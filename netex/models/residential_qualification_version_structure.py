@@ -64,6 +64,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "name": "ResidenceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "live",
         },
     )
     minimum_duration: None | XmlDuration = field(

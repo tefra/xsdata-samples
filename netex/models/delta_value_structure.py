@@ -23,6 +23,7 @@ class DeltaValueStructure:
             "name": "Modification",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "revise",
         },
     )
     value_name: None | str = field(

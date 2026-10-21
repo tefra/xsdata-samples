@@ -17,6 +17,7 @@ class AccessEndStructure:
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     place_ref: None | PlaceRefStructure = field(

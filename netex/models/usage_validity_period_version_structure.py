@@ -103,6 +103,7 @@ class UsageValidityPeriodVersionStructure(UsageParameterVersionStructure):
                 "name": "UsageStartConstraintType",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
+                "empty_value": "variable",
             },
         )
     )

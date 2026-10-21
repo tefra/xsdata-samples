@@ -29,6 +29,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "name": "FromVisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "1",
         },
     )
     to_point_ref: ScheduledStopPointRefStructure = field(
@@ -44,6 +45,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "name": "ToVisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "1",
         },
     )
     from_journey_pattern_ref: JourneyPatternRefStructure = field(

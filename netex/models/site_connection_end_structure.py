@@ -43,6 +43,7 @@ class SiteConnectionEndStructure:
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     stop_area_ref: None | StopAreaRefStructure = field(

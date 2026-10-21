@@ -27,6 +27,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "name": "SmokingAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     pets_allowed: None | bool = field(
@@ -35,6 +36,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "name": "PetsAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     luggage_allowed: None | bool = field(
@@ -43,6 +45,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "name": "LuggageAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     detour_accepted: None | bool = field(
@@ -51,5 +54,6 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "name": "DetourAccepted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )

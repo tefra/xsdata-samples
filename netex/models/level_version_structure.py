@@ -86,6 +86,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "name": "AllAreasWheelchairAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     stop_place_ref_or_site_ref: (

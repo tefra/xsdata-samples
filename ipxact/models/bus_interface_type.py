@@ -191,6 +191,7 @@ class BusInterfaceType:
             "name": "connectionRequired",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "empty_value": "false",
         },
     )
     bits_in_lau: None | BitsInLau = field(
@@ -207,6 +208,7 @@ class BusInterfaceType:
             "name": "bitSteering",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "empty_value": "0",
         },
     )
     endianness: None | EndianessType = field(

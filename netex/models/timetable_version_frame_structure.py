@@ -110,6 +110,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
             "name": "Monitored",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     network_view: None | NetworkView = field(

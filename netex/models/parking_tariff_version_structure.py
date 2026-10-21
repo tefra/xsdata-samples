@@ -253,6 +253,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "name": "AdditionalTax",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     parking_charge_bands: None | ParkingChargeBandsRelStructure = field(

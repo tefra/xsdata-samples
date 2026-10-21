@@ -213,6 +213,7 @@ class AbstractionDefinition:
                 default=None,
                 metadata={
                     "type": "Element",
+                    "empty_value": "false",
                 },
             )
             wire: None | Wire = field(
@@ -333,6 +334,7 @@ class AbstractionDefinition:
                         default=None,
                         metadata={
                             "type": "Element",
+                            "empty_value": "requires",
                         },
                     )
                     kind: None | Kind = field(
@@ -386,6 +388,7 @@ class AbstractionDefinition:
                         default=None,
                         metadata={
                             "type": "Element",
+                            "empty_value": "requires",
                         },
                     )
                     kind: None | Kind = field(
@@ -432,6 +435,7 @@ class AbstractionDefinition:
                         default=None,
                         metadata={
                             "type": "Element",
+                            "empty_value": "requires",
                         },
                     )
                     kind: None | Kind = field(

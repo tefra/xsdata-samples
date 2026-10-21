@@ -60,6 +60,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "name": "SeriesType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "stationToStation",
         },
     )
     routing_type: None | RoutingTypeEnumeration = field(
@@ -68,6 +69,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "name": "RoutingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
         },
     )
     fare_basis: None | FareBasisEnumeration = field(
@@ -76,6 +78,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "name": "FareBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "route",
         },
     )
     first_class_distance: None | Decimal = field(
@@ -100,6 +103,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "name": "Discrete",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     from_connection_ref: None | ConnectionRefStructure = field(

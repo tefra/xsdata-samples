@@ -29,6 +29,7 @@ class SeatingEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "name": "BackRest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     seat_height: None | Decimal = field(

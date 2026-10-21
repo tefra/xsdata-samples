@@ -103,6 +103,7 @@ class StairEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "StairRamp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "none",
         },
     )
     top_end: None | StairEndStructure = field(

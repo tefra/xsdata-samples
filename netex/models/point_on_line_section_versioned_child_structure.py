@@ -35,6 +35,7 @@ class PointOnLineSectionVersionedChildStructure(
             "name": "ShowAsAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     connecting_vehicle_modes: Sequence[VehicleModeEnumeration] = field(

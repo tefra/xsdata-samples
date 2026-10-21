@@ -767,6 +767,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             "name": "RoutingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
             "sequence": 1,
         },
     )

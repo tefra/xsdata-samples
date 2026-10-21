@@ -26,5 +26,6 @@ class DataSupplyRequestStructure(ConsumerRequestEndpointStructure):
             "name": "AllData",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "false",
         },
     )

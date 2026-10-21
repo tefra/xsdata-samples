@@ -60,6 +60,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "EarliestTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "00:00:00",
         },
     )
     day_length: None | XmlDuration = field(
@@ -68,6 +69,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "name": "DayLength",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "PT24H",
         },
     )
     day_types: None | DayTypesRelStructure = field(
