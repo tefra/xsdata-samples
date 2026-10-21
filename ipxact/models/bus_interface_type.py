@@ -14,7 +14,7 @@ from ipxact.models.endianess_type import EndianessType
 from ipxact.models.file_set_ref import FileSetRef
 from ipxact.models.group import Group
 from ipxact.models.memory_map_ref import MemoryMapRef
-from ipxact.models.mode_ref import ModeRef
+from ipxact.models.mode_ref import ModeRef as ModeRefModeRef
 from ipxact.models.monitor_interface_mode import MonitorInterfaceMode
 from ipxact.models.parameters import Parameters
 from ipxact.models.short_description import ShortDescription
@@ -448,7 +448,7 @@ class BusInterfaceType:
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                     }
                 )
-                mode_ref: list[ModeRef] = field(
+                mode_ref: list[ModeRefModeRef] = field(
                     default_factory=list,
                     metadata={
                         "name": "modeRef",

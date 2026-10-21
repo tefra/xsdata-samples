@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlTime
 from sabre.models.company_name_type import CompanyNameType
 from sabre.models.fare_calc_line_type import FareCalcLineType
 from sabre.models.fare_directionality import FareDirectionality
-from sabre.models.fare_type import FareType
+from sabre.models.fare_type import FareType as FareTypeFareType
 from sabre.models.free_text_type import FreeTextType
 from sabre.models.passenger_type_quantity_type import PassengerTypeQuantityType
 from sabre.models.ptcfare_breakdown_type_reissue_exchange import (
@@ -60,7 +60,7 @@ class PtcfareBreakdownType:
             "namespace": "http://www.opentravel.org/OTA/2003/05",
         }
     )
-    passenger_fare: FareType = field(
+    passenger_fare: FareTypeFareType = field(
         metadata={
             "name": "PassengerFare",
             "type": "Element",
