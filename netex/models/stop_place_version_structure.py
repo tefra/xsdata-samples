@@ -214,6 +214,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "name": "BorderCrossing",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     unlocalised_equipments: None | ExplicitEquipmentsRelStructure = field(

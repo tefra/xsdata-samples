@@ -20,6 +20,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "true",
         },
     )
     error_condition: None | ServiceDeliveryStructure.ErrorCondition = field(
@@ -36,6 +37,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
             "name": "MoreData",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "false",
         },
     )
     data_object_delivery: Sequence[DataObjectDelivery] = field(

@@ -45,6 +45,7 @@ class DepartureStructure:
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     for_boarding: None | bool = field(
@@ -53,6 +54,7 @@ class DepartureStructure:
             "name": "ForBoarding",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     is_flexible: None | bool = field(
@@ -61,6 +63,7 @@ class DepartureStructure:
             "name": "IsFlexible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     wait_time: None | XmlDuration = field(

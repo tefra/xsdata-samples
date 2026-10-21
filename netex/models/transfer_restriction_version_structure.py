@@ -31,6 +31,7 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "name": "BothWays",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     restriction_type: TransferConstraintTypeEnumeration = field(

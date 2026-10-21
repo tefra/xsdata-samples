@@ -30,6 +30,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "name": "SubscriptionTermType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "fixed",
         },
     )
     minimum_subscription_period: None | XmlDuration = field(
@@ -56,6 +57,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "name": "SubscriptionRenewalPolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "automatic",
         },
     )
     possible_installmentt_intervals: None | TimeIntervalRefsRelStructure = (

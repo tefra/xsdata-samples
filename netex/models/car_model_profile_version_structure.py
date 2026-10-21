@@ -85,6 +85,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "name": "WinterTyres",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     chains: None | bool = field(
@@ -93,6 +94,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "name": "Chains",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     trailer_hitch: None | bool = field(
@@ -101,6 +103,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "name": "TrailerHitch",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     roof_rack: None | bool = field(
@@ -109,6 +112,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "name": "RoofRack",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     cycle_rack: None | bool = field(
@@ -117,6 +121,7 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "name": "CycleRack",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     ski_rack: None | bool = field(
@@ -125,5 +130,6 @@ class CarModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "name": "SkiRack",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )

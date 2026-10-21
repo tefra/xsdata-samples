@@ -1331,6 +1331,7 @@ class AssertionType:
             "name": "transactionTimeout",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
+            "empty_value": "-1",
         },
     )
     keep_alive: None | str = field(

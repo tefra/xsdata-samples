@@ -77,6 +77,7 @@ class EntitlementConstraintStructure:
             "name": "OperatorConstraint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "participating",
         },
     )
     type_of_product_category_constraint: (
@@ -87,6 +88,7 @@ class EntitlementConstraintStructure:
             "name": "TypeOfProductCategoryConstraint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "sameOrEquivalent",
         },
     )
     class_of_use_constraint: None | SameClassOfUseEnumeration = field(
@@ -95,6 +97,7 @@ class EntitlementConstraintStructure:
             "name": "ClassOfUseConstraint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "sameOrEquivalent",
         },
     )
     type_of_travel_document_constraint: (
@@ -113,6 +116,7 @@ class EntitlementConstraintStructure:
             "name": "JourneyConstraint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "same",
         },
     )
     user_constraint: None | SameUserEnumeration = field(
@@ -121,6 +125,7 @@ class EntitlementConstraintStructure:
             "name": "UserConstraint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "samePerson",
         },
     )
     specific_to_profiles: None | UserProfileRefsRelStructure = field(

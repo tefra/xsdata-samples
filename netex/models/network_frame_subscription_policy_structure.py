@@ -13,5 +13,6 @@ class NetworkFrameSubscriptionPolicyStructure:
             "name": "IncrementalUpdates",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )

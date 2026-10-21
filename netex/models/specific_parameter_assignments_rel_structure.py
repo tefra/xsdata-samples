@@ -56,6 +56,7 @@ class SpecificParameterAssignmentVersionStructure(
             "name": "IncludesGroupingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "OR",
         },
     )
     includes: None | SpecificParameterAssignmentsRelStructure = field(

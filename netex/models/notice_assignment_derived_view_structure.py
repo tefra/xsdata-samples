@@ -55,6 +55,7 @@ class NoticeAssignmentDerivedViewStructure(DerivedViewStructure):
             "name": "PublicityChannel",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     advertised: None | bool = field(

@@ -23,6 +23,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "name": "RefundType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "unused",
         },
     )
     refund_policy: Sequence[RefundPolicyEnumeration] = field(

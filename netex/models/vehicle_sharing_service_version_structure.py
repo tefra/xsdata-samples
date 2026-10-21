@@ -57,6 +57,7 @@ class VehicleSharingServiceVersionStructure(
             "name": "FloatingVehicles",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     fleets: None | FleetRefsRelStructure = field(

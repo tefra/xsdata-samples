@@ -34,5 +34,6 @@ class LoadConstraint:
         default=None,
         metadata={
             "type": "Element",
+            "empty_value": "3",
         },
     )

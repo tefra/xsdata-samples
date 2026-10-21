@@ -71,6 +71,7 @@ class EquipmentVersionStructure(DataManagedObjectStructure):
             "name": "Note",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false.",
         },
     )
     info_links: None | InfoLinksRelStructure = field(

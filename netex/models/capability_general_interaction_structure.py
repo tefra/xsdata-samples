@@ -59,6 +59,7 @@ class CapabilityGeneralInteractionStructure:
             "name": "VisitNumberisOrder",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "false",
         },
     )
 

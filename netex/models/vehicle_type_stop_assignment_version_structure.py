@@ -27,6 +27,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "name": "VehicleOrientation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "forwards",
         },
     )
     vehicle_stopping_position_ref: None | VehicleStoppingPositionRef = field(

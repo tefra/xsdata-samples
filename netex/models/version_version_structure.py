@@ -41,6 +41,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "Status",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "versioned",
         },
     )
     description: None | MultilingualString = field(
@@ -57,6 +58,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "name": "VersionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "point",
         },
     )
     type_of_version_ref: None | TypeOfVersionRef = field(

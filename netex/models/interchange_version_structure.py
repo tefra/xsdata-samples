@@ -76,6 +76,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "StaySeated",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     cross_border: None | bool = field(
@@ -84,6 +85,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "CrossBorder",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     planned: None | bool = field(
@@ -92,6 +94,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Planned",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     guaranteed: None | bool = field(
@@ -100,6 +103,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Guaranteed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     advertised: None | bool = field(
@@ -108,6 +112,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Advertised",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     controlled: None | bool = field(
@@ -116,6 +121,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "name": "Controlled",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     connection_certainty: None | ConnectionCertaintyEnumeration = field(

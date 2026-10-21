@@ -23,6 +23,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "name": "BoardingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     alighting_use: None | bool = field(
@@ -31,6 +32,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "name": "AlightingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     label: None | MultilingualString = field(

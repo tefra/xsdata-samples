@@ -39,6 +39,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "PedestrianLights",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     acoustic_device_sensors: None | bool = field(
@@ -47,6 +48,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AcousticDeviceSensors",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     acoustic_crossing_aids: None | bool = field(
@@ -55,6 +57,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "AcousticCrossingAids",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     tactile_guidance_strips: None | bool = field(
@@ -63,6 +66,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "TactileGuidanceStrips",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     tactile_warning_strip: None | TactileWarningStripEnumeration = field(
@@ -79,6 +83,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "VisualGuidanceBands",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     dropped_kerb: None | bool = field(
@@ -103,6 +108,7 @@ class CrossingEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "name": "MarkingStatus",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "good",
         },
     )
     vibrating_crossing_aids: None | bool = field(

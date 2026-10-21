@@ -74,6 +74,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "name": "IsWaitPoint",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     wait_time_or_wait_times: (
@@ -117,6 +118,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "name": "ForAlighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     for_boarding: None | bool = field(
@@ -125,6 +127,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "name": "ForBoarding",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     alighting_side_in_direction_of_travel: (
@@ -212,6 +215,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "name": "RequestStop",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     request_method: None | RequestMethodTypeEnumeration = field(
@@ -220,6 +224,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "name": "RequestMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "noneRequired",
         },
     )
     stop_use: None | StopUseEnumeration = field(
@@ -244,6 +249,7 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "name": "Print",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     dynamic: None | DynamicAdvertisementEnumeration = field(
@@ -252,5 +258,6 @@ class StopPointInJourneyPatternVersionedChildStructure(
             "name": "Dynamic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "always",
         },
     )

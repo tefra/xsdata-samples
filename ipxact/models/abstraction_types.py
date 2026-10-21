@@ -144,6 +144,7 @@ class AbstractionTypes:
                     metadata={
                         "name": "isInformative",
                         "type": "Element",
+                        "empty_value": "false",
                     },
                 )
                 vendor_extensions: None | VendorExtensions = field(

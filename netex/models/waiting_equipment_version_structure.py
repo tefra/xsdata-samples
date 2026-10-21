@@ -75,6 +75,7 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "name": "Heated",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     air_conditioned: None | bool = field(
@@ -83,5 +84,6 @@ class WaitingEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "name": "AirConditioned",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )

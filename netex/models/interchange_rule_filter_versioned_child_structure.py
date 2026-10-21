@@ -188,6 +188,7 @@ class InterchangeRuleFilterVersionedChildStructure(VersionedChildStructure):
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     order: None | int = field(

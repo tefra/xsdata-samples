@@ -221,6 +221,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "name": "OperatorActivities",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "passenger",
             "tokens": True,
         },
     )

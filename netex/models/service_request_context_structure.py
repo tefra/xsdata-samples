@@ -92,6 +92,7 @@ class ServiceRequestContextStructure:
             "name": "Language",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "en",
         },
     )
     wgs_decimal_degrees_or_gml_coordinate_format: None | EmptyType1 | str = (
@@ -152,6 +153,7 @@ class ServiceRequestContextStructure:
             "name": "DeliveryMethod",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "direct",
         },
     )
     multipart_despatch: None | bool = field(
@@ -168,6 +170,7 @@ class ServiceRequestContextStructure:
             "name": "ConfirmDelivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "false",
         },
     )
     maximimum_number_of_subscriptions: None | int = field(
@@ -184,6 +187,7 @@ class ServiceRequestContextStructure:
             "name": "AllowedPredictors",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "anyone",
         },
     )
     prediction_function: None | str = field(

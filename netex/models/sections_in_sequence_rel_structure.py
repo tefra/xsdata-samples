@@ -454,6 +454,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             "name": "SectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "trunk",
         },
     )
     line_ref: None | FlexibleLineRef | LineRef = field(

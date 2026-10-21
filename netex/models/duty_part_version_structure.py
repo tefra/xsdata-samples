@@ -54,6 +54,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     end_time: None | XmlTime = field(
@@ -70,6 +71,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "name": "EndDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     start_point_ref: None | TimingPointRefStructure = field(

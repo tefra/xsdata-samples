@@ -160,5 +160,6 @@ class AccessVehicleEquipmentVersionStructure(
             "name": "GuideDogsAllowed",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )

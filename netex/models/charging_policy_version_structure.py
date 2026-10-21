@@ -55,5 +55,6 @@ class ChargingPolicyVersionStructure(UsageParameterVersionStructure):
             "name": "DepositPolicy",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "none",
         },
     )

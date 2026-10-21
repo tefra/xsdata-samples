@@ -116,6 +116,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "name": "StartTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     end_time: XmlTime = field(
@@ -131,6 +132,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "name": "EndTimeDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     vehicle_orientation: None | bool = field(
@@ -139,6 +141,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "name": "VehicleOrientation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     purpose_of_journey_partition_ref: None | PurposeOfJourneyPartitionRef = (

@@ -40,6 +40,7 @@ class TimeIntervalVersionStructure(FareIntervalVersionStructure):
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     duration: None | XmlDuration = field(

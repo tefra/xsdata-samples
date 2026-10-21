@@ -45,6 +45,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "IsExternal",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     is_entry: None | bool = field(
@@ -53,6 +54,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "IsEntry",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     is_exit: None | bool = field(
@@ -61,6 +63,7 @@ class SiteEntranceVersionStructure(SiteComponentVersionStructure):
             "name": "IsExit",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     width: None | Decimal = field(

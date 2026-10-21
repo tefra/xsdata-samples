@@ -45,6 +45,7 @@ class TimetabledPassingTimeViewStructure(PassingTimeViewStructure):
             "name": "DepartureDayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     waiting_time: None | XmlDuration = field(

@@ -57,6 +57,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
                 "name": "FilterByFrame",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
+                "empty_value": "true",
             },
         )
 
@@ -68,5 +69,6 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
                 "name": "HasIncrementalUpdates",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
+                "empty_value": "true",
             },
         )

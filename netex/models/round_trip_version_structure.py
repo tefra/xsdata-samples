@@ -19,6 +19,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "name": "TripType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "single",
         },
     )
     double_single_fare: None | bool = field(

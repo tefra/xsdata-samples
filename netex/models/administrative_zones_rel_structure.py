@@ -187,6 +187,7 @@ class TransportAdministrativeZoneVersionStructure(
             "name": "VehicleModes",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
             "tokens": True,
         },
     )

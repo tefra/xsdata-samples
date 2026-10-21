@@ -36,6 +36,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "name": "DirectionOfUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
         },
     )
     passengers_per_minute: None | int = field(

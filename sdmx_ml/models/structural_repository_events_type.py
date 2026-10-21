@@ -59,6 +59,7 @@ class StructuralRepositoryEventsType:
             "name": "AgencyID",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
+            "empty_value": "%",
             "min_occurs": 1,
             "pattern": r"[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*",
         },

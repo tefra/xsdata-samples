@@ -60,6 +60,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
                 "name": "CompanionRelationshipType",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
+                "empty_value": "anyone",
             },
         )
     )

@@ -36,6 +36,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "name": "DestinationDisplayContext",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "any",
         },
     )
     destination_display_variant_media_type: DeliveryVariantTypeEnumeration = (

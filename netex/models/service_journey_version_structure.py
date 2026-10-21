@@ -81,6 +81,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "name": "ServiceAlteration",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "planned",
         },
     )
     departure_time: None | XmlTime = field(
@@ -386,6 +387,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "name": "Print",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     dynamic: None | DynamicAdvertisementEnumeration = field(
@@ -394,6 +396,7 @@ class ServiceJourneyVersionStructure(JourneyVersionStructure):
             "name": "Dynamic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "always",
         },
     )
     wait_times: None | VehicleJourneyWaitTimesRelStructure = field(

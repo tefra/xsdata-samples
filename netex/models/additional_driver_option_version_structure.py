@@ -20,6 +20,7 @@ class AdditionalDriverOptionVersionStructure(RentalOptionVersionStructure):
             "name": "AdditionalDriver",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "none",
         },
     )
     driver_fee_basis: None | DriverTypeFeeBasisEnumeration = field(
@@ -28,6 +29,7 @@ class AdditionalDriverOptionVersionStructure(RentalOptionVersionStructure):
             "name": "DriverFeeBasis",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "perAddtionalDriver",
         },
     )
     number_ofdrivers: None | int = field(

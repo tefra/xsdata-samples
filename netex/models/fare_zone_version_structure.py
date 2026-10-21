@@ -43,6 +43,7 @@ class FareZoneVersionStructure(TariffZoneVersionStructure):
             "name": "ScopingMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "explicitStops",
         },
     )
     transport_organisation_ref: None | AuthorityRef | OperatorRef = field(

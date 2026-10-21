@@ -65,6 +65,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "name": "OperationalOrientation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "forwards",
         },
     )
     reversed_orientation: None | bool = field(
@@ -73,6 +74,7 @@ class TrainInCompoundTrainVersionedChildStructure(VersionedChildStructure):
             "name": "ReversedOrientation",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     order: None | int = field(

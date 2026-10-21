@@ -20,6 +20,7 @@ class ClassInFrameStructure:
             "name": "ClassRefType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "members",
         },
     )
     type_of_frame_ref: None | TypeOfFrameRef = field(
@@ -36,6 +37,7 @@ class ClassInFrameStructure:
             "name": "Mandatory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "optional",
         },
     )
     attributes: None | ClassInFrameStructure.Attributes = field(

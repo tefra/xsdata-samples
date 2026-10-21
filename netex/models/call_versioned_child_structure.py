@@ -49,6 +49,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "name": "VisitNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "1",
         },
     )
     fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: (
@@ -234,6 +235,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "name": "RequestStop",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     request_method: None | RequestMethodTypeEnumeration = field(
@@ -242,6 +244,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "name": "RequestMethod",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "noneRequired",
         },
     )
     stop_use: None | StopUseEnumeration = field(
@@ -266,6 +269,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "name": "Print",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     dynamic: None | DynamicAdvertisementEnumeration = field(
@@ -274,6 +278,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "name": "Dynamic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "always",
         },
     )
     passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: (

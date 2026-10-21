@@ -27,6 +27,7 @@ class ModeRestrictionAssessmentVersionStructure(
             "name": "Exclude",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     transport_modes: None | TransportModesRelStructure = field(

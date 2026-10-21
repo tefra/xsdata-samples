@@ -818,7 +818,7 @@
                   <AccessModes>foot</AccessModes>
                   <PublicUse>disabledPublicOnly</PublicUse>
                   <Covered>outdoors</Covered>
-                  <Lighting/>
+                  <Lighting>wellLit</Lighting>
                   <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
                   <ClassOfUseRef ref="blue_badge_Holders" versionRef="EXTERNAL"/>
                   <ParkingVehicleType>passengerCar</ParkingVehicleType>
@@ -866,7 +866,7 @@
                   <AccessModes>foot</AccessModes>
                   <PublicUse>disabledPublicOnly</PublicUse>
                   <Covered>outdoors</Covered>
-                  <Lighting/>
+                  <Lighting>wellLit</Lighting>
                   <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
                   <ClassOfUseRef ref="blue_badge_Holders" versionRef="EXTERNAL"/>
                   <ParkingVehicleType>passengerCar</ParkingVehicleType>
@@ -914,7 +914,7 @@
                   <AccessModes>foot</AccessModes>
                   <PublicUse>disabledPublicOnly</PublicUse>
                   <Covered>outdoors</Covered>
-                  <Lighting/>
+                  <Lighting>wellLit</Lighting>
                   <AllAreasWheelchairAccessible>true</AllAreasWheelchairAccessible>
                   <ClassOfUseRef ref="blue_badge_Holders" versionRef="EXTERNAL"/>
                   <ParkingVehicleType>passengerCar</ParkingVehicleType>

@@ -13,6 +13,7 @@ class CapabilitySubscriptionPolicyStructure:
             "name": "HasIncrementalUpdates",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "true",
         },
     )
     has_change_sensitivity: None | bool = field(
@@ -21,5 +22,6 @@ class CapabilitySubscriptionPolicyStructure:
             "name": "HasChangeSensitivity",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "true",
         },
     )

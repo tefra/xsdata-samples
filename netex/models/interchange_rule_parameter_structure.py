@@ -38,6 +38,7 @@ class InterchangeRuleParameterStructure:
             "name": "TransportMode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     operator_ref: None | OperatorRef = field(

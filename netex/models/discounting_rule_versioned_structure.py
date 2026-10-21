@@ -35,5 +35,6 @@ class DiscountingRuleVersionedStructure(PricingRuleVersionedStructure):
             "name": "CanBeCumulative",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )

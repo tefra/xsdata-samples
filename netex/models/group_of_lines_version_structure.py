@@ -39,6 +39,7 @@ class GroupOfLinesVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "UseToExclude",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     members: None | LineRefsRelStructure = field(

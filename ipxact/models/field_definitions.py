@@ -114,6 +114,7 @@ class FieldDefinitions:
             default=None,
             metadata={
                 "type": "Element",
+                "empty_value": "false",
             },
         )
         resets: None | FieldDefinitions.FieldDefinition.Resets = field(
@@ -281,6 +282,7 @@ class FieldDefinitions:
                     default=None,
                     metadata={
                         "type": "Element",
+                        "empty_value": "0",
                     },
                 )
                 vendor_extensions: None | VendorExtensions = field(

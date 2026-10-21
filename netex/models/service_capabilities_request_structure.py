@@ -16,6 +16,7 @@ class ServiceCapabilitiesRequestStructure(AbstractServiceRequestStructure):
             "name": "ParticipantPermissions",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
+            "empty_value": "false",
         },
     )
     extensions: None | Extensions1 = field(

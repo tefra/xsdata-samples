@@ -3530,7 +3530,7 @@ Managed by: Multiple Train Operating Companies expand  panel Last updated:  15 S
                 <FareStructureType>pointToPointFare</FareStructureType>
                 <HasTravelTimeRestrictions>true</HasTravelTimeRestrictions>
                 <HasRouteRestrictions>true</HasRouteRestrictions>
-                <TrainRestrictions/>
+                <TrainRestrictions>anyTrain</TrainRestrictions>
                 <CanBreakJourney>false</CanBreakJourney>
                 <CanChangeClass>true</CanChangeClass>
                 <IsRefundable>false</IsRefundable>

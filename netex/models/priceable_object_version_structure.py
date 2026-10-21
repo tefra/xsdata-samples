@@ -1751,6 +1751,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "name": "DirectionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
         },
     )
     routing_type: None | RoutingTypeEnumeration = field(
@@ -1759,6 +1760,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "name": "RoutingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
         },
     )
     transport_organisation_ref: None | AuthorityRef | OperatorRef = field(

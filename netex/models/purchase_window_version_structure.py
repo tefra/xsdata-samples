@@ -33,6 +33,7 @@ class PurchaseWindowVersionStructure(UsageParameterVersionStructure):
             "name": "PurchaseWhen",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "advanceAndDayOfTravel",
         },
     )
     latest_time: None | XmlTime = field(

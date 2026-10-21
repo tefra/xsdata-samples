@@ -26,6 +26,7 @@ class ClassRelationshipInFrameStructure:
             "name": "Mandatory",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "optional",
         },
     )
     containment: None | ContainmentEnumeration = field(
@@ -34,6 +35,7 @@ class ClassRelationshipInFrameStructure:
             "name": "Containment",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "both",
         },
     )
     modification_set: None | ModificationSetEnumeration = field(

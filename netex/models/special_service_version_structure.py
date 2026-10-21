@@ -163,6 +163,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Print",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     dynamic: None | DynamicAdvertisementEnumeration = field(
@@ -171,6 +172,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "name": "Dynamic",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "always",
         },
     )
     type_of_flexible_service_ref: None | TypeOfFlexibleServiceRef = field(

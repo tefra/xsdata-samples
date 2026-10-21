@@ -61,6 +61,7 @@ class VersionFrameDefaultsStructure:
             "name": "DefaultSystemOfUnits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "SiMetres",
         },
     )
     default_currency: None | str = field(

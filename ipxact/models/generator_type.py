@@ -109,6 +109,7 @@ class GeneratorType:
             "name": "apiService",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "empty_value": "SOAP",
         },
     )
     transport_methods: None | GeneratorType.TransportMethods = field(

@@ -35,6 +35,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "PublicUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "all",
         },
     )
     covered: None | CoveredEnumeration = field(
@@ -43,6 +44,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "Covered",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "indoors",
         },
     )
     gated: None | GatedEnumeration = field(
@@ -59,6 +61,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "Lighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "wellLit",
         },
     )
     all_areas_wheelchair_accessible: None | bool = field(
@@ -67,6 +70,7 @@ class PathJunctionVersionStructure(PointVersionStructure):
             "name": "AllAreasWheelchairAccessible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     person_capacity: None | int = field(

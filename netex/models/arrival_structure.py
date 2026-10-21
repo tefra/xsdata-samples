@@ -45,6 +45,7 @@ class ArrivalStructure:
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "0",
         },
     )
     for_alighting: None | bool = field(
@@ -53,6 +54,7 @@ class ArrivalStructure:
             "name": "ForAlighting",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     is_flexible: None | bool = field(
@@ -61,6 +63,7 @@ class ArrivalStructure:
             "name": "IsFlexible",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     journey_part_ref: None | JourneyPartRef = field(

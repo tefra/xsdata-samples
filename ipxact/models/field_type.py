@@ -154,6 +154,7 @@ class FieldType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+            "empty_value": "false",
         },
     )
     resets: None | FieldType.Resets = field(
@@ -483,6 +484,7 @@ class FieldType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
+                    "empty_value": "0",
                 },
             )
             vendor_extensions: None | VendorExtensions = field(

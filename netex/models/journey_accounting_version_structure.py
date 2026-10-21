@@ -129,6 +129,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "AccountingType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "contract",
         },
     )
     partial: Sequence[bool] = field(
@@ -137,6 +138,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "Partial",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "false",
         },
     )
     distance: None | Decimal = field(
@@ -145,6 +147,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "1",
         },
     )
     duration: None | XmlDuration = field(

@@ -1964,7 +1964,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     public_use=PublicUseEnumeration.DISABLED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.OUTDOORS,
-                                                    lighting='',
+                                                    lighting=LightingEnumeration.WELL_LIT,
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
                                                         value='',
@@ -2102,7 +2102,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     public_use=PublicUseEnumeration.DISABLED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.OUTDOORS,
-                                                    lighting='',
+                                                    lighting=LightingEnumeration.WELL_LIT,
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
                                                         value='',
@@ -2240,7 +2240,7 @@ obj = PublicationDelivery(
                                                     ],
                                                     public_use=PublicUseEnumeration.DISABLED_PUBLIC_ONLY,
                                                     covered=CoveredEnumeration.OUTDOORS,
-                                                    lighting='',
+                                                    lighting=LightingEnumeration.WELL_LIT,
                                                     all_areas_wheelchair_accessible=True,
                                                     class_of_use_ref=ClassOfUseRef(
                                                         value='',

@@ -37,6 +37,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "name": "NameType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "alias",
         },
     )
     type_of_name: None | str = field(

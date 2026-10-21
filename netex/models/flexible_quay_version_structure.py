@@ -56,6 +56,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "BoardingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     alighting_use: None | bool = field(
@@ -64,6 +65,7 @@ class FlexibleQuayVersionStructure(PlaceVersionStructure):
             "name": "AlightingUse",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
+            "empty_value": "true",
         },
     )
     public_code: None | str = field(

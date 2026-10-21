@@ -130,6 +130,7 @@ class Wire:
             default=None,
             metadata={
                 "type": "Element",
+                "empty_value": "out",
             },
         )
         mode_constraints: None | AbstractionDefPortConstraintsType = field(
@@ -211,6 +212,7 @@ class Wire:
             default=None,
             metadata={
                 "type": "Element",
+                "empty_value": "out",
             },
         )
         mode_constraints: None | AbstractionDefPortConstraintsType = field(
@@ -285,6 +287,7 @@ class Wire:
             default=None,
             metadata={
                 "type": "Element",
+                "empty_value": "out",
             },
         )
         mode_constraints: None | AbstractionDefPortConstraintsType = field(
