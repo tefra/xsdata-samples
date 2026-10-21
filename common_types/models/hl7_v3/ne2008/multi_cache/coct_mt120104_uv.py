@@ -154,7 +154,7 @@ class CoctMt120104UvObservationDx:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: list[CoctMt120104UvAuthor] = field(
+    author: list[None | CoctMt120104UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",

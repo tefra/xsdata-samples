@@ -343,7 +343,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    responsible_party: list[PrpaMt900350Uv02ResponsibleParty] = field(
+    responsible_party: list[None | PrpaMt900350Uv02ResponsibleParty] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -359,7 +359,7 @@ class PrpaMt900350Uv02EncounterEvent:
             "nillable": True,
         }
     )
-    attender: list[PrpaMt900350Uv02Attender] = field(
+    attender: list[None | PrpaMt900350Uv02Attender] = field(
         default_factory=list,
         metadata={
             "type": "Element",

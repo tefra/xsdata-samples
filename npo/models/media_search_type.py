@@ -161,7 +161,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         },
     )
-    schedule_events: list[ScheduleEventSearchType] = field(
+    schedule_events: list[None | ScheduleEventSearchType] = field(
         default_factory=list,
         metadata={
             "name": "scheduleEvents",
@@ -186,7 +186,7 @@ class MediaSearchType:
             "namespace": "urn:vpro:api:2013",
         },
     )
-    titles: list[TitleSearchType] = field(
+    titles: list[None | TitleSearchType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -194,7 +194,7 @@ class MediaSearchType:
             "nillable": True,
         },
     )
-    geo_locations: list[GeoLocationSearchType] = field(
+    geo_locations: list[None | GeoLocationSearchType] = field(
         default_factory=list,
         metadata={
             "name": "geoLocations",

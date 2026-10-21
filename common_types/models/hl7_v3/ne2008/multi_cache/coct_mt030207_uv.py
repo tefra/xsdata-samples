@@ -164,7 +164,9 @@ class CoctMt030207UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_communication: list[CoctMt030207UvLanguageCommunication] = field(
+    language_communication: list[
+        None | CoctMt030207UvLanguageCommunication
+    ] = field(
         default_factory=list,
         metadata={
             "name": "languageCommunication",

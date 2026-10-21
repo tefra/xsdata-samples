@@ -509,7 +509,7 @@ class CoctMt090000Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_licensed_entity: list[CoctMt090000Uv01LicensedEntity] = field(
+    as_licensed_entity: list[None | CoctMt090000Uv01LicensedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLicensedEntity",
@@ -518,7 +518,7 @@ class CoctMt090000Uv01Device:
             "nillable": True,
         },
     )
-    as_member: list[CoctMt090000Uv01Member] = field(
+    as_member: list[None | CoctMt090000Uv01Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -527,7 +527,7 @@ class CoctMt090000Uv01Device:
             "nillable": True,
         },
     )
-    as_role_other: list[CoctMt090000Uv01RoleOther] = field(
+    as_role_other: list[None | CoctMt090000Uv01RoleOther] = field(
         default_factory=list,
         metadata={
             "name": "asRoleOther",
@@ -545,16 +545,16 @@ class CoctMt090000Uv01Device:
             "nillable": True,
         },
     )
-    language_communication: list[CoctMt090000Uv01LanguageCommunication] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "languageCommunication",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    language_communication: list[
+        None | CoctMt090000Uv01LanguageCommunication
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "languageCommunication",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -616,7 +616,7 @@ class CoctMt090000Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_licensed_entity: list[CoctMt090000Uv01LicensedEntity] = field(
+    as_licensed_entity: list[None | CoctMt090000Uv01LicensedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLicensedEntity",
@@ -625,7 +625,7 @@ class CoctMt090000Uv01Organization:
             "nillable": True,
         },
     )
-    as_member: list[CoctMt090000Uv01Member] = field(
+    as_member: list[None | CoctMt090000Uv01Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -634,7 +634,7 @@ class CoctMt090000Uv01Organization:
             "nillable": True,
         },
     )
-    as_role_other: list[CoctMt090000Uv01RoleOther] = field(
+    as_role_other: list[None | CoctMt090000Uv01RoleOther] = field(
         default_factory=list,
         metadata={
             "name": "asRoleOther",
@@ -652,16 +652,16 @@ class CoctMt090000Uv01Organization:
             "nillable": True,
         },
     )
-    language_communication: list[CoctMt090000Uv01LanguageCommunication] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "languageCommunication",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    language_communication: list[
+        None | CoctMt090000Uv01LanguageCommunication
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "languageCommunication",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -724,7 +724,7 @@ class CoctMt090000Uv01Person:
             "min_occurs": 1,
         },
     )
-    as_licensed_entity: list[CoctMt090000Uv01LicensedEntity] = field(
+    as_licensed_entity: list[None | CoctMt090000Uv01LicensedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLicensedEntity",
@@ -733,7 +733,7 @@ class CoctMt090000Uv01Person:
             "nillable": True,
         },
     )
-    as_member: list[CoctMt090000Uv01Member] = field(
+    as_member: list[None | CoctMt090000Uv01Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -742,7 +742,7 @@ class CoctMt090000Uv01Person:
             "nillable": True,
         },
     )
-    as_role_other: list[CoctMt090000Uv01RoleOther] = field(
+    as_role_other: list[None | CoctMt090000Uv01RoleOther] = field(
         default_factory=list,
         metadata={
             "name": "asRoleOther",
@@ -760,16 +760,16 @@ class CoctMt090000Uv01Person:
             "nillable": True,
         },
     )
-    language_communication: list[CoctMt090000Uv01LanguageCommunication] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "languageCommunication",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    language_communication: list[
+        None | CoctMt090000Uv01LanguageCommunication
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "languageCommunication",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,

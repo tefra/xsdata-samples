@@ -327,7 +327,7 @@ class McaiMt900001Uv01ActOrderRequired:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[McaiMt900001Uv01Subject] = field(
+    subject: list[None | McaiMt900001Uv01Subject] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -507,7 +507,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mitigated_by: list[McaiMt900001Uv01SourceOf] = field(
+    mitigated_by: list[None | McaiMt900001Uv01SourceOf] = field(
         default_factory=list,
         metadata={
             "name": "mitigatedBy",
@@ -516,7 +516,7 @@ class McaiMt900001Uv01DetectedIssueEvent:
             "nillable": True,
         },
     )
-    trigger_for: list[McaiMt900001Uv01Requires] = field(
+    trigger_for: list[None | McaiMt900001Uv01Requires] = field(
         default_factory=list,
         metadata={
             "name": "triggerFor",

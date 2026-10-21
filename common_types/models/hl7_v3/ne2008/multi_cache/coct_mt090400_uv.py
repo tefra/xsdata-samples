@@ -491,7 +491,7 @@ class CoctMt090400UvOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_licensed_entity: list[CoctMt090400UvLicensedEntity] = field(
+    as_licensed_entity: list[None | CoctMt090400UvLicensedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLicensedEntity",
@@ -500,7 +500,7 @@ class CoctMt090400UvOrganization:
             "nillable": True,
         },
     )
-    as_member: list[CoctMt090400UvMember] = field(
+    as_member: list[None | CoctMt090400UvMember] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -509,7 +509,7 @@ class CoctMt090400UvOrganization:
             "nillable": True,
         },
     )
-    as_role_other: list[CoctMt090400UvRoleOther] = field(
+    as_role_other: list[None | CoctMt090400UvRoleOther] = field(
         default_factory=list,
         metadata={
             "name": "asRoleOther",
@@ -527,7 +527,9 @@ class CoctMt090400UvOrganization:
             "nillable": True,
         },
     )
-    language_communication: list[CoctMt090400UvLanguageCommunication] = field(
+    language_communication: list[
+        None | CoctMt090400UvLanguageCommunication
+    ] = field(
         default_factory=list,
         metadata={
             "name": "languageCommunication",
@@ -597,7 +599,7 @@ class CoctMt090400UvPerson:
             "min_occurs": 1,
         },
     )
-    as_licensed_entity: list[CoctMt090400UvLicensedEntity] = field(
+    as_licensed_entity: list[None | CoctMt090400UvLicensedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLicensedEntity",
@@ -606,7 +608,7 @@ class CoctMt090400UvPerson:
             "nillable": True,
         },
     )
-    as_member: list[CoctMt090400UvMember] = field(
+    as_member: list[None | CoctMt090400UvMember] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -615,7 +617,7 @@ class CoctMt090400UvPerson:
             "nillable": True,
         },
     )
-    as_role_other: list[CoctMt090400UvRoleOther] = field(
+    as_role_other: list[None | CoctMt090400UvRoleOther] = field(
         default_factory=list,
         metadata={
             "name": "asRoleOther",
@@ -633,7 +635,9 @@ class CoctMt090400UvPerson:
             "nillable": True,
         },
     )
-    language_communication: list[CoctMt090400UvLanguageCommunication] = field(
+    language_communication: list[
+        None | CoctMt090400UvLanguageCommunication
+    ] = field(
         default_factory=list,
         metadata={
             "name": "languageCommunication",

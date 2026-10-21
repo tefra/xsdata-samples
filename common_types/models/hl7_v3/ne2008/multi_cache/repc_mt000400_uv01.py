@@ -368,7 +368,7 @@ class RepcMt000400Uv01ActCategory:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    author: list[RepcMt000400Uv01Author5] = field(
+    author: list[None | RepcMt000400Uv01Author5] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -376,7 +376,7 @@ class RepcMt000400Uv01ActCategory:
             "nillable": True,
         },
     )
-    component: list[RepcMt000400Uv01Component4] = field(
+    component: list[None | RepcMt000400Uv01Component4] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -454,7 +454,7 @@ class RepcMt000400Uv01ActList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: list[RepcMt000400Uv01Author5] = field(
+    author: list[None | RepcMt000400Uv01Author5] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -462,7 +462,7 @@ class RepcMt000400Uv01ActList:
             "nillable": True,
         },
     )
-    custodian: list[RepcMt000400Uv01Custodian] = field(
+    custodian: list[None | RepcMt000400Uv01Custodian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -470,7 +470,7 @@ class RepcMt000400Uv01ActList:
             "nillable": True,
         },
     )
-    component: list[RepcMt000400Uv01Component4] = field(
+    component: list[None | RepcMt000400Uv01Component4] = field(
         default_factory=list,
         metadata={
             "type": "Element",

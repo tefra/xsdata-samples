@@ -1089,7 +1089,7 @@ class PrpaMt201306Uv02ParameterList:
         },
     )
     living_subject_administrative_gender: list[
-        PrpaMt201306Uv02LivingSubjectAdministrativeGender
+        None | PrpaMt201306Uv02LivingSubjectAdministrativeGender
     ] = field(
         default_factory=list,
         metadata={
@@ -1100,7 +1100,7 @@ class PrpaMt201306Uv02ParameterList:
         },
     )
     living_subject_birth_place_address: list[
-        PrpaMt201306Uv02LivingSubjectBirthPlaceAddress
+        None | PrpaMt201306Uv02LivingSubjectBirthPlaceAddress
     ] = field(
         default_factory=list,
         metadata={
@@ -1111,7 +1111,7 @@ class PrpaMt201306Uv02ParameterList:
         },
     )
     living_subject_birth_place_name: list[
-        PrpaMt201306Uv02LivingSubjectBirthPlaceName
+        None | PrpaMt201306Uv02LivingSubjectBirthPlaceName
     ] = field(
         default_factory=list,
         metadata={
@@ -1121,19 +1121,19 @@ class PrpaMt201306Uv02ParameterList:
             "nillable": True,
         },
     )
-    living_subject_birth_time: list[PrpaMt201306Uv02LivingSubjectBirthTime] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "livingSubjectBirthTime",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    living_subject_birth_time: list[
+        None | PrpaMt201306Uv02LivingSubjectBirthTime
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "livingSubjectBirthTime",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     living_subject_deceased_time: list[
-        PrpaMt201306Uv02LivingSubjectDeceasedTime
+        None | PrpaMt201306Uv02LivingSubjectDeceasedTime
     ] = field(
         default_factory=list,
         metadata={
@@ -1143,7 +1143,7 @@ class PrpaMt201306Uv02ParameterList:
             "nillable": True,
         },
     )
-    living_subject_id: list[PrpaMt201306Uv02LivingSubjectId] = field(
+    living_subject_id: list[None | PrpaMt201306Uv02LivingSubjectId] = field(
         default_factory=list,
         metadata={
             "name": "livingSubjectId",
@@ -1152,26 +1152,30 @@ class PrpaMt201306Uv02ParameterList:
             "nillable": True,
         },
     )
-    living_subject_name: list[PrpaMt201306Uv02LivingSubjectName] = field(
-        default_factory=list,
-        metadata={
-            "name": "livingSubjectName",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    living_subject_name: list[None | PrpaMt201306Uv02LivingSubjectName] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "livingSubjectName",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    mothers_maiden_name: list[PrpaMt201306Uv02MothersMaidenName] = field(
-        default_factory=list,
-        metadata={
-            "name": "mothersMaidenName",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    mothers_maiden_name: list[None | PrpaMt201306Uv02MothersMaidenName] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "mothersMaidenName",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     other_ids_scoping_organization: list[
-        PrpaMt201306Uv02OtherIdsScopingOrganization
+        None | PrpaMt201306Uv02OtherIdsScopingOrganization
     ] = field(
         default_factory=list,
         metadata={
@@ -1181,7 +1185,7 @@ class PrpaMt201306Uv02ParameterList:
             "nillable": True,
         },
     )
-    patient_address: list[PrpaMt201306Uv02PatientAddress] = field(
+    patient_address: list[None | PrpaMt201306Uv02PatientAddress] = field(
         default_factory=list,
         metadata={
             "name": "patientAddress",
@@ -1190,16 +1194,18 @@ class PrpaMt201306Uv02ParameterList:
             "nillable": True,
         },
     )
-    patient_status_code: list[PrpaMt201306Uv02PatientStatusCode] = field(
-        default_factory=list,
-        metadata={
-            "name": "patientStatusCode",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    patient_status_code: list[None | PrpaMt201306Uv02PatientStatusCode] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "patientStatusCode",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    patient_telecom: list[PrpaMt201306Uv02PatientTelecom] = field(
+    patient_telecom: list[None | PrpaMt201306Uv02PatientTelecom] = field(
         default_factory=list,
         metadata={
             "name": "patientTelecom",
@@ -1209,7 +1215,7 @@ class PrpaMt201306Uv02ParameterList:
         },
     )
     principal_care_provider_id: list[
-        PrpaMt201306Uv02PrincipalCareProviderId
+        None | PrpaMt201306Uv02PrincipalCareProviderId
     ] = field(
         default_factory=list,
         metadata={
@@ -1220,7 +1226,7 @@ class PrpaMt201306Uv02ParameterList:
         },
     )
     principal_care_provision_id: list[
-        PrpaMt201306Uv02PrincipalCareProvisionId
+        None | PrpaMt201306Uv02PrincipalCareProvisionId
     ] = field(
         default_factory=list,
         metadata={
@@ -1354,7 +1360,7 @@ class PrpaMt201306Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    sort_control: list[PrpaMt201306Uv02SortControl] = field(
+    sort_control: list[None | PrpaMt201306Uv02SortControl] = field(
         default_factory=list,
         metadata={
             "name": "sortControl",

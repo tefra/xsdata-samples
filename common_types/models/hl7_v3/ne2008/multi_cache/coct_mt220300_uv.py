@@ -325,14 +325,16 @@ class CoctMt220300UvManufacturer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_related_manufacturer: list[CoctMt220300UvRelatedManufacturer] = field(
-        default_factory=list,
-        metadata={
-            "name": "asRelatedManufacturer",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_related_manufacturer: list[None | CoctMt220300UvRelatedManufacturer] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "asRelatedManufacturer",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1291,16 +1293,20 @@ class CoctMt220300UvMedicine:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_distributed_product: list[CoctMt220300UvDistributedProduct] = field(
-        default_factory=list,
-        metadata={
-            "name": "asDistributedProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_distributed_product: list[None | CoctMt220300UvDistributedProduct] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "asDistributedProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
-    as_medicine_manufacturer: list[CoctMt220300UvMedicineManufacturer] = field(
+    as_medicine_manufacturer: list[
+        None | CoctMt220300UvMedicineManufacturer
+    ] = field(
         default_factory=list,
         metadata={
             "name": "asMedicineManufacturer",
@@ -1309,7 +1315,7 @@ class CoctMt220300UvMedicine:
             "nillable": True,
         },
     )
-    as_specialized_kind: list[CoctMt220300UvSpecializedKind] = field(
+    as_specialized_kind: list[None | CoctMt220300UvSpecializedKind] = field(
         default_factory=list,
         metadata={
             "name": "asSpecializedKind",
@@ -1318,7 +1324,7 @@ class CoctMt220300UvMedicine:
             "nillable": True,
         },
     )
-    part: list[CoctMt220300UvPart] = field(
+    part: list[None | CoctMt220300UvPart] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1478,7 +1484,7 @@ class CoctMt220300UvPart:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    subject_of: list[CoctMt220300UvSubject4] = field(
+    subject_of: list[None | CoctMt220300UvSubject4] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf",
@@ -1639,7 +1645,7 @@ class CoctMt220300UvManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    subject_of1: list[CoctMt220300UvSubject25] = field(
+    subject_of1: list[None | CoctMt220300UvSubject25] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -1648,7 +1654,7 @@ class CoctMt220300UvManufacturedProduct:
             "nillable": True,
         },
     )
-    subject_of2: list[CoctMt220300UvSubject15] = field(
+    subject_of2: list[None | CoctMt220300UvSubject15] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -1657,7 +1663,7 @@ class CoctMt220300UvManufacturedProduct:
             "nillable": True,
         },
     )
-    subject_of3: list[CoctMt220300UvSubject16] = field(
+    subject_of3: list[None | CoctMt220300UvSubject16] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf3",
@@ -1763,14 +1769,16 @@ class CoctMt220300UvPackagedMedicine:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_manufactured_product: list[CoctMt220300UvManufacturedProduct] = field(
-        default_factory=list,
-        metadata={
-            "name": "asManufacturedProduct",
-            "type": "Element",
-            "namespace": "urn:hl7-org:v3",
-            "nillable": True,
-        },
+    as_manufactured_product: list[None | CoctMt220300UvManufacturedProduct] = (
+        field(
+            default_factory=list,
+            metadata={
+                "name": "asManufacturedProduct",
+                "type": "Element",
+                "namespace": "urn:hl7-org:v3",
+                "nillable": True,
+            },
+        )
     )
     as_super_content: None | CoctMt220300UvSuperContent = field(
         default=None,
@@ -1862,7 +1870,7 @@ class CoctMt220300UvContent:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    subject_of1: list[CoctMt220300UvSubject14] = field(
+    subject_of1: list[None | CoctMt220300UvSubject14] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -1871,7 +1879,7 @@ class CoctMt220300UvContent:
             "nillable": True,
         },
     )
-    subject_of2: list[CoctMt220300UvSubject11] = field(
+    subject_of2: list[None | CoctMt220300UvSubject11] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",

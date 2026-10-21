@@ -282,7 +282,7 @@ class CoctMt530000UvCriterion:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    precondition: list[CoctMt530000UvPrecondition2] = field(
+    precondition: list[None | CoctMt530000UvPrecondition2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2082,7 +2082,7 @@ class CoctMt530000UvAnimal:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_role: list[CoctMt530000UvRole] = field(
+    as_role: list[None | CoctMt530000UvRole] = field(
         default_factory=list,
         metadata={
             "name": "asRole",
@@ -2273,7 +2273,7 @@ class CoctMt530000UvEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_role: list[CoctMt530000UvRole] = field(
+    as_role: list[None | CoctMt530000UvRole] = field(
         default_factory=list,
         metadata={
             "name": "asRole",
@@ -2408,7 +2408,7 @@ class CoctMt530000UvMaterialKind:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    material_part: list[CoctMt530000UvMaterialPart] = field(
+    material_part: list[None | CoctMt530000UvMaterialPart] = field(
         default_factory=list,
         metadata={
             "name": "materialPart",
@@ -2487,7 +2487,7 @@ class CoctMt530000UvObservationRange:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    precondition: list[CoctMt530000UvPrecondition1] = field(
+    precondition: list[None | CoctMt530000UvPrecondition1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2634,7 +2634,7 @@ class CoctMt530000UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_role: list[CoctMt530000UvRole] = field(
+    as_role: list[None | CoctMt530000UvRole] = field(
         default_factory=list,
         metadata={
             "name": "asRole",
@@ -3595,7 +3595,7 @@ class CoctMt530000UvControlActEvent:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3823,7 +3823,7 @@ class CoctMt530000UvAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt530000UvSubject2] = field(
+    subject: list[None | CoctMt530000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3840,7 +3840,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    responsible_party: list[CoctMt530000UvResponsibleParty2] = field(
+    responsible_party: list[None | CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -3849,7 +3849,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    performer: list[CoctMt530000UvPerformer] = field(
+    performer: list[None | CoctMt530000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3857,7 +3857,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3874,7 +3874,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    informant: list[CoctMt530000UvInformant] = field(
+    informant: list[None | CoctMt530000UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3882,7 +3882,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    verifier: list[CoctMt530000UvVerifier] = field(
+    verifier: list[None | CoctMt530000UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3890,7 +3890,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    location: list[CoctMt530000UvLocation] = field(
+    location: list[None | CoctMt530000UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3906,7 +3906,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    conditions: list[CoctMt530000UvConditions] = field(
+    conditions: list[None | CoctMt530000UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3914,7 +3914,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    source_of1: list[CoctMt530000UvSourceOf1] = field(
+    source_of1: list[None | CoctMt530000UvSourceOf1] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf1",
@@ -3923,7 +3923,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    source_of2: list[CoctMt530000UvSourceOf3] = field(
+    source_of2: list[None | CoctMt530000UvSourceOf3] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf2",
@@ -3941,7 +3941,7 @@ class CoctMt530000UvAct:
             "nillable": True,
         },
     )
-    target_of: list[CoctMt530000UvSourceOf2] = field(
+    target_of: list[None | CoctMt530000UvSourceOf2] = field(
         default_factory=list,
         metadata={
             "name": "targetOf",
@@ -4117,7 +4117,7 @@ class CoctMt530000UvEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt530000UvSubject2] = field(
+    subject: list[None | CoctMt530000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4134,7 +4134,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    responsible_party: list[CoctMt530000UvResponsibleParty2] = field(
+    responsible_party: list[None | CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -4143,7 +4143,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    performer: list[CoctMt530000UvPerformer] = field(
+    performer: list[None | CoctMt530000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4151,7 +4151,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4168,7 +4168,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    informant: list[CoctMt530000UvInformant] = field(
+    informant: list[None | CoctMt530000UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4176,7 +4176,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    verifier: list[CoctMt530000UvVerifier] = field(
+    verifier: list[None | CoctMt530000UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4184,7 +4184,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    location: list[CoctMt530000UvLocation] = field(
+    location: list[None | CoctMt530000UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4200,7 +4200,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    conditions: list[CoctMt530000UvConditions] = field(
+    conditions: list[None | CoctMt530000UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4208,7 +4208,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    source_of1: list[CoctMt530000UvSourceOf1] = field(
+    source_of1: list[None | CoctMt530000UvSourceOf1] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf1",
@@ -4217,7 +4217,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    source_of2: list[CoctMt530000UvSourceOf3] = field(
+    source_of2: list[None | CoctMt530000UvSourceOf3] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf2",
@@ -4235,7 +4235,7 @@ class CoctMt530000UvEncounter:
             "nillable": True,
         },
     )
-    target_of: list[CoctMt530000UvSourceOf2] = field(
+    target_of: list[None | CoctMt530000UvSourceOf2] = field(
         default_factory=list,
         metadata={
             "name": "targetOf",
@@ -4420,7 +4420,7 @@ class CoctMt530000UvObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt530000UvSubject2] = field(
+    subject: list[None | CoctMt530000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4437,7 +4437,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    responsible_party: list[CoctMt530000UvResponsibleParty2] = field(
+    responsible_party: list[None | CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -4446,7 +4446,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    performer: list[CoctMt530000UvPerformer] = field(
+    performer: list[None | CoctMt530000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4454,7 +4454,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4471,7 +4471,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    informant: list[CoctMt530000UvInformant] = field(
+    informant: list[None | CoctMt530000UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4479,7 +4479,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    verifier: list[CoctMt530000UvVerifier] = field(
+    verifier: list[None | CoctMt530000UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4487,7 +4487,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    location: list[CoctMt530000UvLocation] = field(
+    location: list[None | CoctMt530000UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4503,7 +4503,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    conditions: list[CoctMt530000UvConditions] = field(
+    conditions: list[None | CoctMt530000UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4511,7 +4511,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    reference_range: list[CoctMt530000UvReferenceRange] = field(
+    reference_range: list[None | CoctMt530000UvReferenceRange] = field(
         default_factory=list,
         metadata={
             "name": "referenceRange",
@@ -4520,7 +4520,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    source_of1: list[CoctMt530000UvSourceOf1] = field(
+    source_of1: list[None | CoctMt530000UvSourceOf1] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf1",
@@ -4529,7 +4529,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    source_of2: list[CoctMt530000UvSourceOf3] = field(
+    source_of2: list[None | CoctMt530000UvSourceOf3] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf2",
@@ -4547,7 +4547,7 @@ class CoctMt530000UvObservation:
             "nillable": True,
         },
     )
-    target_of: list[CoctMt530000UvSourceOf2] = field(
+    target_of: list[None | CoctMt530000UvSourceOf2] = field(
         default_factory=list,
         metadata={
             "name": "targetOf",
@@ -4723,7 +4723,7 @@ class CoctMt530000UvProcedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt530000UvSubject2] = field(
+    subject: list[None | CoctMt530000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4731,7 +4731,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    device: list[CoctMt530000UvDevice] = field(
+    device: list[None | CoctMt530000UvDevice] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4739,7 +4739,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    product: list[CoctMt530000UvProduct2] = field(
+    product: list[None | CoctMt530000UvProduct2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4756,7 +4756,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    responsible_party: list[CoctMt530000UvResponsibleParty2] = field(
+    responsible_party: list[None | CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -4765,7 +4765,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    performer: list[CoctMt530000UvPerformer] = field(
+    performer: list[None | CoctMt530000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4773,7 +4773,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4790,7 +4790,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    informant: list[CoctMt530000UvInformant] = field(
+    informant: list[None | CoctMt530000UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4798,7 +4798,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    verifier: list[CoctMt530000UvVerifier] = field(
+    verifier: list[None | CoctMt530000UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4806,7 +4806,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    location: list[CoctMt530000UvLocation] = field(
+    location: list[None | CoctMt530000UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4822,7 +4822,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    conditions: list[CoctMt530000UvConditions] = field(
+    conditions: list[None | CoctMt530000UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4830,7 +4830,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    source_of1: list[CoctMt530000UvSourceOf1] = field(
+    source_of1: list[None | CoctMt530000UvSourceOf1] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf1",
@@ -4839,7 +4839,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    source_of2: list[CoctMt530000UvSourceOf3] = field(
+    source_of2: list[None | CoctMt530000UvSourceOf3] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf2",
@@ -4857,7 +4857,7 @@ class CoctMt530000UvProcedure:
             "nillable": True,
         },
     )
-    target_of: list[CoctMt530000UvSourceOf2] = field(
+    target_of: list[None | CoctMt530000UvSourceOf2] = field(
         default_factory=list,
         metadata={
             "name": "targetOf",
@@ -5128,7 +5128,7 @@ class CoctMt530000UvOrganizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt530000UvSubject2] = field(
+    subject: list[None | CoctMt530000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5145,7 +5145,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    responsible_party: list[CoctMt530000UvResponsibleParty2] = field(
+    responsible_party: list[None | CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -5154,7 +5154,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    performer: list[CoctMt530000UvPerformer] = field(
+    performer: list[None | CoctMt530000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5162,7 +5162,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5179,7 +5179,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    informant: list[CoctMt530000UvInformant] = field(
+    informant: list[None | CoctMt530000UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5187,7 +5187,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    verifier: list[CoctMt530000UvVerifier] = field(
+    verifier: list[None | CoctMt530000UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5195,7 +5195,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    location: list[CoctMt530000UvLocation] = field(
+    location: list[None | CoctMt530000UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5211,7 +5211,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    conditions: list[CoctMt530000UvConditions] = field(
+    conditions: list[None | CoctMt530000UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5219,7 +5219,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    component: list[CoctMt530000UvComponent] = field(
+    component: list[None | CoctMt530000UvComponent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5227,7 +5227,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    source_of1: list[CoctMt530000UvSourceOf1] = field(
+    source_of1: list[None | CoctMt530000UvSourceOf1] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf1",
@@ -5236,7 +5236,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    source_of2: list[CoctMt530000UvSourceOf3] = field(
+    source_of2: list[None | CoctMt530000UvSourceOf3] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf2",
@@ -5254,7 +5254,7 @@ class CoctMt530000UvOrganizer:
             "nillable": True,
         },
     )
-    target_of: list[CoctMt530000UvSourceOf2] = field(
+    target_of: list[None | CoctMt530000UvSourceOf2] = field(
         default_factory=list,
         metadata={
             "name": "targetOf",
@@ -5807,7 +5807,7 @@ class CoctMt530000UvSubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt530000UvSubject2] = field(
+    subject: list[None | CoctMt530000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5832,7 +5832,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    responsible_party: list[CoctMt530000UvResponsibleParty2] = field(
+    responsible_party: list[None | CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -5841,7 +5841,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    performer: list[CoctMt530000UvPerformer] = field(
+    performer: list[None | CoctMt530000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5849,7 +5849,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5866,7 +5866,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    informant: list[CoctMt530000UvInformant] = field(
+    informant: list[None | CoctMt530000UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5874,7 +5874,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    verifier: list[CoctMt530000UvVerifier] = field(
+    verifier: list[None | CoctMt530000UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5882,7 +5882,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    location: list[CoctMt530000UvLocation] = field(
+    location: list[None | CoctMt530000UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5898,7 +5898,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    conditions: list[CoctMt530000UvConditions] = field(
+    conditions: list[None | CoctMt530000UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -5906,7 +5906,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    source_of1: list[CoctMt530000UvSourceOf1] = field(
+    source_of1: list[None | CoctMt530000UvSourceOf1] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf1",
@@ -5915,7 +5915,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    source_of2: list[CoctMt530000UvSourceOf3] = field(
+    source_of2: list[None | CoctMt530000UvSourceOf3] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf2",
@@ -5933,7 +5933,7 @@ class CoctMt530000UvSubstanceAdministration:
             "nillable": True,
         },
     )
-    target_of: list[CoctMt530000UvSourceOf2] = field(
+    target_of: list[None | CoctMt530000UvSourceOf2] = field(
         default_factory=list,
         metadata={
             "name": "targetOf",
@@ -6103,7 +6103,7 @@ class CoctMt530000UvSupply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: list[CoctMt530000UvSubject2] = field(
+    subject: list[None | CoctMt530000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6128,7 +6128,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    responsible_party: list[CoctMt530000UvResponsibleParty2] = field(
+    responsible_party: list[None | CoctMt530000UvResponsibleParty2] = field(
         default_factory=list,
         metadata={
             "name": "responsibleParty",
@@ -6137,7 +6137,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    performer: list[CoctMt530000UvPerformer] = field(
+    performer: list[None | CoctMt530000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6145,7 +6145,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    author: list[CoctMt530000UvAuthor] = field(
+    author: list[None | CoctMt530000UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6162,7 +6162,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    informant: list[CoctMt530000UvInformant] = field(
+    informant: list[None | CoctMt530000UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6170,7 +6170,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    verifier: list[CoctMt530000UvVerifier] = field(
+    verifier: list[None | CoctMt530000UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6178,7 +6178,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    location: list[CoctMt530000UvLocation] = field(
+    location: list[None | CoctMt530000UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6194,7 +6194,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    conditions: list[CoctMt530000UvConditions] = field(
+    conditions: list[None | CoctMt530000UvConditions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6202,7 +6202,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    source_of1: list[CoctMt530000UvSourceOf1] = field(
+    source_of1: list[None | CoctMt530000UvSourceOf1] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf1",
@@ -6211,7 +6211,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    source_of2: list[CoctMt530000UvSourceOf3] = field(
+    source_of2: list[None | CoctMt530000UvSourceOf3] = field(
         default_factory=list,
         metadata={
             "name": "sourceOf2",
@@ -6229,7 +6229,7 @@ class CoctMt530000UvSupply:
             "nillable": True,
         },
     )
-    target_of: list[CoctMt530000UvSourceOf2] = field(
+    target_of: list[None | CoctMt530000UvSourceOf2] = field(
         default_factory=list,
         metadata={
             "name": "targetOf",

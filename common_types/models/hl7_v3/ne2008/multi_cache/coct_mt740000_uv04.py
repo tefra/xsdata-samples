@@ -942,7 +942,7 @@ class CoctMt740000Uv04OralHealthService:
             "nillable": True,
         },
     )
-    location: list[CoctMt740000Uv04Location] = field(
+    location: list[None | CoctMt740000Uv04Location] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -950,27 +950,27 @@ class CoctMt740000Uv04OralHealthService:
             "nillable": True,
         },
     )
-    pertinent_information1: list[CoctMt740000Uv04PertinentInformation1] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "pertinentInformation1",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    pertinent_information1: list[
+        None | CoctMt740000Uv04PertinentInformation1
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "pertinentInformation1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
-    pertinent_information2: list[CoctMt740000Uv04PertinentInformation2] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "pertinentInformation2",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    pertinent_information2: list[
+        None | CoctMt740000Uv04PertinentInformation2
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "pertinentInformation2",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     referenced_by: None | CoctMt740000Uv04Reference = field(
         default=None,

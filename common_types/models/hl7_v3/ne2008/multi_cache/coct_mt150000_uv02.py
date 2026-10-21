@@ -268,7 +268,9 @@ class CoctMt150000Uv02Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_organization_part_of: list[CoctMt150000Uv02OrganizationPartOf] = field(
+    as_organization_part_of: list[
+        None | CoctMt150000Uv02OrganizationPartOf
+    ] = field(
         default_factory=list,
         metadata={
             "name": "asOrganizationPartOf",
@@ -277,7 +279,7 @@ class CoctMt150000Uv02Organization:
             "nillable": True,
         },
     )
-    contact_party: list[CoctMt150000Uv02ContactParty] = field(
+    contact_party: list[None | CoctMt150000Uv02ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -286,7 +288,9 @@ class CoctMt150000Uv02Organization:
             "nillable": True,
         },
     )
-    organization_contains: list[CoctMt150000Uv02OrganizationContains] = field(
+    organization_contains: list[
+        None | CoctMt150000Uv02OrganizationContains
+    ] = field(
         default_factory=list,
         metadata={
             "name": "organizationContains",

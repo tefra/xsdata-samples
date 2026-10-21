@@ -931,7 +931,7 @@ class CoctMt600000Uv06ManufacturedProduct:
             "nillable": True,
         },
     )
-    product_of: list[CoctMt600000Uv06Product2] = field(
+    product_of: list[None | CoctMt600000Uv06Product2] = field(
         default_factory=list,
         metadata={
             "name": "productOf",
@@ -1401,16 +1401,16 @@ class CoctMt600000Uv06SupplyEvent:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    pertinent_information1: list[CoctMt600000Uv06PertinentInformation1] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "pertinentInformation1",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    pertinent_information1: list[
+        None | CoctMt600000Uv06PertinentInformation1
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "pertinentInformation1",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     pertinent_information2: None | CoctMt600000Uv06PertinentInformation2 = (
         field(
@@ -1422,7 +1422,9 @@ class CoctMt600000Uv06SupplyEvent:
             }
         )
     )
-    pertinent_information3: list[CoctMt600000Uv06PertinentInformation] = field(
+    pertinent_information3: list[
+        None | CoctMt600000Uv06PertinentInformation
+    ] = field(
         default_factory=list,
         metadata={
             "name": "pertinentInformation3",

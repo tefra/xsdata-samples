@@ -1278,7 +1278,7 @@ class CoctMt030000Uv04NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_member: list[CoctMt030000Uv04Member] = field(
+    as_member: list[None | CoctMt030000Uv04Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -1287,7 +1287,7 @@ class CoctMt030000Uv04NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_other_ids: list[CoctMt030000Uv04OtherIds] = field(
+    as_other_ids: list[None | CoctMt030000Uv04OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -1305,7 +1305,7 @@ class CoctMt030000Uv04NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    contact_party: list[CoctMt030000Uv04ContactParty] = field(
+    contact_party: list[None | CoctMt030000Uv04ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -1314,7 +1314,7 @@ class CoctMt030000Uv04NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guardian: list[CoctMt030000Uv04Guardian] = field(
+    guardian: list[None | CoctMt030000Uv04Guardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1322,7 +1322,7 @@ class CoctMt030000Uv04NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guarantor: list[CoctMt030000Uv04Guarantor] = field(
+    guarantor: list[None | CoctMt030000Uv04Guarantor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1530,7 +1530,7 @@ class CoctMt030000Uv04Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_employment: list[CoctMt030000Uv04Employment] = field(
+    as_employment: list[None | CoctMt030000Uv04Employment] = field(
         default_factory=list,
         metadata={
             "name": "asEmployment",
@@ -1539,7 +1539,7 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    as_citizen: list[CoctMt030000Uv04Citizen] = field(
+    as_citizen: list[None | CoctMt030000Uv04Citizen] = field(
         default_factory=list,
         metadata={
             "name": "asCitizen",
@@ -1548,7 +1548,7 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    as_student: list[CoctMt030000Uv04Student] = field(
+    as_student: list[None | CoctMt030000Uv04Student] = field(
         default_factory=list,
         metadata={
             "name": "asStudent",
@@ -1557,7 +1557,7 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    as_member: list[CoctMt030000Uv04Member] = field(
+    as_member: list[None | CoctMt030000Uv04Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -1566,7 +1566,7 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    as_other_ids: list[CoctMt030000Uv04OtherIds] = field(
+    as_other_ids: list[None | CoctMt030000Uv04OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -1584,7 +1584,7 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    contact_party: list[CoctMt030000Uv04ContactParty] = field(
+    contact_party: list[None | CoctMt030000Uv04ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -1593,7 +1593,7 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    guardian: list[CoctMt030000Uv04Guardian] = field(
+    guardian: list[None | CoctMt030000Uv04Guardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1601,7 +1601,7 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    guarantor: list[CoctMt030000Uv04Guarantor] = field(
+    guarantor: list[None | CoctMt030000Uv04Guarantor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1618,16 +1618,16 @@ class CoctMt030000Uv04Person:
             "nillable": True,
         },
     )
-    language_communication: list[CoctMt030000Uv04LanguageCommunication] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "languageCommunication",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    language_communication: list[
+        None | CoctMt030000Uv04LanguageCommunication
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "languageCommunication",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,

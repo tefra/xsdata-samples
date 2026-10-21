@@ -357,7 +357,7 @@ class CoctMt020000Uv01Appointment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    referenced_order: list[CoctMt020000Uv01ReferencedOrder] = field(
+    referenced_order: list[None | CoctMt020000Uv01ReferencedOrder] = field(
         default_factory=list,
         metadata={
             "name": "referencedOrder",
@@ -366,7 +366,7 @@ class CoctMt020000Uv01Appointment:
             "nillable": True,
         },
     )
-    schedule_request: list[CoctMt020000Uv01ScheduleRequest] = field(
+    schedule_request: list[None | CoctMt020000Uv01ScheduleRequest] = field(
         default_factory=list,
         metadata={
             "name": "scheduleRequest",

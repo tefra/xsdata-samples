@@ -1428,7 +1428,7 @@ class RepcMt000301UvAnnotation:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    author: list[RepcMt000301UvAuthor] = field(
+    author: list[None | RepcMt000301UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1497,7 +1497,7 @@ class RepcMt000301UvConditionNodeEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    links: list[RepcMt000301UvLinks] = field(
+    links: list[None | RepcMt000301UvLinks] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1613,7 +1613,7 @@ class RepcMt000301UvControlActEvent:
             "nillable": True,
         },
     )
-    author: list[RepcMt000301UvAuthor] = field(
+    author: list[None | RepcMt000301UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2332,7 +2332,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    performer: list[RepcMt000301UvPerformer] = field(
+    performer: list[None | RepcMt000301UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2340,7 +2340,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    author: list[RepcMt000301UvAuthor] = field(
+    author: list[None | RepcMt000301UvAuthor] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2357,7 +2357,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    informant: list[RepcMt000301UvInformant] = field(
+    informant: list[None | RepcMt000301UvInformant] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2365,7 +2365,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    verifier: list[RepcMt000301UvVerifier] = field(
+    verifier: list[None | RepcMt000301UvVerifier] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2373,7 +2373,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    location: list[RepcMt000301UvLocation] = field(
+    location: list[None | RepcMt000301UvLocation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2390,7 +2390,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    sequel_to: list[RepcMt000301UvSequelTo] = field(
+    sequel_to: list[None | RepcMt000301UvSequelTo] = field(
         default_factory=list,
         metadata={
             "name": "sequelTo",
@@ -2399,7 +2399,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    component: list[RepcMt000301UvComponent] = field(
+    component: list[None | RepcMt000301UvComponent] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2425,7 +2425,7 @@ class RepcMt000301UvConditionEvent:
             "nillable": True,
         },
     )
-    subject_of3: list[RepcMt000301UvSubject3] = field(
+    subject_of3: list[None | RepcMt000301UvSubject3] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf3",

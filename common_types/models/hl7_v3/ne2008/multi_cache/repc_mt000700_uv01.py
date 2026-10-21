@@ -240,7 +240,7 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_located_entity: list[RepcMt000700Uv01LocatedEntity] = field(
+    as_located_entity: list[None | RepcMt000700Uv01LocatedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLocatedEntity",

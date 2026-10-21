@@ -2060,7 +2060,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
         },
     )
     as_patient_of_other_provider: list[
-        PrpaMt201310Uv02PatientOfOtherProvider
+        None | PrpaMt201310Uv02PatientOfOtherProvider
     ] = field(
         default_factory=list,
         metadata={
@@ -2070,7 +2070,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_member: list[PrpaMt201310Uv02Member] = field(
+    as_member: list[None | PrpaMt201310Uv02Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -2079,7 +2079,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_other_ids: list[PrpaMt201310Uv02OtherIds] = field(
+    as_other_ids: list[None | PrpaMt201310Uv02OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -2088,7 +2088,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    contact_party: list[PrpaMt201310Uv02ContactParty] = field(
+    contact_party: list[None | PrpaMt201310Uv02ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -2097,7 +2097,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guardian: list[PrpaMt201310Uv02Guardian] = field(
+    guardian: list[None | PrpaMt201310Uv02Guardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2105,7 +2105,9 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    personal_relationship: list[PrpaMt201310Uv02PersonalRelationship] = field(
+    personal_relationship: list[
+        None | PrpaMt201310Uv02PersonalRelationship
+    ] = field(
         default_factory=list,
         metadata={
             "name": "personalRelationship",
@@ -2114,7 +2116,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    care_giver: list[PrpaMt201310Uv02CareGiver] = field(
+    care_giver: list[None | PrpaMt201310Uv02CareGiver] = field(
         default_factory=list,
         metadata={
             "name": "careGiver",
@@ -2132,7 +2134,7 @@ class PrpaMt201310Uv02NonPersonLivingSubject:
             "nillable": True,
         },
     )
-    guarantor_role: list[CoctMt670000Uv04GuarantorRole] = field(
+    guarantor_role: list[None | CoctMt670000Uv04GuarantorRole] = field(
         default_factory=list,
         metadata={
             "name": "guarantorRole",
@@ -2342,7 +2344,7 @@ class PrpaMt201310Uv02Person:
         },
     )
     as_patient_of_other_provider: list[
-        PrpaMt201310Uv02PatientOfOtherProvider
+        None | PrpaMt201310Uv02PatientOfOtherProvider
     ] = field(
         default_factory=list,
         metadata={
@@ -2352,7 +2354,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    as_employee: list[PrpaMt201310Uv02Employee] = field(
+    as_employee: list[None | PrpaMt201310Uv02Employee] = field(
         default_factory=list,
         metadata={
             "name": "asEmployee",
@@ -2361,7 +2363,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    as_citizen: list[PrpaMt201310Uv02Citizen] = field(
+    as_citizen: list[None | PrpaMt201310Uv02Citizen] = field(
         default_factory=list,
         metadata={
             "name": "asCitizen",
@@ -2370,7 +2372,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    as_student: list[PrpaMt201310Uv02Student] = field(
+    as_student: list[None | PrpaMt201310Uv02Student] = field(
         default_factory=list,
         metadata={
             "name": "asStudent",
@@ -2379,7 +2381,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    as_member: list[PrpaMt201310Uv02Member] = field(
+    as_member: list[None | PrpaMt201310Uv02Member] = field(
         default_factory=list,
         metadata={
             "name": "asMember",
@@ -2388,7 +2390,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    as_other_ids: list[PrpaMt201310Uv02OtherIds] = field(
+    as_other_ids: list[None | PrpaMt201310Uv02OtherIds] = field(
         default_factory=list,
         metadata={
             "name": "asOtherIDs",
@@ -2397,7 +2399,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    contact_party: list[PrpaMt201310Uv02ContactParty] = field(
+    contact_party: list[None | PrpaMt201310Uv02ContactParty] = field(
         default_factory=list,
         metadata={
             "name": "contactParty",
@@ -2406,7 +2408,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    guardian: list[PrpaMt201310Uv02Guardian] = field(
+    guardian: list[None | PrpaMt201310Uv02Guardian] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2414,7 +2416,9 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    personal_relationship: list[PrpaMt201310Uv02PersonalRelationship] = field(
+    personal_relationship: list[
+        None | PrpaMt201310Uv02PersonalRelationship
+    ] = field(
         default_factory=list,
         metadata={
             "name": "personalRelationship",
@@ -2423,7 +2427,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    care_giver: list[PrpaMt201310Uv02CareGiver] = field(
+    care_giver: list[None | PrpaMt201310Uv02CareGiver] = field(
         default_factory=list,
         metadata={
             "name": "careGiver",
@@ -2441,7 +2445,7 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    guarantor_role: list[CoctMt670000Uv04GuarantorRole] = field(
+    guarantor_role: list[None | CoctMt670000Uv04GuarantorRole] = field(
         default_factory=list,
         metadata={
             "name": "guarantorRole",
@@ -2450,16 +2454,16 @@ class PrpaMt201310Uv02Person:
             "nillable": True,
         },
     )
-    language_communication: list[PrpaMt201310Uv02LanguageCommunication] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "languageCommunication",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    language_communication: list[
+        None | PrpaMt201310Uv02LanguageCommunication
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "languageCommunication",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -2597,7 +2601,7 @@ class PrpaMt201310Uv02Patient:
             "nillable": True,
         },
     )
-    subject_of1: list[PrpaMt201310Uv02Subject] = field(
+    subject_of1: list[None | PrpaMt201310Uv02Subject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -2607,7 +2611,7 @@ class PrpaMt201310Uv02Patient:
             "nillable": True,
         },
     )
-    subject_of2: list[PrpaMt201310Uv02Subject4] = field(
+    subject_of2: list[None | PrpaMt201310Uv02Subject4] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -2616,7 +2620,7 @@ class PrpaMt201310Uv02Patient:
             "nillable": True,
         },
     )
-    covered_party_of: list[PrpaMt201310Uv02CoveredParty] = field(
+    covered_party_of: list[None | PrpaMt201310Uv02CoveredParty] = field(
         default_factory=list,
         metadata={
             "name": "coveredPartyOf",

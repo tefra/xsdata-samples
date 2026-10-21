@@ -910,7 +910,7 @@ class CoctMt490000Uv04ManufacturedMaterial:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_warrantor: list[CoctMt490000Uv04Warrantor] = field(
+    as_warrantor: list[None | CoctMt490000Uv04Warrantor] = field(
         default_factory=list,
         metadata={
             "name": "asWarrantor",
@@ -919,16 +919,16 @@ class CoctMt490000Uv04ManufacturedMaterial:
             "nillable": True,
         },
     )
-    content_packaged_product: list[CoctMt490000Uv04ContentPackagedProduct] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "contentPackagedProduct",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    content_packaged_product: list[
+        None | CoctMt490000Uv04ContentPackagedProduct
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "contentPackagedProduct",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -1234,7 +1234,9 @@ class CoctMt490000Uv04BillableClinicalProduct:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    pertinent_information: list[CoctMt490000Uv04PertinentInformation] = field(
+    pertinent_information: list[
+        None | CoctMt490000Uv04PertinentInformation
+    ] = field(
         default_factory=list,
         metadata={
             "name": "pertinentInformation",

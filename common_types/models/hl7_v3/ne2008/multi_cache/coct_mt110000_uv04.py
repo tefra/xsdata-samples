@@ -292,16 +292,16 @@ class CoctMt110000Uv04AccountHolderPerson:
             "nillable": True,
         }
     )
-    account_holder_language: list[CoctMt110000Uv04AccountHolderLanguage] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "accountHolderLanguage",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    account_holder_language: list[
+        None | CoctMt110000Uv04AccountHolderLanguage
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "accountHolderLanguage",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,

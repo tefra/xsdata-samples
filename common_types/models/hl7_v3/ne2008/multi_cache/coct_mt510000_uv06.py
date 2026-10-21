@@ -1879,7 +1879,9 @@ class CoctMt510000Uv06Payor:
             "nillable": True,
         },
     )
-    direct_authority_over: list[CoctMt510000Uv06DirectAuthorityOver4] = field(
+    direct_authority_over: list[
+        None | CoctMt510000Uv06DirectAuthorityOver4
+    ] = field(
         default_factory=list,
         metadata={
             "name": "directAuthorityOver",
@@ -2670,7 +2672,7 @@ class CoctMt510000Uv06CoverageCharge:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: list[CoctMt510000Uv06Reference2] = field(
+    reference: list[None | CoctMt510000Uv06Reference2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2839,7 +2841,7 @@ class CoctMt510000Uv06FinancialParticipationCharge:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reference: list[CoctMt510000Uv06Reference2] = field(
+    reference: list[None | CoctMt510000Uv06Reference2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3273,7 +3275,7 @@ class CoctMt510000Uv06CoveredParty:
             "nillable": True,
         },
     )
-    subject_of1: list[CoctMt510000Uv06Subject] = field(
+    subject_of1: list[None | CoctMt510000Uv06Subject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -3282,7 +3284,7 @@ class CoctMt510000Uv06CoveredParty:
             "nillable": True,
         },
     )
-    subject_of2: list[CoctMt510000Uv06Subject3] = field(
+    subject_of2: list[None | CoctMt510000Uv06Subject3] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",
@@ -3291,7 +3293,7 @@ class CoctMt510000Uv06CoveredParty:
             "nillable": True,
         },
     )
-    part: list[CoctMt510000Uv06Part] = field(
+    part: list[None | CoctMt510000Uv06Part] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3299,7 +3301,9 @@ class CoctMt510000Uv06CoveredParty:
             "nillable": True,
         },
     )
-    indirect_authority1: list[CoctMt510000Uv06IndirectAuthorithyOver] = field(
+    indirect_authority1: list[
+        None | CoctMt510000Uv06IndirectAuthorithyOver
+    ] = field(
         default_factory=list,
         metadata={
             "name": "indirectAuthority1",
@@ -3512,7 +3516,9 @@ class CoctMt510000Uv06Underwriter:
             "nillable": True,
         },
     )
-    direct_authority_over1: list[CoctMt510000Uv06DirectAuthorityOver2] = field(
+    direct_authority_over1: list[
+        None | CoctMt510000Uv06DirectAuthorityOver2
+    ] = field(
         default_factory=list,
         metadata={
             "name": "directAuthorityOver1",
@@ -3521,7 +3527,9 @@ class CoctMt510000Uv06Underwriter:
             "nillable": True,
         },
     )
-    direct_authority_over2: list[CoctMt510000Uv06DirectAuthorityOver] = field(
+    direct_authority_over2: list[
+        None | CoctMt510000Uv06DirectAuthorityOver
+    ] = field(
         default_factory=list,
         metadata={
             "name": "directAuthorityOver2",
@@ -3694,7 +3702,7 @@ class CoctMt510000Uv06Benefit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    definition: list[CoctMt510000Uv06Definition] = field(
+    definition: list[None | CoctMt510000Uv06Definition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3702,7 +3710,7 @@ class CoctMt510000Uv06Benefit:
             "nillable": True,
         },
     )
-    precondition: list[CoctMt510000Uv06Precondition] = field(
+    precondition: list[None | CoctMt510000Uv06Precondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3710,7 +3718,7 @@ class CoctMt510000Uv06Benefit:
             "nillable": True,
         },
     )
-    reference: list[CoctMt510000Uv06Reference] = field(
+    reference: list[None | CoctMt510000Uv06Reference] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3718,7 +3726,7 @@ class CoctMt510000Uv06Benefit:
             "nillable": True,
         },
     )
-    limitation: list[CoctMt510000Uv06Limitation2] = field(
+    limitation: list[None | CoctMt510000Uv06Limitation2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4043,7 +4051,9 @@ class CoctMt510000Uv06Sponsor:
             "nillable": True,
         },
     )
-    direct_authority_over: list[CoctMt510000Uv06DirectAuthorityOver3] = field(
+    direct_authority_over: list[
+        None | CoctMt510000Uv06DirectAuthorityOver3
+    ] = field(
         default_factory=list,
         metadata={
             "name": "directAuthorityOver",
@@ -4240,7 +4250,7 @@ class CoctMt510000Uv06PolicyOrProgram:
             "nillable": True,
         },
     )
-    primary_performer: list[CoctMt510000Uv06PrimaryPerformer] = field(
+    primary_performer: list[None | CoctMt510000Uv06PrimaryPerformer] = field(
         default_factory=list,
         metadata={
             "name": "primaryPerformer",
@@ -4249,7 +4259,7 @@ class CoctMt510000Uv06PolicyOrProgram:
             "nillable": True,
         },
     )
-    author: list[CoctMt510000Uv06Author2] = field(
+    author: list[None | CoctMt510000Uv06Author2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4274,7 +4284,7 @@ class CoctMt510000Uv06PolicyOrProgram:
             "nillable": True,
         },
     )
-    limitation1: list[CoctMt510000Uv06Limitation3] = field(
+    limitation1: list[None | CoctMt510000Uv06Limitation3] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4282,7 +4292,7 @@ class CoctMt510000Uv06PolicyOrProgram:
             "nillable": True,
         },
     )
-    limitation2: list[CoctMt510000Uv06Limitation] = field(
+    limitation2: list[None | CoctMt510000Uv06Limitation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4290,7 +4300,7 @@ class CoctMt510000Uv06PolicyOrProgram:
             "nillable": True,
         },
     )
-    coverage_of: list[CoctMt510000Uv06Coverage2] = field(
+    coverage_of: list[None | CoctMt510000Uv06Coverage2] = field(
         default_factory=list,
         metadata={
             "name": "coverageOf",
@@ -4454,7 +4464,7 @@ class CoctMt510000Uv06CoverageRecord:
             "nillable": True,
         },
     )
-    component: list[CoctMt510000Uv06Component] = field(
+    component: list[None | CoctMt510000Uv06Component] = field(
         default_factory=list,
         metadata={
             "type": "Element",

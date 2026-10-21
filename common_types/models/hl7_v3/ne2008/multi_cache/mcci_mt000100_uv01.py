@@ -454,7 +454,7 @@ class McciMt000100Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entity_rsp: list[McciMt000100Uv01EntityRsp] = field(
+    entity_rsp: list[None | McciMt000100Uv01EntityRsp] = field(
         default_factory=list,
         metadata={
             "name": "entityRsp",
@@ -570,7 +570,7 @@ class McciMt000100Uv01Device:
             "nillable": True,
         },
     )
-    as_located_entity: list[McciMt000100Uv01LocatedEntity] = field(
+    as_located_entity: list[None | McciMt000100Uv01LocatedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLocatedEntity",

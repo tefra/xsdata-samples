@@ -222,27 +222,27 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_located_entity_part_of: list[CoctMt710000Uv01LocatedEntityPartOf] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "asLocatedEntityPartOf",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    as_located_entity_part_of: list[
+        None | CoctMt710000Uv01LocatedEntityPartOf
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "asLocatedEntityPartOf",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
-    located_entity_has_parts: list[CoctMt710000Uv01LocatedEntityHasParts] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "locatedEntityHasParts",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    located_entity_has_parts: list[
+        None | CoctMt710000Uv01LocatedEntityHasParts
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "locatedEntityHasParts",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,

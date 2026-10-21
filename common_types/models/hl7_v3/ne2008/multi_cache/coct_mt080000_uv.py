@@ -1285,7 +1285,7 @@ class CoctMt080000UvHolder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_identified_holder: list[CoctMt080000UvIdentifiedHolder] = field(
+    as_identified_holder: list[None | CoctMt080000UvIdentifiedHolder] = field(
         default_factory=list,
         metadata={
             "name": "asIdentifiedHolder",
@@ -1858,7 +1858,7 @@ class CoctMt080000UvProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: list[CoctMt080000UvPerformer] = field(
+    performer: list[None | CoctMt080000UvPerformer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1866,7 +1866,7 @@ class CoctMt080000UvProcess:
             "nillable": True,
         },
     )
-    precondition: list[CoctMt080000UvPrecondition] = field(
+    precondition: list[None | CoctMt080000UvPrecondition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1961,7 +1961,7 @@ class CoctMt080000UvProcessStep:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject1: list[CoctMt080000UvSubject1] = field(
+    subject1: list[None | CoctMt080000UvSubject1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1969,7 +1969,7 @@ class CoctMt080000UvProcessStep:
             "nillable": True,
         },
     )
-    subject2: list[CoctMt080000UvSubject2] = field(
+    subject2: list[None | CoctMt080000UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1977,7 +1977,7 @@ class CoctMt080000UvProcessStep:
             "nillable": True,
         },
     )
-    author_or_performer: list[CoctMt080000UvAuthorOrPerformer] = field(
+    author_or_performer: list[None | CoctMt080000UvAuthorOrPerformer] = field(
         default_factory=list,
         metadata={
             "name": "authorOrPerformer",
@@ -2159,7 +2159,7 @@ class CoctMt080000UvContainer:
             "nillable": True,
         },
     )
-    additive: list[CoctMt080000UvAdditive2] = field(
+    additive: list[None | CoctMt080000UvAdditive2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2495,7 +2495,7 @@ class CoctMt080000UvManufactured:
         },
     )
     as_specimen_alternate_identifier: list[
-        CoctMt080000UvSpecimenAlternateIdentifier
+        None | CoctMt080000UvSpecimenAlternateIdentifier
     ] = field(
         default_factory=list,
         metadata={
@@ -2513,7 +2513,7 @@ class CoctMt080000UvManufactured:
             "nillable": True,
         }
     )
-    as_specimen_stub: list[CoctMt080000UvSpecimenStub] = field(
+    as_specimen_stub: list[None | CoctMt080000UvSpecimenStub] = field(
         default_factory=list,
         metadata={
             "name": "asSpecimenStub",
@@ -2531,7 +2531,7 @@ class CoctMt080000UvManufactured:
             "nillable": True,
         },
     )
-    additive: list[CoctMt080000UvAdditive] = field(
+    additive: list[None | CoctMt080000UvAdditive] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2629,7 +2629,7 @@ class CoctMt080000UvNatural:
         },
     )
     as_specimen_alternate_identifier: list[
-        CoctMt080000UvSpecimenAlternateIdentifier
+        None | CoctMt080000UvSpecimenAlternateIdentifier
     ] = field(
         default_factory=list,
         metadata={
@@ -2639,7 +2639,7 @@ class CoctMt080000UvNatural:
             "nillable": True,
         },
     )
-    as_specimen_stub: list[CoctMt080000UvSpecimenStub] = field(
+    as_specimen_stub: list[None | CoctMt080000UvSpecimenStub] = field(
         default_factory=list,
         metadata={
             "name": "asSpecimenStub",
@@ -2657,7 +2657,7 @@ class CoctMt080000UvNatural:
             "nillable": True,
         },
     )
-    additive: list[CoctMt080000UvAdditive] = field(
+    additive: list[None | CoctMt080000UvAdditive] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -2858,7 +2858,7 @@ class CoctMt080000UvNonPersonLivingSubject:
         },
     )
     as_specimen_alternate_identifier: list[
-        CoctMt080000UvSpecimenAlternateIdentifier
+        None | CoctMt080000UvSpecimenAlternateIdentifier
     ] = field(
         default_factory=list,
         metadata={
@@ -2868,7 +2868,7 @@ class CoctMt080000UvNonPersonLivingSubject:
             "nillable": True,
         },
     )
-    as_specimen_stub: list[CoctMt080000UvSpecimenStub] = field(
+    as_specimen_stub: list[None | CoctMt080000UvSpecimenStub] = field(
         default_factory=list,
         metadata={
             "name": "asSpecimenStub",
@@ -2886,7 +2886,7 @@ class CoctMt080000UvNonPersonLivingSubject:
             "nillable": True,
         },
     )
-    additive: list[CoctMt080000UvAdditive] = field(
+    additive: list[None | CoctMt080000UvAdditive] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3102,7 +3102,7 @@ class CoctMt080000UvPerson:
         },
     )
     as_specimen_alternate_identifier: list[
-        CoctMt080000UvSpecimenAlternateIdentifier
+        None | CoctMt080000UvSpecimenAlternateIdentifier
     ] = field(
         default_factory=list,
         metadata={
@@ -3112,7 +3112,7 @@ class CoctMt080000UvPerson:
             "nillable": True,
         },
     )
-    as_specimen_stub: list[CoctMt080000UvSpecimenStub] = field(
+    as_specimen_stub: list[None | CoctMt080000UvSpecimenStub] = field(
         default_factory=list,
         metadata={
             "name": "asSpecimenStub",
@@ -3130,7 +3130,7 @@ class CoctMt080000UvPerson:
             "nillable": True,
         },
     )
-    additive: list[CoctMt080000UvAdditive] = field(
+    additive: list[None | CoctMt080000UvAdditive] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -3278,7 +3278,7 @@ class CoctMt080000UvSpecimen:
             "nillable": True,
         },
     )
-    subject_of1: list[CoctMt080000UvSubject4] = field(
+    subject_of1: list[None | CoctMt080000UvSubject4] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf1",
@@ -3287,7 +3287,7 @@ class CoctMt080000UvSpecimen:
             "nillable": True,
         },
     )
-    subject_of2: list[CoctMt080000UvSubject3] = field(
+    subject_of2: list[None | CoctMt080000UvSubject3] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf2",

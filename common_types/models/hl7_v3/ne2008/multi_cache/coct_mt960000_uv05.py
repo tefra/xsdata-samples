@@ -399,7 +399,7 @@ class CoctMt960000Uv05PositionCoordinate:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: list[CoctMt960000Uv05Device1] = field(
+    device: list[None | CoctMt960000Uv05Device1] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -581,7 +581,7 @@ class CoctMt960000Uv05Position:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: list[CoctMt960000Uv05Device2] = field(
+    device: list[None | CoctMt960000Uv05Device2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -597,7 +597,7 @@ class CoctMt960000Uv05Position:
             "nillable": True,
         },
     )
-    component1: list[CoctMt960000Uv05Component1] = field(
+    component1: list[None | CoctMt960000Uv05Component1] = field(
         default_factory=list,
         metadata={
             "type": "Element",

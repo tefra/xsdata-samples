@@ -496,16 +496,16 @@ class McciMt000200Uv01Acknowledgement:
             "nillable": True,
         }
     )
-    acknowledgement_detail: list[McciMt000200Uv01AcknowledgementDetail] = (
-        field(
-            default_factory=list,
-            metadata={
-                "name": "acknowledgementDetail",
-                "type": "Element",
-                "namespace": "urn:hl7-org:v3",
-                "nillable": True,
-            },
-        )
+    acknowledgement_detail: list[
+        None | McciMt000200Uv01AcknowledgementDetail
+    ] = field(
+        default_factory=list,
+        metadata={
+            "name": "acknowledgementDetail",
+            "type": "Element",
+            "namespace": "urn:hl7-org:v3",
+            "nillable": True,
+        },
     )
     null_flavor: None | NullFlavor = field(
         default=None,
@@ -657,7 +657,7 @@ class McciMt000200Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entity_rsp: list[McciMt000200Uv01EntityRsp] = field(
+    entity_rsp: list[None | McciMt000200Uv01EntityRsp] = field(
         default_factory=list,
         metadata={
             "name": "entityRsp",
@@ -773,7 +773,7 @@ class McciMt000200Uv01Device:
             "nillable": True,
         },
     )
-    as_located_entity: list[McciMt000200Uv01LocatedEntity] = field(
+    as_located_entity: list[None | McciMt000200Uv01LocatedEntity] = field(
         default_factory=list,
         metadata={
             "name": "asLocatedEntity",
@@ -1030,7 +1030,7 @@ class McciMt000200Uv01Message:
             "min_occurs": 1,
         },
     )
-    respond_to: list[McciMt000200Uv01RespondTo] = field(
+    respond_to: list[None | McciMt000200Uv01RespondTo] = field(
         default_factory=list,
         metadata={
             "name": "respondTo",
@@ -1045,7 +1045,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         }
     )
-    attention_line: list[McciMt000200Uv01AttentionLine] = field(
+    attention_line: list[None | McciMt000200Uv01AttentionLine] = field(
         default_factory=list,
         metadata={
             "name": "attentionLine",
@@ -1054,7 +1054,7 @@ class McciMt000200Uv01Message:
             "nillable": True,
         },
     )
-    acknowledgement: list[McciMt000200Uv01Acknowledgement] = field(
+    acknowledgement: list[None | McciMt000200Uv01Acknowledgement] = field(
         default_factory=list,
         metadata={
             "type": "Element",

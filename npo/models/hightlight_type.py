@@ -10,7 +10,7 @@ class HightlightType:
     class Meta:
         name = "hightlightType"
 
-    body: list[str] = field(
+    body: list[None | str] = field(
         default_factory=list,
         metadata={
             "type": "Element",

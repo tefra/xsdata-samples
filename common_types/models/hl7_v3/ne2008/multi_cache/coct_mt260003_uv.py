@@ -1126,7 +1126,7 @@ class CoctMt260003UvDetectedMedicationIssue:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    definition: list[CoctMt260003UvDefinition] = field(
+    definition: list[None | CoctMt260003UvDefinition] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1134,7 +1134,7 @@ class CoctMt260003UvDetectedMedicationIssue:
             "nillable": True,
         },
     )
-    subject: list[CoctMt260003UvSubject2] = field(
+    subject: list[None | CoctMt260003UvSubject2] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1142,7 +1142,7 @@ class CoctMt260003UvDetectedMedicationIssue:
             "nillable": True,
         },
     )
-    mitigated_by: list[CoctMt260003UvMitigates] = field(
+    mitigated_by: list[None | CoctMt260003UvMitigates] = field(
         default_factory=list,
         metadata={
             "name": "mitigatedBy",
@@ -1151,7 +1151,7 @@ class CoctMt260003UvDetectedMedicationIssue:
             "nillable": True,
         },
     )
-    subject_of: list[CoctMt260003UvSubject] = field(
+    subject_of: list[None | CoctMt260003UvSubject] = field(
         default_factory=list,
         metadata={
             "name": "subjectOf",
