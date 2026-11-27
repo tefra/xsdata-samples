@@ -54,15 +54,15 @@ class BaseMediaType:
             "namespace": "urn:vpro:media:2009",
             "doc": (
                 "A crid (content reference identifier) is a reference to an "
-                "entity in another system. E.g. a crid "
-                "like\ncrid://broadcast.radiobox2/335793 refers to a broadcast"
-                " with id 335793 in Radiobox. A crid must be a valid\nURI "
-                'starting with "crid://". Crids must be unique, but they can'
-                " be made up freely. It is a good idea to use\na logical "
-                "structure which can easily be associated with another system."
-                " Any POMS object can have zero or\nmore crids. They can refer"
-                " to different systems, but a POMS object could also actually "
-                "represent more than\none entity in a remote system."
+                "entity in another system. E.g. a crid like\n"
+                "crid://broadcast.radiobox2/335793 refers to a broadcast with "
+                "id 335793 in Radiobox. A crid must be a valid\nURI starting "
+                'with "crid://". Crids must be unique, but they can be made up'
+                " freely. It is a good idea to use\na logical structure which "
+                "can easily be associated with another system. Any POMS object"
+                " can have zero or\nmore crids. They can refer to different "
+                "systems, but a POMS object could also actually represent more"
+                " than\none entity in a remote system."
             ),
         },
     )
@@ -75,8 +75,8 @@ class BaseMediaType:
             "doc": (
                 "One or more broadcasters can be the owner of a POMS media "
                 "object. This information is meta information about the "
-                "object, but it is also used\nfor assigning write access to "
-                "the object in the POMS backend to employees of these given "
+                "object, but it is also used\nfor assigning write access to the"
+                " object in the POMS backend to employees of these given "
                 "broadcasting companies."
             ),
         },

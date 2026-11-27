@@ -57,8 +57,8 @@ class MemberRefType:
             "type": "Attribute",
             "doc": (
                 "Reference to the URN of the parent of this object. URN's are "
-                "no longer actively used, but the attribute is\nstill "
-                "available for backwards compatibility."
+                "no longer actively used, but the attribute is\nstill available"
+                " for backwards compatibility."
             ),
         },
     )
